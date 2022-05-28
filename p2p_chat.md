@@ -16,13 +16,13 @@ CC BY-NC-SA
 - ETS键值存储(Erlang Term Storage)[ETS教程](https://elixirschool.com/zh-hans/lessons/storage/ets)
 - escript编译成可执行文件
 - rsa非对称加密
-
-## 大体架构
-整个思路来源都是从这两个视频来的, UDP打洞<br>
+- UDP打洞<br>
+整个思路来源都是从这两个视频来的:<br>
 [with netcat](https://www.youtube.com/watch?v=s_-UCmuiYW8) & [with python](https://www.youtube.com/watch?v=IbzGL_tjmv4)<br>
 我的理解就是通过发送UDP包打开一个端口来让远程电脑能知道你的端口映射到了公网IP的哪个端口,<br>
 然后将两个需要发消息的客户端相互告诉对方各自的公网IP以及映射到的端口, 就能实现p2p通信.<br>
 
+## 大体架构
 客户端使用GenServer来实现后端接口和网络通信, 在CLI模块处理用户输入调用GenServer.<br>
 
 服务端可以很简单, 就是收到两个IP然后相互发送对方的地址让客户端能够相互通信,<br>
@@ -30,7 +30,7 @@ CC BY-NC-SA
 为了让客户端不乱配对, 就需要增加一个注册功能, 也使用ETS实现.<br>
 
 ## 客户端实现
-内容比较多, 所以我不会讲的很全, 代码不会都放出来
+内容比较多, 所以我不会讲的很全, 代码不会都放出来<br>
 项目目录大概是这样
 ```sh
 ├── client
@@ -47,7 +47,7 @@ CC BY-NC-SA
 注意这里只在核心程序处理socket, cli模块处理用户交互, 使项目分层化
 
 ### escript
-客户端要编译成可执行文件, 要在mix.exs里加入escript 
+客户端要编译成可执行文件, 要在`mix.exs`里加入`escript` 
 ```elixir
 defmodule Client.MixProject do
   use Mix.Project
@@ -78,12 +78,12 @@ defmodule Client.MixProject do
   end
 end
 ```
-main\_module指定了程序的入口点main函数, extra\_applications加入erlang库:crypto因为后续需要使用加密
+`main_module`指定了程序的入口点main函数, `extra_applications`加入erlang库`:crypto`因为后续需要使用加密
 
 ### GenServer和socket
 先是定义了两个结构体, 一个用于存储peer的信息, 一个存储客户端的信息(peer键是peer结构体)<br>
-然后是一堆常量, 服务器可以改成你的128核心1TB内存1EB固态硬盘的小型服务器的地址, key\_integer是客户端的密钥生成器用的<br>
-其实可以在config.exs或者用json来配置, 但是我懒哈哈
+然后是一堆常量, 服务器可以改成你的128核心1TB内存1EB固态硬盘的小型服务器的地址, `key_integer`是客户端的密钥生成器用的<br>
+其实可以在`config.exs`或者用json来配置, 但是我懒哈哈
 ```elixir
 defmodule Client do
   defmodule Peer do
@@ -158,7 +158,7 @@ end
 ```
 
 ### 用户交互CLI
-首先使用OptionParser解析命令行参数, 如果解析成功就启动GenServer
+首先使用`OptionParser`解析命令行参数, 如果解析成功就启动GenServer
 ```elixir
 def main(args \\ []) do
   {opts, args, invalid} = OptionParser.parse(args, strict: [
@@ -172,10 +172,10 @@ def main(args \\ []) do
   end
 end
 ```
-然后main\_cli()就处理用户的输入,<br>
+然后`main_cli()`就处理用户的输入,<br>
 然后先向服务器发起find peer请求(需要身份验证), 找到peer之后交换密钥然后就可以发消息了<br>
 这里主要说一下输入密码的部分:<br>
-erlang的:io.get_password()函数在mix中不管用, 所以就需要自己写一个清空用户输入的小东西
+erlang的`:io.get_password()`函数在mix中不管用, 所以就需要自己写一个清空用户输入的小东西
 ```elixir
 def gets_passwd(prompt) do
   pid = spawn(fn -> clear_input(prompt) end)
@@ -213,7 +213,7 @@ end
 这里用docker方便部署
 ### 应用程序监视器
 因为是服务端嘛, 鬼知道用户或其它东西会整出什么么蛾子, 所以使用应用程序监视器在程序挂掉时重启进程很有必要<br>
-这也是erlang/OTP的let it crash哲学的一种体现[我做的"crash辅导"视频](https://www.bilibili.com/video/BV193411A7fa)
+这也是erlang/OTP的let it crash思想的一种体现[我做的"crash辅导"视频](https://www.bilibili.com/video/BV193411A7fa)
 ```elixir
 defmodule Server.Application do
   use Application
