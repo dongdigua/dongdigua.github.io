@@ -279,11 +279,10 @@ defmodule Server do
 
     case find_peer(user_data) do
       nil -> add_peer(user_data)
-      {{peer0, msg0}, {peer1, msg1}} ->
+      { {peer0, msg0}, {peer1, msg1} } ->
         :gen_udp.send(socket, peer0, msg0)
         :gen_udp.send(socket, peer1, msg1)
     end
-
   end
 
   def handle_register(socket, {ip, port, bin}) do
