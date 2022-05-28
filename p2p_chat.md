@@ -299,13 +299,22 @@ end
 
 ## 使用方式
 ### 客户端
+```sh
+mix escript.build
+./client --port 2000
+```
+输入register注册一个聊天, 输入find连接另一个使用相同用户名密码find的人
 ### 服务端
-
+```sh
+mix run --no-halt
+```
 
 ## 后记
 ### 感想
 #### 分层实现
+之前是把一个socket在函数之间来会传, 很混乱, 现在是把涉及到网络的都放在核心模块, 思路清晰多了
 #### 结构化数据
+刚开始我服务端是用的多个元组表示用户数据的, 结果一个地方改了整个就得改, 所以使用结构体很必要
 - markdown用VSCode真香!
 ### elixir/erlang UI?
 查了一下, elixir/erlang的基于文本界面(tui)的库好像都得调用C, 有点难受,<br>
