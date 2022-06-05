@@ -1,5 +1,5 @@
 # 讲一讲我前段时间做的一个点对点加密聊天软件
-![miku](https://dongdigua.github.io/miku_sheep.jpg)
+![miku](images/miku_sheep.jpg)
 ## 版权声明
 本文章**仅在**本人github pages发布,<br>
 转载给爷**标上源链接**, 敢在某些平台转载投自制的**你\*\**!**<br>
