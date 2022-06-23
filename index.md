@@ -7,4 +7,6 @@ Minecraft 红石玩家, [B站](https://space.bilibili.com/489732092)<br>
 ## 目录
 [elixir 写点对点加密聊天软件](p2p_chat)<br>
 [博客和 YouTube 收集](blog_and_ytb_collections)<br>
+<!--
 [对我将来的视频网站的一些畅想](plan_for_my_video_site)<br>
+-->
