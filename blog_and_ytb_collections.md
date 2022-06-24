@@ -10,6 +10,11 @@
 [小耸](https://xiaosong.fun/)<br>
 [这可太刑了](https://piaogewala.ga/)<br>
 学习通事件相关, 以及指向两个个人博客[犬](https://moedog.org/787.html), [vtrois](https://www.vtrois.com/)<br>
+[写着写着就懂了](https://www.cnblogs.com/zhongwencool/)<br>
+elixir/erlang大佬<br>
+[Zelin](https://gwzlchn.github.io/)<br>
+[lujun9972](http://blog.lujun9972.win/emacs-document/)<br>
+超多emacs<br>
 
 ## YouTube 收集(没有账号, 这就是我的收藏夹)
 ### Code
