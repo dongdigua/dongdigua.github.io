@@ -24,6 +24,12 @@
 [我不会编程](https://evanmeek.github.io/)
     B站: 美味的樱桃菌<br>
 [中国科学技术大学 Linux 用户协会](https://lug.ustc.edu.cn/)<br>
+[bozhang](http://bzhang.lamost.org/website/)
+    05 年开始, 天文学<br>
+[CC](https://yaocc.cc/)
+    B站: 称呼我C先生<br>
+[emacs dunnet 教程](https://www.luogu.com.cn/blog/ivystorm/emacs-adventuredunnet-tong-guan-jiao-cheng)<br>
+[IceGuye](https://iceguye.com/blog)<br>
 
 ## YouTube 收集(没有账号, 这就是我的收藏夹)
 ### Code
@@ -37,3 +43,5 @@
 [芒果超棒甘蔗机](https://youtu.be/-mzdU-mk7JA)<br>
 [Mojang & Minecraft 开始衰落了吗?](https://youtu.be/VKydXD6Lr20)<br>
 [tsoding 合集](https://www.youtube.com/watch?v=vFB0Ot-ZdIM&list=RDCMUCrqM0Ym_NbK1fqeQG2VIohg)<br>
+### ?
+[IceGuye aka 姑射冰尘](https://www.youtube.com/c/IceGuye)<br>
