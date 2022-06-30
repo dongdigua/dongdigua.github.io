@@ -42,10 +42,6 @@
 [CMD 登录B站](https://youtu.be/nfF91Z6fqGk)<br>
 [Rust aes加密](https://youtu.be/l0AmlU-4IRM)
     legacy<br>
-
-### Minecraft Redstone Survival
-[芒果超棒甘蔗机](https://youtu.be/-mzdU-mk7JA)<br>
-[Mojang & Minecraft 开始衰落了吗?](https://youtu.be/VKydXD6Lr20)<br>
 [tsoding 合集](https://www.youtube.com/watch?v=vFB0Ot-ZdIM&list=RDCMUCrqM0Ym_NbK1fqeQG2VIohg)<br>
 [tsoding write cool shell in rust](https://youtu.be/qKA2NZ1-kx0)<br>
 - 0:10 termion
@@ -55,6 +51,11 @@
 - 1:40 struct
 - 1:50 render
 - 2:00 great! try parse and eval the buffer if valid(like node.js)
+
+
+### Minecraft Redstone Survival
+[芒果超棒甘蔗机](https://youtu.be/-mzdU-mk7JA)<br>
+[Mojang & Minecraft 开始衰落了吗?](https://youtu.be/VKydXD6Lr20)<br>
 
 ### ?
 [IceGuye aka 姑射冰尘](https://www.youtube.com/c/IceGuye)
