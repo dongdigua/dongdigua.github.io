@@ -9,7 +9,7 @@
     一个07年开始发博客的大佬<br>
 [小耸](https://xiaosong.fun/)<br>
 [这可太刑了](https://piaogewala.ga/)
-    学习通事件相关, 以及指向两个个人博客<br>
+    学习通事件相关, 以及指向两个个人博客
 ([犬](https://moedog.org/787.html), [vtrois](https://www.vtrois.com/))<br>
 [写着写着就懂了](https://www.cnblogs.com/zhongwencool/)
     elixir/erlang大佬<br>
@@ -42,7 +42,7 @@
 [CMD 登录B站](https://youtu.be/nfF91Z6fqGk)<br>
 [Rust aes加密](https://youtu.be/l0AmlU-4IRM)
     legacy<br>
-[tsoding 合集](https://www.youtube.com/watch?v=vFB0Ot-ZdIM&list=RDCMUCrqM0Ym_NbK1fqeQG2VIohg)<br>
+[tsoding 合集](https://www.youtube.com/watch?list=RDCMUCrqM0Ym_NbK1fqeQG2VIohg)<br>
 [tsoding write cool shell in rust](https://youtu.be/qKA2NZ1-kx0)<br>
 - 0:10 termion
 - 1:10 cursor
@@ -52,6 +52,11 @@
 - 1:50 render
 - 2:00 great! try parse and eval the buffer if valid(like node.js)
 
+[Tantan 合集](https://www.youtube.com/watch?list=RDCMUChl_NKOs1qqh_x7yJfaDpDw)
+    Rust Graphics<br>
+[build virtual machine 合集](https://www.youtube.com/watch?list=PLGNbPb3dQJ_446PjTYQ0mCn2OGoHSKraB)<br>
+[build virtual machine from scratch](https://youtu.be/BNXP0w4Ppto)
+    2015, cpp, not oop :)<br>
 
 ### Minecraft Redstone Survival
 [芒果超棒甘蔗机](https://youtu.be/-mzdU-mk7JA)<br>
