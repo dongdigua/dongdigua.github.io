@@ -8,15 +8,14 @@
     一个07年开始发博客的大佬<br>
 [小耸](https://xiaosong.fun/)<br>
 [这可太刑了](https://piaogewala.ga/)
-    学习通事件相关, 以及指向两个个人博客
-([犬](https://moedog.org/787.html), [vtrois](https://www.vtrois.com/))<br>
+    学习通事件相关<br>
 [写着写着就懂了](https://www.cnblogs.com/zhongwencool/)
     elixir/erlang大佬, 公众号: HelloElixir<br>
 [lujun9972](http://blog.lujun9972.win/emacs-document/)
     超多emacs<br>
 [文辉的烂笔头](https://www.wenhui.space/)<br>
 [scinart](http://scinart.is-programmer.com/)
-    Lisp<br>
+    Lisp, 13年最后更新<br>
 [我不会编程](https://evanmeek.github.io/)
     B站: 美味的樱桃菌<br>
 [中国科学技术大学 Linux 用户协会](https://lug.ustc.edu.cn/)<br>
@@ -62,9 +61,10 @@
 [tsoding helloworld in c](https://youtu.be/hmMtQe_mYr0)<br>
 [Tantan 合集](https://www.youtube.com/watch?list=RDCMUChl_NKOs1qqh_x7yJfaDpDw)
     Rust Graphics<br>
-[build virtual machine 合集](https://www.youtube.com/watch?list=PLGNbPb3dQJ_446PjTYQ0mCn2OGoHSKraB)<br>
-[build virtual machine from scratch](https://youtu.be/BNXP0w4Ppto)
-    2015, memory visualization ,cpp without oop :)<br>
+[build a virtual machine 合集](https://www.youtube.com/watch?list=PLGNbPb3dQJ_446PjTYQ0mCn2OGoHSKraB)<br>
+[stack-based virtual machine(6 episode)](https://www.youtube.com/watch?list=PLSiFUSQSRYAOFwfP-aMzXJlWKVyIuWfPU)
+    and [register-based(13 episode)](https://youtu.be/cfPDeso3XwI)<br>
+[register virtual machine in rust, with memory visualization](https://youtu.be/_uAMo-bXI5g)<br>
 
 ### Minecraft Redstone Survival
 [Mojang & Minecraft 开始衰落了吗?](https://youtu.be/VKydXD6Lr20)<br>
