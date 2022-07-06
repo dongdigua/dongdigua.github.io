@@ -39,6 +39,12 @@
     今年的新博客, 友链有踏浪<br>
 [mrxn](https://mrxn.net/)
     网安<br>
+[devbins](https://devbins.github.io/page)<br>
+[include-yy](http://incf19.com/yynotes/)
+    东方, C, emacs<br>
+[emacs is sexy!](https://emacs.sexy/)<br>
+[stardiviner](https://stardiviner.github.io/)
+    Coder & 文学<br>
 
 
 ## YouTube 收集(没有账号, 这就是我的收藏夹)
@@ -68,6 +74,7 @@
 
 ### Minecraft Redstone Survival
 [Mojang & Minecraft 开始衰落了吗?](https://youtu.be/VKydXD6Lr20)<br>
+[SciCraft Update Plans](https://youtu.be/Y9DIIh0s9cg)<br>
 
 ### ?
 [IceGuye aka 姑射冰尘](https://www.youtube.com/c/IceGuye)
