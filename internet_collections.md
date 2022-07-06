@@ -39,6 +39,16 @@
     今年的新博客, 友链有踏浪<br>
 [mrxn](https://mrxn.net/)
     网安<br>
+[devbins](https://devbins.github.io/page)<br>
+[include-yy](http://incf19.com/yynotes/)
+    东方, C, emacs<br>
+[emacs is sexy!](https://emacs.sexy/)<br>
+[stardiviner](https://stardiviner.github.io/)
+    Coder & 文学<br>
+[Rust 闭包递归与 Y 组合子](https://nihil.cc/posts/rust_closure_and_y/)<br>
+[advanced emacs startup](https://blog.d46.us/advanced-emacs-startup/)<br>
+[steven](https://stevenbai.top/)
+    Rust, BlockChain<br>
 
 
 ## YouTube 收集(没有账号, 这就是我的收藏夹)
@@ -51,23 +61,17 @@
     legacy<br>
 [tsoding 合集](https://www.youtube.com/watch?list=RDCMUCrqM0Ym_NbK1fqeQG2VIohg)<br>
 [tsoding write cool shell in rust](https://youtu.be/qKA2NZ1-kx0)<br>
-- 0:10 termion
-- 1:10 cursor
-- 1:20 raw mode
-- 1:29 flush()
-- 1:50 render
-- 2:00 great! try parse and eval the buffer if valid(like node.js)
-
 [tsoding helloworld in c](https://youtu.be/hmMtQe_mYr0)<br>
 [Tantan 合集](https://www.youtube.com/watch?list=RDCMUChl_NKOs1qqh_x7yJfaDpDw)
     Rust Graphics<br>
-[build a virtual machine 合集](https://www.youtube.com/watch?list=PLGNbPb3dQJ_446PjTYQ0mCn2OGoHSKraB)<br>
+[build a virtual machine 合集(6/29)](https://www.youtube.com/watch?list=PLGNbPb3dQJ_446PjTYQ0mCn2OGoHSKraB)<br>
 [stack-based virtual machine(6 episode)](https://www.youtube.com/watch?list=PLSiFUSQSRYAOFwfP-aMzXJlWKVyIuWfPU)
     and [register-based(13 episode)](https://youtu.be/cfPDeso3XwI)<br>
 [register virtual machine in rust, with memory visualization](https://youtu.be/_uAMo-bXI5g)<br>
 
 ### Minecraft Redstone Survival
 [Mojang & Minecraft 开始衰落了吗?](https://youtu.be/VKydXD6Lr20)<br>
+[SciCraft Update Plans](https://youtu.be/Y9DIIh0s9cg)<br>
 
 ### ?
 [IceGuye aka 姑射冰尘](https://www.youtube.com/c/IceGuye)
