@@ -18,8 +18,10 @@ sudo dnf install f33-backgrounds-gnome
 
 terminal: Solarized
 
-extensions: dash-to-panel
-
+extensions:
+- user theme
+- dash to panel
+- clipboard indicator(我之前一直是用文本编辑器当作临时剪切板🤣)
 
 
 

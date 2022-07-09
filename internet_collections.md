@@ -59,7 +59,6 @@
 [CMD 登录B站](https://youtu.be/nfF91Z6fqGk)<br>
 [Rust aes加密](https://youtu.be/l0AmlU-4IRM)
     legacy<br>
-[tsoding 合集](https://www.youtube.com/watch?list=RDCMUCrqM0Ym_NbK1fqeQG2VIohg)<br>
 [tsoding write cool shell in rust](https://youtu.be/qKA2NZ1-kx0)<br>
 [tsoding helloworld in c](https://youtu.be/hmMtQe_mYr0)<br>
 [Tantan 合集](https://www.youtube.com/watch?list=RDCMUChl_NKOs1qqh_x7yJfaDpDw)
@@ -68,6 +67,7 @@
 [stack-based virtual machine(6 episode)](https://www.youtube.com/watch?list=PLSiFUSQSRYAOFwfP-aMzXJlWKVyIuWfPU)
     and [register-based(13 episode)](https://youtu.be/cfPDeso3XwI)<br>
 [register virtual machine in rust, with memory visualization](https://youtu.be/_uAMo-bXI5g)<br>
+[tsoding virtual machine for Lisp, in C](https://www.youtube.com/list=PLpM-Dvs8t0VY73ytTCQqgvgCWttV3m8LM)<br>
 
 ### Minecraft Redstone Survival
 [Mojang & Minecraft 开始衰落了吗?](https://youtu.be/VKydXD6Lr20)<br>
