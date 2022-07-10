@@ -49,6 +49,7 @@
 [advanced emacs startup](https://blog.d46.us/advanced-emacs-startup/)<br>
 [steven](https://stevenbai.top/)
     Rust, BlockChain<br>
+[用Go语言汇编计算fibonacci数列](https://zhuanlan.zhihu.com/p/138719668)<br>
 
 
 ## YouTube 收集(没有账号, 这就是我的收藏夹)
@@ -67,7 +68,7 @@
 [stack-based virtual machine(6 episode)](https://www.youtube.com/watch?list=PLSiFUSQSRYAOFwfP-aMzXJlWKVyIuWfPU)
     and [register-based(13 episode)](https://youtu.be/cfPDeso3XwI)<br>
 [register virtual machine in rust, with memory visualization](https://youtu.be/_uAMo-bXI5g)<br>
-[tsoding virtual machine for Lisp, in C](https://www.youtube.com/list=PLpM-Dvs8t0VY73ytTCQqgvgCWttV3m8LM)<br>
+[tsoding virtual machine for Lisp, in C](https://www.youtube.com/watch?list=PLpM-Dvs8t0VY73ytTCQqgvgCWttV3m8LM)<br>
 
 ### Minecraft Redstone Survival
 [Mojang & Minecraft 开始衰落了吗?](https://youtu.be/VKydXD6Lr20)<br>

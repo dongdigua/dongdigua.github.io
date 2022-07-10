@@ -23,6 +23,13 @@ extensions:
 - dash to panel
 - clipboard indicator(我之前一直是用文本编辑器当作临时剪切板🤣)
 
+dir name
+```shell
+export LANG=en_US
+xdg-user-dirs-gtk-update
+export LANG=zh_CN.UTF-8
+```
+
 
 
 
