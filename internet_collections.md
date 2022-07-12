@@ -68,7 +68,8 @@
 [stack-based virtual machine(6 episode)](https://www.youtube.com/watch?list=PLSiFUSQSRYAOFwfP-aMzXJlWKVyIuWfPU)
     and [register-based(13 episode)](https://youtu.be/cfPDeso3XwI)<br>
 [register virtual machine in rust, with memory visualization](https://youtu.be/_uAMo-bXI5g)<br>
-[tsoding virtual machine for Lisp, in C](https://www.youtube.com/watch?list=PLpM-Dvs8t0VY73ytTCQqgvgCWttV3m8LM)<br>
+[tsoding virtual machine for Lisp, in C](https://www.youtube.com/watch?list=PLpM-Dvs8t0VY73ytTCQqgvgCWttV3m8LM)
+    [some notes](tsoding_bm)<br>
 
 ### Minecraft Redstone Survival
 [Mojang & Minecraft 开始衰落了吗?](https://youtu.be/VKydXD6Lr20)<br>
