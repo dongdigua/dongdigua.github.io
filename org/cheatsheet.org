@@ -1,5 +1,5 @@
 #+STARTUP: indent
-#+TITLE: Editor Cheetsheet
+#+TITLE: Editor Cheatsheet
 
 
 * VIM
