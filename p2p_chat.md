@@ -1,53 +1,53 @@
-# 讲一讲我前段时间做的一个点对点加密聊天软件
-![miku](images/miku_sheep.jpg)
-## 版权声明
-本文章**仅在**本人github pages发布,<br>
-转载给爷**标上源链接**, 敢在某些平台转载投自制的**你\*\**!**<br>
-CC BY-NC-SA
+[#]: author: "dongdigua"
+[#]: via: "dongdigua.github.io/p2p_chat"
+[#]: keywords: "elixir erlang p2p rsa 通信 开源 教程"
 
-## 开头
-项目地址: https://github.com/dongdigua/p2p_chat<br>
-写着玩的小项目, 肯定有很多不足
+使用 elixir 写一个简易点对点加密聊天软件
+===
+![题图](https://dongdigua.github.io/elixir_image.jpg)
 
-## 使用到的技术
+> 尝试用 elixir 写一个 p2p 加密聊天软件
+
+### 使用到的技术
 - UDP socket
-- 进程(这里指beam虚拟机的进程)
+- 进程(这里指 beam 虚拟机的进程)
 - GenServer
-- ETS键值存储(Erlang Term Storage)[ETS教程](https://elixirschool.com/zh-hans/lessons/storage/ets)
-- escript编译成可执行文件
-- rsa非对称加密
-- UDP打洞<br>
+- ETS 键值存储(Erlang Term Storage)[ETS 教程](https://elixirschool.com/zh-hans/lessons/storage/ets)
+- escript 编译成可执行文件
+- rsa 非对称加密
+- UDP 打洞<br>
 整个思路来源都是从这两个视频来的:<br>
-[with netcat](https://www.youtube.com/watch?v=s_-UCmuiYW8) & [with python](https://www.youtube.com/watch?v=IbzGL_tjmv4)<br>
-我的理解就是通过发送UDP包打开一个端口来让远程电脑能知道你的端口映射到了公网IP的哪个端口,<br>
-然后将两个需要发消息的客户端相互告诉对方各自的公网IP以及映射到的端口, 就能实现p2p通信.<br>
+[使用 Netcat 的原理讲解](https://www.youtube.com/watch?v=s_-UCmuiYW8) & 
+[使用 Python 实现 p2p 通信](https://www.youtube.com/watch?v=IbzGL_tjmv4)<br>
+我的理解就是通过发送 UDP 包打开一个端口，<br>
+然后将两个需要发消息的客户端相互告诉对方各自的公网 IP 以及映射到的端口，就能实现 p2p 通信。<br>
 
-## 大体架构
-客户端使用GenServer来实现后端接口和网络通信, 在CLI模块处理用户输入调用GenServer.<br>
+### 大体架构
+客户端使用 GenServer 来实现后端接口和网络通信，在 CLI 模块处理用户输入调用 GenServer.<br>
 
-服务端可以很简单, 就是收到两个IP然后相互发送对方的地址让客户端能够相互通信,<br>
-但是为了能够接受多对客户端以及非阻塞等待客户端, 就用ETS存储客户端的信息,<br>
-为了让客户端不乱配对, 就需要增加一个注册功能, 也使用ETS实现.<br>
+服务端可以很简单，就是收到两个 IP 然后相互发送对方的地址让客户端能够相互通信，<br>
+但是为了能够接受多对客户端以及非阻塞等待客户端, 就用 ETS 存储客户端的信息, <br>
+为了让客户端不乱配对, 就需要增加一个注册功能, 也使用 ETS 实现。<br>
 
-## 客户端实现
-内容比较多, 所以我不会讲的很全, 代码不会都放出来<br>
+### 客户端实现
+内容比较多, 所以我不会讲的很全,  代码不会都放出来<br>
 项目目录大概是这样
 ```sh
 ├── client
 │   ├── lib
 │   │   ├── client
-│   │   │   ├── cli.ex          # 和用户交互, 调用GenServer后端, escript入口点
+│   │   │   ├── cli.ex          # 和用户交互,  调用 GenServer 后端,  escript 入口点
 │   │   │   ├── connect.ex      # 处理与服务器发送和接受的二进制字符串
 │   │   │   ├── crypto.ex       # rsa加密解密
 │   │   │   └── register.ex     # 仅生成注册时需要发送的二进制字符串
-│   │   └── client.ex           # 客户端核心程序, 包含GenServer和socket通信
+│   │   └── client.ex           # 客户端核心程序, 包含 GenServer 和 socket 通信
 │   ├── mix.exs
 │   └── mix.lock
 ```
-注意这里只在核心程序处理socket, cli模块处理用户交互, 使项目分层化
+注意这里只在核心程序处理 socket, cli 模块处理用户交互, 使项目分层化
 
-### escript
-客户端要编译成可执行文件, 要在`mix.exs`里加入`escript` 
+#### escript
+客户端要编译成可执行文件, 要在 `mix.exs` 里加入 `escript`
 ```elixir
 defmodule Client.MixProject do
   use Mix.Project
@@ -78,12 +78,12 @@ defmodule Client.MixProject do
   end
 end
 ```
-`main_module`指定了程序的入口点main函数, `extra_applications`加入erlang库`:crypto`因为后续需要使用加密
+`main_module` 指定了程序的入口点main函数, `extra_applications` 加入 erlang 库 `:crypto` 因为后续需要使用加密
 
-### GenServer和socket
-先是定义了两个结构体, 一个用于存储peer的信息, 一个存储客户端的信息(peer键是peer结构体)<br>
-然后是一堆常量, 服务器可以改成你的128核心1TB内存1EB固态硬盘的小型服务器的地址, `key_integer`是客户端的密钥生成器用的<br>
-其实可以在`config.exs`或者用json来配置, 但是我懒哈哈
+#### GenServer 和 socket
+先是定义了两个结构体, 一个用于存储 peer 的信息, 一个存储客户端的信息(peer 键是 peer 结构体)<br>
+然后是一堆常量, 服务器可以改成你的 128 核心 1TB 内存 1EB 固态硬盘的小型服务器的地址, `key_integer` 是客户端的密钥生成器用的<br>
+其实可以在 `config.exs` 或者用 json 来配置
 ```elixir
 defmodule Client do
   defmodule Peer do
@@ -97,7 +97,7 @@ defmodule Client do
   defstruct [:socket, :name, :priv_key, peer: nil]
 ```
 
-GenServer初始化, UDP打开一个端口(从命令行参数传进来)
+GenServer 初始化, UDP 打开一个端口(从命令行参数传进来)
 ```elixir
   def start_link(port) do
     {:ok, socket} = :gen_udp.open(port, [:binary, active: false])
@@ -105,7 +105,7 @@ GenServer初始化, UDP打开一个端口(从命令行参数传进来)
   end
 ```
 
-然后是GenServer的回调函数, 实现了必要的接口
+然后是 GenServer 的回调函数, 实现了必要的接口
 ```elixir
   def init(%Client{} = client), do: {:ok, client}
 
@@ -157,8 +157,8 @@ GenServer初始化, UDP打开一个端口(从命令行参数传进来)
 end
 ```
 
-### 用户交互CLI
-首先使用`OptionParser`解析命令行参数, 如果解析成功就启动GenServer
+#### 用户交互 CLI
+首先使用 `OptionParser` 解析命令行参数, 如果解析成功就启动 GenServer
 ```elixir
 def main(args \\ []) do
   {opts, args, invalid} = OptionParser.parse(args, strict: [
@@ -172,10 +172,10 @@ def main(args \\ []) do
   end
 end
 ```
-然后`main_cli()`就处理用户的输入,<br>
-然后先向服务器发起find peer请求(需要身份验证), 找到peer之后交换密钥然后就可以发消息了<br>
+然后 `main_cli()` 就处理用户的输入, <br>
+然后先向服务器发起 find peer 请求(需要身份验证), 找到 peer 之后交换密钥然后就可以发消息了<br>
 这里主要说一下输入密码的部分:<br>
-erlang的`:io.get_password()`函数在mix中不管用, 所以就需要自己写一个清空用户输入的小东西
+erlang 的 `:io.get_password()` 函数在 mix 中不管用, 所以就需要自己写一个清空用户输入的小东西
 ```elixir
 def gets_passwd(prompt) do
   pid = spawn(fn -> clear_input(prompt) end)
@@ -196,7 +196,7 @@ end
 ```
 
 
-## 服务端实现
+### 服务端实现
 服务端仅作为暴露客户端连接和将两个客户端牵手的作用, 当然为了区分还要有注册功能<br>
 项目目录大概是这样
 ```sh
@@ -210,10 +210,10 @@ end
     │   └── server.ex
     └── mix.exs
 ```
-这里用docker方便部署
-### 应用程序监视器
+这里用 docker 方便部署
+#### 应用程序监视器
 因为是服务端嘛, 鬼知道用户或其它东西会整出什么么蛾子, 所以使用应用程序监视器在程序挂掉时重启进程很有必要<br>
-这也是erlang/OTP的let it crash思想的一种体现[我做的"crash辅导"视频](https://www.bilibili.com/video/BV193411A7fa)
+这也是 erlang/OTP 的 let it crash 思想的一种体现
 ```elixir
 defmodule Server.Application do
   use Application
@@ -229,9 +229,9 @@ defmodule Server.Application do
   end
 end
 ```
-### socket
+#### socket
 首先还是定义一个结构体用于存储每个用户的数据<br>
-启动两个数据库, 打开UDP端口
+启动两个数据库, 打开 UDP 端口
 ```elixir
 defmodule Server do
   defmodule UserData do
@@ -248,8 +248,8 @@ defmodule Server do
   end
 ```
 
-根据收到的消息头部的不同选择处理不同的内容(其实这里的区分判断应该写全, 但是我懒, 能用就行呗)<br>
-然后递归调用自己形成循环(elixir有尾递归优化, 所以这样递归不会有性能问题)
+根据收到的消息头部的不同选择处理不同的内容(其实这里的区分判断应该写全, 但能用就行呗)<br>
+然后递归调用自己形成循环(elixir 有尾递归优化, 所以这样递归不会有性能问题)
 ```elixir
   def serve(socket) do
     case :gen_udp.recv(socket, 0) |> IO.inspect() do
@@ -297,9 +297,27 @@ defmodule Server do
 end
 ```
 
-## 使用方式
-### 客户端
-### 服务端
+### 使用方式
+#### 服务端
+```sh
+mix run --no-halt
+```
+#### 客户端
+```sh
+mix escript.build
+./client --port 2000
+```
+输入 register 注册一个聊天, 输入 find 连接另一个使用相同用户名密码 find 的人
+
+### 更多参考
+[B站搬运的 Python 实现](https://www.bilibili.com/video/BV1Vo4y1S7XQ)<br>
+[在 Python 实现之前使用 Netcat 演示](https://www.youtube.com/watch?v=TiMeoQt3K4g&ab_channel=EngineerMan)
+
+---
+作者简介: 一个高中生<br>
+B站: 董地瓜(Minecraft红石生存, 高压电, 编程, GeoGebra 区up猪)
+
+---
 
 
 ## 后记
