@@ -21,3 +21,7 @@
 - 0:45 "s64 vs i64, fight"
 - 0:50 [boost integer](https://theboostcpplibraries.com/boost.integer)
 - 0:55 `#include <stdurmom.h>`
+- 3:35 calculating pi
+- 3:43 refer to forth
+- 4:00 step debug
+- 4:14 swap relative address like dup
