@@ -8,13 +8,12 @@ Minecraft 红石玩家, [B站](https://space.bilibili.com/489732092)<br>
 [elixir 写点对点加密聊天软件](p2p_chat)<br>
 [博客, YouTube 等收集](internet_collections)<br>
 [我对 SciCraft 更新1.19的看法](scicraft_update)<br>
-[我的 gnome 配置](my_gnome_configt)<br>
-[编辑器操作备忘录](cheetsheet)<br>
+[我的 gnome 配置](my_gnome_config)<br>
+[编辑器操作备忘录](org-html/cheatsheet)<br>
 <!--
 [对我将来的视频网站的一些畅想](plan_for_my_video_site)<br>
 -->
 
 ---
 
-*pay me some monero :)*<br>
-*47LjRRyNYWKf1W5NPmfgZXdZGnGXv4QZRjEnZJbrRRJkAbgikXJGecCNJiP2rny6SR3SSizTVYKJKFdhdKEf5scVMc9Zk1R*
+*[pay me some monero](cGF5IG1lIHNvbWUgbW9uZXJv.txt)*<br>

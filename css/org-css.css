@@ -1,0 +1,165 @@
+﻿body {
+    line-height:1.2;
+}
+
+body {
+    font-family:Source Han Serif SC, "lucida grande", "lucida sans unicode", lucida, helvetica, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+    font-size: medium;
+    font-size:20px;
+}
+p{
+font-size:20px;
+ }
+H1 {
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, Helvetica, STKaiti, SimSun, serif;
+}
+
+H2 {
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, Helvetica, STKaiti, SimSun, serif;
+    margin-bottom: 60px;
+    margin-bottom: 40px;
+    padding: 5px;
+    border-bottom: 2px LightGrey solid;
+    width: 90%;
+    line-height: 150%;
+    color: DarkGreen;
+}
+
+
+H3 {
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, Helvetica, STKaiti, SimSun, serif;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    border-bottom: 1px LightGrey solid;
+    width: 80%;
+    line-height: 150%;
+    color: DarkBlue;
+}
+
+
+H4 {
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, Helvetica, STKaiti, SimSun, serif;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    border-bottom: 1px LightGrey solid;
+    width: 80%;
+    line-height: 150%;
+    color: DarkBlue;
+}
+
+
+li {
+    margin-left: 10px;
+}
+
+
+blockquote {
+     font-family: 'Source Sans Pro', Tahoma, Geneva, 'STKaiti', 'KaiTi', '楷体', 'SimKai', 'DFKai-SB', 'NSimSun', serif;
+    border-left: 4px crimson solid;
+    color:grey; 
+    padding-left: 5px;
+    margin-left: 20px;
+}
+
+
+/*pre {
+    font-family: Inconsolata, Consolas, "DEJA VU SANS MONO", "DROID SANS MONO", Proggy, monospace;
+    font-size: 75%;
+    border: solid 1px lightgrey;
+    background-color: Ivory;
+    padding: 5px;
+    line-height: 130%;
+    margin-left: 10px;
+    width: 95%;
+}*/
+ pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+
+/*pre.src{
+    white-space: pre-wrap;       
+    white-space: -moz-pre-wrap;  
+    white-space: -pre-wrap;      
+    white-space: -o-pre-wrap;    
+    word-wrap: break-word;       
+}*/
+code,
+kbd,
+pre,
+samp {
+    font-family: Consolas, Inconsolata, "DEJA VU SANS MONO", "DROID SANS MONO", Proggy, monospace;
+    font-size: 14px;
+}
+
+/*pre.src {
+    background-color:#2e3436; color: #eeeeec;
+}*/
+pre.src, pre.example {
+    display: block;
+    white-space: pre-wrap;
+    padding: 0.5em;
+    /*background-color: hsl(0,0%,95%);*/
+    background-color: Ivory;
+    border: solid thin gray;
+    font-family: "DejaVu Sans Mono",monospace;
+    box-shadow: 10px 10px 10px #888;
+}
+/*pre.example {
+    background-color:rgb(239,239,239);
+    /* text-align: center; */
+}*/
+  
+code {
+    font-family: Inconsolata, Consolas, "DEJA VU SANS MONO", "DROID SANS MONO", Proggy, monospace;
+    font-size: 90%;
+}
+
+
+a {
+    text-decoration: none;
+    cursor: crosshair;
+    border-bottom: 1px dashed Red;
+    padding: 1px;
+    color: black;
+}
+
+
+a:hover {
+	background-color: LightGrey;
+}
+
+
+img {
+    margin-left: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+
+hr {
+    color: LightGrey;
+}
+#content, #tag-cloud-wrapper{
+    margin-left: auto;
+    margin-right: auto;
+    /*position: relative;*/
+    background: rgb(255, 255, 255);
+    /*margin: 5% 20%;*/
+    /*padding-left: 250px;*/ 
+    padding: 100px;
+    width:1000px;
+    line-height:1.6;
+    -moz-box-shadow: 0px 1px 8px 1.5px rgba(0, 0, 0, 0.25), 0px 20px 70px 8px rgba(0, 0, 0, 0.05);
+    -webkit-box-shadow: 0px 1px 8px 1.5px rgba(0, 0, 0, 0.25), 0px 20px 70px 8px rgba(0, 0, 0, 0.05);
+    box-shadow: 0px 1px 8px 1.5px rgba(0, 0, 0, 0.25), 0px 20px 70px 8px rgba(0, 0, 0, 0.05);
+    border-radius: 6px;
+}
