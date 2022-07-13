@@ -9,3 +9,6 @@ html:
 	@$(EMACS) $(EMACS_OPTS)
 	@echo "HTML generation done"
 
+clean:
+	rm ./../org-html/*.html
+	rm ~/.org-timestamps/org-pages.cache 

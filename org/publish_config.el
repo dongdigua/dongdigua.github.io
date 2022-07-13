@@ -4,13 +4,17 @@
 ;; 能不能有点创新...
 
 (require 'org)
+(require 'ox)
+
+(setq org-html-validation-link nil)
 (setq org-publish-project-alist
       '(("org-pages"
          :base-directory "."
          :base-extension "org"
-         :publishing-directory "./.."
+         :publishing-directory "./../org-html/"
          :recursive t
-         :publishing-function org-html-export-to-html
+         :publishing-function org-html-publish-to-html
+         :html-head "<link rel='stylesheet' type='text/css' href='./../css/org-css.css' />"  ; instead of :style
          )))
 
 (defun myweb-publish ()
