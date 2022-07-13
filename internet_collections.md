@@ -50,6 +50,7 @@
 [steven](https://stevenbai.top/)
     Rust, BlockChain<br>
 [用Go语言汇编计算fibonacci数列](https://zhuanlan.zhihu.com/p/138719668)<br>
+[Alynx Zhou](https://sh.alynx.one/)<br>
 
 
 ## YouTube 收集(没有账号, 这就是我的收藏夹)
