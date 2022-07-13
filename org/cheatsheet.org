@@ -1,5 +1,4 @@
 #+STARTUP: indent
-#+TITLE: Editor Cheetsheet
 
 * VIM
 ** deletion
