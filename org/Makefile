@@ -11,4 +11,4 @@ html:
 
 clean:
 	rm ./../org-html/*.html
-	rm ~/.org-timestamps/org-pages.cache 
+	rm ~/.org-timestamps/org-pages.cache
