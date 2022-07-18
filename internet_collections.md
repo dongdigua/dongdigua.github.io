@@ -51,7 +51,12 @@
     Rust, BlockChain<br>
 [用Go语言汇编计算fibonacci数列](https://zhuanlan.zhihu.com/p/138719668)<br>
 [Alynx Zhou](https://sh.alynx.one/)<br>
-
+[Clloz](https://www.clloz.com/)<br>
+    界面特别好看<br>
+[Core Dumped](https://coredumped.dev/)
+    Rust, VM, emacs<br>
+[倔强的程序员](https://www.zhihu.com/column/c_1313110231912726528)
+    编! 译! 原! 理!<br>
 
 ## YouTube 收集(没有账号, 这就是我的收藏夹)
 ### Code
@@ -69,8 +74,11 @@
 [stack-based virtual machine(6 episode)](https://www.youtube.com/watch?list=PLSiFUSQSRYAOFwfP-aMzXJlWKVyIuWfPU)
     and [register-based(13 episode)](https://youtu.be/cfPDeso3XwI)<br>
 [register virtual machine in rust, with memory visualization](https://youtu.be/_uAMo-bXI5g)<br>
-[tsoding virtual machine for Lisp, in C](https://www.youtube.com/watch?list=PLpM-Dvs8t0VY73ytTCQqgvgCWttV3m8LM)
-    [some notes](tsoding_bm)<br>
+[tsoding virtual machine in C](https://www.youtube.com/watch?list=PLpM-Dvs8t0VY73ytTCQqgvgCWttV3m8LM)
+    , [some notes](tsoding_bm)<br>
+[what if I try to malloc too much memory](https://youtu.be/Fq9chEBQMFE)<br>
+[fireship bitcoin](https://youtu.be/qF7dkrce-mQ)
+    大概是我见过最好的讲区块链的视频了, 除了...JS 啊啊啊<br>
 
 ### Minecraft Redstone Survival
 [Mojang & Minecraft 开始衰落了吗?](https://youtu.be/VKydXD6Lr20)<br>
@@ -81,9 +89,14 @@
     [on odysee(lbry)](https://odysee.com/@IceGuye)<br>
 
 
-## Wiki
+## Other
 [日月脏主 Wiki](https://moonboos.fandom.com/zh/wiki/%E6%98%8E%E6%9C%88%E5%BA%84%E4%B8%BB_Wiki)
     MC 技术区毒瘤!<br>
 [Python-5](https://en.wikipedia.org/wiki/Python_(missile))
     from [tsoding's first porth video](https://youtu.be/8QP2fDBIxjM),
     (he is using debian, 37:00 copilot xd)<br>
+
+<!--
+https://www.pixiv.net/users/57759368
+https://www.pixiv.net/users/2973809
+-->
