@@ -3,14 +3,14 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-07-18 一 14:13 -->
+<!-- 2022-07-24 日 19:09 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Editor Chaetsheet</title>
-<meta name="generator" content="Org mode" />
 <meta name="author" content="dongdigua" />
-<style type="text/css">
- <!--/*--><![CDATA[/*><!--*/
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
   .title  { text-align: center;
              margin-bottom: .2em; }
   .subtitle { text-align: center;
@@ -31,8 +31,9 @@
   #postamble p, #preamble p { font-size: 90%; margin: .2em; }
   p.verse { margin-left: 3%; }
   pre {
-    border: 1px solid #ccc;
-    box-shadow: 3px 3px 3px #eee;
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
     padding: 8pt;
     font-family: monospace;
     overflow: auto;
@@ -41,21 +42,21 @@
   pre.src {
     position: relative;
     overflow: auto;
-    padding-top: 1.2em;
   }
   pre.src:before {
     display: none;
     position: absolute;
-    background-color: white;
-    top: -10px;
-    right: 10px;
+    top: -8px;
+    right: 12px;
     padding: 3px;
-    border: 1px solid black;
+    color: #555;
+    background-color: #f2f2f299;
   }
   pre.src:hover:before { display: inline; margin-top: 14px;}
   /* Languages per Org manual */
   pre.src-asymptote:before { content: 'Asymptote'; }
   pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
   pre.src-C:before { content: 'C'; }
   /* pre.src-C++ doesn't work in CSS */
   pre.src-clojure:before { content: 'Clojure'; }
@@ -191,64 +192,42 @@
   .org-info-js_search-highlight
     { background-color: #ffff00; color: #000000; font-weight: bold; }
   .org-svg { width: 90%; }
-  /*]]>*/-->
 </style>
 <link rel='stylesheet' type='text/css' href='./../css/org-css.css' />
-<script type="text/javascript">
-// @license magnet:?xt=urn:btih:e95b018ef3580986a04669f1b5879592219e2a7a&dn=public-domain.txt Public Domain
-<!--/*--><![CDATA[/*><!--*/
-     function CodeHighlightOn(elem, id)
-     {
-       var target = document.getElementById(id);
-       if(null != target) {
-         elem.classList.add("code-highlighted");
-         target.classList.add("code-highlighted");
-       }
-     }
-     function CodeHighlightOff(elem, id)
-     {
-       var target = document.getElementById(id);
-       if(null != target) {
-         elem.classList.remove("code-highlighted");
-         target.classList.remove("code-highlighted");
-       }
-     }
-    /*]]>*///-->
-// @license-end
-</script>
 </head>
 <body>
-<div id="content">
-<h1 class="title">Editor Chaetsheet</h1>
-<div id="table-of-contents">
+<div id="content" class="content">
+<h1 class="title">Editor Cheatsheet</h1>
+<div id="table-of-contents" role="doc-toc">
 <h2>Table of Contents</h2>
-<div id="text-table-of-contents">
+<div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#orgd8c83ff">1. VIM</a>
+<li><a href="#org75f062a">1. VIM</a>
 <ul>
-<li><a href="#orgb78a180">1.1. deletion</a></li>
-<li><a href="#orgf74d90a">1.2. movement</a></li>
-<li><a href="#orgdc21f17">1.3. visual</a></li>
-<li><a href="#org3d1d243">1.4. file/split</a></li>
+<li><a href="#org915baf0">1.1. deletion</a></li>
+<li><a href="#orgc417b4a">1.2. movement</a></li>
+<li><a href="#orgbc2ca84">1.3. visual</a></li>
+<li><a href="#orge536555">1.4. file/split</a></li>
 </ul>
 </li>
-<li><a href="#org7e64464">2. EMACS</a>
+<li><a href="#orga1b9815">2. EMACS</a>
 <ul>
-<li><a href="#org1a48a87">2.1. org-mode</a></li>
-<li><a href="#orgad86cf4">2.2. normal</a></li>
+<li><a href="#org020b8c6">2.1. org-mode</a></li>
+<li><a href="#org63364c1">2.2. normal</a></li>
 </ul>
 </li>
+<li><a href="#orgec4b573">3. Git (虽然不算editor, 但是先也放这吧)</a></li>
 </ul>
 </div>
 </div>
 
 
-<div id="outline-container-orgd8c83ff" class="outline-2">
-<h2 id="orgd8c83ff"><span class="section-number-2">1</span> VIM</h2>
+<div id="outline-container-org75f062a" class="outline-2">
+<h2 id="org75f062a"><span class="section-number-2">1.</span> VIM</h2>
 <div class="outline-text-2" id="text-1">
 </div>
-<div id="outline-container-orgb78a180" class="outline-3">
-<h3 id="orgb78a180"><span class="section-number-3">1.1</span> deletion</h3>
+<div id="outline-container-org915baf0" class="outline-3">
+<h3 id="org915baf0"><span class="section-number-3">1.1.</span> deletion</h3>
 <div class="outline-text-3" id="text-1-1">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
@@ -304,8 +283,8 @@
 </div>
 </div>
 
-<div id="outline-container-orgf74d90a" class="outline-3">
-<h3 id="orgf74d90a"><span class="section-number-3">1.2</span> movement</h3>
+<div id="outline-container-orgc417b4a" class="outline-3">
+<h3 id="orgc417b4a"><span class="section-number-3">1.2.</span> movement</h3>
 <div class="outline-text-3" id="text-1-2">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
@@ -358,8 +337,8 @@
 
 
 
-<div id="outline-container-orgdc21f17" class="outline-3">
-<h3 id="orgdc21f17"><span class="section-number-3">1.3</span> visual</h3>
+<div id="outline-container-orgbc2ca84" class="outline-3">
+<h3 id="orgbc2ca84"><span class="section-number-3">1.3.</span> visual</h3>
 <div class="outline-text-3" id="text-1-3">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
@@ -408,8 +387,8 @@
 </div>
 
 
-<div id="outline-container-org3d1d243" class="outline-3">
-<h3 id="org3d1d243"><span class="section-number-3">1.4</span> file/split</h3>
+<div id="outline-container-orge536555" class="outline-3">
+<h3 id="orge536555"><span class="section-number-3">1.4.</span> file/split</h3>
 <div class="outline-text-3" id="text-1-4">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
@@ -453,12 +432,12 @@
 
 
 
-<div id="outline-container-org7e64464" class="outline-2">
-<h2 id="org7e64464"><span class="section-number-2">2</span> EMACS</h2>
+<div id="outline-container-orga1b9815" class="outline-2">
+<h2 id="orga1b9815"><span class="section-number-2">2.</span> EMACS</h2>
 <div class="outline-text-2" id="text-2">
 </div>
-<div id="outline-container-org1a48a87" class="outline-3">
-<h3 id="org1a48a87"><span class="section-number-3">2.1</span> org-mode</h3>
+<div id="outline-container-org020b8c6" class="outline-3">
+<h3 id="org020b8c6"><span class="section-number-3">2.1.</span> org-mode</h3>
 <div class="outline-text-3" id="text-2-1">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
@@ -499,8 +478,8 @@
 </div>
 </div>
 
-<div id="outline-container-orgad86cf4" class="outline-3">
-<h3 id="orgad86cf4"><span class="section-number-3">2.2</span> normal</h3>
+<div id="outline-container-org63364c1" class="outline-3">
+<h3 id="org63364c1"><span class="section-number-3">2.2.</span> normal</h3>
 <div class="outline-text-3" id="text-2-2">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
@@ -533,18 +512,34 @@
 </tr>
 
 <tr>
-<td class="org-left">&#xa0;</td>
-<td class="org-left">&#xa0;</td>
+<td class="org-left">M-;</td>
+<td class="org-left">区域切换注释</td>
+</tr>
+
+<tr>
+<td class="org-left">C-x C-;</td>
+<td class="org-left">行切换注释</td>
 </tr>
 </tbody>
 </table>
 </div>
 </div>
 </div>
+
+<div id="outline-container-orgec4b573" class="outline-2">
+<h2 id="orgec4b573"><span class="section-number-2">3.</span> Git (虽然不算editor, 但是先也放这吧)</h2>
+<div class="outline-text-2" id="text-3">
+<div class="org-src-container">
+<pre class="src src-shell">git log --stat | perl -ne 'END { print $c } $c += $1 if /(\d+) insertions/;'
+git log  --pretty=tformat: --numstat | awk '{ add += $1; subs += $2; loc += $1 - $2 } END { printf "added lines: %s, removed lines: %s, total lines: %s\n", add, subs, loc }'
+</pre>
+</div>
+</div>
+</div>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: dongdigua</p>
-<p class="date">Created: 2022-07-18 一 14:13</p>
+<p class="date">Created: 2022-07-24 日 19:09</p>
 </div>
 </body>
 </html>

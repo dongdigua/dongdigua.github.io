@@ -1,5 +1,6 @@
 # 收集
 ## 一些(个人)博客收集
+[qiusir](http://www.qiusir.com/)<br>
 [王垠](http://www.yinwang.org/)<br>
 [阮一峰](http://ruanyifeng.com/blog/)<br>
 [易姐](https://shakaianee.top/)<br>
@@ -57,6 +58,9 @@
     Rust, VM, emacs<br>
 [倔强的程序员](https://www.zhihu.com/column/c_1313110231912726528)
     编! 译! 原! 理!<br>
+[24 days of rust](https://siciarz.net)
+    old<br>
+
 
 ## YouTube 收集(没有账号, 这就是我的收藏夹)
 ### Code
@@ -79,10 +83,15 @@
 [what if I try to malloc too much memory](https://youtu.be/Fq9chEBQMFE)<br>
 [fireship bitcoin](https://youtu.be/qF7dkrce-mQ)
     大概是我见过最好的讲区块链的视频了, 除了...JS 啊啊啊<br>
+[what your favourite pl says about you](https://youtu.be/zJ-8DZhzBEE)<br>
+[tsoding aoc 2020 day 12 in perl](https://youtu.be/R00JE6QRbno)
+    (0:20:50 pythonbulubulu~)<br>
 
-### Minecraft Redstone Survival
+
+### Minecraft
 [Mojang & Minecraft 开始衰落了吗?](https://youtu.be/VKydXD6Lr20)<br>
 [SciCraft Update Plans](https://youtu.be/Y9DIIh0s9cg)<br>
+[Tantan: MC + Fez](https://youtu.be/m5S0gLgg2rs)<br>
 
 ### ?
 [IceGuye aka 姑射冰尘](https://www.youtube.com/c/IceGuye)
