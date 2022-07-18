@@ -51,3 +51,18 @@
 | C-c C-e   | 导出 HTML |
 |           |           |
 |           |           |
+
+** normal
+| key     | usage        |
+|---------+--------------|
+| C-s     | 搜索         |
+| M-%     | 替换         |
+| C-_     | [[https://linuxtoy.org/archives/emacs-undo-tree.html][undo/redo]]    |
+| M-;     | 区域切换注释 |
+| C-x C-; | 行切换注释   |
+
+* Git (虽然不算editor, 但是先也放这吧)
+#+BEGIN_SRC shell
+  git log --stat | perl -ne 'END { print $c } $c += $1 if /(\d+) insertions/;'
+  git log  --pretty=tformat: --numstat | awk '{ add += $1; subs += $2; loc += $1 - $2 } END { printf "added lines: %s, removed lines: %s, total lines: %s\n", add, subs, loc }'
+#+END_SRC
