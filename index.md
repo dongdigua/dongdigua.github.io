@@ -1,4 +1,6 @@
+<a>
 <link rel="alternate" type="application/atom+xml" title="{{ site.title }}" href="/feed.xml">
+<a/>
 
 # dongdigua's blog
 ## 关于我
