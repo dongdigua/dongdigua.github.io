@@ -3,10 +3,10 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-07-24 日 19:09 -->
+<!-- 2022-07-26 二 15:40 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>这一天终于来了, B站显示 IP 属地</title>
+<title>Editor Chaetsheet</title>
 <meta name="author" content="dongdigua" />
 <meta name="generator" content="Org Mode" />
 <style>
@@ -197,66 +197,369 @@
 </head>
 <body>
 <div id="content" class="content">
-<h1 class="title">这一天终于来了, B站显示 IP 属地</h1>
+<h1 class="title">Editor Cheatsheet</h1>
 <div id="table-of-contents" role="doc-toc">
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org6342779">1. 我的看法</a></li>
-<li><a href="#orgb51cefc">2. reference</a>
+<li><a href="#org716cc1f">1. VIM</a>
 <ul>
-<li><a href="#org0ee0cba">2.1. from zhihu</a></li>
+<li><a href="#org0aea217">1.1. deletion</a></li>
+<li><a href="#org9c40714">1.2. movement</a></li>
+<li><a href="#org9045732">1.3. visual</a></li>
+<li><a href="#orgef680e9">1.4. file/split</a></li>
 </ul>
 </li>
+<li><a href="#org8c6df9b">2. EMACS</a>
+<ul>
+<li><a href="#org84d4152">2.1. org-mode</a></li>
+<li><a href="#orgc0a6693">2.2. normal</a></li>
+</ul>
+</li>
+<li><a href="#orgb3c7ff0">3. Git (虽然不算editor, 但是先也放这吧)</a></li>
 </ul>
 </div>
 </div>
-<p>
-卸载吧&#x2026;<br />
-</p>
-<div id="outline-container-org6342779" class="outline-2">
-<h2 id="org6342779"><span class="section-number-2">1.</span> 我的看法</h2>
+
+
+<div id="outline-container-org716cc1f" class="outline-2">
+<h2 id="org716cc1f"><span class="section-number-2">1.</span> VIM</h2>
 <div class="outline-text-2" id="text-1">
-<p>
-这个事情真正要打击的那些 <b>诈骗/造假/海外势力</b>, 并不会受到影响,<br />
-它们肯定会使用"虚拟专用网络"伪造IP.<br />
-</p>
+</div>
+<div id="outline-container-org0aea217" class="outline-3">
+<h3 id="org0aea217"><span class="section-number-3">1.1.</span> deletion</h3>
+<div class="outline-text-3" id="text-1-1">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
-<p>
-那些所谓的"翻车"博主, 大多数可能只是公司在国内, 却因为这件事被各大媒体揪出来.<br />
-</p>
 
-<p>
-对于那些网络喷子, 这种事估计不会减少它们的言论, 反而会加重"地域黑"&#x2026;<br />
-</p>
+<colgroup>
+<col  class="org-left" />
 
-<p>
-对于普通人, 大多数肯定是没什么影响, 也根本不在意,<br />
-但是有些人, 只想公开自己想让别人看见的,<br />
-那这种平台的强制行为确实会让TA们很不满.<br />
-</p>
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">key</th>
+<th scope="col" class="org-left">usage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">x</td>
+<td class="org-left">删除光标所在处单词</td>
+</tr>
+
+<tr>
+<td class="org-left">de</td>
+<td class="org-left">删除到本单词末尾</td>
+</tr>
+
+<tr>
+<td class="org-left">db</td>
+<td class="org-left">删除到前一个单词</td>
+</tr>
+
+<tr>
+<td class="org-left">d$</td>
+<td class="org-left">删除光标位置到本行结束</td>
+</tr>
+
+<tr>
+<td class="org-left">d0</td>
+<td class="org-left">删除光标位置到本行开头</td>
+</tr>
+
+<tr>
+<td class="org-left">u/C-r</td>
+<td class="org-left">撤销/重做</td>
+</tr>
+
+<tr>
+<td class="org-left">c i {</td>
+<td class="org-left">change inside {}</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div id="outline-container-org9c40714" class="outline-3">
+<h3 id="org9c40714"><span class="section-number-3">1.2.</span> movement</h3>
+<div class="outline-text-3" id="text-1-2">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">key</th>
+<th scope="col" class="org-left">usage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">w</td>
+<td class="org-left">下一个单词</td>
+</tr>
+
+<tr>
+<td class="org-left">e</td>
+<td class="org-left">单词尾</td>
+</tr>
+
+<tr>
+<td class="org-left">b</td>
+<td class="org-left">单词头</td>
+</tr>
+
+<tr>
+<td class="org-left">0/$</td>
+<td class="org-left">行首/尾</td>
+</tr>
+
+<tr>
+<td class="org-left">H/M/L</td>
+<td class="org-left">当前页面可见顶部/中间/底部</td>
+</tr>
+
+<tr>
+<td class="org-left">&lt;num&gt; G</td>
+<td class="org-left">跳转到第几行</td>
+</tr>
+
+<tr>
+<td class="org-left">C-u(f)/d</td>
+<td class="org-left">上/下翻页</td>
+</tr>
+
+<tr>
+<td class="org-left">f/F &lt;char&gt;</td>
+<td class="org-left">在一行中向后/前跳到某个字符</td>
+</tr>
+
+<tr>
+<td class="org-left">%</td>
+<td class="org-left">到对应括号</td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 
 
-<div id="outline-container-orgb51cefc" class="outline-2">
-<h2 id="orgb51cefc"><span class="section-number-2">2.</span> reference</h2>
+
+<div id="outline-container-org9045732" class="outline-3">
+<h3 id="org9045732"><span class="section-number-3">1.3.</span> visual</h3>
+<div class="outline-text-3" id="text-1-3">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">key</th>
+<th scope="col" class="org-left">usage</th>
+<th scope="col" class="org-left">next</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">V</td>
+<td class="org-left">行选择</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">C-v</td>
+<td class="org-left">矩形区域选择</td>
+<td class="org-left">S-i 插入, esc 批量执行</td>
+</tr>
+
+<tr>
+<td class="org-left">v</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">movement</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+<div id="outline-container-orgef680e9" class="outline-3">
+<h3 id="orgef680e9"><span class="section-number-3">1.4.</span> file/split</h3>
+<div class="outline-text-3" id="text-1-4">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">key</th>
+<th scope="col" class="org-left">usage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">:n/:N</td>
+<td class="org-left">文件之间切换</td>
+</tr>
+
+<tr>
+<td class="org-left">:b</td>
+<td class="org-left">切换到文件</td>
+</tr>
+
+<tr>
+<td class="org-left">C-w h/j/k/l</td>
+<td class="org-left">切换分屏窗口</td>
+</tr>
+
+<tr>
+<td class="org-left">ZZ</td>
+<td class="org-left">:wq</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+
+
+
+<div id="outline-container-org8c6df9b" class="outline-2">
+<h2 id="org8c6df9b"><span class="section-number-2">2.</span> EMACS</h2>
 <div class="outline-text-2" id="text-2">
 </div>
-<div id="outline-container-org0ee0cba" class="outline-3">
-<h3 id="org0ee0cba"><span class="section-number-3">2.1.</span> <a href="https://zhuanlan.zhihu.com/p/508234267">from zhihu</a></h3>
+<div id="outline-container-org84d4152" class="outline-3">
+<h3 id="org84d4152"><span class="section-number-3">2.1.</span> org-mode</h3>
 <div class="outline-text-3" id="text-2-1">
-<p>
-掰锝胃, 这个链接的截图在B站不到半小时就被删除了&#x2026;<br />
-B口口口口(    ), 口口口口(    ).<br />
-</p>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">key</th>
+<th scope="col" class="org-left">usage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">C-c |</td>
+<td class="org-left">创建表格</td>
+</tr>
+
+<tr>
+<td class="org-left">C-c C-e</td>
+<td class="org-left">导出 HTML</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div id="outline-container-orgc0a6693" class="outline-3">
+<h3 id="orgc0a6693"><span class="section-number-3">2.2.</span> normal</h3>
+<div class="outline-text-3" id="text-2-2">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">key</th>
+<th scope="col" class="org-left">usage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">C-s</td>
+<td class="org-left">搜索</td>
+</tr>
+
+<tr>
+<td class="org-left">M-%</td>
+<td class="org-left">替换</td>
+</tr>
+
+<tr>
+<td class="org-left">C-_</td>
+<td class="org-left"><a href="https://linuxtoy.org/archives/emacs-undo-tree.html">undo/redo</a></td>
+</tr>
+
+<tr>
+<td class="org-left">M-;</td>
+<td class="org-left">区域切换注释</td>
+</tr>
+
+<tr>
+<td class="org-left">C-x C-;</td>
+<td class="org-left">行切换注释</td>
+</tr>
+
+<tr>
+<td class="org-left">C-y</td>
+<td class="org-left">paste to minibuffer</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgb3c7ff0" class="outline-2">
+<h2 id="orgb3c7ff0"><span class="section-number-2">3.</span> Git (虽然不算editor, 但是先也放这吧)</h2>
+<div class="outline-text-2" id="text-3">
+<div class="org-src-container">
+<pre class="src src-shell">git log --stat | perl -ne 'END { print $c } $c += $1 if /(\d+) insertions/;'
+git log  --pretty=tformat: --numstat | awk '{ add += $1; subs += $2; loc += $1 - $2 } END { printf "added lines: %s, removed lines: %s, total lines: %s\n", add, subs, loc }'
+</pre>
 </div>
 </div>
 </div>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: dongdigua</p>
-<p class="date">Created: 2022-07-24 日 19:09</p>
+<p class="date">Created: 2022-07-26 二 15:40</p>
 </div>
 </body>
 </html>
