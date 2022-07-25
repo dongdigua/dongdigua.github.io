@@ -1,0 +1,546 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2022-07-25 一 11:57 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Internet Collections</title>
+<meta name="author" content="dongdigua" />
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+</style>
+<link rel='stylesheet' type='text/css' href='./../css/org-css.css' />
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Internet Collections</h1>
+
+<div id="outline-container-orgcdf24cf" class="outline-2">
+<h2 id="orgcdf24cf"><span class="section-number-2">1.</span> 一些(个人)博客收集</h2>
+<div class="outline-text-2" id="text-1">
+</div>
+<div id="outline-container-org707d4d1" class="outline-3">
+<h3 id="org707d4d1"><span class="section-number-3">1.1.</span> <a href="http://www.qiusir.com/">qiusir</a></h3>
+</div>
+<div id="outline-container-orgbd8d6b6" class="outline-3">
+<h3 id="orgbd8d6b6"><span class="section-number-3">1.2.</span> <a href="http://www.yinwang.org/">王垠</a></h3>
+</div>
+<div id="outline-container-org245f98b" class="outline-3">
+<h3 id="org245f98b"><span class="section-number-3">1.3.</span> <a href="http://ruanyifeng.com/blog/">阮一峰</a>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="suscribed">suscribed</span></span></h3>
+</div>
+<div id="outline-container-orgb5095aa" class="outline-3">
+<h3 id="orgb5095aa"><span class="section-number-3">1.4.</span> <a href="https://shakaianee.top/">易姐</a></h3>
+</div>
+<div id="outline-container-org26a04bb" class="outline-3">
+<h3 id="org26a04bb"><span class="section-number-3">1.5.</span> <a href="https://blog.stdio.io/1385">King's way</a></h3>
+</div>
+<div id="outline-container-org7582fa3" class="outline-3">
+<h3 id="org7582fa3"><span class="section-number-3">1.6.</span> <a href="https://floooh.github.io/">floooh</a></h3>
+<div class="outline-text-3" id="text-1-6">
+<p>
+一个07年开始发博客的大佬<br />
+</p>
+</div>
+</div>
+<div id="outline-container-orgcfcd15d" class="outline-3">
+<h3 id="orgcfcd15d"><span class="section-number-3">1.7.</span> <a href="https://xiaosong.fun/">小耸</a></h3>
+</div>
+<div id="outline-container-orgcc4260b" class="outline-3">
+<h3 id="orgcc4260b"><span class="section-number-3">1.8.</span> <a href="https://piaogewala.ga/">这可太刑了</a></h3>
+<div class="outline-text-3" id="text-1-8">
+<p>
+学习通事件相关<br />
+</p>
+</div>
+</div>
+<div id="outline-container-orgc076018" class="outline-3">
+<h3 id="orgc076018"><span class="section-number-3">1.9.</span> <a href="https://www.cnblogs.com/zhongwencool/">写着写着就懂了</a>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="elixir">elixir</span></span></h3>
+<div class="outline-text-3" id="text-1-9">
+<p>
+elixir/erlang大佬, 公众号: HelloElixir<br />
+</p>
+</div>
+</div>
+<div id="outline-container-org691c959" class="outline-3">
+<h3 id="org691c959"><span class="section-number-3">1.10.</span> <a href="http://blog.lujun9972.win/emacs-document/">lujun9972</a>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="emacs">emacs</span></span></h3>
+<div class="outline-text-3" id="text-1-10">
+<p>
+超多emacs<br />
+</p>
+</div>
+</div>
+<div id="outline-container-orgcfa4052" class="outline-3">
+<h3 id="orgcfa4052"><span class="section-number-3">1.11.</span> <a href="https://www.wenhui.space/">文辉的烂笔头</a></h3>
+<div class="outline-text-3" id="text-1-11">
+<p>
+第一次查过的问题，就应该记下来 !<br />
+第二次再查的问题，就必须记下来 !<br />
+</p>
+</div>
+</div>
+<div id="outline-container-orgd798c4a" class="outline-3">
+<h3 id="orgd798c4a"><span class="section-number-3">1.12.</span> <a href="http://scinart.is-programmer.com/">scinart</a>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="lisp">lisp</span></span></h3>
+<div class="outline-text-3" id="text-1-12">
+<p>
+13年最后更新<br />
+</p>
+</div>
+</div>
+<div id="outline-container-orga6a3e62" class="outline-3">
+<h3 id="orga6a3e62"><span class="section-number-3">1.13.</span> <a href="https://evanmeek.github.io/">我不会编程</a></h3>
+<div class="outline-text-3" id="text-1-13">
+<p>
+B站: 美味的樱桃菌<br />
+</p>
+</div>
+</div>
+<div id="outline-container-orgc7c5c14" class="outline-3">
+<h3 id="orgc7c5c14"><span class="section-number-3">1.14.</span> <a href="https://lug.ustc.edu.cn/">中国科学技术大学 Linux 用户协会</a></h3>
+</div>
+<div id="outline-container-org2af1dbc" class="outline-3">
+<h3 id="org2af1dbc"><span class="section-number-3">1.15.</span> <a href="http://bzhang.lamost.org/website/">bozhang</a></h3>
+<div class="outline-text-3" id="text-1-15">
+<p>
+05 年开始, 天文学<br />
+</p>
+</div>
+</div>
+<div id="outline-container-org545ba94" class="outline-3">
+<h3 id="org545ba94"><span class="section-number-3">1.16.</span> <a href="https://yaocc.cc/">CC</a></h3>
+<div class="outline-text-3" id="text-1-16">
+<p>
+B站: 称呼我C先生<br />
+</p>
+</div>
+</div>
+<div id="outline-container-orgdf9ba4b" class="outline-3">
+<h3 id="orgdf9ba4b"><span class="section-number-3">1.17.</span> <a href="https://www.luogu.com.cn/blog/ivystorm/emacs-adventuredunnet-tong-guan-jiao-cheng">emacs dunnet 教程</a>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="emacs">emacs</span></span></h3>
+<div class="outline-text-3" id="text-1-17">
+<p>
+luogu<br />
+</p>
+</div>
+</div>
+<div id="outline-container-org4ca7ff5" class="outline-3">
+<h3 id="org4ca7ff5"><span class="section-number-3">1.18.</span> <a href="https://iceguye.com/blog">IceGuye</a></h3>
+</div>
+<div id="outline-container-org5034c65" class="outline-3">
+<h3 id="org5034c65"><span class="section-number-3">1.19.</span> <a href="http://jujuba.me/">Ground Oddity</a></h3>
+<div class="outline-text-3" id="text-1-19">
+<p>
+出国<br />
+</p>
+</div>
+</div>
+<div id="outline-container-orgc3951db" class="outline-3">
+<h3 id="orgc3951db"><span class="section-number-3">1.20.</span> <a href="https://cireu.github.io/">NIL</a>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="emacs">emacs</span></span></h3>
+<div class="outline-text-3" id="text-1-20">
+<p>
+elisp<br />
+</p>
+</div>
+</div>
+<div id="outline-container-orgbcf1058" class="outline-3">
+<h3 id="orgbcf1058"><span class="section-number-3">1.21.</span> <a href="https://blog.stenmans.org/theBeamBook/">the beam book</a> and <a href="https://learnyousomeerlang.com/content">learn you some erlang</a>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="elixir">elixir</span></span></h3>
+</div>
+<div id="outline-container-org5f58e27" class="outline-3">
+<h3 id="org5f58e27"><span class="section-number-3">1.22.</span> <a href="https://www.cnblogs.com/zjjws/p/13346020.html">第 N 个质数</a>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="c">c</span>&#xa0;<span class="algorithm">algorithm</span></span></h3>
+<div class="outline-text-3" id="text-1-22">
+<p>
+看不懂, 先收藏着<br />
+</p>
+</div>
+</div>
+<div id="outline-container-orgbeb7d93" class="outline-3">
+<h3 id="orgbeb7d93"><span class="section-number-3">1.23.</span> <a href="https://www.coder.rs/">Zhangy233</a>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="rust">rust</span></span></h3>
+</div>
+<div id="outline-container-orge0ec9e4" class="outline-3">
+<h3 id="orge0ec9e4"><span class="section-number-3">1.24.</span> <a href="https://blog.bluemangoo.net/">芒果</a></h3>
+<div class="outline-text-3" id="text-1-24">
+<p>
+今年的新博客, 友链有踏浪<br />
+</p>
+</div>
+</div>
+<div id="outline-container-org4019d49" class="outline-3">
+<h3 id="org4019d49"><span class="section-number-3">1.25.</span> <a href="https://mrxn.net/">mrxn</a>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="hacker">hacker</span></span></h3>
+<div class="outline-text-3" id="text-1-25">
+<p>
+网安<br />
+</p>
+</div>
+</div>
+<div id="outline-container-org37cae54" class="outline-3">
+<h3 id="org37cae54"><span class="section-number-3">1.26.</span> <a href="https://devbins.github.io/page">devbins</a></h3>
+<div class="outline-text-3" id="text-1-26">
+<p>
+404?<br />
+</p>
+</div>
+</div>
+<div id="outline-container-orgb2868b8" class="outline-3">
+<h3 id="orgb2868b8"><span class="section-number-3">1.27.</span> <a href="http://incf19.com/yynotes/">include-yy</a>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="c">c</span>&#xa0;<span class="emacs">emacs</span></span></h3>
+<div class="outline-text-3" id="text-1-27">
+<p>
+东方<br />
+</p>
+</div>
+</div>
+<div id="outline-container-org4a253d5" class="outline-3">
+<h3 id="org4a253d5"><span class="section-number-3">1.28.</span> <a href="https://emacs.sexy/">emacs is sexy!</a>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="emacs">emacs</span></span></h3>
+</div>
+<div id="outline-container-orgfb32c3e" class="outline-3">
+<h3 id="orgfb32c3e"><span class="section-number-3">1.29.</span> <a href="https://stardiviner.github.io/">stardiviner</a></h3>
+<div class="outline-text-3" id="text-1-29">
+<p>
+Coder &amp; 文学<br />
+</p>
+</div>
+</div>
+<div id="outline-container-orgac0ed60" class="outline-3">
+<h3 id="orgac0ed60"><span class="section-number-3">1.30.</span> <a href="https://nihil.cc/posts/rust_closure_and_y/">Rust 闭包递归与 Y 组合子</a>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="rust">rust</span></span></h3>
+</div>
+<div id="outline-container-org6879950" class="outline-3">
+<h3 id="org6879950"><span class="section-number-3">1.31.</span> <a href="https://blog.d46.us/advanced-emacs-startup/">advanced emacs startup</a>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="emacs">emacs</span></span></h3>
+</div>
+<div id="outline-container-org2bd5ced" class="outline-3">
+<h3 id="org2bd5ced"><span class="section-number-3">1.32.</span> <a href="https://stevenbai.top/">steven</a>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="rust">rust</span></span></h3>
+<div class="outline-text-3" id="text-1-32">
+<p>
+BlockChain<br />
+</p>
+</div>
+</div>
+<div id="outline-container-orgba40c12" class="outline-3">
+<h3 id="orgba40c12"><span class="section-number-3">1.33.</span> <a href="https://zhuanlan.zhihu.com/p/138719668">用Go语言汇编计算fibonacci数列</a>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="lowlevel">lowlevel</span></span></h3>
+</div>
+<div id="outline-container-org7e615fe" class="outline-3">
+<h3 id="org7e615fe"><span class="section-number-3">1.34.</span> <a href="https://sh.alynx.one/">Alynx Zhou</a></h3>
+</div>
+<div id="outline-container-org7f3667b" class="outline-3">
+<h3 id="org7f3667b"><span class="section-number-3">1.35.</span> <a href="https://www.clloz.com/">Clloz</a>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="frontend">frontend</span></span></h3>
+<div class="outline-text-3" id="text-1-35">
+<p>
+界面特别好看<br />
+</p>
+</div>
+</div>
+<div id="outline-container-org28db8c1" class="outline-3">
+<h3 id="org28db8c1"><span class="section-number-3">1.36.</span> <a href="https://coredumped.dev/">Core Dumped</a>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="rust">rust</span>&#xa0;<span class="lowlevel">lowlevel</span>&#xa0;<span class="emacs">emacs</span></span></h3>
+<div class="outline-text-3" id="text-1-36">
+<p>
+VM<br />
+</p>
+</div>
+</div>
+<div id="outline-container-org7b441cf" class="outline-3">
+<h3 id="org7b441cf"><span class="section-number-3">1.37.</span> <a href="https://www.zhihu.com/column/c_1313110231912726528">倔强的程序员</a></h3>
+<div class="outline-text-3" id="text-1-37">
+<p>
+编! 译! 原! 理!<br />
+</p>
+</div>
+</div>
+<div id="outline-container-org2de7e47" class="outline-3">
+<h3 id="org2de7e47"><span class="section-number-3">1.38.</span> <a href="https://siciarz.net">24 days of rust</a></h3>
+<div class="outline-text-3" id="text-1-38">
+<p>
+old<br />
+</p>
+</div>
+</div>
+<div id="outline-container-org22ab11f" class="outline-3">
+<h3 id="org22ab11f"><span class="section-number-3">1.39.</span> <a href="https://liujiacai.net/">keep coding</a>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="rust">rust</span>&#xa0;<span class="c">c</span>&#xa0;<span class="lowlevel">lowlevel</span>&#xa0;<span class="backend">backend</span></span></h3>
+</div>
+</div>
+
+<div id="outline-container-orgb8600db" class="outline-2">
+<h2 id="orgb8600db"><span class="section-number-2">2.</span> YouTube 收集(没有账号, 这就是我的收藏夹)</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-orgdbbfbd7" class="outline-3">
+<h3 id="orgdbbfbd7"><span class="section-number-3">2.1.</span> Code</h3>
+<div class="outline-text-3" id="text-2-1">
+</div>
+<div id="outline-container-orgb658873" class="outline-4">
+<h4 id="orgb658873"><span class="section-number-4">2.1.1.</span> <a href="https://youtu.be/gG00NgcdNEk">代码视频片头</a> java bad, python slow, nvidia fuck you, vi-sual studio, C艹 sucks</h4>
+</div>
+<div id="outline-container-orgde81920" class="outline-4">
+<h4 id="orgde81920"><span class="section-number-4">2.1.2.</span> <a href="https://youtu.be/0rJ94rbdteE">Rust 让你感觉像个天才</a></h4>
+</div>
+<div id="outline-container-org6d5abb4" class="outline-4">
+<h4 id="org6d5abb4"><span class="section-number-4">2.1.3.</span> <a href="https://youtu.be/nfF91Z6fqGk">CMD 登录B站</a></h4>
+</div>
+<div id="outline-container-org7c34060" class="outline-4">
+<h4 id="org7c34060"><span class="section-number-4">2.1.4.</span> <a href="https://youtu.be/l0AmlU-4IRM">Rust aes加密</a> legacy</h4>
+</div>
+<div id="outline-container-org5026251" class="outline-4">
+<h4 id="org5026251"><span class="section-number-4">2.1.5.</span> <a href="https://youtu.be/qKA2NZ1-kx0">tsoding write cool shell in rust</a></h4>
+</div>
+<div id="outline-container-orgd9c8e1e" class="outline-4">
+<h4 id="orgd9c8e1e"><span class="section-number-4">2.1.6.</span> <a href="https://youtu.be/hmMtQe_mYr0">tsoding helloworld in c</a></h4>
+</div>
+<div id="outline-container-org482be61" class="outline-4">
+<h4 id="org482be61"><span class="section-number-4">2.1.7.</span> <a href="https://www.youtube.com/watch?list=RDCMUChl_NKOs1qqh_x7yJfaDpDw">Tantan 合集</a> Rust Graphics</h4>
+</div>
+<div id="outline-container-org5c48e02" class="outline-4">
+<h4 id="org5c48e02"><span class="section-number-4">2.1.8.</span> <a href="https://www.youtube.com/watch?list=PLGNbPb3dQJ_446PjTYQ0mCn2OGoHSKraB">build a virtual machine 合集(6/29)</a></h4>
+</div>
+<div id="outline-container-org0aa17a2" class="outline-4">
+<h4 id="org0aa17a2"><span class="section-number-4">2.1.9.</span> <a href="https://www.youtube.com/watch?list=PLSiFUSQSRYAOFwfP-aMzXJlWKVyIuWfPU">stack-based virtual machine(6 episode)</a> and</h4>
+</div>
+<div id="outline-container-orgb32662c" class="outline-4">
+<h4 id="orgb32662c"><span class="section-number-4">2.1.10.</span> <a href="https://youtu.be/cfPDeso3XwI">register-based(13 episode)</a></h4>
+</div>
+<div id="outline-container-orgb825659" class="outline-4">
+<h4 id="orgb825659"><span class="section-number-4">2.1.11.</span> <a href="https://youtu.be/_uAMo-bXI5g">register virtual machine in rust, with memory visualization</a></h4>
+</div>
+<div id="outline-container-orga1309cb" class="outline-4">
+<h4 id="orga1309cb"><span class="section-number-4">2.1.12.</span> <b>**</b> <a href="https://www.youtube.com/watch?list=PLpM-Dvs8t0VY73ytTCQqgvgCWttV3m8LM">tsoding virtual machine in C</a> , <a href="https://dongdigua.github.io/tsoding_bm">some notes</a></h4>
+</div>
+<div id="outline-container-org4b5179f" class="outline-4">
+<h4 id="org4b5179f"><span class="section-number-4">2.1.13.</span> <a href="https://youtu.be/Fq9chEBQMFE">what if I try to malloc too much memory</a></h4>
+</div>
+<div id="outline-container-orge1ba6e8" class="outline-4">
+<h4 id="orge1ba6e8"><span class="section-number-4">2.1.14.</span> <a href="https://youtu.be/qF7dkrce-mQ">fireship bitcoin</a> 大概是我见过最好的讲区块链的视频了, 除了&#x2026;JS 啊啊啊</h4>
+</div>
+<div id="outline-container-org6c0cbc1" class="outline-4">
+<h4 id="org6c0cbc1"><span class="section-number-4">2.1.15.</span> <a href="https://youtu.be/zJ-8DZhzBEE">what your favourite pl says about you</a></h4>
+</div>
+<div id="outline-container-orgf022521" class="outline-4">
+<h4 id="orgf022521"><span class="section-number-4">2.1.16.</span> <a href="https://youtu.be/R00JE6QRbno">tsoding aoc 2020 day 12 in perl</a> (0:20:50 pythonbulubulu~)</h4>
+</div>
+</div>
+
+<div id="outline-container-org9b9b131" class="outline-3">
+<h3 id="org9b9b131"><span class="section-number-3">2.2.</span> Minecraft</h3>
+<div class="outline-text-3" id="text-2-2">
+</div>
+<div id="outline-container-orgeef71a0" class="outline-4">
+<h4 id="orgeef71a0"><span class="section-number-4">2.2.1.</span> <a href="https://youtu.be/VKydXD6Lr20">Mojang &amp; Minecraft 开始衰落了吗?</a></h4>
+</div>
+<div id="outline-container-org65eb4e9" class="outline-4">
+<h4 id="org65eb4e9"><span class="section-number-4">2.2.2.</span> <a href="https://youtu.be/Y9DIIh0s9cg">SciCraft Update Plans</a></h4>
+</div>
+<div id="outline-container-org8aa05fb" class="outline-4">
+<h4 id="org8aa05fb"><span class="section-number-4">2.2.3.</span> <a href="https://youtu.be/m5S0gLgg2rs">Tantan: MC + Fez</a></h4>
+</div>
+</div>
+
+<div id="outline-container-org135a754" class="outline-3">
+<h3 id="org135a754"><span class="section-number-3">2.3.</span> ?</h3>
+<div class="outline-text-3" id="text-2-3">
+</div>
+<div id="outline-container-orgea075b6" class="outline-4">
+<h4 id="orgea075b6"><span class="section-number-4">2.3.1.</span> <a href="https://www.youtube.com/c/IceGuye">IceGuye aka 姑射冰尘</a></h4>
+</div>
+<div id="outline-container-org1fa138e" class="outline-4">
+<h4 id="org1fa138e"><span class="section-number-4">2.3.2.</span> <a href="https://odysee.com/@IceGuye">on odysee(lbry)</a></h4>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org087ed5c" class="outline-2">
+<h2 id="org087ed5c"><span class="section-number-2">3.</span> Other</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-orgc63fcfd" class="outline-3">
+<h3 id="orgc63fcfd"><span class="section-number-3">3.1.</span> <a href="https://moonboos.fandom.com/zh/wiki/%E6%98%8E%E6%9C%88%E5%BA%84%E4%B8%BB_Wiki">日月脏主 Wiki</a> MC 技术区毒瘤!</h3>
+</div>
+<div id="outline-container-org0d7b999" class="outline-3">
+<h3 id="org0d7b999"><span class="section-number-3">3.2.</span> <a href="https://en.wikipedia.org/wiki/Python_(missile)">Python-5</a> from <a href="https://youtu.be/8QP2fDBIxjM">tsoding's first porth video</a>, (he is using debian, 37:00 copilot xd)</h3>
+<div class="outline-text-3" id="text-3-2">
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: dongdigua</p>
+<p class="date">Created: 2022-07-25 一 11:57</p>
+</div>
+</body>
+</html>

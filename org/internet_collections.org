@@ -1,0 +1,110 @@
+#+STARTUP: indent
+#+TAGS: elixir(e) rust(r) c(c) lisp(l)
+#+TAGS: lowlevel(w) frontend(f) backend(b) emacs(m) hacker(h) algorithm(a)
+#+TAGS: rss(r) suscribed(u)
+#+OPTIONS: \n:t
+#+OPTIONS: toc:nil 
+
+#+TITLE: Internet Collections
+
+* 一些(个人)博客收集
+** [[http://www.qiusir.com/][qiusir]]
+** [[http://www.yinwang.org/][王垠]]
+** [[http://ruanyifeng.com/blog/][阮一峰]]                                                        :suscribed:
+** [[https://shakaianee.top/][易姐]]
+** [[https://blog.stdio.io/1385][King's way]]
+** [[https://floooh.github.io/][floooh]]
+一个07年开始发博客的大佬
+** [[https://xiaosong.fun/][小耸]]
+** [[https://piaogewala.ga/][这可太刑了]]
+学习通事件相关
+** [[https://www.cnblogs.com/zhongwencool/][写着写着就懂了]]                                                   :elixir:
+elixir/erlang大佬, 公众号: HelloElixir
+** [[http://blog.lujun9972.win/emacs-document/][lujun9972]]                                                         :emacs:
+超多emacs
+** [[https://www.wenhui.space/][文辉的烂笔头]]
+第一次查过的问题，就应该记下来 !
+第二次再查的问题，就必须记下来 !
+** [[http://scinart.is-programmer.com/][scinart]]                                                            :lisp:
+13年最后更新
+** [[https://evanmeek.github.io/][我不会编程]]
+B站: 美味的樱桃菌
+** [[https://lug.ustc.edu.cn/][中国科学技术大学 Linux 用户协会]]
+** [[http://bzhang.lamost.org/website/][bozhang]]
+05 年开始, 天文学
+** [[https://yaocc.cc/][CC]]
+B站: 称呼我C先生
+** [[https://www.luogu.com.cn/blog/ivystorm/emacs-adventuredunnet-tong-guan-jiao-cheng][emacs dunnet 教程]]                                                 :emacs:
+luogu
+** [[https://iceguye.com/blog][IceGuye]]
+** [[http://jujuba.me/][Ground Oddity]]
+出国
+** [[https://cireu.github.io/][NIL]]                                                               :emacs:
+elisp
+** [[https://blog.stenmans.org/theBeamBook/][the beam book]] and [[https://learnyousomeerlang.com/content][learn you some erlang]] :elixir:
+** [[https://www.cnblogs.com/zjjws/p/13346020.html][第 N 个质数]]                                                 :c:algorithm:
+看不懂, 先收藏着
+** [[https://www.coder.rs/][Zhangy233]]                                                          :rust:
+** [[https://blog.bluemangoo.net/][芒果]]
+今年的新博客, 友链有踏浪
+** [[https://mrxn.net/][mrxn]]                                                             :hacker:
+网安
+** [[https://devbins.github.io/page][devbins]]
+404?
+** [[http://incf19.com/yynotes/][include-yy]]                                                      :c:emacs:
+东方
+** [[https://emacs.sexy/][emacs is sexy!]]                                                    :emacs:
+** [[https://stardiviner.github.io/][stardiviner]]
+Coder & 文学
+** [[https://nihil.cc/posts/rust_closure_and_y/][Rust 闭包递归与 Y 组合子]]                                           :rust:
+** [[https://blog.d46.us/advanced-emacs-startup/][advanced emacs startup]]                                            :emacs:
+** [[https://stevenbai.top/][steven]]                                                             :rust:
+BlockChain
+** [[https://zhuanlan.zhihu.com/p/138719668][用Go语言汇编计算fibonacci数列]]                                  :lowlevel:
+** [[https://sh.alynx.one/][Alynx Zhou]]
+** [[https://www.clloz.com/][Clloz]]                                                          :frontend:
+界面特别好看
+** [[https://coredumped.dev/][Core Dumped]]                                         :rust:lowlevel:emacs:
+VM
+** [[https://www.zhihu.com/column/c_1313110231912726528][倔强的程序员]]
+编! 译! 原! 理!
+** [[https://siciarz.net][24 days of rust]]
+old
+** [[https://liujiacai.net/][keep coding]]                                     :rust:c:lowlevel:backend:
+
+* YouTube 收集(没有账号, 这就是我的收藏夹)
+** Code
+*** [[https://youtu.be/gG00NgcdNEk][代码视频片头]] java bad, python slow, nvidia fuck you, vi-sual studio, C艹 sucks
+*** [[https://youtu.be/0rJ94rbdteE][Rust 让你感觉像个天才]]
+*** [[https://youtu.be/nfF91Z6fqGk][CMD 登录B站]]
+*** [[https://youtu.be/l0AmlU-4IRM][Rust aes加密]] legacy
+*** [[https://youtu.be/qKA2NZ1-kx0][tsoding write cool shell in rust]]
+*** [[https://youtu.be/hmMtQe_mYr0][tsoding helloworld in c]]
+*** [[https://www.youtube.com/watch?list=RDCMUChl_NKOs1qqh_x7yJfaDpDw][Tantan 合集]] Rust Graphics
+*** [[https://www.youtube.com/watch?list=PLGNbPb3dQJ_446PjTYQ0mCn2OGoHSKraB][build a virtual machine 合集(6/29)]]
+*** [[https://www.youtube.com/watch?list=PLSiFUSQSRYAOFwfP-aMzXJlWKVyIuWfPU][stack-based virtual machine(6 episode)]] and
+*** [[https://youtu.be/cfPDeso3XwI][register-based(13 episode)]]
+*** [[https://youtu.be/_uAMo-bXI5g][register virtual machine in rust, with memory visualization]]
+*** **** [[https://www.youtube.com/watch?list=PLpM-Dvs8t0VY73ytTCQqgvgCWttV3m8LM][tsoding virtual machine in C]] , [[https://dongdigua.github.io/tsoding_bm][some notes]]
+*** [[https://youtu.be/Fq9chEBQMFE][what if I try to malloc too much memory]]
+*** [[https://youtu.be/qF7dkrce-mQ][fireship bitcoin]] 大概是我见过最好的讲区块链的视频了, 除了...JS 啊啊啊
+*** [[https://youtu.be/zJ-8DZhzBEE][what your favourite pl says about you]]
+*** [[https://youtu.be/R00JE6QRbno][tsoding aoc 2020 day 12 in perl]] (0:20:50 pythonbulubulu~)
+
+** Minecraft
+*** [[https://youtu.be/VKydXD6Lr20][Mojang & Minecraft 开始衰落了吗?]]
+*** [[https://youtu.be/Y9DIIh0s9cg][SciCraft Update Plans]]
+*** [[https://youtu.be/m5S0gLgg2rs][Tantan: MC + Fez]]
+
+** ?
+*** [[https://www.youtube.com/c/IceGuye][IceGuye aka 姑射冰尘]]
+*** [[https://odysee.com/@IceGuye][on odysee(lbry)]]
+
+* Other
+** [[https://moonboos.fandom.com/zh/wiki/%E6%98%8E%E6%9C%88%E5%BA%84%E4%B8%BB_Wiki][日月脏主 Wiki]] MC 技术区毒瘤!
+** [[https://en.wikipedia.org/wiki/Python_(missile)][Python-5]] from [[https://youtu.be/8QP2fDBIxjM][tsoding's first porth video]], (he is using debian, 37:00 copilot xd)
+
+#+BEGIN_COMMENT
+https://www.pixiv.net/users/57759368
+https://www.pixiv.net/users/2973809
+#+END_COMMENT
