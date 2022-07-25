@@ -11,7 +11,7 @@
       '(("org-pages"
          :base-directory "."
          :base-extension "org"
-         :publishing-directory "./../org-html/"
+         :publishing-directory "./../org_html/"
          :recursive t
          :publishing-function org-html-publish-to-html
          :html-head "<link rel='stylesheet' type='text/css' href='./../css/org-css.css' />"  ; instead of :style

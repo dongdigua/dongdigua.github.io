@@ -1,21 +1,21 @@
 #+STARTUP: indent
 #+TAGS: elixir(e) rust(r) c(c) lisp(l)
-#+TAGS: lowlevel(w) frontend(f) backend(b) emacs(m) hacker(h) algorithm(a)
-#+TAGS: rss(r) suscribed(u)
+#+TAGS: lowlevel(w) frontend(f) backend(b) emacs(m) hacker(h) algorithm(a) linux(x)
+#+TAGS: rssable(s) rssub(u)
 #+OPTIONS: \n:t
 #+OPTIONS: toc:nil 
 
 #+TITLE: Internet Collections
 
 * 一些(个人)博客收集
-** [[http://www.qiusir.com/][qiusir]]
+** [[http://www.qiusir.com/][qiusir]]                                                        :rssub:
 ** [[http://www.yinwang.org/][王垠]]
-** [[http://ruanyifeng.com/blog/][阮一峰]]                                                        :suscribed:
+** [[http://ruanyifeng.com/blog/][阮一峰]]                                                        :rssub:
 ** [[https://shakaianee.top/][易姐]]
 ** [[https://blog.stdio.io/1385][King's way]]
-** [[https://floooh.github.io/][floooh]]
-一个07年开始发博客的大佬
-** [[https://xiaosong.fun/][小耸]]
+** [[https://floooh.github.io/2021/12/17/cycle-stepped-z80.html][floooh]]                                                                :c:
+07 年开始, cpu emulator
+** [[https://xiaosong.fun/][小耸]]                                                             :rust:c:
 ** [[https://piaogewala.ga/][这可太刑了]]
 学习通事件相关
 ** [[https://www.cnblogs.com/zhongwencool/][写着写着就懂了]]                                                   :elixir:
@@ -30,9 +30,9 @@ elixir/erlang大佬, 公众号: HelloElixir
 ** [[https://evanmeek.github.io/][我不会编程]]
 B站: 美味的樱桃菌
 ** [[https://lug.ustc.edu.cn/][中国科学技术大学 Linux 用户协会]]
-** [[http://bzhang.lamost.org/website/][bozhang]]
+** [[http://bzhang.lamost.org/website/][bozhang]]                                                         :rssable:
 05 年开始, 天文学
-** [[https://yaocc.cc/][CC]]
+** [[https://yaocc.cc/][CC]]                                                                :linux:
 B站: 称呼我C先生
 ** [[https://www.luogu.com.cn/blog/ivystorm/emacs-adventuredunnet-tong-guan-jiao-cheng][emacs dunnet 教程]]                                                 :emacs:
 luogu
@@ -41,17 +41,17 @@ luogu
 出国
 ** [[https://cireu.github.io/][NIL]]                                                               :emacs:
 elisp
-** [[https://blog.stenmans.org/theBeamBook/][the beam book]] and [[https://learnyousomeerlang.com/content][learn you some erlang]] :elixir:
+** [[https://blog.stenmans.org/theBeamBook/][the beam book]] and [[https://learnyousomeerlang.com/content][learn you some erlang]]                     :elixir:
 ** [[https://www.cnblogs.com/zjjws/p/13346020.html][第 N 个质数]]                                                 :c:algorithm:
 看不懂, 先收藏着
 ** [[https://www.coder.rs/][Zhangy233]]                                                          :rust:
-** [[https://blog.bluemangoo.net/][芒果]]
+** [[https://blog.bluemangoo.net/][芒果快评]]
 今年的新博客, 友链有踏浪
 ** [[https://mrxn.net/][mrxn]]                                                             :hacker:
 网安
 ** [[https://devbins.github.io/page][devbins]]
 404?
-** [[http://incf19.com/yynotes/][include-yy]]                                                      :c:emacs:
+** [[http://incf19.com/yynotes/][include-yy]]                                                 :c:lisp:emacs:
 东方
 ** [[https://emacs.sexy/][emacs is sexy!]]                                                    :emacs:
 ** [[https://stardiviner.github.io/][stardiviner]]
@@ -61,14 +61,14 @@ Coder & 文学
 ** [[https://stevenbai.top/][steven]]                                                             :rust:
 BlockChain
 ** [[https://zhuanlan.zhihu.com/p/138719668][用Go语言汇编计算fibonacci数列]]                                  :lowlevel:
-** [[https://sh.alynx.one/][Alynx Zhou]]
+** [[https://sh.alynx.one/][Alynx Zhou]]                                                :linux:rssable:
 ** [[https://www.clloz.com/][Clloz]]                                                          :frontend:
 界面特别好看
 ** [[https://coredumped.dev/][Core Dumped]]                                         :rust:lowlevel:emacs:
 VM
 ** [[https://www.zhihu.com/column/c_1313110231912726528][倔强的程序员]]
 编! 译! 原! 理!
-** [[https://siciarz.net][24 days of rust]]
+** [[https://siciarz.net][24 days of rust]]                                                    :rust:
 old
 ** [[https://liujiacai.net/][keep coding]]                                     :rust:c:lowlevel:backend:
 
