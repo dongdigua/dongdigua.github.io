@@ -15,6 +15,7 @@
 但是有些人, 只想公开自己想让别人看见的,
 那这种平台的强制行为确实会让TA们很不满.
 
+* 2022-7-25-12:00 公开显示 IP 属地
 
 * reference
 ** [[https://zhuanlan.zhihu.com/p/508234267][from zhihu]]
