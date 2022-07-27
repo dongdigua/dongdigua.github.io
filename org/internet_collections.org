@@ -3,7 +3,8 @@
 #+TAGS: lowlevel(w) frontend(f) backend(b) emacs(m) hacker(h) algorithm(a) linux(x)
 #+TAGS: rssable(s) rssub(u)
 #+OPTIONS: \n:t
-#+OPTIONS: toc:nil 
+#+OPTIONS: toc:nil
+#+OPTIONS: ^:{}
 
 #+TITLE: Internet Collections
 

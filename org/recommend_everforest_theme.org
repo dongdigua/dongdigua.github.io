@@ -1,0 +1,23 @@
+#+TITLE: Recommend EverForest Theme
+#+OPTIONS: \n:t
+#+OPTIONS: toc:nil
+
+强烈推荐 everforest 这个主题
+#+BEGIN_QUOTE
+Everforest is a green based color scheme, it's designed to be warm and soft in order to protect developers' eyes.
+#+END_QUOTE
+
+是一个绿色系护眼主题, 正如名字, 有森林的气息
+分为暗色和亮色, 每一种都有三种不同深浅的背景
+[[https://github.com/sainnhe][作者]]是中国人, 制作了许多高质量 Vim 主题
+
+
+* emacs
+这个主题在 2022-06-29 才开始制作 [[https://github.com/Theory-of-Everything/everforest-emacs][emacs 版本]]
+目前还没在 melpa 上, 所以需要手动安装
+我一看到这个就从 [[https://github.com/arcticicestudio/nord-emacs][Nord]] 换过来了
+我加入了 whitespace-mode 的支持, +默认的颜色太晃眼睛啦+
+希望大家能一起帮忙贡献这个主题
+
+放一段 Rust [[https://github.com/dongdigua/AxolotlVM][代码]]的效果
+[[../images/everforest.png]]

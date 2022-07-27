@@ -11,8 +11,12 @@
 | db    | 删除到前一个单词       |
 | d$    | 删除光标位置到本行结束 |
 | d0    | 删除光标位置到本行开头 |
-| u/C-r | 撤销/重做              |
-| c i { | change inside {}       |
+
+** edit
+| key            | usage            |
+| u/C-r          | 撤销/重做        |
+| c i {          | change inside {} |
+| "{register}y/p | 向/从寄存器拷贝  |
 
 ** movement
 | key        | usage                       |
@@ -26,8 +30,6 @@
 | C-u(f)/d   | 上/下翻页                   |
 | f/F <char> | 在一行中向后/前跳到某个字符 |
 | %          | 到对应括号                  |
-
-
 
 ** visual
 | key | usage        | next                   |
