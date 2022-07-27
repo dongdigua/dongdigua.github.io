@@ -71,6 +71,12 @@ VM
 ** [[https://siciarz.net][24 days of rust]]                                                    :rust:
 old
 ** [[https://liujiacai.net/][keep coding]]                                     :rust:c:lowlevel:backend:
+** [[https://winsphinx.github.io/][Cogito, ergo sum]]                                                :rssable:
+文学
+** [[http://tomasp.net/][Tomas Petricek]]                                                    :rssub:
+very high quality
+*** [[http://tomasp.net/commodore64][commodore64 BASIC]]
+*** [[http://tomasp.net/blog/csharp-async-gotchas.aspx][async in C#(gotchas) and F#]]
 
 * YouTube 收集(没有账号, 这就是我的收藏夹)
 ** Code
