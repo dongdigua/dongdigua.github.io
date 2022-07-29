@@ -78,6 +78,9 @@ old
 very high quality
 *** [[http://tomasp.net/commodore64][commodore64 BASIC]]
 *** [[http://tomasp.net/blog/csharp-async-gotchas.aspx][async in C#(gotchas) and F#]]
+** [[http://www.xianwaizhiyin.net/][弦外之音]]                                                     :c:lowlevel:
+** [[https://creamidea.github.io/][C-tone]]
+pretty and concise page
 
 * YouTube 收集(没有账号, 这就是我的收藏夹)
 ** Code
@@ -89,13 +92,13 @@ java bad, python slow, nvidia fuck you, vi-sual studio, C艹 sucks
 legacy
 *** [[https://youtu.be/qKA2NZ1-kx0][tsoding write cool shell in rust]]
 *** [[https://youtu.be/hmMtQe_mYr0][tsoding helloworld in c]]
-*** [[https://www.youtube.com/watch?list=RDCMUChl_NKOs1qqh_x7yJfaDpDw][Tantan 合集]]
+*** [[https://www.youtube.com/playlist?list=RDCMUChl_NKOs1qqh_x7yJfaDpDw][Tantan 合集]]
 Rust Graphics
-*** [[https://www.youtube.com/watch?list=PLGNbPb3dQJ_446PjTYQ0mCn2OGoHSKraB][build a virtual machine 合集(6/29)]]
-*** [[https://www.youtube.com/watch?list=PLSiFUSQSRYAOFwfP-aMzXJlWKVyIuWfPU][stack-based virtual machine(6 episode)]]
+*** [[https://www.youtube.com/playlist?list=PLGNbPb3dQJ_446PjTYQ0mCn2OGoHSKraB][build a virtual machine 合集(6/29)]]
+*** [[https://www.youtube.com/playlist?list=PLSiFUSQSRYAOFwfP-aMzXJlWKVyIuWfPU][stack-based virtual machine(6 episode)]]
 and [[https://youtu.be/cfPDeso3XwI][register-based(13 episode)]]
 *** [[https://youtu.be/_uAMo-bXI5g][register virtual machine in rust, with memory visualization]]
-*** [[https://www.youtube.com/watch?list=PLpM-Dvs8t0VY73ytTCQqgvgCWttV3m8LM][tsoding virtual machine in C]] , [[https://dongdigua.github.io/tsoding_bm][some notes]]
+*** [[https://www.youtube.com/playlist?list=PLpM-Dvs8t0VY73ytTCQqgvgCWttV3m8LM][tsoding virtual machine in C]] , [[https://dongdigua.github.io/tsoding_bm][some notes]]
 *** [[https://youtu.be/Fq9chEBQMFE][what if I try to malloc too much memory]]
 *** [[https://youtu.be/qF7dkrce-mQ][fireship bitcoin]]
 大概是我见过最好的讲区块链的视频了, 除了...JS 啊啊啊
@@ -110,6 +113,7 @@ and [[https://youtu.be/cfPDeso3XwI][register-based(13 episode)]]
 1:50 sexplib?
 2:00 build own irc lib
 2:14 "how many american server you have already hacked" - "I don't count them I'm sorry"
+*** [[https://youtube.be/TLa2VqcGGEQ][CVE-2021-3156 sudo]]
 
 ** Minecraft
 *** [[https://youtu.be/VKydXD6Lr20][Mojang & Minecraft 开始衰落了吗?]]
