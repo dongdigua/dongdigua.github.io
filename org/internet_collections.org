@@ -81,6 +81,7 @@ very high quality
 ** [[http://www.xianwaizhiyin.net/][弦外之音]]                                                     :c:lowlevel:
 ** [[https://creamidea.github.io/][C-tone]]
 pretty and concise page
+** [[https://lightless.me/][lightless blog]]                                                   :hacker:
 
 * YouTube 收集(没有账号, 这就是我的收藏夹)
 ** Code
