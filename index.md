@@ -17,4 +17,4 @@ Minecraft 红石玩家, [B站](https://space.bilibili.com/489732092)<br>
 ---
 
 ![](images/rss.png)[rss](feed.xml)<br>
-*[pay me some monero](.cGF5IG1lIHNvbWUgbW9uZXJv.txt)*<br>
+*[pay me some monero](xmr.txt)*<br>
