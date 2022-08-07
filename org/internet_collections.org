@@ -82,6 +82,10 @@ very high quality
 ** [[https://creamidea.github.io/][C-tone]]
 pretty and concise page
 ** [[https://lightless.me/][lightless blog]]                                                   :hacker:
+** [[https://www.lunaixsky.com/][lunaixsky]]                                                    :c:lowlevel:
+** [[https://bheisler.github.io/post/state-of-gpgpu-in-rust/][The State of GPGPU in Rust]]                                :rust:lowlevel:
+** [[https://blog.yangmame.org/][yanemame]]
+猴哥推荐的
 
 * YouTube 收集(没有账号, 这就是我的收藏夹)
 ** Code
@@ -125,6 +129,9 @@ and [[https://youtu.be/cfPDeso3XwI][register-based(13 episode)]]
 *** [[https://www.youtube.com/c/IceGuye][IceGuye aka 姑射冰尘]]
 *** [[https://odysee.com/@IceGuye][on odysee(lbry)]]
 
+* r
+** [[https://www.reddit.com/r/unixporn/][unixporn]]
+
 * Other
 ** [[https://moonboos.fandom.com/zh/wiki/%E6%98%8E%E6%9C%88%E5%BA%84%E4%B8%BB_Wiki][日月脏主 Wiki]]
 MC 技术区毒瘤!
@@ -135,3 +142,7 @@ from [[https://youtu.be/8QP2fDBIxjM][tsoding's first porth video]], (he is using
 https://www.pixiv.net/users/57759368
 https://www.pixiv.net/users/2973809
 #+END_COMMENT
+** [[http://harmful.cat-v.org/][cat -v]]
+harmful stuff <3
+** http://sdf.org/
+SDF Public Access UNIX System .. Est. 1987

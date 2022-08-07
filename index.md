@@ -13,6 +13,7 @@ Minecraft 红石玩家, [B站](https://space.bilibili.com/489732092)<br>
 [我对显示 IP 属地的看法](org_html/about_showing_ip)<br>
 [对我将来的视频网站的一些畅想](plan_for_my_video_site)<br>
 [推荐 everforest 主题](org_html/recommend_everforest_theme)<br>
+[最近折腾 sway 的一些记录](org_html/wayland)<br>
 
 ---
 

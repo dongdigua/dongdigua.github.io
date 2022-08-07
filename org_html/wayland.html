@@ -6,7 +6,7 @@
 <!-- 2022-08-07 日 21:50 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Binary Exploit Resources I Recently Trying to Learn</title>
+<title>Something About Wayland(swaywm)</title>
 <meta name="author" content="dongdigua" />
 <meta name="generator" content="Org Mode" />
 <style>
@@ -197,190 +197,34 @@
 </head>
 <body>
 <div id="content" class="content">
-<h1 class="title">Binary Exploit Resources I Recently Trying to Learn</h1>
+<h1 class="title">Something About Wayland(swaywm)</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org386367a">1. Ref</a>
+<ul>
+<li><a href="#org292706c">1.1. Sway: 从尝试到放弃</a></li>
+<li><a href="#org8ecf15b">1.2. 从 Xorg 迁移到 Wayland</a></li>
+<li><a href="#orgc8ad043">1.3. reddit: ibus on swaywm</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
 
-
-<div id="outline-container-org2c06886" class="outline-2">
-<h2 id="org2c06886"><span class="section-number-2">1.</span> resources</h2>
+<div id="outline-container-org386367a" class="outline-2">
+<h2 id="org386367a"><span class="section-number-2">1.</span> Ref</h2>
 <div class="outline-text-2" id="text-1">
 </div>
-<div id="outline-container-org5415e70" class="outline-3">
-<h3 id="org5415e70"><span class="section-number-3">1.1.</span> video</h3>
-<div class="outline-text-3" id="text-1-1">
-<p>
-<a href="https://youtube.com/playlist?list=PLhixgUqwRTjxglIswKp9mpkfPNfHkzyeN">Binary Exploitation / Memory Corruption by LiveOverflow</a>
-</p>
+<div id="outline-container-org292706c" class="outline-3">
+<h3 id="org292706c"><span class="section-number-3">1.1.</span> <a href="https://coda.world/sway-explore-and-giveup">Sway: 从尝试到放弃</a></h3>
 </div>
+<div id="outline-container-org8ecf15b" class="outline-3">
+<h3 id="org8ecf15b"><span class="section-number-3">1.2.</span> <a href="https://shinta.ro/posts/migration-from-xorg-to-wayland/">从 Xorg 迁移到 Wayland</a></h3>
 </div>
-<div id="outline-container-org25c1b45" class="outline-3">
-<h3 id="org25c1b45"><span class="section-number-3">1.2.</span> website</h3>
-<div class="outline-text-3" id="text-1-2">
-</div>
-<div id="outline-container-orgc08e35b" class="outline-4">
-<h4 id="orgc08e35b"><span class="section-number-4">1.2.1.</span> <a href="https://play.picoctf.org/practice">picoCTF</a></h4>
-</div>
-<div id="outline-container-org9f7eb91" class="outline-4">
-<h4 id="org9f7eb91"><span class="section-number-4">1.2.2.</span> <a href="https://exploit.education/">exploit education</a></h4>
-</div>
-</div>
-</div>
-
-<div id="outline-container-org55154db" class="outline-2">
-<h2 id="org55154db"><span class="section-number-2">2.</span> tools</h2>
-<div class="outline-text-2" id="text-2">
-</div>
-<div id="outline-container-orgcbfc212" class="outline-3">
-<h3 id="orgcbfc212"><span class="section-number-3">2.1.</span> code auditing</h3>
-<div class="outline-text-3" id="text-2-1">
-
-<div id="orge916e47" class="figure">
-<p><img src="../images/fedora_security_lab.png" alt="fedora_security_lab.png" />
-</p>
-</div>
-</div>
-<div id="outline-container-org93570b4" class="outline-4">
-<h4 id="org93570b4"><span class="section-number-4">2.1.1.</span> pscan</h4>
-</div>
-<div id="outline-container-org5d60e2f" class="outline-4">
-<h4 id="org5d60e2f"><span class="section-number-4">2.1.2.</span> rats</h4>
-</div>
-<div id="outline-container-orgadb8d21" class="outline-4">
-<h4 id="orgadb8d21"><span class="section-number-4">2.1.3.</span> splint</h4>
-</div>
-<div id="outline-container-orgbb818ea" class="outline-4">
-<h4 id="orgbb818ea"><span class="section-number-4">2.1.4.</span> flawfinder</h4>
-</div>
-</div>
-
-<div id="outline-container-orge4f5656" class="outline-3">
-<h3 id="orge4f5656"><span class="section-number-3">2.2.</span> debug</h3>
-<div class="outline-text-3" id="text-2-2">
-</div>
-<div id="outline-container-orgdccb67d" class="outline-4">
-<h4 id="orgdccb67d"><span class="section-number-4">2.2.1.</span> gdb</h4>
-</div>
-</div>
-
-<div id="outline-container-orgcb808d9" class="outline-3">
-<h3 id="orgcb808d9"><span class="section-number-3">2.3.</span> reverse</h3>
-<div class="outline-text-3" id="text-2-3">
-</div>
-<div id="outline-container-org0e9c0a4" class="outline-4">
-<h4 id="org0e9c0a4"><span class="section-number-4">2.3.1.</span> <a href="https://book.rada.re/">radare2</a></h4>
-<div class="outline-text-4" id="text-2-3-1">
-</div>
-<ol class="org-ol">
-<li><a id="org6c35ca4"></a>iaito<br /></li>
-</ol>
-</div>
-<div id="outline-container-org1281d59" class="outline-4">
-<h4 id="org1281d59"><span class="section-number-4">2.3.2.</span> hopper(non-free)</h4>
-</div>
-</div>
-</div>
-
-
-<div id="outline-container-org05baf84" class="outline-2">
-<h2 id="org05baf84"><span class="section-number-2">3.</span> notes on video</h2>
-<div class="outline-text-2" id="text-3">
-</div>
-<div id="outline-container-org0b68048" class="outline-3">
-<h3 id="org0b68048"><span class="section-number-3">3.1.</span> <a href="https://youtu.be/6jSKldt7Eqs">0x04: asm basics</a></h3>
-<div class="outline-text-3" id="text-3-1">
-</div>
-<div id="outline-container-org6f9d871" class="outline-4">
-<h4 id="org6f9d871"><span class="section-number-4">3.1.1.</span> to show assembly in the source code window in gud, <code>M-x gdb-display-disassembly-buffer</code></h4>
-</div>
-<div id="outline-container-org4ce9d40" class="outline-4">
-<h4 id="org4ce9d40"><span class="section-number-4">3.1.2.</span> links</h4>
-<div class="outline-text-4" id="text-3-1-2">
-</div>
-<ol class="org-ol">
-<li><a id="orgf810a62"></a><a href="https://microcorruption.com/">https://microcorruption.com/</a><br /></li>
-</ol>
-</div>
-</div>
-<div id="outline-container-org080995f" class="outline-3">
-<h3 id="org080995f"><span class="section-number-3">3.2.</span> <a href="https://youtu.be/3NTXFUxcKPc">0x06: tools</a></h3>
-<div class="outline-text-3" id="text-3-2">
-</div>
-<div id="outline-container-orgb0bd3f8" class="outline-4">
-<h4 id="orgb0bd3f8"><span class="section-number-4">3.2.1.</span> simple tools</h4>
-<div class="outline-text-4" id="text-3-2-1">
-</div>
-<ol class="org-ol">
-<li><a id="orgadcfb8e"></a>hexdump<br /></li>
-<li><a id="orgcfa25c4"></a>strings<br />
-<div class="outline-text-5" id="text-3-2-1-2">
-<p>
-all printable letters
-</p>
-</div>
-</li>
-<li><a id="org9f0d072"></a>objdump<br />
-<div class="outline-text-5" id="text-3-2-1-3">
-<p>
-disassembler
-</p>
-</div>
-</li>
-<li><a id="org1dfb6a8"></a>strace/ltrace<br />
-<div class="outline-text-5" id="text-3-2-1-4">
-<p>
-trace sys/lib call
-</p>
-</div>
-</li>
-</ol>
-</div>
-<div id="outline-container-orgde8d02a" class="outline-4">
-<h4 id="orgde8d02a"><span class="section-number-4">3.2.2.</span> <a href="https://youtu.be/mT1V7IL2FHY">0x0A: deal with numbers</a></h4>
-<div class="outline-text-4" id="text-3-2-2">
-</div>
-<ol class="org-ol">
-<li><a id="orgf57ed7f"></a>endian?<br />
-<div class="outline-text-5" id="text-3-2-2-1">
-<p>
-from <a href="https://zh.wikipedia.org/zh-cn/%E5%AD%97%E8%8A%82%E5%BA%8F">Wikipedia</a>
-<img src="../images/Big-Endian.svg.png " alt="Big-Endian.svg.png " /><img src="../images/Little-Endian.svg.png" alt="Little-Endian.svg.png" />
-x86 is little endian
-</p>
-</div>
-</li>
-<li><a id="org682e5ec"></a>tools<br />
-<ol class="org-ol">
-<li><a id="orgcb9d950"></a>python<br />
-<div class="outline-text-6" id="text-3-2-2-2-1">
-<div class="org-src-container">
-<pre class="src src-python">&gt;&gt;&gt; int('111', 2)
-7
-&gt;&gt;&gt; hex(123)
-'0x7b'
-&gt;&gt;&gt; import struct
-# https://docs.python.org/3.10/library/struct.html#format-characters
-&gt;&gt;&gt; struct.pack("&lt;I", 0x61626364) # little endian
-b'dcba'
-&gt;&gt;&gt; struct.pack("&gt;I", 0x61626364) # big endian
-b'abcd'
-</pre>
-</div>
-</div>
-</li>
-<li><a id="org4df9a7d"></a>iex<br />
-<div class="outline-text-6" id="text-3-2-2-2-2">
-<div class="org-src-container">
-<pre class="src src-elixir">iex(1)&gt; &lt;&lt;0x61626364::32&gt;&gt;
-"abcd"
-iex(2)&gt; Base.decode16("61626364")
-{:ok, "abcd"}
-</pre>
-</div>
-</div>
-</li>
-</ol>
-</li>
-</ol>
-</div>
+<div id="outline-container-orgc8ad043" class="outline-3">
+<h3 id="orgc8ad043"><span class="section-number-3">1.3.</span> <a href="https://www.reddit.com/r/swaywm/comments/djkj5m/ibus_on_swaywm/">reddit: ibus on swaywm</a></h3>
 </div>
 </div>
 </div>
