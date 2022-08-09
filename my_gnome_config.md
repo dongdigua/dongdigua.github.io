@@ -16,7 +16,9 @@ background: fedora 33 (最开始入坑fedora时自带的, 感觉特别好看)
 sudo dnf install f33-backgrounds-gnome
 ```
 
-terminal: Solarized
+gnome-terminal: Solarized
+
+login manager: lightdm
 
 extensions:
 - user theme
