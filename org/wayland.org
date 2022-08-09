@@ -12,7 +12,8 @@ probably wayfire?
 =sudo -E=
 ** cannot start sway on lightdm
 in =/etc/lightdm/lightdm.conf= uncomment =sessions-directory= line
-** TODO obs
+** obs
+don't remove the =include= line!!!
 
 * Ref
 ** [[https://coda.world/sway-explore-and-giveup][Sway: 从尝试到放弃]]
@@ -21,3 +22,5 @@ in =/etc/lightdm/lightdm.conf= uncomment =sessions-directory= line
 ** [[https://github.com/emersion/xdg-desktop-portal-wlr/wiki/Screencast-Compatibility#obs][xdg-desktop-portal wiki: obs]]
 ** [[https://www.reddit.com/r/swaywm/comments/jdoo8m/how_do_i_find_out_the_names_of_certain_keys/][prtsc is Print]]
 =xev= is helpful
+** [[https://github.com/ziap/dotfiles]]
+a great config

@@ -10,5 +10,5 @@ html:
 	@echo "HTML generation done"
 
 clean:
-	rm ./../org-html/*.html
-	rm ~/.org-timestamps/org-pages.cache 
+	rm ./../org_html/*.html
+	rm ~/.org-timestamps/org-pages.cache
