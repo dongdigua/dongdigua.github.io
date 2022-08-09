@@ -4,3 +4,5 @@ plugins:
 title: Dongdigua's Blog
 description: Computer Science NOT Code Salary
 author: dongdigua
+plugins:
+  - jekyll-feed
