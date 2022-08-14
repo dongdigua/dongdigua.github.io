@@ -28,13 +28,9 @@ elixir/erlang大佬, 公众号: HelloElixir
 第二次再查的问题，就必须记下来 !
 ** [[http://scinart.is-programmer.com/][scinart]]                                                            :lisp:
 13年最后更新
-** [[https://evanmeek.github.io/][我不会编程]]
-B站: 美味的樱桃菌
 ** [[https://lug.ustc.edu.cn/][中国科学技术大学 Linux 用户协会]]
 ** [[http://bzhang.lamost.org/website/][bozhang]]                                                         :rssable:
 05 年开始, 天文学
-** [[https://yaocc.cc/][CC]]                                                                :linux:
-B站: 称呼我C先生
 ** [[https://www.luogu.com.cn/blog/ivystorm/emacs-adventuredunnet-tong-guan-jiao-cheng][emacs dunnet 教程]]                                                 :emacs:
 luogu
 ** [[https://iceguye.com/blog][IceGuye]]
@@ -50,11 +46,9 @@ elisp
 今年的新博客, 友链有踏浪
 ** [[https://mrxn.net/][mrxn]]                                                             :hacker:
 网安
-** [[https://devbins.github.io/page][devbins]]
-404?
+** [[https://devbins.github.io/page][devbins]]                                                    :rust:c:emacs:
 ** [[http://incf19.com/yynotes/][include-yy]]                                                 :c:lisp:emacs:
-东方
-** [[https://emacs.sexy/][emacs is sexy!]]                                                    :emacs:
+许多东方的图
 ** [[https://stardiviner.github.io/][stardiviner]]
 Coder & 文学
 ** [[https://nihil.cc/posts/rust_closure_and_y/][Rust 闭包递归与 Y 组合子]]                                           :rust:
@@ -82,10 +76,20 @@ very high quality
 ** [[https://creamidea.github.io/][C-tone]]
 pretty and concise page
 ** [[https://lightless.me/][lightless blog]]                                                   :hacker:
-** [[https://www.lunaixsky.com/][lunaixsky]]                                                    :c:lowlevel:
 ** [[https://bheisler.github.io/post/state-of-gpgpu-in-rust/][The State of GPGPU in Rust]]                                :rust:lowlevel:
-** [[https://blog.yangmame.org/][yanemame]]
+** [[https://liyafu.com][Light & Truth]]
+from ruanyifeng
+** B
+*** [[https://blog.yangmame.org/][yanemame]]
 猴哥推荐的
+*** [[https://evanmeek.github.io/][我不会编程]]
+B站: 美味的樱桃菌
+*** [[https://yaocc.cc/][CC]]                                                              :linux:
+B站: 称呼我C先生
+*** [[https://www.lunaixsky.com/][lunaixsky]]                                                  :c:lowlevel:
+** shenjack/HWS
+*** [[http://www.z.org.cn/][老网虫]]
+*** [[https://blog.yang-qwq.ml][yang-qwq]]
 
 * YouTube 收集(没有账号, 这就是我的收藏夹)
 ** Code
@@ -120,6 +124,10 @@ and [[https://youtu.be/cfPDeso3XwI][register-based(13 episode)]]
 2:14 "how many american server you have already hacked" - "I don't count them I'm sorry"
 *** [[https://youtube.be/TLa2VqcGGEQ][CVE-2021-3156 sudo]]
 
+** Math
+*** [[https://youtu.be/KufsL2VgELo][Group Theory]]
+*** [[https://youtu.be/3gyHKCDq1YA][p-adic Numbers: 2 ^ 10n]]
+
 ** Minecraft
 *** [[https://youtu.be/VKydXD6Lr20][Mojang & Minecraft 开始衰落了吗?]]
 *** [[https://youtu.be/Y9DIIh0s9cg][SciCraft Update Plans]]
@@ -137,12 +145,14 @@ and [[https://youtu.be/cfPDeso3XwI][register-based(13 episode)]]
 MC 技术区毒瘤!
 ** [[https://en.wikipedia.org/wiki/Python_(missile)][Python-5]]
 from [[https://youtu.be/8QP2fDBIxjM][tsoding's first porth video]], (he is using debian, 37:00 copilot xd)
-
+** [[http://cat-v.org/][cat -v]]
+not only harmful stuff <3
+** http://sdf.org/
+SDF Public Access UNIX System .. Est. 1987
+** [[https://joinfediverse.wiki/][fediverse wiki]]
+The Fediverse is a giant Network of social media platforms
+** [[https://emacs.sexy/][emacs is sexy!]]
 #+BEGIN_COMMENT
 https://www.pixiv.net/users/57759368
 https://www.pixiv.net/users/2973809
 #+END_COMMENT
-** [[http://harmful.cat-v.org/][cat -v]]
-harmful stuff <3
-** http://sdf.org/
-SDF Public Access UNIX System .. Est. 1987
