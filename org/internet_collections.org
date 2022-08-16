@@ -38,7 +38,6 @@ luogu
 出国
 ** [[https://cireu.github.io/][NIL]]                                                               :emacs:
 elisp
-** [[https://blog.stenmans.org/theBeamBook/][the beam book]] and [[https://learnyousomeerlang.com/content][learn you some erlang]]                     :elixir:
 ** [[https://www.cnblogs.com/zjjws/p/13346020.html][第 N 个质数]]                                                 :c:algorithm:
 看不懂, 先收藏着
 ** [[https://www.coder.rs/][Zhangy233]]                                                          :rust:
@@ -79,6 +78,8 @@ pretty and concise page
 ** [[https://bheisler.github.io/post/state-of-gpgpu-in-rust/][The State of GPGPU in Rust]]                                :rust:lowlevel:
 ** [[https://liyafu.com][Light & Truth]]
 from ruanyifeng
+** [[https://www.zhihu.com/column/c_185117725][知乎专栏: 技术考古]]
+plan9
 ** B
 *** [[https://blog.yangmame.org/][yanemame]]
 猴哥推荐的
@@ -99,11 +100,9 @@ java bad, python slow, nvidia fuck you, vi-sual studio, C艹 sucks
 *** [[https://youtu.be/nfF91Z6fqGk][CMD 登录B站]]
 *** [[https://youtu.be/l0AmlU-4IRM][Rust aes加密]]
 legacy
-*** [[https://youtu.be/qKA2NZ1-kx0][tsoding write cool shell in rust]]
 *** [[https://youtu.be/hmMtQe_mYr0][tsoding helloworld in c]]
 *** [[https://www.youtube.com/playlist?list=RDCMUChl_NKOs1qqh_x7yJfaDpDw][Tantan 合集]]
 Rust Graphics
-*** [[https://www.youtube.com/playlist?list=PLGNbPb3dQJ_446PjTYQ0mCn2OGoHSKraB][build a virtual machine 合集(6/29)]]
 *** [[https://www.youtube.com/playlist?list=PLSiFUSQSRYAOFwfP-aMzXJlWKVyIuWfPU][stack-based virtual machine(6 episode)]]
 and [[https://youtu.be/cfPDeso3XwI][register-based(13 episode)]]
 *** [[https://youtu.be/_uAMo-bXI5g][register virtual machine in rust, with memory visualization]]
@@ -152,6 +151,7 @@ SDF Public Access UNIX System .. Est. 1987
 ** [[https://joinfediverse.wiki/][fediverse wiki]]
 The Fediverse is a giant Network of social media platforms
 ** [[https://emacs.sexy/][emacs is sexy!]]
+** [[https://blog.stenmans.org/theBeamBook/][the beam book]] and [[https://learnyousomeerlang.com/content][learn you some erlang]]
 #+BEGIN_COMMENT
 https://www.pixiv.net/users/57759368
 https://www.pixiv.net/users/2973809
