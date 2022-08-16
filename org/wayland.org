@@ -20,7 +20,6 @@ add =seat seat0 xcursor_theme Oxygen_White= in sway comfig file
 ** touchpad gesture like gnome
 *** [[https://github.com/swaywm/sway/issues/1514][issue #1514: touchpad gestures to switch workspaces]]
 **** [[https://github.com/bulletmark/libinput-gestures][the libinput-gestures library]]
-seems gnome is using this
 **** [[https://github.com/swaywm/sway/pull/4952][pull #4952]]
 ***** [[https://github.com/swaywm/sway/pull/6778][pull #6778]]
 *** r/swaywm
