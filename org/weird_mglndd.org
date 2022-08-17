@@ -1,0 +1,8 @@
+#+TITLE: Something About MGLNDD Scans
+
+* [[https://isc.sans.edu/diary/MGLNDD_%2A+Scans/28458][SANS internet storm center diary]]
+about the scanner and IP range
+** [[https://cybersafenv.org/2022/03/20/mglndd-scans-sun-mar-20th/][repost on cybersafenv]]
+* [[https://www.bilibili.com/read/cv16357621][my post on bilibili]]
+* [[https://github.com/dongdigua/portscan-listener/blob/main/log/some_strange_logs.md][my listener and some other logs]]
+* [[https://www.ironcastle.net/mglndd-scans-sun-mar-20th/][on ironcastle, but deleted]]
