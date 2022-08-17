@@ -80,6 +80,10 @@ pretty and concise page
 from ruanyifeng
 ** [[https://www.zhihu.com/column/c_185117725][知乎专栏: 技术考古]]
 plan9
+** [[https://ghinda.net/][ghinda]]                                                         :frontend:
+*** [[https://ghinda.net/oxygenos/][oxygenos]]
+his final year project in high school, 2008
+a webos using oxygen visual design
 ** B
 *** [[https://blog.yangmame.org/][yanemame]]
 猴哥推荐的
@@ -93,7 +97,7 @@ B站: 称呼我C先生
 *** [[https://blog.yang-qwq.ml][yang-qwq]]
 
 * YouTube 收集(没有账号, 这就是我的收藏夹)
-** Code
+** Computer Science
 *** [[https://youtu.be/gG00NgcdNEk][代码视频片头]]
 java bad, python slow, nvidia fuck you, vi-sual studio, C艹 sucks
 *** [[https://youtu.be/0rJ94rbdteE][Rust 让你感觉像个天才]]
@@ -122,6 +126,9 @@ and [[https://youtu.be/cfPDeso3XwI][register-based(13 episode)]]
 2:00 build own irc lib
 2:14 "how many american server you have already hacked" - "I don't count them I'm sorry"
 *** [[https://youtube.be/TLa2VqcGGEQ][CVE-2021-3156 sudo]]
+*** [[https://youtu.be/x_R1DeZxGc0][Discover Vulnerabilities in Intel CPUs!]]
+*** [[https://www.youtube.com/playlist?list=PL5--8gKSku15NSeLgrZX9hSEnqPTWoSJ0][DT: Privacy & Security]]
+*** [[https://youtu.be/Utse8P_L8k0][ArcaOS: Modern OS/2 ]]
 
 ** Math
 *** [[https://youtu.be/KufsL2VgELo][Group Theory]]
@@ -134,12 +141,19 @@ and [[https://youtu.be/cfPDeso3XwI][register-based(13 episode)]]
 
 ** ?
 *** [[https://www.youtube.com/c/IceGuye][IceGuye aka 姑射冰尘]]
-*** [[https://odysee.com/@IceGuye][on odysee(lbry)]]
+[[https://odysee.com/@IceGuye][on odysee(lbry)]]
+*** [[https://www.youtube.com/playlist?list=PL5--8gKSku17duy2-GrOfQma5FwsKA9LC][DT: Odysee]]
 
 * r
 ** [[https://www.reddit.com/r/unixporn/][unixporn]]
+*** [[https://www.reddit.com/r/unixporn/comments/wkba0x/jwm_if_i_had_a_pda/][pocket pc]]
+*** [[https://www.reddit.com/r/unixporn/comments/b83fex/win7_my_first_rice/][win7 :)]]
+** [[https://www.reddit.com/r/ProgrammerHumor][ProgrammerHumor]]
+*** [[https://www.reddit.com/r/ProgrammerHumor/comments/wpnvtg/microsoft_visual_rust_2018/][Microsoft Visual Rust]]
 
 * Other
+#+BEGIN_COMMENT
+#+END_COMMENT
 ** [[https://moonboos.fandom.com/zh/wiki/%E6%98%8E%E6%9C%88%E5%BA%84%E4%B8%BB_Wiki][日月脏主 Wiki]]
 MC 技术区毒瘤!
 ** [[https://en.wikipedia.org/wiki/Python_(missile)][Python-5]]
@@ -152,5 +166,8 @@ SDF Public Access UNIX System .. Est. 1987
 The Fediverse is a giant Network of social media platforms
 ** [[https://emacs.sexy/][emacs is sexy!]]
 ** [[https://blog.stenmans.org/theBeamBook/][the beam book]] and [[https://learnyousomeerlang.com/content][learn you some erlang]]
-#+BEGIN_COMMENT
-#+END_COMMENT
+** [[https://inadequacy.org/public/stories/2001.12.2.42056.2147.html][Adequacy: Is Your Son a Computer Hacker?]]
+#+BEGIN_QUOTE
+BSD, Lunix, Debian and Mandrake are all versions of an illegal hacker operation system,
+invented by a Soviet computer hacker named Linyos Torovoltos.
+#+END_QUOTE

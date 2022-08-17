@@ -12,6 +12,11 @@ probably wayfire?
 =sudo -E=
 ** cannot start sway on lightdm
 in =/etc/lightdm/lightdm.conf= uncomment =sessions-directory= line
+but still not stable, and it can't remenber which DE you used last time
++so use gdm is a better choice?+
+SDDM is fantastic! [[https://youtu.be/2p7FINJSlAk][It is themeable]],
+I'm using *~elarun~*, a oxygen-like smooth crystal theme
+materia-kde is also a good choice
 ** obs
 don't remove the =include= line!!!
 ** cursor theme not working
@@ -36,3 +41,7 @@ add =seat seat0 xcursor_theme Oxygen_White= in sway comfig file
 =xev= is helpful
 ** [[https://github.com/ziap/dotfiles]]
 a great config
+** [[https://www.reddit.com/r/unixporn/comments/v6fsui/sway_family_reunionr/][reddit: family reunion]]
+** [[https://www.reddit.com/r/swaywm/comments/ehqsuw/autochanging_background_for_sway/][reddit: auto-changing sway background]]
+** [[https://github.com/Ruixi-rebirth/sway-dotfiles][Ruixi-rebirth's dotfiles]]
+sway, very beautiful, from COSSIG

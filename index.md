@@ -5,6 +5,7 @@
 Minecraft 红石玩家, [B站](https://space.bilibili.com/489732092)<br>
 更多请见[我的 github 主页](https://github.com/dongdigua)
 ## 目录
+[MGLNDD scans](org_html/weird_mglndd)<br>
 [elixir 写点对点加密聊天软件](p2p_chat)<br>
 [博客, YouTube 等收集](org_html/internet_collections)<br>
 [我对 SciCraft 更新1.19的看法](scicraft_update)<br>
