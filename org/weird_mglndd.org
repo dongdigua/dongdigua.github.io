@@ -1,8 +1,23 @@
 #+TITLE: Something About MGLNDD Scans
+#+OPTIONS: toc:nil \n:t
 
+* [[https://stretchoid.com/][stretchoid opt-out]]
+this domain's workers are comstantly scanning the WHOLE internet
 * [[https://isc.sans.edu/diary/MGLNDD_%2A+Scans/28458][SANS internet storm center diary]]
 about the scanner and IP range
 ** [[https://cybersafenv.org/2022/03/20/mglndd-scans-sun-mar-20th/][repost on cybersafenv]]
+* [[http://www.hackdig.com/04/hack-81133.htm][知名网络空间普查与网络测绘组织研究报告 第一期-组织名录篇]]
 * [[https://www.bilibili.com/read/cv16357621][my post on bilibili]]
 * [[https://github.com/dongdigua/portscan-listener/blob/main/log/some_strange_logs.md][my listener and some other logs]]
+* [[https://zhuanlan.zhihu.com/p/67186794][zhihu:repost-translation: 如何建立一个基本的蜜罐]]
+the original post is gone
+#+BEGIN_QUOTE
+您还可以开始执行DNS和WHOIS查找，以找出每次扫描背后的人员。
+在这个简短的样本中，我找到了一个伪“研究员”：107.170.202.111解析为“zg-0301f-15.stretchoid.com”。根据他们的网站：
+...
+Stretchoid不能识别他们是谁。他们没有确定他们正在做什么或为什么他们在161 / udp扫描我的蜜罐。
+（端口161 / udp是为简单的网络管理协议（SNMP）保留的，并且经常容易受到攻击。）
+是的，他们把“malicious”拼错了 - 因此它可能不会出现在谷歌搜索“stretchoid and malicious”的结果中。
+#+END_QUOTE
+* [[https://www.digitalocean.com/community/questions/why-is-digital-ocean-showing-in-my-router-connecting-to-a-ps4][Why is Digital Ocean showing in my router, connecting to a PS4?]]
 * [[https://www.ironcastle.net/mglndd-scans-sun-mar-20th/][on ironcastle, but deleted]]

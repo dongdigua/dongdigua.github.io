@@ -12,6 +12,8 @@
 ** [[http://www.qiusir.com/][qiusir]]                                                        :rssub:
 ** [[http://www.yinwang.org/][王垠]]
 ** [[http://ruanyifeng.com/blog/][阮一峰]]                                                        :rssub:
+** [[http://www.hackdig.com/][黑客技术]]                                                         :hacker:
+really good website, butt, no rss
 ** [[https://shakaianee.top/][易姐]]
 ** [[https://blog.stdio.io/1385][King's way]]
 ** [[https://floooh.github.io/2021/12/17/cycle-stepped-z80.html][floooh]]                                                                :c:

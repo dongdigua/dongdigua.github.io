@@ -6,7 +6,7 @@
 <!-- 2022-08-18 四 13:32 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Editor Chaetsheet</title>
+<title>Something About Wayland(swaywm)</title>
 <meta name="author" content="dongdigua" />
 <meta name="generator" content="Org Mode" />
 <style>
@@ -197,360 +197,160 @@
 </head>
 <body>
 <div id="content" class="content">
-<h1 class="title">Editor Cheatsheet</h1>
-<div id="table-of-contents" role="doc-toc">
-<h2>Table of Contents</h2>
-<div id="text-table-of-contents" role="doc-toc">
-<ul>
-<li><a href="#org080d12a">1. VIM</a>
-<ul>
-<li><a href="#org7b8d457">1.1. deletion</a></li>
-<li><a href="#org4f3a65e">1.2. edit</a></li>
-<li><a href="#orgcc9ea17">1.3. movement</a></li>
-<li><a href="#orgcd816cf">1.4. visual</a></li>
-<li><a href="#org91e49eb">1.5. file/split</a></li>
-</ul>
-</li>
-<li><a href="#orgaecb00f">2. EMACS</a>
-<ul>
-<li><a href="#org56feca1">2.1. org-mode</a></li>
-<li><a href="#org3cc5046">2.2. normal</a></li>
-<li><a href="#org91b9d94">2.3. dired</a></li>
-</ul>
-</li>
-<li><a href="#orgd2f00e6">3. Git (虽然不算editor, 但是先也放这吧)</a></li>
-</ul>
-</div>
-</div>
+<h1 class="title">Something About Wayland(swaywm)</h1>
 
-
-<div id="outline-container-org080d12a" class="outline-2">
-<h2 id="org080d12a"><span class="section-number-2">1.</span> VIM</h2>
+<div id="outline-container-org5ce7ee1" class="outline-2">
+<h2 id="org5ce7ee1"><span class="section-number-2">1.</span> Solution</h2>
 <div class="outline-text-2" id="text-1">
 </div>
-<div id="outline-container-org7b8d457" class="outline-3">
-<h3 id="org7b8d457"><span class="section-number-3">1.1.</span> deletion</h3>
+<div id="outline-container-orgd20b7a8" class="outline-3">
+<h3 id="orgd20b7a8"><span class="section-number-3">1.1.</span> gnome-screenshot</h3>
 <div class="outline-text-3" id="text-1-1">
-<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
-
-
-<colgroup>
-<col  class="org-left" />
-
-<col  class="org-left" />
-</colgroup>
-<tbody>
-<tr>
-<td class="org-left">key</td>
-<td class="org-left">usage</td>
-</tr>
-</tbody>
-</table>
+<p>
+grim<br />
+</p>
 </div>
 </div>
-
-<div id="outline-container-org4f3a65e" class="outline-3">
-<h3 id="org4f3a65e"><span class="section-number-3">1.2.</span> edit</h3>
+<div id="outline-container-org7f494e3" class="outline-3">
+<h3 id="org7f494e3"><span class="section-number-3">1.2.</span> iBus</h3>
 <div class="outline-text-3" id="text-1-2">
-<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
-
-
-<colgroup>
-<col  class="org-left" />
-
-<col  class="org-left" />
-</colgroup>
-<tbody>
-<tr>
-<td class="org-left">key</td>
-<td class="org-left">usage</td>
-</tr>
-
-<tr>
-<td class="org-left">u/C-r</td>
-<td class="org-left">撤销/重做</td>
-</tr>
-
-<tr>
-<td class="org-left">c i {</td>
-<td class="org-left">change inside {}</td>
-</tr>
-
-<tr>
-<td class="org-left">"{register}y/p</td>
-<td class="org-left">向/从寄存器拷贝</td>
-</tr>
-</tbody>
-</table>
+<p>
+emacs pyim<br />
+</p>
 </div>
 </div>
-
-<div id="outline-container-orgcc9ea17" class="outline-3">
-<h3 id="orgcc9ea17"><span class="section-number-3">1.3.</span> movement</h3>
+<div id="outline-container-org6962f83" class="outline-3">
+<h3 id="org6962f83"><span class="section-number-3">1.3.</span> Emacs transparent</h3>
 <div class="outline-text-3" id="text-1-3">
-<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
-
-
-<colgroup>
-<col  class="org-left" />
-
-<col  class="org-left" />
-</colgroup>
-<thead>
-<tr>
-<th scope="col" class="org-left">key</th>
-<th scope="col" class="org-left">usage</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="org-left">w/e</td>
-<td class="org-left">下一个单词/单词尾</td>
-</tr>
-
-<tr>
-<td class="org-left">b</td>
-<td class="org-left">单词头</td>
-</tr>
-
-<tr>
-<td class="org-left">H/M/L</td>
-<td class="org-left">当前页面可见顶部/中间/底部</td>
-</tr>
-
-<tr>
-<td class="org-left">C-u(f)/d</td>
-<td class="org-left">上/下翻页</td>
-</tr>
-
-<tr>
-<td class="org-left">%</td>
-<td class="org-left">到对应括号</td>
-</tr>
-
-<tr>
-<td class="org-left">{}</td>
-<td class="org-left">段落跳转</td>
-</tr>
-
-<tr>
-<td class="org-left">g ;</td>
-<td class="org-left">goto last change</td>
-</tr>
-
-<tr>
-<td class="org-left">g */#</td>
-<td class="org-left">正/反查找光标下的词</td>
-</tr>
-
-<tr>
-<td class="org-left">g d/D</td>
-<td class="org-left">跳转到本地/全局定义</td>
-</tr>
-</tbody>
-</table>
+<p>
+probably wayfire?<br />
+</p>
 </div>
 </div>
-
-<div id="outline-container-orgcd816cf" class="outline-3">
-<h3 id="orgcd816cf"><span class="section-number-3">1.4.</span> visual</h3>
+<div id="outline-container-org8727322" class="outline-3">
+<h3 id="org8727322"><span class="section-number-3">1.4.</span> Authorization required, but no authorization protocol specified</h3>
 <div class="outline-text-3" id="text-1-4">
-<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
-
-
-<colgroup>
-<col  class="org-left" />
-
-<col  class="org-left" />
-
-<col  class="org-left" />
-</colgroup>
-<thead>
-<tr>
-<th scope="col" class="org-left">key</th>
-<th scope="col" class="org-left">usage</th>
-<th scope="col" class="org-left">next</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="org-left">C-v</td>
-<td class="org-left">矩形区域选择</td>
-<td class="org-left">S-i 插入, esc 批量执行</td>
-</tr>
-</tbody>
-</table>
+</div>
+<div id="outline-container-orgca509d2" class="outline-4">
+<h4 id="orgca509d2"><span class="section-number-4">1.4.1.</span> <code>sudo -E</code></h4>
+</div>
+<div id="outline-container-org638f6e9" class="outline-4">
+<h4 id="org638f6e9"><span class="section-number-4">1.4.2.</span> lxpolkit(directly execute) or polkit-gnome(prettier)</h4>
 </div>
 </div>
-
-
-<div id="outline-container-org91e49eb" class="outline-3">
-<h3 id="org91e49eb"><span class="section-number-3">1.5.</span> file/split</h3>
+<div id="outline-container-orgfe34a77" class="outline-3">
+<h3 id="orgfe34a77"><span class="section-number-3">1.5.</span> cannot start sway on lightdm</h3>
 <div class="outline-text-3" id="text-1-5">
-<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
-
-
-<colgroup>
-<col  class="org-left" />
-
-<col  class="org-left" />
-</colgroup>
-<thead>
-<tr>
-<th scope="col" class="org-left">key</th>
-<th scope="col" class="org-left">usage</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="org-left">:n/:N</td>
-<td class="org-left">文件之间切换</td>
-</tr>
-
-<tr>
-<td class="org-left">:b</td>
-<td class="org-left">切换到文件</td>
-</tr>
-
-<tr>
-<td class="org-left">C-w h/j/k/l</td>
-<td class="org-left">切换分屏窗口</td>
-</tr>
-
-<tr>
-<td class="org-left">ZZ</td>
-<td class="org-left">:wq</td>
-</tr>
-</tbody>
-</table>
+<p>
+in <code>/etc/lightdm/lightdm.conf</code> uncomment <code>sessions-directory</code> line<br />
+but still not stable, and it can't remenber which DE you used last time<br />
+<del>so use gdm is a better choice?</del><br />
+SDDM is fantastic! <a href="https://youtu.be/2p7FINJSlAk">It is themeable</a>,<br />
+I'm using <b><code>elarun</code></b>, a oxygen-like smooth crystal theme<br />
+materia-kde is also a good choice<br />
+</p>
+</div>
+</div>
+<div id="outline-container-org582ffa4" class="outline-3">
+<h3 id="org582ffa4"><span class="section-number-3">1.6.</span> obs</h3>
+<div class="outline-text-3" id="text-1-6">
+<p>
+don't remove the <code>include</code> line!!!<br />
+</p>
+</div>
+</div>
+<div id="outline-container-orgdb78aea" class="outline-3">
+<h3 id="orgdb78aea"><span class="section-number-3">1.7.</span> cursor theme not working</h3>
+<div class="outline-text-3" id="text-1-7">
+<p>
+<a href="https://github.com/swaywm/sway/issues/6931">from this issue</a><br />
+add <code>seat seat0 xcursor_theme Oxygen_White</code> in sway comfig file<br />
+</p>
+</div>
+</div>
+<div id="outline-container-org92dec60" class="outline-3">
+<h3 id="org92dec60"><span class="section-number-3">1.8.</span> touchpad gesture like gnome</h3>
+<div class="outline-text-3" id="text-1-8">
+</div>
+<div id="outline-container-org5a6fe7d" class="outline-4">
+<h4 id="org5a6fe7d"><span class="section-number-4">1.8.1.</span> <a href="https://github.com/swaywm/sway/issues/1514">issue #1514: touchpad gestures to switch workspaces</a></h4>
+<div class="outline-text-4" id="text-1-8-1">
+</div>
+<ol class="org-ol">
+<li><a id="org284000f"></a><a href="https://github.com/bulletmark/libinput-gestures">the libinput-gestures library</a><br /></li>
+<li><a id="orge34bbfc"></a><a href="https://github.com/swaywm/sway/pull/4952">pull #4952</a><br />
+<ol class="org-ol">
+<li><a id="org9abea96"></a><a href="https://github.com/swaywm/sway/pull/6778">pull #6778</a><br /></li>
+</ol>
+</li>
+</ol>
+</div>
+<div id="outline-container-org5f91483" class="outline-4">
+<h4 id="org5f91483"><span class="section-number-4">1.8.2.</span> r/swaywm</h4>
+<div class="outline-text-4" id="text-1-8-2">
+</div>
+<ol class="org-ol">
+<li><a id="orge7dbfd2"></a><a href="https://www.reddit.com/r/swaywm/comments/r85e9g/touchpad_gestures/">https://www.reddit.com/r/swaywm/comments/r85e9g/touchpad_gestures/</a><br /></li>
+<li><a id="org9e9073d"></a><a href="https://www.reddit.com/r/swaywm/comments/px5vmw/how_are_you_configuring_touchpad_gestures/">https://www.reddit.com/r/swaywm/comments/px5vmw/how_are_you_configuring_touchpad_gestures/</a><br /></li>
+<li><a id="org3da43b5"></a><a href="https://www.reddit.com/r/swaywm/comments/em0jnx/can_sway_handle_threefour_finger_touchpad_gestures/">https://www.reddit.com/r/swaywm/comments/em0jnx/can_sway_handle_threefour_finger_touchpad_gestures/</a><br /></li>
+</ol>
+</div>
+</div>
+<div id="outline-container-orgd989096" class="outline-3">
+<h3 id="orgd989096"><span class="section-number-3">1.9.</span> notify-send don't work</h3>
+<div class="outline-text-3" id="text-1-9">
+<p>
+mako, a notification daemon<br />
+</p>
 </div>
 </div>
 </div>
 
 
-
-<div id="outline-container-orgaecb00f" class="outline-2">
-<h2 id="orgaecb00f"><span class="section-number-2">2.</span> EMACS</h2>
+<div id="outline-container-org653ff69" class="outline-2">
+<h2 id="org653ff69"><span class="section-number-2">2.</span> Ref</h2>
 <div class="outline-text-2" id="text-2">
 </div>
-<div id="outline-container-org56feca1" class="outline-3">
-<h3 id="org56feca1"><span class="section-number-3">2.1.</span> org-mode</h3>
-<div class="outline-text-3" id="text-2-1">
-<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
-
-
-<colgroup>
-<col  class="org-left" />
-
-<col  class="org-left" />
-</colgroup>
-<thead>
-<tr>
-<th scope="col" class="org-left">key</th>
-<th scope="col" class="org-left">usage</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="org-left">C-c |</td>
-<td class="org-left">创建表格</td>
-</tr>
-
-<tr>
-<td class="org-left">C-c C-e</td>
-<td class="org-left">导出 HTML</td>
-</tr>
-
-<tr>
-<td class="org-left">M-left/right</td>
-<td class="org-left">升级(promote)/降级(demote)</td>
-</tr>
-
-<tr>
-<td class="org-left">C-c C-x C-v</td>
-<td class="org-left">toggle render images</td>
-</tr>
-</tbody>
-</table>
+<div id="outline-container-orgf58a601" class="outline-3">
+<h3 id="orgf58a601"><span class="section-number-3">2.1.</span> <a href="https://www.bilibili.com/video/BV1H94y1X762">The Ultimate Waybar Tutorial Video on BiliBili</a></h3>
+</div>
+<div id="outline-container-org353d761" class="outline-3">
+<h3 id="org353d761"><span class="section-number-3">2.2.</span> <a href="https://coda.world/sway-explore-and-giveup">Sway: 从尝试到放弃</a></h3>
+</div>
+<div id="outline-container-orgf7fae5d" class="outline-3">
+<h3 id="orgf7fae5d"><span class="section-number-3">2.3.</span> <a href="https://shinta.ro/posts/migration-from-xorg-to-wayland/">从 Xorg 迁移到 Wayland</a></h3>
+</div>
+<div id="outline-container-org9869da3" class="outline-3">
+<h3 id="org9869da3"><span class="section-number-3">2.4.</span> <a href="https://www.reddit.com/r/swaywm/comments/djkj5m/ibus_on_swaywm/">reddit: ibus on swaywm</a></h3>
+</div>
+<div id="outline-container-org0a51af7" class="outline-3">
+<h3 id="org0a51af7"><span class="section-number-3">2.5.</span> <a href="https://www.reddit.com/r/swaywm/comments/jdoo8m/how_do_i_find_out_the_names_of_certain_keys/">prtsc is Print</a></h3>
+<div class="outline-text-3" id="text-2-5">
+<p>
+<code>xev</code> is helpful<br />
+</p>
 </div>
 </div>
-
-<div id="outline-container-org3cc5046" class="outline-3">
-<h3 id="org3cc5046"><span class="section-number-3">2.2.</span> normal</h3>
-<div class="outline-text-3" id="text-2-2">
-<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
-
-
-<colgroup>
-<col  class="org-left" />
-
-<col  class="org-left" />
-</colgroup>
-<thead>
-<tr>
-<th scope="col" class="org-left">key</th>
-<th scope="col" class="org-left">usage</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="org-left">M-%</td>
-<td class="org-left">替换</td>
-</tr>
-
-<tr>
-<td class="org-left">M-;</td>
-<td class="org-left">区域切换注释</td>
-</tr>
-
-<tr>
-<td class="org-left">C-x C-;</td>
-<td class="org-left">行切换注释</td>
-</tr>
-
-<tr>
-<td class="org-left">C-y</td>
-<td class="org-left">paste to minibuffer</td>
-</tr>
-</tbody>
-</table>
+<div id="outline-container-org46468a9" class="outline-3">
+<h3 id="org46468a9"><span class="section-number-3">2.6.</span> <a href="https://github.com/ziap/dotfiles">https://github.com/ziap/dotfiles</a></h3>
+<div class="outline-text-3" id="text-2-6">
+<p>
+a great config<br />
+</p>
 </div>
 </div>
-
-<div id="outline-container-org91b9d94" class="outline-3">
-<h3 id="org91b9d94"><span class="section-number-3">2.3.</span> dired</h3>
-<div class="outline-text-3" id="text-2-3">
-<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
-
-
-<colgroup>
-<col  class="org-left" />
-
-<col  class="org-left" />
-</colgroup>
-<tbody>
-<tr>
-<td class="org-left">key</td>
-<td class="org-left">usage</td>
-</tr>
-
-<tr>
-<td class="org-left">R</td>
-<td class="org-left">rename</td>
-</tr>
-</tbody>
-</table>
+<div id="outline-container-orgd220866" class="outline-3">
+<h3 id="orgd220866"><span class="section-number-3">2.7.</span> <a href="https://www.reddit.com/r/unixporn/comments/v6fsui/sway_family_reunionr/">reddit: family reunion</a></h3>
 </div>
+<div id="outline-container-orgb4713fd" class="outline-3">
+<h3 id="orgb4713fd"><span class="section-number-3">2.8.</span> <a href="https://www.reddit.com/r/swaywm/comments/ehqsuw/autochanging_background_for_sway/">reddit: auto-changing sway background</a></h3>
 </div>
-</div>
-
-<div id="outline-container-orgd2f00e6" class="outline-2">
-<h2 id="orgd2f00e6"><span class="section-number-2">3.</span> Git (虽然不算editor, 但是先也放这吧)</h2>
-<div class="outline-text-2" id="text-3">
-<div class="org-src-container">
-<pre class="src src-shell">git log --stat | perl -ne 'END { print $c } $c += $1 if /(\d+) insertions/;'
-git log  --pretty=tformat: --numstat | awk '{ add += $1; subs += $2; loc += $1 - $2 } END { printf "added lines: %s, removed lines: %s, total lines: %s\n", add, subs, loc }'
-</pre>
+<div id="outline-container-org2283f61" class="outline-3">
+<h3 id="org2283f61"><span class="section-number-3">2.9.</span> <a href="https://github.com/Ruixi-rebirth/sway-dotfiles">Ruixi-rebirth's dotfiles</a></h3>
+<div class="outline-text-3" id="text-2-9">
+<p>
+sway, very beautiful, from COSSIG<br />
+</p>
 </div>
 </div>
 </div>
