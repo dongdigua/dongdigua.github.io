@@ -9,6 +9,7 @@
 
 ** edit
 | key            | usage            |
+|----------------+------------------|
 | u/C-r          | 撤销/重做        |
 | c i {          | change inside {} |
 | "{register}y/p | 向/从寄存器拷贝  |

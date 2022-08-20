@@ -6,7 +6,7 @@
 grim
 ** iBus
 emacs pyim
-** Emacs transparent
+** Emacs transparent, terminal blur
 probably wayfire?
 ** Authorization required, but no authorization protocol specified
 *** =sudo -E=
@@ -34,6 +34,7 @@ add =seat seat0 xcursor_theme Oxygen_White= in sway comfig file
 **** [[https://www.reddit.com/r/swaywm/comments/em0jnx/can_sway_handle_threefour_finger_touchpad_gestures/]]
 ** notify-send don't work
 mako, a notification daemon
+** TODO [[https://github.com/WayfireWM/wayfire/issues/1329][Wayfire crashes when closing foot terminal]]
 
 
 * Ref
@@ -42,10 +43,15 @@ mako, a notification daemon
 ** [[https://www.reddit.com/r/swaywm/comments/djkj5m/ibus_on_swaywm/][reddit: ibus on swaywm]]
 ** [[https://github.com/emersion/xdg-desktop-portal-wlr/wiki/Screencast-Compatibility#obs][xdg-desktop-portal wiki: obs]]
 ** [[https://www.reddit.com/r/swaywm/comments/jdoo8m/how_do_i_find_out_the_names_of_certain_keys/][prtsc is Print]]
-=xev= is helpful
+=xev/wev= is helpful
 ** [[https://github.com/ziap/dotfiles]]
 a great config
-** [[https://www.reddit.com/r/unixporn/comments/v6fsui/sway_family_reunionr/][reddit: family reunion]]
 ** [[https://www.reddit.com/r/swaywm/comments/ehqsuw/autochanging_background_for_sway/][reddit: auto-changing sway background]]
 ** [[https://github.com/Ruixi-rebirth/sway-dotfiles][Ruixi-rebirth's dotfiles]]
 sway, very beautiful, from COSSIG
+** [[https://www.reddit.com/r/unixporn/comments/vc9912/river_riced_river_a_dynamic_tiling_wayland/][a Paid config]]
+this is excellent, but...not for me
+I'd like something simpler
+*** [[https://archcraft.io][archcraft]]
+** [[https://github.com/rxyhn/yoru][夜 - Yoru]]
+awesome config!

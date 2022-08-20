@@ -1,6 +1,6 @@
 #+STARTUP: indent
 #+TAGS: elixir(e) rust(r) c(c) lisp(l)
-#+TAGS: lowlevel(w) frontend(f) backend(b) emacs(m) hacker(h) algorithm(a) linux(x)
+#+TAGS: lowlevel(w) frontend(f) backend(b) emacs(m) hack(h) algorithm(a) linux(x)
 #+TAGS: rssable(s) rssub(u)
 #+OPTIONS: \n:t
 #+OPTIONS: toc:nil
@@ -9,10 +9,10 @@
 #+TITLE: Internet Collections
 
 * 一些(个人)博客收集
-** [[http://www.qiusir.com/][qiusir]]                                                        :rssub:
+** [[http://www.qiusir.com/][qiusir]]                                                            :rssub:
 ** [[http://www.yinwang.org/][王垠]]
-** [[http://ruanyifeng.com/blog/][阮一峰]]                                                        :rssub:
-** [[http://www.hackdig.com/][黑客技术]]                                                         :hacker:
+** [[http://ruanyifeng.com/blog/][阮一峰]]                                                            :rssub:
+** [[http://www.hackdig.com/][黑客技术]]                                                           :hack:
 really good website, butt, no rss
 ** [[https://shakaianee.top/][易姐]]
 ** [[https://blog.stdio.io/1385][King's way]]
@@ -45,7 +45,7 @@ elisp
 ** [[https://www.coder.rs/][Zhangy233]]                                                          :rust:
 ** [[https://blog.bluemangoo.net/][芒果快评]]
 今年的新博客, 友链有踏浪
-** [[https://mrxn.net/][mrxn]]                                                             :hacker:
+** [[https://mrxn.net/][mrxn]]                                                               :hack:
 网安
 ** [[https://devbins.github.io/page][devbins]]                                                    :rust:c:emacs:
 ** [[http://incf19.com/yynotes/][include-yy]]                                                 :c:lisp:emacs:
@@ -76,7 +76,7 @@ very high quality
 ** [[http://www.xianwaizhiyin.net/][弦外之音]]                                                     :c:lowlevel:
 ** [[https://creamidea.github.io/][C-tone]]
 pretty and concise page
-** [[https://lightless.me/][lightless blog]]                                                   :hacker:
+** [[https://lightless.me/][lightless blog]]                                                     :hack:
 ** [[https://bheisler.github.io/post/state-of-gpgpu-in-rust/][The State of GPGPU in Rust]]                                :rust:lowlevel:
 ** [[https://liyafu.com][Light & Truth]]
 from ruanyifeng
@@ -86,6 +86,9 @@ plan9
 *** [[https://ghinda.net/oxygenos/][oxygenos]]
 his final year project in high school, 2008
 a webos using oxygen visual design
+** [[https://www.gilesorr.com/wm/][The Window Manager Report]]
+** [[https://collet66.web.fc2.com/][syosa]]
+pixel art
 ** B
 *** [[https://blog.yangmame.org/][yanemame]]
 猴哥推荐的
@@ -94,9 +97,11 @@ B站: 美味的樱桃菌
 *** [[https://yaocc.cc/][CC]]                                                              :linux:
 B站: 称呼我C先生
 *** [[https://www.lunaixsky.com/][lunaixsky]]                                                  :c:lowlevel:
+*** [[https://endlesspeak.gitee.io/][EndlessPeak]]                                                     :linux:
 ** shenjack/HWS
 *** [[http://www.z.org.cn/][老网虫]]
 *** [[https://blog.yang-qwq.ml][yang-qwq]]
+*** [[http://blog.zhanganzhi.com/][zhanganzhi]]
 
 * YouTube 收集(没有账号, 这就是我的收藏夹)
 ** Computer Science
@@ -131,6 +136,15 @@ and [[https://youtu.be/cfPDeso3XwI][register-based(13 episode)]]
 *** [[https://youtu.be/x_R1DeZxGc0][Discover Vulnerabilities in Intel CPUs!]]
 *** [[https://www.youtube.com/playlist?list=PL5--8gKSku15NSeLgrZX9hSEnqPTWoSJ0][DT: Privacy & Security]]
 *** [[https://youtu.be/Utse8P_L8k0][ArcaOS: Modern OS/2 ]]
+*** [[https://youtu.be/2--1ph-4IaY][shit express hacked]]
+*** [[https://www.youtube.com/c/PowerCertAnimatedVideos][PowerCert Animated Videos]]
+**** [[https://youtu.be/1z0ULvg_pW8][集线器，交换机和路由器的区别]]
+**** [[https://youtu.be/pCcJFdYNamc][Default Gateway Explained]]
+**** [[https://youtu.be/TIiQiw7fpsU][MAC Address Explained]]
+**** [[https://youtu.be/6_giEv20En0][Subnets vs VLANs]]
+*** [[https://youtu.be/S4E4yAktjug?t=998][How To Become Invisible Online # level 3]]
+*** [[https://youtu.be/QxNsyrftJ8I][The Biggest Linux Security Mistakes]]
+"Security is a journey, not a destination!"
 
 ** Math
 *** [[https://youtu.be/KufsL2VgELo][Group Theory]]
@@ -145,13 +159,17 @@ and [[https://youtu.be/cfPDeso3XwI][register-based(13 episode)]]
 *** [[https://www.youtube.com/c/IceGuye][IceGuye aka 姑射冰尘]]
 [[https://odysee.com/@IceGuye][on odysee(lbry)]]
 *** [[https://www.youtube.com/playlist?list=PL5--8gKSku17duy2-GrOfQma5FwsKA9LC][DT: Odysee]]
+*** [[https://youtu.be/IS5ycm7VfXg][Homemade Silicon Chips!]]
 
 * r
 ** [[https://www.reddit.com/r/unixporn/][unixporn]]
+*** [[https://www.reddit.com/r/unixporn/comments/v6fsui/sway_family_reunionr/][reddit: family reunion]]
 *** [[https://www.reddit.com/r/unixporn/comments/wkba0x/jwm_if_i_had_a_pda/][pocket pc]]
 *** [[https://www.reddit.com/r/unixporn/comments/b83fex/win7_my_first_rice/][win7 :)]]
+*** [[https://www.reddit.com/r/unixporn/comments/wtvj46/kde_cherry_blossoms/][[KDE] Cherry Blossoms]]
 ** [[https://www.reddit.com/r/ProgrammerHumor][ProgrammerHumor]]
 *** [[https://www.reddit.com/r/ProgrammerHumor/comments/wpnvtg/microsoft_visual_rust_2018/][Microsoft Visual Rust]]
+*** [[https://www.reddit.com/r/ProgrammerHumor/comments/wsw78u/regex_be_like/][MC enchant: regex be like...]]
 
 * Other
 #+BEGIN_COMMENT
