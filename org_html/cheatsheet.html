@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-08-18 四 13:32 -->
+<!-- 2022-09-01 四 10:40 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Editor Chaetsheet</title>
@@ -218,7 +218,8 @@
 <li><a href="#org91b9d94">2.3. dired</a></li>
 </ul>
 </li>
-<li><a href="#orgd2f00e6">3. Git (虽然不算editor, 但是先也放这吧)</a></li>
+<li><a href="#org1b516d7">3. Git</a></li>
+<li><a href="#org749ff2d">4. Fish</a></li>
 </ul>
 </div>
 </div>
@@ -239,10 +240,16 @@
 
 <col  class="org-left" />
 </colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">key</th>
+<th scope="col" class="org-left">usage</th>
+</tr>
+</thead>
 <tbody>
 <tr>
-<td class="org-left">key</td>
-<td class="org-left">usage</td>
+<td class="org-left">D</td>
+<td class="org-left">delete to end of line</td>
 </tr>
 </tbody>
 </table>
@@ -260,12 +267,13 @@
 
 <col  class="org-left" />
 </colgroup>
-<tbody>
+<thead>
 <tr>
-<td class="org-left">key</td>
-<td class="org-left">usage</td>
+<th scope="col" class="org-left">key</th>
+<th scope="col" class="org-left">usage</th>
 </tr>
-
+</thead>
+<tbody>
 <tr>
 <td class="org-left">u/C-r</td>
 <td class="org-left">撤销/重做</td>
@@ -512,6 +520,11 @@
 <td class="org-left">C-y</td>
 <td class="org-left">paste to minibuffer</td>
 </tr>
+
+<tr>
+<td class="org-left">M-&amp;/!</td>
+<td class="org-left">async/shell command</td>
+</tr>
 </tbody>
 </table>
 </div>
@@ -544,8 +557,8 @@
 </div>
 </div>
 
-<div id="outline-container-orgd2f00e6" class="outline-2">
-<h2 id="orgd2f00e6"><span class="section-number-2">3.</span> Git (虽然不算editor, 但是先也放这吧)</h2>
+<div id="outline-container-org1b516d7" class="outline-2">
+<h2 id="org1b516d7"><span class="section-number-2">3.</span> Git</h2>
 <div class="outline-text-2" id="text-3">
 <div class="org-src-container">
 <pre class="src src-shell">git log --stat | perl -ne 'END { print $c } $c += $1 if /(\d+) insertions/;'
@@ -554,10 +567,47 @@ git log  --pretty=tformat: --numstat | awk '{ add += $1; subs += $2; loc += $1 -
 </div>
 </div>
 </div>
+
+<div id="outline-container-org749ff2d" class="outline-2">
+<h2 id="org749ff2d"><span class="section-number-2">4.</span> Fish</h2>
+<div class="outline-text-2" id="text-4">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">key</th>
+<th scope="col" class="org-left">usage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">M-Left/Right</td>
+<td class="org-left">jump world, or prevd/nextd</td>
+</tr>
+
+<tr>
+<td class="org-left">M-s</td>
+<td class="org-left">sudo the last command</td>
+</tr>
+
+<tr>
+<td class="org-left">M-W</td>
+<td class="org-left">what is this</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: dongdigua</p>
-<p class="date">Created: 2022-08-18 四 13:32</p>
+<p class="date">Created: 2022-09-01 四 10:40</p>
 </div>
 </body>
 </html>

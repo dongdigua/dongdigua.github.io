@@ -35,6 +35,9 @@ add =seat seat0 xcursor_theme Oxygen_White= in sway comfig file
 ** notify-send don't work
 mako, a notification daemon
 ** TODO [[https://github.com/WayfireWM/wayfire/issues/1329][Wayfire crashes when closing foot terminal]]
+** emacs tool-bar not working(cannot toggle and icon theme missing)
+*** cannot toggle: disable custon =default-frame-alist=, or just use floating mode
+*** TODO icon theme missing: ?
 
 
 * Ref

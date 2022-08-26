@@ -4,8 +4,9 @@
 
 * VIM
 ** deletion
-| key   | usage                  |
-|-------+------------------------|
+| key | usage                 |
+|-----+-----------------------|
+| D   | delete to end of line |
 
 ** edit
 | key            | usage            |
@@ -59,13 +60,21 @@
 | M-;     | 区域切换注释        |
 | C-x C-; | 行切换注释          |
 | C-y     | paste to minibuffer |
+| M-&/!   | async/shell command |
 
 ** dired
 | key | usage  |
 | R   | rename |
 
-* Git (虽然不算editor, 但是先也放这吧)
+* Git
 #+BEGIN_SRC shell
   git log --stat | perl -ne 'END { print $c } $c += $1 if /(\d+) insertions/;'
   git log  --pretty=tformat: --numstat | awk '{ add += $1; subs += $2; loc += $1 - $2 } END { printf "added lines: %s, removed lines: %s, total lines: %s\n", add, subs, loc }'
 #+END_SRC
+
+* Fish
+| key          | usage                      |
+|--------------+----------------------------|
+| M-Left/Right | jump world, or prevd/nextd |
+| M-s          | sudo the last command      |
+| M-W          | what is this               |
