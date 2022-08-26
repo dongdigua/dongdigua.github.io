@@ -46,6 +46,7 @@ export LANG=zh_CN.UTF-8
 doas dnf remove gnome-classic-session
 ```
 
+## use Geary as a replacement of Thunderbird
 
 
 

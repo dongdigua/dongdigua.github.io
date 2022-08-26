@@ -89,6 +89,11 @@ a webos using oxygen visual design
 ** [[https://www.gilesorr.com/wm/][The Window Manager Report]]
 ** [[https://collet66.web.fc2.com/][syosa]]
 pixel art
+** [[https://www.zhihu.com/column/roartalk][知乎专栏: 嘶吼RoarTalk]]                                             :hack:
+回归最本质的信息安全
+** [[https://litchipi.github.io/series/container_in_rust][Writing a container in Rust]]
+** [[https://xeiaso.net/][Xe Iaso]]
+*** [[https://xeiaso.net/blog/v-vaporware-2019-06-23][V for Vaporware]]
 ** B
 *** [[https://blog.yangmame.org/][yanemame]]
 猴哥推荐的
@@ -145,6 +150,9 @@ and [[https://youtu.be/cfPDeso3XwI][register-based(13 episode)]]
 *** [[https://youtu.be/S4E4yAktjug?t=998][How To Become Invisible Online # level 3]]
 *** [[https://youtu.be/QxNsyrftJ8I][The Biggest Linux Security Mistakes]]
 "Security is a journey, not a destination!"
+*** [[https://youtu.be/pEfrdAtAmqk][Fireship: The Programming Iceberg]]
+[[https://www.bilibili.com/video/BV15T411F7js][I translated it]]
+*** [[https://youtu.be/yCgHoL9_ZiY][Is LTT Trolling The Linux Community?]]
 
 ** Math
 *** [[https://youtu.be/KufsL2VgELo][Group Theory]]
@@ -154,12 +162,19 @@ and [[https://youtu.be/cfPDeso3XwI][register-based(13 episode)]]
 *** [[https://youtu.be/VKydXD6Lr20][Mojang & Minecraft 开始衰落了吗?]]
 *** [[https://youtu.be/Y9DIIh0s9cg][SciCraft Update Plans]]
 *** [[https://youtu.be/m5S0gLgg2rs][Tantan: MC + Fez]]
+*** [[https://www.youtube.com/playlist?list=PLhixgUqwRTjwvBI-hmbZ2rpkAl4lutnJG][Minecraft HACKED (LiveOverflow)]]
 
 ** ?
 *** [[https://www.youtube.com/c/IceGuye][IceGuye aka 姑射冰尘]]
 [[https://odysee.com/@IceGuye][on odysee(lbry)]]
 *** [[https://www.youtube.com/playlist?list=PL5--8gKSku17duy2-GrOfQma5FwsKA9LC][DT: Odysee]]
 *** [[https://youtu.be/IS5ycm7VfXg][Homemade Silicon Chips!]]
+*** [[https://youtu.be/4IaOeVgZ-wc][Why I'm Suing YouTube.]]
+#+BEGIN_QUOTE
+a story about YouTube’s intentional efforts to undermine the United States of America in collusion with the Russian government.
+It’s also a story about copyright infringement
+— and YouTube’s willful blindness to bad actors who openly admit to filing patently fraudulent DMCA counter-notifications to avoid the termination of their accounts.
+#+END_QUOTE
 
 * r
 ** [[https://www.reddit.com/r/unixporn/][unixporn]]
