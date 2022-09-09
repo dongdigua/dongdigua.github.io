@@ -22,3 +22,6 @@
   掰锝胃, 这个链接的截图在B站不到半小时就被删除了...
   B口口口口(    ), 口口口口(    ).
 
+** why can't have ip on web
+https://github.com/SocialSisterYi/bilibili-API-collect/issues/434
+https://github.com/the1812/Bilibili-Evolved/discussions/3522

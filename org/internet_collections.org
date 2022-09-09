@@ -92,8 +92,16 @@ pixel art
 ** [[https://www.zhihu.com/column/roartalk][知乎专栏: 嘶吼RoarTalk]]                                             :hack:
 回归最本质的信息安全
 ** [[https://litchipi.github.io/series/container_in_rust][Writing a container in Rust]]
-** [[https://xeiaso.net/][Xe Iaso]]
+** [[https://xeiaso.net/][Xe Iaso]]                                                           :rssub:
 *** [[https://xeiaso.net/blog/v-vaporware-2019-06-23][V for Vaporware]]
+** [[https://lantian.pub/][蓝天]]
+大佬!
+*** [[https://lantian.pub/article/chat/how-i-nuked-my-btrfs-partition.lantian/][我把硬盘换到了新电脑上，这是 Btrfs 上的数据发生的变化]]
+[[https://lantian.pub/usr/uploads/202112/chubbyemu.jpg.thumb.png]]
+*** [[https://lantian.pub/article/forward/foolish-code-typo.lantian/][最傻的代码错误：一个空格酿成的血案]]
+*** [[https://lantian.pub/article/modify-website/static-build-tiny-docker-images.lantian/][静态编译制作微型 Docker 镜像]] [[https://lantian.pub/article/modify-website/4kb-infinite-sleep-docker-image.lantian/][制作只有 4KB 大小的永久挂起程序]]
+*** [[https://lantian.pub/article/modify-website/serve-gopher-with-nginx.lantian/][用 nginx 建立 Gopher 网站]]
+gopher://gopher.lantian.pub
 ** B
 *** [[https://blog.yangmame.org/][yanemame]]
 猴哥推荐的
@@ -175,6 +183,8 @@ a story about YouTube’s intentional efforts to undermine the United States of 
 It’s also a story about copyright infringement
 — and YouTube’s willful blindness to bad actors who openly admit to filing patently fraudulent DMCA counter-notifications to avoid the termination of their accounts.
 #+END_QUOTE
+*** [[https://youtu.be/RH3D1cpm6do][Yes, Everyone on the Internet Is a Loser.]]
+I agree
 
 * r
 ** [[https://www.reddit.com/r/unixporn/][unixporn]]
@@ -208,4 +218,10 @@ The Fediverse is a giant Network of social media platforms
 #+BEGIN_QUOTE
 BSD, Lunix, Debian and Mandrake are all versions of an illegal hacker operation system,
 invented by a Soviet computer hacker named Linyos Torovoltos.
+#+END_QUOTE
+** [[https://lists.gnu.org/archive/html/info-gnu/2022-09/msg00005.html][GNU C Language Intro and Reference Manual]]
+#+BEGIN_QUOTE
+To any NSA and FBI agents reading my email: please consider
+whether defending the US Constitution against all enemies,
+foreign or domestic, requires you to follow Snowden's example.
 #+END_QUOTE
