@@ -9,6 +9,7 @@
 #+TITLE: Internet Collections
 
 * 一些(个人)博客收集
+** [[http://www.paulgraham.com/todo.html][Paul Graham]]
 ** [[http://www.qiusir.com/][qiusir]]                                                            :rssub:
 ** [[http://www.yinwang.org/][王垠]]
 ** [[http://ruanyifeng.com/blog/][阮一峰]]                                                            :rssub:
@@ -129,7 +130,6 @@ legacy
 Rust Graphics
 *** [[https://www.youtube.com/playlist?list=PLSiFUSQSRYAOFwfP-aMzXJlWKVyIuWfPU][stack-based virtual machine(6 episode)]]
 and [[https://youtu.be/cfPDeso3XwI][register-based(13 episode)]]
-*** [[https://youtu.be/_uAMo-bXI5g][register virtual machine in rust, with memory visualization]]
 *** [[https://www.youtube.com/playlist?list=PLpM-Dvs8t0VY73ytTCQqgvgCWttV3m8LM][tsoding virtual machine in C]] , [[https://dongdigua.github.io/tsoding_bm][some notes]]
 *** [[https://youtu.be/Fq9chEBQMFE][what if I try to malloc too much memory]]
 *** [[https://youtu.be/qF7dkrce-mQ][fireship bitcoin]]
@@ -143,7 +143,6 @@ and [[https://youtu.be/cfPDeso3XwI][register-based(13 episode)]]
      but ocaml itself is not ideal, you have to take ocaml and throw O away, and that's perfect
 1:03 to be fair p___hub is more interesting than this, that's for sure, so let's use Makefile (instead of dune)
 1:50 sexplib?
-2:00 build own irc lib
 2:14 "how many american server you have already hacked" - "I don't count them I'm sorry"
 *** [[https://youtube.be/TLa2VqcGGEQ][CVE-2021-3156 sudo]]
 *** [[https://youtu.be/x_R1DeZxGc0][Discover Vulnerabilities in Intel CPUs!]]
@@ -158,8 +157,6 @@ and [[https://youtu.be/cfPDeso3XwI][register-based(13 episode)]]
 *** [[https://youtu.be/S4E4yAktjug?t=998][How To Become Invisible Online # level 3]]
 *** [[https://youtu.be/QxNsyrftJ8I][The Biggest Linux Security Mistakes]]
 "Security is a journey, not a destination!"
-*** [[https://youtu.be/pEfrdAtAmqk][Fireship: The Programming Iceberg]]
-[[https://www.bilibili.com/video/BV15T411F7js][I translated it]]
 *** [[https://youtu.be/yCgHoL9_ZiY][Is LTT Trolling The Linux Community?]]
 
 ** Math
@@ -195,6 +192,9 @@ I agree
 ** [[https://www.reddit.com/r/ProgrammerHumor][ProgrammerHumor]]
 *** [[https://www.reddit.com/r/ProgrammerHumor/comments/wpnvtg/microsoft_visual_rust_2018/][Microsoft Visual Rust]]
 *** [[https://www.reddit.com/r/ProgrammerHumor/comments/wsw78u/regex_be_like/][MC enchant: regex be like...]]
+
+* Hacker News
+** [[https://news.ycombinator.com/item?id=32012566][A better formulation of DRY(Don't Repeat Yourself) is SPOT (Single Point Of Truth)]]
 
 * Other
 #+BEGIN_COMMENT
