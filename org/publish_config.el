@@ -13,6 +13,7 @@
          :base-extension "org"
          :publishing-directory "./../org_html/"
          :recursive t
+         :exclude "画大饼.org"
          :publishing-function org-html-publish-to-html
          :html-head "<link rel='stylesheet' type='text/css' href='./../css/org-css.css' />"  ; instead of :style
          )))
