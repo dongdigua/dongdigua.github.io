@@ -15,7 +15,8 @@
          :recursive t
          :exclude "画大饼.org"
          :publishing-function org-html-publish-to-html
-         :html-head "<link rel='stylesheet' type='text/css' href='./../css/org-css.css' />"  ; instead of :style
+         ;; https://github.com/rgb-24bit/org-html-theme-list org-joshua
+         :html-head "<link rel='stylesheet' type='text/css' href='./../css/main.css' />"  ; instead of :style
          )))
 
 (defun myweb-publish ()

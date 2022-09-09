@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-09-01 四 10:40 -->
+<!-- 2022-09-09 五 16:08 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Something About Wayland(swaywm)</title>
@@ -193,53 +193,53 @@
     { background-color: #ffff00; color: #000000; font-weight: bold; }
   .org-svg { width: 90%; }
 </style>
-<link rel='stylesheet' type='text/css' href='./../css/org-css.css' />
+<link rel='stylesheet' type='text/css' href='./../css/main.css' />
 </head>
 <body>
 <div id="content" class="content">
 <h1 class="title">Something About Wayland(swaywm)</h1>
 
-<div id="outline-container-org5ce7ee1" class="outline-2">
-<h2 id="org5ce7ee1"><span class="section-number-2">1.</span> Solution</h2>
+<div id="outline-container-org9bded73" class="outline-2">
+<h2 id="org9bded73"><span class="section-number-2">1.</span> Solution</h2>
 <div class="outline-text-2" id="text-1">
 </div>
-<div id="outline-container-orgd20b7a8" class="outline-3">
-<h3 id="orgd20b7a8"><span class="section-number-3">1.1.</span> gnome-screenshot</h3>
+<div id="outline-container-org0223568" class="outline-3">
+<h3 id="org0223568"><span class="section-number-3">1.1.</span> gnome-screenshot</h3>
 <div class="outline-text-3" id="text-1-1">
 <p>
 grim<br />
 </p>
 </div>
 </div>
-<div id="outline-container-org7f494e3" class="outline-3">
-<h3 id="org7f494e3"><span class="section-number-3">1.2.</span> iBus</h3>
+<div id="outline-container-org28eb8d8" class="outline-3">
+<h3 id="org28eb8d8"><span class="section-number-3">1.2.</span> iBus</h3>
 <div class="outline-text-3" id="text-1-2">
 <p>
 emacs pyim<br />
 </p>
 </div>
 </div>
-<div id="outline-container-orgee9b82d" class="outline-3">
-<h3 id="orgee9b82d"><span class="section-number-3">1.3.</span> Emacs transparent, terminal blur</h3>
+<div id="outline-container-orgd912a61" class="outline-3">
+<h3 id="orgd912a61"><span class="section-number-3">1.3.</span> Emacs transparent, terminal blur</h3>
 <div class="outline-text-3" id="text-1-3">
 <p>
 probably wayfire?<br />
 </p>
 </div>
 </div>
-<div id="outline-container-org8727322" class="outline-3">
-<h3 id="org8727322"><span class="section-number-3">1.4.</span> Authorization required, but no authorization protocol specified</h3>
+<div id="outline-container-org6dca0a4" class="outline-3">
+<h3 id="org6dca0a4"><span class="section-number-3">1.4.</span> Authorization required, but no authorization protocol specified</h3>
 <div class="outline-text-3" id="text-1-4">
 </div>
-<div id="outline-container-orgca509d2" class="outline-4">
-<h4 id="orgca509d2"><span class="section-number-4">1.4.1.</span> <code>sudo -E</code></h4>
+<div id="outline-container-org2942a53" class="outline-4">
+<h4 id="org2942a53"><span class="section-number-4">1.4.1.</span> <code>sudo -E</code></h4>
 </div>
-<div id="outline-container-org638f6e9" class="outline-4">
-<h4 id="org638f6e9"><span class="section-number-4">1.4.2.</span> lxpolkit(directly execute) or polkit-gnome(prettier)</h4>
+<div id="outline-container-orgff897bf" class="outline-4">
+<h4 id="orgff897bf"><span class="section-number-4">1.4.2.</span> lxpolkit(directly execute) or polkit-gnome(prettier)</h4>
 </div>
 </div>
-<div id="outline-container-orgfe34a77" class="outline-3">
-<h3 id="orgfe34a77"><span class="section-number-3">1.5.</span> cannot start sway on lightdm</h3>
+<div id="outline-container-org7be908d" class="outline-3">
+<h3 id="org7be908d"><span class="section-number-3">1.5.</span> cannot start sway on lightdm</h3>
 <div class="outline-text-3" id="text-1-5">
 <p>
 in <code>/etc/lightdm/lightdm.conf</code> uncomment <code>sessions-directory</code> line<br />
@@ -251,16 +251,16 @@ materia-kde is also a good choice<br />
 </p>
 </div>
 </div>
-<div id="outline-container-org582ffa4" class="outline-3">
-<h3 id="org582ffa4"><span class="section-number-3">1.6.</span> obs</h3>
+<div id="outline-container-org2d87465" class="outline-3">
+<h3 id="org2d87465"><span class="section-number-3">1.6.</span> obs</h3>
 <div class="outline-text-3" id="text-1-6">
 <p>
 don't remove the <code>include</code> line!!!<br />
 </p>
 </div>
 </div>
-<div id="outline-container-orgdb78aea" class="outline-3">
-<h3 id="orgdb78aea"><span class="section-number-3">1.7.</span> cursor theme not working</h3>
+<div id="outline-container-orga739753" class="outline-3">
+<h3 id="orga739753"><span class="section-number-3">1.7.</span> cursor theme not working</h3>
 <div class="outline-text-3" id="text-1-7">
 <p>
 <a href="https://github.com/swaywm/sway/issues/6931">from this issue</a><br />
@@ -268,116 +268,116 @@ add <code>seat seat0 xcursor_theme Oxygen_White</code> in sway comfig file<br />
 </p>
 </div>
 </div>
-<div id="outline-container-org92dec60" class="outline-3">
-<h3 id="org92dec60"><span class="section-number-3">1.8.</span> touchpad gesture like gnome</h3>
+<div id="outline-container-org418eb9f" class="outline-3">
+<h3 id="org418eb9f"><span class="section-number-3">1.8.</span> touchpad gesture like gnome</h3>
 <div class="outline-text-3" id="text-1-8">
 </div>
-<div id="outline-container-org5a6fe7d" class="outline-4">
-<h4 id="org5a6fe7d"><span class="section-number-4">1.8.1.</span> <a href="https://github.com/swaywm/sway/issues/1514">issue #1514: touchpad gestures to switch workspaces</a></h4>
+<div id="outline-container-org4ef4b04" class="outline-4">
+<h4 id="org4ef4b04"><span class="section-number-4">1.8.1.</span> <a href="https://github.com/swaywm/sway/issues/1514">issue #1514: touchpad gestures to switch workspaces</a></h4>
 <div class="outline-text-4" id="text-1-8-1">
 </div>
 <ol class="org-ol">
-<li><a id="org284000f"></a><a href="https://github.com/bulletmark/libinput-gestures">the libinput-gestures library</a><br /></li>
-<li><a id="orge34bbfc"></a><a href="https://github.com/swaywm/sway/pull/4952">pull #4952</a><br />
+<li><a id="org7a25db8"></a><a href="https://github.com/bulletmark/libinput-gestures">the libinput-gestures library</a><br /></li>
+<li><a id="org5311866"></a><a href="https://github.com/swaywm/sway/pull/4952">pull #4952</a><br />
 <ol class="org-ol">
-<li><a id="org9abea96"></a><a href="https://github.com/swaywm/sway/pull/6778">pull #6778</a><br /></li>
+<li><a id="org3242c82"></a><a href="https://github.com/swaywm/sway/pull/6778">pull #6778</a><br /></li>
 </ol>
 </li>
 </ol>
 </div>
-<div id="outline-container-org5f91483" class="outline-4">
-<h4 id="org5f91483"><span class="section-number-4">1.8.2.</span> r/swaywm</h4>
+<div id="outline-container-org42d4bbb" class="outline-4">
+<h4 id="org42d4bbb"><span class="section-number-4">1.8.2.</span> r/swaywm</h4>
 <div class="outline-text-4" id="text-1-8-2">
 </div>
 <ol class="org-ol">
-<li><a id="orge7dbfd2"></a><a href="https://www.reddit.com/r/swaywm/comments/r85e9g/touchpad_gestures/">https://www.reddit.com/r/swaywm/comments/r85e9g/touchpad_gestures/</a><br /></li>
-<li><a id="org9e9073d"></a><a href="https://www.reddit.com/r/swaywm/comments/px5vmw/how_are_you_configuring_touchpad_gestures/">https://www.reddit.com/r/swaywm/comments/px5vmw/how_are_you_configuring_touchpad_gestures/</a><br /></li>
-<li><a id="org3da43b5"></a><a href="https://www.reddit.com/r/swaywm/comments/em0jnx/can_sway_handle_threefour_finger_touchpad_gestures/">https://www.reddit.com/r/swaywm/comments/em0jnx/can_sway_handle_threefour_finger_touchpad_gestures/</a><br /></li>
+<li><a id="org713fb29"></a><a href="https://www.reddit.com/r/swaywm/comments/r85e9g/touchpad_gestures/">https://www.reddit.com/r/swaywm/comments/r85e9g/touchpad_gestures/</a><br /></li>
+<li><a id="orgcd4f6dc"></a><a href="https://www.reddit.com/r/swaywm/comments/px5vmw/how_are_you_configuring_touchpad_gestures/">https://www.reddit.com/r/swaywm/comments/px5vmw/how_are_you_configuring_touchpad_gestures/</a><br /></li>
+<li><a id="org579bc4a"></a><a href="https://www.reddit.com/r/swaywm/comments/em0jnx/can_sway_handle_threefour_finger_touchpad_gestures/">https://www.reddit.com/r/swaywm/comments/em0jnx/can_sway_handle_threefour_finger_touchpad_gestures/</a><br /></li>
 </ol>
 </div>
 </div>
-<div id="outline-container-orgd989096" class="outline-3">
-<h3 id="orgd989096"><span class="section-number-3">1.9.</span> notify-send don't work</h3>
+<div id="outline-container-org9ee41e1" class="outline-3">
+<h3 id="org9ee41e1"><span class="section-number-3">1.9.</span> notify-send don't work</h3>
 <div class="outline-text-3" id="text-1-9">
 <p>
 mako, a notification daemon<br />
 </p>
 </div>
 </div>
-<div id="outline-container-org8bcc236" class="outline-3">
-<h3 id="org8bcc236"><span class="section-number-3">1.10.</span> <span class="todo TODO">TODO</span> <a href="https://github.com/WayfireWM/wayfire/issues/1329">Wayfire crashes when closing foot terminal</a></h3>
+<div id="outline-container-org6f09092" class="outline-3">
+<h3 id="org6f09092"><span class="section-number-3">1.10.</span> <span class="todo TODO">TODO</span> <a href="https://github.com/WayfireWM/wayfire/issues/1329">Wayfire crashes when closing foot terminal</a></h3>
 </div>
-<div id="outline-container-orgc6fc872" class="outline-3">
-<h3 id="orgc6fc872"><span class="section-number-3">1.11.</span> emacs tool-bar not working(cannot toggle and icon theme missing)</h3>
+<div id="outline-container-orgc201d87" class="outline-3">
+<h3 id="orgc201d87"><span class="section-number-3">1.11.</span> emacs tool-bar not working(cannot toggle and icon theme missing)</h3>
 <div class="outline-text-3" id="text-1-11">
 </div>
-<div id="outline-container-orgfb63d00" class="outline-4">
-<h4 id="orgfb63d00"><span class="section-number-4">1.11.1.</span> cannot toggle: disable custon <code>default-frame-alist</code>, or just use floating mode</h4>
+<div id="outline-container-orge3f860c" class="outline-4">
+<h4 id="orge3f860c"><span class="section-number-4">1.11.1.</span> cannot toggle: disable custon <code>default-frame-alist</code>, or just use floating mode</h4>
 </div>
-<div id="outline-container-org82cd84b" class="outline-4">
-<h4 id="org82cd84b"><span class="section-number-4">1.11.2.</span> <span class="todo TODO">TODO</span> icon theme missing: ?</h4>
+<div id="outline-container-orgbf8a29f" class="outline-4">
+<h4 id="orgbf8a29f"><span class="section-number-4">1.11.2.</span> <span class="todo TODO">TODO</span> icon theme missing: ?</h4>
 </div>
 </div>
 </div>
 
 
-<div id="outline-container-org653ff69" class="outline-2">
-<h2 id="org653ff69"><span class="section-number-2">2.</span> Ref</h2>
+<div id="outline-container-org1f0e7ba" class="outline-2">
+<h2 id="org1f0e7ba"><span class="section-number-2">2.</span> Ref</h2>
 <div class="outline-text-2" id="text-2">
 </div>
-<div id="outline-container-orgf58a601" class="outline-3">
-<h3 id="orgf58a601"><span class="section-number-3">2.1.</span> <a href="https://www.bilibili.com/video/BV1H94y1X762">The Ultimate Waybar Tutorial Video on BiliBili</a></h3>
+<div id="outline-container-orged1910d" class="outline-3">
+<h3 id="orged1910d"><span class="section-number-3">2.1.</span> <a href="https://www.bilibili.com/video/BV1H94y1X762">The Ultimate Waybar Tutorial Video on BiliBili</a></h3>
 </div>
-<div id="outline-container-org353d761" class="outline-3">
-<h3 id="org353d761"><span class="section-number-3">2.2.</span> <a href="https://coda.world/sway-explore-and-giveup">Sway: 从尝试到放弃</a></h3>
+<div id="outline-container-orgf5d4fbb" class="outline-3">
+<h3 id="orgf5d4fbb"><span class="section-number-3">2.2.</span> <a href="https://coda.world/sway-explore-and-giveup">Sway: 从尝试到放弃</a></h3>
 </div>
-<div id="outline-container-orgf7fae5d" class="outline-3">
-<h3 id="orgf7fae5d"><span class="section-number-3">2.3.</span> <a href="https://shinta.ro/posts/migration-from-xorg-to-wayland/">从 Xorg 迁移到 Wayland</a></h3>
+<div id="outline-container-orgde756a4" class="outline-3">
+<h3 id="orgde756a4"><span class="section-number-3">2.3.</span> <a href="https://shinta.ro/posts/migration-from-xorg-to-wayland/">从 Xorg 迁移到 Wayland</a></h3>
 </div>
-<div id="outline-container-org9869da3" class="outline-3">
-<h3 id="org9869da3"><span class="section-number-3">2.4.</span> <a href="https://www.reddit.com/r/swaywm/comments/djkj5m/ibus_on_swaywm/">reddit: ibus on swaywm</a></h3>
+<div id="outline-container-org555e2a1" class="outline-3">
+<h3 id="org555e2a1"><span class="section-number-3">2.4.</span> <a href="https://www.reddit.com/r/swaywm/comments/djkj5m/ibus_on_swaywm/">reddit: ibus on swaywm</a></h3>
 </div>
-<div id="outline-container-org0a51af7" class="outline-3">
-<h3 id="org0a51af7"><span class="section-number-3">2.5.</span> <a href="https://www.reddit.com/r/swaywm/comments/jdoo8m/how_do_i_find_out_the_names_of_certain_keys/">prtsc is Print</a></h3>
+<div id="outline-container-orgd729583" class="outline-3">
+<h3 id="orgd729583"><span class="section-number-3">2.5.</span> <a href="https://www.reddit.com/r/swaywm/comments/jdoo8m/how_do_i_find_out_the_names_of_certain_keys/">prtsc is Print</a></h3>
 <div class="outline-text-3" id="text-2-5">
 <p>
 <code>xev/wev</code> is helpful<br />
 </p>
 </div>
 </div>
-<div id="outline-container-org46468a9" class="outline-3">
-<h3 id="org46468a9"><span class="section-number-3">2.6.</span> <a href="https://github.com/ziap/dotfiles">https://github.com/ziap/dotfiles</a></h3>
+<div id="outline-container-org10e99eb" class="outline-3">
+<h3 id="org10e99eb"><span class="section-number-3">2.6.</span> <a href="https://github.com/ziap/dotfiles">https://github.com/ziap/dotfiles</a></h3>
 <div class="outline-text-3" id="text-2-6">
 <p>
 a great config<br />
 </p>
 </div>
 </div>
-<div id="outline-container-orgb4713fd" class="outline-3">
-<h3 id="orgb4713fd"><span class="section-number-3">2.7.</span> <a href="https://www.reddit.com/r/swaywm/comments/ehqsuw/autochanging_background_for_sway/">reddit: auto-changing sway background</a></h3>
+<div id="outline-container-org477ddc5" class="outline-3">
+<h3 id="org477ddc5"><span class="section-number-3">2.7.</span> <a href="https://www.reddit.com/r/swaywm/comments/ehqsuw/autochanging_background_for_sway/">reddit: auto-changing sway background</a></h3>
 </div>
-<div id="outline-container-org2283f61" class="outline-3">
-<h3 id="org2283f61"><span class="section-number-3">2.8.</span> <a href="https://github.com/Ruixi-rebirth/sway-dotfiles">Ruixi-rebirth's dotfiles</a></h3>
+<div id="outline-container-org59721e3" class="outline-3">
+<h3 id="org59721e3"><span class="section-number-3">2.8.</span> <a href="https://github.com/Ruixi-rebirth/sway-dotfiles">Ruixi-rebirth's dotfiles</a></h3>
 <div class="outline-text-3" id="text-2-8">
 <p>
 sway, very beautiful, from COSSIG<br />
 </p>
 </div>
 </div>
-<div id="outline-container-orga52f5cc" class="outline-3">
-<h3 id="orga52f5cc"><span class="section-number-3">2.9.</span> <a href="https://www.reddit.com/r/unixporn/comments/vc9912/river_riced_river_a_dynamic_tiling_wayland/">a Paid config</a></h3>
+<div id="outline-container-org03ef408" class="outline-3">
+<h3 id="org03ef408"><span class="section-number-3">2.9.</span> <a href="https://www.reddit.com/r/unixporn/comments/vc9912/river_riced_river_a_dynamic_tiling_wayland/">a Paid config</a></h3>
 <div class="outline-text-3" id="text-2-9">
 <p>
 this is excellent, but&#x2026;not for me<br />
 I'd like something simpler<br />
 </p>
 </div>
-<div id="outline-container-org3d4c8fe" class="outline-4">
-<h4 id="org3d4c8fe"><span class="section-number-4">2.9.1.</span> <a href="https://archcraft.io">archcraft</a></h4>
+<div id="outline-container-org5dc2b91" class="outline-4">
+<h4 id="org5dc2b91"><span class="section-number-4">2.9.1.</span> <a href="https://archcraft.io">archcraft</a></h4>
 </div>
 </div>
-<div id="outline-container-org24c7a04" class="outline-3">
-<h3 id="org24c7a04"><span class="section-number-3">2.10.</span> <a href="https://github.com/rxyhn/yoru">夜 - Yoru</a></h3>
+<div id="outline-container-orga5e4aa7" class="outline-3">
+<h3 id="orga5e4aa7"><span class="section-number-3">2.10.</span> <a href="https://github.com/rxyhn/yoru">夜 - Yoru</a></h3>
 <div class="outline-text-3" id="text-2-10">
 <p>
 awesome config!<br />
@@ -388,7 +388,7 @@ awesome config!<br />
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: dongdigua</p>
-<p class="date">Created: 2022-09-01 四 10:40</p>
+<p class="date">Created: 2022-09-09 五 16:08</p>
 </div>
 </body>
 </html>
