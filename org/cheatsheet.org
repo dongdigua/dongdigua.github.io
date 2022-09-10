@@ -1,4 +1,3 @@
-#+STARTUP: indent
 #+TITLE: Editor Cheatsheet
 
 
@@ -46,12 +45,11 @@
 
 * EMACS
 ** org-mode
-| key          | usage                      |
-|--------------+----------------------------|
-| C-c \vbar    | 创建表格                   |
-| C-c C-e      | 导出 HTML                  |
-| M-left/right | 升级(promote)/降级(demote) |
-| C-c C-x C-v  | toggle render images       |
+| key         | usage                |
+|-------------+----------------------|
+| C-c \vbar   | 创建表格             |
+| C-c C-e     | 导出 HTML            |
+| C-c C-x C-v | toggle render images |
 
 ** normal
 | key     | usage               |

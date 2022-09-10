@@ -1,6 +1,5 @@
 #+TITLE: 这一天终于来了, B站显示 IP 属地
 #+STARTUP: indent
-#+OPTIONS: \n:t
 
 卸载吧...
 * 我的看法

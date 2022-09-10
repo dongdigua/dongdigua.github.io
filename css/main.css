@@ -120,16 +120,16 @@
 
     a {
         text-decoration: none; 
-        color: #3399cc;
+        color: #39c5bb;
     }
     /* a:visited {text-decoration: none; color: #224444} */ /* Taken out because color too similar to text. */
     a:visited {
         text-decoration: none; 
-        color: #3399cc;
+        color: #39c5bb;
     }  /* this is now the color of the Unicorns horn */
     a:hover {
         text-decoration: underline; 
-        color: #3399cc;
+        color: #39c5bb;
     }
 
     ul, ol {

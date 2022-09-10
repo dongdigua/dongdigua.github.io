@@ -1,5 +1,4 @@
 #+TITLE: Recommend EverForest Theme
-#+OPTIONS: \n:t
 #+OPTIONS: toc:nil
 
 强烈推荐 everforest 这个主题

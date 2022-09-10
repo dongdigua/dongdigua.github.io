@@ -15,13 +15,26 @@
          :recursive t
          :exclude "画大饼.org"
          :publishing-function org-html-publish-to-html
+         :preserve-breaks t
          ;; https://github.com/rgb-24bit/org-html-theme-list org-joshua
-         :html-head "<link rel='stylesheet' type='text/css' href='./../css/main.css' />"  ; instead of :style
+         :html-head "<link rel='stylesheet' type='text/css' href='./../css/main.css' />"
+         :html-link-home "https://dongdigua.github.io"
+         :html-link-up "https://dongdigua.github.io"
          )))
 
 (defun myweb-publish ()
      "Publish myweb."
      (interactive)
      (setq debug-on-error t)
-     (org-publish-all))
+     (org-publish-all)
+
+     (webfeeder-build
+      "rss.xml"
+      "./../org_html"
+      "https://dongdigua.github.io"
+      (delete "rss.html" (directory-files "./../org_html" nil ".*\.html$"))
+      :title "dongdigua's blog"
+      :description "Blog!"
+      :builder 'webfeeder-make-rss)
+     )
 

@@ -1,5 +1,5 @@
 #+TITLE: Something About Wayland(swaywm)
-#+OPTIONS: toc:nil \n:t
+#+OPTIONS: toc:nil
 
 * Solution
 ** gnome-screenshot
