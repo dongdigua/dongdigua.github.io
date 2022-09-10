@@ -1,5 +1,5 @@
 #+TITLE: Something About MGLNDD Scans
-#+OPTIONS: toc:nil \n:t
+#+OPTIONS: toc:nil
 
 * [[https://stretchoid.com/][stretchoid opt-out]]
 this domain's workers are comstantly scanning the WHOLE internet

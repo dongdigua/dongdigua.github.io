@@ -1,8 +1,6 @@
-#+STARTUP: indent
 #+TAGS: elixir(e) rust(r) c(c) lisp(l)
 #+TAGS: lowlevel(w) frontend(f) backend(b) emacs(m) hack(h) algorithm(a) linux(x)
 #+TAGS: rssable(s) rssub(u)
-#+OPTIONS: \n:t
 #+OPTIONS: toc:nil
 #+OPTIONS: ^:{}
 
