@@ -1,7 +1,7 @@
 #+TAGS: elixir(e) rust(r) c(c) lisp(l)
 #+TAGS: lowlevel(w) frontend(f) backend(b) emacs(m) hack(h) algorithm(a) linux(x)
 #+TAGS: rssable(s) rssub(u)
-#+OPTIONS: toc:nil
+#+OPTIONS: toc:1
 #+OPTIONS: ^:{}
 
 #+TITLE: Internet Collections
@@ -200,8 +200,6 @@ https://www.pixiv.net/users/57759368
 https://www.pixiv.net/users/2973809
 https://prnt.sc/
 #+END_COMMENT
-** [[https://moonboos.fandom.com/zh/wiki/%E6%98%8E%E6%9C%88%E5%BA%84%E4%B8%BB_Wiki][日月脏主 Wiki]]
-MC 技术区毒瘤!
 ** [[https://en.wikipedia.org/wiki/Python_(missile)][Python-5]]
 from [[https://youtu.be/8QP2fDBIxjM][tsoding's first porth video]], (he is using debian, 37:00 copilot xd)
 ** [[http://cat-v.org/][cat -v]]

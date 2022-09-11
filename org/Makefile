@@ -7,8 +7,10 @@ all: html
 html:
 	@echo "Generating HTML..."
 	@$(EMACS) $(EMACS_OPTS)
-	@echo "HTML generation done"
+	@echo "DONE"
 
 clean:
 	rm ./../org_html/*.html
 	rm ~/.org-timestamps/org-pages.cache
+	rm ./../*.html*
+	rm ./../*.xml*

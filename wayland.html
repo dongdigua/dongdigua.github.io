@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2022-09-11 日 11:14 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Something About Wayland(swaywm)</title>
+<meta name="author" content="dongdigua" />
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+</style>
+<link rel='stylesheet' type='text/css' href='./../css/main.css' />
+</head>
+<body>
+<div id="org-div-home-and-up">
+ <a accesskey="h" href="./../"> UP </a>
+ |
+ <a accesskey="H" href="https://dongdigua.github.io"> HOME </a>
+</div><div id="content" class="content">
+<h1 class="title">Something About Wayland(swaywm)</h1>
+
+<div id="outline-container-org323ce33" class="outline-2">
+<h2 id="org323ce33"><span class="section-number-2">1.</span> Solution</h2>
+<div class="outline-text-2" id="text-1">
+</div>
+<div id="outline-container-org8a5ee12" class="outline-3">
+<h3 id="org8a5ee12"><span class="section-number-3">1.1.</span> gnome-screenshot</h3>
+<div class="outline-text-3" id="text-1-1">
+<p>
+grim<br />
+</p>
+</div>
+</div>
+<div id="outline-container-org674852b" class="outline-3">
+<h3 id="org674852b"><span class="section-number-3">1.2.</span> iBus</h3>
+<div class="outline-text-3" id="text-1-2">
+<p>
+emacs pyim<br />
+</p>
+</div>
+</div>
+<div id="outline-container-orgbdb16ff" class="outline-3">
+<h3 id="orgbdb16ff"><span class="section-number-3">1.3.</span> Emacs transparent, terminal blur</h3>
+<div class="outline-text-3" id="text-1-3">
+<p>
+probably wayfire?<br />
+</p>
+</div>
+</div>
+<div id="outline-container-org38df85c" class="outline-3">
+<h3 id="org38df85c"><span class="section-number-3">1.4.</span> Authorization required, but no authorization protocol specified</h3>
+<div class="outline-text-3" id="text-1-4">
+</div>
+<div id="outline-container-orgd1990bf" class="outline-4">
+<h4 id="orgd1990bf"><span class="section-number-4">1.4.1.</span> <code>sudo -E</code></h4>
+</div>
+<div id="outline-container-orge569f9c" class="outline-4">
+<h4 id="orge569f9c"><span class="section-number-4">1.4.2.</span> lxpolkit(directly execute) or polkit-gnome(prettier)</h4>
+</div>
+</div>
+<div id="outline-container-org28d549b" class="outline-3">
+<h3 id="org28d549b"><span class="section-number-3">1.5.</span> cannot start sway on lightdm</h3>
+<div class="outline-text-3" id="text-1-5">
+<p>
+in <code>/etc/lightdm/lightdm.conf</code> uncomment <code>sessions-directory</code> line<br />
+but still not stable, and it can't remenber which DE you used last time<br />
+<del>so use gdm is a better choice?</del><br />
+SDDM is fantastic! <a href="https://youtu.be/2p7FINJSlAk">It is themeable</a>,<br />
+I'm using <b><code>elarun</code></b>, a oxygen-like smooth crystal theme<br />
+materia-kde is also a good choice<br />
+</p>
+</div>
+</div>
+<div id="outline-container-orgb86c8b0" class="outline-3">
+<h3 id="orgb86c8b0"><span class="section-number-3">1.6.</span> obs</h3>
+<div class="outline-text-3" id="text-1-6">
+<p>
+don't remove the <code>include</code> line!!!<br />
+</p>
+</div>
+</div>
+<div id="outline-container-org10c04d8" class="outline-3">
+<h3 id="org10c04d8"><span class="section-number-3">1.7.</span> cursor theme not working</h3>
+<div class="outline-text-3" id="text-1-7">
+<p>
+<a href="https://github.com/swaywm/sway/issues/6931">from this issue</a><br />
+add <code>seat seat0 xcursor_theme Oxygen_White</code> in sway comfig file<br />
+</p>
+</div>
+</div>
+<div id="outline-container-org485d549" class="outline-3">
+<h3 id="org485d549"><span class="section-number-3">1.8.</span> touchpad gesture like gnome</h3>
+<div class="outline-text-3" id="text-1-8">
+</div>
+<div id="outline-container-org4f14fb1" class="outline-4">
+<h4 id="org4f14fb1"><span class="section-number-4">1.8.1.</span> <a href="https://github.com/swaywm/sway/issues/1514">issue #1514: touchpad gestures to switch workspaces</a></h4>
+<div class="outline-text-4" id="text-1-8-1">
+</div>
+<ol class="org-ol">
+<li><a id="org7814e64"></a><a href="https://github.com/bulletmark/libinput-gestures">the libinput-gestures library</a><br /></li>
+<li><a id="orgfea551e"></a><a href="https://github.com/swaywm/sway/pull/4952">pull #4952</a><br />
+<ol class="org-ol">
+<li><a id="org5160e8b"></a><a href="https://github.com/swaywm/sway/pull/6778">pull #6778</a><br /></li>
+</ol>
+</li>
+</ol>
+</div>
+<div id="outline-container-org67cd77d" class="outline-4">
+<h4 id="org67cd77d"><span class="section-number-4">1.8.2.</span> r/swaywm</h4>
+<div class="outline-text-4" id="text-1-8-2">
+</div>
+<ol class="org-ol">
+<li><a id="org471edd6"></a><a href="https://www.reddit.com/r/swaywm/comments/r85e9g/touchpad_gestures/">https://www.reddit.com/r/swaywm/comments/r85e9g/touchpad_gestures/</a><br /></li>
+<li><a id="orgc46d330"></a><a href="https://www.reddit.com/r/swaywm/comments/px5vmw/how_are_you_configuring_touchpad_gestures/">https://www.reddit.com/r/swaywm/comments/px5vmw/how_are_you_configuring_touchpad_gestures/</a><br /></li>
+<li><a id="orgee1674e"></a><a href="https://www.reddit.com/r/swaywm/comments/em0jnx/can_sway_handle_threefour_finger_touchpad_gestures/">https://www.reddit.com/r/swaywm/comments/em0jnx/can_sway_handle_threefour_finger_touchpad_gestures/</a><br /></li>
+</ol>
+</div>
+</div>
+<div id="outline-container-orgb1433c1" class="outline-3">
+<h3 id="orgb1433c1"><span class="section-number-3">1.9.</span> notify-send don't work</h3>
+<div class="outline-text-3" id="text-1-9">
+<p>
+mako, a notification daemon<br />
+</p>
+</div>
+</div>
+<div id="outline-container-org3faf26a" class="outline-3">
+<h3 id="org3faf26a"><span class="section-number-3">1.10.</span> <span class="todo TODO">TODO</span> <a href="https://github.com/WayfireWM/wayfire/issues/1329">Wayfire crashes when closing foot terminal</a></h3>
+</div>
+<div id="outline-container-orga076ed8" class="outline-3">
+<h3 id="orga076ed8"><span class="section-number-3">1.11.</span> emacs tool-bar not working(cannot toggle and icon theme missing)</h3>
+<div class="outline-text-3" id="text-1-11">
+</div>
+<div id="outline-container-org46a4acf" class="outline-4">
+<h4 id="org46a4acf"><span class="section-number-4">1.11.1.</span> cannot toggle: disable custon <code>default-frame-alist</code>, or just use floating mode</h4>
+</div>
+<div id="outline-container-org4590ef9" class="outline-4">
+<h4 id="org4590ef9"><span class="section-number-4">1.11.2.</span> <span class="todo TODO">TODO</span> icon theme missing: ?</h4>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-org2a54488" class="outline-2">
+<h2 id="org2a54488"><span class="section-number-2">2.</span> Ref</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-org33326e2" class="outline-3">
+<h3 id="org33326e2"><span class="section-number-3">2.1.</span> <a href="https://www.bilibili.com/video/BV1H94y1X762">The Ultimate Waybar Tutorial Video on BiliBili</a></h3>
+</div>
+<div id="outline-container-org171e96b" class="outline-3">
+<h3 id="org171e96b"><span class="section-number-3">2.2.</span> <a href="https://coda.world/sway-explore-and-giveup">Sway: 从尝试到放弃</a></h3>
+</div>
+<div id="outline-container-org9f364a7" class="outline-3">
+<h3 id="org9f364a7"><span class="section-number-3">2.3.</span> <a href="https://shinta.ro/posts/migration-from-xorg-to-wayland/">从 Xorg 迁移到 Wayland</a></h3>
+</div>
+<div id="outline-container-orgc756e27" class="outline-3">
+<h3 id="orgc756e27"><span class="section-number-3">2.4.</span> <a href="https://www.reddit.com/r/swaywm/comments/djkj5m/ibus_on_swaywm/">reddit: ibus on swaywm</a></h3>
+</div>
+<div id="outline-container-orge5a7e33" class="outline-3">
+<h3 id="orge5a7e33"><span class="section-number-3">2.5.</span> <a href="https://www.reddit.com/r/swaywm/comments/jdoo8m/how_do_i_find_out_the_names_of_certain_keys/">prtsc is Print</a></h3>
+<div class="outline-text-3" id="text-2-5">
+<p>
+<code>xev/wev</code> is helpful<br />
+</p>
+</div>
+</div>
+<div id="outline-container-org946b213" class="outline-3">
+<h3 id="org946b213"><span class="section-number-3">2.6.</span> <a href="https://github.com/ziap/dotfiles">https://github.com/ziap/dotfiles</a></h3>
+<div class="outline-text-3" id="text-2-6">
+<p>
+a great config<br />
+</p>
+</div>
+</div>
+<div id="outline-container-org7c5a625" class="outline-3">
+<h3 id="org7c5a625"><span class="section-number-3">2.7.</span> <a href="https://www.reddit.com/r/swaywm/comments/ehqsuw/autochanging_background_for_sway/">reddit: auto-changing sway background</a></h3>
+</div>
+<div id="outline-container-org3ddba81" class="outline-3">
+<h3 id="org3ddba81"><span class="section-number-3">2.8.</span> <a href="https://github.com/Ruixi-rebirth/sway-dotfiles">Ruixi-rebirth's dotfiles</a></h3>
+<div class="outline-text-3" id="text-2-8">
+<p>
+sway, very beautiful, from COSSIG<br />
+</p>
+</div>
+</div>
+<div id="outline-container-orgae71e87" class="outline-3">
+<h3 id="orgae71e87"><span class="section-number-3">2.9.</span> <a href="https://www.reddit.com/r/unixporn/comments/vc9912/river_riced_river_a_dynamic_tiling_wayland/">a Paid config</a></h3>
+<div class="outline-text-3" id="text-2-9">
+<p>
+this is excellent, but&#x2026;not for me<br />
+I'd like something simpler<br />
+</p>
+</div>
+<div id="outline-container-org5d0fb86" class="outline-4">
+<h4 id="org5d0fb86"><span class="section-number-4">2.9.1.</span> <a href="https://archcraft.io">archcraft</a></h4>
+</div>
+</div>
+<div id="outline-container-orgd9380d8" class="outline-3">
+<h3 id="orgd9380d8"><span class="section-number-3">2.10.</span> <a href="https://github.com/rxyhn/yoru">夜 - Yoru</a></h3>
+<div class="outline-text-3" id="text-2-10">
+<p>
+awesome config!<br />
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: dongdigua</p>
+<p class="date">Created: 2022-09-11 日 11:14</p>
+</div>
+</body>
+</html>

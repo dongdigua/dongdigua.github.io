@@ -11,7 +11,7 @@
       '(("org-pages"
          :base-directory "."
          :base-extension "org"
-         :publishing-directory "./../org_html/"
+         :publishing-directory "./../"
          :recursive t
          :exclude "画大饼.org"
          :publishing-function org-html-publish-to-html
@@ -19,7 +19,7 @@
          ;; https://github.com/rgb-24bit/org-html-theme-list org-joshua
          :html-head "<link rel='stylesheet' type='text/css' href='./../css/main.css' />"
          :html-link-home "https://dongdigua.github.io"
-         :html-link-up "https://dongdigua.github.io"
+         :html-link-up "./../"
          )))
 
 (defun myweb-publish ()
@@ -30,9 +30,9 @@
 
      (webfeeder-build
       "rss.xml"
-      "./../org_html"
+      "./../"
       "https://dongdigua.github.io"
-      (delete "rss.html" (directory-files "./../org_html" nil ".*\.html$"))
+      (delete "rss.html" (directory-files "./../" nil ".*\.html$"))
       :title "dongdigua's blog"
       :description "Blog!"
       :builder 'webfeeder-make-rss)
