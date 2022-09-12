@@ -66,6 +66,8 @@ VM
 ** [[https://siciarz.net][24 days of rust]]                                                    :rust:
 old
 ** [[https://liujiacai.net/][keep coding]]                                     :rust:c:lowlevel:backend:
+写代码的西瓜
+*** [[https://emacstalk.github.io/][EmacsTalk]]
 ** [[https://winsphinx.github.io/][Cogito, ergo sum]]                                                :rssable:
 文学
 ** [[http://tomasp.net/][Tomas Petricek]]                                                    :rssub:
@@ -96,7 +98,7 @@ pixel art
 ** [[https://lantian.pub/][蓝天]]
 大佬!
 *** [[https://lantian.pub/article/chat/how-i-nuked-my-btrfs-partition.lantian/][我把硬盘换到了新电脑上，这是 Btrfs 上的数据发生的变化]]
-[[https://lantian.pub/usr/uploads/202112/chubbyemu.jpg.thumb.png]]
+[[https://lantian.pub/usr/uploads/202112/chubbyemu.jpg.thumb.png][presenting to the emergency room]]
 *** [[https://lantian.pub/article/forward/foolish-code-typo.lantian/][最傻的代码错误：一个空格酿成的血案]]
 *** [[https://lantian.pub/article/modify-website/static-build-tiny-docker-images.lantian/][静态编译制作微型 Docker 镜像]] [[https://lantian.pub/article/modify-website/4kb-infinite-sleep-docker-image.lantian/][制作只有 4KB 大小的永久挂起程序]]
 *** [[https://lantian.pub/article/modify-website/serve-gopher-with-nginx.lantian/][用 nginx 建立 Gopher 网站]]
@@ -217,4 +219,10 @@ invented by a Soviet computer hacker named Linyos Torovoltos.
 To any NSA and FBI agents reading my email: please consider
 whether defending the US Constitution against all enemies,
 foreign or domestic, requires you to follow Snowden's example.
+#+END_QUOTE
+** [[https://www.zhihu.com/question/20566787][如何解读EVA]]
+#+BEGIN_QUOTE
+人需不需要存在的意义
+人需不需要互相之间完全理解
+自我封闭是否是应对外界压力的合理方式
 #+END_QUOTE

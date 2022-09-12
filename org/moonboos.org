@@ -1,4 +1,4 @@
-#+TITLE 庄主其人
+#+TITLE: 庄主其人
 
 #+BEGIN_QUOTE
 互联网是有记忆的

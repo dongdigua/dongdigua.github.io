@@ -50,6 +50,7 @@
 | C-c \vbar   | 创建表格             |
 | C-c C-e     | 导出 HTML            |
 | C-c C-x C-v | toggle render images |
+| C-c C-l     | 编辑链接             |
 
 ** normal
 | key     | usage               |
