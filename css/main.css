@@ -137,16 +137,16 @@
     }
 
     ul {
-	list-style-type: square;
-	list-style-image: inherit;
-	list-style-position: outside;
+    list-style-type: square;
+    list-style-image: inherit;
+    list-style-position: outside;
     }
     ol {
-	list-style-type: decimal;
-	list-style-position: outside;
+    list-style-type: decimal;
+    list-style-position: outside;
     }
     ol ol {
-	list-style-type: lower-alpha;
+    list-style-type: lower-alpha;
     }
 
     .todo {
@@ -189,8 +189,8 @@
     }
 
     table.full td {
-	border: 1px solid black;
-	padding: 5px;
+    border: 1px solid black;
+    padding: 5px;
     }
 
     code {
@@ -969,14 +969,13 @@
         padding: .3em;
         margin-bottom: 1em;
         border: 1px solid gray;
-        background-color: #667c99;
+        background-color: #f4f4f4;
     }
 
     #show_source {
-        float: right; 
+        float: right;
         margin: .7em;
     }
-    
 
 } /* END OF @media all */
 

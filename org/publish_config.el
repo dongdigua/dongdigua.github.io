@@ -1,7 +1,8 @@
 ;; this file and Makefile from:
 ;; https://www.cnblogs.com/banjia/archive/2012/09/29/2708966.html
-;; CSDN, 阿里云, 这些垃圾都在未授权盗搬, 结果这个东西有些地方都过时了
-;; 能不能有点创新...
+;; CSDN, 阿里云, 这些垃圾都在未授权盗搬, 结果这个东西有些地方都过时了. 能不能有点创新...
+
+;; System Crafter's video: https://youtu.be/AfkrzFodoNw
 
 (require 'org)
 (require 'ox)
@@ -16,6 +17,9 @@
          :exclude "画大饼.org"
          :publishing-function org-html-publish-to-html
          :preserve-breaks t
+
+         :org-html-validation-link nil
+         :org-html-head-include-default-style nil
          ;; https://github.com/rgb-24bit/org-html-theme-list org-joshua
          :html-head "<link rel='stylesheet' type='text/css' href='./../css/main.css' />"
          :html-link-home "https://dongdigua.github.io"

@@ -1,4 +1,4 @@
-#+TAGS: elixir(e) rust(r) c(c) lisp(l)
+#+TAGS: elixir(e) rust(r) c(c) lisp(l) python(p)
 #+TAGS: lowlevel(w) frontend(f) backend(b) emacs(m) hack(h) algorithm(a) linux(x)
 #+TAGS: rssable(s) rssub(u)
 #+OPTIONS: toc:1
@@ -103,6 +103,14 @@ pixel art
 *** [[https://lantian.pub/article/modify-website/static-build-tiny-docker-images.lantian/][静态编译制作微型 Docker 镜像]] [[https://lantian.pub/article/modify-website/4kb-infinite-sleep-docker-image.lantian/][制作只有 4KB 大小的永久挂起程序]]
 *** [[https://lantian.pub/article/modify-website/serve-gopher-with-nginx.lantian/][用 nginx 建立 Gopher 网站]]
 gopher://gopher.lantian.pub
+** [[https://tsdh.org/index.html][tsdh]]                                                              :emacs:
+** [[https://bryanbrattlof.com/][Bryan Brattlof]]
+*** [[https://git.sr.ht/~bryanb/bootloaders-101/tree][ossu2022 bootloaders 101]]
+** [[https://ulyc.github.io/][UlyC]]                                                             :python:
+*** [[https://ulyc.github.io/2022/08/10/sourcehut-the-hackers-forge/][sourcehut,  一个反叛而又正统的代码托管平台]]
+*** [[https://ulyc.github.io/2021/01/13/2021年-用更现代的方法使用PGP-上/][2021年, 用更现代的方法使用PGP]]
+**** [[https://spwo.notion.site/GitHub-6b1e1d57f52c4664bff61cadb3f9cb8d][震惊! 竟然有人在 GitHub 上冒充我的身份!]]
+*** [[https://ulyc.github.io/2019/08/01/初窥CORB/][Cross-Origin Read Blocking]]
 ** B
 *** [[https://blog.yangmame.org/][yanemame]]
 猴哥推荐的
@@ -135,8 +143,6 @@ and [[https://youtu.be/cfPDeso3XwI][register-based(13 episode)]]
 *** [[https://youtu.be/qF7dkrce-mQ][fireship bitcoin]]
 大概是我见过最好的讲区块链的视频了, 除了...JS 啊啊啊
 *** [[https://youtu.be/zJ-8DZhzBEE][what your favourite pl says about you]]
-*** [[https://youtu.be/R00JE6QRbno][tsoding aoc 2020 day 12 in perl]]
-0:20:50 pythonbulubulu~
 *** [[https://youtu.be/ziXgdkTfmPU][tsoding irc client in ocaml]]
 0:50 List.fold_left faster than fold_right, but haskell is opposite
 1:00 I like ocaml, that's how python should look like,
@@ -158,6 +164,7 @@ and [[https://youtu.be/cfPDeso3XwI][register-based(13 episode)]]
 *** [[https://youtu.be/QxNsyrftJ8I][The Biggest Linux Security Mistakes]]
 "Security is a journey, not a destination!"
 *** [[https://youtu.be/yCgHoL9_ZiY][Is LTT Trolling The Linux Community?]]
+*** [[https://youtu.be/UNkHditYGls][I coded a fractal on an Apple II+]]
 
 ** Math
 *** [[https://youtu.be/KufsL2VgELo][Group Theory]]
