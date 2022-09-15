@@ -19,9 +19,8 @@
          :preserve-breaks t
 
          :org-html-validation-link nil
-         :org-html-head-include-default-style nil
          ;; https://github.com/rgb-24bit/org-html-theme-list org-joshua
-         :html-head "<link rel='stylesheet' type='text/css' href='./../css/main.css' />"
+         :html-head "<link rel='stylesheet' type='text/css' href='css/main.css' />"
          :html-link-home "https://dongdigua.github.io"
          :html-link-up "./../"
          )))
