@@ -13,9 +13,10 @@
 
 ---
 
-![](images/rss.png)[rss](feed.xml)<br>
-*[pay me some monero](xmr.txt)*<br>
 PGP key<br>
-```
-ed25519 D631C5383F2ABB890C17C5A011A315F1069DE2B4
-```
+[56CE E157 C9F5 334F CA52  CEC3 D184 E828 8062 90B6](pgpkey)
+
+---
+
+![](images/rss.png)[rss](rss.xml)<br>
+*[pay me some monero](xmr.txt)*<br>
