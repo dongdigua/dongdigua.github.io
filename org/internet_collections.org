@@ -5,6 +5,7 @@
 #+OPTIONS: ^:{}
 
 #+TITLE: Internet Collections
+#+DATE: <2022-06-05 日>
 
 * 一些(个人)博客收集
 ** [[http://www.paulgraham.com/todo.html][Paul Graham]]

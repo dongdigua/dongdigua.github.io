@@ -1,4 +1,5 @@
 #+TITLE: Editor Cheatsheet
+#+DATE: <2022-06-13 一>
 
 
 * VIM
@@ -63,7 +64,21 @@
 
 ** dired
 | key | usage  |
+|-----+--------|
 | R   | rename |
+
+** eww/elpher (essensial)
+| key   | usage                            |
+|-------+----------------------------------|
+| TAB   | shr-next-link/elpher-next-link   |
+| d     | eww-download/elpher-download     |
+| g     | eww-reload/elpher-go             |
+| l     | eww-back-url                     |
+| \circ | elpher-back-url                  |
+| &     | eww-browse-with-external-browser |
+| v     | eww-view-page-source             |
+| w     | eww-copy-page-url                |
+| .     | elpher-view-raw                  |
 
 * Git
 #+BEGIN_SRC shell
@@ -76,4 +91,4 @@
 |--------------+----------------------------|
 | M-Left/Right | jump world, or prevd/nextd |
 | M-s          | sudo the last command      |
-| M-W          | what is this               |
+| M-w          | what is this               |

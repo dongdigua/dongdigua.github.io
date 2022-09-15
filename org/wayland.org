@@ -1,4 +1,5 @@
 #+TITLE: Something About Wayland(swaywm)
+#+DATE: <2022-08-07 日>
 #+OPTIONS: toc:nil
 
 * Solution
@@ -38,6 +39,8 @@ mako, a notification daemon
 ** emacs tool-bar not working(cannot toggle and icon theme missing)
 *** cannot toggle: disable custon =default-frame-alist=, or just use floating mode
 *** TODO icon theme missing: ?
+** TODO [[https://www.reddit.com/r/swaywm/comments/scz5k6/option_create_on_workspace_prev_on_outputnext_on/][Option --create on workspace prev_on_output|next_on_output?]]
+I LIKE THIS FEATURE!!! WHY REMOVE IT???
 
 
 * Ref
