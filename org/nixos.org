@@ -1,0 +1,16 @@
+#+TITLE: Build a Minimal NixOS LiveCD with swaywm
+#+DATE: <2022-09-17 六>
+
+* problem & solution
+** unable to drop root
+donot run under root
+** in normal user, libseat permission deniened
+add user in =video= group
+login as user, not root
+** egl error
+enable 3D acceleration in VirtualBox
+** config files from outside
+[[../images/irc-nixiso.png]] 
+
+* reference
+** [[https://sr.ht/~guido/nixos-init-freedom/][nixos without systemd?]]

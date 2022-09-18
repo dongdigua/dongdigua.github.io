@@ -3,4 +3,5 @@
 
 * [[https://dongdigua.github.io/plan_for_my_video_site][对我将来的视频网站的一些畅想]]
 * Rust wasm 制作 schemetic/litemetica 渲染器
+** [[https://github.com/misode/vscode-nbt][a vscode extension]]
 * 用 sway 实现[[https://www.bilibili.com/video/BV1TE41147gK][用窗口玩游戏(×)用游戏玩窗口(√)]]的效果
