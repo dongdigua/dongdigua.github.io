@@ -110,8 +110,17 @@ gopher://gopher.lantian.pub
 ** [[https://ulyc.github.io/][UlyC]]                                                             :python:
 *** [[https://ulyc.github.io/2022/08/10/sourcehut-the-hackers-forge/][sourcehut,  一个反叛而又正统的代码托管平台]]
 *** [[https://ulyc.github.io/2021/01/13/2021年-用更现代的方法使用PGP-上/][2021年, 用更现代的方法使用PGP]]
+#+BEGIN_QUOTE
+同样是非对称算法,为什么PGP的私钥就长这么多呢？
+因为他们用的算法不同，比特币默认使用的是ECDSA的 secp256k1算法， 该算法只是用来签名和认证，并不用来加密
+(signify 也只用于签名和认证，所以密钥也比较短)
+#+END_QUOTE
 **** [[https://spwo.notion.site/GitHub-6b1e1d57f52c4664bff61cadb3f9cb8d][震惊! 竟然有人在 GitHub 上冒充我的身份!]]
 *** [[https://ulyc.github.io/2019/08/01/初窥CORB/][Cross-Origin Read Blocking]]
+** [[https://kernal.eu][kernal]]
+Welcome to the darkest dungeon of kernal
+*** [[https://kernal.eu/posts/linuxfx/][Dumping Linuxfx customers - A Windows-like distro including the spyware and activation]]
+哈哈哈笑死了!
 ** B
 *** [[https://blog.yangmame.org/][yanemame]]
 猴哥推荐的
@@ -156,8 +165,7 @@ and [[https://youtu.be/cfPDeso3XwI][register-based(13 episode)]]
 *** [[https://www.youtube.com/playlist?list=PL5--8gKSku15NSeLgrZX9hSEnqPTWoSJ0][DT: Privacy & Security]]
 *** [[https://youtu.be/Utse8P_L8k0][ArcaOS: Modern OS/2 ]]
 *** [[https://youtu.be/2--1ph-4IaY][shit express hacked]]
-*** [[https://www.youtube.com/c/PowerCertAnimatedVideos][PowerCert Animated Videos]]
-**** [[https://youtu.be/1z0ULvg_pW8][集线器，交换机和路由器的区别]]
+*** [[https://youtu.be/1z0ULvg_pW8][集线器，交换机和路由器的区别]]
 **** [[https://youtu.be/pCcJFdYNamc][Default Gateway Explained]]
 **** [[https://youtu.be/TIiQiw7fpsU][MAC Address Explained]]
 **** [[https://youtu.be/6_giEv20En0][Subnets vs VLANs]]
@@ -170,6 +178,7 @@ and [[https://youtu.be/cfPDeso3XwI][register-based(13 episode)]]
 ** Math
 *** [[https://youtu.be/KufsL2VgELo][Group Theory]]
 *** [[https://youtu.be/3gyHKCDq1YA][p-adic Numbers: 2 ^ 10n]]
+*** [[https://youtu.be/4nG49xTTjIA][The Real Reason Why Negative Times Negative is Positive, Intro to Rings]]
 
 ** Minecraft
 *** [[https://youtu.be/VKydXD6Lr20][Mojang & Minecraft 开始衰落了吗?]]

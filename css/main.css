@@ -119,6 +119,7 @@
     }
 
     a {
+        cursor: crosshair;
         text-decoration: none; 
         color: #39c5bb;
     }
