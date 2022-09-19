@@ -1,5 +1,5 @@
 #+TAGS: elixir(e) rust(r) c(c) lisp(l) python(p)
-#+TAGS: lowlevel(w) frontend(f) backend(b) emacs(m) hack(h) algorithm(a) linux(x)
+#+TAGS: lowlevel(w) frontend(f) backend(b) emacs(m) hack(h) algorithm(a) linux(x) iot(i)
 #+TAGS: rssable(s) rssub(u)
 #+OPTIONS: toc:1
 #+OPTIONS: ^:{}
@@ -15,22 +15,35 @@
 ** [[http://www.hackdig.com/][黑客技术]]                                                           :hack:
 really good website, butt, no rss
 ** [[https://shakaianee.top/][易姐]]
-** [[https://blog.stdio.io/1385][King's way]]
-** [[https://floooh.github.io/2021/12/17/cycle-stepped-z80.html][floooh]]                                                                :c:
+** [[https://blog.stdio.io/1385][King's way]]                                                     :hack:iot:
+** [[https://floooh.github.io/][floooh(The Brain Dump)]]                                                :c:
 07 年开始, cpu emulator
-** [[https://xiaosong.fun/][小耸]]                                                             :rust:c:
+*** [[https://floooh.github.io/2017/12/10/z80-emu-evolution.html][2017: Z80 Emu Evolution]]
+*** [[https://floooh.github.io/2021/12/17/cycle-stepped-z80.html][2021: A new cycle-stepped Z80 emulator]]
+*** [[https://floooh.github.io/2019/09/27/modern-c-for-cpp-peeps.html][Modern C for C++ Peeps]]
+#+BEGIN_QUOTE
+Modern C is not a subset of C++
+#+END_QUOTE
+** [[https://xiaosong.fun/][小耸]]                                                                  :c:
+*** [[https://xiaosong.fun/2022/01/01/lock-free-base-queue/][无锁编程基础与无锁队列的实现]]
+*** [[https://xiaosong.fun/2020/05/04/bug-and-mos/][打蚊子与找bug]]
 ** [[https://piaogewala.ga/][这可太刑了]]
 学习通事件相关
 ** [[https://www.cnblogs.com/zhongwencool/][写着写着就懂了]]                                                   :elixir:
 elixir/erlang大佬, 公众号: HelloElixir
-** [[http://blog.lujun9972.win/emacs-document/][lujun9972]]                                                         :emacs:
-超多emacs
-** [[https://www.wenhui.space/][文辉的烂笔头]]
+** [[http://blog.lujun9972.win/emacs-document/][lujun9972]]                                                   :emacs:rssub:
+超~~~多emacs
+** [[https://www.wenhui.space/docs][文辉的烂笔头]]                                                   :lowlevel:
+CPU, IC, ARM
+#+BEGIN_QUOTE
 第一次查过的问题，就应该记下来 !
 第二次再查的问题，就必须记下来 !
+#+END_QUOTE
+*** [[https://www.wenhui.space/docs/08-ic-design/cpu/meltdown-and-spectre/][浅谈熔断和幽灵]]
+*** [[https://www.wenhui.space/docs/02-emacs/org_mode_table_align/][解决Org-Mode表格不对齐问题]]
+使用字体比 valign 更通用
 ** [[http://scinart.is-programmer.com/][scinart]]                                                            :lisp:
 13年最后更新
-** [[https://lug.ustc.edu.cn/][中国科学技术大学 Linux 用户协会]]
 ** [[http://bzhang.lamost.org/website/][bozhang]]                                                         :rssable:
 05 年开始, 天文学
 ** [[https://www.luogu.com.cn/blog/ivystorm/emacs-adventuredunnet-tong-guan-jiao-cheng][emacs dunnet 教程]]                                                 :emacs:
@@ -38,64 +51,59 @@ luogu
 ** [[https://iceguye.com/blog][IceGuye]]
 ** [[http://jujuba.me/][Ground Oddity]]
 出国
+*** TODO [[http://jujuba.me/posts/program-analysis-via-llvm-pass.html][LLVM Pass来实现简化版taint analysis]]
 ** [[https://cireu.github.io/][NIL]]                                                               :emacs:
 elisp
 ** [[https://www.cnblogs.com/zjjws/p/13346020.html][第 N 个质数]]                                                 :c:algorithm:
 看不懂, 先收藏着
-** [[https://www.coder.rs/][Zhangy233]]                                                          :rust:
-** [[https://blog.bluemangoo.net/][芒果快评]]
-今年的新博客, 友链有踏浪
+** [[https://www.coder.rs/][阳光少年(coder.rs)]]                                          :rust:python:
 ** [[https://mrxn.net/][mrxn]]                                                               :hack:
 网安
-** [[https://devbins.github.io/page][devbins]]                                                    :rust:c:emacs:
+** TODO [[https://devbins.github.io/page][devbins]]                                               :rust:c:emacs:
 ** [[http://incf19.com/yynotes/][include-yy]]                                                 :c:lisp:emacs:
-许多东方的图
+许多东方的图诶
+*** [[http://incf19.com/yynotes/posts/2021-10-25-14-蝴蝶效应与emacs动画/index.html][蝴蝶效应与emacs动画]]
+*** [[http://www.incf19.com/yynotes/posts/2021-05-28-5-emacs的cl扩展/index.html][emacs cl-lib]]
+#+BEGIN_QUOTE
+Package cl is deprecated
+#+END_QUOTE
 ** [[https://stardiviner.github.io/][stardiviner]]
 Coder & 文学
+*** [[https://stardiviner.github.io/Blog/more-restrict-censorship-on-platforms.html][现在的审查确实相较于几年前要严格很多，难怪主流网站上大多都是娱乐内容了]]
 ** [[https://nihil.cc/posts/rust_closure_and_y/][Rust 闭包递归与 Y 组合子]]                                           :rust:
 ** [[https://blog.d46.us/advanced-emacs-startup/][advanced emacs startup]]                                            :emacs:
 ** [[https://stevenbai.top/][steven]]                                                             :rust:
 BlockChain
-** [[https://zhuanlan.zhihu.com/p/138719668][用Go语言汇编计算fibonacci数列]]                                  :lowlevel:
 ** [[https://sh.alynx.one/][Alynx Zhou]]                                                :linux:rssable:
-** [[https://www.clloz.com/][Clloz]]                                                          :frontend:
-界面特别好看
 ** [[https://coredumped.dev/][Core Dumped]]                                         :rust:lowlevel:emacs:
 VM
-** [[https://www.zhihu.com/column/c_1313110231912726528][倔强的程序员]]
-编! 译! 原! 理!
-** [[https://siciarz.net][24 days of rust]]                                                    :rust:
-old
 ** [[https://liujiacai.net/][keep coding]]                                     :rust:c:lowlevel:backend:
 写代码的西瓜
 *** [[https://emacstalk.github.io/][EmacsTalk]]
 ** [[https://winsphinx.github.io/][Cogito, ergo sum]]                                                :rssable:
 文学
 ** [[http://tomasp.net/][Tomas Petricek]]                                                    :rssub:
-very high quality
+F#, M1(r0$0f+, very high quality
 *** [[http://tomasp.net/commodore64][commodore64 BASIC]]
 *** [[http://tomasp.net/blog/csharp-async-gotchas.aspx][async in C#(gotchas) and F#]]
 ** [[http://www.xianwaizhiyin.net/][弦外之音]]                                                     :c:lowlevel:
-** [[https://creamidea.github.io/][C-tone]]
-pretty and concise page
+源码分析
 ** [[https://lightless.me/][lightless blog]]                                                     :hack:
 ** [[https://bheisler.github.io/post/state-of-gpgpu-in-rust/][The State of GPGPU in Rust]]                                :rust:lowlevel:
 ** [[https://liyafu.com][Light & Truth]]
 from ruanyifeng
-** [[https://www.zhihu.com/column/c_185117725][知乎专栏: 技术考古]]
-plan9
 ** [[https://ghinda.net/][ghinda]]                                                         :frontend:
 *** [[https://ghinda.net/oxygenos/][oxygenos]]
 his final year project in high school, 2008
 a webos using oxygen visual design
-** [[https://www.gilesorr.com/wm/][The Window Manager Report]]
-** [[https://collet66.web.fc2.com/][syosa]]
-pixel art
 ** [[https://www.zhihu.com/column/roartalk][知乎专栏: 嘶吼RoarTalk]]                                             :hack:
 回归最本质的信息安全
 ** [[https://litchipi.github.io/series/container_in_rust][Writing a container in Rust]]
 ** [[https://xeiaso.net/][Xe Iaso]]                                                           :rssub:
-*** [[https://xeiaso.net/blog/v-vaporware-2019-06-23][V for Vaporware]]
+*** [[https://xeiaso.net/blog/series/v][series: V]]
+**** [[https://xeiaso.net/blog/v-vaporware-2019-06-23][V for Vaporware]]
+经典永流传~
+*** [[https://xeiaso.net/blog/nim-and-tup-2015-06-10][Nim and Tup]]
 ** [[https://lantian.pub/][蓝天]]
 大佬!
 *** [[https://lantian.pub/article/chat/how-i-nuked-my-btrfs-partition.lantian/][我把硬盘换到了新电脑上，这是 Btrfs 上的数据发生的变化]]
@@ -104,7 +112,6 @@ pixel art
 *** [[https://lantian.pub/article/modify-website/static-build-tiny-docker-images.lantian/][静态编译制作微型 Docker 镜像]] [[https://lantian.pub/article/modify-website/4kb-infinite-sleep-docker-image.lantian/][制作只有 4KB 大小的永久挂起程序]]
 *** [[https://lantian.pub/article/modify-website/serve-gopher-with-nginx.lantian/][用 nginx 建立 Gopher 网站]]
 gopher://gopher.lantian.pub
-** [[https://tsdh.org/index.html][tsdh]]                                                              :emacs:
 ** [[https://bryanbrattlof.com/][Bryan Brattlof]]
 *** [[https://git.sr.ht/~bryanb/bootloaders-101/tree][ossu2022 bootloaders 101]]
 ** [[https://ulyc.github.io/][UlyC]]                                                             :python:
@@ -130,10 +137,18 @@ B站: 美味的樱桃菌
 B站: 称呼我C先生
 *** [[https://www.lunaixsky.com/][lunaixsky]]                                                  :c:lowlevel:
 *** [[https://endlesspeak.gitee.io/][EndlessPeak]]                                                     :linux:
-** shenjack/HWS
+** ZhiHu
+*** [[https://zhuanlan.zhihu.com/p/138719668][用Go语言汇编计算fibonacci数列]]                                :lowlevel:
+*** [[https://www.zhihu.com/column/c_1313110231912726528][倔强的程序员]]
+编! 译! 原! 理!
+*** [[https://www.zhihu.com/column/c_185117725][知乎专栏: 技术考古]]
+plan9
+** shenjack/HWS/friends
 *** [[http://www.z.org.cn/][老网虫]]
 *** [[https://blog.yang-qwq.ml][yang-qwq]]
 *** [[http://blog.zhanganzhi.com/][zhanganzhi]]
+*** [[https://blog.bluemangoo.net/][芒果快评]]
+今年的新博客, 友链有踏浪
 
 * YouTube 收集(没有账号, 这就是我的收藏夹)
 ** Computer Science
@@ -243,3 +258,4 @@ foreign or domestic, requires you to follow Snowden's example.
 人需不需要互相之间完全理解
 自我封闭是否是应对外界压力的合理方式
 #+END_QUOTE
+** [[https://www.gilesorr.com/wm/][The Window Manager Report]]
