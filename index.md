@@ -1,4 +1,5 @@
 ### Table of Contents (sorted by time)
+[build a nixos live image](nixos)<br>
 [moonboos, 懂的都懂](moonboos)<br>
 [MGLNDD scans](weird_mglndd)<br>
 [最近折腾 sway 的一些记录](wayland)<br>
@@ -14,7 +15,7 @@
 ---
 
 PGP key<br>
-[56CE E157 C9F5 334F CA52  CEC3 D184 E828 8062 90B6](pgpkey)
+[56CE E157 C9F5 334F CA52  CEC3 D184 E828 8062 90B6](pgpkey.txt)
 
 ---
 
