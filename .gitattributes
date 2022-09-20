@@ -1,1 +1,4 @@
-*.org linguist-language=org
+*.md linguist-vendored=false
+*.md linguist-detectable=true
+*.org linguist-vendored=false
+*.org linguist-detectable=true
