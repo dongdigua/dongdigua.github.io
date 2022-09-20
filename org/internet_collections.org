@@ -10,6 +10,10 @@
 * 一些(个人)博客收集
 ** [[http://www.paulgraham.com/todo.html][Paul Graham]]
 ** [[http://www.qiusir.com/][qiusir]]                                                            :rssub:
+** [[http://xahlee.info][XahLee]]
+#+ATTR_ORG: :width 256px
+#+ATTR_HTML: :width 256px
+[[http://xahlee.info/emacs/misc/i/Marisa_Kirisame_emacs_magic.png]]
 ** [[http://www.yinwang.org/][王垠]]
 ** [[http://ruanyifeng.com/blog/][阮一峰]]                                                            :rssub:
 ** [[http://www.hackdig.com/][黑客技术]]                                                           :hack:
@@ -31,8 +35,9 @@ Modern C is not a subset of C++
 学习通事件相关
 ** [[https://www.cnblogs.com/zhongwencool/][写着写着就懂了]]                                                   :elixir:
 elixir/erlang大佬, 公众号: HelloElixir
-** [[http://blog.lujun9972.win/emacs-document/][lujun9972]]                                                   :emacs:rssub:
+** [[http://blog.lujun9972.win][lujun9972]]                                                   :emacs:rssub:
 超~~~多emacs
+*** [[http://blog.lujun9972.win/emacs-document/][emacs document]]
 ** [[https://www.wenhui.space/docs][文辉的烂笔头]]                                                   :lowlevel:
 CPU, IC, ARM
 #+BEGIN_QUOTE
@@ -53,13 +58,12 @@ luogu
 ** [[http://jujuba.me/][Ground Oddity]]
 出国
 *** [[http://jujuba.me/posts/program-analysis-via-llvm-pass.html][LLVM Pass来实现简化版taint analysis]]
-** [[https://cireu.github.io/][NIL]]                                                               :emacs:
-elisp
+** [[https://cireu.github.io/2019/09/17/lisp-setf/][NIL: setf 中「f」的本意]]
 ** [[https://www.cnblogs.com/zjjws/p/13346020.html][第 N 个质数]]                                                 :c:algorithm:
 看不懂, 先收藏着
 ** [[https://www.coder.rs/][阳光少年(coder.rs)]]                                          :rust:python:
 ** [[https://mrxn.net/][mrxn]]                                                               :hack:
-网安
+网安, data-leak
 ** [[http://incf19.com/yynotes/][include-yy]]                                                 :c:lisp:emacs:
 许多东方的图诶
 *** [[http://incf19.com/yynotes/posts/2021-10-25-14-蝴蝶效应与emacs动画][蝴蝶效应与emacs动画]]
@@ -84,7 +88,7 @@ VM
 ** [[https://liujiacai.net/][keep coding]]                                     :rust:c:lowlevel:backend:
 写代码的西瓜
 *** [[https://emacstalk.github.io/][EmacsTalk]]
-** [[https://winsphinx.github.io/][Cogito, ergo sum]]                                                :rssable:
+** [[https://winsphinx.github.io/blog][Cogito, ergo sum]]                                                :rssable:
 文学
 ** [[http://tomasp.net/][Tomas Petricek]]                                                    :rssub:
 F#, M1(r0$0f+, very high quality
@@ -92,17 +96,13 @@ F#, M1(r0$0f+, very high quality
 *** [[http://tomasp.net/blog/csharp-async-gotchas.aspx][async in C#(gotchas) and F#]]
 ** [[http://www.xianwaizhiyin.net/][弦外之音]]                                                     :c:lowlevel:
 源码分析
+*** [[https://www.xianwaizhiyin.net/?cat=24][state-thread 源码分析]]
 ** [[https://lightless.me/][lightless blog]]                                                     :hack:
 ** [[https://bheisler.github.io/post/state-of-gpgpu-in-rust/][The State of GPGPU in Rust]]                                :rust:lowlevel:
 ** [[https://liyafu.com][Light & Truth]]
 from ruanyifeng
-** [[https://ghinda.net/][ghinda]]                                                         :frontend:
-*** [[https://ghinda.net/oxygenos/][oxygenos]]
-his final year project in high school, 2008
-a webos using oxygen visual design
-** [[https://www.zhihu.com/column/roartalk][知乎专栏: 嘶吼RoarTalk]]                                             :hack:
-回归最本质的信息安全
 ** [[https://litchipi.github.io/series/container_in_rust][Writing a container in Rust]]
+*** [[https://litchipi.github.io/infosec/2022/07/08/copyit-until-you-makeit.html][Copy it until you make it]]
 ** [[https://xeiaso.net/][Xe Iaso]]                                                           :rssub:
 *** [[https://xeiaso.net/blog/series/v][series: V]]
 **** [[https://xeiaso.net/blog/v-vaporware-2019-06-23][V for Vaporware]]
@@ -111,7 +111,7 @@ a webos using oxygen visual design
 ** [[https://lantian.pub/][蓝天]]
 大佬!
 *** [[https://lantian.pub/article/chat/how-i-nuked-my-btrfs-partition.lantian/][我把硬盘换到了新电脑上，这是 Btrfs 上的数据发生的变化]]
-[[https://lantian.pub/usr/uploads/202112/chubbyemu.jpg.thumb.png][presenting to the emergency room]]
+[[https://lantian.pub/usr/uploads/202112/chubbyemu.jpg.thumb.png]]
 *** [[https://lantian.pub/article/forward/foolish-code-typo.lantian/][最傻的代码错误：一个空格酿成的血案]]
 *** [[https://lantian.pub/article/modify-website/static-build-tiny-docker-images.lantian/][静态编译制作微型 Docker 镜像]] [[https://lantian.pub/article/modify-website/4kb-infinite-sleep-docker-image.lantian/][制作只有 4KB 大小的永久挂起程序]]
 *** [[https://lantian.pub/article/modify-website/serve-gopher-with-nginx.lantian/][用 nginx 建立 Gopher 网站]]
@@ -122,17 +122,30 @@ gopher://gopher.lantian.pub
 *** [[https://ulyc.github.io/2022/08/10/sourcehut-the-hackers-forge/][sourcehut,  一个反叛而又正统的代码托管平台]]
 *** [[https://ulyc.github.io/2021/01/13/2021年-用更现代的方法使用PGP-上/][2021年, 用更现代的方法使用PGP]]
 #+BEGIN_QUOTE
-同样是非对称算法,为什么PGP的私钥就长这么多呢？
-因为他们用的算法不同，比特币默认使用的是ECDSA的 secp256k1算法， 该算法只是用来签名和认证，并不用来加密
-(signify 也只用于签名和认证，所以密钥也比较短)
+同样是非对称算法, 为什么PGP的私钥就长这么多呢？
+因为他们用的算法不同, 比特币默认使用的是ECDSA的 secp256k1算法, 该算法只是用来签名和认证, 并不用来加密
+(signify 只用于签名认证, age 只用于加密, 所以密钥也比较短)
 #+END_QUOTE
 **** [[https://spwo.notion.site/GitHub-6b1e1d57f52c4664bff61cadb3f9cb8d][震惊! 竟然有人在 GitHub 上冒充我的身份!]]
 *** [[https://ulyc.github.io/2019/08/01/初窥CORB/][Cross-Origin Read Blocking]]
 ** [[https://kernal.eu][kernal]]
 Welcome to the darkest dungeon of kernal
+#+BEGIN_SRC shell
+nc chat.kernal.eu 1337
+#+END_SRC
 *** [[https://kernal.eu/posts/linuxfx/][Dumping Linuxfx customers - A Windows-like distro including the spyware and activation]]
 哈哈哈笑死了!
 ** [[https://blog.burntsushi.net/ripgrep/][ripgrep is faster than {grep, ag, git grep, ucg, pt, sift}]]
+** [[https://vimacs.wehack.space/laptop/][vimacs]]
+Written with Vim and Emacs
+A member of Linux Club of Peking University.
+cat-v-like sidebar style
+*** [[https://vimacs.wehack.space/matrix-guide/][Matrix聊天快速指南]]
+#+BEGIN_COMMENT
+矩阵一入深似海, 从此电幕(from:《一九八四》)是路人.
+#+END_COMMENT
+**** [[https://citizenlab.ca/2016/11/wechat-china-censorship-one-app-two-systems/][微信一app两制]]
+*** [[https://vimacs.wehack.space/Mail-vs-IM.htm][谈电子邮件和即时通讯]]
 ** B
 *** [[https://blog.yangmame.org/][yanemame]]
 猴哥推荐的
@@ -140,7 +153,7 @@ Welcome to the darkest dungeon of kernal
 B站: 美味的樱桃菌
 *** [[https://yaocc.cc/][CC]]                                                              :linux:
 B站: 称呼我C先生
-*** [[https://www.lunaixsky.com/][lunaixsky]]                                                  :c:lowlevel:
+*** [[https://blog.lunaixsky.com/][lunaixsky]]                                                  :c:lowlevel:
 *** [[https://endlesspeak.gitee.io/][EndlessPeak]]                                                     :linux:
 ** ZhiHu
 *** [[https://zhuanlan.zhihu.com/p/138719668][用Go语言汇编计算fibonacci数列]]                                :lowlevel:
@@ -148,9 +161,10 @@ B站: 称呼我C先生
 编! 译! 原! 理!
 *** [[https://www.zhihu.com/column/c_185117725][知乎专栏: 技术考古]]
 plan9
+*** [[https://www.zhihu.com/column/roartalk][知乎专栏: 嘶吼RoarTalk]]                                           :hack:
+回归最本质的信息安全
 ** shenjack/HWS/fri3nds
 *** [[http://www.z.org.cn/][老网虫]]
-**** [[http://w.org.cn/user1/4/subject/72.html][中国IPv9调查]]
 *** [[https://blog.yang-qwq.ml][yang-qwq]]
 *** [[http://blog.zhanganzhi.com/][zhanganzhi]]
 *** [[https://blog.bluemangoo.net/][芒果快评]]
@@ -213,7 +227,8 @@ java bad, python slow, nvidia fuck you, vi-sual studio, C艹 sucks
 #+BEGIN_QUOTE
 a story about YouTube’s intentional efforts to undermine the United States of America in collusion with the Russian government.
 It’s also a story about copyright infringement
-— and YouTube’s willful blindness to bad actors who openly admit to filing patently fraudulent DMCA counter-notifications to avoid the termination of their accounts.
+— and YouTube’s willful blindness to bad actors who openly admit
+to filing patently fraudulent DMCA counter-notifications to avoid the termination of their accounts.
 #+END_QUOTE
 *** [[https://youtu.be/RH3D1cpm6do][Yes, Everyone on the Internet Is a Loser.]]
 I agree
@@ -262,3 +277,6 @@ foreign or domestic, requires you to follow Snowden's example.
 自我封闭是否是应对外界压力的合理方式
 #+END_QUOTE
 ** [[https://www.gilesorr.com/wm/][The Window Manager Report]]
+** [[https://ghinda.net/oxygenos/][oxygenos]]
+his final year project in high school, 2008
+a webos using oxygen visual design
