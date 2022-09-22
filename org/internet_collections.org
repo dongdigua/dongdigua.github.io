@@ -1,17 +1,19 @@
 #+TAGS: elixir(e) rust(r) c(c) lisp(l) python(p)
 #+TAGS: lowlevel(w) frontend(f) backend(b) emacs(m) hack(h) algorithm(a) linux(x) iot(i)
+#+TAGS: math(t)
 #+TAGS: rssable(s) rssub(u)
-#+OPTIONS: toc:1
-#+OPTIONS: ^:{}
+#+OPTIONS: toc:1 ^:{}
 
 #+TITLE: Internet Collections
 #+DATE: <2022-06-05 日>
 
 * 一些(个人)博客收集
+#+BEGIN_CENTER
+魔 法 禁 书 目 录
+#+END_CENTER
 ** [[http://www.paulgraham.com/todo.html][Paul Graham]]
 ** [[http://www.qiusir.com/][qiusir]]                                                            :rssub:
 ** [[http://xahlee.info][XahLee]]
-#+ATTR_ORG: :width 256px
 #+ATTR_HTML: :width 256px
 [[http://xahlee.info/emacs/misc/i/Marisa_Kirisame_emacs_magic.png]]
 ** [[http://www.yinwang.org/][王垠]]
@@ -130,9 +132,6 @@ gopher://gopher.lantian.pub
 *** [[https://ulyc.github.io/2019/08/01/初窥CORB/][Cross-Origin Read Blocking]]
 ** [[https://kernal.eu][kernal]]
 Welcome to the darkest dungeon of kernal
-#+BEGIN_SRC shell
-nc chat.kernal.eu 1337
-#+END_SRC
 *** [[https://kernal.eu/posts/linuxfx/][Dumping Linuxfx customers - A Windows-like distro including the spyware and activation]]
 哈哈哈笑死了!
 ** [[https://blog.burntsushi.net/ripgrep/][ripgrep is faster than {grep, ag, git grep, ucg, pt, sift}]]
@@ -146,6 +145,9 @@ cat-v-like sidebar style
 #+END_COMMENT
 **** [[https://citizenlab.ca/2016/11/wechat-china-censorship-one-app-two-systems/][微信一app两制]]
 *** [[https://vimacs.wehack.space/Mail-vs-IM.htm][谈电子邮件和即时通讯]]
+** [[http://www.matrix67.com/blog/][Matrix67]]                                                           :math:
+The Aha Moments
+*** [[http://www.matrix67.com/blog/archives/6039][用三段 140 字符以内的代码生成一张 1024×1024 的图片]]
 ** B
 *** [[https://blog.yangmame.org/][yanemame]]
 猴哥推荐的
@@ -243,9 +245,6 @@ I agree
 *** [[https://www.reddit.com/r/ProgrammerHumor/comments/wpnvtg/microsoft_visual_rust_2018/][Microsoft Visual Rust]]
 *** [[https://www.reddit.com/r/ProgrammerHumor/comments/wsw78u/regex_be_like/][MC enchant: regex be like...]]
 
-* Hacker News
-** [[https://news.ycombinator.com/item?id=32012566][A better formulation of DRY(Don't Repeat Yourself) is SPOT (Single Point Of Truth)]]
-
 * Other
 #+BEGIN_COMMENT
 https://www.pixiv.net/users/57759368
@@ -283,3 +282,5 @@ foreign or domestic, requires you to follow Snowden's example.
 ** [[https://ghinda.net/oxygenos/][oxygenos]]
 his final year project in high school, 2008
 a webos using oxygen visual design
+** [[https://news.ycombinator.com/item?id=32012566][Hacker News: A better formulation of DRY(Don't Repeat Yourself) is SPOT (Single Point Of Truth)]]
+** [[https://news-web.php.net/php.internals/70691][PHP function hashing mechanism was strlen()]]
