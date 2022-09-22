@@ -21,7 +21,6 @@
 ** [[http://www.hackdig.com/][黑客技术]]                                                           :hack:
 really good website, butt, no rss
 ** [[https://shakaianee.top/][易姐]]
-** [[https://blog.stdio.io/1385][King's way]]                                                     :hack:iot:
 ** [[https://floooh.github.io/][floooh(The Brain Dump)]]                                                :c:
 07 年开始, cpu emulator
 *** [[https://floooh.github.io/2017/12/10/z80-emu-evolution.html][2017: Z80 Emu Evolution]]
@@ -30,6 +29,7 @@ really good website, butt, no rss
 #+BEGIN_QUOTE
 Modern C is not a subset of C++
 #+END_QUOTE
+** [[https://blog.stdio.io/1385][King's way]]                                                     :hack:iot:
 ** [[https://xiaosong.fun/][小耸]]                                                                  :c:
 *** [[https://xiaosong.fun/2022/01/01/lock-free-base-queue/][无锁编程基础与无锁队列的实现]]
 *** [[https://xiaosong.fun/2020/05/04/bug-and-mos/][打蚊子与找bug]]
