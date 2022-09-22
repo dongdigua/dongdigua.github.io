@@ -73,17 +73,20 @@
 | TAB   | shr-next-link/elpher-next-link   |
 | d     | eww-download/elpher-download     |
 | g     | eww-reload/elpher-go             |
+| G     | eww                              |
 | l     | eww-back-url                     |
 | \circ | elpher-back-url                  |
 | &     | eww-browse-with-external-browser |
-| v     | eww-view-page-source             |
 | w     | eww-copy-page-url                |
+| v     | eww-view-page-source             |
 | .     | elpher-view-raw                  |
 
 * Git
+Git 能离线使用只是个传说, 你仍然需要联网搜索该用哪个命令传什么参数
 #+BEGIN_SRC shell
-  git log --stat | perl -ne 'END { print $c } $c += $1 if /(\d+) insertions/;'
-  git log  --pretty=tformat: --numstat | awk '{ add += $1; subs += $2; loc += $1 - $2 } END { printf "added lines: %s, removed lines: %s, total lines: %s\n", add, subs, loc }'
+git log --stat | perl -ne 'END { print $c } $c += $1 if /(\d+) insertions/;'
+git log --pretty=tformat: --numstat | awk '{ add += $1; subs += $2; loc += $1 - $2 } END { printf "added lines: %s, removed lines: %s, total lines: %s\n", add, subs, loc }'
+git log --color --graph --decorate -M --pretty=oneline --abbrev-commit -M
 #+END_SRC
 
 * Fish

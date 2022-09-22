@@ -1,5 +1,6 @@
 #+TITLE: 庄主其人
 #+DATE: <2022-09-11 日>
+#+OPTIONS: toc:nil
 
 #+BEGIN_QUOTE
 互联网是有记忆的
