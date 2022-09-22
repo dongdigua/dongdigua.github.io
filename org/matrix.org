@@ -1,0 +1,31 @@
+#+TITLE: Matrix chat (clients comparation, proxy setting)
+#+DATE: <2022-09-22 四>
+#+DESCRIPTION: Matrix 通信(客户端对比, 代理设置)
+#+OPTIONS: toc:2
+
+I wanna use matrix just because many people use it.
+
+* comparation of clients, sorted by satisfaction
+** neochat
+💓kde
+** quaternion
+small but have most of function
+fancy scrollbar, can configure proxy in app
+wayland support not good: error copying image(like qutebrowser)
+** ement.el
+I like doing everything in emacs, with keyboard
+but it don't work: https://github.com/alphapapa/ement.el/issues/77
+** fractal
+HUGE and not fully fonctionall
+** thunderbird
+HUGE, matrix support is not good: cannot show picture
+I even don't use it for email(I use Geary)
+
+* how to set proxy
+** neochat
+env: =http_proxy=
+** fractal
+env: =https_proxy=
+accroding to reqwest document
+** ement.el
+var: =plz-curl-default-args=
