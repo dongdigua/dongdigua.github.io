@@ -18,7 +18,7 @@ but it don't work: https://github.com/alphapapa/ement.el/issues/77
 ** fractal
 HUGE and not fully fonctionall
 ** thunderbird
-HUGE, matrix support is not good: cannot show picture
+all-in-one solution, matrix support is not good: cannot show picture
 I even don't use it for email(I use Geary)
 
 * how to set proxy

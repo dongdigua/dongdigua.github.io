@@ -1,3 +1,7 @@
+<script src="https://fastly.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/autoload.js"></script>
+<link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css">
+
+
 ### Table of Contents (sorted by time)
 [build a nixos live image](nixos)<br>
 [moonboos, 懂的都懂](moonboos)<br>

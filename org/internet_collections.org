@@ -195,13 +195,13 @@ java bad, python slow, nvidia fuck you, vi-sual studio, C艹 sucks
 2:14 "how many american server you have already hacked" - "I don't count them I'm sorry"
 *** [[https://youtu.be/Utse8P_L8k0][ArcaOS: Modern OS/2 ]]
 *** [[https://youtu.be/1z0ULvg_pW8][集线器，交换机和路由器的区别]]
-**** [[https://youtu.be/pCcJFdYNamc][Default Gateway Explained]]
 **** [[https://youtu.be/TIiQiw7fpsU][MAC Address Explained]]
 **** [[https://youtu.be/6_giEv20En0][Subnets vs VLANs]]
 *** [[https://youtu.be/UNkHditYGls][I coded a fractal on an Apple II+]]
+*** [[https://youtu.be/p8u_k2LIZyo][Fast Inverse Square Root — A Quake III Algorithm]]
+=0x5f3759df=
 
 ** Cyber Security
-*** [[https://youtube.be/TLa2VqcGGEQ][CVE-2021-3156 sudo]]
 *** [[https://youtu.be/x_R1DeZxGc0][Discover Vulnerabilities in Intel CPUs!]]
 *** [[https://youtu.be/2--1ph-4IaY][shit express hacked]]
 *** [[https://www.youtube.com/playlist?list=PL5--8gKSku15NSeLgrZX9hSEnqPTWoSJ0][DT: Privacy & Security]]
