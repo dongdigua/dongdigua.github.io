@@ -1,6 +1,6 @@
 #+TAGS: elixir(e) rust(r) c(c) lisp(l) python(p)
-#+TAGS: lowlevel(w) frontend(f) backend(b) emacs(m) hack(h) algorithm(a) linux(x) iot(i)
-#+TAGS: math(t)
+#+TAGS: lowlevel(w) frontend(f) backend(b) hack(h) algorithm(a) math(t)
+#+TAGS: emacs(m) linux(x) iot(i)
 #+TAGS: rssable(s) rssub(u)
 #+OPTIONS: toc:1 ^:{}
 
@@ -115,9 +115,10 @@ from ruanyifeng
 *** [[https://lantian.pub/article/chat/how-i-nuked-my-btrfs-partition.lantian/][我把硬盘换到了新电脑上，这是 Btrfs 上的数据发生的变化]]
 [[https://lantian.pub/usr/uploads/202112/chubbyemu.jpg.thumb.png]]
 *** [[https://lantian.pub/article/forward/foolish-code-typo.lantian/][最傻的代码错误：一个空格酿成的血案]]
-*** [[https://lantian.pub/article/modify-website/static-build-tiny-docker-images.lantian/][静态编译制作微型 Docker 镜像]] [[https://lantian.pub/article/modify-website/4kb-infinite-sleep-docker-image.lantian/][制作只有 4KB 大小的永久挂起程序]]
 *** [[https://lantian.pub/article/modify-website/serve-gopher-with-nginx.lantian/][用 nginx 建立 Gopher 网站]]
 gopher://gopher.lantian.pub
+*** [[https://lantian.pub/article/modify-website/dn42-experimental-network-2020.lantian/][DN42 实验网络介绍及注册教程]]
+**** [[https://lantian.pub/article/modify-website/how-to-kill-the-dn42-network.lantian/][如何引爆 DN42 网络]]
 ** [[https://bryanbrattlof.com/][Bryan Brattlof]]
 *** [[https://git.sr.ht/~bryanb/bootloaders-101/tree][ossu2022 bootloaders 101]]
 ** [[https://ulyc.github.io/][UlyC]]                                                             :python:
