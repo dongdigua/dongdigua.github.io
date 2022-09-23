@@ -11,6 +11,16 @@ login as user, not root
 enable 3D acceleration in VirtualBox
 ** config files from outside
 [[../images/irc-nixiso.png]] 
+but it is copied using xoriso to =/iso/=
+so I need to write a systemd service to automagically sync it at boot
+** cleanup builds
+=/nix/store/= takes too much space after build
+#+BEGIN_SRC sh
+unlink result
+nix-store <path>
+#+END_SRC
+and there're a few tools for visualising disk size:
+https://nixos.wiki/wiki/Cleaning_the_nix_store
 
 * reference
 ** [[https://sr.ht/~guido/nixos-init-freedom/][nixos without systemd?]]
