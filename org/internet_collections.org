@@ -153,6 +153,26 @@ The Aha Moments
 *** [[https://www.howistart.org/posts/nim/1/][howistart: Nim]]
 brainf**k
 *** [[https://hookrace.net/blog/writing-an-async-logger-in-nim/][Writing an Async Logger in Nim]]
+** [[https://nyxt.atlas.engineer/article/gopher.org][Nyxt: Why should I care about Gopher?]]
+#+BEGIN_QUOTE
+By making something a little bit more inaccessible, we are inadvertently putting a filter on what is being posted.
+#+END_QUOTE
+#+BEGIN_QUOTE
+This makes it a great way to avoid a lot of the low effort noise published on popular/accessible platforms.
+As a result, Gopher is full of interesting, enriching, high quality content.
+The authors are posting out of passion, and with great commitment.
+Don't get me wrong, there's nonsense on Gopher too, but far less of it.
+#+END_QUOTE
+gopher://hngopher.com/
+*** [[https://www.orangeclk.com/2022/08/22/eternal-september-community-locals/][社区本地人与永恒的九月(Eternal September)]]
+#+BEGIN_QUOTE
+几乎所有大众互联网社区都难逃此宿命。要想避免永恒九月，社区必须要足够克制，有节奏地引导新人加入。
+但是过去20年互联网行业大发展的基本模式就是吸引大量用户、获取大平台地位、取得超额收益。
+用户量是商业成功的互联网平台所必须追求的第一目标。要想获得商业成功，永恒九月来得越早越凶猛越好。
+#+END_QUOTE
+#+ATTR_HTML: :width 256px
+[[https://upload.wikimedia.org/wikipedia/commons/d/d7/Internet_is_Full_-_Go_Away_t-shirt.jpg]]
+
 ** B
 *** [[https://blog.yangmame.org/][yanemame]]
 猴哥推荐的
@@ -253,6 +273,7 @@ I agree
 ** [[https://www.reddit.com/r/ProgrammerHumor][ProgrammerHumor]]
 *** [[https://www.reddit.com/r/ProgrammerHumor/comments/wpnvtg/microsoft_visual_rust_2018/][Microsoft Visual Rust]]
 *** [[https://www.reddit.com/r/ProgrammerHumor/comments/wsw78u/regex_be_like/][MC enchant: regex be like...]]
+*** [[https://www.reddit.com/r/ProgrammerHumor/comments/mr8gqx/new_episode_of_electricianhumor/][New episode of ElectricianHumor]]
 
 * Other
 #+BEGIN_COMMENT
