@@ -1,4 +1,4 @@
-#+TAGS: elixir(e) rust(r) c(c) lisp(l) python(p)
+#+TAGS: elixir(e) rust(r) c(c) lisp(l) python(p) nim(n)
 #+TAGS: lowlevel(w) frontend(f) backend(b) hack(h) algorithm(a) math(t)
 #+TAGS: emacs(m) linux(x) iot(i)
 #+TAGS: rssable(s) rssub(u)
@@ -149,6 +149,10 @@ cat-v-like sidebar style
 ** [[http://www.matrix67.com/blog/][Matrix67]]                                                           :math:
 The Aha Moments
 *** [[http://www.matrix67.com/blog/archives/6039][用三段 140 字符以内的代码生成一张 1024×1024 的图片]]
+** [[https://hookrace.net][Dennis Felsing]]                                                      :nim:
+*** [[https://www.howistart.org/posts/nim/1/][howistart: Nim]]
+brainf**k
+*** [[https://hookrace.net/blog/writing-an-async-logger-in-nim/][Writing an Async Logger in Nim]]
 ** B
 *** [[https://blog.yangmame.org/][yanemame]]
 猴哥推荐的
@@ -209,11 +213,13 @@ java bad, python slow, nvidia fuck you, vi-sual studio, C艹 sucks
 *** [[https://youtu.be/QxNsyrftJ8I][Chris Titus Tech: The Biggest Linux Security Mistakes]]
 "Security is a journey, not a destination!"
 *** [[https://youtu.be/S4E4yAktjug?t=998][How To Become Invisible Online # level 3]]
+*** [[https://youtu.be/oJ6t7AImTdE][CSS Keylogger - old is new again]]
 
 ** Math
 *** [[https://youtu.be/KufsL2VgELo][Group Theory]]
 *** [[https://youtu.be/3gyHKCDq1YA][p-adic Numbers: 2 ^ 10n]]
 *** [[https://youtu.be/4nG49xTTjIA][The Real Reason Why Negative Times Negative is Positive, Intro to Rings]]
+*** [[https://youtu.be/v_HeaeUUOnc][How to Take the Factorial of Any Number]]
 
 ** Minecraft
 *** [[https://youtu.be/VKydXD6Lr20][Mojang & Minecraft 开始衰落了吗?]]
@@ -235,6 +241,8 @@ to filing patently fraudulent DMCA counter-notifications to avoid the terminatio
 #+END_QUOTE
 *** [[https://youtu.be/RH3D1cpm6do][Yes, Everyone on the Internet Is a Loser.]]
 I agree
+*** [[https://youtu.be/Rsxao9ptdmI][Beating 5 Scam Arcade Games with Science]]
+街机科学家～
 
 * r
 ** [[https://www.reddit.com/r/unixporn/][unixporn]]
@@ -282,3 +290,5 @@ his final year project in high school, 2008
 a webos using oxygen visual design
 ** [[https://news.ycombinator.com/item?id=32012566][Hacker News: A better formulation of DRY(Don't Repeat Yourself) is SPOT (Single Point Of Truth)]]
 ** [[https://news-web.php.net/php.internals/70691][PHP function hashing mechanism was strlen()]]
+** [[http://phrack.org][Phrack Magazine]]
+*** [[http://phrack.org/issues/49/14.html][Smashing The Stack For Fun And Profit]]
