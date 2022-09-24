@@ -39,8 +39,10 @@ mako, a notification daemon
 ** emacs tool-bar not working(cannot toggle and icon theme missing)
 *** cannot toggle: disable custon =default-frame-alist=, or just use floating mode
 *** TODO icon theme missing: ?
-** TODO [[https://www.reddit.com/r/swaywm/comments/scz5k6/option_create_on_workspace_prev_on_outputnext_on/][Option --create on workspace prev_on_output|next_on_output?]]
+** [[https://www.reddit.com/r/swaywm/comments/scz5k6/option_create_on_workspace_prev_on_outputnext_on/][Option --create on workspace prev_on_output|next_on_output?]]
 I LIKE THIS FEATURE!!! WHY REMOVE IT???
+*** [[https://www.reddit.com/r/swaywm/comments/mmfwnu/sway_command_workspace_next/][shell script solution]]
+*** [[https://github.com/oati/sway-workspace-manager][rust, probably useful]]
 
 
 * Ref
