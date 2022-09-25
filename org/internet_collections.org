@@ -285,26 +285,6 @@ I agree
 *** [[https://www.reddit.com/r/ProgrammerHumor/comments/wsw78u/regex_be_like/][MC enchant: regex be like...]]
 *** [[https://www.reddit.com/r/ProgrammerHumor/comments/mr8gqx/new_episode_of_electricianhumor/][New episode of ElectricianHumor]]
 
-* Gopher/Gemini
-can access from behind The Great Wall :)
-** [[gopher://gopher.lantian.pub][lantian gopher]]
-** [[gopher://hngopher.com][hngopher]]
-** [[gopher://forthworks.com][forthworks]]
-IOS gopher client author's homepage
-server written in RETRO, a Forth dialect he implemented
-** [[gopher://gopherpedia.com][gopherpedia]]
-** [[gopher://gopher.floodgap.com][Floodgap Systems Gopher Server]]
-*** [[https://arstechnica.com/tech-policy/2007/08/china-makes-web-monitoring-fun-again/][China makes web monitoring fun again]]
-** [[gopher://gopher.quux.org][quux]]
-a lot of information of historic interest, funny, or just plain entertaining
-** [[gopher://sdf.org][SDF]]
-** [[gopher://circumlunar.space][Mare Tranquillitatis People's Circumlunar]]
-*** [[gemini://gemini.circumlunar.space/~parker][parker]] and [[gopher://zaibatsu.circumlunar.space/1/~parker/sites][gopher holes he enjoy]]
-**** [[gopher://dataswamp.org/1/~solene][Solene]]
-BSD
-**** [[gopher://baud.baby][Y0UR 515T3R'Z F4V0R1T3 H4CK3R]]
-**** [[gopher://schinkel.bevuta.com][Author of CHICKEN Scheme]]
-
 * Other
 #+BEGIN_COMMENT
 #+END_COMMENT
