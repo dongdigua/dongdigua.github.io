@@ -1,7 +1,7 @@
 #+TAGS: elixir(e) rust(r) c(c) lisp(l) python(p) nim(n)
 #+TAGS: lowlevel(w) frontend(f) backend(b) hack(h) algorithm(a) math(t)
 #+TAGS: emacs(m) linux(x) iot(i)
-#+TAGS: rssable(s) rssub(u)
+#+TAGS: rssable(s) rssub(u) gopher(g)
 #+OPTIONS: toc:1 ^:{}
 
 #+TITLE: Internet Collections
@@ -115,8 +115,7 @@ from ruanyifeng
 *** [[https://lantian.pub/article/chat/how-i-nuked-my-btrfs-partition.lantian/][我把硬盘换到了新电脑上，这是 Btrfs 上的数据发生的变化]]
 [[https://lantian.pub/usr/uploads/202112/chubbyemu.jpg.thumb.png]]
 *** [[https://lantian.pub/article/forward/foolish-code-typo.lantian/][最傻的代码错误：一个空格酿成的血案]]
-*** [[https://lantian.pub/article/modify-website/serve-gopher-with-nginx.lantian/][用 nginx 建立 Gopher 网站]]
-gopher://gopher.lantian.pub
+*** [[https://lantian.pub/article/modify-website/serve-gopher-with-nginx.lantian/][用 nginx 建立 Gopher 网站]]                                      :gopher:
 *** [[https://lantian.pub/article/modify-website/dn42-experimental-network-2020.lantian/][DN42 实验网络介绍及注册教程]]
 **** [[https://lantian.pub/article/modify-website/how-to-kill-the-dn42-network.lantian/][如何引爆 DN42 网络]]
 ** [[https://bryanbrattlof.com/][Bryan Brattlof]]
@@ -153,7 +152,7 @@ The Aha Moments
 *** [[https://www.howistart.org/posts/nim/1/][howistart: Nim]]
 brainf**k
 *** [[https://hookrace.net/blog/writing-an-async-logger-in-nim/][Writing an Async Logger in Nim]]
-** [[https://nyxt.atlas.engineer/article/gopher.org][Nyxt: Why should I care about Gopher?]]
+** [[https://nyxt.atlas.engineer/article/gopher.org][Nyxt: Why should I care about Gopher?]]                            :gopher:
 #+BEGIN_QUOTE
 By making something a little bit more inaccessible, we are inadvertently putting a filter on what is being posted.
 #+END_QUOTE
@@ -163,7 +162,6 @@ As a result, Gopher is full of interesting, enriching, high quality content.
 The authors are posting out of passion, and with great commitment.
 Don't get me wrong, there's nonsense on Gopher too, but far less of it.
 #+END_QUOTE
-gopher://hngopher.com/
 *** [[https://www.orangeclk.com/2022/08/22/eternal-september-community-locals/][社区本地人与永恒的九月(Eternal September)]]
 #+BEGIN_QUOTE
 几乎所有大众互联网社区都难逃此宿命。要想避免永恒九月，社区必须要足够克制，有节奏地引导新人加入。
@@ -274,6 +272,18 @@ I agree
 *** [[https://www.reddit.com/r/ProgrammerHumor/comments/wpnvtg/microsoft_visual_rust_2018/][Microsoft Visual Rust]]
 *** [[https://www.reddit.com/r/ProgrammerHumor/comments/wsw78u/regex_be_like/][MC enchant: regex be like...]]
 *** [[https://www.reddit.com/r/ProgrammerHumor/comments/mr8gqx/new_episode_of_electricianhumor/][New episode of ElectricianHumor]]
+
+* Gopher/Gemini
+can access from behind The Great Wall :)
+** [[gopher://gopher.lantian.pub][lantian gopher]]
+** [[gopher://hngopher.com][hngopher]]
+** [[gopher://forthworks.com][forthworks]]
+IOS gopher client author's homepage
+server written in RETRO, a Forth dialect he implemented
+** [[gopher://gopherpedia.com][gopherpedia]]
+** [[gopher://gopher.floodgap.com][Floodgap Systems Gopher Server]]
+*** [[https://arstechnica.com/tech-policy/2007/08/china-makes-web-monitoring-fun-again/][China makes web monitoring fun again]]
+** [[gopher://gopher.quux.org][quux]]
 
 * Other
 #+BEGIN_COMMENT

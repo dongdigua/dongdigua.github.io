@@ -25,6 +25,18 @@
          :html-link-up "./../"
          )))
 
+;; from .emacs
+(defun my/orgurl (proto)
+  (defvar proto proto) ;; important
+  (org-link-set-parameters proto
+                           :follow #'elpher-go
+                           :export
+                           (lambda (link description format _)
+                             (let ((url (format "%s:%s" proto link)))
+                               (format "<a href=\"%s\">%s</a>" url (or description url))))))
+(my/orgurl "gopher")
+(my/orgurl "gemini")
+
 (defun myweb-publish ()
      "Publish myweb."
      (interactive)
