@@ -29,7 +29,6 @@
 (defun my/orgurl (proto)
   (defvar proto proto) ;; important
   (org-link-set-parameters proto
-                           :follow #'elpher-go
                            :export
                            (lambda (link description format _)
                              (let ((url (format "%s:%s" proto link)))
@@ -47,7 +46,7 @@
       "rss.xml"
       "./../"
       "https://dongdigua.github.io"
-      (delete "rss.html" (directory-files "./../" nil ".*\.html$"))
+      (directory-files "./../" nil ".*\.html$")
       :title "dongdigua's blog"
       :description "Blog!"
       :builder 'webfeeder-make-rss)

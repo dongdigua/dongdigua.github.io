@@ -170,6 +170,17 @@ Don't get me wrong, there's nonsense on Gopher too, but far less of it.
 #+END_QUOTE
 #+ATTR_HTML: :width 256px
 [[https://upload.wikimedia.org/wikipedia/commons/d/d7/Internet_is_Full_-_Go_Away_t-shirt.jpg]]
+** [[https://petermolnar.net/index.html][Peter 's Homepage]]                                                 :rssub:
+#+BEGIN_QUOTE
+GE d@ s: a C++$ UBL+++$ P++(--)$ L++(-)$ !E W+++(-)$ !N !o K--? w !O !M  !V PS++ PE- Y+ PGP+ t+ 5+++ X+ R tv b+ DI D+ G e++ h r+++ y+++*
+#+END_QUOTE
+*** [[https://petermolnar.net/article/gopher][Gopher? Gopher.]]
+**** TODO [[https://www.minnpost.com/business/2016/08/rise-and-fall-gopher-protocol/][The rise and fall of the Gopher protocol]]
+#+BEGIN_QUOTE
+Thirteen Years ago, a small band of programmers from the
+University of Minnesota ruled the Internet
+...And then they didn't
+#+END_QUOTE
 
 ** B
 *** [[https://blog.yangmame.org/][yanemame]]
@@ -261,6 +272,7 @@ to filing patently fraudulent DMCA counter-notifications to avoid the terminatio
 I agree
 *** [[https://youtu.be/Rsxao9ptdmI][Beating 5 Scam Arcade Games with Science]]
 街机科学家～
+*** TODO [[https://youtu.be/mJgRHYw9-fU][BBS The Documentary(8)]]
 
 * r
 ** [[https://www.reddit.com/r/unixporn/][unixporn]]
@@ -284,6 +296,14 @@ server written in RETRO, a Forth dialect he implemented
 ** [[gopher://gopher.floodgap.com][Floodgap Systems Gopher Server]]
 *** [[https://arstechnica.com/tech-policy/2007/08/china-makes-web-monitoring-fun-again/][China makes web monitoring fun again]]
 ** [[gopher://gopher.quux.org][quux]]
+a lot of information of historic interest, funny, or just plain entertaining
+** [[gopher://sdf.org][SDF]]
+** [[gopher://circumlunar.space][Mare Tranquillitatis People's Circumlunar]]
+*** [[gemini://gemini.circumlunar.space/~parker][parker]] and [[gopher://zaibatsu.circumlunar.space/1/~parker/sites][gopher holes he enjoy]]
+**** [[gopher://dataswamp.org/1/~solene][Solene]]
+BSD
+**** [[gopher://baud.baby][Y0UR 515T3R'Z F4V0R1T3 H4CK3R]]
+**** [[gopher://schinkel.bevuta.com][Author of CHICKEN Scheme]]
 
 * Other
 #+BEGIN_COMMENT
@@ -292,8 +312,6 @@ server written in RETRO, a Forth dialect he implemented
 from [[https://youtu.be/8QP2fDBIxjM][tsoding's first porth video]], (he is using debian, 37:00 copilot xd)
 ** [[http://cat-v.org/][cat -v]]
 not only harmful stuff <3
-** http://sdf.org/
-SDF Public Access UNIX System .. Est. 1987
 ** [[https://joinfediverse.wiki/][fediverse wiki]]
 The Fediverse is a giant Network of social media platforms
 *** there's another thing [[https://www.w3.org/TR/webmention/][webmention]] which I found from Xe's blog
@@ -323,3 +341,6 @@ a webos using oxygen visual design
 ** [[https://news-web.php.net/php.internals/70691][PHP function hashing mechanism was strlen()]]
 ** [[http://phrack.org][Phrack Magazine]]
 *** [[http://phrack.org/issues/49/14.html][Smashing The Stack For Fun And Profit]]
+** [[https://akrl.sdf.org/gccemacs.html][gccemacs]]
+*** [[https://akrl.sdf.org/gccemacs_els2020.pdf][slides_els2020]]
+** TODO [[https://tildeverse.org]]
