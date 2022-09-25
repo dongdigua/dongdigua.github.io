@@ -62,11 +62,7 @@
 | C-x C-; | 行切换注释          |
 | C-y     | paste to minibuffer |
 | M-&/!   | async/shell command |
-
-** dired
-| key | usage  |
-|-----+--------|
-| R   | rename |
+| C-M-\   | indent-region       |
 
 ** eww/elpher (essensial)
 | key   | usage                            |
