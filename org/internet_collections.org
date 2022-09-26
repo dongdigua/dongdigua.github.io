@@ -175,17 +175,12 @@ Don't get me wrong, there's nonsense on Gopher too, but far less of it.
 GE d@ s: a C++$ UBL+++$ P++(--)$ L++(-)$ !E W+++(-)$ !N !o K--? w !O !M  !V PS++ PE- Y+ PGP+ t+ 5+++ X+ R tv b+ DI D+ G e++ h r+++ y+++*
 #+END_QUOTE
 *** [[https://petermolnar.net/article/gopher][Gopher? Gopher.]]
-**** TODO [[https://www.minnpost.com/business/2016/08/rise-and-fall-gopher-protocol/][The rise and fall of the Gopher protocol]]
-#+BEGIN_QUOTE
-Thirteen Years ago, a small band of programmers from the
-University of Minnesota ruled the Internet
-...And then they didn't
-#+END_QUOTE
 
 ** B
 *** [[https://blog.yangmame.org/][yanemame]]
 猴哥推荐的
 *** [[https://evanmeek.github.io/][我不会编程]]
+EvanMeek
 B站: 美味的樱桃菌
 *** [[https://yaocc.cc/][CC]]                                                              :linux:
 B站: 称呼我C先生
@@ -208,8 +203,6 @@ plan9
 
 * YouTube 收集(没有账号, 这就是我的收藏夹)
 ** Computer Science
-*** [[https://youtu.be/gG00NgcdNEk][代码视频片头]]
-java bad, python slow, nvidia fuck you, vi-sual studio, C艹 sucks
 *** [[https://youtu.be/0rJ94rbdteE][Rust 让你感觉像个天才]]
 *** [[https://youtu.be/nfF91Z6fqGk][CMD 登录B站]]
 *** [[https://youtu.be/l0AmlU-4IRM][Rust aes加密(legacy)]]
@@ -272,7 +265,7 @@ to filing patently fraudulent DMCA counter-notifications to avoid the terminatio
 I agree
 *** [[https://youtu.be/Rsxao9ptdmI][Beating 5 Scam Arcade Games with Science]]
 街机科学家～
-*** TODO [[https://youtu.be/mJgRHYw9-fU][BBS The Documentary(8)]]
+*** TODO [[https://youtube.com/playlist?list=PLgE-9Sxs2IBVgJkY-1ZMj0tIFxsJ-vOkv][BBS The Documentary(8)]]
 
 * r
 ** [[https://www.reddit.com/r/unixporn/][unixporn]]
@@ -320,6 +313,7 @@ a webos using oxygen visual design
 ** [[https://news.ycombinator.com/item?id=32012566][Hacker News: A better formulation of DRY(Don't Repeat Yourself) is SPOT (Single Point Of Truth)]]
 ** [[https://news-web.php.net/php.internals/70691][PHP function hashing mechanism was strlen()]]
 ** [[http://phrack.org][Phrack Magazine]]
+worth reading
 *** [[http://phrack.org/issues/49/14.html][Smashing The Stack For Fun And Profit]]
 ** [[https://akrl.sdf.org/gccemacs.html][gccemacs]]
 *** [[https://akrl.sdf.org/gccemacs_els2020.pdf][slides_els2020]]
