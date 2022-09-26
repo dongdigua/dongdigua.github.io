@@ -1,19 +1,30 @@
+  _____          _      _
+ / ___/__ __ _  (_)__  (_)
+/ (_ / -_)  ' \/ / _ \/ /
+\___/\__/_/_/_/_/_//_/_/
+
 # Gopher/Gemini collections
+A quiet place in the internet other than HyperText Machine Learning
+And can access from behind the Great Wall :)
 > '+' for alignment and org-like tree 
-=> gopher://gopher.lantian.pub               + lantian gopher
-=> gopher://hngopher.com                     + hngopher
-=> gopher://forthworks.com                   + forthworks
+=> gopher://gopherpedia.com                                           + gopherpedia
+=> gopher://hngopher.com                                              + hngopher
+=> gopher://gopher.lantian.pub                                        + lantian gopher
+=> gopher://forthworks.com                                            + forthworks
 IOS gopher client author's homepage
 server written in RETRO, a Forth dialect he implemented
-=> gopher://gopherpedia.com                  + gopherpedia
-=> gopher://gopher.floodgap.com              + Floodgap Systems Gopher Server
-=> gopher://gopher.quux.org                  + quux
+=> gopher://gopher.floodgap.com                                       + Floodgap Systems Gopher Server
+=> gopher://gopher.quux.org                                           + quux
 a lot of information of historic interest, funny, or just plain entertaining
-=> gopher://sdf.org                          + SDF
+=> gopher://gopher.quux.org/g/Software/Gopher/screenshots/mozilla.gif ++ mozilla 0.9 with gopher tree view
+=> gopher://sdf.org                                                   + SDF
 SDF Public Access UNIX System .. Est. 1987
-=> gopher://circumlunar.space                + Mare Tranquillitatis People's Circumlunar
-=> gemini://gemini.circumlunar.space/~parker ++ parker
-=> gopher://dataswamp.org/1/~solene          +++ Solene
+=> gemini://gem.sdf.org/oak3/                                         ++ Oak3's Cafe Gem
+=> gopher://dataswamp.org                                             + dataswamp
+=> gopher://dataswamp.org/1/~solene                                   ++ Solene
 BSD
-=> gopher://baud.baby                        +++ Y0UR 515T3R'Z F4V0R1T3 H4CK3R
-=> gopher://schinkel.bevuta.com              +++ Author of CHICKEN Scheme
+> parker(circumlunar.space): I like her stuff.  ¯\_(ツ)_/¯
+=> gopher://baud.baby                                                 + Y0UR 515T3R'Z F4V0R1T3 H4CK3R
+=> gopher://schinkel.bevuta.com                                       + Author of CHICKEN Scheme
+=> gemini://ew.srht.site/                                             + ew
+lots of 'Re:'
