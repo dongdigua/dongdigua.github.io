@@ -1,1 +1,1 @@
-gopher_collections.gmi
+gmi/gopher_collections.gmi
