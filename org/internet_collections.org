@@ -242,6 +242,7 @@ plan9
 *** [[https://youtu.be/3gyHKCDq1YA][p-adic Numbers: 2 ^ 10n]]
 *** [[https://youtu.be/4nG49xTTjIA][The Real Reason Why Negative Times Negative is Positive, Intro to Rings]]
 *** [[https://youtu.be/v_HeaeUUOnc][How to Take the Factorial of Any Number]]
+*** [[https://youtu.be/NJCiUVGiNyA][Coding a 3D Fractal: Mandelbulb]]
 
 ** Minecraft
 *** [[https://youtu.be/VKydXD6Lr20][Mojang & Minecraft 开始衰落了吗?]]

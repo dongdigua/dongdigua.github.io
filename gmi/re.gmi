@@ -1,0 +1,20 @@
+Just Some Reaction
+(if this file grows too big, I will seperate them)
+
+* BSD-guy: gemini thoughts
+=> gemini://gemini.ctrl-c.club/~BSD-guy/gemini-thoughts.gmi
+> In it's infancy, Gemini just looks like a lot of people uploading a test page with a link to their friends test pages and a few links to their HTTPS:// 'real' sites
+yeah, and now many pages are still 'Hello'
+I think it's a bit waste of resources
+It's disappointing when you browse the user list of a server,
+randomly enter a entry and only to see a 'Hello' message
+> 2020 was obviously a very strange and challenging year for most of humankind,
+> the WWW became an essential thing rather than a play thing,
+> and sadly the big tech have seized on this to further their death-grip on things
+bilibili(originally MikuFans) as an example, it really, really changed a lot in 2020 in my experience(I registered in 2019)
+too many people rushed into it (and B decreased the difficulty of the register exam),
+some just to while away the time, others trying to earn money, with totally shit rubbish entertainment video
+> in a video's comment: 以前做啥火啥, 现在火啥做啥
+and Ding Talk, Tencent Meeting(steal a lot from zoom, and recently added "小(啸)程序"), Zhumu(a copy of zoom for China),
+all benifited a lot from the epidemic
+any big event, in those companies' view, is money.
