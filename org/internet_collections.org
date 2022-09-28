@@ -9,7 +9,9 @@
 
 * 一些(个人)博客收集
 #+BEGIN_CENTER
-魔 法 禁 书 目 录
+ /|  /` _   |-  .,_  |\/|    . _  |  |,_ | _   
+/-|  \,(/_|`|_(||||  |  |(|(||(_(||  |||(|(/_><
+                           _|                  
 #+END_CENTER
 ** [[http://www.paulgraham.com/todo.html][Paul Graham]]
 ** [[http://www.qiusir.com/][qiusir]]                                                            :rssub:
