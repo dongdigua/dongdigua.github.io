@@ -1,0 +1,138 @@
+#+TITLE: Fedora/CentOS 不同安装配置/变体
+#+DESCRIPTION: Different Installation Config/Variation of Fedora/CentOS
+#+DATE: <2022-09-29 四>
+
+for cossig.org(CentOS 中文特别兴趣小组)
+所以我这回不用英文了哈哈
+
+* CentOS
+CentOS 安装时可选不同的配置
+[[./../images/centos_install_config.png]]
+其实这些就是不同的软件组
+CentOS-Stream 8 为例, 定义软件组的文件是 [[https://git.centos.org/centos/comps/blob/master/f/comps-centos-8-stream.xml][comps.xml]]
+左边的基本环境就是 =<environment>= tag 列表
+一共有11个
+#+BEGIN_SRC xml
+  <environment variant="BaseOS">
+    <id>custom-environment</id>
+    <name>Custom Operating System</name>
+    <display_order>5</display_order>
+    <!---->
+  </environment>
+  <environment variant="BaseOS">
+    <id>minimal-environment</id>
+    <name>Minimal Install</name>
+    <display_order>4</display_order>
+    <!---->
+  </environment>
+  <environment>
+    <id>server-product-environment</id>
+    <name>Server</name>
+    <display_order>2</display_order>
+    <!---->
+  </environment>
+  <environment arch="aarch64,s390x,ppc64le,x86_64">
+    <id>graphical-server-environment</id>
+    <name>Server with GUI</name>
+    <display_order>1</display_order>
+    <!---->
+  </environment>
+  <environment variant="BaseOS">
+    <id>cloud-server-environment</id>
+    <name>Cloud Server</name>
+    <display_order>3</display_order>
+    <!---->
+  </environment>
+  <environment variant="BaseOS">
+    <id>web-server-environment</id>
+    <name>Web Server</name>
+    <display_order>50</display_order>
+    <!---->
+  </environment>
+  <environment>
+    <id>infrastructure-server-environment</id>
+    <name>Infrastructure Server</name>
+    <display_order>60</display_order>
+    <!---->
+  </environment>
+  <environment variant="AppStream" arch="x86_64,ppc64le">
+    <id>developer-workstation-environment</id>
+    <name>Development and Creative Workstation</name>
+    <display_order>90</display_order>
+    <!---->
+  </environment>
+  <environment variant="AppStream" arch="x86_64,ppc64le">
+    <id>gnome-desktop-environment</id>
+    <name>GNOME Desktop</name>
+    <display_order>80</display_order>
+    <!---->
+  </environment>
+  <environment variant="AppStream" arch="x86_64,ppc64le">
+    <id>workstation-product-environment</id>
+    <name>Workstation</name>
+    <display_order>3</display_order>
+    <!---->
+  </environment>
+  <environment variant="AppStream" arch="x86_64">
+    <id>virtualization-host-environment</id>
+    <name>Virtualization Host</name>
+    <display_order>70</display_order>
+    <!---->
+  </environment>
+#+END_SRC
+然后我就觉得 =display_order= 排序就对应的是左边的位置
+但是有的还对不上, 应该很接近了...吧?
+
+* Fedora
+Fedora 分不同的变体, 常见的是 Server 和 Workstation
+与 CentOS 不同, Fedora 是在 [[https://pagure.io/fedora-kickstarts/][kickstarts]] 定义的变体
+在 =[Payload]= 中定义了安装哪些软件(组)
+然后根据 [[https://pagure.io/fedora-comps/blob/main/f/comps-f37.xml.in][comps.xml]] 就知道安装了什么软件
+** Workstation
+workstation-product-environment
+#+BEGIN_SRC xml
+  <environment>
+    <id>workstation-product-environment</id>
+    <_name>Fedora Workstation</_name>
+    <_description>Fedora Workstation is a user friendly desktop system for laptops and PCs.</_description>
+    <display_order>2</display_order>
+    <grouplist>
+      <groupid>base-x</groupid>
+      <groupid>container-management</groupid>
+      <groupid>core</groupid>
+      <groupid>firefox</groupid>
+      <groupid>fonts</groupid>
+      <groupid>gnome-desktop</groupid>
+      <groupid>guest-desktop-agents</groupid>
+      <groupid>hardware-support</groupid>
+      <groupid>libreoffice</groupid>
+      <groupid>multimedia</groupid>
+      <groupid>networkmanager-submodules</groupid>
+      <groupid>printing</groupid>
+      <groupid>workstation-product</groupid>
+    </grouplist>
+    <optionlist>
+      <groupid>arm-tools</groupid>
+    </optionlist>
+  </environment>
+#+END_SRC
+** Server
+server-product-environment
+#+BEGIN_SRC xml
+  <environment>
+    <id>server-product-environment</id>
+    <name>Server</name>
+    <display_order>2</display_order>
+    <grouplist>
+      <groupid>server-product</groupid>
+      <groupid>standard</groupid>
+      <groupid>core</groupid>
+      <groupid>hardware-support</groupid>
+      <groupid>headless-management</groupid>
+      <groupid>container-management</groupid>
+    </grouplist>
+    <!---->
+    <optionlist>
+    </optionlist>
+  </environment>
+#+END_SRC
