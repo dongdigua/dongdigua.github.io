@@ -8,11 +8,12 @@
 #+DATE: <2022-06-05 日>
 
 * 一些(个人)博客收集
-#+BEGIN_CENTER
- /|  /` _   |-  .,_  |\/|    . _  |  |,_ | _   
-/-|  \,(/_|`|_(||||  |  |(|(||(_(||  |||(|(/_><
-                           _|                  
-#+END_CENTER
+#+BEGIN_SRC text
+         _                                                  ___
+  /\    /   _  ._ _|_  _. o ._    |\/|  _.  _  o  _  _. |    |  ._   _|  _
+ /--\   \_ (/_ |   |_ (_| | | |   |  | (_| (_| | (_ (_| |   _|_ | | (_| (/_ ><
+                                            _|
+#+END_SRC
 ** [[http://www.paulgraham.com/todo.html][Paul Graham]]
 ** [[http://www.qiusir.com/][qiusir]]                                                            :rssub:
 ** [[http://xahlee.info][XahLee]]
@@ -318,6 +319,7 @@ a webos using oxygen visual design
 ** [[http://phrack.org][Phrack Magazine]]
 worth reading
 *** [[http://phrack.org/issues/49/14.html][Smashing The Stack For Fun And Profit]]
+*** [[http://phrack.org/issues/70/15.html][YouTube Security Scene - LiveOverflow!]]
 ** [[https://akrl.sdf.org/gccemacs.html][gccemacs]]
 *** [[https://akrl.sdf.org/gccemacs_els2020.pdf][slides_els2020]]
 ** TODO [[https://tildeverse.org]]
