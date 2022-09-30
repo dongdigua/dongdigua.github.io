@@ -3,12 +3,12 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-09-29 四 23:29 -->
+<!-- 2022-09-30 五 10:15 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Fedora/CentOS 不同安装配置/变体</title>
+<title>CentOS/Fedora 不同配置/变体都默认安装了什么软件(组)</title>
 <meta name="author" content="dongdigua" />
-<meta name="description" content="Different Installation Config/Variation of Fedora/CentOS" />
+<meta name="description" content="Default Software(Group) in Different Installation Config/Variation of CentOS/Fedora" />
 <meta name="generator" content="Org Mode" />
 <style>
   #content { max-width: 60em; margin: auto; }
@@ -202,7 +202,7 @@
  |
  <a accesskey="H" href="https://dongdigua.github.io"> HOME </a>
 </div><div id="content" class="content">
-<h1 class="title">Fedora/CentOS 不同安装配置/变体</h1>
+<h1 class="title">CentOS/Fedora 不同配置/变体都默认安装了什么软件(组)</h1>
 <div id="table-of-contents" role="doc-toc">
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
@@ -227,7 +227,9 @@ for cossig.org(CentOS 中文特别兴趣小组)<br />
 <div class="outline-text-2" id="text-1">
 <p>
 CentOS 安装时可选不同的配置<br />
-<img src="./../images/centos_install_config.png" alt="centos_install_config.png" /><br />
+</p>
+<p width="512px">
+<img src="./../images/centos_install_config.png" alt="centos_install_config.png" width="512px" /><br />
 其实这些就是不同的软件组<br />
 CentOS-Stream 8 为例, 定义软件组的文件是 <a href="https://git.centos.org/centos/comps/blob/master/f/comps-centos-8-stream.xml">comps.xml</a><br />
 左边的基本环境就是 <code>&lt;environment&gt;</code> tag 列表<br />
@@ -303,9 +305,161 @@ CentOS-Stream 8 为例, 定义软件组的文件是 <a href="https://git.centos.
 </pre>
 </div>
 <p>
-然后我就觉得 <code>display_order</code> 排序就对应的是左边的位置<br />
-但是有的还对不上, 应该很接近了&#x2026;吧?<br />
+但还是对不上, 应该很接近了&#x2026;吧?<br />
 </p>
+
+<p>
+想起来不联网是没法选择安装软件的<br />
+然后瞅一眼产生的临时文件 <code>/tmp/dnf.cache/</code><br />
+</p>
+<div class="org-src-container">
+<pre class="src src-text">&#9500;&#9472;&#9472; appstream-831abc7e9d6a1a72
+&#9474;  &#9500;&#9472;&#9472; metalink.xml
+&#9474;  &#9492;&#9472;&#9472; repodata
+&#9474;     &#9500;&#9472;&#9472; 95f4408838f85e23117d7d89ab47e1029692a443722e0e315fe3db07c32ee573-modules.yaml.xz
+&#9474;     &#9500;&#9472;&#9472; 2047121fda8828f9b4d611cbfb736a89048cb411356e7ac2bdd95d927d044791-filelists.xml.gz
+&#9474;     &#9500;&#9472;&#9472; e27fd8f9028bdc339a014f95debd07da4ef7b217522d14721af050aa9e7cf93e-primary.xml.gz
+&#9474;     &#9500;&#9472;&#9472; f0d518764a274c71de0773b3590932ded56234b2f6ac4bf025d125b7ed29269f-comps-AppStream.x86_64.xml
+&#9474;     &#9500;&#9472;&#9472; gen
+&#9474;     &#9474;  &#9492;&#9472;&#9472; groups.xml
+&#9474;     &#9492;&#9472;&#9472; repomd.xml
+&#9500;&#9472;&#9472; baseos-044cae74d71fe9ea
+&#9474;  &#9500;&#9472;&#9472; metalink.xml
+&#9474;  &#9492;&#9472;&#9472; repodata
+&#9474;     &#9500;&#9472;&#9472; 88ded6c02c5c3c62ab02250505cf0b8dee3af85819b666731c3cf813c275db6c-primary.xml.gz
+&#9474;     &#9500;&#9472;&#9472; b47aeefede03d4d530f4538bf8f73531fd1a6a2bb66ca1778e3423c4dec34121-filelists.xml.gz
+&#9474;     &#9500;&#9472;&#9472; d52d95f0f2d1a56b197a698aa328813a7e45e2d5b2883e04f4a3f604638b7a4a-comps-BaseOS.x86_64.xml
+&#9474;     &#9500;&#9472;&#9472; gen
+&#9474;     &#9474;  &#9492;&#9472;&#9472; groups.xml
+&#9474;     &#9492;&#9472;&#9472; repomd.xml
+</pre>
+</div>
+<p>
+那里面的 <code>*-comps-*.xml</code> 的 <code>&lt;environment&gt;</code> 的 <code>&lt;display_order&gt;</code><br />
+就正好是 1~4 和两个 99<br />
+</p>
+
+<p>
+comps-AppStream.x86<sub>64.xml</sub><br />
+</p>
+<div class="org-src-container">
+<pre class="src src-xml">&lt;<span style="font-weight: bold;">environment</span>&gt;
+  &lt;<span style="font-weight: bold;">id</span>&gt;graphical-server-environment&lt;/<span style="font-weight: bold;">id</span>&gt;
+  &lt;<span style="font-weight: bold;">name</span>&gt;Server with GUI&lt;/<span style="font-weight: bold;">name</span>&gt;
+  &lt;<span style="font-weight: bold;">description</span>&gt;An integrated, easy-to-manage server with a graphical interface.&lt;/<span style="font-weight: bold;">description</span>&gt;
+  &lt;<span style="font-weight: bold;">display_order</span>&gt;1&lt;/<span style="font-weight: bold;">display_order</span>&gt;
+  &lt;<span style="font-weight: bold;">grouplist</span>&gt;
+    &lt;<span style="font-weight: bold;">groupid</span>&gt;base-x&lt;/<span style="font-weight: bold;">groupid</span>&gt;
+    &lt;<span style="font-weight: bold;">groupid</span>&gt;container-management&lt;/<span style="font-weight: bold;">groupid</span>&gt;
+    &lt;<span style="font-weight: bold;">groupid</span>&gt;core&lt;/<span style="font-weight: bold;">groupid</span>&gt;
+    &lt;<span style="font-weight: bold;">groupid</span>&gt;fonts&lt;/<span style="font-weight: bold;">groupid</span>&gt;
+    &lt;<span style="font-weight: bold;">groupid</span>&gt;gnome-desktop&lt;/<span style="font-weight: bold;">groupid</span>&gt;
+    &lt;<span style="font-weight: bold;">groupid</span>&gt;guest-desktop-agents&lt;/<span style="font-weight: bold;">groupid</span>&gt;
+    &lt;<span style="font-weight: bold;">groupid</span>&gt;hardware-monitoring&lt;/<span style="font-weight: bold;">groupid</span>&gt;
+    &lt;<span style="font-weight: bold;">groupid</span>&gt;hardware-support&lt;/<span style="font-weight: bold;">groupid</span>&gt;
+    &lt;<span style="font-weight: bold;">groupid</span>&gt;headless-management&lt;/<span style="font-weight: bold;">groupid</span>&gt;
+    &lt;<span style="font-weight: bold;">groupid</span>&gt;internet-browser&lt;/<span style="font-weight: bold;">groupid</span>&gt;
+    &lt;<span style="font-weight: bold;">groupid</span>&gt;multimedia&lt;/<span style="font-weight: bold;">groupid</span>&gt;
+    &lt;<span style="font-weight: bold;">groupid</span>&gt;networkmanager-submodules&lt;/<span style="font-weight: bold;">groupid</span>&gt;
+    &lt;<span style="font-weight: bold;">groupid</span>&gt;print-client&lt;/<span style="font-weight: bold;">groupid</span>&gt;
+    &lt;<span style="font-weight: bold;">groupid</span>&gt;server-product&lt;/<span style="font-weight: bold;">groupid</span>&gt;
+    &lt;<span style="font-weight: bold;">groupid</span>&gt;standard&lt;/<span style="font-weight: bold;">groupid</span>&gt;
+  &lt;/<span style="font-weight: bold;">grouplist</span>&gt;
+  &lt;<span style="font-weight: bold;">optionlist</span>&gt;<span style="font-weight: bold; font-style: italic;">&lt;!----&gt;</span>&lt;/<span style="font-weight: bold;">optionlist</span>&gt;
+&lt;/<span style="font-weight: bold;">environment</span>&gt;
+&lt;<span style="font-weight: bold;">environment</span>&gt;
+  &lt;<span style="font-weight: bold;">id</span>&gt;server-product-environment&lt;/<span style="font-weight: bold;">id</span>&gt;
+  &lt;<span style="font-weight: bold;">name</span>&gt;Server&lt;/<span style="font-weight: bold;">name</span>&gt;
+  &lt;<span style="font-weight: bold;">description</span>&gt;An integrated, easy-to-manage server.&lt;/<span style="font-weight: bold;">description</span>&gt;
+  &lt;<span style="font-weight: bold;">display_order</span>&gt;2&lt;/<span style="font-weight: bold;">display_order</span>&gt;
+  &lt;<span style="font-weight: bold;">grouplist</span>&gt;
+    &lt;<span style="font-weight: bold;">groupid</span>&gt;container-management&lt;/<span style="font-weight: bold;">groupid</span>&gt;
+    &lt;<span style="font-weight: bold;">groupid</span>&gt;core&lt;/<span style="font-weight: bold;">groupid</span>&gt;
+    &lt;<span style="font-weight: bold;">groupid</span>&gt;hardware-support&lt;/<span style="font-weight: bold;">groupid</span>&gt;
+    &lt;<span style="font-weight: bold;">groupid</span>&gt;headless-management&lt;/<span style="font-weight: bold;">groupid</span>&gt;
+    &lt;<span style="font-weight: bold;">groupid</span>&gt;server-product&lt;/<span style="font-weight: bold;">groupid</span>&gt;
+    &lt;<span style="font-weight: bold;">groupid</span>&gt;standard&lt;/<span style="font-weight: bold;">groupid</span>&gt;
+  &lt;/<span style="font-weight: bold;">grouplist</span>&gt;
+  &lt;<span style="font-weight: bold;">optionlist</span>&gt;<span style="font-weight: bold; font-style: italic;">&lt;!----&gt;</span>&lt;/<span style="font-weight: bold;">optionlist</span>&gt;
+&lt;/<span style="font-weight: bold;">environment</span>&gt;
+&lt;<span style="font-weight: bold;">environment</span>&gt;
+  &lt;<span style="font-weight: bold;">id</span>&gt;virtualization-host-environment&lt;/<span style="font-weight: bold;">id</span>&gt;
+  &lt;<span style="font-weight: bold;">name</span>&gt;Virtualization Host&lt;/<span style="font-weight: bold;">name</span>&gt;
+  &lt;<span style="font-weight: bold;">description</span>&gt;Minimal virtualization host.&lt;/<span style="font-weight: bold;">description</span>&gt;
+  &lt;<span style="font-weight: bold;">display_order</span>&gt;99&lt;/<span style="font-weight: bold;">display_order</span>&gt;
+  &lt;<span style="font-weight: bold;">grouplist</span>&gt;
+    &lt;<span style="font-weight: bold;">groupid</span>&gt;base&lt;/<span style="font-weight: bold;">groupid</span>&gt;
+    &lt;<span style="font-weight: bold;">groupid</span>&gt;core&lt;/<span style="font-weight: bold;">groupid</span>&gt;
+    &lt;<span style="font-weight: bold;">groupid</span>&gt;standard&lt;/<span style="font-weight: bold;">groupid</span>&gt;
+    &lt;<span style="font-weight: bold;">groupid</span>&gt;virtualization-hypervisor&lt;/<span style="font-weight: bold;">groupid</span>&gt;
+    &lt;<span style="font-weight: bold;">groupid</span>&gt;virtualization-tools&lt;/<span style="font-weight: bold;">groupid</span>&gt;
+  &lt;/<span style="font-weight: bold;">grouplist</span>&gt;
+  &lt;<span style="font-weight: bold;">optionlist</span>&gt;<span style="font-weight: bold; font-style: italic;">&lt;!----&gt;</span>&lt;/<span style="font-weight: bold;">optionlist</span>&gt;
+&lt;/<span style="font-weight: bold;">environment</span>&gt;
+&lt;<span style="font-weight: bold;">environment</span>&gt;
+  &lt;<span style="font-weight: bold;">id</span>&gt;workstation-product-environment&lt;/<span style="font-weight: bold;">id</span>&gt;
+  &lt;<span style="font-weight: bold;">name</span>&gt;Workstation&lt;/<span style="font-weight: bold;">name</span>&gt;
+  &lt;<span style="font-weight: bold;">description</span>&gt;Workstation is a user-friendly desktop system for laptops and PCs.&lt;/<span style="font-weight: bold;">description</span>&gt;
+  &lt;<span style="font-weight: bold;">display_order</span>&gt;4&lt;/<span style="font-weight: bold;">display_order</span>&gt;
+  &lt;<span style="font-weight: bold;">grouplist</span>&gt;
+    &lt;<span style="font-weight: bold;">groupid</span>&gt;base-x&lt;/<span style="font-weight: bold;">groupid</span>&gt;
+    &lt;<span style="font-weight: bold;">groupid</span>&gt;core&lt;/<span style="font-weight: bold;">groupid</span>&gt;
+    &lt;<span style="font-weight: bold;">groupid</span>&gt;fonts&lt;/<span style="font-weight: bold;">groupid</span>&gt;
+    &lt;<span style="font-weight: bold;">groupid</span>&gt;gnome-desktop&lt;/<span style="font-weight: bold;">groupid</span>&gt;
+    &lt;<span style="font-weight: bold;">groupid</span>&gt;guest-desktop-agents&lt;/<span style="font-weight: bold;">groupid</span>&gt;
+    &lt;<span style="font-weight: bold;">groupid</span>&gt;hardware-support&lt;/<span style="font-weight: bold;">groupid</span>&gt;
+    &lt;<span style="font-weight: bold;">groupid</span>&gt;internet-browser&lt;/<span style="font-weight: bold;">groupid</span>&gt;
+    &lt;<span style="font-weight: bold;">groupid</span>&gt;multimedia&lt;/<span style="font-weight: bold;">groupid</span>&gt;
+    &lt;<span style="font-weight: bold;">groupid</span>&gt;networkmanager-submodules&lt;/<span style="font-weight: bold;">groupid</span>&gt;
+    &lt;<span style="font-weight: bold;">groupid</span>&gt;print-client&lt;/<span style="font-weight: bold;">groupid</span>&gt;
+    &lt;<span style="font-weight: bold;">groupid</span>&gt;standard&lt;/<span style="font-weight: bold;">groupid</span>&gt;
+    &lt;<span style="font-weight: bold;">groupid</span>&gt;workstation-product&lt;/<span style="font-weight: bold;">groupid</span>&gt;
+  &lt;/<span style="font-weight: bold;">grouplist</span>&gt;
+  &lt;<span style="font-weight: bold;">optionlist</span>&gt;<span style="font-weight: bold; font-style: italic;">&lt;!----&gt;</span>&lt;/<span style="font-weight: bold;">optionlist</span>&gt;
+&lt;/<span style="font-weight: bold;">environment</span>&gt;
+</pre>
+</div>
+
+<p>
+comps-BaseOS.x86<sub>64.xml</sub><br />
+</p>
+<div class="org-src-container">
+<pre class="src src-xml">&lt;<span style="font-weight: bold;">environment</span>&gt;
+  &lt;<span style="font-weight: bold;">id</span>&gt;custom-environment&lt;/<span style="font-weight: bold;">id</span>&gt;
+  &lt;<span style="font-weight: bold;">name</span>&gt;Custom Operating System&lt;/<span style="font-weight: bold;">name</span>&gt;
+  &lt;<span style="font-weight: bold;">description</span>&gt;Basic building block for a custom RHEL system.&lt;/<span style="font-weight: bold;">description</span>&gt;
+  &lt;<span style="font-weight: bold;">display_order</span>&gt;99&lt;/<span style="font-weight: bold;">display_order</span>&gt;
+  &lt;<span style="font-weight: bold;">grouplist</span>&gt;
+    &lt;<span style="font-weight: bold;">groupid</span>&gt;core&lt;/<span style="font-weight: bold;">groupid</span>&gt;
+  &lt;/<span style="font-weight: bold;">grouplist</span>&gt;
+  &lt;<span style="font-weight: bold;">optionlist</span>&gt;<span style="font-weight: bold; font-style: italic;">&lt;!----&gt;</span>&lt;/<span style="font-weight: bold;">optionlist</span>&gt;
+&lt;/<span style="font-weight: bold;">environment</span>&gt;
+&lt;<span style="font-weight: bold;">environment</span>&gt;
+  &lt;<span style="font-weight: bold;">id</span>&gt;minimal-environment&lt;/<span style="font-weight: bold;">id</span>&gt;
+  &lt;<span style="font-weight: bold;">name</span>&gt;Minimal Install&lt;/<span style="font-weight: bold;">name</span>&gt;
+  &lt;<span style="font-weight: bold;">description</span>&gt;Basic functionality.&lt;/<span style="font-weight: bold;">description</span>&gt;
+  &lt;<span style="font-weight: bold;">display_order</span>&gt;3&lt;/<span style="font-weight: bold;">display_order</span>&gt;
+  &lt;<span style="font-weight: bold;">grouplist</span>&gt;
+    &lt;<span style="font-weight: bold;">groupid</span>&gt;core&lt;/<span style="font-weight: bold;">groupid</span>&gt;
+  &lt;/<span style="font-weight: bold;">grouplist</span>&gt;
+  &lt;<span style="font-weight: bold;">optionlist</span>&gt;<span style="font-weight: bold; font-style: italic;">&lt;!----&gt;</span>&lt;/<span style="font-weight: bold;">optionlist</span>&gt;
+&lt;/<span style="font-weight: bold;">environment</span>&gt;
+&lt;<span style="font-weight: bold;">environment</span>&gt;
+  &lt;<span style="font-weight: bold;">id</span>&gt;server-product-environment&lt;/<span style="font-weight: bold;">id</span>&gt;
+  &lt;<span style="font-weight: bold;">name</span>&gt;Server&lt;/<span style="font-weight: bold;">name</span>&gt;
+  &lt;<span style="font-weight: bold;">description</span>&gt;An integrated, easy-to-manage server.&lt;/<span style="font-weight: bold;">description</span>&gt;
+  &lt;<span style="font-weight: bold;">display_order</span>&gt;2&lt;/<span style="font-weight: bold;">display_order</span>&gt;
+  &lt;<span style="font-weight: bold;">grouplist</span>&gt;
+    &lt;<span style="font-weight: bold;">groupid</span>&gt;core&lt;/<span style="font-weight: bold;">groupid</span>&gt;
+    &lt;<span style="font-weight: bold;">groupid</span>&gt;hardware-support&lt;/<span style="font-weight: bold;">groupid</span>&gt;
+    &lt;<span style="font-weight: bold;">groupid</span>&gt;headless-management&lt;/<span style="font-weight: bold;">groupid</span>&gt;
+    &lt;<span style="font-weight: bold;">groupid</span>&gt;server-product&lt;/<span style="font-weight: bold;">groupid</span>&gt;
+    &lt;<span style="font-weight: bold;">groupid</span>&gt;standard&lt;/<span style="font-weight: bold;">groupid</span>&gt;
+  &lt;/<span style="font-weight: bold;">grouplist</span>&gt;
+  &lt;<span style="font-weight: bold;">optionlist</span>&gt;<span style="font-weight: bold; font-style: italic;">&lt;!----&gt;</span>&lt;/<span style="font-weight: bold;">optionlist</span>&gt;
+&lt;/<span style="font-weight: bold;">environment</span>&gt;
+</pre>
+</div>
 </div>
 </div>
 
@@ -346,9 +500,7 @@ workstation-product-environment<br />
     &lt;<span style="font-weight: bold;">groupid</span>&gt;printing&lt;/<span style="font-weight: bold;">groupid</span>&gt;
     &lt;<span style="font-weight: bold;">groupid</span>&gt;workstation-product&lt;/<span style="font-weight: bold;">groupid</span>&gt;
   &lt;/<span style="font-weight: bold;">grouplist</span>&gt;
-  &lt;<span style="font-weight: bold;">optionlist</span>&gt;
-    &lt;<span style="font-weight: bold;">groupid</span>&gt;arm-tools&lt;/<span style="font-weight: bold;">groupid</span>&gt;
-  &lt;/<span style="font-weight: bold;">optionlist</span>&gt;
+  &lt;<span style="font-weight: bold;">optionlist</span>&gt;<span style="font-weight: bold; font-style: italic;">&lt;!----&gt;</span>&lt;/<span style="font-weight: bold;">optionlist</span>&gt;
 &lt;/<span style="font-weight: bold;">environment</span>&gt;
 </pre>
 </div>
@@ -373,9 +525,7 @@ server-product-environment<br />
     &lt;<span style="font-weight: bold;">groupid</span>&gt;headless-management&lt;/<span style="font-weight: bold;">groupid</span>&gt;
     &lt;<span style="font-weight: bold;">groupid</span>&gt;container-management&lt;/<span style="font-weight: bold;">groupid</span>&gt;
   &lt;/<span style="font-weight: bold;">grouplist</span>&gt;
-  <span style="font-weight: bold; font-style: italic;">&lt;!----&gt;</span>
-  &lt;<span style="font-weight: bold;">optionlist</span>&gt;
-  &lt;/<span style="font-weight: bold;">optionlist</span>&gt;
+  &lt;<span style="font-weight: bold;">optionlist</span>&gt;<span style="font-weight: bold; font-style: italic;">&lt;!----&gt;</span>&lt;/<span style="font-weight: bold;">optionlist</span>&gt;
 &lt;/<span style="font-weight: bold;">environment</span>&gt;
 </pre>
 </div>
@@ -386,7 +536,7 @@ server-product-environment<br />
 <div id="postamble" class="status">
 <p class="date">Date: 2022-09-29 四 00:00</p>
 <p class="author">Author: dongdigua</p>
-<p class="date">Created: 2022-09-29 四 23:29</p>
+<p class="date">Created: 2022-09-30 五 10:15</p>
 </div>
 </body>
 </html>

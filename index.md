@@ -3,6 +3,7 @@
 
 
 ### Table of Contents (sorted by time)
+[CentOS/Fedora 不同的配置默认都安装了什么软件](anaconda_kickstarts)<br>
 [Gopher/Gemini reactions](re.gmi.txt)<br>
 [Gopher/Gemini collections, a quiet web](gopher_collections.gmi.txt)<br>
 [build a nixos live image](nixos)<br>
