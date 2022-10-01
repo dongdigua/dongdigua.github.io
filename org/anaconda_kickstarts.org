@@ -1,3 +1,5 @@
+#+BLOG: cossig
+#+POSTID: 391
 #+TITLE: CentOS/Fedora 不同配置/变体都默认安装了什么软件(组)
 #+DESCRIPTION: Default Software(Group) in Different Installation Config/Variation of CentOS/Fedora
 #+DATE: <2022-09-29 四>

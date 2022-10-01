@@ -1,6 +1,6 @@
 #+TAGS: elixir(e) rust(r) c(c) lisp(l) python(p) nim(n)
 #+TAGS: lowlevel(w) frontend(f) backend(b) hack(h) algorithm(a) math(t)
-#+TAGS: emacs(m) linux(x) iot(i)
+#+TAGS: emacs(m) linux(x) iot(i) plan9(9)
 #+TAGS: rssable(s) rssub(u) gopher(g)
 #+OPTIONS: toc:1 ^:{}
 
@@ -73,9 +73,9 @@ luogu
 许多东方的图诶
 *** [[http://incf19.com/yynotes/posts/2021-10-25-14-蝴蝶效应与emacs动画][蝴蝶效应与emacs动画]]
 *** [[http://www.incf19.com/yynotes/posts/2021-05-28-5-emacs的cl扩展][emacs cl-lib]]
-#+BEGIN_QUOTE
+#+BEGIN_SRC text
 Package cl is deprecated
-#+END_QUOTE
+#+END_SRC
 *** [[http://incf19.com/yynotes/posts/2021-03-22-1-由(λ(x)(x x))看elisp与scheme之区别][由(λ(x)(x x))看elisp与scheme之区别]]
 #+BEGIN_QUOTE
 这个问题其实就是 Lisp-1 和 Lisp-2 的区别导致的
@@ -178,6 +178,14 @@ Don't get me wrong, there's nonsense on Gopher too, but far less of it.
 GE d@ s: a C++$ UBL+++$ P++(--)$ L++(-)$ !E W+++(-)$ !N !o K--? w !O !M  !V PS++ PE- Y+ PGP+ t+ 5+++ X+ R tv b+ DI D+ G e++ h r+++ y+++*
 #+END_QUOTE
 *** [[https://petermolnar.net/article/gopher][Gopher? Gopher.]]
+** [[https://secretgeek.github.io/html_wysiwyg/][巧用 CSS 显示 HTML 源码]]
+** [[https://phenix3443.github.io/notebook/][phenix3443]]                                                      :c:emacs:
+刘尚亮
+*** [[https://phenix3443.github.io/notebook/emacs/modes/use-package-manual.html][use-package manual]]
+*** [[https://phenix3443.github.io/notebook/emacs/emacs-startup-process.html][Emacs 启动过程介绍]]
+*** [[https://phenix3443.github.io/notebook/c/tinyhttpd-analysis.html][TinyHTTPd 源码分析]]
+** [[https://julienblanchard.com][julienblanchard/typed-hole]]                                        :plan9:
+*** [[https://pmikkelsen.com][pmikkelsen]]
 
 ** B
 *** [[https://blog.yangmame.org/][yanemame]]
@@ -193,7 +201,7 @@ B站: 称呼我C先生
 *** [[https://zhuanlan.zhihu.com/p/138719668][用Go语言汇编计算fibonacci数列]]                                :lowlevel:
 *** [[https://www.zhihu.com/column/c_1313110231912726528][倔强的程序员]]
 编! 译! 原! 理!
-*** [[https://www.zhihu.com/column/c_185117725][知乎专栏: 技术考古]]
+*** [[https://www.zhihu.com/column/c_185117725][知乎专栏: 技术考古]]                                              :plan9:
 plan9
 *** [[https://www.zhihu.com/column/roartalk][知乎专栏: 嘶吼RoarTalk]]                                           :hack:
 回归最本质的信息安全
