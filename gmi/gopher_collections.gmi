@@ -40,3 +40,6 @@ lots of 'Re:'
 Gemcast, Esperanto
 => gemini://gemi.dev/                                                 + Gemi.dev Heavy Industries
 => gemini://gemi.dev/cgi-bin/wp.cgi/welcome/zh                        ++ gemipedia
+=> gemini://gemini.cyberbot.space/                                    + cyberbot
+undergoes frequent maintenance
+=> gemini://gemini.cyberbot.space/smolzine/                           ++ smolzine
