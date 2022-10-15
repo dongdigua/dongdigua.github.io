@@ -1,6 +1,6 @@
 #+TAGS: elixir(e) rust(r) c(c) lisp(l) python(p) nim(n)
 #+TAGS: lowlevel(w) frontend(f) backend(b) hack(h) algorithm(a) math(t)
-#+TAGS: emacs(m) linux(x) iot(i) plan9(9)
+#+TAGS: emacs(m) linux(x) iot(i) plan9(9) BSD(B)
 #+TAGS: rssable(s) rssub(u) gopher(g)
 #+OPTIONS: toc:1 ^:{}
 
@@ -85,7 +85,10 @@ Lisp-1 的变量命名空间和函数命名空间是统一的，而在 Lisp-2 �
 ** [[https://stardiviner.github.io/][stardiviner]]
 Coder & 文学
 *** [[https://stardiviner.github.io/Blog/more-restrict-censorship-on-platforms.html][现在的审查确实相较于几年前要严格很多，难怪主流网站上大多都是娱乐内容了]]
-** [[https://nihil.cc/posts/rust_closure_and_y/][Rust 闭包递归与 Y 组合子]]                                           :rust:
+** [[https://cps.ninja][行侠何须仗名剑]]                                                     :lisp:
+*** [[https://cps.ninja/2020/04/13/deriving-y-combinator/][推导 Y Combinator]]
+**** [[https://nihil.cc/posts/rust_closure_and_y/][Nihil: Rust 闭包递归与 Y 组合子]]                                :rust:
+**** [[https://www.functor.me/post/programming/y-combinator][functor.me: 从零开始理解 Y 组合子]]
 ** [[https://stevenbai.top/ethereum/以太坊evm笔记/][以太坊evm笔记]]
 ** [[https://sh.alynx.one/][Alynx Zhou]]                                                :linux:rssable:
 ** [[https://coredumped.dev/][Core Dumped]]                                         :rust:lowlevel:emacs:
@@ -186,6 +189,9 @@ GE d@ s: a C++$ UBL+++$ P++(--)$ L++(-)$ !E W+++(-)$ !N !o K--? w !O !M  !V PS++
 *** [[https://phenix3443.github.io/notebook/c/tinyhttpd-analysis.html][TinyHTTPd 源码分析]]
 ** [[https://julienblanchard.com][julienblanchard/typed-hole]]                                        :plan9:
 *** [[https://pmikkelsen.com][pmikkelsen]]
+** TODO [[https://konfou.xyz][Konstantinos Foutzopoulos]]
+** [[http://www.jinbuguo.com][金步国作品集]]                                             :lowlevel:linux:
+kernel, LFS
 
 ** B
 *** [[https://blog.yangmame.org/][yanemame]]
@@ -205,6 +211,7 @@ B站: 称呼我C先生
 plan9
 *** [[https://www.zhihu.com/column/roartalk][知乎专栏: 嘶吼RoarTalk]]                                           :hack:
 回归最本质的信息安全
+*** [[https://zhuanlan.zhihu.com/p/464565089][我抵制Notepad++的理由]]
 ** shenjack/HWS/fri3nds
 *** [[http://www.z.org.cn/][老网虫]]
 *** [[https://blog.yang-qwq.ml][yang-qwq]]
