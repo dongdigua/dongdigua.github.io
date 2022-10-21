@@ -12,5 +12,5 @@ html:
 clean:
 	rm ./../org_html/*.html
 	rm ~/.org-timestamps/org-pages.cache
-	rm ./../*.html*
+	ls ../*.html* | grep -v "index.html" | xargs -I {} rm {}
 	rm ./../*.xml*
