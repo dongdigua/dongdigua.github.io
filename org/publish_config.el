@@ -46,7 +46,7 @@
       "rss.xml"
       "./../"
       "https://dongdigua.github.io"
-      (directory-files "./../" nil ".*\.html$")
+      (delete "index.html" (directory-files "./../" nil ".*\.html$"))
       :title "dongdigua's blog"
       :description "Blog!"
       :builder 'webfeeder-make-rss)
