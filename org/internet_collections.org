@@ -1,13 +1,13 @@
 #+TAGS: elixir(e) rust(r) c(c) lisp(l) python(p) nim(n)
 #+TAGS: lowlevel(w) frontend(f) backend(b) hack(h) algorithm(a) math(t)
 #+TAGS: emacs(m) linux(x) iot(i) plan9(9) BSD(B)
-#+TAGS: rssable(s) rssub(u) gopher(g)
 #+OPTIONS: toc:1 ^:{}
 
 #+TITLE: Internet Collections
 #+DATE: <2022-06-05 日>
 
 * 一些(个人)博客收集
+#+TAGS: rssable(s) rssub(u) gopher(g)
 #+BEGIN_SRC text
          _                                                  ___
   /\    /   _  ._ _|_  _. o ._    |\/|  _.  _  o  _  _. |    |  ._   _|  _
@@ -26,7 +26,6 @@ really good website, butt, no rss
 ** [[https://shakaianee.top/][易姐]]
 ** [[https://floooh.github.io/][floooh(The Brain Dump)]]                                                :c:
 07 年开始, cpu emulator
-*** [[https://floooh.github.io/2017/12/10/z80-emu-evolution.html][2017: Z80 Emu Evolution]]
 *** [[https://floooh.github.io/2021/12/17/cycle-stepped-z80.html][2021: A new cycle-stepped Z80 emulator]]
 *** [[https://floooh.github.io/2019/09/27/modern-c-for-cpp-peeps.html][Modern C for C++ Peeps]]
 #+BEGIN_QUOTE
@@ -57,8 +56,7 @@ CPU, IC, ARM
 13年最后更新
 ** [[http://bzhang.lamost.org/website/][bozhang]]                                                         :rssable:
 05 年开始, 天文学
-** [[https://www.luogu.com.cn/blog/ivystorm/emacs-adventuredunnet-tong-guan-jiao-cheng][emacs dunnet 教程]]                                                 :emacs:
-luogu
+** [[https://www.luogu.com.cn/blog/ivystorm/emacs-adventuredunnet-tong-guan-jiao-cheng][luogu blog: emacs dunnet 教程]]                                     :emacs:
 ** [[https://iceguye.com/blog][IceGuye]]
 ** [[http://jujuba.me/][Ground Oddity]]
 出国
@@ -220,6 +218,7 @@ plan9
 今年的新博客, 友链有踏浪
 
 * YouTube 收集(没有账号, 这就是我的收藏夹)
+#+TAGS: tsoding(s) DT(D) LiveOverflow(L)
 ** Computer Science
 *** [[https://youtu.be/0rJ94rbdteE][Rust 让你感觉像个天才]]
 *** [[https://youtu.be/nfF91Z6fqGk][CMD 登录B站]]
@@ -282,6 +281,7 @@ to filing patently fraudulent DMCA counter-notifications to avoid the terminatio
 #+END_QUOTE
 *** [[https://youtu.be/RH3D1cpm6do][Yes, Everyone on the Internet Is a Loser.]]
 I agree
+**** [[https://youtu.be/2CnAzLB0OjU][DT: As The Web Grows Bigger, It Seems Smaller]]
 *** [[https://youtu.be/Rsxao9ptdmI][Beating 5 Scam Arcade Games with Science]]
 街机科学家～
 *** TODO [[https://youtube.com/playlist?list=PLgE-9Sxs2IBVgJkY-1ZMj0tIFxsJ-vOkv][BBS The Documentary(8)]]

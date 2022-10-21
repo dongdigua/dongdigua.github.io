@@ -1,9 +1,5 @@
-<script src="https://fastly.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/autoload.js"></script>
-<link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css">
-
-
-## Table of Contents (sorted by time)
-### Posts
+## Table of Contents
+### Posts (sorted by time)
 [CentOS/Fedora 不同的配置默认都安装了什么软件](anaconda_kickstarts)<br>
 [build a nixos live image](nixos)<br>
 [moonboos, 懂的都懂](moonboos)<br>
@@ -23,13 +19,3 @@
 [折腾 sway 的一些记录(problem&solution)](wayland)<br>
 [编辑器操作备忘录](cheatsheet)<br>
 [博客, YouTube 等收集](internet_collections)<br>
-
----
-
-PGP key<br>
-[56CE E157 C9F5 334F CA52  CEC3 D184 E828 8062 90B6](pgpkey.txt)
-
----
-
-![](images/rss.png)[rss](rss.xml)<br>
-*[pay me some monero](xmr.txt)*<br>
