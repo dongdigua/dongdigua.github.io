@@ -63,7 +63,7 @@
      (org-publish-all)
 
      (webfeeder-build
-      "rss.xml"
+      "feed.xml"
       "./../"
       "https://dongdigua.github.io"
       (delete "index.html" (directory-files "./../" nil ".*\.html$"))
