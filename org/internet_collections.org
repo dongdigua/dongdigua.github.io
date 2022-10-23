@@ -70,10 +70,6 @@ CPU, IC, ARM
 ** [[http://incf19.com/yynotes/][include-yy]]                                                 :c:lisp:emacs:
 许多东方的图诶
 *** [[http://incf19.com/yynotes/posts/2021-10-25-14-蝴蝶效应与emacs动画][蝴蝶效应与emacs动画]]
-*** [[http://www.incf19.com/yynotes/posts/2021-05-28-5-emacs的cl扩展][emacs cl-lib]]
-#+BEGIN_SRC text
-Package cl is deprecated
-#+END_SRC
 *** [[http://incf19.com/yynotes/posts/2021-03-22-1-由(λ(x)(x x))看elisp与scheme之区别][由(λ(x)(x x))看elisp与scheme之区别]]
 #+BEGIN_QUOTE
 这个问题其实就是 Lisp-1 和 Lisp-2 的区别导致的
@@ -122,7 +118,7 @@ from ruanyifeng
 *** [[https://lantian.pub/article/modify-website/serve-gopher-with-nginx.lantian/][用 nginx 建立 Gopher 网站]]                                      :gopher:
 *** [[https://lantian.pub/article/modify-website/dn42-experimental-network-2020.lantian/][DN42 实验网络介绍及注册教程]]
 **** [[https://lantian.pub/article/modify-website/how-to-kill-the-dn42-network.lantian/][如何引爆 DN42 网络]]
-** [[https://bryanbrattlof.com/][Bryan Brattlof]]
+** TODO [[https://bryanbrattlof.com/][Bryan Brattlof]]
 *** [[https://git.sr.ht/~bryanb/bootloaders-101/tree][ossu2022 bootloaders 101]]
 ** [[https://ulyc.github.io/][UlyC]]                                                             :python:
 *** [[https://ulyc.github.io/2022/08/10/sourcehut-the-hackers-forge/][sourcehut,  一个反叛而又正统的代码托管平台]]
