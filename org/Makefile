@@ -1,6 +1,7 @@
 EMACS=emacs
 ORG_CONFIG_FILE=publish_config.el
 EMACS_OPTS=--batch --eval "(load-file \"$(ORG_CONFIG_FILE)\")" -f myweb-publish
+TARGET=ls ../*.html* | grep -v "index.html"
 
 all: html
 
@@ -12,5 +13,5 @@ html:
 clean:
 	rm ./../org_html/*.html
 	rm ~/.org-timestamps/org-pages.cache
-	ls ../*.html* | grep -v "index.html" | xargs -I {} rm {}
+	$(TARGET) | xargs -I {} echo {}
 	rm ./../*.xml*

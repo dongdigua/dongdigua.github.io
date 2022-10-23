@@ -6,3 +6,4 @@
 ** [[https://github.com/misode/vscode-nbt][a vscode extension]]
 * 用 sway 实现[[https://www.bilibili.com/video/BV1TE41147gK][用窗口玩游戏(×)用游戏玩窗口(√)]]的效果
 * 不同 Linux 内核(xanmod, clear)玩 MC 性能对比
+* emacs mode: eww show =console.log()= in Message
