@@ -76,9 +76,6 @@ CPU, IC, ARM
 Lisp-1 的变量命名空间和函数命名空间是统一的，而在 Lisp-2 中两者是分开的
 #+END_QUOTE
 **** [[http://xahlee.info/emacs/emacs/lisp1_vs_lisp2.html][Xah Lee Lisp-1 vs Lisp-2]]
-** [[https://stardiviner.github.io/][stardiviner]]
-Coder & 文学
-*** [[https://stardiviner.github.io/Blog/more-restrict-censorship-on-platforms.html][现在的审查确实相较于几年前要严格很多，难怪主流网站上大多都是娱乐内容了]]
 ** [[https://cps.ninja][行侠何须仗名剑]]                                                     :lisp:
 *** [[https://cps.ninja/2020/04/13/deriving-y-combinator/][推导 Y Combinator]]
 **** [[https://nihil.cc/posts/rust_closure_and_y/][Nihil: Rust 闭包递归与 Y 组合子]]                                :rust:
@@ -90,8 +87,6 @@ VM
 ** [[https://liujiacai.net/][keep coding]]                                     :rust:c:lowlevel:backend:
 写代码的西瓜
 *** [[https://emacstalk.github.io/][EmacsTalk]]
-** [[https://winsphinx.github.io/blog][Cogito, ergo sum]]                                                :rssable:
-文学
 ** [[http://tomasp.net/][Tomas Petricek]]                                                    :rssub:
 F#, M1(r0$0f+, very high quality
 *** [[http://tomasp.net/commodore64][commodore64 BASIC]]
@@ -110,6 +105,17 @@ from ruanyifeng
 **** [[https://xeiaso.net/blog/v-vaporware-2019-06-23][V for Vaporware]]
 经典永流传~
 *** [[https://xeiaso.net/blog/nim-and-tup-2015-06-10][Nim and Tup]]
+*** TODO [[https://xeiaso.net/blog/openssl-3.x-secvuln-incoming][You should prepare for the OpenSSL 3.x secvuln]]
+seems now have a [[https://mta.openssl.org/pipermail/openssl-announce/2022-October/000238.html][CRITICAL]] vuln, butt no CVE,
+patch will come out on 11.1
+#+BEGIN_QUOTE
+The details on this issue seem to be super embargoed at the moment, but here is what I can tell based on what has been done publicly:
+- The Tor project has urged relay owners to upgrade as soon as possible.
+- The [[https://lwn.net/Articles/912776/][release for Fedora 37 has been pushed back from October 25th to November 15th]].
+- Popular tweeter @SwiftOnSecurity tweeted about hearsay about the severity of the issue and was deleted. No reason for the deletion
+- Go programming language also has "PRIVATE security fixes to the standard library". which contains crypto/tls.
+#+END_QUOTE
+so let's wait ^_^
 ** [[https://lantian.pub/][蓝天]]
 大佬!
 *** [[https://lantian.pub/article/chat/how-i-nuked-my-btrfs-partition.lantian/][我把硬盘换到了新电脑上，这是 Btrfs 上的数据发生的变化]]
@@ -118,8 +124,6 @@ from ruanyifeng
 *** [[https://lantian.pub/article/modify-website/serve-gopher-with-nginx.lantian/][用 nginx 建立 Gopher 网站]]                                      :gopher:
 *** [[https://lantian.pub/article/modify-website/dn42-experimental-network-2020.lantian/][DN42 实验网络介绍及注册教程]]
 **** [[https://lantian.pub/article/modify-website/how-to-kill-the-dn42-network.lantian/][如何引爆 DN42 网络]]
-** TODO [[https://bryanbrattlof.com/][Bryan Brattlof]]
-*** [[https://git.sr.ht/~bryanb/bootloaders-101/tree][ossu2022 bootloaders 101]]
 ** [[https://ulyc.github.io/][UlyC]]                                                             :python:
 *** [[https://ulyc.github.io/2022/08/10/sourcehut-the-hackers-forge/][sourcehut,  一个反叛而又正统的代码托管平台]]
 *** [[https://ulyc.github.io/2021/01/13/2021年-用更现代的方法使用PGP-上/][2021年, 用更现代的方法使用PGP]]
@@ -190,6 +194,7 @@ GE d@ s: a C++$ UBL+++$ P++(--)$ L++(-)$ !E W+++(-)$ !N !o K--? w !O !M  !V PS++
 ** [[http://www.jinbuguo.com][金步国作品集]]                                             :lowlevel:linux:
 kernel, LFS
 
+** [[https://blog.pg999w.top/too-many-channels/][Too many channels in Rust but only one in Go]]                       :rust:
 ** B
 *** [[https://blog.yangmame.org/][yanemame]]
 猴哥推荐的

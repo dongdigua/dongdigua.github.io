@@ -34,7 +34,7 @@ BSD
 => gopher://baud.baby                                                 + Y0UR 515T3R'Z F4V0R1T3 H4CK3R
 => gopher://schinkel.bevuta.com                                       + Author of CHICKEN Scheme
 => gemini://ew.srht.site/                                             + ew
-lots of 'Re:'
+almost 60! lots of 'Re:'
 => gemini://perplexing.space/                                         + perplexing
 => gemini://kwiecien.us/                                              ++ kwiecien
 Gemcast, Esperanto
