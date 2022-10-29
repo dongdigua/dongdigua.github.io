@@ -249,6 +249,7 @@ plan9
 "Security is a journey, not a destination!"
 *** [[https://youtu.be/S4E4yAktjug?t=998][How To Become Invisible Online # level 3]]
 *** [[https://youtu.be/oJ6t7AImTdE][CSS Keylogger - old is new again]]
+*** [[https://youtu.be/I4_ide0tEG8][zip files & hack... (CVE-2022-1271 zgrep/gzip)]]
 
 ** Math
 *** [[https://youtu.be/KufsL2VgELo][Group Theory]]
