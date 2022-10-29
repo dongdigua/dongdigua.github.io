@@ -15,7 +15,6 @@ var data = [
     "Can’t keep up! Is the server overloaded?\\n\nRunning 5000ms or 100 ticks behind",
     "大炮做好了不放珍珠是什么意思?",
     "不释仁",
-    "Goodbye Atom, Hello VS Code",
 ];
 
 var index = Math.floor((Math.random() * data.length));
