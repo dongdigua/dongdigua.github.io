@@ -11,20 +11,23 @@
  *::-webkit-scrollbar{width:auto}
  *::-webkit-scrollbar-track{background:#404040}
  *::-webkit-scrollbar-thumb{background:gray}
- body{background-color:#3B4252;color:#dcdccc;font-family:dejavu sans mono,consolas,monospace;font-size:16px;padding:5em 0 0;margin:0}
+ body{background-color:#3B4252;color:#dcdccc;font-family:dejavu sans mono,monospace;font-size:16px;padding:5em 0 0;margin:0}
  a{color:#efdcbc;text-decoration:none}
  a:visited{color:#dca3a3}
  a:hover{color:#f8f893}
  .home{position:absolute;width:100%;text-align:center}
  .home pre{max-width:80ch;padding:0 1rem;margin-left:auto;margin-right:auto;line-height:1.5em;overflow:auto;display:inline-block;text-align:left}
- pre{font-family:dejavu sans mono,consolas,monospace;margin:1rem}
+ pre{font-family:dejavu sans mono,monospace;margin:1rem}
+ #quote{color:#66ccff;font-style:italic}
 </style>
 <body>
+  <!--
   <script src="https://fastly.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/autoload.js"></script>
   <link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css">
+  -->
   <div class="home p-contact contact h-card vcard">
     <pre>
-(let ((name "dongdigua")
+(let ((name "<strong>dongdigua</strong>")
       (blog "<a href=https://dongdigua.github.io/posts>posts/</a>")
       (feed "<a href=https://dongdigua.github.io/feed.xml>feed.xml</a>")
       (github "<a href=https://github.com/dongdigua>@dongdigua</a>")
@@ -37,9 +40,9 @@
          "GeoGebra"
          "Minecraft redstone survival"
          "anime"
-         (Lost (In (Superfluous (Parentheses)))))))
+         (Lost (In (Superfluous (Parentheses))))))
       (random-quote
-       "<span style="color:#66ccff" id="quote"></span>"))
+       "<span id="quote"></span>")))
     </pre>
   </div>
 </body>

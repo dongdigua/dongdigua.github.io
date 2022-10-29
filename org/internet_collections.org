@@ -183,7 +183,10 @@ GE d@ s: a C++$ UBL+++$ P++(--)$ L++(-)$ !E W+++(-)$ !N !o K--? w !O !M  !V PS++
 *** [[https://phenix3443.github.io/notebook/c/tinyhttpd-analysis.html][TinyHTTPd 源码分析]]
 ** [[https://julienblanchard.com][julienblanchard/typed-hole]]                                        :plan9:
 *** [[https://pmikkelsen.com][pmikkelsen]]
-** TODO [[https://konfou.xyz][Konstantinos Foutzopoulos]]
+** [[https://konfou.xyz][Konstantinos Foutzopoulos]]
+*** [[https://konfou.xyz/posts/unix-filesystem-hierarchy/][Unix filesystem hierarchy]]
+*** [[https://konfou.xyz/posts/pantheon-of-distributed-operating-systems/][pantheon of distributed operating systems]]
+*** [[https://konfou.xyz/posts/urbit-an-alien-system-software/][Urbit, an alien system software]]
 ** [[http://www.jinbuguo.com][金步国作品集]]                                             :lowlevel:linux:
 kernel, LFS
 
@@ -197,6 +200,8 @@ B站: 美味的樱桃菌
 B站: 称呼我C先生
 *** [[https://blog.lunaixsky.com/][lunaixsky]]                                                  :c:lowlevel:
 *** [[https://endlesspeak.gitee.io/][EndlessPeak]]                                                     :linux:
+*** [[https://hackflow.org][GNUman]]
+**** [[https://hackflow.org/index.php/archives/124][谈 HTTPS 协议的缺陷与反 HTTPS 联盟的谬误]]
 ** ZhiHu
 *** [[https://zhuanlan.zhihu.com/p/138719668][用Go语言汇编计算fibonacci数列]]                                :lowlevel:
 *** [[https://www.zhihu.com/column/c_1313110231912726528][倔强的程序员]]

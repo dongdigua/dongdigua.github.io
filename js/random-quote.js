@@ -3,16 +3,19 @@ var data = [
     "解放思想, 实事求是, 与时俱进",
     "绿水青山就是金山银山",
 
-    "You are not alone",
+    "<a id=quote href=https://www.bilibili.com/video/BV1vW411g7tN>谁甘人生黯淡无光 谁愿做叶不争艳芳</a>",
+    "fly high my friend, until we meet again",
+
     "The internet is FULL, go away!",
     "May the --force be with you",
     "Software that sucks less",
     "Software should be FREE!",
     "whoami: No system is safe",
-    "drop it at lttstore.com",
-    "Can’t keep up! Is the server overloaded? Running 5000ms or 100 ticks behind",
+    "DROP it at lttstore.com",
+    "Can’t keep up! Is the server overloaded?\\n\nRunning 5000ms or 100 ticks behind",
     "大炮做好了不放珍珠是什么意思?",
     "不释仁",
+    "Goodbye Atom, Hello VS Code",
 ];
 
 var index = Math.floor((Math.random() * data.length));
