@@ -230,11 +230,8 @@ plan9
 *** [[https://youtu.be/nfF91Z6fqGk][CMD 登录B站]]
 *** [[https://youtu.be/l0AmlU-4IRM][Rust aes加密(legacy)]]
 *** [[https://youtu.be/hmMtQe_mYr0][tsoding helloworld in c]]
-*** [[https://www.youtube.com/playlist?list=PLSiFUSQSRYAOFwfP-aMzXJlWKVyIuWfPU][stack-based virtual machine(6 episode)]] and [[https://youtu.be/cfPDeso3XwI][register-based(13 episode)]]
 *** [[https://www.youtube.com/playlist?list=PLpM-Dvs8t0VY73ytTCQqgvgCWttV3m8LM][tsoding virtual machine in C]] , [[https://dongdigua.github.io/tsoding_bm][some notes]]
 *** [[https://youtu.be/Fq9chEBQMFE][what if I try to malloc too much memory]]
-*** [[https://youtu.be/qF7dkrce-mQ][fireship bitcoin]]
-大概是我见过最好的讲区块链的视频了, 除了...JS 啊啊啊
 *** [[https://youtu.be/zJ-8DZhzBEE][what your favourite pl says about you]]
 *** [[https://youtu.be/ziXgdkTfmPU][tsoding irc client in ocaml]]
 0:50 List.fold_left faster than fold_right, but haskell is opposite
@@ -250,6 +247,9 @@ plan9
 *** [[https://youtu.be/UNkHditYGls][I coded a fractal on an Apple II+]]
 *** [[https://youtu.be/p8u_k2LIZyo][Fast Inverse Square Root — A Quake III Algorithm]]
 =0x5f3759df=
+*** [[https://youtu.be/67FmRyv8jTM][tsoding: Parsing Java Bytecode with Python]]
+0:05 look how TINY Java code is
+**** [[https://youtu.be/anOidUQcv1w][tsoding: I made JVM in Python just to run "Hello, World"]]
 
 ** Cyber Security
 *** [[https://youtu.be/x_R1DeZxGc0][Discover Vulnerabilities in Intel CPUs!]]
@@ -291,7 +291,7 @@ I agree
 **** [[https://youtu.be/2CnAzLB0OjU][DT: As The Web Grows Bigger, It Seems Smaller]]
 *** [[https://youtu.be/Rsxao9ptdmI][Beating 5 Scam Arcade Games with Science]]
 街机科学家～
-*** TODO [[https://youtube.com/playlist?list=PLgE-9Sxs2IBVgJkY-1ZMj0tIFxsJ-vOkv][BBS The Documentary(8)]]
+*** [[https://youtube.com/playlist?list=PLgE-9Sxs2IBVgJkY-1ZMj0tIFxsJ-vOkv][BBS The Documentary(8)]]
 
 * r
 ** [[https://www.reddit.com/r/unixporn/][unixporn]]

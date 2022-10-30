@@ -42,7 +42,7 @@
          ;; https://github.com/rgb-24bit/org-html-theme-list org-joshua
          :html-head "<link rel='stylesheet' type='text/css' href='css/main.css' />"
          :html-link-home "https://dongdigua.github.io"
-         :html-link-up "./../"
+         :html-link-up "./../posts"
          )))
 
 ;; from .emacs
