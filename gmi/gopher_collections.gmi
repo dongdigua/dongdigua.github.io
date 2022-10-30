@@ -1,7 +1,6 @@
-  _____          _      _
- / ___/__ __ _  (_)__  (_)
-/ (_ / -_)  ' \/ / _ \/ /
-\___/\__/_/_/_/_/_//_/_/
+     o
+    /\--)
+   /\  gem
 
 # Gopher/Gemini collections
 A quiet place in the internet other than HyperText Machine Learning

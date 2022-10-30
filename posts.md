@@ -1,5 +1,6 @@
 ## Table of Contents
 ### Posts (sorted by time)
+[Gentoo LLVM\_TARGETS not Working?](gentoo_llvm_targets)<br>
 [CentOS/Fedora 不同的配置默认都安装了什么软件](anaconda_kickstarts)<br>
 [build a nixos live image](nixos)<br>
 [moonboos, 懂的都懂](moonboos)<br>
