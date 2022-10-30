@@ -45,7 +45,7 @@
 
 
 * EMACS
-** org-mode
+** org
 | key         | usage                         |
 |-------------+-------------------------------|
 | C-c \vbar   | 创建表格                      |
@@ -53,6 +53,8 @@
 | C-c C-x C-v | toggle render images          |
 | C-c C-l     | 编辑链接                      |
 | C-c C-,     | org-insert-structure-template |
+
+*Bold* /italic/ _underline_ +strikethrough+ ~code~ =verbatim=
 
 ** normal
 | key     | usage               |

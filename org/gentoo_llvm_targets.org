@@ -2,10 +2,8 @@
 #+DATE: <2022-10-29 六>
 #+OPTIONS: toc:nil
 
-Recently, I would like to test switching from =gcc= to =clang= on my Gentoo VM.
-Because if so, I can install =Rust= and =Zig= from source
-without worrying about adding the HUGE =clang= dependency that won't be used by other packages.
-Later I will remove =gcc= :)
+Recently, I would like to test switching from =gcc= to [[https://wiki.gentoo.org/wiki/Clang][clang]] on my Gentoo VM.
++warning: you will be crazy to have too many packages can't be build with clang+
 
 * problem
 First I want to make [[https://llvm.org][LLVM]] not targeting too many platform, but changing =LLVM_TARGETS= don't work
@@ -39,6 +37,4 @@ I excluded all targets exept for X86, but still 3 left: AMDGPU, BPF, NVPTX
   -Hexagon -Lanai (-LoongArch) (-M68k) -MSP430 -Mips -NVPTX -PowerPC -RISCV
   (-SPIRV) -Sparc -SystemZ -VE -WebAssembly -XCore" 241 KiB
 #+END_SRC
-
-in the end, [[https://wiki.gentoo.org/wiki/Gentoo_Cheat_Sheet][Gentoo cheatsheet]] and [[https://wiki.gentoo.org/wiki/Clang][Gentoo Wiki: Clang]] could be useful.
 

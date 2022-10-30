@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-10-30 日 14:16 -->
+<!-- 2022-10-30 日 16:08 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Gentoo LLVM_TARGETS not Working?</title>
@@ -197,16 +197,14 @@
 </head>
 <body>
 <div id="org-div-home-and-up">
- <a accesskey="h" href="./../"> UP </a>
+ <a accesskey="h" href="./../posts"> UP </a>
  |
  <a accesskey="H" href="https://dongdigua.github.io"> HOME </a>
 </div><div id="content" class="content">
 <h1 class="title">Gentoo LLVM_TARGETS not Working?</h1>
 <p>
-Recently, I would like to test switching from <code>gcc</code> to <code>clang</code> on my Gentoo VM.<br />
-Because if so, I can install <code>Rust</code> and <code>Zig</code> from source<br />
-without worrying about adding the HUGE <code>clang</code> dependency that won't be used by other packages.<br />
-Later I will remove <code>gcc</code> :)<br />
+Recently, I would like to test switching from <code>gcc</code> to <a href="https://wiki.gentoo.org/wiki/Clang">clang</a> on my Gentoo VM.<br />
+<del>warning: you will be crazy to have too many packages can't be build with clang</del><br />
 </p>
 
 <div class="outline-2">
@@ -270,17 +268,13 @@ I excluded all targets exept for X86, but still 3 left: AMDGPU, BPF, NVPTX<br />
 <span style="font-style: italic;">(-SPIRV) -Sparc -SystemZ -VE -WebAssembly -XCore"</span> 241 KiB
 </pre>
 </div>
-
-<p>
-in the end, <a href="https://wiki.gentoo.org/wiki/Gentoo_Cheat_Sheet">Gentoo cheatsheet</a> and <a href="https://wiki.gentoo.org/wiki/Clang">Gentoo Wiki: Clang</a> could be useful.<br />
-</p>
 </div>
 </div>
 </div>
 <div id="postamble" class="status">
 <p class="date">Date: 2022-10-29 六 00:00</p>
 <p class="author">Author: dongdigua</p>
-<p class="date">Created: 2022-10-30 日 14:16</p>
+<p class="date">Created: 2022-10-30 日 16:08</p>
 </div>
 </body>
 </html>
