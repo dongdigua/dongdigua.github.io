@@ -50,8 +50,7 @@ CPU, IC, ARM
 #+END_QUOTE
 *** [[https://www.wenhui.space/docs/08-ic-design/cpu/meltdown-and-spectre/][浅谈熔断和幽灵]]
 *** [[https://www.wenhui.space/docs/02-emacs/org_mode_table_align/][解决Org-Mode表格不对齐问题]]
-更纱黑体 使中文恰好为英文宽度两倍
-使用字体比 valign 更通用, 但是不好看
+更纱黑体 使中文恰好为英文宽度两倍, 使用字体比 valign 更通用, 但是不好看
 ** [[http://scinart.is-programmer.com/][scinart]]                                                            :lisp:
 13年最后更新
 ** [[http://bzhang.lamost.org/website/][bozhang]]                                                         :rssable:
@@ -249,7 +248,8 @@ plan9
 =0x5f3759df=
 *** [[https://youtu.be/67FmRyv8jTM][tsoding: Parsing Java Bytecode with Python]]
 0:05 look how TINY Java code is
-**** [[https://youtu.be/anOidUQcv1w][tsoding: I made JVM in Python just to run "Hello, World"]]
+0:06 nonono all the opensource are controlled by coporation actually,
+     they create a text editor plugin and sell the free code for $10 a month
 
 ** Cyber Security
 *** [[https://youtu.be/x_R1DeZxGc0][Discover Vulnerabilities in Intel CPUs!]]
@@ -260,6 +260,7 @@ plan9
 *** [[https://youtu.be/S4E4yAktjug?t=998][How To Become Invisible Online # level 3]]
 *** [[https://youtu.be/oJ6t7AImTdE][CSS Keylogger - old is new again]]
 *** [[https://youtu.be/I4_ide0tEG8][zip files & hack... (CVE-2022-1271 zgrep/gzip)]]
+*** [[https://youtu.be/MS7WRuzNYDc][is leaking your IP really dangerous]]
 
 ** Math
 *** [[https://youtu.be/KufsL2VgELo][Group Theory]]
@@ -277,7 +278,6 @@ plan9
 ** ?
 *** [[https://www.youtube.com/c/IceGuye][IceGuye aka 姑射冰尘]]
 [[https://odysee.com/@IceGuye][on odysee(lbry)]]
-*** [[https://www.youtube.com/playlist?list=PL5--8gKSku17duy2-GrOfQma5FwsKA9LC][DT: Odysee]]
 *** [[https://youtu.be/IS5ycm7VfXg][Homemade Silicon Chips!]]
 *** [[https://youtu.be/4IaOeVgZ-wc][Why I'm Suing YouTube.]]
 #+BEGIN_QUOTE
@@ -287,11 +287,11 @@ It’s also a story about copyright infringement
 to filing patently fraudulent DMCA counter-notifications to avoid the termination of their accounts.
 #+END_QUOTE
 *** [[https://youtu.be/RH3D1cpm6do][Yes, Everyone on the Internet Is a Loser.]]
-I agree
 **** [[https://youtu.be/2CnAzLB0OjU][DT: As The Web Grows Bigger, It Seems Smaller]]
 *** [[https://youtu.be/Rsxao9ptdmI][Beating 5 Scam Arcade Games with Science]]
 街机科学家～
 *** [[https://youtube.com/playlist?list=PLgE-9Sxs2IBVgJkY-1ZMj0tIFxsJ-vOkv][BBS The Documentary(8)]]
+*** [[https://youtu.be/k35uDHs7Z9E][DT: A Disturbing Descent Into The Mind Of A Mad Man]]
 
 * r
 ** [[https://www.reddit.com/r/unixporn/][unixporn]]
@@ -347,4 +347,6 @@ worth reading
 *** [[http://phrack.org/issues/70/15.html][YouTube Security Scene - LiveOverflow!]]
 ** [[https://akrl.sdf.org/gccemacs.html][gccemacs]]
 *** [[https://akrl.sdf.org/gccemacs_els2020.pdf][slides_els2020]]
-** TODO [[https://tildeverse.org]]
+** [[https://tildeverse.org]]
+** [[http://decss.zoy.org][42 ways to distribute DeCSS]]
+*** [[http://www.cs.cmu.edu/~dst/DeCSS/Kesden/index.html][Lecture 33: Content Scrambling System]]

@@ -11,10 +11,12 @@ var data = [
     "Software that sucks less",
     "Software should be FREE!",
     "whoami: No system is safe",
-    "DROP it at lttstore.com",
+    "DROP it at <a id=quote href=https://lttstore.com>lttstore.com</a>",
     "Can’t keep up! Is the server overloaded?\\n\nRunning 5000ms or 100 ticks behind",
     "大炮做好了不放珍珠是什么意思?",
-    "不释仁",
+    "write terrible nonsensical code to\\n\nensure the Copilot doesn't take over as captain",
+    "Automagically",
+    "<a id=quote href=https://www.curseforge.com/minecraft/mc-mods/carpet>NOT VANILLA!</a>"
 ];
 
 var index = Math.floor((Math.random() * data.length));
