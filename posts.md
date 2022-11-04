@@ -1,5 +1,6 @@
 ## Table of Contents
 ### Posts (sorted by time)
+[Clear Kernel Compile Error? Fix It](clear_kernel_compile_fix)<br>
 [Gentoo LLVM\_TARGETS not Working?](gentoo_llvm_targets)<br>
 [CentOS/Fedora 不同的配置默认都安装了什么软件](anaconda_kickstarts)<br>
 [build a nixos live image](nixos)<br>
@@ -15,6 +16,7 @@
 ---
 
 ### Long Term Update
+[大概是语文知识整理](digua-YW)<br>
 [Gopher/Gemini reactions](re.gmi.txt)<br>
 [Gopher/Gemini collections, a quiet web](gopher_collections.gmi.txt)<br>
 [折腾 sway 的一些记录(problem&solution)](wayland)<br>

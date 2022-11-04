@@ -104,17 +104,8 @@ from ruanyifeng
 **** [[https://xeiaso.net/blog/v-vaporware-2019-06-23][V for Vaporware]]
 经典永流传~
 *** [[https://xeiaso.net/blog/nim-and-tup-2015-06-10][Nim and Tup]]
-*** TODO [[https://xeiaso.net/blog/openssl-3.x-secvuln-incoming][You should prepare for the OpenSSL 3.x secvuln]]
-seems now have a [[https://mta.openssl.org/pipermail/openssl-announce/2022-October/000238.html][CRITICAL]] vuln, butt no CVE,
-patch will come out on 11.1
-#+BEGIN_QUOTE
-The details on this issue seem to be super embargoed at the moment, but here is what I can tell based on what has been done publicly:
-- The Tor project has urged relay owners to upgrade as soon as possible.
-- The [[https://lwn.net/Articles/912776/][release for Fedora 37 has been pushed back from October 25th to November 15th]].
-- Popular tweeter @SwiftOnSecurity tweeted about hearsay about the severity of the issue and was deleted. No reason for the deletion
-- Go programming language also has "PRIVATE security fixes to the standard library". which contains crypto/tls.
-#+END_QUOTE
-so let's wait ^_^
+*** [[https://xeiaso.net/blog/openssl-3.x-secvuln-incoming][You should prepare for the OpenSSL 3.x secvuln]]
+**** [[https://mta.openssl.org/pipermail/openssl-announce/2022-November/000243.html][OpenSSL Security Advisory]]
 ** [[https://lantian.pub/][蓝天]]
 大佬!
 *** [[https://lantian.pub/article/chat/how-i-nuked-my-btrfs-partition.lantian/][我把硬盘换到了新电脑上，这是 Btrfs 上的数据发生的变化]]
@@ -336,7 +327,6 @@ foreign or domestic, requires you to follow Snowden's example.
 ** [[https://ghinda.net/oxygenos/][oxygenos]]
 his final year project in high school, 2008
 a webos using oxygen visual design
-** [[https://news.ycombinator.com/item?id=32012566][Hacker News: A better formulation of DRY(Don't Repeat Yourself) is SPOT (Single Point Of Truth)]]
 ** [[https://news-web.php.net/php.internals/70691][PHP function hashing mechanism was strlen()]]
 ** [[http://phrack.org][Phrack Magazine]]
 worth reading
@@ -347,3 +337,4 @@ worth reading
 ** [[https://tildeverse.org]]
 ** [[http://decss.zoy.org][42 ways to distribute DeCSS]]
 *** [[http://www.cs.cmu.edu/~dst/DeCSS/Kesden/index.html][Lecture 33: Content Scrambling System]]
+** [[https://custodians.online/chinese.html][声援 Library Genesis 和 Sci-Hub]]
