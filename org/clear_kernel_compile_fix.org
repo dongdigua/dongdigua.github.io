@@ -1,0 +1,35 @@
+#+TITLE: Clear Kernel Build Error? Fix It
+#+DATE: <2022-11-04 五>
+#+DESCRIPTION: arch/x86/kernel/cpu/intel_epb.c:171:2: error: call to undeclared function 'sched _set_itmt_power_ratio'
+
+when I compile clear kernel with LLVM enabled, I got this error:
+#+BEGIN_SRC text
+  arch/x86/kernel/cpu/intel_epb.c:172:2: error: call to undeclared function 'sched_set_itmt_power_ratio';
+  ISO C99 and later do not support implicit function declarations [-Werror,-Wimplicit-function-declaration]
+          sched_set_itmt_power_ratio(256 - val * 2, cpu);
+          ^
+  arch/x86/kernel/cpu/intel_epb.c:172:2: note: did you mean 'sched_set_itmt_core_prio'?
+  ./arch/x86/include/asm/topology.h:189:20: note: 'sched_set_itmt_core_prio' declared here
+  static inline void sched_set_itmt_core_prio(int prio, int core_cpu)
+                     ^
+  1 error generated.
+#+END_SRC
+
+it's obvious that the =sched_set_itmt_power_ratio= function is undeclared
+so I added the following and it is able to compile :)
+#+BEGIN_SRC diff
+--- /home/gentoo/linux/topology.h       2022-11-04 16:40:18.500113117 +0800
++++ arch/x86/include/asm/topology.h     2022-11-04 16:41:03.676782505 +0800
+@@ -189,6 +189,9 @@
+ static inline void sched_set_itmt_core_prio(int prio, int core_cpu)
+ {
+ }
++static inline void sched_set_itmt_power_ratio(int prio, int core_cpu)
++{
++}
+ static inline int sched_set_itmt_support(void)
+ {
+        return 0;
+#+END_SRC
+
+End.
