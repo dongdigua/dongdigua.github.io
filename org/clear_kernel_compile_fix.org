@@ -2,7 +2,7 @@
 #+DATE: <2022-11-04 五>
 #+DESCRIPTION: arch/x86/kernel/cpu/intel_epb.c:171:2: error: call to undeclared function 'sched _set_itmt_power_ratio'
 
-when I compile clear kernel with LLVM enabled, I got this error:
+when I compile [[https://github.com/clearlinux-pkgs/linux][clear]] kernel with LLVM enabled, I got this error:
 #+BEGIN_SRC text
   arch/x86/kernel/cpu/intel_epb.c:172:2: error: call to undeclared function 'sched_set_itmt_power_ratio';
   ISO C99 and later do not support implicit function declarations [-Werror,-Wimplicit-function-declaration]
@@ -15,11 +15,12 @@ when I compile clear kernel with LLVM enabled, I got this error:
   1 error generated.
 #+END_SRC
 
-it's obvious that the =sched_set_itmt_power_ratio= function is undeclared
-so I added the following and it is able to compile :)
+it's obvious that the [[https://github.com/clearlinux-pkgs/linux/blob/main/0128-itmt_epb-use-epb-to-scale-itmt.patch][sched_set_itmt_power_ratio]] function is undeclared
+so I added the following like the function on top of it
+and it is able to compile :)
 #+BEGIN_SRC diff
---- /home/gentoo/linux/topology.h       2022-11-04 16:40:18.500113117 +0800
-+++ arch/x86/include/asm/topology.h     2022-11-04 16:41:03.676782505 +0800
+--- /home/gentoo/linux/topology.h
++++ arch/x86/include/asm/topology.h
 @@ -189,6 +189,9 @@
  static inline void sched_set_itmt_core_prio(int prio, int core_cpu)
  {
@@ -32,4 +33,4 @@ so I added the following and it is able to compile :)
         return 0;
 #+END_SRC
 
-End.
+Notice: I'm ignorant about C programming, so if anything's wrong, please contact me
