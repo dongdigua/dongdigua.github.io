@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-11-04 五 16:51 -->
+<!-- 2022-11-04 五 19:21 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Clear Kernel Build Error? Fix It</title>
@@ -204,7 +204,7 @@
 </div><div id="content" class="content">
 <h1 class="title">Clear Kernel Build Error? Fix It</h1>
 <p>
-when I compile clear kernel with LLVM enabled, I got this error:<br />
+when I compile <a href="https://github.com/clearlinux-pkgs/linux">clear</a> kernel with LLVM enabled, I got this error:<br />
 </p>
 <div class="org-src-container">
 <pre class="src src-text">arch/x86/kernel/cpu/intel_epb.c:172:2: error: call to undeclared function 'sched_set_itmt_power_ratio';
@@ -220,12 +220,13 @@ static inline void sched_set_itmt_core_prio(int prio, int core_cpu)
 </div>
 
 <p>
-it's obvious that the <code>sched_set_itmt_power_ratio</code> function is undeclared<br />
-so I added the following and it is able to compile :)<br />
+it's obvious that the <a href="https://github.com/clearlinux-pkgs/linux/blob/main/0128-itmt_epb-use-epb-to-scale-itmt.patch">sched_set_itmt_power_ratio</a> function is undeclared<br />
+so I added the following like the function on top of it<br />
+and it is able to compile :)<br />
 </p>
 <div class="org-src-container">
-<pre class="src src-diff"><span style="font-weight: bold;">--- </span><span style="font-weight: bold;">/home/gentoo/linux/topology.h       2022-11-04 16:40:18.500113117 +0800</span>
-<span style="font-weight: bold;">+++ </span><span style="font-weight: bold;">arch/x86/include/asm/topology.h     2022-11-04 16:41:03.676782505 +0800</span>
+<pre class="src src-diff"><span style="font-weight: bold;">--- </span><span style="font-weight: bold;">/home/gentoo/linux/topology.h</span>
+<span style="font-weight: bold;">+++ </span><span style="font-weight: bold;">arch/x86/include/asm/topology.h</span>
 <span style="font-weight: bold;">@@ -189,6 +189,9 @@</span>
  static inline void sched_set_itmt_core_prio(int prio, int core_cpu)
  {
@@ -240,13 +241,13 @@ so I added the following and it is able to compile :)<br />
 </div>
 
 <p>
-End.<br />
+Notice: I'm ignorant about C programming, so if anything's wrong, please contact me<br />
 </p>
 </div>
 <div id="postamble" class="status">
 <p class="date">Date: 2022-11-04 五 00:00</p>
 <p class="author">Author: dongdigua</p>
-<p class="date">Created: 2022-11-04 五 16:51</p>
+<p class="date">Created: 2022-11-04 五 19:21</p>
 </div>
 </body>
 </html>

@@ -20,6 +20,7 @@
 #+ATTR_HTML: :width 256px
 [[http://xahlee.info/emacs/misc/i/Marisa_Kirisame_emacs_magic.png]]
 ** [[http://www.yinwang.org/][王垠]]
+** [[https://zedshaw.com][Zed A. Shaw]]
 ** [[http://ruanyifeng.com/blog/][阮一峰]]                                                            :rssub:
 ** [[http://www.hackdig.com/][黑客技术]]                                                           :hack:
 really good website, butt, no rss
@@ -75,12 +76,14 @@ CPU, IC, ARM
 Lisp-1 的变量命名空间和函数命名空间是统一的，而在 Lisp-2 中两者是分开的
 #+END_QUOTE
 **** [[http://xahlee.info/emacs/emacs/lisp1_vs_lisp2.html][Xah Lee Lisp-1 vs Lisp-2]]
-** [[https://cps.ninja][行侠何须仗名剑]]                                                     :lisp:
-*** [[https://cps.ninja/2020/04/13/deriving-y-combinator/][推导 Y Combinator]]
-**** [[https://nihil.cc/posts/rust_closure_and_y/][Nihil: Rust 闭包递归与 Y 组合子]]                                :rust:
+** [[https://nihil.cc][Nihil]]                                                              :rust:
+*** [[https://nihil.cc/posts/rust_closure_and_y/][Rust 闭包递归与 Y 组合子]]
+**** [[https://cps.ninja/2020/04/13/deriving-y-combinator/][行侠何须仗名剑: 推导 Y Combinator]]
 **** [[https://www.functor.me/post/programming/y-combinator][functor.me: 从零开始理解 Y 组合子]]
-** [[https://stevenbai.top/ethereum/以太坊evm笔记/][以太坊evm笔记]]
+*** [[https://nihil.cc/posts/gnu_c_ext/][GNU C 一些有趣的扩展语法]]
+*** [[https://nihil.cc/posts/shell-redirect/][特别全面! Shell 中的管道、重定向、进程替换]]
 ** [[https://sh.alynx.one/][Alynx Zhou]]                                                :linux:rssable:
+东西很多
 ** [[https://coredumped.dev/][Core Dumped]]                                         :rust:lowlevel:emacs:
 VM
 ** [[https://liujiacai.net/][keep coding]]                                     :rust:c:lowlevel:backend:
@@ -133,19 +136,13 @@ Welcome to the darkest dungeon of kernal
 Written with Vim and Emacs
 A member of Linux Club of Peking University.
 cat-v-like sidebar style
-*** [[https://vimacs.wehack.space/matrix-guide/][Matrix聊天快速指南]]
-#+BEGIN_COMMENT
-矩阵一入深似海, 从此电幕(from:《一九八四》)是路人.
-#+END_COMMENT
+*** [[https://vimacs.wehack.space/matrix-guide/][矩阵一入深似海, 从此电幕是路人]]
 **** [[https://citizenlab.ca/2016/11/wechat-china-censorship-one-app-two-systems/][微信一app两制]]
 *** [[https://vimacs.wehack.space/Mail-vs-IM.htm][谈电子邮件和即时通讯]]
 ** [[http://www.matrix67.com/blog/][Matrix67]]                                                           :math:
 The Aha Moments
 *** [[http://www.matrix67.com/blog/archives/6039][用三段 140 字符以内的代码生成一张 1024×1024 的图片]]
-** [[https://hookrace.net][Dennis Felsing]]                                                      :nim:
-*** [[https://www.howistart.org/posts/nim/1/][howistart: Nim]]
-brainf**k
-*** [[https://hookrace.net/blog/writing-an-async-logger-in-nim/][Writing an Async Logger in Nim]]
+*** [[http://localhost-8080.com/][http://localhost-8080.com]]
 ** [[https://nyxt.atlas.engineer/article/gopher.org][Nyxt: Why should I care about Gopher?]]                            :gopher:
 #+BEGIN_QUOTE
 By making something a little bit more inaccessible, we are inadvertently putting a filter on what is being posted.
@@ -183,7 +180,6 @@ GE d@ s: a C++$ UBL+++$ P++(--)$ L++(-)$ !E W+++(-)$ !N !o K--? w !O !M  !V PS++
 *** [[https://konfou.xyz/posts/urbit-an-alien-system-software/][Urbit, an alien system software]]
 ** [[http://www.jinbuguo.com][金步国作品集]]                                             :lowlevel:linux:
 kernel, LFS
-
 ** [[https://blog.pg999w.top/too-many-channels/][Too many channels in Rust but only one in Go]]                       :rust:
 ** B
 *** [[https://blog.yangmame.org/][yanemame]]
@@ -201,11 +197,18 @@ B站: 称呼我C先生
 *** [[https://zhuanlan.zhihu.com/p/138719668][用Go语言汇编计算fibonacci数列]]                                :lowlevel:
 *** [[https://www.zhihu.com/column/c_1313110231912726528][倔强的程序员]]
 编! 译! 原! 理!
-*** [[https://www.zhihu.com/column/c_185117725][知乎专栏: 技术考古]]                                              :plan9:
+*** [[https://www.zhihu.com/column/c_185117725][专栏: 技术考古]]                                              :plan9:
 plan9
-*** [[https://www.zhihu.com/column/roartalk][知乎专栏: 嘶吼RoarTalk]]                                           :hack:
+*** [[https://www.zhihu.com/column/roartalk][专栏: 嘶吼RoarTalk]]                                           :hack:
 回归最本质的信息安全
-*** [[https://zhuanlan.zhihu.com/p/464565089][我抵制Notepad++的理由]]
+*** [[https://www.zhihu.com/column/c_1323386534369341440][专栏: 高质量]]
+**** [[https://zhuanlan.zhihu.com/p/464565089][我抵制Notepad++的理由]]
+*** [[https://www.zhihu.com/question/20566787][如何解读EVA]]
+#+BEGIN_QUOTE
+人需不需要存在的意义
+人需不需要互相之间完全理解
+自我封闭是否是应对外界压力的合理方式
+#+END_QUOTE
 ** shenjack/HWS/fri3nds
 *** [[http://www.z.org.cn/][老网虫]]
 *** [[https://blog.yang-qwq.ml][yang-qwq]]
@@ -320,12 +323,6 @@ To any NSA and FBI agents reading my email: please consider
 whether defending the US Constitution against all enemies,
 foreign or domestic, requires you to follow Snowden's example.
 #+END_QUOTE
-** [[https://www.zhihu.com/question/20566787][如何解读EVA]]
-#+BEGIN_QUOTE
-人需不需要存在的意义
-人需不需要互相之间完全理解
-自我封闭是否是应对外界压力的合理方式
-#+END_QUOTE
 ** [[https://www.gilesorr.com/wm/][The Window Manager Report]]
 ** [[https://ghinda.net/oxygenos/][oxygenos]]
 his final year project in high school, 2008
@@ -338,6 +335,7 @@ worth reading
 ** [[https://akrl.sdf.org/gccemacs.html][gccemacs]]
 *** [[https://akrl.sdf.org/gccemacs_els2020.pdf][slides_els2020]]
 ** [[https://tildeverse.org]]
+*** [[https://quotes.tilde.chat]]
 ** [[http://decss.zoy.org][42 ways to distribute DeCSS]]
 *** [[http://www.cs.cmu.edu/~dst/DeCSS/Kesden/index.html][Lecture 33: Content Scrambling System]]
 ** [[https://custodians.online/chinese.html][声援 Library Genesis 和 Sci-Hub]]
