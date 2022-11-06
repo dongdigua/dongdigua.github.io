@@ -17,7 +17,7 @@ Everforest is a green based color scheme, it's designed to be warm and soft in o
 目前还没在 melpa 上, 所以需要手动安装
 我一看到这个就从 [[https://github.com/arcticicestudio/nord-emacs][Nord]] 换过来了
 我加入了 whitespace-mode 的支持, +默认的颜色太晃眼睛啦+
-希望大家能一起帮忙贡献这个主题
+*希望大家能一起帮忙贡献这个主题*
 
 放一段 Rust [[https://github.com/dongdigua/AxolotlVM][代码]]的效果
 [[../images/everforest.png]]

@@ -3,34 +3,30 @@
 #+OPTIONS: toc:nil
 
 * Solution
-** gnome-screenshot
-grim
 ** iBus
+*** [[https://www.reddit.com/r/swaywm/comments/djkj5m/ibus_on_swaywm/][reddit: ibus on swaywm]]
 emacs pyim
 ** Emacs transparent, terminal blur
-probably wayfire?
+sway can't, probably wayfire?
 ** Authorization required, but no authorization protocol specified
 *** =sudo -E=
-*** lxpolkit(directly execute) or polkit-gnome(prettier)
+*** lxpolkit(directly execute) or polkit-gnome(prettier, at /usr/libexec/polkit-gnome-authentication-agent-1)
 ** cannot start sway on lightdm
-in =/etc/lightdm/lightdm.conf= uncomment =sessions-directory= line
-but still not stable, and it can't remenber which DE you used last time
+yes, still not stable, and it can't remenber which DE you used last time
 +so use gdm is a better choice?+
 SDDM is fantastic! [[https://youtu.be/2p7FINJSlAk][It is themeable]],
-I'm using *~elarun~*, a oxygen-like smooth crystal theme
-materia-kde is also a good choice
+I'm using *~elarun~*, a oxygen-like smooth crystal theme, materia-kde is also a good choice
 ** obs
-don't remove the =include= line!!!
+don't remove the =include= line in sway/config
 ** cursor theme not working
 [[https://github.com/swaywm/sway/issues/6931][from this issue]]
-add =seat seat0 xcursor_theme Oxygen_White= in sway comfig file
+add =seat seat0 xcursor_theme Oxygen_White= in sway config file
 ** touchpad gesture like gnome
+use libinput-gestures
 *** [[https://github.com/swaywm/sway/issues/1514][issue #1514: touchpad gestures to switch workspaces]]
-**** [[https://github.com/bulletmark/libinput-gestures][the libinput-gestures library]]
 **** [[https://github.com/swaywm/sway/pull/4952][pull #4952]]
 ***** [[https://github.com/swaywm/sway/pull/6778][pull #6778]]
 *** r/swaywm
-**** [[https://www.reddit.com/r/swaywm/comments/r85e9g/touchpad_gestures/]]
 **** [[https://www.reddit.com/r/swaywm/comments/px5vmw/how_are_you_configuring_touchpad_gestures/]]
 **** [[https://www.reddit.com/r/swaywm/comments/em0jnx/can_sway_handle_threefour_finger_touchpad_gestures/]]
 ** notify-send don't work
@@ -40,7 +36,7 @@ mako, a notification daemon
 *** cannot toggle: disable custon =default-frame-alist=, or just use floating mode
 *** TODO icon theme missing: ?
 ** [[https://www.reddit.com/r/swaywm/comments/scz5k6/option_create_on_workspace_prev_on_outputnext_on/][Option --create on workspace prev_on_output|next_on_output?]]
-I LIKE THIS FEATURE!!! WHY REMOVE IT???
+this feature is not compatible with i3, so sway didn't accept the pr
 *** [[https://www.reddit.com/r/swaywm/comments/mmfwnu/sway_command_workspace_next/][shell script solution]]
 *** [[https://github.com/oati/sway-workspace-manager][rust, probably useful]]
 
@@ -48,18 +44,17 @@ I LIKE THIS FEATURE!!! WHY REMOVE IT???
 * Ref
 ** [[https://coda.world/sway-explore-and-giveup][Sway: 从尝试到放弃]]
 ** [[https://shinta.ro/posts/migration-from-xorg-to-wayland/][从 Xorg 迁移到 Wayland]]
-** [[https://www.reddit.com/r/swaywm/comments/djkj5m/ibus_on_swaywm/][reddit: ibus on swaywm]]
 ** [[https://github.com/emersion/xdg-desktop-portal-wlr/wiki/Screencast-Compatibility#obs][xdg-desktop-portal wiki: obs]]
 ** [[https://www.reddit.com/r/swaywm/comments/jdoo8m/how_do_i_find_out_the_names_of_certain_keys/][prtsc is Print]]
 =xev/wev= is helpful
-** [[https://github.com/ziap/dotfiles]]
-a great config
 ** [[https://www.reddit.com/r/swaywm/comments/ehqsuw/autochanging_background_for_sway/][reddit: auto-changing sway background]]
-** [[https://github.com/Ruixi-rebirth/sway-dotfiles][Ruixi-rebirth's dotfiles]]
+** Configs
+*** [[https://github.com/ziap/dotfiles]]
+a great config
+*** [[https://github.com/Ruixi-rebirth/sway-dotfiles][Ruixi-rebirth's dotfiles]]
 sway, very beautiful, from COSSIG
-** [[https://www.reddit.com/r/unixporn/comments/vc9912/river_riced_river_a_dynamic_tiling_wayland/][a Paid config]]
-this is excellent, but...not for me
-I'd like something simpler
-*** [[https://archcraft.io][archcraft]]
-** [[https://github.com/rxyhn/yoru][夜 - Yoru]]
+*** [[https://www.reddit.com/r/unixporn/comments/vc9912/river_riced_river_a_dynamic_tiling_wayland/][a Paid config]]
+this is excellent, but...not for me, I'd like something simpler
+**** [[https://archcraft.io][archcraft]]
+*** [[https://github.com/rxyhn/yoru][夜 - Yoru]]
 awesome config!
