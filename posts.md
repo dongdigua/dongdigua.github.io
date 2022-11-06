@@ -3,10 +3,13 @@
 - [Clear Kernel Compile Error? Fix It](clear_kernel_compile_fix)<br>
 - [Gentoo LLVM\_TARGETS not Working?](gentoo_llvm_targets)<br>
 - [CentOS/Fedora 不同的配置默认都安装了什么软件](anaconda_kickstarts)<br>
+for [COSSIG](https://www.cossig.org)
 - [build a nixos live image](nixos)<br>
+nonsense
 - [moonboos, 懂的都懂](moonboos)<br>
 - [MGLNDD scans](weird_mglndd)<br>
 - [推荐 everforest 主题](recommend_everforest_theme)<br>
+any kind of contribution is welcome
 - [我对显示 IP 属地的看法](about_showing_ip)<br>
 - [我的 gnome 配置](my_gnome_config)<br>
 - [我对 SciCraft 更新1.19的看法](scicraft_update)<br>
@@ -17,7 +20,7 @@ nonsense archive
 ---
 
 ### Long Term Update
-- <font color=red>[大概是语文知识整理](digua-YW)</font><br>
+- [<font color=red>大概是语文知识整理</font>](digua-YW)<br>
 Big project
 - [Gopher/Gemini reactions](re.gmi.txt)<br>
 - [Gopher/Gemini collections, a quiet web](gopher_collections.gmi.txt)<br>

@@ -1,14 +1,17 @@
 #+TITLE: Something About MGLNDD Scans
+#+DESCRIPTION: sus
 #+DATE: <2022-08-17 三>
 #+OPTIONS: toc:nil
 
-* [[https://stretchoid.com/][stretchoid opt-out]]
+* DONE [[https://stretchoid.com/][stretchoid opt-out]]
 it's this domain's workers that COMSTANTLY scanning the WHOLE internet
-* [[https://isc.sans.edu/diary/MGLNDD_%2A+Scans/28458][SANS internet storm center diary]]
+* Some related link
+** [[https://www.bilibili.com/read/cv16357621][my post on bilibili]]
+** [[https://isc.sans.edu/diary/MGLNDD_%2A+Scans/28458][SANS internet storm center diary]]
 about the scanner and IP range
-** [[https://cybersafenv.org/2022/03/20/mglndd-scans-sun-mar-20th/][repost on cybersafenv]]
-* [[http://www.hackdig.com/04/hack-81133.htm][知名网络空间普查与网络测绘组织研究报告 第一期-组织名录篇]]
-* [[https://duanmofan.com/archives/librarymanagementsystem][【水蓝石】 近日图书馆出入人员信息逸事和小恶魔创造【持续更新】]]
+*** [[https://cybersafenv.org/2022/03/20/mglndd-scans-sun-mar-20th/][repost on cybersafenv]]
+** [[http://www.hackdig.com/04/hack-81133.htm][知名网络空间普查与网络测绘组织研究报告 第一期-组织名录篇]]
+** [[https://duanmofan.com/archives/librarymanagementsystem][【水蓝石】 近日图书馆出入人员信息逸事和小恶魔创造【持续更新】]]
 #+BEGIN_COMMENT
 青金石--幸福笔记
 黑曜石--学习史记
@@ -19,10 +22,8 @@ about the scanner and IP range
 其中也包括像密歇根大学，加州大学伯克利分校的访问信息。因为网络安全领域没有类似于“希波克拉底誓言”的东西，所以不能像医生一样信任
 就像到处晃别人家的门把手而不打开不是犯罪，但是真正的打开就混在发现没有锁门，而晃门把手时。
 #+END_QUOTE
-*** [[https://www.hackerfactor.com/blog/index.php?/archives/775-Scans-and-Attacks.html][HackerFactor: Scans & Attacks]]
-* [[https://github.com/dongdigua/portscan-listener/blob/main/log/some_strange_logs.md][my listener and some other logs]]
-** [[https://www.bilibili.com/read/cv16357621][my post on bilibili]]
-* [[https://zhuanlan.zhihu.com/p/67186794][zhihu:repost-translation: 如何建立一个基本的蜜罐]]
+**** [[https://www.hackerfactor.com/blog/index.php?/archives/775-Scans-and-Attacks.html][HackerFactor: Scans & Attacks]]
+** [[https://zhuanlan.zhihu.com/p/67186794][zhihu:repost-translation: 如何建立一个基本的蜜罐]]
 the original post is gone
 #+BEGIN_QUOTE
 您还可以开始执行DNS和WHOIS查找，以找出每次扫描背后的人员。
@@ -30,4 +31,4 @@ the original post is gone
 他们没有确定他们正在做什么或为什么他们在161 / udp扫描我的蜜罐。（端口161 / udp是为简单的网络管理协议（SNMP）保留的，并且经常容易受到攻击。）
 是的，他们把“malicious”拼错了 - 因此它可能不会出现在谷歌搜索“stretchoid and malicious”的结果中。
 #+END_QUOTE
-* [[https://www.digitalocean.com/community/questions/why-is-digital-ocean-showing-in-my-router-connecting-to-a-ps4][Why is Digital Ocean showing in my router, connecting to a PS4?]]
+** [[https://www.digitalocean.com/community/questions/why-is-digital-ocean-showing-in-my-router-connecting-to-a-ps4][Why is Digital Ocean showing in my router, connecting to a PS4?]]

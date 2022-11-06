@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-10-30 日 15:12 -->
+<!-- 2022-11-06 日 12:57 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Something About Wayland(swaywm)</title>
@@ -208,80 +208,77 @@
 <div class="outline-text-2" id="text-1">
 </div>
 <div class="outline-3">
-<h3><span class="section-number-3">1.1.</span> gnome-screenshot</h3>
+<h3><span class="section-number-3">1.1.</span> iBus</h3>
 <div class="outline-text-3" id="text-1-1">
-<p>
-grim<br />
-</p>
 </div>
-</div>
-<div class="outline-3">
-<h3><span class="section-number-3">1.2.</span> iBus</h3>
-<div class="outline-text-3" id="text-1-2">
+<div class="outline-4">
+<h4><span class="section-number-4">1.1.1.</span> <a href="https://www.reddit.com/r/swaywm/comments/djkj5m/ibus_on_swaywm/">reddit: ibus on swaywm</a></h4>
+<div class="outline-text-4" id="text-1-1-1">
 <p>
 emacs pyim<br />
 </p>
 </div>
 </div>
+</div>
 <div class="outline-3">
-<h3><span class="section-number-3">1.3.</span> Emacs transparent, terminal blur</h3>
-<div class="outline-text-3" id="text-1-3">
+<h3><span class="section-number-3">1.2.</span> Emacs transparent, terminal blur</h3>
+<div class="outline-text-3" id="text-1-2">
 <p>
-probably wayfire?<br />
+sway can't, probably wayfire?<br />
 </p>
 </div>
 </div>
 <div class="outline-3">
-<h3><span class="section-number-3">1.4.</span> Authorization required, but no authorization protocol specified</h3>
-<div class="outline-text-3" id="text-1-4">
+<h3><span class="section-number-3">1.3.</span> Authorization required, but no authorization protocol specified</h3>
+<div class="outline-text-3" id="text-1-3">
 </div>
 <div class="outline-4">
-<h4><span class="section-number-4">1.4.1.</span> <code>sudo -E</code></h4>
+<h4><span class="section-number-4">1.3.1.</span> <code>sudo -E</code></h4>
 </div>
 <div class="outline-4">
-<h4><span class="section-number-4">1.4.2.</span> lxpolkit(directly execute) or polkit-gnome(prettier)</h4>
+<h4><span class="section-number-4">1.3.2.</span> lxpolkit(directly execute) or polkit-gnome(prettier, at /usr/libexec/polkit-gnome-authentication-agent-1)</h4>
 </div>
 </div>
 <div class="outline-3">
-<h3><span class="section-number-3">1.5.</span> cannot start sway on lightdm</h3>
-<div class="outline-text-3" id="text-1-5">
+<h3><span class="section-number-3">1.4.</span> cannot start sway on lightdm</h3>
+<div class="outline-text-3" id="text-1-4">
 <p>
-in <code>/etc/lightdm/lightdm.conf</code> uncomment <code>sessions-directory</code> line<br />
-but still not stable, and it can't remenber which DE you used last time<br />
+yes, still not stable, and it can't remenber which DE you used last time<br />
 <del>so use gdm is a better choice?</del><br />
 SDDM is fantastic! <a href="https://youtu.be/2p7FINJSlAk">It is themeable</a>,<br />
-I'm using <b><code>elarun</code></b>, a oxygen-like smooth crystal theme<br />
-materia-kde is also a good choice<br />
+I'm using <b><code>elarun</code></b>, a oxygen-like smooth crystal theme, materia-kde is also a good choice<br />
 </p>
 </div>
 </div>
 <div class="outline-3">
-<h3><span class="section-number-3">1.6.</span> obs</h3>
+<h3><span class="section-number-3">1.5.</span> obs</h3>
+<div class="outline-text-3" id="text-1-5">
+<p>
+don't remove the <code>include</code> line in sway/config<br />
+</p>
+</div>
+</div>
+<div class="outline-3">
+<h3><span class="section-number-3">1.6.</span> cursor theme not working</h3>
 <div class="outline-text-3" id="text-1-6">
 <p>
-don't remove the <code>include</code> line!!!<br />
+<a href="https://github.com/swaywm/sway/issues/6931">from this issue</a><br />
+add <code>seat seat0 xcursor_theme Oxygen_White</code> in sway config file<br />
 </p>
 </div>
 </div>
 <div class="outline-3">
-<h3><span class="section-number-3">1.7.</span> cursor theme not working</h3>
+<h3><span class="section-number-3">1.7.</span> touchpad gesture like gnome</h3>
 <div class="outline-text-3" id="text-1-7">
 <p>
-<a href="https://github.com/swaywm/sway/issues/6931">from this issue</a><br />
-add <code>seat seat0 xcursor_theme Oxygen_White</code> in sway comfig file<br />
+use libinput-gestures<br />
 </p>
 </div>
-</div>
-<div class="outline-3">
-<h3><span class="section-number-3">1.8.</span> touchpad gesture like gnome</h3>
-<div class="outline-text-3" id="text-1-8">
-</div>
 <div class="outline-4">
-<h4><span class="section-number-4">1.8.1.</span> <a href="https://github.com/swaywm/sway/issues/1514">issue #1514: touchpad gestures to switch workspaces</a></h4>
-<div class="outline-text-4" id="text-1-8-1">
+<h4><span class="section-number-4">1.7.1.</span> <a href="https://github.com/swaywm/sway/issues/1514">issue #1514: touchpad gestures to switch workspaces</a></h4>
+<div class="outline-text-4" id="text-1-7-1">
 </div>
 <ol class="org-ol">
-<li><a></a><a href="https://github.com/bulletmark/libinput-gestures">the libinput-gestures library</a><br /></li>
 <li><a></a><a href="https://github.com/swaywm/sway/pull/4952">pull #4952</a><br />
 <ol class="org-ol">
 <li><a></a><a href="https://github.com/swaywm/sway/pull/6778">pull #6778</a><br /></li>
@@ -290,50 +287,49 @@ add <code>seat seat0 xcursor_theme Oxygen_White</code> in sway comfig file<br />
 </ol>
 </div>
 <div class="outline-4">
-<h4><span class="section-number-4">1.8.2.</span> r/swaywm</h4>
-<div class="outline-text-4" id="text-1-8-2">
+<h4><span class="section-number-4">1.7.2.</span> r/swaywm</h4>
+<div class="outline-text-4" id="text-1-7-2">
 </div>
 <ol class="org-ol">
-<li><a></a><a href="https://www.reddit.com/r/swaywm/comments/r85e9g/touchpad_gestures/">https://www.reddit.com/r/swaywm/comments/r85e9g/touchpad_gestures/</a><br /></li>
 <li><a></a><a href="https://www.reddit.com/r/swaywm/comments/px5vmw/how_are_you_configuring_touchpad_gestures/">https://www.reddit.com/r/swaywm/comments/px5vmw/how_are_you_configuring_touchpad_gestures/</a><br /></li>
 <li><a></a><a href="https://www.reddit.com/r/swaywm/comments/em0jnx/can_sway_handle_threefour_finger_touchpad_gestures/">https://www.reddit.com/r/swaywm/comments/em0jnx/can_sway_handle_threefour_finger_touchpad_gestures/</a><br /></li>
 </ol>
 </div>
 </div>
 <div class="outline-3">
-<h3><span class="section-number-3">1.9.</span> notify-send don't work</h3>
-<div class="outline-text-3" id="text-1-9">
+<h3><span class="section-number-3">1.8.</span> notify-send don't work</h3>
+<div class="outline-text-3" id="text-1-8">
 <p>
 mako, a notification daemon<br />
 </p>
 </div>
 </div>
 <div class="outline-3">
-<h3><span class="section-number-3">1.10.</span> <span class="todo TODO">TODO</span> <a href="https://github.com/WayfireWM/wayfire/issues/1329">Wayfire crashes when closing foot terminal</a></h3>
+<h3><span class="section-number-3">1.9.</span> <span class="todo TODO">TODO</span> <a href="https://github.com/WayfireWM/wayfire/issues/1329">Wayfire crashes when closing foot terminal</a></h3>
 </div>
 <div class="outline-3">
-<h3><span class="section-number-3">1.11.</span> emacs tool-bar not working(cannot toggle and icon theme missing)</h3>
+<h3><span class="section-number-3">1.10.</span> emacs tool-bar not working(cannot toggle and icon theme missing)</h3>
+<div class="outline-text-3" id="text-1-10">
+</div>
+<div class="outline-4">
+<h4><span class="section-number-4">1.10.1.</span> cannot toggle: disable custon <code>default-frame-alist</code>, or just use floating mode</h4>
+</div>
+<div class="outline-4">
+<h4><span class="section-number-4">1.10.2.</span> <span class="todo TODO">TODO</span> icon theme missing: ?</h4>
+</div>
+</div>
+<div class="outline-3">
+<h3><span class="section-number-3">1.11.</span> <a href="https://www.reddit.com/r/swaywm/comments/scz5k6/option_create_on_workspace_prev_on_outputnext_on/">Option &#x2013;create on workspace prev_on_output|next_on_output?</a></h3>
 <div class="outline-text-3" id="text-1-11">
-</div>
-<div class="outline-4">
-<h4><span class="section-number-4">1.11.1.</span> cannot toggle: disable custon <code>default-frame-alist</code>, or just use floating mode</h4>
-</div>
-<div class="outline-4">
-<h4><span class="section-number-4">1.11.2.</span> <span class="todo TODO">TODO</span> icon theme missing: ?</h4>
-</div>
-</div>
-<div class="outline-3">
-<h3><span class="section-number-3">1.12.</span> <a href="https://www.reddit.com/r/swaywm/comments/scz5k6/option_create_on_workspace_prev_on_outputnext_on/">Option &#x2013;create on workspace prev_on_output|next_on_output?</a></h3>
-<div class="outline-text-3" id="text-1-12">
 <p>
-I LIKE THIS FEATURE!!! WHY REMOVE IT???<br />
+this feature is not compatible with i3, so sway didn't accept the pr<br />
 </p>
 </div>
 <div class="outline-4">
-<h4><span class="section-number-4">1.12.1.</span> <a href="https://www.reddit.com/r/swaywm/comments/mmfwnu/sway_command_workspace_next/">shell script solution</a></h4>
+<h4><span class="section-number-4">1.11.1.</span> <a href="https://www.reddit.com/r/swaywm/comments/mmfwnu/sway_command_workspace_next/">shell script solution</a></h4>
 </div>
 <div class="outline-4">
-<h4><span class="section-number-4">1.12.2.</span> <a href="https://github.com/oati/sway-workspace-manager">rust, probably useful</a></h4>
+<h4><span class="section-number-4">1.11.2.</span> <a href="https://github.com/oati/sway-workspace-manager">rust, probably useful</a></h4>
 </div>
 </div>
 </div>
@@ -350,53 +346,53 @@ I LIKE THIS FEATURE!!! WHY REMOVE IT???<br />
 <h3><span class="section-number-3">2.2.</span> <a href="https://shinta.ro/posts/migration-from-xorg-to-wayland/">从 Xorg 迁移到 Wayland</a></h3>
 </div>
 <div class="outline-3">
-<h3><span class="section-number-3">2.3.</span> <a href="https://www.reddit.com/r/swaywm/comments/djkj5m/ibus_on_swaywm/">reddit: ibus on swaywm</a></h3>
+<h3><span class="section-number-3">2.3.</span> <a href="https://github.com/emersion/xdg-desktop-portal-wlr/wiki/Screencast-Compatibility#obs">xdg-desktop-portal wiki: obs</a></h3>
 </div>
 <div class="outline-3">
-<h3><span class="section-number-3">2.4.</span> <a href="https://github.com/emersion/xdg-desktop-portal-wlr/wiki/Screencast-Compatibility#obs">xdg-desktop-portal wiki: obs</a></h3>
-</div>
-<div class="outline-3">
-<h3><span class="section-number-3">2.5.</span> <a href="https://www.reddit.com/r/swaywm/comments/jdoo8m/how_do_i_find_out_the_names_of_certain_keys/">prtsc is Print</a></h3>
-<div class="outline-text-3" id="text-2-5">
+<h3><span class="section-number-3">2.4.</span> <a href="https://www.reddit.com/r/swaywm/comments/jdoo8m/how_do_i_find_out_the_names_of_certain_keys/">prtsc is Print</a></h3>
+<div class="outline-text-3" id="text-2-4">
 <p>
 <code>xev/wev</code> is helpful<br />
 </p>
 </div>
 </div>
 <div class="outline-3">
-<h3><span class="section-number-3">2.6.</span> <a href="https://github.com/ziap/dotfiles">https://github.com/ziap/dotfiles</a></h3>
+<h3><span class="section-number-3">2.5.</span> <a href="https://www.reddit.com/r/swaywm/comments/ehqsuw/autochanging_background_for_sway/">reddit: auto-changing sway background</a></h3>
+</div>
+<div class="outline-3">
+<h3><span class="section-number-3">2.6.</span> Configs</h3>
 <div class="outline-text-3" id="text-2-6">
+</div>
+<div class="outline-4">
+<h4><span class="section-number-4">2.6.1.</span> <a href="https://github.com/ziap/dotfiles">https://github.com/ziap/dotfiles</a></h4>
+<div class="outline-text-4" id="text-2-6-1">
 <p>
 a great config<br />
 </p>
 </div>
 </div>
-<div class="outline-3">
-<h3><span class="section-number-3">2.7.</span> <a href="https://www.reddit.com/r/swaywm/comments/ehqsuw/autochanging_background_for_sway/">reddit: auto-changing sway background</a></h3>
-</div>
-<div class="outline-3">
-<h3><span class="section-number-3">2.8.</span> <a href="https://github.com/Ruixi-rebirth/sway-dotfiles">Ruixi-rebirth's dotfiles</a></h3>
-<div class="outline-text-3" id="text-2-8">
+<div class="outline-4">
+<h4><span class="section-number-4">2.6.2.</span> <a href="https://github.com/Ruixi-rebirth/sway-dotfiles">Ruixi-rebirth's dotfiles</a></h4>
+<div class="outline-text-4" id="text-2-6-2">
 <p>
 sway, very beautiful, from COSSIG<br />
 </p>
 </div>
 </div>
-<div class="outline-3">
-<h3><span class="section-number-3">2.9.</span> <a href="https://www.reddit.com/r/unixporn/comments/vc9912/river_riced_river_a_dynamic_tiling_wayland/">a Paid config</a></h3>
-<div class="outline-text-3" id="text-2-9">
+<div class="outline-4">
+<h4><span class="section-number-4">2.6.3.</span> <a href="https://www.reddit.com/r/unixporn/comments/vc9912/river_riced_river_a_dynamic_tiling_wayland/">a Paid config</a></h4>
+<div class="outline-text-4" id="text-2-6-3">
 <p>
-this is excellent, but&#x2026;not for me<br />
-I'd like something simpler<br />
+this is excellent, but&#x2026;not for me, I'd like something simpler<br />
 </p>
 </div>
+<ol class="org-ol">
+<li><a></a><a href="https://archcraft.io">archcraft</a><br /></li>
+</ol>
+</div>
 <div class="outline-4">
-<h4><span class="section-number-4">2.9.1.</span> <a href="https://archcraft.io">archcraft</a></h4>
-</div>
-</div>
-<div class="outline-3">
-<h3><span class="section-number-3">2.10.</span> <a href="https://github.com/rxyhn/yoru">夜 - Yoru</a></h3>
-<div class="outline-text-3" id="text-2-10">
+<h4><span class="section-number-4">2.6.4.</span> <a href="https://github.com/rxyhn/yoru">夜 - Yoru</a></h4>
+<div class="outline-text-4" id="text-2-6-4">
 <p>
 awesome config!<br />
 </p>
@@ -404,10 +400,11 @@ awesome config!<br />
 </div>
 </div>
 </div>
+</div>
 <div id="postamble" class="status">
 <p class="date">Date: 2022-08-07 日 00:00</p>
 <p class="author">Author: dongdigua</p>
-<p class="date">Created: 2022-10-30 日 15:12</p>
+<p class="date">Created: 2022-11-06 日 12:57</p>
 </div>
 </body>
 </html>

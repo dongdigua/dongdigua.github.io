@@ -6,6 +6,7 @@
 #+OPTIONS: toc:1 ^:{}
 
 for [[https://cossig.org]](CentOS 中文特别兴趣小组)
+link: [[https://www.cossig.org/391-centos-fedora-default-softwares]]
 所以我这回不用英文了哈哈
 
 * CentOS
