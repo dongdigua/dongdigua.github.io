@@ -2,7 +2,7 @@
 #+DATE: <2022-11-04 五>
 #+DESCRIPTION: arch/x86/kernel/cpu/intel_epb.c:171:2: error: call to undeclared function 'sched _set_itmt_power_ratio'
 
-when I compile [[https://github.com/clearlinux-pkgs/linux][clear]] kernel with LLVM enabled, I got this error:
+when I compile [[https://github.com/gentoobr/overlay/tree/master/sys-kernel/clear-sources][Clear]] kernel with LLVM enabled, I got this error:
 #+BEGIN_SRC text
   arch/x86/kernel/cpu/intel_epb.c:172:2: error: call to undeclared function 'sched_set_itmt_power_ratio';
   ISO C99 and later do not support implicit function declarations [-Werror,-Wimplicit-function-declaration]
