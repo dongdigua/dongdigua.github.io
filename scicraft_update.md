@@ -1,8 +1,7 @@
 # 我对 SciCraft 更新 1.19 的看法
 > https://youtu.be/Y9DIIh0s9cg
 
-今天打开 YouTube, 准备找录视频参考的 tsoding 直播录像,<br>
-结果, 卧槽!!! Sci 要更新??!<br>
+今天打开 YouTube, 卧槽!!! Sci 要更新??!<br>
 ![sci_update](images/sci_update.jpg)<br>
 点进去一看, 要更 1.19, 我心里咯噔一下: 玩了这么久 1.12.2, 升级的话各种机器都会坏!<br>
 而且, 世界上又少了一个停留在 1.12 的技术服<br>
