@@ -28,6 +28,14 @@
 
 (setq org-html-validation-link nil
       org-export-with-sub-superscripts nil)
+(setq org-html-postamble-format
+      '(("en"
+         "
+<p class=\"author\">Author: %a</p>
+<p class=\"date\">Date: %d</p>
+<p class=\"date\">Build: %T</p>
+")))
+
 (setq org-publish-project-alist
       '(("org-pages"
          :base-directory "."
@@ -43,6 +51,7 @@
          :html-head "<link rel='stylesheet' type='text/css' href='css/main.css' />"
          :html-link-home "https://dongdigua.github.io"
          :html-link-up "./../posts"
+         :html-postamble t
          )))
 
 ;; from .emacs
