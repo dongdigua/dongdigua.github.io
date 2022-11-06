@@ -20,7 +20,7 @@
 #+ATTR_HTML: :width 256px
 [[http://xahlee.info/emacs/misc/i/Marisa_Kirisame_emacs_magic.png]]
 ** [[http://www.yinwang.org/][王垠]]
-** [[https://zedshaw.com][Zed A. Shaw]]
+** TODO [[https://zedshaw.com][Zed A. Shaw]]
 ** [[http://ruanyifeng.com/blog/][阮一峰]]                                                            :rssub:
 ** [[http://www.hackdig.com/][黑客技术]]                                                           :hack:
 really good website, butt, no rss
@@ -201,8 +201,7 @@ B站: 称呼我C先生
 plan9
 *** [[https://www.zhihu.com/column/roartalk][专栏: 嘶吼RoarTalk]]                                           :hack:
 回归最本质的信息安全
-*** [[https://www.zhihu.com/column/c_1323386534369341440][专栏: 高质量]]
-**** [[https://zhuanlan.zhihu.com/p/464565089][我抵制Notepad++的理由]]
+*** [[https://zhuanlan.zhihu.com/p/464565089][我抵制Notepad++的理由]]
 *** [[https://www.zhihu.com/question/20566787][如何解读EVA]]
 #+BEGIN_QUOTE
 人需不需要存在的意义
