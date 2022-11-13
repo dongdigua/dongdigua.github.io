@@ -8,6 +8,7 @@ var data = [
     "<a id=quote href=https://www.bilibili.com/video/BV1vW411g7tN>谁甘人生黯淡无光 谁愿做叶不争艳芳</a>",
     "Fly high my friend, until we meet again",
     "HsCnPtPYZnSr",
+    "李无用地瓜碱水, 硒钫铕𬭶鿔合金",
     "There will be an answer: Let It Be",
 
     "The internet is FULL, go away!",
@@ -25,6 +26,8 @@ var data = [
     "Presenting to the emergency room, unconcious",
     "Never Gonna Give You Up",
     "treat C compiler like your girlfriend",
+    "衬衫的价格是9磅15便士",
+    "李彦宏: 我想中国人可以更加开放，对隐私问题没有那么敏感。\n如果他们愿意用隐私交换便捷性，很多情况下他们是愿意的。",
 ];
 
 var index = Math.floor((Math.random() * data.length));
