@@ -1,11 +1,11 @@
 ## Table of Contents
 ### Posts (sorted by time)
+- [记一次帮老师修U盘](recover_udisk)<br>
 - [Clear Kernel Compile Error? Fix It](clear_kernel_compile_fix)<br>
 - [Gentoo LLVM\_TARGETS not Working?](gentoo_llvm_targets)<br>
 - [CentOS/Fedora 不同的配置默认都安装了什么软件](anaconda_kickstarts)<br>
 for [COSSIG](https://www.cossig.org)
-- [build a nixos live image](nixos)<br>
-nonsense
+- [<font color=grey>build a nixos live image</font>](nixos)<br>
 - [moonboos, 懂的都懂](moonboos)<br>
 - [MGLNDD scans](weird_mglndd)<br>
 - [推荐 everforest 主题](recommend_everforest_theme)<br>
@@ -14,8 +14,7 @@ any kind of contribution is welcome
 - [我的 gnome 配置](my_gnome_config)<br>
 - [我对 SciCraft 更新1.19的看法](scicraft_update)<br>
 - [对我将来的视频网站的一些畅想](plan_for_my_video_site)<br>
-- [elixir 写点对点加密聊天软件](p2p_chat)<br>
-nonsense archive
+- [<font color=grey>ARCHIVE: elixir 写点对点加密聊天软件</font>](p2p_chat)<br>
 
 ---
 
