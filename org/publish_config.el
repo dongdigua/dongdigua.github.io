@@ -42,7 +42,6 @@
          :base-extension "org"
          :publishing-directory "./../"
          :recursive t
-         :exclude "画大饼.org"
          :publishing-function org-html-publish-to-html
          :preserve-breaks t
 

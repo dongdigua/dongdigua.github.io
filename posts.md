@@ -23,6 +23,8 @@ any kind of contribution is welcome
 Big project
 - [Gopher/Gemini reactions](re.gmi.txt)<br>
 - [Gopher/Gemini collections, a quiet web](gopher_collections.gmi.txt)<br>
+- [Random Ideas](ideas)<br>
+画大饼
 - [折腾 sway 的一些记录(problem&solution)](wayland)<br>
 if you have some problem with sway, you can probably find solution here
 - [编辑器操作备忘录](cheatsheet)<br>

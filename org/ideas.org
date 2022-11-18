@@ -1,0 +1,20 @@
+#+TITLE: 画大饼
+#+DATE: <2022-09-09 五>
+
+here are some of my ideas, most of which are unachieveable now
+you can steal them, but you'd better let me know and add a reference
+
+
+* [[https://dongdigua.github.io/plan_for_my_video_site][对我将来的视频网站的一些畅想]]
+* Rust wasm 制作 schemetic/litemetica 渲染器
+** [[https://github.com/misode/vscode-nbt][a vscode extension]]
+* 用 sway 实现[[https://www.bilibili.com/video/BV1TE41147gK][用窗口玩游戏(×)用游戏玩窗口(√)]]的效果
+* 不同 Linux 内核(xanmod, clear)玩 MC 性能对比
+* emacs mode: eww show =console.log()= in Message
+* win7WM
+just a [[https://support.microsoft.com/en-us/windows/windows-7-support-ended-on-january-14-2020-b75d4580-2cc7-895a-2c9c-1466d9a53962][dream]]
+* join DN42
+* 一个能使用 APP(key) 功能的 bili 客户端
+用于点踩和查看IP属地
+* 用 eww 实现苹果的 "灵动岛"?
+呵呵, 在B站看到这样的基本就是壁纸软件的广告
