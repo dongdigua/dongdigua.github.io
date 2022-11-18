@@ -85,7 +85,7 @@ Lisp-1 的变量命名空间和函数命名空间是统一的，而在 Lisp-2 �
 **** [[https://www.functor.me/post/programming/y-combinator][functor.me: 从零开始理解 Y 组合子]]
 *** [[https://nihil.cc/posts/gnu_c_ext/][GNU C 一些有趣的扩展语法]]
 *** [[https://nihil.cc/posts/shell-redirect/][特别全面! Shell 中的管道、重定向、进程替换]]
-** [[https://sh.alynx.one/][Alynx Zhou]]                                                :linux:rssable:
+** TODO [[https://sh.alynx.one/][Alynx Zhou]]                                           :linux:rssable:
 东西很多
 ** [[https://coredumped.dev/][Core Dumped]]                                         :rust:lowlevel:emacs:
 VM
@@ -112,6 +112,7 @@ from ruanyifeng
 *** [[https://xeiaso.net/blog/nim-and-tup-2015-06-10][Nim and Tup]]
 *** [[https://xeiaso.net/blog/openssl-3.x-secvuln-incoming][You should prepare for the OpenSSL 3.x secvuln]]
 **** [[https://mta.openssl.org/pipermail/openssl-announce/2022-November/000243.html][OpenSSL Security Advisory]]
+*** [[https://xeiaso.net/blog/rip-twitter][Goodbye Twitter, Hello Fediverse!]]
 ** [[https://lantian.pub/][蓝天]]
 大佬!
 *** [[https://lantian.pub/article/chat/how-i-nuked-my-btrfs-partition.lantian/][我把硬盘换到了新电脑上，这是 Btrfs 上的数据发生的变化]]
@@ -145,7 +146,8 @@ cat-v-like sidebar style
 ** [[http://www.matrix67.com/blog/][Matrix67]]                                                           :math:
 The Aha Moments
 *** [[http://www.matrix67.com/blog/archives/6039][用三段 140 字符以内的代码生成一张 1024×1024 的图片]]
-*** [[http://localhost-8080.com/][http://localhost-8080.com]]
+*** [[http://www.matrix67.com/blog/archives/7084][16 年后重谈 P 和 NP]]
+*** [[http://localhost-8080.com/][❤ localhost-8080]]
 ** [[https://nyxt.atlas.engineer/article/gopher.org][Nyxt: Why should I care about Gopher?]]                            :gopher:
 #+BEGIN_QUOTE
 By making something a little bit more inaccessible, we are inadvertently putting a filter on what is being posted.
