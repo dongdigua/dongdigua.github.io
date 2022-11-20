@@ -1,0 +1,24 @@
+#+TITLE: New Blog Architecture
+#+DESCRIPTION: It's time
+#+DATE: <2022-11-20 Sun>
+
+I've never fully learnt git before(only search for garbage when meeted with problem), so I recently read [[https://git-scm.com/book][ProGit]].
+And I have some good ideas on my repo architecture: I should make use of branch, obviously.
+
+* Idea is:
+seperate the source file(org) and the generated files(html, feed.xml)
+so I can
+** clearly look at the diff
+** delete the generated files if I want
+because those static files are really unecessary and takes much space
+
+* So what
+** use =filter-branch= to remove the huge =feed.xml= in the full history
+** ignore the generated files in the source repo
+** merge the source repo into site repo when I think it's ok
+** and I will use the same stratagy on my YW sub-website if there's no problem
+
+* Need Advice
+I'm really new to do this.
+If you have a better idea, or this is somehow useful to you,
+*contact me, please!*
