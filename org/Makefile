@@ -1,7 +1,7 @@
 EMACS=emacs
 ORG_CONFIG_FILE=publish_config.el
 EMACS_OPTS=--batch --eval "(load-file \"$(ORG_CONFIG_FILE)\")" -f myweb-publish
-TARGET=ls ../*.html* | grep -v "index\|xmr.html"
+TARGET=ls ../*.html* | grep -v "index\|xmr\|404.html"
 
 all: html
 

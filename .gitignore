@@ -1,3 +1,8 @@
 *.*~
-rss.html
 .certificates
+
+*.html
+*.xml
+!index.html
+!xmr.html
+!404.html
