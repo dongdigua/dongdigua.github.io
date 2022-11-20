@@ -1,5 +1,7 @@
 ## Table of Contents
 ### Posts (sorted by time)
+- [New Blog Repo Architecture](new_blog_arch)<br>
+please contct me if you have a better idea
 - [记一次帮老师修U盘](recover_udisk)<br>
 - [Clear Kernel Compile Error? Fix It](clear_kernel_compile_fix)<br>
 - [Gentoo LLVM\_TARGETS not Working?](gentoo_llvm_targets)<br>

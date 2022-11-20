@@ -12,9 +12,10 @@ var data = [
     "李无用地瓜碱水, 硒钫铕𬭶鿔合金",
     "There will be an answer: Let It Be",
     "<a id=quote href=https://calm.com>Take a deep breath</a>",
+    "怂: 从心",
 
     "The internet is FULL, go away!",
-    "<a id=quote href=https://git-scm.com/book>May the --force be with you</a>",
+    "<a id=quote href=new_blog_arch>May the --force be with you</a>",
     "<a id=quote href=https://suckless.org>Software that sucks less</a>",
     "whoami: No system is safe",
     "DROP it at <a id=quote href=https://lttstore.com>lttstore.com</a>",
@@ -26,11 +27,11 @@ var data = [
     "消除恐惧的最好办法就是面对恐惧,\n坚持, 才是胜利, 加油, 奥利给!",
     "Presenting to the emergency room, unconcious",
     "Never Gonna Give You Up",
-    "treat C compiler like your girlfriend",
+    "<treat C compiler like your girlfriend",
     "衬衫的价格是9磅15便士",
     "李彦宏: 我想中国人可以更加开放，对隐私问题没有那么敏感。\n如果他们愿意用隐私交换便捷性，很多情况下他们是愿意的。",
     "<a id=quote href=https://wiki.evageeks.org/A.T._Field>AT&T field</a>",
-    "I � Unicode",
+    "I □ Unicode",
 ];
 
 var index = Math.floor((Math.random() * data.length));
