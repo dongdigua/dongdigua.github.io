@@ -250,11 +250,13 @@ plan9
 0:06 nonono all the opensource are controlled by coporation actually,
      they create a text editor plugin and sell the free code for $10 a month
 *** [[https://youtu.be/BAo5C2qbLq8][Computerphile: Network Time Protocol (NTP)]]
+*** [[https://www.youtube.com/playlist?list=PLknodeJt-I5H_zK-udgi5XhhYrnDoLHkP][Gavin Freeborn: Commandline tools and tips]]
 
 ** Cyber Security
 *** [[https://youtu.be/x_R1DeZxGc0][Discover Vulnerabilities in Intel CPUs!]]
 *** [[https://youtu.be/2--1ph-4IaY][shit express hacked]]
 *** [[https://www.youtube.com/playlist?list=PL5--8gKSku15NSeLgrZX9hSEnqPTWoSJ0][DT: Privacy & Security]]
+*** [[https://youtu.be/UeAKTjx_eKA][Student Finds Hidden Devices in the College Library]]
 *** [[https://youtu.be/QxNsyrftJ8I][Chris Titus Tech: The Biggest Linux Security Mistakes]]
 "Security is a journey, not a destination!"
 *** [[https://youtu.be/S4E4yAktjug?t=998][How To Become Invisible Online # level 3]]
