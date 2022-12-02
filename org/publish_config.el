@@ -46,8 +46,8 @@
          :preserve-breaks t
 
          :org-html-validation-link nil
-         ;; https://github.com/rgb-24bit/org-html-theme-list org-joshua
          :html-head "<link rel='stylesheet' type='text/css' href='css/main.css' />"
+         ;; :html-head-include-default-style nil
          :html-link-home "https://dongdigua.github.io"
          :html-link-up "./../posts"
          :html-postamble t
