@@ -2,3 +2,6 @@
 *.md linguist-detectable=true
 *.org linguist-vendored=false
 *.org linguist-detectable=true
+
+.gitignore merge=ours
+.gitattributes merge=ours
