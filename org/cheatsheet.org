@@ -51,6 +51,8 @@
 | C-c C-l     | 编辑链接                      |
 | C-c C-,     | org-insert-structure-template |
 
+https://orgmode.org/worg/dev/org-export-reference.html
+
 *Bold* /italic/ _underline_ +strikethrough+ ~code~ =verbatim=
 
 ** normal
@@ -83,7 +85,8 @@ Git 能离线使用只是个传说, 你仍然需要联网搜索该用哪个命�
 #+BEGIN_SRC shell
 git log --stat | perl -ne 'END { print $c } $c += $1 if /(\d+) insertions/;'
 git log --pretty=tformat: --numstat | awk '{ add += $1; subs += $2; loc += $1 - $2 } END { printf "added lines: %s, removed lines: %s, total lines: %s\n", add, subs, loc }'
-git log --graph --color --decorate --abbrev-commit
+
+git show :1:file  # 1common 2ours 3theirs
 #+END_SRC
 
 * Fish

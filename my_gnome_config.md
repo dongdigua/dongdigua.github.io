@@ -24,6 +24,7 @@ doas dnf install f33-backgrounds-gnome
 gnome-terminal: Solarized
 
 ## login manager: lightdm
+it don't work with [sway](/wayland#dm)
 ```shell
 don't forget to install lightdm-settings
 doas dnf install lightdm-settings
