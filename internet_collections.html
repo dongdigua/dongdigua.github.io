@@ -1,0 +1,1275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2022-12-02 Fri 12:43 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Internet Collections</title>
+<meta name="author" content="dongdigua" />
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+</style>
+<link rel='stylesheet' type='text/css' href='css/main.css' />
+</head>
+<body>
+<div id="org-div-home-and-up">
+ <a accesskey="h" href="./../posts"> UP </a>
+ |
+ <a accesskey="H" href="https://dongdigua.github.io"> HOME </a>
+</div><div id="content" class="content">
+<h1 class="title">Internet Collections</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a>1. 一些(个人)博客收集</a></li>
+<li><a>2. YouTube 收集(没有账号, 这就是我的收藏夹)</a></li>
+<li><a>3. r</a></li>
+<li><a>4. Other</a></li>
+</ul>
+</div>
+</div>
+
+<div class="outline-2">
+<h2><span class="section-number-2">1.</span> 一些(个人)博客收集</h2>
+<div class="outline-text-2" id="text-1">
+<div class="org-src-container">
+<pre class="src src-text">        _                                                  ___
+ /\    /   _  ._ _|_  _. o ._    |\/|  _.  _  o  _  _. |    |  ._   _|  _
+/--\   \_ (/_ |   |_ (_| | | |   |  | (_| (_| | (_ (_| |   _|_ | | (_| (/_ &gt;&lt;
+                                           _|
+</pre>
+</div>
+</div>
+<div class="outline-3">
+<h3><span class="section-number-3">1.1.</span> <a href="http://www.paulgraham.com/todo.html">Paul Graham</a></h3>
+</div>
+<div class="outline-3">
+<h3><span class="section-number-3">1.2.</span> <a href="http://www.qiusir.com/">qiusir</a>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="rssub">rssub</span></span></h3>
+</div>
+<div class="outline-3">
+<h3><span class="section-number-3">1.3.</span> <a href="http://xahlee.info">XahLee</a></h3>
+<div class="outline-text-3" id="text-1-3">
+
+<div class="figure">
+<p><img src="http://xahlee.info/emacs/misc/i/Marisa_Kirisame_emacs_magic.png" alt="Marisa_Kirisame_emacs_magic.png" width="256px" /><br />
+</p>
+</div>
+</div>
+</div>
+<div class="outline-3">
+<h3><span class="section-number-3">1.4.</span> <a href="http://www.yinwang.org/">王垠</a></h3>
+</div>
+<div class="outline-3">
+<h3><span class="section-number-3">1.5.</span> <span class="todo TODO">TODO</span> <a href="https://zedshaw.com">Zed A. Shaw</a></h3>
+</div>
+<div class="outline-3">
+<h3><span class="section-number-3">1.6.</span> <a href="http://ruanyifeng.com/blog/">阮一峰</a>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="rssub">rssub</span></span></h3>
+</div>
+<div class="outline-3">
+<h3><span class="section-number-3">1.7.</span> <a href="http://www.hackdig.com/">黑客技术</a>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="hack">hack</span></span></h3>
+<div class="outline-text-3" id="text-1-7">
+<p>
+really good website, butt, no rss<br />
+</p>
+</div>
+</div>
+<div class="outline-3">
+<h3><span class="section-number-3">1.8.</span> <a href="https://shakaianee.top/">易姐</a></h3>
+</div>
+<div class="outline-3">
+<h3><span class="section-number-3">1.9.</span> <a href="https://floooh.github.io/">floooh(The Brain Dump)</a>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="c">c</span></span></h3>
+<div class="outline-text-3" id="text-1-9">
+<p>
+07 年开始, cpu emulator<br />
+</p>
+</div>
+<div class="outline-4">
+<h4><span class="section-number-4">1.9.1.</span> <a href="https://floooh.github.io/2021/12/17/cycle-stepped-z80.html">2021: A new cycle-stepped Z80 emulator</a></h4>
+</div>
+<div class="outline-4">
+<h4><span class="section-number-4">1.9.2.</span> <a href="https://floooh.github.io/2019/09/27/modern-c-for-cpp-peeps.html">Modern C for C++ Peeps</a></h4>
+<div class="outline-text-4" id="text-1-9-2">
+<blockquote>
+<p>
+Modern C is not a subset of C++<br />
+</p>
+</blockquote>
+</div>
+</div>
+</div>
+<div class="outline-3">
+<h3><span class="section-number-3">1.10.</span> <a href="https://blog.stdio.io">King's way</a>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="hack">hack</span>&#xa0;<span class="iot">iot</span></span></h3>
+<div class="outline-text-3" id="text-1-10">
+</div>
+<div class="outline-4">
+<h4><span class="section-number-4">1.10.1.</span> <a href="https://blog.stdio.io/438">Linux内核学习阶段小结 (MOOC)</a></h4>
+</div>
+<div class="outline-4">
+<h4><span class="section-number-4">1.10.2.</span> <a href="https://blog.stdio.io/471">OpenWRT 绕过校园天翼宽带客户端限制(ppp)</a></h4>
+</div>
+<div class="outline-4">
+<h4><span class="section-number-4">1.10.3.</span> <a href="https://blog.stdio.io/935">一次意外的 hello world 探索之旅</a></h4>
+</div>
+</div>
+<div class="outline-3">
+<h3><span class="section-number-3">1.11.</span> <a href="https://xiaosong.fun/">小耸</a>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="c">c</span></span></h3>
+<div class="outline-text-3" id="text-1-11">
+</div>
+<div class="outline-4">
+<h4><span class="section-number-4">1.11.1.</span> <a href="https://xiaosong.fun/2022/01/01/lock-free-base-queue/">无锁编程基础与无锁队列的实现</a></h4>
+</div>
+<div class="outline-4">
+<h4><span class="section-number-4">1.11.2.</span> <a href="https://xiaosong.fun/2020/05/04/bug-and-mos/">打蚊子与找bug</a></h4>
+</div>
+</div>
+<div class="outline-3">
+<h3><span class="section-number-3">1.12.</span> <a href="https://piaogewala.ga/">这可太刑了</a></h3>
+<div class="outline-text-3" id="text-1-12">
+<p>
+学习通事件相关<br />
+</p>
+</div>
+</div>
+<div class="outline-3">
+<h3><span class="section-number-3">1.13.</span> <a href="https://www.cnblogs.com/zhongwencool/">写着写着就懂了</a>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="elixir">elixir</span></span></h3>
+<div class="outline-text-3" id="text-1-13">
+<p>
+elixir/erlang大佬, 公众号: HelloElixir<br />
+</p>
+</div>
+</div>
+<div class="outline-3">
+<h3><span class="section-number-3">1.14.</span> <a href="http://blog.lujun9972.win">lujun9972</a>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="emacs">emacs</span>&#xa0;<span class="rssub">rssub</span></span></h3>
+<div class="outline-text-3" id="text-1-14">
+<p>
+超~~~多emacs<br />
+</p>
+</div>
+<div class="outline-4">
+<h4><span class="section-number-4">1.14.1.</span> <a href="http://blog.lujun9972.win/emacs-document/">emacs document</a></h4>
+</div>
+</div>
+<div class="outline-3">
+<h3><span class="section-number-3">1.15.</span> <a href="https://www.wenhui.space/docs">文辉的烂笔头</a>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="lowlevel">lowlevel</span></span></h3>
+<div class="outline-text-3" id="text-1-15">
+<p>
+CPU, IC, ARM<br />
+</p>
+<blockquote>
+<p>
+第一次查过的问题，就应该记下来 !<br />
+第二次再查的问题，就必须记下来 !<br />
+</p>
+</blockquote>
+</div>
+<div class="outline-4">
+<h4><span class="section-number-4">1.15.1.</span> <a href="https://www.wenhui.space/docs/08-ic-design/cpu/meltdown-and-spectre/">浅谈熔断和幽灵</a></h4>
+</div>
+<div class="outline-4">
+<h4><span class="section-number-4">1.15.2.</span> <a href="https://www.wenhui.space/docs/02-emacs/org_mode_table_align/">解决Org-Mode表格不对齐问题</a></h4>
+<div class="outline-text-4" id="text-1-15-2">
+<p>
+更纱黑体 使中文恰好为英文宽度两倍, 使用字体比 valign 更通用, 但是不好看<br />
+</p>
+</div>
+</div>
+</div>
+<div class="outline-3">
+<h3><span class="section-number-3">1.16.</span> <a href="http://scinart.is-programmer.com/">scinart</a>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="lisp">lisp</span></span></h3>
+<div class="outline-text-3" id="text-1-16">
+<p>
+13年最后更新<br />
+</p>
+</div>
+</div>
+<div class="outline-3">
+<h3><span class="section-number-3">1.17.</span> <a href="http://bzhang.lamost.org/website/">bozhang</a>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="rssable">rssable</span></span></h3>
+<div class="outline-text-3" id="text-1-17">
+<p>
+05 年开始, 天文学<br />
+</p>
+</div>
+</div>
+<div class="outline-3">
+<h3><span class="section-number-3">1.18.</span> <a href="https://www.luogu.com.cn/blog/ivystorm/emacs-adventuredunnet-tong-guan-jiao-cheng">luogu blog: emacs dunnet 教程</a>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="emacs">emacs</span></span></h3>
+</div>
+<div class="outline-3">
+<h3><span class="section-number-3">1.19.</span> <a href="https://iceguye.com/blog">IceGuye</a></h3>
+</div>
+<div class="outline-3">
+<h3><span class="section-number-3">1.20.</span> <a href="http://jujuba.me/">Ground Oddity</a></h3>
+<div class="outline-text-3" id="text-1-20">
+<p>
+出国<br />
+</p>
+</div>
+<div class="outline-4">
+<h4><span class="section-number-4">1.20.1.</span> <a href="http://jujuba.me/posts/program-analysis-via-llvm-pass.html">LLVM Pass来实现简化版taint analysis</a></h4>
+</div>
+</div>
+<div class="outline-3">
+<h3><span class="section-number-3">1.21.</span> <a href="https://cireu.github.io/2019/09/17/lisp-setf/">NIL: setf 中「f」的本意</a></h3>
+</div>
+<div class="outline-3">
+<h3><span class="section-number-3">1.22.</span> <a href="https://www.cnblogs.com/zjjws/p/13346020.html">第 N 个质数</a>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="c">c</span>&#xa0;<span class="algorithm">algorithm</span></span></h3>
+<div class="outline-text-3" id="text-1-22">
+<p>
+看不懂, 先收藏着<br />
+</p>
+</div>
+</div>
+<div class="outline-3">
+<h3><span class="section-number-3">1.23.</span> <a href="https://www.coder.rs/">阳光少年(coder.rs)</a>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="rust">rust</span>&#xa0;<span class="python">python</span></span></h3>
+</div>
+<div class="outline-3">
+<h3><span class="section-number-3">1.24.</span> <a href="https://mrxn.net/">mrxn</a>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="hack">hack</span></span></h3>
+<div class="outline-text-3" id="text-1-24">
+<p>
+网安, data-leak<br />
+</p>
+</div>
+</div>
+<div class="outline-3">
+<h3><span class="section-number-3">1.25.</span> <a href="http://incf19.com/yynotes/">include-yy</a>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="c">c</span>&#xa0;<span class="lisp">lisp</span>&#xa0;<span class="emacs">emacs</span></span></h3>
+<div class="outline-text-3" id="text-1-25">
+<p>
+许多东方的图诶<br />
+</p>
+</div>
+<div class="outline-4">
+<h4><span class="section-number-4">1.25.1.</span> <a href="http://incf19.com/yynotes/posts/2021-10-25-14-%E8%9D%B4%E8%9D%B6%E6%95%88%E5%BA%94%E4%B8%8Eemacs%E5%8A%A8%E7%94%BB">蝴蝶效应与emacs动画</a></h4>
+</div>
+<div class="outline-4">
+<h4><span class="section-number-4">1.25.2.</span> <a href="http://incf19.com/yynotes/posts/2021-03-22-1-%E7%94%B1(%CE%BB(x)(x%20x))%E7%9C%8Belisp%E4%B8%8Escheme%E4%B9%8B%E5%8C%BA%E5%88%AB">由(λ(x)(x x))看elisp与scheme之区别</a></h4>
+<div class="outline-text-4" id="text-1-25-2">
+<blockquote>
+<p>
+这个问题其实就是 Lisp-1 和 Lisp-2 的区别导致的<br />
+Lisp-1 的变量命名空间和函数命名空间是统一的，而在 Lisp-2 中两者是分开的<br />
+</p>
+</blockquote>
+</div>
+<ol class="org-ol">
+<li><a></a><a href="http://xahlee.info/emacs/emacs/lisp1_vs_lisp2.html">Xah Lee Lisp-1 vs Lisp-2</a><br /></li>
+</ol>
+</div>
+</div>
+<div class="outline-3">
+<h3><span class="section-number-3">1.26.</span> <a href="https://nihil.cc">Nihil</a>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="rust">rust</span></span></h3>
+<div class="outline-text-3" id="text-1-26">
+</div>
+<div class="outline-4">
+<h4><span class="section-number-4">1.26.1.</span> <a href="https://nihil.cc/posts/rust_closure_and_y/">Rust 闭包递归与 Y 组合子</a></h4>
+<div class="outline-text-4" id="text-1-26-1">
+</div>
+<ol class="org-ol">
+<li><a></a><a href="https://cps.ninja/2020/04/13/deriving-y-combinator/">行侠何须仗名剑: 推导 Y Combinator</a><br /></li>
+<li><a></a><a href="https://www.functor.me/post/programming/y-combinator">functor.me: 从零开始理解 Y 组合子</a><br /></li>
+</ol>
+</div>
+<div class="outline-4">
+<h4><span class="section-number-4">1.26.2.</span> <a href="https://nihil.cc/posts/gnu_c_ext/">GNU C 一些有趣的扩展语法</a></h4>
+</div>
+<div class="outline-4">
+<h4><span class="section-number-4">1.26.3.</span> <a href="https://nihil.cc/posts/shell-redirect/">特别全面! Shell 中的管道、重定向、进程替换</a></h4>
+</div>
+</div>
+<div class="outline-3">
+<h3><span class="section-number-3">1.27.</span> <span class="todo TODO">TODO</span> <a href="https://sh.alynx.one/">Alynx Zhou</a>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="linux">linux</span>&#xa0;<span class="rssable">rssable</span></span></h3>
+<div class="outline-text-3" id="text-1-27">
+<p>
+东西很多<br />
+</p>
+</div>
+</div>
+<div class="outline-3">
+<h3><span class="section-number-3">1.28.</span> <a href="https://coredumped.dev/">Core Dumped</a>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="rust">rust</span>&#xa0;<span class="lowlevel">lowlevel</span>&#xa0;<span class="emacs">emacs</span></span></h3>
+<div class="outline-text-3" id="text-1-28">
+<p>
+VM<br />
+</p>
+</div>
+</div>
+<div class="outline-3">
+<h3><span class="section-number-3">1.29.</span> <a href="https://liujiacai.net/">keep coding</a>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="rust">rust</span>&#xa0;<span class="c">c</span>&#xa0;<span class="lowlevel">lowlevel</span>&#xa0;<span class="backend">backend</span></span></h3>
+<div class="outline-text-3" id="text-1-29">
+<p>
+写代码的西瓜<br />
+</p>
+</div>
+<div class="outline-4">
+<h4><span class="section-number-4">1.29.1.</span> <a href="https://emacstalk.github.io/">EmacsTalk</a></h4>
+</div>
+</div>
+<div class="outline-3">
+<h3><span class="section-number-3">1.30.</span> <a href="http://tomasp.net/">Tomas Petricek</a>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="rssub">rssub</span></span></h3>
+<div class="outline-text-3" id="text-1-30">
+<p>
+F#, M1(r0$0f+, very high quality<br />
+</p>
+</div>
+<div class="outline-4">
+<h4><span class="section-number-4">1.30.1.</span> <a href="http://tomasp.net/commodore64">commodore64 BASIC</a></h4>
+</div>
+<div class="outline-4">
+<h4><span class="section-number-4">1.30.2.</span> <a href="http://tomasp.net/blog/csharp-async-gotchas.aspx">async in C#(gotchas) and F#</a></h4>
+</div>
+</div>
+<div class="outline-3">
+<h3><span class="section-number-3">1.31.</span> <a href="http://www.xianwaizhiyin.net/">弦外之音</a>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="c">c</span>&#xa0;<span class="lowlevel">lowlevel</span></span></h3>
+<div class="outline-text-3" id="text-1-31">
+<p>
+源码分析<br />
+</p>
+</div>
+<div class="outline-4">
+<h4><span class="section-number-4">1.31.1.</span> <a href="https://www.xianwaizhiyin.net/?cat=24">state-thread 源码分析</a></h4>
+</div>
+</div>
+<div class="outline-3">
+<h3><span class="section-number-3">1.32.</span> <a href="https://lightless.me/">lightless blog</a>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="hack">hack</span></span></h3>
+</div>
+<div class="outline-3">
+<h3><span class="section-number-3">1.33.</span> <a href="https://bheisler.github.io/post/state-of-gpgpu-in-rust/">The State of GPGPU in Rust</a>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="rust">rust</span>&#xa0;<span class="lowlevel">lowlevel</span></span></h3>
+</div>
+<div class="outline-3">
+<h3><span class="section-number-3">1.34.</span> <a href="https://liyafu.com">Light &amp; Truth</a></h3>
+<div class="outline-text-3" id="text-1-34">
+<p>
+from ruanyifeng<br />
+</p>
+</div>
+</div>
+<div class="outline-3">
+<h3><span class="section-number-3">1.35.</span> <a href="https://litchipi.github.io/series/container_in_rust">Writing a container in Rust</a></h3>
+<div class="outline-text-3" id="text-1-35">
+</div>
+<div class="outline-4">
+<h4><span class="section-number-4">1.35.1.</span> <a href="https://litchipi.github.io/infosec/2022/07/08/copyit-until-you-makeit.html">Copy it until you make it</a></h4>
+</div>
+</div>
+<div class="outline-3">
+<h3><span class="section-number-3">1.36.</span> <a href="https://xeiaso.net/">Xe Iaso</a>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="rssub">rssub</span></span></h3>
+<div class="outline-text-3" id="text-1-36">
+</div>
+<div class="outline-4">
+<h4><span class="section-number-4">1.36.1.</span> <a href="https://xeiaso.net/blog/series/v">series: V</a></h4>
+<div class="outline-text-4" id="text-1-36-1">
+</div>
+<ol class="org-ol">
+<li><a></a><a href="https://xeiaso.net/blog/v-vaporware-2019-06-23">V for Vaporware</a><br />
+<div class="outline-text-5" id="text-1-36-1-1">
+<p>
+经典永流传~<br />
+</p>
+</div>
+</li>
+</ol>
+</div>
+<div class="outline-4">
+<h4><span class="section-number-4">1.36.2.</span> <a href="https://xeiaso.net/blog/nim-and-tup-2015-06-10">Nim and Tup</a></h4>
+</div>
+<div class="outline-4">
+<h4><span class="section-number-4">1.36.3.</span> <a href="https://xeiaso.net/blog/openssl-3.x-secvuln-incoming">You should prepare for the OpenSSL 3.x secvuln</a></h4>
+<div class="outline-text-4" id="text-1-36-3">
+</div>
+<ol class="org-ol">
+<li><a></a><a href="https://mta.openssl.org/pipermail/openssl-announce/2022-November/000243.html">OpenSSL Security Advisory</a><br /></li>
+</ol>
+</div>
+<div class="outline-4">
+<h4><span class="section-number-4">1.36.4.</span> <a href="https://xeiaso.net/blog/rip-twitter">Goodbye Twitter, Hello Fediverse!</a></h4>
+</div>
+</div>
+<div class="outline-3">
+<h3><span class="section-number-3">1.37.</span> <a href="https://lantian.pub/">蓝天</a></h3>
+<div class="outline-text-3" id="text-1-37">
+<p>
+大佬!<br />
+</p>
+</div>
+<div class="outline-4">
+<h4><span class="section-number-4">1.37.1.</span> <a href="https://lantian.pub/article/chat/how-i-nuked-my-btrfs-partition.lantian/">我把硬盘换到了新电脑上，这是 Btrfs 上的数据发生的变化</a></h4>
+<div class="outline-text-4" id="text-1-37-1">
+
+<div class="figure">
+<p><img src="https://lantian.pub/usr/uploads/202112/chubbyemu.jpg.thumb.png" alt="chubbyemu.jpg.thumb.png" /><br />
+</p>
+</div>
+</div>
+</div>
+<div class="outline-4">
+<h4><span class="section-number-4">1.37.2.</span> <a href="https://lantian.pub/article/forward/foolish-code-typo.lantian/">最傻的代码错误：一个空格酿成的血案</a></h4>
+</div>
+<div class="outline-4">
+<h4><span class="section-number-4">1.37.3.</span> <a href="https://lantian.pub/article/modify-website/serve-gopher-with-nginx.lantian/">用 nginx 建立 Gopher 网站</a>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="gopher">gopher</span></span></h4>
+</div>
+<div class="outline-4">
+<h4><span class="section-number-4">1.37.4.</span> <a href="https://lantian.pub/article/modify-website/dn42-experimental-network-2020.lantian/">DN42 实验网络介绍及注册教程</a></h4>
+<div class="outline-text-4" id="text-1-37-4">
+</div>
+<ol class="org-ol">
+<li><a></a><a href="https://lantian.pub/article/modify-website/how-to-kill-the-dn42-network.lantian/">如何引爆 DN42 网络</a><br /></li>
+</ol>
+</div>
+</div>
+<div class="outline-3">
+<h3><span class="section-number-3">1.38.</span> <a href="https://ulyc.github.io/">UlyC</a>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="python">python</span></span></h3>
+<div class="outline-text-3" id="text-1-38">
+</div>
+<div class="outline-4">
+<h4><span class="section-number-4">1.38.1.</span> <a href="https://ulyc.github.io/2022/08/10/sourcehut-the-hackers-forge/">sourcehut,  一个反叛而又正统的代码托管平台</a></h4>
+</div>
+<div class="outline-4">
+<h4><span class="section-number-4">1.38.2.</span> <a href="https://ulyc.github.io/2021/01/13/2021%E5%B9%B4-%E7%94%A8%E6%9B%B4%E7%8E%B0%E4%BB%A3%E7%9A%84%E6%96%B9%E6%B3%95%E4%BD%BF%E7%94%A8PGP-%E4%B8%8A/">2021年, 用更现代的方法使用PGP</a></h4>
+<div class="outline-text-4" id="text-1-38-2">
+<blockquote>
+<p>
+同样是非对称算法, 为什么PGP的私钥就长这么多呢？<br />
+因为他们用的算法不同, 比特币默认使用的是ECDSA的 secp256k1算法, 该算法只是用来签名和认证, 并不用来加密<br />
+(signify 只用于签名认证, age 只用于加密, 所以密钥也比较短)<br />
+</p>
+</blockquote>
+</div>
+<ol class="org-ol">
+<li><a></a><a href="https://spwo.notion.site/GitHub-6b1e1d57f52c4664bff61cadb3f9cb8d">震惊! 竟然有人在 GitHub 上冒充我的身份!</a><br /></li>
+</ol>
+</div>
+<div class="outline-4">
+<h4><span class="section-number-4">1.38.3.</span> <a href="https://ulyc.github.io/2019/08/01/%E5%88%9D%E7%AA%A5CORB/">Cross-Origin Read Blocking</a></h4>
+</div>
+</div>
+<div class="outline-3">
+<h3><span class="section-number-3">1.39.</span> <a href="https://kernal.eu">kernal</a></h3>
+<div class="outline-text-3" id="text-1-39">
+<p>
+Welcome to the darkest dungeon of kernal<br />
+</p>
+</div>
+<div class="outline-4">
+<h4><span class="section-number-4">1.39.1.</span> <a href="https://kernal.eu/posts/linuxfx/">Dumping Linuxfx customers - A Windows-like distro including the spyware and activation</a></h4>
+<div class="outline-text-4" id="text-1-39-1">
+<p>
+哈哈哈笑死了!<br />
+</p>
+</div>
+</div>
+</div>
+<div class="outline-3">
+<h3><span class="section-number-3">1.40.</span> <a href="https://blog.burntsushi.net/ripgrep/">ripgrep is faster than {grep, ag, git grep, ucg, pt, sift}</a></h3>
+</div>
+<div class="outline-3">
+<h3><span class="section-number-3">1.41.</span> <a href="https://vimacs.wehack.space/laptop/">vimacs</a></h3>
+<div class="outline-text-3" id="text-1-41">
+<p>
+Written with Vim and Emacs<br />
+A member of Linux Club of Peking University.<br />
+cat-v-like sidebar style<br />
+</p>
+</div>
+<div class="outline-4">
+<h4><span class="section-number-4">1.41.1.</span> <a href="https://vimacs.wehack.space/matrix-guide/">矩阵一入深似海, 从此电幕是路人</a></h4>
+<div class="outline-text-4" id="text-1-41-1">
+</div>
+<ol class="org-ol">
+<li><a></a><a href="https://citizenlab.ca/2016/11/wechat-china-censorship-one-app-two-systems/">微信一app两制</a><br /></li>
+</ol>
+</div>
+<div class="outline-4">
+<h4><span class="section-number-4">1.41.2.</span> <a href="https://vimacs.wehack.space/Mail-vs-IM.htm">谈电子邮件和即时通讯</a></h4>
+</div>
+</div>
+<div class="outline-3">
+<h3><span class="section-number-3">1.42.</span> <a href="http://www.matrix67.com/blog/">Matrix67</a>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="math">math</span></span></h3>
+<div class="outline-text-3" id="text-1-42">
+<p>
+The Aha Moments<br />
+</p>
+</div>
+<div class="outline-4">
+<h4><span class="section-number-4">1.42.1.</span> <a href="http://www.matrix67.com/blog/archives/6039">用三段 140 字符以内的代码生成一张 1024×1024 的图片</a></h4>
+</div>
+<div class="outline-4">
+<h4><span class="section-number-4">1.42.2.</span> <a href="http://www.matrix67.com/blog/archives/7084">16 年后重谈 P 和 NP</a></h4>
+</div>
+<div class="outline-4">
+<h4><span class="section-number-4">1.42.3.</span> <a href="http://localhost-8080.com/">❤ localhost-8080</a></h4>
+</div>
+</div>
+<div class="outline-3">
+<h3><span class="section-number-3">1.43.</span> <a href="https://nyxt.atlas.engineer/article/gopher.org">Nyxt: Why should I care about Gopher?</a>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="gopher">gopher</span></span></h3>
+<div class="outline-text-3" id="text-1-43">
+<blockquote>
+<p>
+By making something a little bit more inaccessible, we are inadvertently putting a filter on what is being posted.<br />
+</p>
+</blockquote>
+<blockquote>
+<p>
+This makes it a great way to avoid a lot of the low effort noise published on popular/accessible platforms.<br />
+As a result, Gopher is full of interesting, enriching, high quality content.<br />
+The authors are posting out of passion, and with great commitment.<br />
+Don't get me wrong, there's nonsense on Gopher too, but far less of it.<br />
+</p>
+</blockquote>
+</div>
+<div class="outline-4">
+<h4><span class="section-number-4">1.43.1.</span> <a href="https://www.orangeclk.com/2022/08/22/eternal-september-community-locals/">社区本地人与永恒的九月(Eternal September)</a></h4>
+<div class="outline-text-4" id="text-1-43-1">
+<blockquote>
+<p>
+几乎所有大众互联网社区都难逃此宿命。要想避免永恒九月，社区必须要足够克制，有节奏地引导新人加入。<br />
+但是过去20年互联网行业大发展的基本模式就是吸引大量用户、获取大平台地位、取得超额收益。<br />
+用户量是商业成功的互联网平台所必须追求的第一目标。要想获得商业成功，永恒九月来得越早越凶猛越好。<br />
+</p>
+</blockquote>
+
+<div class="figure">
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/d/d7/Internet_is_Full_-_Go_Away_t-shirt.jpg" alt="Internet_is_Full_-_Go_Away_t-shirt.jpg" width="256px" /><br />
+</p>
+</div>
+</div>
+</div>
+</div>
+<div class="outline-3">
+<h3><span class="section-number-3">1.44.</span> <a href="https://petermolnar.net/index.html">Peter 's Homepage</a>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="rssub">rssub</span></span></h3>
+<div class="outline-text-3" id="text-1-44">
+<blockquote>
+<p>
+GE d@ s: a C++$ UBL+++$ P++(&#x2013;)$ L++(-)$ !E W+++(-)$ !N !o K&#x2013;? w !O !M  !V PS++ PE- Y+ PGP+ t+ 5+++ X+ R tv b+ DI D+ G e++ h r+++ y+++*<br />
+</p>
+</blockquote>
+</div>
+<div class="outline-4">
+<h4><span class="section-number-4">1.44.1.</span> <a href="https://petermolnar.net/article/gopher">Gopher? Gopher.</a></h4>
+</div>
+</div>
+<div class="outline-3">
+<h3><span class="section-number-3">1.45.</span> <a href="https://secretgeek.github.io/html_wysiwyg/">巧用 CSS 显示 HTML 源码</a></h3>
+</div>
+<div class="outline-3">
+<h3><span class="section-number-3">1.46.</span> <a href="https://phenix3443.github.io/notebook/">phenix3443</a>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="c">c</span>&#xa0;<span class="emacs">emacs</span></span></h3>
+<div class="outline-text-3" id="text-1-46">
+<p>
+刘尚亮<br />
+</p>
+</div>
+<div class="outline-4">
+<h4><span class="section-number-4">1.46.1.</span> <a href="https://phenix3443.github.io/notebook/emacs/modes/use-package-manual.html">use-package manual</a></h4>
+</div>
+<div class="outline-4">
+<h4><span class="section-number-4">1.46.2.</span> <a href="https://phenix3443.github.io/notebook/emacs/emacs-startup-process.html">Emacs 启动过程介绍</a></h4>
+</div>
+<div class="outline-4">
+<h4><span class="section-number-4">1.46.3.</span> <a href="https://phenix3443.github.io/notebook/c/tinyhttpd-analysis.html">TinyHTTPd 源码分析</a></h4>
+</div>
+</div>
+<div class="outline-3">
+<h3><span class="section-number-3">1.47.</span> <a href="https://julienblanchard.com">julienblanchard/typed-hole</a>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="plan9">plan9</span></span></h3>
+<div class="outline-text-3" id="text-1-47">
+</div>
+<div class="outline-4">
+<h4><span class="section-number-4">1.47.1.</span> <a href="https://pmikkelsen.com">pmikkelsen</a></h4>
+</div>
+</div>
+<div class="outline-3">
+<h3><span class="section-number-3">1.48.</span> <a href="https://konfou.xyz">Konstantinos Foutzopoulos</a></h3>
+<div class="outline-text-3" id="text-1-48">
+</div>
+<div class="outline-4">
+<h4><span class="section-number-4">1.48.1.</span> <a href="https://konfou.xyz/posts/unix-filesystem-hierarchy/">Unix filesystem hierarchy</a></h4>
+</div>
+<div class="outline-4">
+<h4><span class="section-number-4">1.48.2.</span> <a href="https://konfou.xyz/posts/pantheon-of-distributed-operating-systems/">pantheon of distributed operating systems</a></h4>
+</div>
+<div class="outline-4">
+<h4><span class="section-number-4">1.48.3.</span> <a href="https://konfou.xyz/posts/urbit-an-alien-system-software/">Urbit, an alien system software</a></h4>
+</div>
+</div>
+<div class="outline-3">
+<h3><span class="section-number-3">1.49.</span> <a href="http://www.jinbuguo.com">金步国作品集</a>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="lowlevel">lowlevel</span>&#xa0;<span class="linux">linux</span></span></h3>
+<div class="outline-text-3" id="text-1-49">
+<p>
+kernel, LFS<br />
+</p>
+</div>
+</div>
+<div class="outline-3">
+<h3><span class="section-number-3">1.50.</span> <a href="https://blog.pg999w.top/too-many-channels/">Too many channels in Rust but only one in Go</a>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="rust">rust</span></span></h3>
+</div>
+<div class="outline-3">
+<h3><span class="section-number-3">1.51.</span> B</h3>
+<div class="outline-text-3" id="text-1-51">
+</div>
+<div class="outline-4">
+<h4><span class="section-number-4">1.51.1.</span> <a href="https://blog.yangmame.org/">yanemame</a></h4>
+<div class="outline-text-4" id="text-1-51-1">
+<p>
+猴哥推荐的<br />
+</p>
+</div>
+</div>
+<div class="outline-4">
+<h4><span class="section-number-4">1.51.2.</span> <a href="https://evanmeek.github.io/">我不会编程</a></h4>
+<div class="outline-text-4" id="text-1-51-2">
+<p>
+EvanMeek<br />
+B站: 美味的樱桃菌<br />
+</p>
+</div>
+</div>
+<div class="outline-4">
+<h4><span class="section-number-4">1.51.3.</span> <a href="https://yaocc.cc/">CC</a>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="linux">linux</span></span></h4>
+<div class="outline-text-4" id="text-1-51-3">
+<p>
+B站: 称呼我C先生<br />
+</p>
+</div>
+</div>
+<div class="outline-4">
+<h4><span class="section-number-4">1.51.4.</span> <a href="https://blog.lunaixsky.com/">lunaixsky</a>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="c">c</span>&#xa0;<span class="lowlevel">lowlevel</span></span></h4>
+</div>
+<div class="outline-4">
+<h4><span class="section-number-4">1.51.5.</span> <a href="https://endlesspeak.gitee.io/">EndlessPeak</a>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="linux">linux</span></span></h4>
+</div>
+<div class="outline-4">
+<h4><span class="section-number-4">1.51.6.</span> <a href="https://hackflow.org">GNUman</a></h4>
+<div class="outline-text-4" id="text-1-51-6">
+</div>
+<ol class="org-ol">
+<li><a></a><a href="https://hackflow.org/index.php/archives/124">谈 HTTPS 协议的缺陷与反 HTTPS 联盟的谬误</a><br /></li>
+</ol>
+</div>
+</div>
+<div class="outline-3">
+<h3><span class="section-number-3">1.52.</span> ZhiHu</h3>
+<div class="outline-text-3" id="text-1-52">
+</div>
+<div class="outline-4">
+<h4><span class="section-number-4">1.52.1.</span> <a href="https://zhuanlan.zhihu.com/p/138719668">用Go语言汇编计算fibonacci数列</a>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="lowlevel">lowlevel</span></span></h4>
+</div>
+<div class="outline-4">
+<h4><span class="section-number-4">1.52.2.</span> <a href="https://www.zhihu.com/column/c_1313110231912726528">倔强的程序员</a></h4>
+<div class="outline-text-4" id="text-1-52-2">
+<p>
+编! 译! 原! 理!<br />
+</p>
+</div>
+</div>
+<div class="outline-4">
+<h4><span class="section-number-4">1.52.3.</span> <a href="https://www.zhihu.com/column/c_185117725">专栏: 技术考古</a>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="plan9">plan9</span></span></h4>
+<div class="outline-text-4" id="text-1-52-3">
+<p>
+plan9<br />
+</p>
+</div>
+</div>
+<div class="outline-4">
+<h4><span class="section-number-4">1.52.4.</span> <a href="https://www.zhihu.com/column/roartalk">专栏: 嘶吼RoarTalk</a>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="hack">hack</span></span></h4>
+<div class="outline-text-4" id="text-1-52-4">
+<p>
+回归最本质的信息安全<br />
+</p>
+</div>
+</div>
+<div class="outline-4">
+<h4><span class="section-number-4">1.52.5.</span> <a href="https://zhuanlan.zhihu.com/p/464565089">我抵制Notepad++的理由</a></h4>
+</div>
+<div class="outline-4">
+<h4><span class="section-number-4">1.52.6.</span> <a href="https://www.zhihu.com/question/20566787">如何解读EVA</a></h4>
+<div class="outline-text-4" id="text-1-52-6">
+<blockquote>
+<p>
+人需不需要存在的意义<br />
+人需不需要互相之间完全理解<br />
+自我封闭是否是应对外界压力的合理方式<br />
+</p>
+</blockquote>
+</div>
+</div>
+</div>
+<div class="outline-3">
+<h3><span class="section-number-3">1.53.</span> shenjack/HWS/fri3nds</h3>
+<div class="outline-text-3" id="text-1-53">
+</div>
+<div class="outline-4">
+<h4><span class="section-number-4">1.53.1.</span> <a href="http://www.z.org.cn/">老网虫</a></h4>
+</div>
+<div class="outline-4">
+<h4><span class="section-number-4">1.53.2.</span> <a href="https://blog.yang-qwq.ml">yang-qwq</a></h4>
+</div>
+<div class="outline-4">
+<h4><span class="section-number-4">1.53.3.</span> <a href="http://blog.zhanganzhi.com/">zhanganzhi</a></h4>
+</div>
+<div class="outline-4">
+<h4><span class="section-number-4">1.53.4.</span> <a href="https://blog.bluemangoo.net/">芒果快评</a></h4>
+<div class="outline-text-4" id="text-1-53-4">
+<p>
+今年的新博客, 友链有踏浪<br />
+</p>
+</div>
+</div>
+</div>
+</div>
+
+<div class="outline-2">
+<h2><span class="section-number-2">2.</span> YouTube 收集(没有账号, 这就是我的收藏夹)</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div class="outline-3">
+<h3><span class="section-number-3">2.1.</span> Computer Science</h3>
+<div class="outline-text-3" id="text-2-1">
+</div>
+<div class="outline-4">
+<h4><span class="section-number-4">2.1.1.</span> <a href="https://youtu.be/0rJ94rbdteE">Rust 让你感觉像个天才</a></h4>
+</div>
+<div class="outline-4">
+<h4><span class="section-number-4">2.1.2.</span> <a href="https://youtu.be/nfF91Z6fqGk">CMD 登录B站</a></h4>
+</div>
+<div class="outline-4">
+<h4><span class="section-number-4">2.1.3.</span> <a href="https://youtu.be/jlPaby7suOc">Every Clojure Talk Ever</a></h4>
+</div>
+<div class="outline-4">
+<h4><span class="section-number-4">2.1.4.</span> <a href="https://youtu.be/l0AmlU-4IRM">Rust aes加密(legacy)</a></h4>
+</div>
+<div class="outline-4">
+<h4><span class="section-number-4">2.1.5.</span> <a href="https://youtu.be/hmMtQe_mYr0">tsoding helloworld in c</a></h4>
+</div>
+<div class="outline-4">
+<h4><span class="section-number-4">2.1.6.</span> <a href="https://www.youtube.com/playlist?list=PLpM-Dvs8t0VY73ytTCQqgvgCWttV3m8LM">tsoding virtual machine in C</a> , <a href="https://dongdigua.github.io/tsoding_bm">some notes</a></h4>
+</div>
+<div class="outline-4">
+<h4><span class="section-number-4">2.1.7.</span> <a href="https://youtu.be/Fq9chEBQMFE">what if I try to malloc too much memory</a></h4>
+</div>
+<div class="outline-4">
+<h4><span class="section-number-4">2.1.8.</span> <a href="https://youtu.be/zJ-8DZhzBEE">what your favourite pl says about you</a></h4>
+</div>
+<div class="outline-4">
+<h4><span class="section-number-4">2.1.9.</span> <a href="https://youtu.be/ziXgdkTfmPU">tsoding irc client in ocaml</a></h4>
+<div class="outline-text-4" id="text-2-1-9">
+<p>
+0:50 List.fold_left faster than fold_right, but haskell is opposite<br />
+1:00 I like ocaml, that's how python should look like,<br />
+     but ocaml itself is not ideal, you have to take ocaml and throw O away, and that's perfect<br />
+1:03 to be fair p___hub is more interesting than this, that's for sure, so let's use Makefile (instead of dune)<br />
+1:50 sexplib?<br />
+2:14 "how many american server you have already hacked" - "I don't count them I'm sorry"<br />
+</p>
+</div>
+</div>
+<div class="outline-4">
+<h4><span class="section-number-4">2.1.10.</span> <a href="https://youtu.be/Utse8P_L8k0">ArcaOS: Modern OS/2 </a></h4>
+</div>
+<div class="outline-4">
+<h4><span class="section-number-4">2.1.11.</span> <a href="https://youtu.be/1z0ULvg_pW8">集线器，交换机和路由器的区别</a></h4>
+<div class="outline-text-4" id="text-2-1-11">
+</div>
+<ol class="org-ol">
+<li><a></a><a href="https://youtu.be/TIiQiw7fpsU">MAC Address Explained</a><br /></li>
+<li><a></a><a href="https://youtu.be/6_giEv20En0">Subnets vs VLANs</a><br /></li>
+</ol>
+</div>
+<div class="outline-4">
+<h4><span class="section-number-4">2.1.12.</span> <a href="https://youtu.be/UNkHditYGls">I coded a fractal on an Apple II+</a></h4>
+</div>
+<div class="outline-4">
+<h4><span class="section-number-4">2.1.13.</span> <a href="https://youtu.be/p8u_k2LIZyo">Fast Inverse Square Root — A Quake III Algorithm</a></h4>
+<div class="outline-text-4" id="text-2-1-13">
+<p>
+<code>0x5f3759df</code><br />
+</p>
+</div>
+</div>
+<div class="outline-4">
+<h4><span class="section-number-4">2.1.14.</span> <a href="https://youtu.be/67FmRyv8jTM">tsoding: Parsing Java Bytecode with Python</a></h4>
+<div class="outline-text-4" id="text-2-1-14">
+<p>
+0:05 look how TINY Java code is<br />
+0:06 nonono all the opensource are controlled by coporation actually,<br />
+     they create a text editor plugin and sell the free code for $10 a month<br />
+</p>
+</div>
+</div>
+<div class="outline-4">
+<h4><span class="section-number-4">2.1.15.</span> <a href="https://youtu.be/BAo5C2qbLq8">Computerphile: Network Time Protocol (NTP)</a></h4>
+</div>
+<div class="outline-4">
+<h4><span class="section-number-4">2.1.16.</span> <a href="https://www.youtube.com/playlist?list=PLknodeJt-I5H_zK-udgi5XhhYrnDoLHkP">Gavin Freeborn: Commandline tools and tips</a></h4>
+</div>
+</div>
+
+<div class="outline-3">
+<h3><span class="section-number-3">2.2.</span> Cyber Security</h3>
+<div class="outline-text-3" id="text-2-2">
+</div>
+<div class="outline-4">
+<h4><span class="section-number-4">2.2.1.</span> <a href="https://youtu.be/x_R1DeZxGc0">Discover Vulnerabilities in Intel CPUs!</a></h4>
+</div>
+<div class="outline-4">
+<h4><span class="section-number-4">2.2.2.</span> <a href="https://youtu.be/2--1ph-4IaY">shit express hacked</a></h4>
+</div>
+<div class="outline-4">
+<h4><span class="section-number-4">2.2.3.</span> <a href="https://www.youtube.com/playlist?list=PL5--8gKSku15NSeLgrZX9hSEnqPTWoSJ0">DT: Privacy &amp; Security</a></h4>
+</div>
+<div class="outline-4">
+<h4><span class="section-number-4">2.2.4.</span> <a href="https://youtu.be/UeAKTjx_eKA">Student Finds Hidden Devices in the College Library</a></h4>
+</div>
+<div class="outline-4">
+<h4><span class="section-number-4">2.2.5.</span> <a href="https://youtu.be/QxNsyrftJ8I">Chris Titus Tech: The Biggest Linux Security Mistakes</a></h4>
+<div class="outline-text-4" id="text-2-2-5">
+<p>
+"Security is a journey, not a destination!"<br />
+</p>
+</div>
+</div>
+<div class="outline-4">
+<h4><span class="section-number-4">2.2.6.</span> <a href="https://youtu.be/S4E4yAktjug?t=998">How To Become Invisible Online # level 3</a></h4>
+</div>
+<div class="outline-4">
+<h4><span class="section-number-4">2.2.7.</span> <a href="https://youtu.be/oJ6t7AImTdE">CSS Keylogger - old is new again</a></h4>
+</div>
+<div class="outline-4">
+<h4><span class="section-number-4">2.2.8.</span> <a href="https://youtu.be/I4_ide0tEG8">zip files &amp; hack&#x2026; (CVE-2022-1271 zgrep/gzip)</a></h4>
+</div>
+<div class="outline-4">
+<h4><span class="section-number-4">2.2.9.</span> <a href="https://youtu.be/MS7WRuzNYDc">is leaking your IP really dangerous</a></h4>
+</div>
+</div>
+
+<div class="outline-3">
+<h3><span class="section-number-3">2.3.</span> Math</h3>
+<div class="outline-text-3" id="text-2-3">
+</div>
+<div class="outline-4">
+<h4><span class="section-number-4">2.3.1.</span> <a href="https://youtu.be/KufsL2VgELo">Group Theory</a></h4>
+</div>
+<div class="outline-4">
+<h4><span class="section-number-4">2.3.2.</span> <a href="https://youtu.be/3gyHKCDq1YA">p-adic Numbers: 2 ^ 10n</a></h4>
+</div>
+<div class="outline-4">
+<h4><span class="section-number-4">2.3.3.</span> <a href="https://youtu.be/4nG49xTTjIA">The Real Reason Why Negative Times Negative is Positive, Intro to Rings</a></h4>
+</div>
+<div class="outline-4">
+<h4><span class="section-number-4">2.3.4.</span> <a href="https://youtu.be/v_HeaeUUOnc">How to Take the Factorial of Any Number</a></h4>
+</div>
+<div class="outline-4">
+<h4><span class="section-number-4">2.3.5.</span> <a href="https://youtu.be/NJCiUVGiNyA">Coding a 3D Fractal: Mandelbulb</a></h4>
+</div>
+</div>
+
+<div class="outline-3">
+<h3><span class="section-number-3">2.4.</span> Minecraft</h3>
+<div class="outline-text-3" id="text-2-4">
+</div>
+<div class="outline-4">
+<h4><span class="section-number-4">2.4.1.</span> <a href="https://youtu.be/VKydXD6Lr20">Mojang &amp; Minecraft 开始衰落了吗?</a></h4>
+</div>
+<div class="outline-4">
+<h4><span class="section-number-4">2.4.2.</span> <a href="https://youtu.be/Y9DIIh0s9cg">SciCraft Update Plans</a></h4>
+</div>
+<div class="outline-4">
+<h4><span class="section-number-4">2.4.3.</span> <a href="https://youtu.be/m5S0gLgg2rs">Tantan: MC + Fez</a></h4>
+</div>
+<div class="outline-4">
+<h4><span class="section-number-4">2.4.4.</span> <a href="https://www.youtube.com/playlist?list=PLhixgUqwRTjwvBI-hmbZ2rpkAl4lutnJG">Minecraft HACKED (LiveOverflow)</a></h4>
+</div>
+</div>
+
+<div class="outline-3">
+<h3><span class="section-number-3">2.5.</span> ?</h3>
+<div class="outline-text-3" id="text-2-5">
+</div>
+<div class="outline-4">
+<h4><span class="section-number-4">2.5.1.</span> <a href="https://www.youtube.com/c/IceGuye">IceGuye aka 姑射冰尘</a></h4>
+<div class="outline-text-4" id="text-2-5-1">
+<p>
+<a href="https://odysee.com/@IceGuye">on odysee(lbry)</a><br />
+</p>
+</div>
+</div>
+<div class="outline-4">
+<h4><span class="section-number-4">2.5.2.</span> <a href="https://youtu.be/IS5ycm7VfXg">Homemade Silicon Chips!</a></h4>
+</div>
+<div class="outline-4">
+<h4><span class="section-number-4">2.5.3.</span> <a href="https://youtu.be/4IaOeVgZ-wc">Why I'm Suing YouTube.</a></h4>
+<div class="outline-text-4" id="text-2-5-3">
+<blockquote>
+<p>
+a story about YouTube’s intentional efforts to undermine the United States of America in collusion with the Russian government.<br />
+It’s also a story about copyright infringement<br />
+— and YouTube’s willful blindness to bad actors who openly admit<br />
+to filing patently fraudulent DMCA counter-notifications to avoid the termination of their accounts.<br />
+</p>
+</blockquote>
+</div>
+</div>
+<div class="outline-4">
+<h4><span class="section-number-4">2.5.4.</span> <a href="https://youtu.be/RH3D1cpm6do">Yes, Everyone on the Internet Is a Loser.</a></h4>
+<div class="outline-text-4" id="text-2-5-4">
+</div>
+<ol class="org-ol">
+<li><a></a><a href="https://youtu.be/2CnAzLB0OjU">DT: As The Web Grows Bigger, It Seems Smaller</a><br /></li>
+</ol>
+</div>
+<div class="outline-4">
+<h4><span class="section-number-4">2.5.5.</span> <a href="https://youtu.be/Rsxao9ptdmI">Beating 5 Scam Arcade Games with Science</a></h4>
+<div class="outline-text-4" id="text-2-5-5">
+<p>
+街机科学家～<br />
+</p>
+</div>
+</div>
+<div class="outline-4">
+<h4><span class="section-number-4">2.5.6.</span> <a href="https://youtube.com/playlist?list=PLgE-9Sxs2IBVgJkY-1ZMj0tIFxsJ-vOkv">BBS The Documentary(8)</a></h4>
+</div>
+<div class="outline-4">
+<h4><span class="section-number-4">2.5.7.</span> <a href="https://youtu.be/k35uDHs7Z9E">DT: A Disturbing Descent Into The Mind Of A Mad Man</a></h4>
+</div>
+</div>
+</div>
+
+<div class="outline-2">
+<h2><span class="section-number-2">3.</span> r</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div class="outline-3">
+<h3><span class="section-number-3">3.1.</span> <a href="https://www.reddit.com/r/unixporn/">unixporn</a></h3>
+<div class="outline-text-3" id="text-3-1">
+</div>
+<div class="outline-4">
+<h4><span class="section-number-4">3.1.1.</span> <a href="https://www.reddit.com/r/unixporn/comments/v6fsui/sway_family_reunionr/">reddit: family reunion</a></h4>
+</div>
+<div class="outline-4">
+<h4><span class="section-number-4">3.1.2.</span> <a href="https://www.reddit.com/r/unixporn/comments/wkba0x/jwm_if_i_had_a_pda/">pocket pc</a></h4>
+</div>
+<div class="outline-4">
+<h4><span class="section-number-4">3.1.3.</span> <a href="https://www.reddit.com/r/unixporn/comments/b83fex/win7_my_first_rice/">win7 :)</a></h4>
+</div>
+<div class="outline-4">
+<h4><span class="section-number-4">3.1.4.</span> <a href="https://www.reddit.com/r/unixporn/comments/wtvj46/kde_cherry_blossoms/">[KDE] Cherry Blossoms</a></h4>
+</div>
+</div>
+<div class="outline-3">
+<h3><span class="section-number-3">3.2.</span> <a href="https://www.reddit.com/r/ProgrammerHumor">ProgrammerHumor</a></h3>
+<div class="outline-text-3" id="text-3-2">
+</div>
+<div class="outline-4">
+<h4><span class="section-number-4">3.2.1.</span> <a href="https://www.reddit.com/r/ProgrammerHumor/comments/wpnvtg/microsoft_visual_rust_2018/">Microsoft Visual Rust</a></h4>
+</div>
+<div class="outline-4">
+<h4><span class="section-number-4">3.2.2.</span> <a href="https://www.reddit.com/r/ProgrammerHumor/comments/wsw78u/regex_be_like/">MC enchant: regex be like&#x2026;</a></h4>
+</div>
+<div class="outline-4">
+<h4><span class="section-number-4">3.2.3.</span> <a href="https://www.reddit.com/r/ProgrammerHumor/comments/mr8gqx/new_episode_of_electricianhumor/">New episode of ElectricianHumor</a></h4>
+</div>
+</div>
+</div>
+
+<div class="outline-2">
+<h2><span class="section-number-2">4.</span> Other</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+<div class="outline-3">
+<h3><span class="section-number-3">4.1.</span> <a href="https://en.wikipedia.org/wiki/Python_(missile)">Python-5</a></h3>
+<div class="outline-text-3" id="text-4-1">
+<p>
+from <a href="https://youtu.be/8QP2fDBIxjM">tsoding's first porth video</a>, (he is using debian, 37:00 copilot xd)<br />
+</p>
+</div>
+</div>
+<div class="outline-3">
+<h3><span class="section-number-3">4.2.</span> <a href="http://cat-v.org/">cat -v</a></h3>
+<div class="outline-text-3" id="text-4-2">
+<p>
+not only harmful stuff &lt;3<br />
+</p>
+</div>
+</div>
+<div class="outline-3">
+<h3><span class="section-number-3">4.3.</span> <a href="https://joinfediverse.wiki/">fediverse wiki</a></h3>
+<div class="outline-text-3" id="text-4-3">
+<p>
+The Fediverse is a giant Network of social media platforms<br />
+</p>
+</div>
+<div class="outline-4">
+<h4><span class="section-number-4">4.3.1.</span> there's another thing <a href="https://www.w3.org/TR/webmention/">webmention</a> which I found from Xe's blog</h4>
+</div>
+</div>
+<div class="outline-3">
+<h3><span class="section-number-3">4.4.</span> <a href="https://blog.stenmans.org/theBeamBook/">the beam book</a> and <a href="https://learnyousomeerlang.com/content">learn you some erlang</a></h3>
+</div>
+<div class="outline-3">
+<h3><span class="section-number-3">4.5.</span> <a href="https://inadequacy.org/public/stories/2001.12.2.42056.2147.html">Adequacy: Is Your Son a Computer Hacker?</a></h3>
+<div class="outline-text-3" id="text-4-5">
+<blockquote>
+<p>
+BSD, Lunix, Debian and Mandrake are all versions of an illegal hacker operation system,<br />
+invented by a Soviet computer hacker named Linyos Torovoltos.<br />
+</p>
+</blockquote>
+</div>
+</div>
+<div class="outline-3">
+<h3><span class="section-number-3">4.6.</span> <a href="https://lists.gnu.org/archive/html/info-gnu/2022-09/msg00005.html">GNU C Language Intro and Reference Manual</a></h3>
+<div class="outline-text-3" id="text-4-6">
+<blockquote>
+<p>
+To any NSA and FBI agents reading my email: please consider<br />
+whether defending the US Constitution against all enemies,<br />
+foreign or domestic, requires you to follow Snowden's example.<br />
+</p>
+</blockquote>
+</div>
+</div>
+<div class="outline-3">
+<h3><span class="section-number-3">4.7.</span> <a href="https://www.gilesorr.com/wm/">The Window Manager Report</a></h3>
+</div>
+<div class="outline-3">
+<h3><span class="section-number-3">4.8.</span> <a href="https://ghinda.net/oxygenos/">oxygenos</a></h3>
+<div class="outline-text-3" id="text-4-8">
+<p>
+his final year project in high school, 2008<br />
+a webos using oxygen visual design<br />
+</p>
+</div>
+</div>
+<div class="outline-3">
+<h3><span class="section-number-3">4.9.</span> <a href="https://news-web.php.net/php.internals/70691">PHP function hashing mechanism was strlen()</a></h3>
+</div>
+<div class="outline-3">
+<h3><span class="section-number-3">4.10.</span> <a href="http://phrack.org">Phrack Magazine</a></h3>
+<div class="outline-text-3" id="text-4-10">
+<p>
+worth reading<br />
+</p>
+</div>
+<div class="outline-4">
+<h4><span class="section-number-4">4.10.1.</span> <a href="http://phrack.org/issues/49/14.html">Smashing The Stack For Fun And Profit</a></h4>
+</div>
+<div class="outline-4">
+<h4><span class="section-number-4">4.10.2.</span> <a href="http://phrack.org/issues/70/15.html">YouTube Security Scene - LiveOverflow!</a></h4>
+</div>
+</div>
+<div class="outline-3">
+<h3><span class="section-number-3">4.11.</span> <a href="https://akrl.sdf.org/gccemacs.html">gccemacs</a></h3>
+<div class="outline-text-3" id="text-4-11">
+</div>
+<div class="outline-4">
+<h4><span class="section-number-4">4.11.1.</span> <a href="https://akrl.sdf.org/gccemacs_els2020.pdf">slides_els2020</a></h4>
+</div>
+</div>
+<div class="outline-3">
+<h3><span class="section-number-3">4.12.</span> <a href="https://tildeverse.org">https://tildeverse.org</a></h3>
+<div class="outline-text-3" id="text-4-12">
+</div>
+<div class="outline-4">
+<h4><span class="section-number-4">4.12.1.</span> <a href="https://quotes.tilde.chat">https://quotes.tilde.chat</a></h4>
+</div>
+</div>
+<div class="outline-3">
+<h3><span class="section-number-3">4.13.</span> <a href="http://decss.zoy.org">42 ways to distribute DeCSS</a></h3>
+<div class="outline-text-3" id="text-4-13">
+</div>
+<div class="outline-4">
+<h4><span class="section-number-4">4.13.1.</span> <a href="http://www.cs.cmu.edu/~dst/DeCSS/Kesden/index.html">Lecture 33: Content Scrambling System</a></h4>
+</div>
+</div>
+<div class="outline-3">
+<h3><span class="section-number-3">4.14.</span> <a href="https://custodians.online/chinese.html">声援 Library Genesis 和 Sci-Hub</a></h3>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+
+<p class="author">Author: dongdigua</p>
+<p class="date">Date: 2022-06-05 Sun 00:00</p>
+<p class="date">Build: 2022-12-02 Fri 12:43</p>
+</div>
+</body>
+</html>
