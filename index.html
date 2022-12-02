@@ -18,7 +18,9 @@
  .home{position:absolute;width:100%;text-align:center}
  .home pre{max-width:80ch;padding:0 1rem;margin-left:auto;margin-right:auto;line-height:1.5em;overflow:auto;display:inline-block;text-align:left}
  pre{font-family:dejavu sans mono,monospace;margin:1rem}
- #quote{color:#66ccff;font-style:italic}
+ #quote{color:#66ccff;font-style:italic;text-align:center}
+ #comment{color:grey;font-style:italic}
+ body,#normal{color:#dcdccc}
 </style>
 <body>
   <!--
@@ -30,21 +32,21 @@
 (let ((blog <strong>"<a href=https://dongdigua.github.io/posts>posts/</a>"</strong>)
       (feed "<a href=https://dongdigua.github.io/feed.xml>feed.xml</a>")
       (mai1 "dongdigua{a+}outlook{d0t}com")
-      (github "<a href=https://github.com/dongdigua>@dongdigua</a>")
+      (github "<a href=https://github.com/dongdigua>@dongdigua</a>") <a id="comment" href="https://github.com/dongdigua/dongdigua.github.io">; repo</a>
       (bilibili "<a href=https://space.bilibili.com/489732092>董地瓜</a>")
       (payment "<a href=https://dongdigua.github.io/xmr>Monero</a>")
       (pgp "<a href=https://dongdigua.github.io/pgpkey.txt>0x56CEE157C9F5334F</a>")
-      (paid-service <font color="grey">; pay in monero</font>
-       '((">data recovery" . 0.5)
+      (paid-service <span id="comment">; pay in monero</span>
+       '(("data recovery" . 0.5)
          ("kernel configure" . 0.1)))
       (interests
        '("computer science" "cyber security"
-         "GeoGebra"
+         "<a href="https://www.geogebra.org">GeoGebra</a>"
          "Minecraft redstone survival"
          "anime"
-         (Lost (In (Suspicious (Parentheses))))))))
-    </pre>
-    <center>"<span id="quote"></span>"</center>
+         (<a id="normal" href="https://xkcd.com/297">Lost (In (Suspicious (Parentheses)))</a>)))))
+    </pre><br>
+    "<span id="quote"></span>"
   </div>
 </body>
 <script src="./js/random-quote.js"></script>

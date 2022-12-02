@@ -12,7 +12,7 @@ var data = [
     "李无用地瓜碱水, 硒钫铕𬭶鿔合金",
     "There will be an answer: Let It Be",
     "<a id=quote href=https://calm.com>Take a deep breath</a>",
-    "怂: 从心",
+    "我这人有几个缺点: 第一, 不会数数; 第二, 记性不好; 第四, 不会数数",
 
     "The internet is FULL, go away!",
     "<a id=quote href=new_blog_arch>May the --force be with you</a>",
@@ -32,6 +32,7 @@ var data = [
     "李彦宏: 我想中国人可以更加开放，对隐私问题没有那么敏感。\n如果他们愿意用隐私交换便捷性，很多情况下他们是愿意的。",
     "<a id=quote href=https://wiki.evageeks.org/A.T._Field>AT&T field</a>",
     "I □ Unicode",
+    "<a id=quote href=https://ravynos.com>ravynOS, Always; FreeBSD, Mostly; Linux, Sometimes; macOS, Maybe</a>",
 ];
 
 var index = Math.floor((Math.random() * data.length));
