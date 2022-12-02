@@ -1,5 +1,6 @@
 #+TAGS: elixir(e) rust(r) c(c) lisp(l) python(p) nim(n)
-#+TAGS: lowlevel(w) frontend(f) backend(b) hack(h) algorithm(a) math(t)
+#+TAGS: lowlevel(w) frontend(f) backend(b) algorithm(a) math(t)
+#+TAGS: hack(h) funny(y)
 #+TAGS: emacs(m) linux(x) iot(i) plan9(9) BSD(B)
 #+OPTIONS: toc:1 ^:{}
 
@@ -20,10 +21,17 @@
 #+ATTR_HTML: :width 256px
 [[http://xahlee.info/emacs/misc/i/Marisa_Kirisame_emacs_magic.png]]
 ** [[http://www.yinwang.org/][王垠]]
-** TODO [[https://zedshaw.com][Zed A. Shaw]]
 ** [[http://ruanyifeng.com/blog/][阮一峰]]                                                            :rssub:
 ** [[http://www.hackdig.com/][黑客技术]]                                                           :hack:
 really good website, butt, no rss
+** [[https://bford.info][Bryan Ford]]
+leads the [[https://dedis.epfl.ch][Decentralized/Distributed Systems (DEDIS) lab]]
+#+BEGIN_QUOTE
+Two Principles of Deadlines:
+1. All deadlines converge on the same day—Deadline Day.
+2. Every day is Deadline Day.
+#+END_QUOTE
+*** [[https://bford.info/pub/net/p2pnat/][Peer-to-Peer Communication Across Network Address Translators]]
 ** [[https://shakaianee.top/][易姐]]
 ** [[https://floooh.github.io/][floooh(The Brain Dump)]]                                                :c:
 07 年开始, cpu emulator
@@ -110,7 +118,21 @@ from ruanyifeng
 **** [[https://xeiaso.net/blog/v-vaporware-2019-06-23][V for Vaporware]]
 经典永流传~
 *** [[https://xeiaso.net/blog/nim-and-tup-2015-06-10][Nim and Tup]]
-*** [[https://xeiaso.net/blog/openssl-3.x-secvuln-incoming][You should prepare for the OpenSSL 3.x secvuln]]
+*** [[https://xeiaso.net/blog/openssl-alarm-fatigue][OpenSSL gave everyone alarm fatigue]]
+funny byte
+#+BEGIN_SRC diff
+--- a/crypto/punycode.c
++++ b/crypto/punycode.c
+@@ -181,7 +181,7 @@ int ossl_punycode_decode(const char *pEncoded, const size_t enc_len,
+         n = n + i / (written_out + 1);
+         i %= (written_out + 1);
+
+-        if (written_out > max_out)
++        if (written_out >= max_out)
+             return 0;
+
+         memmove(pDecoded + i + 1, pDecoded + i,
+#+END_SRC
 **** [[https://mta.openssl.org/pipermail/openssl-announce/2022-November/000243.html][OpenSSL Security Advisory]]
 *** [[https://xeiaso.net/blog/rip-twitter][Goodbye Twitter, Hello Fediverse!]]
 ** [[https://lantian.pub/][蓝天]]
@@ -186,6 +208,16 @@ GE d@ s: a C++$ UBL+++$ P++(--)$ L++(-)$ !E W+++(-)$ !N !o K--? w !O !M  !V PS++
 ** [[http://www.jinbuguo.com][金步国作品集]]                                             :lowlevel:linux:
 kernel, LFS
 ** [[https://blog.pg999w.top/too-many-channels/][Too many channels in Rust but only one in Go]]                       :rust:
+** [[https://bugs.xdavidhu.me/google/2022/11/10/accidental-70k-google-pixel-lock-screen-bypass/][Accidental $70k Google Pixel Lock Screen Bypass]]
+** TODO [[https://herman.bearblog.dev][Herman]]
+** [[https://linux.cn/article-14388-1.html][linuxcn: 少年黑客对自由软件的自由漫谈]]
+linuxcn 里唯一一个让我感觉很有必要把链接放在这的文章
+** [[https://mthli.xyz][Matthew Lee]]
+*** [[https://mthli.xyz/duff-device/][深入理解达夫设备]]
+**** [[https://swtch.com/duffs-device/td-1983.txt][mail archive]]
+*** [[https://mthli.xyz/stackful-stackless/][有栈协程与无栈协程]]
+**** [[https://www.chiark.greenend.org.uk/~sgtatham/coroutines.html][PuTTY's author: Coroutines in C]]
+
 ** B
 *** [[https://blog.yangmame.org/][yanemame]]
 猴哥推荐的
@@ -232,12 +264,14 @@ plan9
 *** [[https://youtu.be/Fq9chEBQMFE][what if I try to malloc too much memory]]
 *** [[https://youtu.be/zJ-8DZhzBEE][what your favourite pl says about you]]
 *** [[https://youtu.be/ziXgdkTfmPU][tsoding irc client in ocaml]]
+#+BEGIN_QUOTE
 0:50 List.fold_left faster than fold_right, but haskell is opposite
 1:00 I like ocaml, that's how python should look like,
      but ocaml itself is not ideal, you have to take ocaml and throw O away, and that's perfect
 1:03 to be fair p___hub is more interesting than this, that's for sure, so let's use Makefile (instead of dune)
 1:50 sexplib?
 2:14 "how many american server you have already hacked" - "I don't count them I'm sorry"
+#+END_QUOTE
 *** [[https://youtu.be/Utse8P_L8k0][ArcaOS: Modern OS/2 ]]
 *** [[https://youtu.be/1z0ULvg_pW8][集线器，交换机和路由器的区别]]
 **** [[https://youtu.be/TIiQiw7fpsU][MAC Address Explained]]
@@ -347,3 +381,6 @@ worth reading
 ** [[http://decss.zoy.org][42 ways to distribute DeCSS]]
 *** [[http://www.cs.cmu.edu/~dst/DeCSS/Kesden/index.html][Lecture 33: Content Scrambling System]]
 ** [[https://custodians.online/chinese.html][声援 Library Genesis 和 Sci-Hub]]
+** [[https://tholman.com/cursor-effects/][90's Cursor Effects]]
+*** [[https://theuselessweb.com][The Useless Web]]
+** [[http://oldlinux.org][OldLinux.org]]
