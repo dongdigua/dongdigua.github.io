@@ -27,13 +27,14 @@
 (add-to-list 'org-export-filter-final-output-functions 'html-body-id-filter)
 
 (setq org-html-validation-link nil
-      org-export-with-sub-superscripts nil)
+      org-export-with-sub-superscripts '{})
 (setq org-html-postamble-format
       '(("en"
          "
 <p class=\"author\">Author: %a</p>
 <p class=\"date\">Date: %d</p>
 <p class=\"date\">Build: %T</p>
+<p>LICENCE: CC BY-NC-SA</p>
 ")))
 
 (setq org-publish-project-alist
