@@ -245,6 +245,14 @@ plan9
 人需不需要互相之间完全理解
 自我封闭是否是应对外界压力的合理方式
 #+END_QUOTE
+*** [[https://zhuanlan.zhihu.com/p/580368831][Z-library 域名被扣押，应急访问办法]]
+#+BEGIN_SRC text
+use the power of tor:
+  http://zlibrary24tuxziyiyfr7zd46ytefdqbqd2axkmxm4o5374ptpc52fad.onion
+  http://loginzlib2vrak5zzpcocc3ouizykn6k5qecgj2tzlnab5wcbqhembyd.onion
+  http://loginzlib2vrak5zzpcocc3ouizykn6k5qecgj2tzlnab5wcbqhembyd.onion
+#+END_SRC
+
 ** shenjack/HWS/fri3nds
 *** [[http://www.z.org.cn/][老网虫]]
 *** [[https://blog.yang-qwq.ml][yang-qwq]]

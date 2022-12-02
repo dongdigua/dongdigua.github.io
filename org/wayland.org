@@ -12,10 +12,16 @@ sway can't, probably wayfire?
 *** =sudo -E=
 *** lxpolkit(directly execute) or polkit-gnome(prettier, at /usr/libexec/polkit-gnome-authentication-agent-1)
 ** cannot start sway on lightdm
+:PROPERTIES:
+:CUSTOM_ID: dm
+:END:
 yes, still not stable, and it can't remenber which DE you used last time
 +so use gdm is a better choice?+
 SDDM is fantastic! [[https://youtu.be/2p7FINJSlAk][It is themeable]],
 I'm using *~elarun~*, a oxygen-like smooth crystal theme, materia-kde is also a good choice
+*** Fedora 37 don't work
+sddm don't work on fedora37,
+so switch to gdm and add environment init script(mostly =/etc/profile=) to =sway/config=
 ** obs
 don't remove the =include= line in sway/config
 ** cursor theme not working
