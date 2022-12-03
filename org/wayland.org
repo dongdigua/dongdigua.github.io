@@ -20,10 +20,11 @@ yes, still not stable, and it can't remenber which DE you used last time
 SDDM is fantastic! [[https://youtu.be/2p7FINJSlAk][It is themeable]],
 I'm using *~elarun~*, a oxygen-like smooth crystal theme, materia-kde is also a good choice
 *** Fedora 37 don't work
-sddm don't work on fedora37,
-so switch to gdm and add environment init script(mostly =/etc/profile=) to =sway/config=
+sddm don't work on fedora37, so switch to gdm
+*** environment variable missing?
+trick: add =Exec=zsh -c sway= in =/usr/share/wayland-sessions/sway.desktop=
 ** obs
-don't remove the =include= line in sway/config
+don't remove the =include= line in sway/config, and it will be fine
 ** cursor theme not working
 [[https://github.com/swaywm/sway/issues/6931][from this issue]]
 add =seat seat0 xcursor_theme Oxygen_White= in sway config file
