@@ -9,7 +9,6 @@ please contct me if you have a better idea
 - [Gentoo LLVM\_TARGETS not Working?](gentoo_llvm_targets)<br>
 - [CentOS/Fedora 不同的配置默认都安装了什么软件](anaconda_kickstarts)<br>
 for [COSSIG](https://www.cossig.org)
-- [<font color=grey>build a nixos live image</font>](nixos)<br>
 - [moonboos, 懂的都懂](moonboos)<br>
 - [MGLNDD scans](weird_mglndd)<br>
 - [推荐 everforest 主题](recommend_everforest_theme)<br>
