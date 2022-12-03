@@ -16,6 +16,8 @@ because those static files are really unecessary and takes much space
 ** use =filter-branch= to remove the huge =feed.xml= in the full history
 ** ignore the generated files in the source repo
 ** merge the source repo into site repo when I think it's ok
+don't remove the source(org) in the site repo,
+if build in main and checkout to site, those html will be overwritten
 ** and I will use the same stratagy on my YW sub-website if there's no problem
 
 * Need Advice

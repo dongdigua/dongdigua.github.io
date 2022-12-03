@@ -1,6 +1,6 @@
 #+TAGS: elixir(e) rust(r) c(c) lisp(l) python(p) nim(n)
 #+TAGS: lowlevel(w) frontend(f) backend(b) algorithm(a) math(t)
-#+TAGS: hack(h) funny(y)
+#+TAGS: hack(h) fun(u)
 #+TAGS: emacs(m) linux(x) iot(i) plan9(9) BSD(B)
 #+OPTIONS: toc:1 ^:{}
 
@@ -32,7 +32,7 @@ Two Principles of Deadlines:
 2. Every day is Deadline Day.
 #+END_QUOTE
 *** [[https://bford.info/pub/net/p2pnat/][Peer-to-Peer Communication Across Network Address Translators]]
-** [[https://shakaianee.top/][易姐]]
+** [[https://shakaianee.top/][社会易姐]]
 ** [[https://floooh.github.io/][floooh(The Brain Dump)]]                                                :c:
 07 年开始, cpu emulator
 *** [[https://floooh.github.io/2021/12/17/cycle-stepped-z80.html][2021: A new cycle-stepped Z80 emulator]]
@@ -40,13 +40,17 @@ Two Principles of Deadlines:
 #+BEGIN_QUOTE
 Modern C is not a subset of C++
 #+END_QUOTE
+** [[https://coredumped.dev/][Core Dumped]]                                         :rust:lowlevel:emacs:
+all 7 article are of high quality
 ** [[https://blog.stdio.io][King's way]]                                                     :hack:iot:
 *** [[https://blog.stdio.io/438][Linux内核学习阶段小结 (MOOC)]]
-*** [[https://blog.stdio.io/471][OpenWRT 绕过校园天翼宽带客户端限制(ppp)]]
+*** [[https://blog.stdio.io/1411][那些玩出花的“加速”/“隧道”工具]]
+**** [[https://blog.stdio.io/471][OpenWRT 绕过校园天翼宽带客户端限制(ppp)]]
 *** [[https://blog.stdio.io/935][一次意外的 hello world 探索之旅]]
 ** [[https://xiaosong.fun/][小耸]]                                                                  :c:
 *** [[https://xiaosong.fun/2022/01/01/lock-free-base-queue/][无锁编程基础与无锁队列的实现]]
-*** [[https://xiaosong.fun/2020/05/04/bug-and-mos/][打蚊子与找bug]]
+*** [[https://xiaosong.fun/2020/11/05/tcp-shake/][为什么TCP是三次握手？而不是两次或四次？]]
+*** [[https://xiaosong.fun/2020/05/04/bug-and-mos/][打蚊子与找bug]]                                                     :fun:
 ** [[https://piaogewala.ga/][这可太刑了]]
 学习通事件相关
 ** [[https://www.cnblogs.com/zhongwencool/][写着写着就懂了]]                                                   :elixir:
@@ -72,10 +76,12 @@ CPU, IC, ARM
 ** [[http://jujuba.me/][Ground Oddity]]
 出国
 *** [[http://jujuba.me/posts/program-analysis-via-llvm-pass.html][LLVM Pass来实现简化版taint analysis]]
+*** [[http://jujuba.me/posts/taste-of-code.html][代码的taste]]
+#+ATTR_HTML: :width 256px
+[[http://jujuba.me/imgs/linus-on-TED.png]]
 ** [[https://cireu.github.io/2019/09/17/lisp-setf/][NIL: setf 中「f」的本意]]
 ** [[https://www.cnblogs.com/zjjws/p/13346020.html][第 N 个质数]]                                                 :c:algorithm:
 看不懂, 先收藏着
-** [[https://www.coder.rs/][阳光少年(coder.rs)]]                                          :rust:python:
 ** [[https://mrxn.net/][mrxn]]                                                               :hack:
 网安, data-leak
 ** [[http://incf19.com/yynotes/][include-yy]]                                                 :c:lisp:emacs:
@@ -93,13 +99,11 @@ Lisp-1 的变量命名空间和函数命名空间是统一的，而在 Lisp-2 �
 **** [[https://www.functor.me/post/programming/y-combinator][functor.me: 从零开始理解 Y 组合子]]
 *** [[https://nihil.cc/posts/gnu_c_ext/][GNU C 一些有趣的扩展语法]]
 *** [[https://nihil.cc/posts/shell-redirect/][特别全面! Shell 中的管道、重定向、进程替换]]
-** TODO [[https://sh.alynx.one/][Alynx Zhou]]                                           :linux:rssable:
-东西很多
-** [[https://coredumped.dev/][Core Dumped]]                                         :rust:lowlevel:emacs:
-VM
 ** [[https://liujiacai.net/][keep coding]]                                     :rust:c:lowlevel:backend:
 写代码的西瓜
 *** [[https://emacstalk.github.io/][EmacsTalk]]
+*** [[https://liujiacai.net/blog/2022/04/30/modern-c/][现代化 C]]                                                            :c:
+*** [[https://liujiacai.net/blog/2018/06/15/garbage-collection-intro/][深入浅出垃圾回收(1/4)]]
 ** [[http://tomasp.net/][Tomas Petricek]]                                                    :rssub:
 F#, M1(r0$0f+, very high quality
 *** [[http://tomasp.net/commodore64][commodore64 BASIC]]
@@ -107,10 +111,8 @@ F#, M1(r0$0f+, very high quality
 ** [[http://www.xianwaizhiyin.net/][弦外之音]]                                                     :c:lowlevel:
 源码分析
 *** [[https://www.xianwaizhiyin.net/?cat=24][state-thread 源码分析]]
-** [[https://lightless.me/][lightless blog]]                                                     :hack:
+** TODO [[https://lightless.me/categories.html][lightless blog]]                                                :hack:
 ** [[https://bheisler.github.io/post/state-of-gpgpu-in-rust/][The State of GPGPU in Rust]]                                :rust:lowlevel:
-** [[https://liyafu.com][Light & Truth]]
-from ruanyifeng
 ** [[https://litchipi.github.io/series/container_in_rust][Writing a container in Rust]]
 *** [[https://litchipi.github.io/infosec/2022/07/08/copyit-until-you-makeit.html][Copy it until you make it]]
 ** [[https://xeiaso.net/][Xe Iaso]]                                                           :rssub:
@@ -133,7 +135,6 @@ funny byte
 
          memmove(pDecoded + i + 1, pDecoded + i,
 #+END_SRC
-**** [[https://mta.openssl.org/pipermail/openssl-announce/2022-November/000243.html][OpenSSL Security Advisory]]
 *** [[https://xeiaso.net/blog/rip-twitter][Goodbye Twitter, Hello Fediverse!]]
 ** [[https://lantian.pub/][蓝天]]
 大佬!
@@ -155,13 +156,11 @@ funny byte
 *** [[https://ulyc.github.io/2019/08/01/初窥CORB/][Cross-Origin Read Blocking]]
 ** [[https://kernal.eu][kernal]]
 Welcome to the darkest dungeon of kernal
-*** [[https://kernal.eu/posts/linuxfx/][Dumping Linuxfx customers - A Windows-like distro including the spyware and activation]]
-哈哈哈笑死了!
-** [[https://blog.burntsushi.net/ripgrep/][ripgrep is faster than {grep, ag, git grep, ucg, pt, sift}]]
+*** [[https://kernal.eu/posts/linuxfx/][Dumping Linuxfx customers]]                                         :fun:
+A Windows-like distro including the spyware and activation
 ** [[https://vimacs.wehack.space/laptop/][vimacs]]
-Written with Vim and Emacs
-A member of Linux Club of Peking University.
-cat-v-like sidebar style
+Written with Vim and Emacs. A member of Linux Club of Peking University.
+with cat-v-like sidebar style
 *** [[https://vimacs.wehack.space/matrix-guide/][矩阵一入深似海, 从此电幕是路人]]
 **** [[https://citizenlab.ca/2016/11/wechat-china-censorship-one-app-two-systems/][微信一app两制]]
 *** [[https://vimacs.wehack.space/Mail-vs-IM.htm][谈电子邮件和即时通讯]]
@@ -171,9 +170,7 @@ The Aha Moments
 *** [[http://www.matrix67.com/blog/archives/7084][16 年后重谈 P 和 NP]]
 *** [[http://localhost-8080.com/][❤ localhost-8080]]
 ** [[https://nyxt.atlas.engineer/article/gopher.org][Nyxt: Why should I care about Gopher?]]                            :gopher:
-#+BEGIN_QUOTE
 By making something a little bit more inaccessible, we are inadvertently putting a filter on what is being posted.
-#+END_QUOTE
 #+BEGIN_QUOTE
 This makes it a great way to avoid a lot of the low effort noise published on popular/accessible platforms.
 As a result, Gopher is full of interesting, enriching, high quality content.
@@ -210,13 +207,13 @@ kernel, LFS
 ** [[https://blog.pg999w.top/too-many-channels/][Too many channels in Rust but only one in Go]]                       :rust:
 ** [[https://bugs.xdavidhu.me/google/2022/11/10/accidental-70k-google-pixel-lock-screen-bypass/][Accidental $70k Google Pixel Lock Screen Bypass]]
 ** TODO [[https://herman.bearblog.dev][Herman]]
-** [[https://linux.cn/article-14388-1.html][linuxcn: 少年黑客对自由软件的自由漫谈]]
-linuxcn 里唯一一个让我感觉很有必要把链接放在这的文章
+*** [[https://herman.bearblog.dev/riding-through-the-desert/][Meditations on riding through the desert]]
 ** [[https://mthli.xyz][Matthew Lee]]
 *** [[https://mthli.xyz/duff-device/][深入理解达夫设备]]
 **** [[https://swtch.com/duffs-device/td-1983.txt][mail archive]]
 *** [[https://mthli.xyz/stackful-stackless/][有栈协程与无栈协程]]
 **** [[https://www.chiark.greenend.org.uk/~sgtatham/coroutines.html][PuTTY's author: Coroutines in C]]
+** TODO [[https://magcius.github.io/xplain/article/][explain X window system]]
 
 ** B
 *** [[https://blog.yangmame.org/][yanemame]]
@@ -230,6 +227,11 @@ B站: 称呼我C先生
 *** [[https://endlesspeak.gitee.io/][EndlessPeak]]                                                     :linux:
 *** [[https://hackflow.org][GNUman]]
 **** [[https://hackflow.org/index.php/archives/124][谈 HTTPS 协议的缺陷与反 HTTPS 联盟的谬误]]
+*** [[https://sh.alynx.one/][Alynx Zhou]]
+口琴
+**** [[https://sh.alynx.one/posts/Linux-Mooncake-Jokes/][Linux 用户的月饼食用手册]]                                        :fun:
+**** [[https://sh.alynx.one/posts/Do-Not-Fill-My-Email-with-Silly-Ads/][不要拿愚蠢的广告来污染我的邮箱]]
+**** [[https://sh.alynx.one/posts/Proxy-Settings/][Linux 下面常见的代理设置]]
 ** ZhiHu
 *** [[https://zhuanlan.zhihu.com/p/138719668][用Go语言汇编计算fibonacci数列]]                                :lowlevel:
 *** [[https://www.zhihu.com/column/c_1313110231912726528][倔强的程序员]]
@@ -245,6 +247,8 @@ plan9
 人需不需要互相之间完全理解
 自我封闭是否是应对外界压力的合理方式
 #+END_QUOTE
+*** [[https://linux.cn/article-14388-1.html][linuxcn: 少年黑客对自由软件的自由漫谈]]
+linuxcn 里唯一一个让我感觉很有必要把链接放在这的文章
 *** [[https://zhuanlan.zhihu.com/p/580368831][Z-library 域名被扣押，应急访问办法]]
 #+BEGIN_SRC text
 use the power of tor:
@@ -266,7 +270,6 @@ use the power of tor:
 *** [[https://youtu.be/0rJ94rbdteE][Rust 让你感觉像个天才]]
 *** [[https://youtu.be/nfF91Z6fqGk][CMD 登录B站]]
 *** [[https://youtu.be/jlPaby7suOc][Every Clojure Talk Ever]]
-*** [[https://youtu.be/l0AmlU-4IRM][Rust aes加密(legacy)]]
 *** [[https://youtu.be/hmMtQe_mYr0][tsoding helloworld in c]]
 *** [[https://www.youtube.com/playlist?list=PLpM-Dvs8t0VY73ytTCQqgvgCWttV3m8LM][tsoding virtual machine in C]] , [[https://dongdigua.github.io/tsoding_bm][some notes]]
 *** [[https://youtu.be/Fq9chEBQMFE][what if I try to malloc too much memory]]
