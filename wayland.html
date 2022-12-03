@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-12-02 Fri 12:43 -->
+<!-- 2022-12-03 六 12:02 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Something About Wayland(swaywm)</title>
@@ -239,9 +239,9 @@ sway can't, probably wayfire?<br />
 <h4><span class="section-number-4">1.3.2.</span> lxpolkit(directly execute) or polkit-gnome(prettier, at /usr/libexec/polkit-gnome-authentication-agent-1)</h4>
 </div>
 </div>
-<div class="outline-3">
-<h3><span class="section-number-3">1.4.</span> cannot start sway on lightdm</h3>
-<div class="outline-text-3" id="text-1-4">
+<div id="outline-container-dm" class="outline-3">
+<h3 id="dm"><span class="section-number-3">1.4.</span> cannot start sway on lightdm</h3>
+<div class="outline-text-3" id="text-dm">
 <p>
 yes, still not stable, and it can't remenber which DE you used last time<br />
 <del>so use gdm is a better choice?</del><br />
@@ -249,12 +249,28 @@ SDDM is fantastic! <a href="https://youtu.be/2p7FINJSlAk">It is themeable</a>,<b
 I'm using <b><code>elarun</code></b>, a oxygen-like smooth crystal theme, materia-kde is also a good choice<br />
 </p>
 </div>
+<div class="outline-4">
+<h4><span class="section-number-4">1.4.1.</span> Fedora 37 don't work</h4>
+<div class="outline-text-4" id="text-1-4-1">
+<p>
+sddm don't work on fedora37, so switch to gdm<br />
+</p>
+</div>
+</div>
+<div class="outline-4">
+<h4><span class="section-number-4">1.4.2.</span> environment variable missing?</h4>
+<div class="outline-text-4" id="text-1-4-2">
+<p>
+trick: add <code>Exec=zsh -c sway</code> in <code>/usr/share/wayland-sessions/sway.desktop</code><br />
+</p>
+</div>
+</div>
 </div>
 <div class="outline-3">
 <h3><span class="section-number-3">1.5.</span> obs</h3>
 <div class="outline-text-3" id="text-1-5">
 <p>
-don't remove the <code>include</code> line in sway/config<br />
+don't remove the <code>include</code> line in sway/config, and it will be fine<br />
 </p>
 </div>
 </div>
@@ -404,8 +420,10 @@ awesome config!<br />
 <div id="postamble" class="status">
 
 <p class="author">Author: dongdigua</p>
-<p class="date">Date: 2022-08-07 Sun 00:00</p>
-<p class="date">Build: 2022-12-02 Fri 12:43</p>
+<p class="date">Date: 2022-08-07 日 00:00</p>
+<p class="date">Build: 2022-12-03 六 12:02</p>
+<p>LICENCE: CC BY-NC-SA</p>
+<p>If you have any idea, please contact me! I may add your comment</p>
 </div>
 </body>
 </html>

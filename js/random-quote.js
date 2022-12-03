@@ -25,14 +25,14 @@ var data = [
     "<a id=quote href=https://www.curseforge.com/minecraft/mc-mods/carpet>NOT VANILLA!</a>",
     "Big Brother is Watching You",
     "消除恐惧的最好办法就是面对恐惧,\n坚持, 才是胜利, 加油, 奥利给!",
-    "Presenting to the emergency room, unconcious",
     "Never Gonna Give You Up",
-    "<treat C compiler like your girlfriend",
     "衬衫的价格是9磅15便士",
     "李彦宏: 我想中国人可以更加开放，对隐私问题没有那么敏感。\n如果他们愿意用隐私交换便捷性，很多情况下他们是愿意的。",
     "<a id=quote href=https://wiki.evageeks.org/A.T._Field>AT&T field</a>",
     "I □ Unicode",
     "<a id=quote href=https://ravynos.com>ravynOS, Always; FreeBSD, Mostly; Linux, Sometimes; macOS, Maybe</a>",
+    "<a id=quote href=damn_tencent_meeting>有什么业务是腾讯不做的吗?!</a>",
+    "Rewrite in Rust!",
 ];
 
 var index = Math.floor((Math.random() * data.length));
