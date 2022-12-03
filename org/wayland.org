@@ -3,11 +3,19 @@
 #+OPTIONS: toc:nil
 
 * Solution
+** VirtualBox
+*** cursor
+=WLR_NO_HARDWARE_CURSORS=1=
+*** egl error
+enable 3D acceleration in VirtualBox
+** unable to drop root
+donot run under root
+*** in normal user, libseat permission deniened
+add user in =video= group
+login as user, not root
 ** iBus
 *** [[https://www.reddit.com/r/swaywm/comments/djkj5m/ibus_on_swaywm/][reddit: ibus on swaywm]]
-emacs pyim
-** Emacs transparent, terminal blur
-sway can't, probably wayfire?
+so I use emacs pyim
 ** Authorization required, but no authorization protocol specified
 *** =sudo -E=
 *** lxpolkit(directly execute) or polkit-gnome(prettier, at /usr/libexec/polkit-gnome-authentication-agent-1)
@@ -32,12 +40,9 @@ add =seat seat0 xcursor_theme Oxygen_White= in sway config file
 use libinput-gestures
 *** [[https://github.com/swaywm/sway/issues/1514][issue #1514: touchpad gestures to switch workspaces]]
 **** [[https://github.com/swaywm/sway/pull/4952][pull #4952]]
-***** [[https://github.com/swaywm/sway/pull/6778][pull #6778]]
 *** r/swaywm
 **** [[https://www.reddit.com/r/swaywm/comments/px5vmw/how_are_you_configuring_touchpad_gestures/]]
 **** [[https://www.reddit.com/r/swaywm/comments/em0jnx/can_sway_handle_threefour_finger_touchpad_gestures/]]
-** notify-send don't work
-mako, a notification daemon
 ** TODO [[https://github.com/WayfireWM/wayfire/issues/1329][Wayfire crashes when closing foot terminal]]
 ** emacs tool-bar not working(cannot toggle and icon theme missing)
 *** cannot toggle: disable custon =default-frame-alist=, or just use floating mode
@@ -65,3 +70,8 @@ this is excellent, but...not for me, I'd like something simpler
 **** [[https://archcraft.io][archcraft]]
 *** [[https://github.com/rxyhn/yoru][夜 - Yoru]]
 awesome config!
+
+* NixOS related
+** [[https://sr.ht/~guido/nixos-init-freedom/][nixos without systemd?]]
+** [[https://gist.github.com/kborling/76805ade81ac5bfdd712df294208c878][a really useful example config]]
+** [[https://xeiaso.net/blog/super-bootable-64-2020-05-06][Xe: Super Bootable 64]]

@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-12-03 六 12:02 -->
+<!-- 2022-12-03 六 22:45 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Something About Wayland(swaywm)</title>
@@ -208,39 +208,69 @@
 <div class="outline-text-2" id="text-1">
 </div>
 <div class="outline-3">
-<h3><span class="section-number-3">1.1.</span> iBus</h3>
+<h3><span class="section-number-3">1.1.</span> VirtualBox</h3>
 <div class="outline-text-3" id="text-1-1">
 </div>
 <div class="outline-4">
-<h4><span class="section-number-4">1.1.1.</span> <a href="https://www.reddit.com/r/swaywm/comments/djkj5m/ibus_on_swaywm/">reddit: ibus on swaywm</a></h4>
+<h4><span class="section-number-4">1.1.1.</span> cursor</h4>
 <div class="outline-text-4" id="text-1-1-1">
 <p>
-emacs pyim<br />
+<code>WLR_NO_HARDWARE_CURSORS=1</code><br />
+</p>
+</div>
+</div>
+<div class="outline-4">
+<h4><span class="section-number-4">1.1.2.</span> egl error</h4>
+<div class="outline-text-4" id="text-1-1-2">
+<p>
+enable 3D acceleration in VirtualBox<br />
 </p>
 </div>
 </div>
 </div>
 <div class="outline-3">
-<h3><span class="section-number-3">1.2.</span> Emacs transparent, terminal blur</h3>
+<h3><span class="section-number-3">1.2.</span> unable to drop root</h3>
 <div class="outline-text-3" id="text-1-2">
 <p>
-sway can't, probably wayfire?<br />
+donot run under root<br />
+</p>
+</div>
+<div class="outline-4">
+<h4><span class="section-number-4">1.2.1.</span> in normal user, libseat permission deniened</h4>
+<div class="outline-text-4" id="text-1-2-1">
+<p>
+add user in <code>video</code> group<br />
+login as user, not root<br />
 </p>
 </div>
 </div>
+</div>
 <div class="outline-3">
-<h3><span class="section-number-3">1.3.</span> Authorization required, but no authorization protocol specified</h3>
+<h3><span class="section-number-3">1.3.</span> iBus</h3>
 <div class="outline-text-3" id="text-1-3">
 </div>
 <div class="outline-4">
-<h4><span class="section-number-4">1.3.1.</span> <code>sudo -E</code></h4>
+<h4><span class="section-number-4">1.3.1.</span> <a href="https://www.reddit.com/r/swaywm/comments/djkj5m/ibus_on_swaywm/">reddit: ibus on swaywm</a></h4>
+<div class="outline-text-4" id="text-1-3-1">
+<p>
+so I use emacs pyim<br />
+</p>
+</div>
+</div>
+</div>
+<div class="outline-3">
+<h3><span class="section-number-3">1.4.</span> Authorization required, but no authorization protocol specified</h3>
+<div class="outline-text-3" id="text-1-4">
 </div>
 <div class="outline-4">
-<h4><span class="section-number-4">1.3.2.</span> lxpolkit(directly execute) or polkit-gnome(prettier, at /usr/libexec/polkit-gnome-authentication-agent-1)</h4>
+<h4><span class="section-number-4">1.4.1.</span> <code>sudo -E</code></h4>
+</div>
+<div class="outline-4">
+<h4><span class="section-number-4">1.4.2.</span> lxpolkit(directly execute) or polkit-gnome(prettier, at /usr/libexec/polkit-gnome-authentication-agent-1)</h4>
 </div>
 </div>
 <div id="outline-container-dm" class="outline-3">
-<h3 id="dm"><span class="section-number-3">1.4.</span> cannot start sway on lightdm</h3>
+<h3 id="dm"><span class="section-number-3">1.5.</span> cannot start sway on lightdm</h3>
 <div class="outline-text-3" id="text-dm">
 <p>
 yes, still not stable, and it can't remenber which DE you used last time<br />
@@ -250,16 +280,16 @@ I'm using <b><code>elarun</code></b>, a oxygen-like smooth crystal theme, materi
 </p>
 </div>
 <div class="outline-4">
-<h4><span class="section-number-4">1.4.1.</span> Fedora 37 don't work</h4>
-<div class="outline-text-4" id="text-1-4-1">
+<h4><span class="section-number-4">1.5.1.</span> Fedora 37 don't work</h4>
+<div class="outline-text-4" id="text-1-5-1">
 <p>
 sddm don't work on fedora37, so switch to gdm<br />
 </p>
 </div>
 </div>
 <div class="outline-4">
-<h4><span class="section-number-4">1.4.2.</span> environment variable missing?</h4>
-<div class="outline-text-4" id="text-1-4-2">
+<h4><span class="section-number-4">1.5.2.</span> environment variable missing?</h4>
+<div class="outline-text-4" id="text-1-5-2">
 <p>
 trick: add <code>Exec=zsh -c sway</code> in <code>/usr/share/wayland-sessions/sway.desktop</code><br />
 </p>
@@ -267,16 +297,16 @@ trick: add <code>Exec=zsh -c sway</code> in <code>/usr/share/wayland-sessions/sw
 </div>
 </div>
 <div class="outline-3">
-<h3><span class="section-number-3">1.5.</span> obs</h3>
-<div class="outline-text-3" id="text-1-5">
+<h3><span class="section-number-3">1.6.</span> obs</h3>
+<div class="outline-text-3" id="text-1-6">
 <p>
 don't remove the <code>include</code> line in sway/config, and it will be fine<br />
 </p>
 </div>
 </div>
 <div class="outline-3">
-<h3><span class="section-number-3">1.6.</span> cursor theme not working</h3>
-<div class="outline-text-3" id="text-1-6">
+<h3><span class="section-number-3">1.7.</span> cursor theme not working</h3>
+<div class="outline-text-3" id="text-1-7">
 <p>
 <a href="https://github.com/swaywm/sway/issues/6931">from this issue</a><br />
 add <code>seat seat0 xcursor_theme Oxygen_White</code> in sway config file<br />
@@ -284,40 +314,28 @@ add <code>seat seat0 xcursor_theme Oxygen_White</code> in sway config file<br />
 </div>
 </div>
 <div class="outline-3">
-<h3><span class="section-number-3">1.7.</span> touchpad gesture like gnome</h3>
-<div class="outline-text-3" id="text-1-7">
+<h3><span class="section-number-3">1.8.</span> touchpad gesture like gnome</h3>
+<div class="outline-text-3" id="text-1-8">
 <p>
 use libinput-gestures<br />
 </p>
 </div>
 <div class="outline-4">
-<h4><span class="section-number-4">1.7.1.</span> <a href="https://github.com/swaywm/sway/issues/1514">issue #1514: touchpad gestures to switch workspaces</a></h4>
-<div class="outline-text-4" id="text-1-7-1">
+<h4><span class="section-number-4">1.8.1.</span> <a href="https://github.com/swaywm/sway/issues/1514">issue #1514: touchpad gestures to switch workspaces</a></h4>
+<div class="outline-text-4" id="text-1-8-1">
 </div>
 <ol class="org-ol">
-<li><a></a><a href="https://github.com/swaywm/sway/pull/4952">pull #4952</a><br />
-<ol class="org-ol">
-<li><a></a><a href="https://github.com/swaywm/sway/pull/6778">pull #6778</a><br /></li>
-</ol>
-</li>
+<li><a></a><a href="https://github.com/swaywm/sway/pull/4952">pull #4952</a><br /></li>
 </ol>
 </div>
 <div class="outline-4">
-<h4><span class="section-number-4">1.7.2.</span> r/swaywm</h4>
-<div class="outline-text-4" id="text-1-7-2">
+<h4><span class="section-number-4">1.8.2.</span> r/swaywm</h4>
+<div class="outline-text-4" id="text-1-8-2">
 </div>
 <ol class="org-ol">
 <li><a></a><a href="https://www.reddit.com/r/swaywm/comments/px5vmw/how_are_you_configuring_touchpad_gestures/">https://www.reddit.com/r/swaywm/comments/px5vmw/how_are_you_configuring_touchpad_gestures/</a><br /></li>
 <li><a></a><a href="https://www.reddit.com/r/swaywm/comments/em0jnx/can_sway_handle_threefour_finger_touchpad_gestures/">https://www.reddit.com/r/swaywm/comments/em0jnx/can_sway_handle_threefour_finger_touchpad_gestures/</a><br /></li>
 </ol>
-</div>
-</div>
-<div class="outline-3">
-<h3><span class="section-number-3">1.8.</span> notify-send don't work</h3>
-<div class="outline-text-3" id="text-1-8">
-<p>
-mako, a notification daemon<br />
-</p>
 </div>
 </div>
 <div class="outline-3">
@@ -416,12 +434,27 @@ awesome config!<br />
 </div>
 </div>
 </div>
+
+<div class="outline-2">
+<h2><span class="section-number-2">3.</span> NixOS related</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div class="outline-3">
+<h3><span class="section-number-3">3.1.</span> <a href="https://sr.ht/~guido/nixos-init-freedom/">nixos without systemd?</a></h3>
+</div>
+<div class="outline-3">
+<h3><span class="section-number-3">3.2.</span> <a href="https://gist.github.com/kborling/76805ade81ac5bfdd712df294208c878">a really useful example config</a></h3>
+</div>
+<div class="outline-3">
+<h3><span class="section-number-3">3.3.</span> <a href="https://xeiaso.net/blog/super-bootable-64-2020-05-06">Xe: Super Bootable 64</a></h3>
+</div>
+</div>
 </div>
 <div id="postamble" class="status">
 
 <p class="author">Author: dongdigua</p>
 <p class="date">Date: 2022-08-07 日 00:00</p>
-<p class="date">Build: 2022-12-03 六 12:02</p>
+<p class="date">Build: 2022-12-03 六 22:45</p>
 <p>LICENCE: CC BY-NC-SA</p>
 <p>If you have any idea, please contact me! I may add your comment</p>
 </div>

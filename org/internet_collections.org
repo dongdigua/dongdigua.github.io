@@ -185,7 +185,7 @@ Don't get me wrong, there's nonsense on Gopher too, but far less of it.
 #+END_QUOTE
 #+ATTR_HTML: :width 256px
 [[https://upload.wikimedia.org/wikipedia/commons/d/d7/Internet_is_Full_-_Go_Away_t-shirt.jpg]]
-** [[https://petermolnar.net/index.html][Peter 's Homepage]]                                                 :rssub:
+** TODO [[https://petermolnar.net/index.html][Peter 's Homepage]]                                            :rssub:
 #+BEGIN_QUOTE
 GE d@ s: a C++$ UBL+++$ P++(--)$ L++(-)$ !E W+++(-)$ !N !o K--? w !O !M  !V PS++ PE- Y+ PGP+ t+ 5+++ X+ R tv b+ DI D+ G e++ h r+++ y+++*
 #+END_QUOTE
@@ -210,7 +210,6 @@ kernel, LFS
 *** [[https://herman.bearblog.dev/riding-through-the-desert/][Meditations on riding through the desert]]
 ** [[https://mthli.xyz][Matthew Lee]]
 *** [[https://mthli.xyz/duff-device/][深入理解达夫设备]]
-**** [[https://swtch.com/duffs-device/td-1983.txt][mail archive]]
 *** [[https://mthli.xyz/stackful-stackless/][有栈协程与无栈协程]]
 **** [[https://www.chiark.greenend.org.uk/~sgtatham/coroutines.html][PuTTY's author: Coroutines in C]]
 ** TODO [[https://magcius.github.io/xplain/article/][explain X window system]]
@@ -265,16 +264,12 @@ use the power of tor:
 今年的新博客, 友链有踏浪
 
 * YouTube 收集(没有账号, 这就是我的收藏夹)
-#+TAGS: tsoding(s) DT(D) LiveOverflow(L)
+# I think the quality of DT's video is falling
 ** Computer Science
-*** [[https://youtu.be/0rJ94rbdteE][Rust 让你感觉像个天才]]
-*** [[https://youtu.be/nfF91Z6fqGk][CMD 登录B站]]
-*** [[https://youtu.be/jlPaby7suOc][Every Clojure Talk Ever]]
-*** [[https://youtu.be/hmMtQe_mYr0][tsoding helloworld in c]]
-*** [[https://www.youtube.com/playlist?list=PLpM-Dvs8t0VY73ytTCQqgvgCWttV3m8LM][tsoding virtual machine in C]] , [[https://dongdigua.github.io/tsoding_bm][some notes]]
-*** [[https://youtu.be/Fq9chEBQMFE][what if I try to malloc too much memory]]
-*** [[https://youtu.be/zJ-8DZhzBEE][what your favourite pl says about you]]
-*** [[https://youtu.be/ziXgdkTfmPU][tsoding irc client in ocaml]]
+*** [[https://tsoding.org][tsoding]]
+**** [[https://youtu.be/hmMtQe_mYr0][helloworld in c]]
+**** [[https://www.youtube.com/playlist?list=PLpM-Dvs8t0VY73ytTCQqgvgCWttV3m8LM][virtual machine in C]] , [[https://dongdigua.github.io/tsoding_bm][some notes]]
+**** [[https://youtu.be/ziXgdkTfmPU][irc client in ocaml]]
 #+BEGIN_QUOTE
 0:50 List.fold_left faster than fold_right, but haskell is opposite
 1:00 I like ocaml, that's how python should look like,
@@ -283,6 +278,20 @@ use the power of tor:
 1:50 sexplib?
 2:14 "how many american server you have already hacked" - "I don't count them I'm sorry"
 #+END_QUOTE
+**** [[https://youtu.be/67FmRyv8jTM][Parsing Java Bytecode with Python]]
+0:05 look how TINY Java code is
+0:06 nonono all the opensource are controlled by coporation actually,
+     they create a text editor plugin and sell the free code for $10 a month
+**** [[https://youtu.be/yKI-VOBBFu8][Hacking TCC compiler]]
+#+BEGIN_QUOTE
+If we allowed `.` being treated /automagically/ as `->` in C when used on pointers to structs,
+how much existing C code would be broken?
+#+END_QUOTE
+*** [[https://youtu.be/0rJ94rbdteE][Rust 让你感觉像个天才]]
+*** [[https://youtu.be/nfF91Z6fqGk][CMD 登录B站]]
+*** [[https://youtu.be/jlPaby7suOc][Every Clojure Talk Ever]]
+*** [[https://youtu.be/Fq9chEBQMFE][what if I try to malloc too much memory]]
+*** [[https://youtu.be/zJ-8DZhzBEE][what your favourite pl says about you]]
 *** [[https://youtu.be/Utse8P_L8k0][ArcaOS: Modern OS/2 ]]
 *** [[https://youtu.be/1z0ULvg_pW8][集线器，交换机和路由器的区别]]
 **** [[https://youtu.be/TIiQiw7fpsU][MAC Address Explained]]
@@ -290,24 +299,25 @@ use the power of tor:
 *** [[https://youtu.be/UNkHditYGls][I coded a fractal on an Apple II+]]
 *** [[https://youtu.be/p8u_k2LIZyo][Fast Inverse Square Root — A Quake III Algorithm]]
 =0x5f3759df=
-*** [[https://youtu.be/67FmRyv8jTM][tsoding: Parsing Java Bytecode with Python]]
-0:05 look how TINY Java code is
-0:06 nonono all the opensource are controlled by coporation actually,
-     they create a text editor plugin and sell the free code for $10 a month
-*** [[https://youtu.be/BAo5C2qbLq8][Computerphile: Network Time Protocol (NTP)]]
 *** [[https://www.youtube.com/playlist?list=PLknodeJt-I5H_zK-udgi5XhhYrnDoLHkP][Gavin Freeborn: Commandline tools and tips]]
 
+** [[https://www.youtube.com/@Computerphile][Computerphile]]
+*** [[https://youtu.be/BAo5C2qbLq8][Network Time Protocol (NTP)]]
+*** [[https://youtu.be/d7KHAVaX_Rs][Just In Time (JIT) Compilers]]
+
 ** Cyber Security
-*** [[https://youtu.be/x_R1DeZxGc0][Discover Vulnerabilities in Intel CPUs!]]
+*** LiveOverflow
+**** [[https://www.youtube.com/playlist?list=PLhixgUqwRTjwvBI-hmbZ2rpkAl4lutnJG][Minecraft HACKED]]
+**** [[https://youtu.be/x_R1DeZxGc0][Discover Vulnerabilities in Intel CPUs!]]
+**** [[https://youtu.be/UeAKTjx_eKA][Student Finds Hidden Devices in the College Library]]
+**** [[https://youtu.be/MS7WRuzNYDc][is leaking your IP really dangerous]]
+**** [[https://youtu.be/oJ6t7AImTdE][CSS Keylogger - old is new again]]
 *** [[https://youtu.be/2--1ph-4IaY][shit express hacked]]
 *** [[https://www.youtube.com/playlist?list=PL5--8gKSku15NSeLgrZX9hSEnqPTWoSJ0][DT: Privacy & Security]]
-*** [[https://youtu.be/UeAKTjx_eKA][Student Finds Hidden Devices in the College Library]]
 *** [[https://youtu.be/QxNsyrftJ8I][Chris Titus Tech: The Biggest Linux Security Mistakes]]
 "Security is a journey, not a destination!"
 *** [[https://youtu.be/S4E4yAktjug?t=998][How To Become Invisible Online # level 3]]
-*** [[https://youtu.be/oJ6t7AImTdE][CSS Keylogger - old is new again]]
-*** [[https://youtu.be/I4_ide0tEG8][zip files & hack... (CVE-2022-1271 zgrep/gzip)]]
-*** [[https://youtu.be/MS7WRuzNYDc][is leaking your IP really dangerous]]
+*** [[https://youtu.be/I4_ide0tEG8][JH: zip files & hack... (CVE-2022-1271 zgrep/gzip)]]
 
 ** Math
 *** [[https://youtu.be/KufsL2VgELo][Group Theory]]
@@ -320,7 +330,6 @@ use the power of tor:
 *** [[https://youtu.be/VKydXD6Lr20][Mojang & Minecraft 开始衰落了吗?]]
 *** [[https://youtu.be/Y9DIIh0s9cg][SciCraft Update Plans]]
 *** [[https://youtu.be/m5S0gLgg2rs][Tantan: MC + Fez]]
-*** [[https://www.youtube.com/playlist?list=PLhixgUqwRTjwvBI-hmbZ2rpkAl4lutnJG][Minecraft HACKED (LiveOverflow)]]
 
 ** ?
 *** [[https://www.youtube.com/c/IceGuye][IceGuye aka 姑射冰尘]]
@@ -351,6 +360,17 @@ to filing patently fraudulent DMCA counter-notifications to avoid the terminatio
 *** [[https://www.reddit.com/r/ProgrammerHumor/comments/wsw78u/regex_be_like/][MC enchant: regex be like...]]
 *** [[https://www.reddit.com/r/ProgrammerHumor/comments/mr8gqx/new_episode_of_electricianhumor/][New episode of ElectricianHumor]]
 
+* Mail
+** [[https://lists.gnu.org/archive/html/info-gnu/2022-09/msg00005.html][GNU C Language Intro and Reference Manual]]
+#+BEGIN_QUOTE
+To any NSA and FBI agents reading my email: please consider
+whether defending the US Constitution against all enemies,
+foreign or domestic, requires you to follow Snowden's example.
+#+END_QUOTE
+** [[https://news-web.php.net/php.internals/70691][PHP function hashing mechanism was strlen()]]
+** [[https://swtch.com/duffs-device/td-1983.txt][Duffs device]]
+** [[https://lists.freedesktop.org/archives/systemd-devel/2022-September/048352.html][Support for unmerged-usr systems will be REMOVED]]
+
 * Other
 #+BEGIN_COMMENT
 https://www.pixiv.net/users/57759368
@@ -370,17 +390,10 @@ The Fediverse is a giant Network of social media platforms
 BSD, Lunix, Debian and Mandrake are all versions of an illegal hacker operation system,
 invented by a Soviet computer hacker named Linyos Torovoltos.
 #+END_QUOTE
-** [[https://lists.gnu.org/archive/html/info-gnu/2022-09/msg00005.html][GNU C Language Intro and Reference Manual]]
-#+BEGIN_QUOTE
-To any NSA and FBI agents reading my email: please consider
-whether defending the US Constitution against all enemies,
-foreign or domestic, requires you to follow Snowden's example.
-#+END_QUOTE
 ** [[https://www.gilesorr.com/wm/][The Window Manager Report]]
 ** [[https://ghinda.net/oxygenos/][oxygenos]]
 his final year project in high school, 2008
 a webos using oxygen visual design
-** [[https://news-web.php.net/php.internals/70691][PHP function hashing mechanism was strlen()]]
 ** [[http://phrack.org][Phrack Magazine]]
 worth reading
 *** [[http://phrack.org/issues/49/14.html][Smashing The Stack For Fun And Profit]]

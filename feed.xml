@@ -6,7 +6,7 @@
 <generator>Emacs webfeeder.el</generator>
 <link>https://dongdigua.github.io</link>
 <atom:link href="https://dongdigua.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-<lastBuildDate>六, 03 12月 2022 12:02:25 +0800</lastBuildDate>
+<lastBuildDate>六, 03 12月 2022 22:45:02 +0800</lastBuildDate>
 <item>
   <title>狗日的腾讯会议</title>
   <description><![CDATA[<div id="content" class="content">
@@ -1028,37 +1028,64 @@ the original post is gone <br></br></p>
  <div class="outline-text-2" id="text-1">
 </div>
  <div class="outline-3">
- <h3> <span class="section-number-3">1.1.</span> iBus</h3>
+ <h3> <span class="section-number-3">1.1.</span> VirtualBox</h3>
  <div class="outline-text-3" id="text-1-1">
 </div>
  <div class="outline-4">
- <h4> <span class="section-number-4">1.1.1.</span>  <a href="https://www.reddit.com/r/swaywm/comments/djkj5m/ibus_on_swaywm/">reddit: ibus on swaywm</a></h4>
+ <h4> <span class="section-number-4">1.1.1.</span> cursor</h4>
  <div class="outline-text-4" id="text-1-1-1">
  <p>
-emacs pyim <br></br></p>
+ <code>WLR_NO_HARDWARE_CURSORS=1</code> <br></br></p>
+</div>
+</div>
+ <div class="outline-4">
+ <h4> <span class="section-number-4">1.1.2.</span> egl error</h4>
+ <div class="outline-text-4" id="text-1-1-2">
+ <p>
+enable 3D acceleration in VirtualBox <br></br></p>
 </div>
 </div>
 </div>
  <div class="outline-3">
- <h3> <span class="section-number-3">1.2.</span> Emacs transparent, terminal blur</h3>
+ <h3> <span class="section-number-3">1.2.</span> unable to drop root</h3>
  <div class="outline-text-3" id="text-1-2">
  <p>
-sway can't, probably wayfire? <br></br></p>
+donot run under root <br></br></p>
+</div>
+ <div class="outline-4">
+ <h4> <span class="section-number-4">1.2.1.</span> in normal user, libseat permission deniened</h4>
+ <div class="outline-text-4" id="text-1-2-1">
+ <p>
+add user in  <code>video</code> group <br></br>
+login as user, not root <br></br></p>
+</div>
 </div>
 </div>
  <div class="outline-3">
- <h3> <span class="section-number-3">1.3.</span> Authorization required, but no authorization protocol specified</h3>
+ <h3> <span class="section-number-3">1.3.</span> iBus</h3>
  <div class="outline-text-3" id="text-1-3">
 </div>
  <div class="outline-4">
- <h4> <span class="section-number-4">1.3.1.</span>  <code>sudo -E</code></h4>
+ <h4> <span class="section-number-4">1.3.1.</span>  <a href="https://www.reddit.com/r/swaywm/comments/djkj5m/ibus_on_swaywm/">reddit: ibus on swaywm</a></h4>
+ <div class="outline-text-4" id="text-1-3-1">
+ <p>
+so I use emacs pyim <br></br></p>
+</div>
+</div>
+</div>
+ <div class="outline-3">
+ <h3> <span class="section-number-3">1.4.</span> Authorization required, but no authorization protocol specified</h3>
+ <div class="outline-text-3" id="text-1-4">
 </div>
  <div class="outline-4">
- <h4> <span class="section-number-4">1.3.2.</span> lxpolkit(directly execute) or polkit-gnome(prettier, at /usr/libexec/polkit-gnome-authentication-agent-1)</h4>
+ <h4> <span class="section-number-4">1.4.1.</span>  <code>sudo -E</code></h4>
+</div>
+ <div class="outline-4">
+ <h4> <span class="section-number-4">1.4.2.</span> lxpolkit(directly execute) or polkit-gnome(prettier, at /usr/libexec/polkit-gnome-authentication-agent-1)</h4>
 </div>
 </div>
  <div id="outline-container-dm" class="outline-3">
- <h3 id="dm"> <span class="section-number-3">1.4.</span> cannot start sway on lightdm</h3>
+ <h3 id="dm"> <span class="section-number-3">1.5.</span> cannot start sway on lightdm</h3>
  <div class="outline-text-3" id="text-dm">
  <p>
 yes, still not stable, and it can't remenber which DE you used last time <br></br> <del>so use gdm is a better choice?</del> <br></br>
@@ -1066,62 +1093,54 @@ SDDM is fantastic!  <a href="https://youtu.be/2p7FINJSlAk">It is themeable</a>, 
 I'm using  <b> <code>elarun</code></b>, a oxygen-like smooth crystal theme, materia-kde is also a good choice <br></br></p>
 </div>
  <div class="outline-4">
- <h4> <span class="section-number-4">1.4.1.</span> Fedora 37 don't work</h4>
- <div class="outline-text-4" id="text-1-4-1">
+ <h4> <span class="section-number-4">1.5.1.</span> Fedora 37 don't work</h4>
+ <div class="outline-text-4" id="text-1-5-1">
  <p>
 sddm don't work on fedora37, so switch to gdm <br></br></p>
 </div>
 </div>
  <div class="outline-4">
- <h4> <span class="section-number-4">1.4.2.</span> environment variable missing?</h4>
- <div class="outline-text-4" id="text-1-4-2">
+ <h4> <span class="section-number-4">1.5.2.</span> environment variable missing?</h4>
+ <div class="outline-text-4" id="text-1-5-2">
  <p>
 trick: add  <code>Exec=zsh -c sway</code> in  <code>/usr/share/wayland-sessions/sway.desktop</code> <br></br></p>
 </div>
 </div>
 </div>
  <div class="outline-3">
- <h3> <span class="section-number-3">1.5.</span> obs</h3>
- <div class="outline-text-3" id="text-1-5">
+ <h3> <span class="section-number-3">1.6.</span> obs</h3>
+ <div class="outline-text-3" id="text-1-6">
  <p>
 don't remove the  <code>include</code> line in sway/config, and it will be fine <br></br></p>
 </div>
 </div>
  <div class="outline-3">
- <h3> <span class="section-number-3">1.6.</span> cursor theme not working</h3>
- <div class="outline-text-3" id="text-1-6">
+ <h3> <span class="section-number-3">1.7.</span> cursor theme not working</h3>
+ <div class="outline-text-3" id="text-1-7">
  <p>
  <a href="https://github.com/swaywm/sway/issues/6931">from this issue</a> <br></br>
 add  <code>seat seat0 xcursor_theme Oxygen_White</code> in sway config file <br></br></p>
 </div>
 </div>
  <div class="outline-3">
- <h3> <span class="section-number-3">1.7.</span> touchpad gesture like gnome</h3>
- <div class="outline-text-3" id="text-1-7">
+ <h3> <span class="section-number-3">1.8.</span> touchpad gesture like gnome</h3>
+ <div class="outline-text-3" id="text-1-8">
  <p>
 use libinput-gestures <br></br></p>
 </div>
  <div class="outline-4">
- <h4> <span class="section-number-4">1.7.1.</span>  <a href="https://github.com/swaywm/sway/issues/1514">issue #1514: touchpad gestures to switch workspaces</a></h4>
- <div class="outline-text-4" id="text-1-7-1">
+ <h4> <span class="section-number-4">1.8.1.</span>  <a href="https://github.com/swaywm/sway/issues/1514">issue #1514: touchpad gestures to switch workspaces</a></h4>
+ <div class="outline-text-4" id="text-1-8-1">
 </div>
- <ol class="org-ol"> <li> <a></a> <a href="https://github.com/swaywm/sway/pull/4952">pull #4952</a> <br></br> <ol class="org-ol"> <li> <a></a> <a href="https://github.com/swaywm/sway/pull/6778">pull #6778</a> <br></br></li>
-</ol></li>
+ <ol class="org-ol"> <li> <a></a> <a href="https://github.com/swaywm/sway/pull/4952">pull #4952</a> <br></br></li>
 </ol></div>
  <div class="outline-4">
- <h4> <span class="section-number-4">1.7.2.</span> r/swaywm</h4>
- <div class="outline-text-4" id="text-1-7-2">
+ <h4> <span class="section-number-4">1.8.2.</span> r/swaywm</h4>
+ <div class="outline-text-4" id="text-1-8-2">
 </div>
  <ol class="org-ol"> <li> <a></a> <a href="https://www.reddit.com/r/swaywm/comments/px5vmw/how_are_you_configuring_touchpad_gestures/">https://www.reddit.com/r/swaywm/comments/px5vmw/how_are_you_configuring_touchpad_gestures/</a> <br></br></li>
  <li> <a></a> <a href="https://www.reddit.com/r/swaywm/comments/em0jnx/can_sway_handle_threefour_finger_touchpad_gestures/">https://www.reddit.com/r/swaywm/comments/em0jnx/can_sway_handle_threefour_finger_touchpad_gestures/</a> <br></br></li>
 </ol></div>
-</div>
- <div class="outline-3">
- <h3> <span class="section-number-3">1.8.</span> notify-send don't work</h3>
- <div class="outline-text-3" id="text-1-8">
- <p>
-mako, a notification daemon <br></br></p>
-</div>
 </div>
  <div class="outline-3">
  <h3> <span class="section-number-3">1.9.</span>  <span class="todo TODO">TODO</span>  <a href="https://github.com/WayfireWM/wayfire/issues/1329">Wayfire crashes when closing foot terminal</a></h3>
@@ -1209,6 +1228,21 @@ this is excellent, but…not for me, I'd like something simpler <br></br></p>
 awesome config! <br></br></p>
 </div>
 </div>
+</div>
+</div>
+
+ <div class="outline-2">
+ <h2> <span class="section-number-2">3.</span> NixOS related</h2>
+ <div class="outline-text-2" id="text-3">
+</div>
+ <div class="outline-3">
+ <h3> <span class="section-number-3">3.1.</span>  <a href="https://sr.ht/~guido/nixos-init-freedom/">nixos without systemd?</a></h3>
+</div>
+ <div class="outline-3">
+ <h3> <span class="section-number-3">3.2.</span>  <a href="https://gist.github.com/kborling/76805ade81ac5bfdd712df294208c878">a really useful example config</a></h3>
+</div>
+ <div class="outline-3">
+ <h3> <span class="section-number-3">3.3.</span>  <a href="https://xeiaso.net/blog/super-bootable-64-2020-05-06">Xe: Super Bootable 64</a></h3>
 </div>
 </div>
 </div>]]></description>
@@ -2163,7 +2197,7 @@ Don't get me wrong, there's nonsense on Gopher too, but far less of it. <br></br
 </div>
 </div>
  <div class="outline-3">
- <h3> <span class="section-number-3">1.40.</span>  <a href="https://petermolnar.net/index.html">Peter 's Homepage</a>    <span class="tag"> <span class="rssub">rssub</span></span></h3>
+ <h3> <span class="section-number-3">1.40.</span>  <span class="todo TODO">TODO</span>  <a href="https://petermolnar.net/index.html">Peter 's Homepage</a>    <span class="tag"> <span class="rssub">rssub</span></span></h3>
  <div class="outline-text-3" id="text-1-40">
  <blockquote>
  <p>
@@ -2242,10 +2276,7 @@ kernel, LFS <br></br></p>
 </div>
  <div class="outline-4">
  <h4> <span class="section-number-4">1.49.1.</span>  <a href="https://mthli.xyz/duff-device/">深入理解达夫设备</a></h4>
- <div class="outline-text-4" id="text-1-49-1">
 </div>
- <ol class="org-ol"> <li> <a></a> <a href="https://swtch.com/duffs-device/td-1983.txt">mail archive</a> <br></br></li>
-</ol></div>
  <div class="outline-4">
  <h4> <span class="section-number-4">1.49.2.</span>  <a href="https://mthli.xyz/stackful-stackless/">有栈协程与无栈协程</a></h4>
  <div class="outline-text-4" id="text-1-49-2">
@@ -2401,29 +2432,12 @@ linuxcn 里唯一一个让我感觉很有必要把链接放在这的文章 <br><
  <div class="outline-text-3" id="text-2-1">
 </div>
  <div class="outline-4">
- <h4> <span class="section-number-4">2.1.1.</span>  <a href="https://youtu.be/0rJ94rbdteE">Rust 让你感觉像个天才</a></h4>
+ <h4> <span class="section-number-4">2.1.1.</span>  <a href="https://tsoding.org">tsoding</a></h4>
+ <div class="outline-text-4" id="text-2-1-1">
 </div>
- <div class="outline-4">
- <h4> <span class="section-number-4">2.1.2.</span>  <a href="https://youtu.be/nfF91Z6fqGk">CMD 登录B站</a></h4>
-</div>
- <div class="outline-4">
- <h4> <span class="section-number-4">2.1.3.</span>  <a href="https://youtu.be/jlPaby7suOc">Every Clojure Talk Ever</a></h4>
-</div>
- <div class="outline-4">
- <h4> <span class="section-number-4">2.1.4.</span>  <a href="https://youtu.be/hmMtQe_mYr0">tsoding helloworld in c</a></h4>
-</div>
- <div class="outline-4">
- <h4> <span class="section-number-4">2.1.5.</span>  <a href="https://www.youtube.com/playlist?list=PLpM-Dvs8t0VY73ytTCQqgvgCWttV3m8LM">tsoding virtual machine in C</a> ,  <a href="https://dongdigua.github.io/tsoding_bm">some notes</a></h4>
-</div>
- <div class="outline-4">
- <h4> <span class="section-number-4">2.1.6.</span>  <a href="https://youtu.be/Fq9chEBQMFE">what if I try to malloc too much memory</a></h4>
-</div>
- <div class="outline-4">
- <h4> <span class="section-number-4">2.1.7.</span>  <a href="https://youtu.be/zJ-8DZhzBEE">what your favourite pl says about you</a></h4>
-</div>
- <div class="outline-4">
- <h4> <span class="section-number-4">2.1.8.</span>  <a href="https://youtu.be/ziXgdkTfmPU">tsoding irc client in ocaml</a></h4>
- <div class="outline-text-4" id="text-2-1-8">
+ <ol class="org-ol"> <li> <a></a> <a href="https://youtu.be/hmMtQe_mYr0">helloworld in c</a> <br></br></li>
+ <li> <a></a> <a href="https://www.youtube.com/playlist?list=PLpM-Dvs8t0VY73ytTCQqgvgCWttV3m8LM">virtual machine in C</a> ,  <a href="https://dongdigua.github.io/tsoding_bm">some notes</a> <br></br></li>
+ <li> <a></a> <a href="https://youtu.be/ziXgdkTfmPU">irc client in ocaml</a> <br></br> <div class="outline-text-5" id="text-2-1-1-3">
  <blockquote>
  <p>
 0:50 List.fold_left faster than fold_right, but haskell is opposite <br></br>
@@ -2434,137 +2448,163 @@ linuxcn 里唯一一个让我感觉很有必要把链接放在这的文章 <br><
 2:14 "how many american server you have already hacked" - "I don't count them I'm sorry" <br></br></p>
 </blockquote>
 </div>
-</div>
- <div class="outline-4">
- <h4> <span class="section-number-4">2.1.9.</span>  <a href="https://youtu.be/Utse8P_L8k0">ArcaOS: Modern OS/2 </a></h4>
-</div>
- <div class="outline-4">
- <h4> <span class="section-number-4">2.1.10.</span>  <a href="https://youtu.be/1z0ULvg_pW8">集线器，交换机和路由器的区别</a></h4>
- <div class="outline-text-4" id="text-2-1-10">
-</div>
- <ol class="org-ol"> <li> <a></a> <a href="https://youtu.be/TIiQiw7fpsU">MAC Address Explained</a> <br></br></li>
- <li> <a></a> <a href="https://youtu.be/6_giEv20En0">Subnets vs VLANs</a> <br></br></li>
-</ol></div>
- <div class="outline-4">
- <h4> <span class="section-number-4">2.1.11.</span>  <a href="https://youtu.be/UNkHditYGls">I coded a fractal on an Apple II+</a></h4>
-</div>
- <div class="outline-4">
- <h4> <span class="section-number-4">2.1.12.</span>  <a href="https://youtu.be/p8u_k2LIZyo">Fast Inverse Square Root — A Quake III Algorithm</a></h4>
- <div class="outline-text-4" id="text-2-1-12">
- <p>
- <code>0x5f3759df</code> <br></br></p>
-</div>
-</div>
- <div class="outline-4">
- <h4> <span class="section-number-4">2.1.13.</span>  <a href="https://youtu.be/67FmRyv8jTM">tsoding: Parsing Java Bytecode with Python</a></h4>
- <div class="outline-text-4" id="text-2-1-13">
+</li>
+ <li> <a></a> <a href="https://youtu.be/67FmRyv8jTM">Parsing Java Bytecode with Python</a> <br></br> <div class="outline-text-5" id="text-2-1-1-4">
  <p>
 0:05 look how TINY Java code is <br></br>
 0:06 nonono all the opensource are controlled by coporation actually, <br></br>
      they create a text editor plugin and sell the free code for $10 a month <br></br></p>
 </div>
+</li>
+ <li> <a></a> <a href="https://youtu.be/yKI-VOBBFu8">Hacking TCC compiler</a> <br></br> <div class="outline-text-5" id="text-2-1-1-5">
+ <blockquote>
+ <p>
+If we allowed `.` being treated  <i>automagically</i> as `->` in C when used on pointers to structs, <br></br>
+how much existing C code would be broken? <br></br></p>
+</blockquote>
+</div>
+</li>
+</ol></div>
+ <div class="outline-4">
+ <h4> <span class="section-number-4">2.1.2.</span>  <a href="https://youtu.be/0rJ94rbdteE">Rust 让你感觉像个天才</a></h4>
 </div>
  <div class="outline-4">
- <h4> <span class="section-number-4">2.1.14.</span>  <a href="https://youtu.be/BAo5C2qbLq8">Computerphile: Network Time Protocol (NTP)</a></h4>
+ <h4> <span class="section-number-4">2.1.3.</span>  <a href="https://youtu.be/nfF91Z6fqGk">CMD 登录B站</a></h4>
 </div>
  <div class="outline-4">
- <h4> <span class="section-number-4">2.1.15.</span>  <a href="https://www.youtube.com/playlist?list=PLknodeJt-I5H_zK-udgi5XhhYrnDoLHkP">Gavin Freeborn: Commandline tools and tips</a></h4>
+ <h4> <span class="section-number-4">2.1.4.</span>  <a href="https://youtu.be/jlPaby7suOc">Every Clojure Talk Ever</a></h4>
+</div>
+ <div class="outline-4">
+ <h4> <span class="section-number-4">2.1.5.</span>  <a href="https://youtu.be/Fq9chEBQMFE">what if I try to malloc too much memory</a></h4>
+</div>
+ <div class="outline-4">
+ <h4> <span class="section-number-4">2.1.6.</span>  <a href="https://youtu.be/zJ-8DZhzBEE">what your favourite pl says about you</a></h4>
+</div>
+ <div class="outline-4">
+ <h4> <span class="section-number-4">2.1.7.</span>  <a href="https://youtu.be/Utse8P_L8k0">ArcaOS: Modern OS/2 </a></h4>
+</div>
+ <div class="outline-4">
+ <h4> <span class="section-number-4">2.1.8.</span>  <a href="https://youtu.be/1z0ULvg_pW8">集线器，交换机和路由器的区别</a></h4>
+ <div class="outline-text-4" id="text-2-1-8">
+</div>
+ <ol class="org-ol"> <li> <a></a> <a href="https://youtu.be/TIiQiw7fpsU">MAC Address Explained</a> <br></br></li>
+ <li> <a></a> <a href="https://youtu.be/6_giEv20En0">Subnets vs VLANs</a> <br></br></li>
+</ol></div>
+ <div class="outline-4">
+ <h4> <span class="section-number-4">2.1.9.</span>  <a href="https://youtu.be/UNkHditYGls">I coded a fractal on an Apple II+</a></h4>
+</div>
+ <div class="outline-4">
+ <h4> <span class="section-number-4">2.1.10.</span>  <a href="https://youtu.be/p8u_k2LIZyo">Fast Inverse Square Root — A Quake III Algorithm</a></h4>
+ <div class="outline-text-4" id="text-2-1-10">
+ <p>
+ <code>0x5f3759df</code> <br></br></p>
+</div>
+</div>
+ <div class="outline-4">
+ <h4> <span class="section-number-4">2.1.11.</span>  <a href="https://www.youtube.com/playlist?list=PLknodeJt-I5H_zK-udgi5XhhYrnDoLHkP">Gavin Freeborn: Commandline tools and tips</a></h4>
 </div>
 </div>
 
  <div class="outline-3">
- <h3> <span class="section-number-3">2.2.</span> Cyber Security</h3>
+ <h3> <span class="section-number-3">2.2.</span>  <a href="https://www.youtube.com/@Computerphile">Computerphile</a></h3>
  <div class="outline-text-3" id="text-2-2">
 </div>
  <div class="outline-4">
- <h4> <span class="section-number-4">2.2.1.</span>  <a href="https://youtu.be/x_R1DeZxGc0">Discover Vulnerabilities in Intel CPUs!</a></h4>
+ <h4> <span class="section-number-4">2.2.1.</span>  <a href="https://youtu.be/BAo5C2qbLq8">Network Time Protocol (NTP)</a></h4>
 </div>
  <div class="outline-4">
- <h4> <span class="section-number-4">2.2.2.</span>  <a href="https://youtu.be/2--1ph-4IaY">shit express hacked</a></h4>
+ <h4> <span class="section-number-4">2.2.2.</span>  <a href="https://youtu.be/d7KHAVaX_Rs">Just In Time (JIT) Compilers</a></h4>
+</div>
+</div>
+
+ <div class="outline-3">
+ <h3> <span class="section-number-3">2.3.</span> Cyber Security</h3>
+ <div class="outline-text-3" id="text-2-3">
 </div>
  <div class="outline-4">
- <h4> <span class="section-number-4">2.2.3.</span>  <a href="https://www.youtube.com/playlist?list=PL5--8gKSku15NSeLgrZX9hSEnqPTWoSJ0">DT: Privacy & Security</a></h4>
+ <h4> <span class="section-number-4">2.3.1.</span> LiveOverflow</h4>
+ <div class="outline-text-4" id="text-2-3-1">
+</div>
+ <ol class="org-ol"> <li> <a></a> <a href="https://www.youtube.com/playlist?list=PLhixgUqwRTjwvBI-hmbZ2rpkAl4lutnJG">Minecraft HACKED</a> <br></br></li>
+ <li> <a></a> <a href="https://youtu.be/x_R1DeZxGc0">Discover Vulnerabilities in Intel CPUs!</a> <br></br></li>
+ <li> <a></a> <a href="https://youtu.be/UeAKTjx_eKA">Student Finds Hidden Devices in the College Library</a> <br></br></li>
+ <li> <a></a> <a href="https://youtu.be/MS7WRuzNYDc">is leaking your IP really dangerous</a> <br></br></li>
+ <li> <a></a> <a href="https://youtu.be/oJ6t7AImTdE">CSS Keylogger - old is new again</a> <br></br></li>
+</ol></div>
+ <div class="outline-4">
+ <h4> <span class="section-number-4">2.3.2.</span>  <a href="https://youtu.be/2--1ph-4IaY">shit express hacked</a></h4>
 </div>
  <div class="outline-4">
- <h4> <span class="section-number-4">2.2.4.</span>  <a href="https://youtu.be/UeAKTjx_eKA">Student Finds Hidden Devices in the College Library</a></h4>
+ <h4> <span class="section-number-4">2.3.3.</span>  <a href="https://www.youtube.com/playlist?list=PL5--8gKSku15NSeLgrZX9hSEnqPTWoSJ0">DT: Privacy & Security</a></h4>
 </div>
  <div class="outline-4">
- <h4> <span class="section-number-4">2.2.5.</span>  <a href="https://youtu.be/QxNsyrftJ8I">Chris Titus Tech: The Biggest Linux Security Mistakes</a></h4>
- <div class="outline-text-4" id="text-2-2-5">
+ <h4> <span class="section-number-4">2.3.4.</span>  <a href="https://youtu.be/QxNsyrftJ8I">Chris Titus Tech: The Biggest Linux Security Mistakes</a></h4>
+ <div class="outline-text-4" id="text-2-3-4">
  <p>
 "Security is a journey, not a destination!" <br></br></p>
 </div>
 </div>
  <div class="outline-4">
- <h4> <span class="section-number-4">2.2.6.</span>  <a href="https://youtu.be/S4E4yAktjug?t=998">How To Become Invisible Online # level 3</a></h4>
+ <h4> <span class="section-number-4">2.3.5.</span>  <a href="https://youtu.be/S4E4yAktjug?t=998">How To Become Invisible Online # level 3</a></h4>
 </div>
  <div class="outline-4">
- <h4> <span class="section-number-4">2.2.7.</span>  <a href="https://youtu.be/oJ6t7AImTdE">CSS Keylogger - old is new again</a></h4>
-</div>
- <div class="outline-4">
- <h4> <span class="section-number-4">2.2.8.</span>  <a href="https://youtu.be/I4_ide0tEG8">zip files & hack… (CVE-2022-1271 zgrep/gzip)</a></h4>
-</div>
- <div class="outline-4">
- <h4> <span class="section-number-4">2.2.9.</span>  <a href="https://youtu.be/MS7WRuzNYDc">is leaking your IP really dangerous</a></h4>
+ <h4> <span class="section-number-4">2.3.6.</span>  <a href="https://youtu.be/I4_ide0tEG8">JH: zip files & hack… (CVE-2022-1271 zgrep/gzip)</a></h4>
 </div>
 </div>
 
  <div class="outline-3">
- <h3> <span class="section-number-3">2.3.</span> Math</h3>
- <div class="outline-text-3" id="text-2-3">
-</div>
- <div class="outline-4">
- <h4> <span class="section-number-4">2.3.1.</span>  <a href="https://youtu.be/KufsL2VgELo">Group Theory</a></h4>
-</div>
- <div class="outline-4">
- <h4> <span class="section-number-4">2.3.2.</span>  <a href="https://youtu.be/3gyHKCDq1YA">p-adic Numbers: 2 ^ 10n</a></h4>
-</div>
- <div class="outline-4">
- <h4> <span class="section-number-4">2.3.3.</span>  <a href="https://youtu.be/4nG49xTTjIA">The Real Reason Why Negative Times Negative is Positive, Intro to Rings</a></h4>
-</div>
- <div class="outline-4">
- <h4> <span class="section-number-4">2.3.4.</span>  <a href="https://youtu.be/v_HeaeUUOnc">How to Take the Factorial of Any Number</a></h4>
-</div>
- <div class="outline-4">
- <h4> <span class="section-number-4">2.3.5.</span>  <a href="https://youtu.be/NJCiUVGiNyA">Coding a 3D Fractal: Mandelbulb</a></h4>
-</div>
-</div>
-
- <div class="outline-3">
- <h3> <span class="section-number-3">2.4.</span> Minecraft</h3>
+ <h3> <span class="section-number-3">2.4.</span> Math</h3>
  <div class="outline-text-3" id="text-2-4">
 </div>
  <div class="outline-4">
- <h4> <span class="section-number-4">2.4.1.</span>  <a href="https://youtu.be/VKydXD6Lr20">Mojang & Minecraft 开始衰落了吗?</a></h4>
+ <h4> <span class="section-number-4">2.4.1.</span>  <a href="https://youtu.be/KufsL2VgELo">Group Theory</a></h4>
 </div>
  <div class="outline-4">
- <h4> <span class="section-number-4">2.4.2.</span>  <a href="https://youtu.be/Y9DIIh0s9cg">SciCraft Update Plans</a></h4>
+ <h4> <span class="section-number-4">2.4.2.</span>  <a href="https://youtu.be/3gyHKCDq1YA">p-adic Numbers: 2 ^ 10n</a></h4>
 </div>
  <div class="outline-4">
- <h4> <span class="section-number-4">2.4.3.</span>  <a href="https://youtu.be/m5S0gLgg2rs">Tantan: MC + Fez</a></h4>
+ <h4> <span class="section-number-4">2.4.3.</span>  <a href="https://youtu.be/4nG49xTTjIA">The Real Reason Why Negative Times Negative is Positive, Intro to Rings</a></h4>
 </div>
  <div class="outline-4">
- <h4> <span class="section-number-4">2.4.4.</span>  <a href="https://www.youtube.com/playlist?list=PLhixgUqwRTjwvBI-hmbZ2rpkAl4lutnJG">Minecraft HACKED (LiveOverflow)</a></h4>
+ <h4> <span class="section-number-4">2.4.4.</span>  <a href="https://youtu.be/v_HeaeUUOnc">How to Take the Factorial of Any Number</a></h4>
+</div>
+ <div class="outline-4">
+ <h4> <span class="section-number-4">2.4.5.</span>  <a href="https://youtu.be/NJCiUVGiNyA">Coding a 3D Fractal: Mandelbulb</a></h4>
 </div>
 </div>
 
  <div class="outline-3">
- <h3> <span class="section-number-3">2.5.</span> ?</h3>
+ <h3> <span class="section-number-3">2.5.</span> Minecraft</h3>
  <div class="outline-text-3" id="text-2-5">
 </div>
  <div class="outline-4">
- <h4> <span class="section-number-4">2.5.1.</span>  <a href="https://www.youtube.com/c/IceGuye">IceGuye aka 姑射冰尘</a></h4>
- <div class="outline-text-4" id="text-2-5-1">
+ <h4> <span class="section-number-4">2.5.1.</span>  <a href="https://youtu.be/VKydXD6Lr20">Mojang & Minecraft 开始衰落了吗?</a></h4>
+</div>
+ <div class="outline-4">
+ <h4> <span class="section-number-4">2.5.2.</span>  <a href="https://youtu.be/Y9DIIh0s9cg">SciCraft Update Plans</a></h4>
+</div>
+ <div class="outline-4">
+ <h4> <span class="section-number-4">2.5.3.</span>  <a href="https://youtu.be/m5S0gLgg2rs">Tantan: MC + Fez</a></h4>
+</div>
+</div>
+
+ <div class="outline-3">
+ <h3> <span class="section-number-3">2.6.</span> ?</h3>
+ <div class="outline-text-3" id="text-2-6">
+</div>
+ <div class="outline-4">
+ <h4> <span class="section-number-4">2.6.1.</span>  <a href="https://www.youtube.com/c/IceGuye">IceGuye aka 姑射冰尘</a></h4>
+ <div class="outline-text-4" id="text-2-6-1">
  <p>
  <a href="https://odysee.com/@IceGuye">on odysee(lbry)</a> <br></br></p>
 </div>
 </div>
  <div class="outline-4">
- <h4> <span class="section-number-4">2.5.2.</span>  <a href="https://youtu.be/IS5ycm7VfXg">Homemade Silicon Chips!</a></h4>
+ <h4> <span class="section-number-4">2.6.2.</span>  <a href="https://youtu.be/IS5ycm7VfXg">Homemade Silicon Chips!</a></h4>
 </div>
  <div class="outline-4">
- <h4> <span class="section-number-4">2.5.3.</span>  <a href="https://youtu.be/4IaOeVgZ-wc">Why I'm Suing YouTube.</a></h4>
- <div class="outline-text-4" id="text-2-5-3">
+ <h4> <span class="section-number-4">2.6.3.</span>  <a href="https://youtu.be/4IaOeVgZ-wc">Why I'm Suing YouTube.</a></h4>
+ <div class="outline-text-4" id="text-2-6-3">
  <blockquote>
  <p>
 a story about YouTube’s intentional efforts to undermine the United States of America in collusion with the Russian government. <br></br>
@@ -2575,23 +2615,23 @@ to filing patently fraudulent DMCA counter-notifications to avoid the terminatio
 </div>
 </div>
  <div class="outline-4">
- <h4> <span class="section-number-4">2.5.4.</span>  <a href="https://youtu.be/RH3D1cpm6do">Yes, Everyone on the Internet Is a Loser.</a></h4>
- <div class="outline-text-4" id="text-2-5-4">
+ <h4> <span class="section-number-4">2.6.4.</span>  <a href="https://youtu.be/RH3D1cpm6do">Yes, Everyone on the Internet Is a Loser.</a></h4>
+ <div class="outline-text-4" id="text-2-6-4">
 </div>
  <ol class="org-ol"> <li> <a></a> <a href="https://youtu.be/2CnAzLB0OjU">DT: As The Web Grows Bigger, It Seems Smaller</a> <br></br></li>
 </ol></div>
  <div class="outline-4">
- <h4> <span class="section-number-4">2.5.5.</span>  <a href="https://youtu.be/Rsxao9ptdmI">Beating 5 Scam Arcade Games with Science</a></h4>
- <div class="outline-text-4" id="text-2-5-5">
+ <h4> <span class="section-number-4">2.6.5.</span>  <a href="https://youtu.be/Rsxao9ptdmI">Beating 5 Scam Arcade Games with Science</a></h4>
+ <div class="outline-text-4" id="text-2-6-5">
  <p>
 街机科学家～ <br></br></p>
 </div>
 </div>
  <div class="outline-4">
- <h4> <span class="section-number-4">2.5.6.</span>  <a href="https://youtube.com/playlist?list=PLgE-9Sxs2IBVgJkY-1ZMj0tIFxsJ-vOkv">BBS The Documentary(8)</a></h4>
+ <h4> <span class="section-number-4">2.6.6.</span>  <a href="https://youtube.com/playlist?list=PLgE-9Sxs2IBVgJkY-1ZMj0tIFxsJ-vOkv">BBS The Documentary(8)</a></h4>
 </div>
  <div class="outline-4">
- <h4> <span class="section-number-4">2.5.7.</span>  <a href="https://youtu.be/k35uDHs7Z9E">DT: A Disturbing Descent Into The Mind Of A Mad Man</a></h4>
+ <h4> <span class="section-number-4">2.6.7.</span>  <a href="https://youtu.be/k35uDHs7Z9E">DT: A Disturbing Descent Into The Mind Of A Mad Man</a></h4>
 </div>
 </div>
 </div>
@@ -2634,49 +2674,12 @@ to filing patently fraudulent DMCA counter-notifications to avoid the terminatio
 </div>
 
  <div class="outline-2">
- <h2> <span class="section-number-2">4.</span> Other</h2>
+ <h2> <span class="section-number-2">4.</span> Mail</h2>
  <div class="outline-text-2" id="text-4">
 </div>
  <div class="outline-3">
- <h3> <span class="section-number-3">4.1.</span>  <a href="https://en.wikipedia.org/wiki/Python_(missile)">Python-5</a></h3>
+ <h3> <span class="section-number-3">4.1.</span>  <a href="https://lists.gnu.org/archive/html/info-gnu/2022-09/msg00005.html">GNU C Language Intro and Reference Manual</a></h3>
  <div class="outline-text-3" id="text-4-1">
- <p>
-from  <a href="https://youtu.be/8QP2fDBIxjM">tsoding's first porth video</a>, (he is using debian, 37:00 copilot xd) <br></br></p>
-</div>
-</div>
- <div class="outline-3">
- <h3> <span class="section-number-3">4.2.</span>  <a href="http://cat-v.org/">cat -v</a></h3>
- <div class="outline-text-3" id="text-4-2">
- <p>
-not only harmful stuff <3 <br></br></p>
-</div>
-</div>
- <div class="outline-3">
- <h3> <span class="section-number-3">4.3.</span>  <a href="https://joinfediverse.wiki/">fediverse wiki</a></h3>
- <div class="outline-text-3" id="text-4-3">
- <p>
-The Fediverse is a giant Network of social media platforms <br></br></p>
-</div>
- <div class="outline-4">
- <h4> <span class="section-number-4">4.3.1.</span> there's another thing  <a href="https://www.w3.org/TR/webmention/">webmention</a> which I found from Xe's blog</h4>
-</div>
-</div>
- <div class="outline-3">
- <h3> <span class="section-number-3">4.4.</span>  <a href="https://blog.stenmans.org/theBeamBook/">the beam book</a> and  <a href="https://learnyousomeerlang.com/content">learn you some erlang</a></h3>
-</div>
- <div class="outline-3">
- <h3> <span class="section-number-3">4.5.</span>  <a href="https://inadequacy.org/public/stories/2001.12.2.42056.2147.html">Adequacy: Is Your Son a Computer Hacker?</a></h3>
- <div class="outline-text-3" id="text-4-5">
- <blockquote>
- <p>
-BSD, Lunix, Debian and Mandrake are all versions of an illegal hacker operation system, <br></br>
-invented by a Soviet computer hacker named Linyos Torovoltos. <br></br></p>
-</blockquote>
-</div>
-</div>
- <div class="outline-3">
- <h3> <span class="section-number-3">4.6.</span>  <a href="https://lists.gnu.org/archive/html/info-gnu/2022-09/msg00005.html">GNU C Language Intro and Reference Manual</a></h3>
- <div class="outline-text-3" id="text-4-6">
  <blockquote>
  <p>
 To any NSA and FBI agents reading my email: please consider <br></br>
@@ -2686,69 +2689,118 @@ foreign or domestic, requires you to follow Snowden's example. <br></br></p>
 </div>
 </div>
  <div class="outline-3">
- <h3> <span class="section-number-3">4.7.</span>  <a href="https://www.gilesorr.com/wm/">The Window Manager Report</a></h3>
+ <h3> <span class="section-number-3">4.2.</span>  <a href="https://news-web.php.net/php.internals/70691">PHP function hashing mechanism was strlen()</a></h3>
 </div>
  <div class="outline-3">
- <h3> <span class="section-number-3">4.8.</span>  <a href="https://ghinda.net/oxygenos/">oxygenos</a></h3>
- <div class="outline-text-3" id="text-4-8">
+ <h3> <span class="section-number-3">4.3.</span>  <a href="https://swtch.com/duffs-device/td-1983.txt">Duffs device</a></h3>
+</div>
+ <div class="outline-3">
+ <h3> <span class="section-number-3">4.4.</span>  <a href="https://lists.freedesktop.org/archives/systemd-devel/2022-September/048352.html">Support for unmerged-usr systems will be REMOVED</a></h3>
+</div>
+</div>
+
+ <div class="outline-2">
+ <h2> <span class="section-number-2">5.</span> Other</h2>
+ <div class="outline-text-2" id="text-5">
+</div>
+ <div class="outline-3">
+ <h3> <span class="section-number-3">5.1.</span>  <a href="https://en.wikipedia.org/wiki/Python_(missile)">Python-5</a></h3>
+ <div class="outline-text-3" id="text-5-1">
+ <p>
+from  <a href="https://youtu.be/8QP2fDBIxjM">tsoding's first porth video</a>, (he is using debian, 37:00 copilot xd) <br></br></p>
+</div>
+</div>
+ <div class="outline-3">
+ <h3> <span class="section-number-3">5.2.</span>  <a href="http://cat-v.org/">cat -v</a></h3>
+ <div class="outline-text-3" id="text-5-2">
+ <p>
+not only harmful stuff <3 <br></br></p>
+</div>
+</div>
+ <div class="outline-3">
+ <h3> <span class="section-number-3">5.3.</span>  <a href="https://joinfediverse.wiki/">fediverse wiki</a></h3>
+ <div class="outline-text-3" id="text-5-3">
+ <p>
+The Fediverse is a giant Network of social media platforms <br></br></p>
+</div>
+ <div class="outline-4">
+ <h4> <span class="section-number-4">5.3.1.</span> there's another thing  <a href="https://www.w3.org/TR/webmention/">webmention</a> which I found from Xe's blog</h4>
+</div>
+</div>
+ <div class="outline-3">
+ <h3> <span class="section-number-3">5.4.</span>  <a href="https://blog.stenmans.org/theBeamBook/">the beam book</a> and  <a href="https://learnyousomeerlang.com/content">learn you some erlang</a></h3>
+</div>
+ <div class="outline-3">
+ <h3> <span class="section-number-3">5.5.</span>  <a href="https://inadequacy.org/public/stories/2001.12.2.42056.2147.html">Adequacy: Is Your Son a Computer Hacker?</a></h3>
+ <div class="outline-text-3" id="text-5-5">
+ <blockquote>
+ <p>
+BSD, Lunix, Debian and Mandrake are all versions of an illegal hacker operation system, <br></br>
+invented by a Soviet computer hacker named Linyos Torovoltos. <br></br></p>
+</blockquote>
+</div>
+</div>
+ <div class="outline-3">
+ <h3> <span class="section-number-3">5.6.</span>  <a href="https://www.gilesorr.com/wm/">The Window Manager Report</a></h3>
+</div>
+ <div class="outline-3">
+ <h3> <span class="section-number-3">5.7.</span>  <a href="https://ghinda.net/oxygenos/">oxygenos</a></h3>
+ <div class="outline-text-3" id="text-5-7">
  <p>
 his final year project in high school, 2008 <br></br>
 a webos using oxygen visual design <br></br></p>
 </div>
 </div>
  <div class="outline-3">
- <h3> <span class="section-number-3">4.9.</span>  <a href="https://news-web.php.net/php.internals/70691">PHP function hashing mechanism was strlen()</a></h3>
-</div>
- <div class="outline-3">
- <h3> <span class="section-number-3">4.10.</span>  <a href="http://phrack.org">Phrack Magazine</a></h3>
- <div class="outline-text-3" id="text-4-10">
+ <h3> <span class="section-number-3">5.8.</span>  <a href="http://phrack.org">Phrack Magazine</a></h3>
+ <div class="outline-text-3" id="text-5-8">
  <p>
 worth reading <br></br></p>
 </div>
  <div class="outline-4">
- <h4> <span class="section-number-4">4.10.1.</span>  <a href="http://phrack.org/issues/49/14.html">Smashing The Stack For Fun And Profit</a></h4>
+ <h4> <span class="section-number-4">5.8.1.</span>  <a href="http://phrack.org/issues/49/14.html">Smashing The Stack For Fun And Profit</a></h4>
 </div>
  <div class="outline-4">
- <h4> <span class="section-number-4">4.10.2.</span>  <a href="http://phrack.org/issues/70/15.html">YouTube Security Scene - LiveOverflow!</a></h4>
+ <h4> <span class="section-number-4">5.8.2.</span>  <a href="http://phrack.org/issues/70/15.html">YouTube Security Scene - LiveOverflow!</a></h4>
 </div>
 </div>
  <div class="outline-3">
- <h3> <span class="section-number-3">4.11.</span>  <a href="https://akrl.sdf.org/gccemacs.html">gccemacs</a></h3>
- <div class="outline-text-3" id="text-4-11">
+ <h3> <span class="section-number-3">5.9.</span>  <a href="https://akrl.sdf.org/gccemacs.html">gccemacs</a></h3>
+ <div class="outline-text-3" id="text-5-9">
 </div>
  <div class="outline-4">
- <h4> <span class="section-number-4">4.11.1.</span>  <a href="https://akrl.sdf.org/gccemacs_els2020.pdf">slides_els2020</a></h4>
+ <h4> <span class="section-number-4">5.9.1.</span>  <a href="https://akrl.sdf.org/gccemacs_els2020.pdf">slides_els2020</a></h4>
 </div>
 </div>
  <div class="outline-3">
- <h3> <span class="section-number-3">4.12.</span>  <a href="https://tildeverse.org">https://tildeverse.org</a></h3>
- <div class="outline-text-3" id="text-4-12">
+ <h3> <span class="section-number-3">5.10.</span>  <a href="https://tildeverse.org">https://tildeverse.org</a></h3>
+ <div class="outline-text-3" id="text-5-10">
 </div>
  <div class="outline-4">
- <h4> <span class="section-number-4">4.12.1.</span>  <a href="https://quotes.tilde.chat">https://quotes.tilde.chat</a></h4>
+ <h4> <span class="section-number-4">5.10.1.</span>  <a href="https://quotes.tilde.chat">https://quotes.tilde.chat</a></h4>
 </div>
 </div>
  <div class="outline-3">
- <h3> <span class="section-number-3">4.13.</span>  <a href="http://decss.zoy.org">42 ways to distribute DeCSS</a></h3>
- <div class="outline-text-3" id="text-4-13">
+ <h3> <span class="section-number-3">5.11.</span>  <a href="http://decss.zoy.org">42 ways to distribute DeCSS</a></h3>
+ <div class="outline-text-3" id="text-5-11">
 </div>
  <div class="outline-4">
- <h4> <span class="section-number-4">4.13.1.</span>  <a href="http://www.cs.cmu.edu/~dst/DeCSS/Kesden/index.html">Lecture 33: Content Scrambling System</a></h4>
+ <h4> <span class="section-number-4">5.11.1.</span>  <a href="http://www.cs.cmu.edu/~dst/DeCSS/Kesden/index.html">Lecture 33: Content Scrambling System</a></h4>
 </div>
 </div>
  <div class="outline-3">
- <h3> <span class="section-number-3">4.14.</span>  <a href="https://custodians.online/chinese.html">声援 Library Genesis 和 Sci-Hub</a></h3>
+ <h3> <span class="section-number-3">5.12.</span>  <a href="https://custodians.online/chinese.html">声援 Library Genesis 和 Sci-Hub</a></h3>
 </div>
  <div class="outline-3">
- <h3> <span class="section-number-3">4.15.</span>  <a href="https://tholman.com/cursor-effects/">90's Cursor Effects</a></h3>
- <div class="outline-text-3" id="text-4-15">
+ <h3> <span class="section-number-3">5.13.</span>  <a href="https://tholman.com/cursor-effects/">90's Cursor Effects</a></h3>
+ <div class="outline-text-3" id="text-5-13">
 </div>
  <div class="outline-4">
- <h4> <span class="section-number-4">4.15.1.</span>  <a href="https://theuselessweb.com">The Useless Web</a></h4>
+ <h4> <span class="section-number-4">5.13.1.</span>  <a href="https://theuselessweb.com">The Useless Web</a></h4>
 </div>
 </div>
  <div class="outline-3">
- <h3> <span class="section-number-3">4.16.</span>  <a href="http://oldlinux.org">OldLinux.org</a></h3>
+ <h3> <span class="section-number-3">5.14.</span>  <a href="http://oldlinux.org">OldLinux.org</a></h3>
 </div>
 </div>
 </div>]]></description>
