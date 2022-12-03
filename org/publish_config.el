@@ -35,6 +35,7 @@
 <p class=\"date\">Date: %d</p>
 <p class=\"date\">Build: %T</p>
 <p>LICENCE: CC BY-NC-SA</p>
+<p>If you have any idea, please contact me! I may add your comment</p>
 ")))
 
 (setq org-publish-project-alist
