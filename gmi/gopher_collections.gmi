@@ -42,3 +42,4 @@ Gemcast, Esperanto
 => gemini://gemini.cyberbot.space/                                    + cyberbot
 undergoes frequent maintenance
 => gemini://gemini.cyberbot.space/smolzine/                           ++ smolzine
+=> gemini://tilde.team/~kiedtl/k1ss/                                  + Kiss Linux mirror

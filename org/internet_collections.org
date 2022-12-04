@@ -77,7 +77,7 @@ CPU, IC, ARM
 出国
 *** [[http://jujuba.me/posts/program-analysis-via-llvm-pass.html][LLVM Pass来实现简化版taint analysis]]
 *** [[http://jujuba.me/posts/taste-of-code.html][代码的taste]]
-#+ATTR_HTML: :width 256px
+#+ATTR_HTML: :width 400px
 [[http://jujuba.me/imgs/linus-on-TED.png]]
 ** [[https://cireu.github.io/2019/09/17/lisp-setf/][NIL: setf 中「f」的本意]]
 ** [[https://www.cnblogs.com/zjjws/p/13346020.html][第 N 个质数]]                                                 :c:algorithm:
