@@ -11,6 +11,6 @@ html:
 	@echo "DONE"
 
 clean:
-	rm ~/.org-timestamps/org-pages.cache
+	- rm ~/.org-timestamps/org-pages.cache
 	$(TARGET) | xargs -I {} rm {}
 	rm ../feed.xml*
