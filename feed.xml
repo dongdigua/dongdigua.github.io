@@ -6,7 +6,7 @@
 <generator>Emacs webfeeder.el</generator>
 <link>https://dongdigua.github.io</link>
 <atom:link href="https://dongdigua.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-<lastBuildDate>六, 03 12月 2022 22:45:02 +0800</lastBuildDate>
+<lastBuildDate>日, 04 12月 2022 13:34:39 +0800</lastBuildDate>
 <item>
   <title>狗日的腾讯会议</title>
   <description><![CDATA[<div id="content" class="content">
@@ -99,62 +99,87 @@
   <pubDate>五, 02 12月 2022 08:00:00 +0800</pubDate>
 </item>
 <item>
-  <title>New Blog Architecture</title>
+  <title>New(and Newer) Blog Architecture</title>
   <description><![CDATA[<div id="content" class="content">
 
 
+
+ <div class="outline-2">
+ <h2> <span class="section-number-2">1.</span> Branch</h2>
+ <div class="outline-text-2" id="text-1">
  <p>
 I've never fully learnt git before(only search for garbage when meeted with problem), so I recently read  <a href="https://git-scm.com/book">ProGit</a>. <br></br>
 And I have some good ideas on my repo architecture: I should make use of branch, obviously. <br></br></p>
+</div>
 
- <div class="outline-2">
- <h2> <span class="section-number-2">1.</span> Idea is:</h2>
- <div class="outline-text-2" id="text-1">
+ <div class="outline-3">
+ <h3> <span class="section-number-3">1.1.</span> Idea is:</h3>
+ <div class="outline-text-3" id="text-1-1">
  <p>
 seperate the source file(org) and the generated files(html, feed.xml) <br></br>
 so I can <br></br></p>
 </div>
- <div class="outline-3">
- <h3> <span class="section-number-3">1.1.</span> clearly look at the diff</h3>
+ <div class="outline-4">
+ <h4> <span class="section-number-4">1.1.1.</span> clearly look at the diff</h4>
 </div>
- <div class="outline-3">
- <h3> <span class="section-number-3">1.2.</span> delete the generated files if I want</h3>
- <div class="outline-text-3" id="text-1-2">
+ <div class="outline-4">
+ <h4> <span class="section-number-4">1.1.2.</span> delete the generated files if I want</h4>
+ <div class="outline-text-4" id="text-1-1-2">
  <p>
 because those static files are really unecessary and takes much space <br></br></p>
 </div>
 </div>
 </div>
 
- <div class="outline-2">
- <h2> <span class="section-number-2">2.</span> So what</h2>
- <div class="outline-text-2" id="text-2">
-</div>
  <div class="outline-3">
- <h3> <span class="section-number-3">2.1.</span> use  <code>filter-branch</code> to remove the huge  <code>feed.xml</code> in the full history</h3>
+ <h3> <span class="section-number-3">1.2.</span> So what</h3>
+ <div class="outline-text-3" id="text-1-2">
 </div>
- <div class="outline-3">
- <h3> <span class="section-number-3">2.2.</span> ignore the generated files in the source repo</h3>
+ <div class="outline-4">
+ <h4> <span class="section-number-4">1.2.1.</span> use  <code>filter-branch</code> to remove the huge  <code>feed.xml</code> in the full history</h4>
 </div>
- <div class="outline-3">
- <h3> <span class="section-number-3">2.3.</span> merge the source repo into site repo when I think it's ok</h3>
- <div class="outline-text-3" id="text-2-3">
+ <div class="outline-4">
+ <h4> <span class="section-number-4">1.2.2.</span> ignore the generated files in the source repo</h4>
+</div>
+ <div class="outline-4">
+ <h4> <span class="section-number-4">1.2.3.</span> merge the source repo into site repo when I think it's ok</h4>
+ <div class="outline-text-4" id="text-1-2-3">
  <p>
 don't remove the source(org) in the site repo, <br></br>
 if build in main and checkout to site, those html will be overwritten <br></br></p>
 </div>
 </div>
+ <div class="outline-4">
+ <h4> <span class="section-number-4">1.2.4.</span>  <del>and I will use the same stratagy on my YW sub-website if there's no problem</del></h4>
+ <div class="outline-text-4" id="text-1-2-4">
+ <p>
+I'm testing using CI on YW sub-site before deploying on this precious repo <br></br></p>
+</div>
+</div>
+</div>
+
  <div class="outline-3">
- <h3> <span class="section-number-3">2.4.</span> and I will use the same stratagy on my YW sub-website if there's no problem</h3>
+ <h3> <span class="section-number-3">1.3.</span> Need Advice</h3>
+ <div class="outline-text-3" id="text-1-3">
+ <p>
+ <del>I'm really new to do this. If you have a better idea, or this is somehow useful to you,</del> <br></br> <del> <b>contact me, please!</b></del> <br></br></p>
+</div>
 </div>
 </div>
 
  <div class="outline-2">
- <h2> <span class="section-number-2">3.</span> Need Advice</h2>
- <div class="outline-text-2" id="text-3">
+ <h2> <span class="section-number-2">2.</span> CI</h2>
+ <div class="outline-text-2" id="text-2">
  <p>
-I'm really new to do this. <br></br>
-If you have a better idea, or this is somehow useful to you, <br></br> <b>contact me, please!</b> <br></br></p>
+I previously thought of using CI to deploy blog, but I  <i>thought</i> it too difficult, so just keep status quo. <br></br>
+But for many times I want to build a  <a href="https://github.com/dongdigua/configs/blob/main/configuration.nix">NixOS</a> with  <a href="https://donngdigua.github.io/wayland">wayland</a> and lots of other big util(such as clang and metasploit), <br></br>
+if I build it on my machine, it will take up too many spaces and make no use except for building iso. <br></br>
+So it urged me to use a CI, after some  <a href="https://t.bilibili.com/735422465675624481">trying</a>, I found it not difficult and in fact, very useful! <br></br></p>
+
+ <p>
+I can have my huge feed.xml(which contains each of my post) dynamically generated by CI, it will save lots of spaces! <br></br>
+I will  <a href="https://git-scm.com/book/en/v2/Git-Tools-Bundling">bundle</a> my entire history mess and put it on release, like previous big change, <br></br>
+then use the Nuclear Option  <code>filter-branch</code> to delete those generated big files. <br></br></p>
 </div>
 </div>
 </div>]]></description>
@@ -769,82 +794,6 @@ var:  <code>plz-curl-default-args</code> <br></br></p>
   <link>https://dongdigua.github.io/matrix.html</link>
   <guid isPermaLink="false">https://dongdigua.github.io/matrix.html</guid>
   <pubDate>四, 22 9月 2022 08:00:00 +0800</pubDate>
-</item>
-<item>
-  <title>Build a Minimal NixOS LiveCD with swaywm</title>
-  <description><![CDATA[<div id="content" class="content">
-
-
-
- <div class="outline-2">
- <h2> <span class="section-number-2">1.</span> problem & solution</h2>
- <div class="outline-text-2" id="text-1">
-</div>
- <div class="outline-3">
- <h3> <span class="section-number-3">1.1.</span> unable to drop root</h3>
- <div class="outline-text-3" id="text-1-1">
- <p>
-donot run under root <br></br></p>
-</div>
-</div>
- <div class="outline-3">
- <h3> <span class="section-number-3">1.2.</span> in normal user, libseat permission deniened</h3>
- <div class="outline-text-3" id="text-1-2">
- <p>
-add user in  <code>video</code> group <br></br>
-login as user, not root <br></br></p>
-</div>
-</div>
- <div class="outline-3">
- <h3> <span class="section-number-3">1.3.</span> egl error</h3>
- <div class="outline-text-3" id="text-1-3">
- <p>
-enable 3D acceleration in VirtualBox <br></br></p>
-</div>
-</div>
- <div class="outline-3">
- <h3> <span class="section-number-3">1.4.</span> config files from outside</h3>
- <div class="outline-text-3" id="text-1-4">
- <p>
- <img src="../images/irc-nixiso.png" alt="irc-nixiso.png"></img> <br></br>
-but it is copied using xoriso to  <code>/iso/</code> <br></br>
-so I need to write a systemd service to automagically sync it at boot <br></br></p>
-</div>
-</div>
- <div class="outline-3">
- <h3> <span class="section-number-3">1.5.</span> cleanup builds</h3>
- <div class="outline-text-3" id="text-1-5">
- <p>
- <code>/nix/store/</code> takes too much space after build <br></br></p>
- <div class="org-src-container">
- <pre class="src src-sh">unlink result
-nix-store <path>
-</pre>
-</div>
- <p>
-and there're a few tools for visualising disk size: <br></br> <a href="https://nixos.wiki/wiki/Cleaning_the_nix_store">https://nixos.wiki/wiki/Cleaning_the_nix_store</a> <br></br></p>
-</div>
-</div>
-</div>
-
- <div class="outline-2">
- <h2> <span class="section-number-2">2.</span> reference</h2>
- <div class="outline-text-2" id="text-2">
-</div>
- <div class="outline-3">
- <h3> <span class="section-number-3">2.1.</span>  <a href="https://sr.ht/~guido/nixos-init-freedom/">nixos without systemd?</a></h3>
-</div>
- <div class="outline-3">
- <h3> <span class="section-number-3">2.2.</span>  <a href="https://gist.github.com/kborling/76805ade81ac5bfdd712df294208c878">an example config</a></h3>
-</div>
- <div class="outline-3">
- <h3> <span class="section-number-3">2.3.</span>  <a href="https://xeiaso.net/blog/super-bootable-64-2020-05-06">Xe: Super Bootable 64</a></h3>
-</div>
-</div>
-</div>]]></description>
-  <link>https://dongdigua.github.io/nixos.html</link>
-  <guid isPermaLink="false">https://dongdigua.github.io/nixos.html</guid>
-  <pubDate>六, 17 9月 2022 08:00:00 +0800</pubDate>
 </item>
 <item>
   <title>庄主其人</title>
@@ -1913,7 +1862,7 @@ CPU, IC, ARM <br></br></p>
  <div class="outline-text-4" id="text-1-21-2">
 
  <div class="figure">
- <p> <img src="http://jujuba.me/imgs/linus-on-TED.png" alt="linus-on-TED.png" width="256px"></img> <br></br></p>
+ <p> <img src="http://jujuba.me/imgs/linus-on-TED.png" alt="linus-on-TED.png" width="400px"></img> <br></br></p>
 </div>
 </div>
 </div>
