@@ -1,4 +1,4 @@
-#+TITLE: Matrix chat (clients comparation, proxy setting)
+#+TITLE: Matrix chat (clients comparation & proxy setting)
 #+DATE: <2022-09-22 四>
 #+DESCRIPTION: Matrix 通信(客户端对比, 代理设置)
 #+OPTIONS: toc:2

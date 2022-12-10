@@ -370,6 +370,7 @@ foreign or domestic, requires you to follow Snowden's example.
 ** [[https://news-web.php.net/php.internals/70691][PHP function hashing mechanism was strlen()]]
 ** [[https://swtch.com/duffs-device/td-1983.txt][Duffs device]]
 ** [[https://lists.freedesktop.org/archives/systemd-devel/2022-September/048352.html][Support for unmerged-usr systems will be REMOVED]]
+** [[https://lists.gnu.org/archive/html/emacs-devel/2020-10/msg00376.html][Include leaf in Emacs distribution]]
 
 * Other
 #+BEGIN_COMMENT

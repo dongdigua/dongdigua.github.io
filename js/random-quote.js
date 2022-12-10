@@ -13,6 +13,8 @@ var data = [
     "There will be an answer: Let It Be",
     "<a id=quote href=https://calm.com>Take a deep breath</a>",
     "我这人有几个缺点: 第一, 不会数数; 第二, 记性不好; 第四, 不会数数",
+    "圈纸拿回家研磨去了",
+    "我们从这里启航♫",
 
     "The internet is FULL, go away!",
     "<a id=quote href=new_blog_arch>May the --force be with you</a>",
@@ -25,7 +27,6 @@ var data = [
     "<a id=quote href=https://www.curseforge.com/minecraft/mc-mods/carpet>NOT VANILLA!</a>",
     "Big Brother is Watching You",
     "消除恐惧的最好办法就是面对恐惧,\n坚持, 才是胜利, 加油, 奥利给!",
-    "Never Gonna Give You Up",
     "衬衫的价格是9磅15便士",
     "李彦宏: 我想中国人可以更加开放，对隐私问题没有那么敏感。\n如果他们愿意用隐私交换便捷性，很多情况下他们是愿意的。",
     "<a id=quote href=https://wiki.evageeks.org/A.T._Field>AT&T field</a>",
