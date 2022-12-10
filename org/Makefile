@@ -12,5 +12,5 @@ html:
 
 clean:
 	- rm ~/.org-timestamps/org-pages.cache
-	$(TARGET) | xargs -I {} rm {}
-	rm ../feed.xml*
+	- $(TARGET) | xargs -I {} rm {}
+	- rm ../feed.xml*

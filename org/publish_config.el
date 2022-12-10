@@ -4,10 +4,16 @@
 
 ;; System Crafter's video: https://youtu.be/AfkrzFodoNw
 
-(eval-when-compile
-  (require 'package)
-  (package-initialize)
+(require 'package)
+(package-initialize)
+;; https://liujiacai.net/blog/2021/05/05/emacs-package
+(when (not package-archive-contents)
+  (package-refresh-contents))
+(dolist (p '(webfeeder))
+  (when (not (package-installed-p p))
+    (package-install p)))
 
+(eval-when-compile
   (require 'org)
   (require 'ox)
   (require 'webfeeder))
