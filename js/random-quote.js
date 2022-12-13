@@ -15,6 +15,7 @@ var data = [
     "我这人有几个缺点: 第一, 不会数数; 第二, 记性不好; 第四, 不会数数",
     "圈纸拿回家研磨去了",
     "我们从这里启航♫",
+    "Learn. Unlearn. Relearn.",
 
     "The internet is FULL, go away!",
     "<a id=quote href=new_blog_arch>May the --force be with you</a>",
@@ -34,7 +35,8 @@ var data = [
     "<a id=quote href=https://ravynos.com>ravynOS, Always; FreeBSD, Mostly; Linux, Sometimes; macOS, Maybe</a>",
     "<a id=quote href=damn_tencent_meeting>有什么业务是腾讯不做的吗?!</a>",
     "Rewrite in Rust!",
+    "Your text editor runs in a web browser,\nMy web browser runs inside a text editor,\nWe are not the same",
 ];
 
 var index = Math.floor((Math.random() * data.length));
-window.document.getElementById("quote").innerHTML = data[index];
+window.document.getElementById("quote").innerHTML = "\"" + data[index] + "\"";

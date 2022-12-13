@@ -1,6 +1,6 @@
 #+TAGS: elixir(e) rust(r) c(c) lisp(l) python(p) nim(n)
 #+TAGS: lowlevel(w) frontend(f) backend(b) algorithm(a) math(t)
-#+TAGS: hack(h) fun(u)
+#+TAGS: hack(h) fun(u) wow(O)
 #+TAGS: emacs(m) linux(x) iot(i) plan9(9) BSD(B)
 #+OPTIONS: toc:1 ^:{}
 
@@ -31,7 +31,7 @@ Two Principles of Deadlines:
 1. All deadlines converge on the same day—Deadline Day.
 2. Every day is Deadline Day.
 #+END_QUOTE
-*** [[https://bford.info/pub/net/p2pnat/][Peer-to-Peer Communication Across Network Address Translators]]
+*** [[https://bford.info/pub/net/p2pnat/][Peer-to-Peer Communication Across Network Address Translators]]     :wow:
 ** [[https://shakaianee.top/][社会易姐]]
 ** [[https://floooh.github.io/][floooh(The Brain Dump)]]                                                :c:
 07 年开始, cpu emulator
@@ -76,7 +76,7 @@ CPU, IC, ARM
 ** [[http://jujuba.me/][Ground Oddity]]
 出国
 *** [[http://jujuba.me/posts/program-analysis-via-llvm-pass.html][LLVM Pass来实现简化版taint analysis]]
-*** [[http://jujuba.me/posts/taste-of-code.html][代码的taste]]
+*** [[http://jujuba.me/posts/taste-of-code.html][代码的taste]]                                                       :wow:
 #+ATTR_HTML: :width 400px
 [[http://jujuba.me/imgs/linus-on-TED.png]]
 ** [[https://cireu.github.io/2019/09/17/lisp-setf/][NIL: setf 中「f」的本意]]
@@ -111,7 +111,7 @@ F#, M1(r0$0f+, very high quality
 ** [[http://www.xianwaizhiyin.net/][弦外之音]]                                                     :c:lowlevel:
 源码分析
 *** [[https://www.xianwaizhiyin.net/?cat=24][state-thread 源码分析]]
-** TODO [[https://lightless.me/categories.html][lightless blog]]                                                :hack:
+** [[https://lightless.me/categories.html][lightless blog]]                                                     :hack:
 ** [[https://bheisler.github.io/post/state-of-gpgpu-in-rust/][The State of GPGPU in Rust]]                                :rust:lowlevel:
 ** [[https://litchipi.github.io/series/container_in_rust][Writing a container in Rust]]
 *** [[https://litchipi.github.io/infosec/2022/07/08/copyit-until-you-makeit.html][Copy it until you make it]]
@@ -211,7 +211,20 @@ kernel, LFS
 ** [[https://mthli.xyz][Matthew Lee]]
 *** [[https://mthli.xyz/duff-device/][深入理解达夫设备]]
 *** [[https://mthli.xyz/stackful-stackless/][有栈协程与无栈协程]]
-**** [[https://www.chiark.greenend.org.uk/~sgtatham/coroutines.html][PuTTY's author: Coroutines in C]]
+**** [[https://www.chiark.greenend.org.uk/~sgtatham/coroutines.html][PuTTY's author: Coroutines in C]]                                 :wow:
+#+BEGIN_SRC c
+// Black Magic
+#define crBegin static int state=0; switch(state) { case 0:
+#define crReturn(x) do { state=__LINE__; return x; case __LINE__:; } while (0)
+#define crFinish }
+int function(void) {
+    static int i;
+    crBegin;
+    for (i = 0; i &lt 10; i++)
+        crReturn(i);
+    crFinish;
+}
+#+END_SRC
 ** TODO [[https://magcius.github.io/xplain/article/][explain X window system]]
 
 ** B

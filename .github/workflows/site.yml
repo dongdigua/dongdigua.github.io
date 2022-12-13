@@ -45,7 +45,7 @@ jobs:
       - name: Patch HTML
         run: |
           tree _site
-          sudo ./patches/bili_ip.sh
+          sudo ./patches/icons.sh
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1

@@ -5,7 +5,7 @@ https://github.com/rgb-24bit/org-html-theme-list org-joshua
 {
     body {
         font-family: "Helvetica Neue", "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, sans-serif !important;
-        font-size: 14px;
+        font-size: 16px;
         line-height: 21px;
         color: #333;
         max-width: 62em;
@@ -78,7 +78,7 @@ https://github.com/rgb-24bit/org-html-theme-list org-joshua
 
     h2 {
         font-family:Arial,sans-serif;
-        font-size:1.45em;
+        font-size:1.5em;
         line-height:16px;
         padding:7px 0 0 0;
         color: #666;
@@ -94,7 +94,7 @@ https://github.com/rgb-24bit/org-html-theme-list org-joshua
 
     h3 {
         font-family:Arial,sans-serif;
-        font-size:1.3em;
+        font-size:1.4em;
         color: #666;
         margin-left: 0.6em;
     }
@@ -105,13 +105,13 @@ https://github.com/rgb-24bit/org-html-theme-list org-joshua
 
     h4 {
         font-family:Arial,sans-serif;
-        font-size:1.2em;
+        font-size:1.3em;
         margin-left: 1.2em;
         color: #666;
     }
 
     .outline-text-4 {
-        margin-left: 1.45em;
+        margin-left: 1.4em;
     }
 
     a {
@@ -134,12 +134,14 @@ https://github.com/rgb-24bit/org-html-theme-list org-joshua
     list-style-position: outside;
     }
     ol {
-    list-style-type: decimal;
+    list-style-type: circle;
     list-style-position: outside;
     }
+    /*
     ol ol {
     list-style-type: lower-alpha;
     }
+   */
 
     .todo {
         color: #CA0000;

@@ -19,3 +19,4 @@ just a [[https://support.microsoft.com/en-us/windows/windows-7-support-ended-on-
 * 用 eww 实现苹果的 "灵动岛"?
 呵呵, 在B站看到这样的基本就是壁纸软件的广告
 * Nethack x Minecraft
+* 穿越机/无人机竞速
