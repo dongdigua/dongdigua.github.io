@@ -3,6 +3,7 @@
 
 *.html
 *.xml
+*.gmi.txt
 !index.html
 !xmr.html
 !404.html

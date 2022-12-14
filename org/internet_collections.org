@@ -8,6 +8,9 @@
 #+DATE: <2022-06-05 日>
 
 * 一些(个人)博客收集
+:PROPERTIES:
+:CUSTOM_ID: blog
+:END:
 #+TAGS: rssable(s) rssub(u) gopher(g)
 #+BEGIN_SRC text
          _                                                  ___
@@ -278,6 +281,9 @@ use the power of tor:
 今年的新博客, 友链有踏浪
 
 * YouTube 收集(没有账号, 这就是我的收藏夹)
+:PROPERTIES:
+:CUSTOM_ID: yt
+:END:
 # I think the quality of DT's video is falling
 ** Computer Science
 *** [[https://tsoding.org][tsoding]]
@@ -367,6 +373,9 @@ to filing patently fraudulent DMCA counter-notifications to avoid the terminatio
 *** [[https://youtu.be/k35uDHs7Z9E][DT: A Disturbing Descent Into The Mind Of A Mad Man]]
 
 * r
+:PROPERTIES:
+:CUSTOM_ID: r
+:END:
 ** [[https://www.reddit.com/r/unixporn/][unixporn]]
 *** [[https://www.reddit.com/r/unixporn/comments/v6fsui/sway_family_reunionr/][reddit: family reunion]]
 *** [[https://www.reddit.com/r/unixporn/comments/wkba0x/jwm_if_i_had_a_pda/][pocket pc]]
@@ -378,6 +387,9 @@ to filing patently fraudulent DMCA counter-notifications to avoid the terminatio
 *** [[https://www.reddit.com/r/ProgrammerHumor/comments/mr8gqx/new_episode_of_electricianhumor/][New episode of ElectricianHumor]]
 
 * Mail
+:PROPERTIES:
+:CUSTOM_ID: mail
+:END:
 #+BEGIN_SRC text
 [[[ To any NSA and FBI agents reading my email: please consider    ]]]
 [[[ whether defending the US Constitution against all enemies,     ]]]
@@ -389,6 +401,9 @@ to filing patently fraudulent DMCA counter-notifications to avoid the terminatio
 ** [[https://lists.gnu.org/archive/html/emacs-devel/2020-10/msg00376.html][Include leaf in Emacs distribution]]
 
 * Other
+:PROPERTIES:
+:CUSTOM_ID: misc
+:END:
 #+BEGIN_COMMENT
 #+END_COMMENT
 ** [[https://en.wikipedia.org/wiki/Python_(missile)][Python-5]]

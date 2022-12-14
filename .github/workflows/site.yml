@@ -31,7 +31,8 @@ jobs:
           cd org
           make clean
           make
-          tree ../
+          cd ..
+          ./patches/gmi.sh
 
       - name: Setup Pages
         uses: actions/configure-pages@v2
@@ -44,7 +45,7 @@ jobs:
 
       - name: Patch HTML
         run: |
-          tree _site
+          cd _site && tree
           sudo ./patches/icons.sh
 
       - name: Upload artifact
