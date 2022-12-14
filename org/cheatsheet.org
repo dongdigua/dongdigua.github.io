@@ -95,3 +95,8 @@ git show :1:file  # 1common 2ours 3theirs
 | M-Left/Right | jump world, or prevd/nextd |
 | M-s          | sudo the last command      |
 | M-w          | what is this               |
+
+* ffmpeg
+#+BEGIN_SRC shell
+ffmpeg -hwaccel qsv -i IN -ss 5:00 -t 30:00 -s 720x480 -r 30 -an -threads 2 OUT
+#+END_SRC

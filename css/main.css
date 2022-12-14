@@ -1,6 +1,14 @@
 /* 
 https://github.com/rgb-24bit/org-html-theme-list org-joshua
 */
+
+@font-face{ /* FROM isopenbsdsecu.re */
+    font-family: miriam libre;
+    font-display: auto;
+    src: url(https://cdn.jsdelivr.net/npm/@fontsource/miriam-libre/files/miriam-libre-all-400-normal.woff) format('woff');
+    font-style: normal;
+}
+
 @media all
 {
     body {
@@ -16,7 +24,7 @@ https://github.com/rgb-24bit/org-html-theme-list org-joshua
     }
     body .title {
         margin-left: 0;
-        font-family: Trebuchet;
+        font-family: Miriam Libre,serif;
     }
 
     #org-div-home-and-up{

@@ -1,5 +1,6 @@
 ## Table of Contents
 ### Posts (sorted by time)
+- [七天学伴是个什么鬼](shit_7net.gmi.txt)<br>
 - [狗日的腾讯会议](damn_tencent_meeting)<br>
 上网课有感而发
 - [New Blog Architecture](new_blog_arch)<br>
@@ -25,7 +26,7 @@ any kind of contribution is welcome
 - [<font color=red>大概是语文知识整理</font>](digua-YW)<br>
 Big project
 - [Gopher/Gemini reactions](re.gmi.txt)<br>
-- [Gopher/Gemini collections, a quiet web](gopher_collections.gmi.txt)<br>
+- [Gopher/Gemini collections, a quiet web](collections.gmi.txt)<br>
 - [Random Ideas](ideas)<br>
 画大饼
 - [折腾 sway 的一些记录(problem&solution)](wayland)<br>
