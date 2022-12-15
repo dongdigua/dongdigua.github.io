@@ -34,12 +34,13 @@ BSD
 => gopher://schinkel.bevuta.com                                       + Author of CHICKEN Scheme
 => gemini://ew.srht.site/                                             + ew
 almost 60! lots of 'Re:'
+=> gemini://ew.srht.site/library/                                     + ew's library
 => gemini://perplexing.space/                                         + perplexing
 => gemini://kwiecien.us/                                              ++ kwiecien
 Gemcast, Esperanto
 => gemini://gemi.dev/                                                 + Gemi.dev Heavy Industries
 => gemini://gemi.dev/cgi-bin/wp.cgi/welcome/zh                        ++ gemipedia
 => gemini://gemini.cyberbot.space/                                    + cyberbot
-undergoes frequent maintenance
+undergoes frequent maintenance, PDA?
 => gemini://gemini.cyberbot.space/smolzine/                           ++ smolzine
-=> gemini://tilde.team/~kiedtl/k1ss/                                  + Kiss Linux mirror
+=> gemini://warmedal.se/~bjorn                                        + bjorn

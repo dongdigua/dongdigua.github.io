@@ -1,4 +1,4 @@
-name: Deploy with Org and Jekyll
+name: Org and Jekyll
 
 on:
   push:

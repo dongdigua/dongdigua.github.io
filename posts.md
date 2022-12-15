@@ -15,7 +15,7 @@ for [COSSIG](https://www.cossig.org)
 - [推荐 everforest 主题](recommend_everforest_theme)<br>
 any kind of contribution is welcome
 - [我对显示 IP 属地的看法](bili_ip)<br>
-- [我的 gnome 配置](my_gnome_config)<br>
+- [My gnome config](my_gnome_config)<br>
 - [我对 SciCraft 更新1.19的看法](scicraft_update)<br>
 - [对我将来的视频网站的一些畅想](plan_for_my_video_site)<br>
 - [<font color=grey>ARCHIVE: elixir 写点对点加密聊天软件</font>](p2p_chat)<br>
@@ -29,8 +29,8 @@ Big project
 - [Gopher/Gemini collections, a quiet web](collections.gmi.txt)<br>
 - [Random Ideas](ideas)<br>
 画大饼
-- [折腾 sway 的一些记录(problem&solution)](wayland)<br>
+- [Play with Swaywm and Nixos (solutions)](wayland)<br>
 if you have some problem with sway, you can probably find solution here
-- [编辑器操作备忘录](cheatsheet)<br>
+- [(Editor) Cheatsheet](cheatsheet)<br>
 - [Internet Collections](internet_collections)<br>
 博客, YouTube 等收集

@@ -12,7 +12,7 @@ var data = [
     "李无用地瓜碱水, 硒钫铕𬭶鿔合金",
     "There will be an answer: Let It Be",
     "我这人有几个缺点: 第一, 不会数数; 第二, 记性不好; 第四, 不会数数",
-    "圈纸拿回家研磨去了",
+    "圈纸带回家研磨了",
     "我们从这里启航♫",
     "Learn. Unlearn. Relearn.",
 
@@ -33,9 +33,9 @@ var data = [
     "I □ Unicode",
     "<a id=quote href=https://ravynos.com>ravynOS, Always; FreeBSD, Mostly; Linux, Sometimes; macOS, Maybe</a>",
     "<a id=quote href=damn_tencent_meeting>有什么业务是腾讯不做的吗?!</a>",
-    "Rewrite in Rust!",
     "Your text editor runs in a web browser,\nMy web browser runs inside a text editor,\nWe are not the same",
     "<a id=quote href=https://www.gnunet.org>It’s the metadata, stupid</a>",
+    "Intel® 64 and IA-32 Architectures Software Developer’s Manual",
 ];
 
 var index = Math.floor((Math.random() * data.length));

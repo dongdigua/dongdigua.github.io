@@ -1,8 +1,11 @@
-#+TITLE: Editor Cheatsheet
+#+TITLE: (Editor) Cheatsheet
 #+DATE: <2022-06-13 一>
 
 
 * VIM
+:PROPERTIES:
+:CUSTOM_ID:vim:
+:END:
 ** deletion
 | key | usage                 |
 |-----+-----------------------|
@@ -42,6 +45,9 @@
 | ZZ          | :wq          |
 
 * EMACS
+:PROPERTIES:
+:CUSTOM_ID:emacs:
+:END:
 ** org
 | key         | usage                         |
 |-------------+-------------------------------|
@@ -81,6 +87,9 @@ https://orgmode.org/worg/dev/org-export-reference.html
 | .     | elpher-view-raw                  |
 
 * Git
+:PROPERTIES:
+:CUSTOM_ID:git:
+:END:
 Git 能离线使用只是个传说, 你仍然需要联网搜索该用哪个命令传什么参数
 #+BEGIN_SRC shell
 git log --stat | perl -ne 'END { print $c } $c += $1 if /(\d+) insertions/;'
@@ -89,7 +98,11 @@ git log --pretty=tformat: --numstat | awk '{ add += $1; subs += $2; loc += $1 - 
 git show :1:file  # 1common 2ours 3theirs
 #+END_SRC
 
-* Fish
+* Shell
+:PROPERTIES:
+:CUSTOM_ID:shell:
+:END:
+** Fish
 | key          | usage                      |
 |--------------+----------------------------|
 | M-Left/Right | jump world, or prevd/nextd |
@@ -97,6 +110,9 @@ git show :1:file  # 1common 2ours 3theirs
 | M-w          | what is this               |
 
 * ffmpeg
+:PROPERTIES:
+:CUSTOM_ID:ffmpeg:
+:END:
 #+BEGIN_SRC shell
 ffmpeg -hwaccel qsv -i IN -ss 5:00 -t 30:00 -s 720x480 -r 30 -an -threads 2 OUT
 #+END_SRC

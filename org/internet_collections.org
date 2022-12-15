@@ -7,7 +7,7 @@
 #+TITLE: Internet Collections
 #+DATE: <2022-06-05 日>
 
-* 一些(个人)博客收集
+* (Personal) Blogs
 :PROPERTIES:
 :CUSTOM_ID: blog
 :END:
@@ -280,7 +280,7 @@ use the power of tor:
 *** [[https://blog.bluemangoo.net/][芒果快评]]
 今年的新博客, 友链有踏浪
 
-* YouTube 收集(没有账号, 这就是我的收藏夹)
+* YouTube (没有账号, 这就是我的收藏夹)
 :PROPERTIES:
 :CUSTOM_ID: yt
 :END:
@@ -321,7 +321,7 @@ how much existing C code would be broken?
 =0x5f3759df=
 *** [[https://www.youtube.com/playlist?list=PLknodeJt-I5H_zK-udgi5XhhYrnDoLHkP][Gavin Freeborn: Commandline tools and tips]]
 
-** [[https://www.youtube.com/@Computerphile][Computerphile]]
+**  @@html:<a style="color:#0ee033" href=https://www.youtube.com/@Computerphile>&lt;C&gt;</a>@@
 *** [[https://youtu.be/BAo5C2qbLq8][Network Time Protocol (NTP)]]
 *** [[https://youtu.be/d7KHAVaX_Rs][Just In Time (JIT) Compilers]]
 *** [[https://youtu.be/PN7mPYcWFKg][Quantum Computing]]
