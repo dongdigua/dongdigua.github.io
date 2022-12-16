@@ -406,8 +406,6 @@ to filing patently fraudulent DMCA counter-notifications to avoid the terminatio
 :END:
 #+BEGIN_COMMENT
 #+END_COMMENT
-** [[https://en.wikipedia.org/wiki/Python_(missile)][Python-5]]
-from [[https://youtu.be/8QP2fDBIxjM][tsoding's first porth video]], (he is using debian, 37:00 copilot xd)
 ** [[http://cat-v.org/][cat -v]]
 not only harmful stuff <3
 ** [[https://joinfediverse.wiki/][fediverse wiki]]
