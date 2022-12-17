@@ -6,7 +6,6 @@
 
 (require 'package)
 (package-initialize)
-;; https://liujiacai.net/blog/2021/05/05/emacs-package
 (when (not package-archive-contents)
   (package-refresh-contents))
 (dolist (p '(webfeeder))

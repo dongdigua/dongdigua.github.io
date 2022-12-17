@@ -87,15 +87,17 @@ CPU, IC, ARM
 看不懂, 先收藏着
 ** [[https://mrxn.net/][mrxn]]                                                               :hack:
 网安, data-leak
-** [[http://incf19.com/yynotes/][include-yy]]                                                 :c:lisp:emacs:
+** [[http://incf19.com][include-yy 攒 emacs]]                                        :c:lisp:emacs:
 许多东方的图诶
 *** [[http://incf19.com/yynotes/posts/2021-10-25-14-蝴蝶效应与emacs动画][蝴蝶效应与emacs动画]]
+*** [[http://incf19.com/yynotes/posts/2021-05-28-5-emacs的cl扩展][emacs的cl扩展]]
 *** [[http://incf19.com/yynotes/posts/2021-03-22-1-由(λ(x)(x x))看elisp与scheme之区别][由(λ(x)(x x))看elisp与scheme之区别]]
 #+BEGIN_QUOTE
 这个问题其实就是 Lisp-1 和 Lisp-2 的区别导致的
 Lisp-1 的变量命名空间和函数命名空间是统一的，而在 Lisp-2 中两者是分开的
 #+END_QUOTE
 **** [[http://xahlee.info/emacs/emacs/lisp1_vs_lisp2.html][Xah Lee Lisp-1 vs Lisp-2]]
+*** [[http://incf19.com/yynotes/posts/2022-10-07-23-用elisp玩brainfuck-I][(不只是)用elisp玩brainfuck]]
 ** [[https://nihil.cc][Nihil]]                                                              :rust:
 *** [[https://nihil.cc/posts/rust_closure_and_y/][Rust 闭包递归与 Y 组合子]]
 **** [[https://cps.ninja/2020/04/13/deriving-y-combinator/][行侠何须仗名剑: 推导 Y Combinator]]
@@ -231,6 +233,8 @@ int function(void) {
 ** [[https://madaidans-insecurities.github.io][Security & Privacy Evaluations]]
 *** [[https://madaidans-insecurities.github.io/guides/linux-hardening.html][Linux Hardening Guide]]
 ** [[https://isamert.net/2022/03/16/global-interactive-emacs-functions.html][Global interactive Emacs functions]]
+** [[https://www.engraved.blog/building-a-virtual-machine-inside/][Building A Virtual Machine inside ChatGPT]]
+
 ** B
 *** [[https://blog.yangmame.org/][yanemame]]
 猴哥推荐的
@@ -320,6 +324,8 @@ how much existing C code would be broken?
 *** [[https://youtu.be/p8u_k2LIZyo][Fast Inverse Square Root — A Quake III Algorithm]]
 =0x5f3759df=
 *** [[https://www.youtube.com/playlist?list=PLknodeJt-I5H_zK-udgi5XhhYrnDoLHkP][Gavin Freeborn: Commandline tools and tips]]
+*** [[https://youtu.be/CFRhGnuXG-4][Why You Shouldn't Nest Your Code]]
+
 
 **  @@html:<a style="color:#0ee033" href=https://www.youtube.com/@Computerphile>&lt;C&gt;</a>@@
 *** [[https://youtu.be/BAo5C2qbLq8][Network Time Protocol (NTP)]]
@@ -327,6 +333,7 @@ how much existing C code would be broken?
 *** [[https://youtu.be/PN7mPYcWFKg][Quantum Computing]]
 *** [[https://youtu.be/Qow8pIvExH4][Brain-Like (Neuromorphic) Computing]]
 **** [[http://bit.ly/C_AtomicBrain][Atomic Brain?]]
+*** [[https://youtu.be/XiFkyR35v2Y][Slow Loris Attack]]
 
 ** Cyber Security
 *** LiveOverflow
@@ -371,6 +378,7 @@ to filing patently fraudulent DMCA counter-notifications to avoid the terminatio
 街机科学家～
 *** [[https://youtube.com/playlist?list=PLgE-9Sxs2IBVgJkY-1ZMj0tIFxsJ-vOkv][BBS The Documentary(8)]]
 *** [[https://youtu.be/k35uDHs7Z9E][DT: A Disturbing Descent Into The Mind Of A Mad Man]]
+*** [[https://youtu.be/GlovVvBAIGk][DT: Keeping A Positive Attitude Even After Storm Destroys My Backyard]]
 
 * r
 :PROPERTIES:
@@ -399,6 +407,8 @@ to filing patently fraudulent DMCA counter-notifications to avoid the terminatio
 ** [[https://swtch.com/duffs-device/td-1983.txt][Duffs device]]
 ** [[https://lists.freedesktop.org/archives/systemd-devel/2022-September/048352.html][Support for unmerged-usr systems will be REMOVED]]
 ** [[https://lists.gnu.org/archive/html/emacs-devel/2020-10/msg00376.html][Include leaf in Emacs distribution]]
+** [[https://lore.kernel.org/lkml/20221102084921.1615-3-thunder.leizhen@huawei.com/][Christmas present with Linux 6.2]]
+Huwawei NB!
 
 * Other
 :PROPERTIES:
@@ -438,3 +448,5 @@ RTFSC – Read The F**king Source Code ☺!
 ** [[https://isopenbsdsecu.re][Is OpenBSD secure?]]
 ** [[http://litcave.rudi.ir][LITCAVE]]
 software minimalism, Neat*
+** TODO [[https://youbroketheinternet.org]]
+** TODO [[https://wiki.installgentoo.com/wiki/File:Inori-tan.jpg][InstallGentoo Wiki File:Inori-tan.jpg]]

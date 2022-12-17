@@ -56,6 +56,7 @@
 | C-c C-x C-v | toggle render images          |
 | C-c C-l     | 编辑链接                      |
 | C-c C-,     | org-insert-structure-template |
+| C-c C-x p   | org-set-property              |
 
 https://orgmode.org/worg/dev/org-export-reference.html
 
@@ -91,6 +92,7 @@ https://orgmode.org/worg/dev/org-export-reference.html
 :CUSTOM_ID:git:
 :END:
 Git 能离线使用只是个传说, 你仍然需要联网搜索该用哪个命令传什么参数
+magic is useful
 #+BEGIN_SRC shell
 git log --stat | perl -ne 'END { print $c } $c += $1 if /(\d+) insertions/;'
 git log --pretty=tformat: --numstat | awk '{ add += $1; subs += $2; loc += $1 - $2 } END { printf "added lines: %s, removed lines: %s, total lines: %s\n", add, subs, loc }'

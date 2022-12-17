@@ -37,6 +37,7 @@ var data = [
     "<a id=quote href=https://www.gnunet.org>It’s the metadata, stupid</a>",
     "Intel® 64 and IA-32 Architectures Software Developer’s Manual",
     "<a id=quote href=https://youtu.be/8QP2fDBIxjM>tsoding: </a><a id=quote href=https://en.wikipedia.org/wiki/Python_(missile)>I know there is Python-5</a>",
+    "他很善于表达, 可惜没什么可表达的",
 ];
 
 var index = Math.floor((Math.random() * data.length));
