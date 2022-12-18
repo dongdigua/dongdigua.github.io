@@ -8,7 +8,7 @@
 (package-initialize)
 (when (not package-archive-contents)
   (package-refresh-contents))
-(dolist (p '(webfeeder))
+(dolist (p '(webfeeder htmlize))
   (when (not (package-installed-p p))
     (package-install p)))
 

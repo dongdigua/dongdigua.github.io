@@ -9,10 +9,23 @@ https://github.com/rgb-24bit/org-html-theme-list org-joshua
     font-style: normal;
 }
 
+@font-face{ /* FROM https://tlakh.xyz */
+    font-family: Source Serif;
+    font-display: auto;
+    src: url(https://cdn.jsdelivr.net/npm/@fontsource/source-serif-4@4.5.16/files/source-serif-4-all-400-normal.woff) format('woff');
+    font-style: normal;
+}
+@font-face{
+    font-family: Source Serif;
+    font-display: auto;
+    src: url(https://cdn.jsdelivr.net/npm/@fontsource/source-serif-4@4.5.16/files/source-serif-4-all-400-italic.woff) format('woff');
+    font-style: italic;
+}
+
 @media all
 {
     body {
-        font-family: "Helvetica Neue", "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, sans-serif !important;
+        font-family: "Source Serif", "Helvetica Neue", "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, sans-serif !important;
         font-size: 18px;
         line-height: 21px;
         color: #333;
@@ -86,7 +99,6 @@ https://github.com/rgb-24bit/org-html-theme-list org-joshua
     }
 
     h2 {
-        font-family:Arial,sans-serif;
         font-size:1.5em;
         line-height:16px;
         padding:7px 0 0 0;
@@ -98,7 +110,6 @@ https://github.com/rgb-24bit/org-html-theme-list org-joshua
     }
 
     h3 {
-        font-family:Arial,sans-serif;
         font-size:1.3em;
         color: #555;
         margin-left: 0.6em;
@@ -109,7 +120,6 @@ https://github.com/rgb-24bit/org-html-theme-list org-joshua
     }
 
     h4 {
-        font-family:Arial,sans-serif;
         font-size:1.2em;
         margin-left: 1.2em;
         color: #555;

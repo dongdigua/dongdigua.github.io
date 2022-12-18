@@ -71,6 +71,7 @@ https://orgmode.org/worg/dev/org-export-reference.html
 | C-y     | paste to minibuffer |
 | M-&/!   | async/shell command |
 | C-M-\   | indent-region       |
+| M-y     | past previous       |
 
 ** eww/elpher (essensial)
 | key   | usage                            |

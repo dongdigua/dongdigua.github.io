@@ -252,6 +252,7 @@ B站: 称呼我C先生
 **** [[https://sh.alynx.one/posts/Linux-Mooncake-Jokes/][Linux 用户的月饼食用手册]]                                        :fun:
 **** [[https://sh.alynx.one/posts/Do-Not-Fill-My-Email-with-Silly-Ads/][不要拿愚蠢的广告来污染我的邮箱]]
 **** [[https://sh.alynx.one/posts/Proxy-Settings/][Linux 下面常见的代理设置]]
+**** [[https://sh.alynx.one/posts/Emacs-Monaco-Box-drawing-Character/][Emacs 和 Monaco 字体和 Box-drawing Character]]
 ** ZhiHu
 *** [[https://zhuanlan.zhihu.com/p/138719668][用Go语言汇编计算fibonacci数列]]                                :lowlevel:
 *** [[https://www.zhihu.com/column/c_1313110231912726528][倔强的程序员]]
@@ -273,7 +274,6 @@ linuxcn 里唯一一个让我感觉很有必要把链接放在这的文章
 #+BEGIN_SRC text
 use the power of tor:
   http://zlibrary24tuxziyiyfr7zd46ytefdqbqd2axkmxm4o5374ptpc52fad.onion
-  http://loginzlib2vrak5zzpcocc3ouizykn6k5qecgj2tzlnab5wcbqhembyd.onion
   http://loginzlib2vrak5zzpcocc3ouizykn6k5qecgj2tzlnab5wcbqhembyd.onion
 #+END_SRC
 
@@ -327,7 +327,7 @@ how much existing C code would be broken?
 *** [[https://youtu.be/CFRhGnuXG-4][Why You Shouldn't Nest Your Code]]
 
 
-**  @@html:<a style="color:#0ee033" href=https://www.youtube.com/@Computerphile>&lt;C&gt;</a>@@
+**  [[https://www.youtube.com/@Computerphile][<C>]]
 *** [[https://youtu.be/BAo5C2qbLq8][Network Time Protocol (NTP)]]
 *** [[https://youtu.be/d7KHAVaX_Rs][Just In Time (JIT) Compilers]]
 *** [[https://youtu.be/PN7mPYcWFKg][Quantum Computing]]
@@ -448,5 +448,7 @@ RTFSC – Read The F**king Source Code ☺!
 ** [[https://isopenbsdsecu.re][Is OpenBSD secure?]]
 ** [[http://litcave.rudi.ir][LITCAVE]]
 software minimalism, Neat*
-** TODO [[https://youbroketheinternet.org]]
+** [[https://youbroketheinternet.org][youbroketheinternet.org]]
+#+ATTR_HTML: :width 256px
+[[https://youbroketheinternet.org/img/youbroketheman.png]]
 ** TODO [[https://wiki.installgentoo.com/wiki/File:Inori-tan.jpg][InstallGentoo Wiki File:Inori-tan.jpg]]

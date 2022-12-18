@@ -47,6 +47,7 @@ jobs:
         run: |
           cd _site && tree
           sudo ./patches/icons.sh
+          sudo ./patches/color.sh
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
