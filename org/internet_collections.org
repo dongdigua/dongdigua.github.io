@@ -106,7 +106,8 @@ Lisp-1 的变量命名空间和函数命名空间是统一的，而在 Lisp-2 �
 *** [[https://nihil.cc/posts/shell-redirect/][特别全面! Shell 中的管道、重定向、进程替换]]
 ** [[https://liujiacai.net/][keep coding]]                                     :rust:c:lowlevel:backend:
 写代码的西瓜
-*** [[https://emacstalk.github.io/][EmacsTalk]]
+*** [[https://emacstalk.codeberg.page][EmacsTalk]]
+migrated to codeberg
 *** [[https://liujiacai.net/blog/2022/04/30/modern-c/][现代化 C]]                                                            :c:
 *** [[https://liujiacai.net/blog/2018/06/15/garbage-collection-intro/][深入浅出垃圾回收(1/4)]]
 ** [[http://tomasp.net/][Tomas Petricek]]                                                    :rssub:
@@ -311,6 +312,10 @@ use the power of tor:
 If we allowed `.` being treated /automagically/ as `->` in C when used on pointers to structs,
 how much existing C code would be broken?
 #+END_QUOTE
+**** [[https://youtu.be/vOEbLg51Veg][Porth: nasm -> fasm]]
+how do I use that thing???
+0:36 working
+so [[http://flatassembler.net][fasm]] is really FAST, and [[http://kolibrios.org/en/][KolibriOS]] also use it!
 *** [[https://youtu.be/0rJ94rbdteE][Rust 让你感觉像个天才]]
 *** [[https://youtu.be/nfF91Z6fqGk][CMD 登录B站]]
 *** [[https://youtu.be/jlPaby7suOc][Every Clojure Talk Ever]]

@@ -383,9 +383,12 @@ div#preamble div#plupperButton a img {
 
 blockquote {
     background: #f9f5d7;  /* FROM Xe */
-    padding: 10px;
-    border-radius: 10px;
-    -moz-border-radius: 10px;
+    /* FROM simple.css */
+    margin: 2rem 0 2rem 2rem;
+    padding: 0.4rem 0.8rem;
+    border-left: 0.35rem solid #0d47a1;
+    color: #585858;
+    font-style: italic;
 }
 
 .figure img {
