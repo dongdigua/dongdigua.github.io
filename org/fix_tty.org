@@ -1,0 +1,96 @@
+#+TITLE: [Custom Kernel] Fix TTY after Fedora 37 Upgrade
+#+DESCRIPTION: Xanmod
+
+* What Happened
+After switching to f37, something changed:
+- [[https://dongdigua.github.io/wayland#dm][sddm]] don't work
+- sway don't have environment variables
+- v2rayA don't start automatically
+
+but those are not vital.
+One day I wanted to login to tty, it just stuck. However,  default kernel works.
+I wonder how~ I wonder why~
+
+But before this, I noticed some other scenario:
+- old f36 kernel and kernel built on f36 won't boot
+- newly built kernel don't have startup screen with fedora logo
+- when I added a new kernel, the grub select the f37 kernel by default
+
+I didn't take them seriously, until my kernel goes wrong as above.
+
+How to fix that? is there any suspicious config I added?
+So I rolled back to an older version of my config but still don't work.
+
+* Ask for help
+I think I can't solve this,
+therefore, I asked for help at =#kernel= on libera.chat
+(weechat is really great... to have English-only chat)
+
+@@html:<details>@@
+@@html:<summary>chat log</summary>@@
+#+BEGIN_SRC text
+<digua> hello, I made a custom kernel, but I cannot switch tty
+<tdr> thats not usually a kernel problem.
+<digua> but if I switch to fedora default kernel, it work
+<tdr> did you include everything your init system uses/needs?
+<tdr> its your init that needs to spawn the other tty getty's / logins
+<tdr> so systemd or whatever init system youre using
+<digua> what getty need to include?
+<tdr> ok i guess i said im wrong there, it can be either
+<jn> if you use the same userspace with both kernels, the next thing to check is the configs
+<jn> /boot/config-* or /proc/config.gz
+<jn> maybe there are differences there that explain the different outcomes
+<tdr> there is a diff tool in the scripts directory too, much better than normal diff
+<tdr> diffconfig
+<tdr> digua, which distoro kernel did you replace?
+<digua> fedora to xanmod
+<tdr> i think some need stuff in the initramfs to get the muti tty stuff too
+<digua> o I noticed one thinig in dmesg
+<tdr> digua, doesnt fedora use plymoutth or smoeting in the ramdisk normally .. you may want to pull apart your old initramfs and look in there too
+<digua> when I switch tty, dmesg says something about rfkill
+<tdr> rfkill is radio on/off
+<tdr> so wifi or bt or whatever
+<digua> tdr, plymouth is the fedora logo support? i don't have that in my kernel
+<digua> does it have an impact on tty?
+<tdr> depeneds what <they> do with or around it
+<tdr> there's no solid rules of what is done where or how, as long as requirements are met for <next step>
+
+<digua> tdr, so I checked both initramfs, and I only found intel microcode, so now the problem isn't at initramds
+<tdr> you didnt unpack it the right way
+<tdr> if dracut made it, there are 2 parts
+<digua> i use cpio -idv < file
+<tdr> digua, https://www.thegeekdiary.com/centos-rhel-7-how-to-extract-initramfs-image-and-editview-it ... the skipcpio method
+<tdr> digua,  /usr/lib/dracut/skipcpio  <your initramfs file> | zcat | cpio -ivd
+<tdr> lsinitrd also works to see whats there without doing much else
+<digua> thanks, I thought it can't contain only microcode :)
+<tdr> it can be a chamber of "secrets" easy enough
+<small> jn: hmm
+
+<digua> I'm back! after a noon of compiling with ealier config
+<digua> but tty STILL don't work, I think the f37 upgrade breaks it
+<digua> tdr, so I think it's not my config issue :-|
+<tdr> hrm i'd be cautious saying a distro released/tested kernel breaks your boot.  not saying its impossible, but i'd also try their stock config.
+<tdr> specifically, their kernel and initramfs pair together.  before opening a bug with them
+<digua> I remembered, when I upgraded to f37, the f36 kernel and kernel build on f36 all don't boot, so maybe I need to config based on the f37 default?
+<digua> building with f37 config works fine, and I will reconfigure based on it :)
+<digua> tdr, thank you for your generous help
+#+END_SRC
+@@html:</details>@@
+
+Yeah, there *is* something that changed after f37 upgrade
+and I'm still using the config I modified based on f36 one!
+
+So I grabbed the f37 config at =/boot= and replaced =.config=,
+then, without any modification, compile it.
+
+/*It fucking worked!!!*/
+also the startup logo (plymouth)
+
+The next step is to find out what is really going wrong...
+
+* Thought
+The book /Absolute OpenBSD/ says people should *not* build a custom OpenBSD kernel, that's right for OpenBSD.
+Because it's application and kernel are together,
+and  it have the magical [[https://man.openbsd.org/config.8][config(8)]] to modify the kernel biniary.
+
+For Linux user, it's still good to have a configured kernel.

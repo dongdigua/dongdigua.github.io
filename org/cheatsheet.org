@@ -99,6 +99,8 @@ git log --stat | perl -ne 'END { print $c } $c += $1 if /(\d+) insertions/;'
 git log --pretty=tformat: --numstat | awk '{ add += $1; subs += $2; loc += $1 - $2 } END { printf "added lines: %s, removed lines: %s, total lines: %s\n", add, subs, loc }'
 
 git show :1:file  # 1common 2ours 3theirs
+
+git rebase --committer-date-is-author-date
 #+END_SRC
 
 * Shell

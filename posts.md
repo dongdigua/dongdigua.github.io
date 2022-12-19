@@ -1,5 +1,6 @@
 ## Table of Contents
 ### Posts (sorted by time)
+- [Fix TTY after Fedora 37 Upgrade](fix_tty)<br>
 - [狗日的腾讯会议](damn_tencent_meeting)<br>
 上网课有感而发
 - [New Blog Architecture](new_blog_arch)<br>
