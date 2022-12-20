@@ -1,4 +1,5 @@
 #+TITLE: [Custom Kernel] Fix TTY after Fedora 37 Upgrade
+#+DATE: <2022-12-19 一>
 #+DESCRIPTION: Xanmod
 
 * What Happened
@@ -86,7 +87,10 @@ then, without any modification, compile it.
 /*It fucking worked!!!*/
 also the startup logo (plymouth)
 
+For I have [[https://dongdigua.github.io/kernel][recorded]] what I change I have made based on the default kernel,
+it's not too difficult to reconfigure it.
 The next step is to find out what is really going wrong...
+
 
 * Thought
 The book /Absolute OpenBSD/ says people should *not* build a custom OpenBSD kernel, that's right for OpenBSD.

@@ -26,6 +26,10 @@ jobs:
         with:
           version: 28.1
 
+      - name: Prepare
+        run: |
+          curl "https://raw.githubusercontent.com/dongdigua/configs/main/kernel/README.org" -o org/kernel.org
+
       - name: Build with Org
         run: |
           cd org

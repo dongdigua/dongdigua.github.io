@@ -18,13 +18,14 @@ any kind of contribution is welcome
 - [My gnome config](my_gnome_config)<br>
 - [我对 SciCraft 更新1.19的看法](scicraft_update)<br>
 - [对我将来的视频网站的一些畅想](plan_for_my_video_site)<br>
-- [<font color=grey>ARCHIVE: elixir 写点对点加密聊天软件</font>](p2p_chat)<br>
+- [<font color=grey>\[ARCHIVE\] elixir 写点对点加密聊天软件</font>](p2p_chat)<br>
 
 ---
 
 ### Long Term Update
 - [<font color=red>大概是语文知识整理</font>](digua-YW)<br>
 Big project
+- [\[Mirror\] My kernel config recipe](kernel)<br>
 - [Gopher/Gemini reactions](re.gmi.txt)<br>
 - [Gopher/Gemini collections, a quiet web](collections.gmi.txt)<br>
 - [Random Ideas](ideas)<br>

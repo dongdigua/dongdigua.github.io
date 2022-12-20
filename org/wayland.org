@@ -70,6 +70,9 @@ this is excellent, but...not for me, I'd like something simpler
 awesome config!
 
 * NixOS related
+:PROPERTIES:
+:CUSTOM_ID: nix
+:END:
 ** [[https://sr.ht/~guido/nixos-init-freedom/][nixos without systemd?]]
 ** [[https://gist.github.com/kborling/76805ade81ac5bfdd712df294208c878][a really useful example config]]
 ** [[https://xeiaso.net/blog/super-bootable-64-2020-05-06][Xe: Super Bootable 64]]
