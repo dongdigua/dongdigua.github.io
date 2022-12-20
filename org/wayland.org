@@ -1,4 +1,5 @@
 #+TITLE: Play with Swaywm and Nixos
+#+DESCRIPTION: 返璞归真
 #+DATE: <2022-08-07 日>
 #+OPTIONS: toc:nil
 
@@ -51,6 +52,10 @@ use libinput-gestures
 this feature is not compatible with i3, so sway didn't accept the pr
 *** [[https://www.reddit.com/r/swaywm/comments/mmfwnu/sway_command_workspace_next/][shell script solution]]
 *** [[https://github.com/oati/sway-workspace-manager][rust, probably useful]]
+** grim + slurp screenshot pause the screen
+[[https://github.com/jtheoof/swappy][swappy]] is probably an idea
+I odn't want to make it too complicated,
+just shot the whole screen and edit with GIMP later
 
 
 * Ref

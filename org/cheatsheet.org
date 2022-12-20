@@ -72,6 +72,7 @@ https://orgmode.org/worg/dev/org-export-reference.html
 | M-&/!   | async/shell command |
 | C-M-\   | indent-region       |
 | M-y     | past previous       |
+| C-x ^   | enlarge-window      |
 
 ** eww/elpher (essensial)
 | key   | usage                            |
