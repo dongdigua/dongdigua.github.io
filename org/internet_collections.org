@@ -7,22 +7,34 @@
 #+TITLE: Internet Collections
 #+DATE: <2022-06-05 日>
 
-* (Personal) Blogs
-:PROPERTIES:
-:CUSTOM_ID: blog
-:END:
-#+TAGS: rssable(s) rssub(u) gopher(g)
 #+BEGIN_SRC text
          _                                                  ___
   /\    /   _  ._ _|_  _. o ._    |\/|  _.  _  o  _  _. |    |  ._   _|  _
  /--\   \_ (/_ |   |_ (_| | | |   |  | (_| (_| | (_ (_| |   _|_ | | (_| (/_ ><
                                             _|
 #+END_SRC
+* (Personal) Blogs
+:PROPERTIES:
+:CUSTOM_ID: blog
+:END:
+#+TAGS: rssable(s) rssub(u) gopher(g)
+** Random Stuff Floating Around
+not related to the root blog entry (I don't know what I mean)
+*** [[https://www.luogu.com.cn/blog/ivystorm/emacs-adventuredunnet-tong-guan-jiao-cheng][luogu blog: emacs dunnet 教程]]                                   :emacs:
+*** [[https://bheisler.github.io/post/state-of-gpgpu-in-rust/][The State of GPGPU in Rust]]                              :rust:lowlevel:
+*** [[https://secretgeek.github.io/html_wysiwyg/][巧用 CSS 显示 HTML 源码]]
+*** [[https://blog.pg999w.top/too-many-channels/][Too many channels in Rust but only one in Go]]                     :rust:
+*** [[https://bugs.xdavidhu.me/google/2022/11/10/accidental-70k-google-pixel-lock-screen-bypass/][Accidental $70k Google Pixel Lock Screen Bypass]]
+*** [[https://isamert.net/2022/03/16/global-interactive-emacs-functions.html][Global interactive Emacs functions]]                              :emacs:
+*** [[https://www.engraved.blog/building-a-virtual-machine-inside/][Building A Virtual Machine inside ChatGPT]]
+*** [[https://snarfed.org/2022-03-10_were-drowning-software-dependencies][We're Drowning Software Dependencies]]
+
 ** [[http://www.paulgraham.com/todo.html][Paul Graham]]
 ** [[http://www.qiusir.com/][qiusir]]                                                            :rssub:
 ** [[http://xahlee.info][XahLee]]
 #+ATTR_HTML: :width 256px
 [[http://xahlee.info/emacs/misc/i/Marisa_Kirisame_emacs_magic.png]]
+** [[http://www.catb.org/esr/][Eric S. Raymond]]
 ** [[http://www.yinwang.org/][王垠]]
 ** [[http://ruanyifeng.com/blog/][阮一峰]]                                                            :rssub:
 ** [[http://www.hackdig.com/][黑客技术]]                                                           :hack:
@@ -35,6 +47,22 @@ Two Principles of Deadlines:
 2. Every day is Deadline Day.
 #+END_QUOTE
 *** [[https://bford.info/pub/net/p2pnat/][Peer-to-Peer Communication Across Network Address Translators]]     :wow:
+** [[https://coredumped.dev/][Core Dumped]]                                         :rust:lowlevel:emacs:
+all 7 article are of high quality
+** [[http://www.jinbuguo.com][金步国作品集]]                                             :lowlevel:linux:
+kernel, LFS
+** [[https://nullprogram.com][null program]]                                                   :lowlevel:
+author of =elfeed=, =nasm-mode=
+** [[https://www.cnblogs.com/zhongwencool/][写着写着就懂了]]                                                   :elixir:
+elixir/erlang大佬, 公众号: HelloElixir
+** [[http://blog.lujun9972.win][lujun9972]]                                                   :emacs:rssub:
+超~~~多emacs
+*** [[http://blog.lujun9972.win/emacs-document/][emacs document]]
+
+** [[https://petermolnar.net/index.html][Peter 's Homepage]]                                                 :rssub:
+#+BEGIN_QUOTE
+GE d@ s: a C++$ UBL+++$ P++(--)$ L++(-)$ !E W+++(-)$ !N !o K--? w !O !M  !V PS++ PE- Y+ PGP+ t+ 5+++ X+ R tv b+ DI D+ G e++ h r+++ y+++*
+#+END_QUOTE
 ** [[https://floooh.github.io/][floooh(The Brain Dump)]]                                                :c:
 since 2007, cpu emulator
 *** [[https://floooh.github.io/2021/12/17/cycle-stepped-z80.html][2021: A new cycle-stepped Z80 emulator]]
@@ -42,16 +70,8 @@ since 2007, cpu emulator
 #+BEGIN_QUOTE
 Modern C is not a subset of C++
 #+END_QUOTE
-** [[https://coredumped.dev/][Core Dumped]]                                         :rust:lowlevel:emacs:
-all 7 article are of high quality
 ** [[https://blog.stdio.io/438][King's way: Linux内核学习阶段小结 (MOOC)]]
 *** [[https://blog.stdio.io/935][一次意外的 hello world 探索之旅]]
-** [[https://xiaosong.fun/2020/05/04/bug-and-mos/][小耸: 打蚊子与找bug]]                                                 :fun:
-** [[https://www.cnblogs.com/zhongwencool/][写着写着就懂了]]                                                   :elixir:
-elixir/erlang大佬, 公众号: HelloElixir
-** [[http://blog.lujun9972.win][lujun9972]]                                                   :emacs:rssub:
-超~~~多emacs
-*** [[http://blog.lujun9972.win/emacs-document/][emacs document]]
 ** [[https://www.wenhui.space/docs][文辉的烂笔头]]                                                   :lowlevel:
 CPU, IC, ARM
 #+BEGIN_QUOTE
@@ -61,15 +81,13 @@ CPU, IC, ARM
 *** [[https://www.wenhui.space/docs/08-ic-design/cpu/meltdown-and-spectre/][浅谈熔断和幽灵]]
 *** [[https://www.wenhui.space/docs/02-emacs/org_mode_table_align/][解决Org-Mode表格不对齐问题]]
 更纱黑体 使中文恰好为英文宽度两倍, 使用字体比 valign 更通用, 但是不好看
-** [[https://www.luogu.com.cn/blog/ivystorm/emacs-adventuredunnet-tong-guan-jiao-cheng][luogu blog: emacs dunnet 教程]]                                     :emacs:
 ** [[http://jujuba.me/][Ground Oddity]]
 *** [[http://jujuba.me/posts/program-analysis-via-llvm-pass.html][LLVM Pass来实现简化版taint analysis]]
 *** [[http://jujuba.me/posts/taste-of-code.html][代码的taste]]                                                       :wow:
 #+ATTR_HTML: :width 400px
 [[http://jujuba.me/imgs/linus-on-TED.png]]
 ** [[https://cireu.github.io/2019/09/17/lisp-setf/][NIL: setf 中「f」的本意]]
-** [[https://www.cnblogs.com/zjjws/p/13346020.html][第 N 个质数]]                                                 :c:algorithm:
-看不懂, 先收藏着
+*** [[https://cireu.github.io/2019/10/18/doom-emacs-issue/][doom-emacs 配置的问题]]
 ** [[http://incf19.com][include-yy 攒 emacs]]                                        :c:lisp:emacs:
 许多东方的图诶
 *** [[http://incf19.com/yynotes/posts/2021-10-25-14-蝴蝶效应与emacs动画][蝴蝶效应与emacs动画]]
@@ -101,7 +119,7 @@ F#, M1(r0$0f+, very high quality
 源码分析
 *** [[https://www.xianwaizhiyin.net/?cat=24][state-thread 源码分析]]
 ** [[https://lightless.me/categories.html][lightless blog]]                                                     :hack:
-** [[https://bheisler.github.io/post/state-of-gpgpu-in-rust/][The State of GPGPU in Rust]]                                :rust:lowlevel:
+** [[https://eur1ka.github.io][eur1ka (pwn)]]                                                       :hack:
 ** [[https://litchipi.github.io/series/container_in_rust][Writing a container in Rust]]
 *** [[https://litchipi.github.io/infosec/2022/07/08/copyit-until-you-makeit.html][Copy it until you make it]]
 ** [[https://xeiaso.net/][Xe Iaso]]                                                           :rssub:
@@ -150,12 +168,11 @@ A Windows-like distro including the spyware and activation
 ** [[https://vimacs.wehack.space/laptop/][vimacs]]
 Written with Vim and Emacs. A member of Linux Club of Peking University.
 with cat-v-like sidebar style
-*** [[https://vimacs.wehack.space/matrix-guide/][矩阵一入深似海, 从此电幕是路人]]
-**** [[https://citizenlab.ca/2016/11/wechat-china-censorship-one-app-two-systems/][微信一app两制]]
 *** [[https://vimacs.wehack.space/Mail-vs-IM.htm][谈电子邮件和即时通讯]]
+**** [[https://citizenlab.ca/2016/11/wechat-china-censorship-one-app-two-systems/][微信一app两制]]
 ** [[http://www.matrix67.com/blog/][Matrix67]]                                                           :math:
 The Aha Moments
-*** [[http://www.matrix67.com/blog/archives/6039][用三段 140 字符以内的代码生成一张 1024×1024 的图片]]
+*** [[http://www.matrix67.com/blog/archives/6039][用三段 140 字符以内的代码生成一张 1024×1024 的图片]]               :wow:
 *** [[http://localhost-8080.com/][❤ localhost-8080]]
 ** [[https://nyxt.atlas.engineer/article/gopher.org][Nyxt: Why should I care about Gopher?]]                            :gopher:
 By making something a little bit more inaccessible, we are inadvertently putting a filter on what is being posted.
@@ -173,12 +190,6 @@ Don't get me wrong, there's nonsense on Gopher too, but far less of it.
 #+END_QUOTE
 #+ATTR_HTML: :width 256px
 [[https://upload.wikimedia.org/wikipedia/commons/d/d7/Internet_is_Full_-_Go_Away_t-shirt.jpg]]
-** TODO [[https://petermolnar.net/index.html][Peter 's Homepage]]                                            :rssub:
-#+BEGIN_QUOTE
-GE d@ s: a C++$ UBL+++$ P++(--)$ L++(-)$ !E W+++(-)$ !N !o K--? w !O !M  !V PS++ PE- Y+ PGP+ t+ 5+++ X+ R tv b+ DI D+ G e++ h r+++ y+++*
-#+END_QUOTE
-*** [[https://petermolnar.net/article/gopher][Gopher? Gopher.]]
-** [[https://secretgeek.github.io/html_wysiwyg/][巧用 CSS 显示 HTML 源码]]
 ** [[https://phenix3443.github.io/notebook/][phenix3443]]                                                      :c:emacs:
 刘尚亮
 *** [[https://phenix3443.github.io/notebook/emacs/modes/use-package-manual.html][use-package manual]]
@@ -186,14 +197,10 @@ GE d@ s: a C++$ UBL+++$ P++(--)$ L++(-)$ !E W+++(-)$ !N !o K--? w !O !M  !V PS++
 *** [[https://phenix3443.github.io/notebook/c/tinyhttpd-analysis.html][TinyHTTPd 源码分析]]
 ** [[https://julienblanchard.com][julienblanchard/typed-hole]]                                        :plan9:
 *** [[https://pmikkelsen.com][Peter's random notes/pmikkelsen]]
-** [[https://konfou.xyz][Konstantinos Foutzopoulos]]
+** [[https://konfou.xyz][Konfou]]
 *** [[https://konfou.xyz/posts/unix-filesystem-hierarchy/][Unix filesystem hierarchy]]
 *** [[https://konfou.xyz/posts/pantheon-of-distributed-operating-systems/][pantheon of distributed operating systems]]
 *** [[https://konfou.xyz/posts/urbit-an-alien-system-software/][Urbit, an alien system software]]
-** [[http://www.jinbuguo.com][金步国作品集]]                                             :lowlevel:linux:
-kernel, LFS
-** [[https://blog.pg999w.top/too-many-channels/][Too many channels in Rust but only one in Go]]                       :rust:
-** [[https://bugs.xdavidhu.me/google/2022/11/10/accidental-70k-google-pixel-lock-screen-bypass/][Accidental $70k Google Pixel Lock Screen Bypass]]
 ** [[https://mthli.xyz/duff-device/][mthli: 深入理解达夫设备]]
 *** [[https://mthli.xyz/stackful-stackless/][有栈协程与无栈协程]]
 *** [[https://www.chiark.greenend.org.uk/~sgtatham/coroutines.html][PuTTY's author: Coroutines in C]]                                   :wow:
@@ -213,19 +220,21 @@ int function(void) {
 ** [[https://magcius.github.io/xplain/article/][explain X window system]]
 ** [[https://madaidans-insecurities.github.io][Security & Privacy Evaluations]]
 *** [[https://madaidans-insecurities.github.io/guides/linux-hardening.html][Linux Hardening Guide]]
-** [[https://isamert.net/2022/03/16/global-interactive-emacs-functions.html][Global interactive Emacs functions]]
-** [[https://www.engraved.blog/building-a-virtual-machine-inside/][Building A Virtual Machine inside ChatGPT]]
-** [[https://nullprogram.com][null program]]                                                   :lowlevel:
-author of =elfeed=, =nasm-mode=
 ** [[https://www.nayuki.io][Project Nayuki]]
 *** [[https://www.nayuki.io/page/i-type-in-dvorak][Dvorak FAQ]]
+** [[https://bt.ht][bt.ht]]
+网页小, 文笔好
+** [[https://hsingko.github.io][hsingko]]
+*** [[https://hsingko.github.io/post/2022/06/17/i-am-not-my-brain/][我不等于我的大脑]]
+*** [[https://hsingko.github.io/post/2022/04/27/why-blog/][写博客至今的小结]]
+** [[http://ewontfix.com][EWONTFIX - a blog of bugs]]
+
 ** B
 *** [[https://shakaianee.top/][社会易姐]]
 *** [[https://blog.yangmame.org/][yanemame]]
 猴哥推荐的
 *** [[https://evanmeek.github.io/][我不会编程]]
-EvanMeek
-B站: 美味的樱桃菌
+EvanMeek / B站: 美味的樱桃菌
 *** [[https://yaocc.cc/][称呼我C先生]]                                                     :linux:
 *** [[https://blog.lunaixsky.com/][lunaixsky]]                                                  :c:lowlevel:
 *** [[https://endlesspeak.gitee.io/][EndlessPeak]]                                                     :linux:
@@ -238,6 +247,8 @@ B站: 美味的樱桃菌
 **** [[https://sh.alynx.one/posts/Emacs-Monaco-Box-drawing-Character/][Emacs 和 Monaco 字体和 Box-drawing Character]]
 ** ZhiHu
 *** [[https://zhuanlan.zhihu.com/p/138719668][用Go语言汇编计算fibonacci数列]]                                :lowlevel:
+*** [[https://www.cnblogs.com/zjjws/p/13346020.html][第 N 个质数]]                                               :c:algorithm:
+看不懂, 先收藏着
 *** [[https://www.zhihu.com/column/c_1313110231912726528][倔强的程序员]]
 编! 译! 原! 理!
 *** [[https://www.zhihu.com/column/c_185117725][专栏: 技术考古]]                                              :plan9:
@@ -447,8 +458,8 @@ software minimalism, Neat*
 [[https://youbroketheinternet.org/img/youbroketheman.png]]
 ** [[https://wiki.installgentoo.com/wiki/File:Inori-tan.jpg][InstallGentoo Wiki File:Inori-tan.jpg]]
 Internet Exploiter
-** TODO [[http://zarf.org/][THE JARGON FILE, VERSION 4.2.0, 31 JAN 2000]]
 ** [[https://asmtutor.com/][NASM Assembly Language Tutorials]]
 good learning resource!
 *** [[http://int80h.org]]
 BSD asm
+** [[https://512pixels.net/projects/default-mac-wallpapers-in-5k/][Every Default macOS Wallpaper]]
