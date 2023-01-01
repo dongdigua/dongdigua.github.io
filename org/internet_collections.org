@@ -17,17 +17,18 @@
 :PROPERTIES:
 :CUSTOM_ID: blog
 :END:
-#+TAGS: rssable(s) rssub(u) gopher(g)
+#+TAGS: rssable(s) rssub(U) gopher(g)
 ** Random Stuff Floating Around
 not related to the root blog entry (I don't know what I mean)
 *** [[https://www.luogu.com.cn/blog/ivystorm/emacs-adventuredunnet-tong-guan-jiao-cheng][luogu blog: emacs dunnet 教程]]                                   :emacs:
 *** [[https://bheisler.github.io/post/state-of-gpgpu-in-rust/][The State of GPGPU in Rust]]                              :rust:lowlevel:
-*** [[https://secretgeek.github.io/html_wysiwyg/][巧用 CSS 显示 HTML 源码]]
+*** [[https://secretgeek.github.io/html_wysiwyg/][巧用 CSS 显示 HTML 源码]]                                      :frontend:
 *** [[https://blog.pg999w.top/too-many-channels/][Too many channels in Rust but only one in Go]]                     :rust:
 *** [[https://bugs.xdavidhu.me/google/2022/11/10/accidental-70k-google-pixel-lock-screen-bypass/][Accidental $70k Google Pixel Lock Screen Bypass]]
 *** [[https://isamert.net/2022/03/16/global-interactive-emacs-functions.html][Global interactive Emacs functions]]                              :emacs:
 *** [[https://www.engraved.blog/building-a-virtual-machine-inside/][Building A Virtual Machine inside ChatGPT]]
 *** [[https://snarfed.org/2022-03-10_were-drowning-software-dependencies][We're Drowning Software Dependencies]]
+*** [[http://ck.kolivas.org/pictures/Screenshot_20170905_134246.png][ck: ]][[https://ck-hack.blogspot.com/2021/08/514-and-future-of-muqss-and-ck-once.html][5.14 and the future of MuQSS and -ck once again (END)]]
 
 ** [[http://www.paulgraham.com/todo.html][Paul Graham]]
 ** [[http://www.qiusir.com/][qiusir]]                                                            :rssub:
@@ -37,6 +38,7 @@ not related to the root blog entry (I don't know what I mean)
 ** [[http://www.catb.org/esr/][Eric S. Raymond]]
 ** [[http://www.yinwang.org/][王垠]]
 ** [[http://ruanyifeng.com/blog/][阮一峰]]                                                            :rssub:
+** [[https://blog.lilydjwg.me/][依云]]                                                              :rssub:
 ** [[http://www.hackdig.com/][黑客技术]]                                                           :hack:
 really good website, butt, no rss
 ** [[https://bford.info][Bryan Ford]]
@@ -228,6 +230,8 @@ int function(void) {
 *** [[https://hsingko.github.io/post/2022/06/17/i-am-not-my-brain/][我不等于我的大脑]]
 *** [[https://hsingko.github.io/post/2022/04/27/why-blog/][写博客至今的小结]]
 ** [[http://ewontfix.com][EWONTFIX - a blog of bugs]]
+** [[https://ifaceless.github.io/2019/11/17/guide-to-linux-scheduler/][论文学习之 Linux 调度器]]
+*** [[https://ifaceless.github.io/2019/10/30/linux-kernel-dev-notes/][Linux Kernel Development 学习与总结]]
 
 ** B
 *** [[https://shakaianee.top/][社会易姐]]
@@ -335,6 +339,7 @@ but fasm don't support debug information (dwarf2)
 *** [[https://youtu.be/Qow8pIvExH4][Brain-Like (Neuromorphic) Computing]]
 **** [[http://bit.ly/C_AtomicBrain][Atomic Brain?]]
 *** [[https://youtu.be/XiFkyR35v2Y][Slow Loris Attack]]
+*** [[https://youtu.be/kzdugwr4Fgk][The Kindle Text Problem]]
 
 ** Cyber Security
 *** LiveOverflow
@@ -413,6 +418,7 @@ to filing patently fraudulent DMCA counter-notifications to avoid the terminatio
 ** [[https://lists.gnu.org/archive/html/emacs-devel/2020-10/msg00376.html][Include leaf in Emacs distribution]]
 ** [[https://lore.kernel.org/lkml/20221102084921.1615-3-thunder.leizhen@huawei.com/][Christmas present with Linux 6.2]]
 Huwawei NB!
+** [[https://lkml.org/lkml/2007/7/27/426][Linus re SD]]
 
 * Other
 :PROPERTIES:

@@ -74,6 +74,8 @@ https://orgmode.org/worg/dev/org-export-reference.html
 | M-y     | past previous       |
 | C-x ^   | enlarge-window      |
 
+https://www.masteringemacs.org/article/fun-games-in-emacs
+
 ** eww/elpher (essensial)
 | key   | usage                            |
 |-------+----------------------------------|
