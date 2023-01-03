@@ -331,7 +331,6 @@ but fasm don't support debug information (dwarf2)
 *** [[https://www.youtube.com/playlist?list=PLknodeJt-I5H_zK-udgi5XhhYrnDoLHkP][Gavin Freeborn: Commandline tools and tips]]
 *** [[https://youtu.be/CFRhGnuXG-4][Why You Shouldn't Nest Your Code]]
 
-
 **  [[https://www.youtube.com/@Computerphile][<C>]]
 *** [[https://youtu.be/BAo5C2qbLq8][Network Time Protocol (NTP)]]
 *** [[https://youtu.be/d7KHAVaX_Rs][Just In Time (JIT) Compilers]]
@@ -388,6 +387,7 @@ to filing patently fraudulent DMCA counter-notifications to avoid the terminatio
 *** [[https://youtube.com/playlist?list=PLgE-9Sxs2IBVgJkY-1ZMj0tIFxsJ-vOkv][BBS The Documentary(8)]]
 *** [[https://youtu.be/k35uDHs7Z9E][DT: A Disturbing Descent Into The Mind Of A Mad Man]]
 *** [[https://youtu.be/GlovVvBAIGk][DT: Keeping A Positive Attitude Even After Storm Destroys My Backyard]]
+*** [[https://www.youtube.com/@lecturesbywalterlewin.they9259][Lectures by Walter Lewin. They will make you ♥ Physics]]            :wow:
 
 * r
 :PROPERTIES:

@@ -1,0 +1,48 @@
+#+TITLE: 2023 了, 试试 emacs 29
+#+DATE: <2023-01-02 一>
+#+OPTIONS: toc:1
+
+2023 了, 元旦假期, 想体验一下新版本的 emacs, 我已经眼馋好久了
+发行版还没提供? 自己编译, 而且自己编译可以自定义一些选项, 比如 pgtk
+#+BEGIN_SRC sh
+./configure CFLAGS="-march=native -O3 -pipe -finline-functions -floop-nest-optimize -ftree-loop-distribution" \
+            --with-x=no \
+            --with-gpm=no \
+            --with-pgtk \
+            --with-native-compilation \
+            --with-json \
+            --with-sqlite3 \
+            --with-tree-sitter
+#+END_SRC
+
+完整的去看 =etc/NEWS= (btw, =emacs-news-mode= 也是新加的)
+
+* 我 有切身体会/还没体验但是认为很不错 的新特性
+** [[https://emacs-china.org/t/emacs/19806]["真" 背景透明]]
+这是我提前了解到的第一个 emacs29 特性, [[https://www.bilibili.com/video/BV1ca41127KY][evan 的视频]]
+但是有透明通道的图片不会跟着透明
+
+** [[https://www.emacswiki.org/emacs/SmoothScrolling][平滑滚动]]
+搜索 emacs29 蹦出来的
+
+** emoji 😀
+
+** package-vc-install
+但是 =package-report-bug= 有点迷惑
+
+* 我认为早就该加了但是现在才加入
+** erc-sasl
+我编译的时候偶然发现的 =erc-sasl.el=
+我去! 终于有 sasl 了! 不用第三方的 [[https://github.com/emacs-circe/circe][circe]] 了!
+*只需要 customize =erc-modules= 加入 sasl, 然后用 =erc-tls= 就成了*
+这个最早 12 年就有人提出了 ([[https://lists.gnu.org/archive/html/erc-discuss/2012-02/msg00001.html][注释里给的链接]])
+
+** restart-emacs
+
+** package-update(-all)
+
+* 29.1
+- =use-package=
+- =*-ts-mode=
+
+

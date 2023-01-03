@@ -36,6 +36,7 @@ var data = [
     "他很善于表达, 可惜没什么可表达的",
     "<a id=quote href=emgud2lraXBlZGlhLm9yZy96aC1jbi/pmLLngavplb/ln44K>It's confidential</a>",
     "你说得对，但是《长安汽车》是由艺画开天自主研发的一款全新开放世界冒险游戏。",
+    "Emacs has Evil, but Vim doesn't have Magit",
 ];
 
 var index = Math.floor((Math.random() * data.length));

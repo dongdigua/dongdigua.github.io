@@ -47,7 +47,7 @@ use libinput-gestures
 ** TODO [[https://github.com/WayfireWM/wayfire/issues/1329][Wayfire crashes when closing foot terminal]]
 ** emacs tool-bar not working(cannot toggle and icon theme missing)
 *** cannot toggle: disable custon =default-frame-alist=, or just use floating mode
-*** TODO icon theme missing: ?
+*** icon theme missing: pgtk
 ** [[https://www.reddit.com/r/swaywm/comments/scz5k6/option_create_on_workspace_prev_on_outputnext_on/][Option --create on workspace prev_on_output|next_on_output?]]
 this feature is not compatible with i3, so sway didn't accept the pr
 *** [[https://www.reddit.com/r/swaywm/comments/mmfwnu/sway_command_workspace_next/][shell script solution]]
