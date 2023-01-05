@@ -1,5 +1,6 @@
 ## Table of Contents
 ### Posts (sorted by time)
+- [2023 了, 试试 emacs 29](emacs29_2023)<br>
 - [Fix TTY after Fedora 37 Upgrade](fix_tty)<br>
 - [狗日的腾讯会议](damn_tencent_meeting)<br>
 上网课有感而发

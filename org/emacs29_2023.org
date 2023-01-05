@@ -4,6 +4,9 @@
 
 2023 了, 元旦假期, 想体验一下新版本的 emacs, 我已经眼馋好久了
 发行版还没提供? 自己编译, 而且自己编译可以自定义一些选项, 比如 pgtk
+完整的新特性去看 =etc/NEWS= (btw, =emacs-news-mode= 也是新加的)
+
+* build emacs (with musl?)
 #+BEGIN_SRC sh
 ./configure CFLAGS="-march=native -O3 -pipe -finline-functions -floop-nest-optimize -ftree-loop-distribution" \
             --with-x=no \
@@ -12,10 +15,42 @@
             --with-native-compilation \
             --with-json \
             --with-sqlite3 \
-            --with-tree-sitter
+            --with-tree-sitter \
+            --with-webp \
+            --with-gif
 #+END_SRC
 
-完整的去看 =etc/NEWS= (btw, =emacs-news-mode= 也是新加的)
+现在 =dump-emacs-portable= 没法弄, 见: [[https://emacs-china.org/t/emacs-29-with-native-comp-dump/22762][emacs china: emacs 29 with native-comp 无法 dump]]
+
+@@html:<details>@@
+@@html:<summary>but what about musl? (CC=musl-gcc)</summary>@@
+#+BEGIN_SRC text
+checking whether GTK compiles... no
+configure: error: Gtk+ wanted, but it does not compile, see config.log.
+#+END_SRC
+
+#+BEGIN_SRC text
+<dongdigua> hello, I tried to build emacs with musl-gcc, but it says:
+<dongdigua> error: Gtk+ wanted, but it does not compile
+<dongdigua> it can build using normal gcc
+<dongdigua> and it can build on voidlinux
+<sam_> dalias: <3
+<dongdigua> o_O
+<sam_> dongdigua: you'd have to share some logs in full for us to help at all
+<sam_> but you'd be better off asking your Linux distribution
+<dongdigua> it is mostly `ld: error: unable to find library`
+<dongdigua> sam_: so i think it is probably something about the wrapper script
+<heat> musl-gcc (does not? should not?) pick up on host libraries because they
+       were built against glibc and not musl
+<heat> so musl-gcc will not pick up on those
+<heat> or at least they will just not work and will break configure
+<dongdigua> heat: so I should use those libraries that is built on musl?
+<dongdigua> like voidlinux I mentioned above
+<heat> yes
+<dongdigua> ok
+ERC>
+#+END_SRC
+@@html:</details>@@
 
 * 我 有切身体会/还没体验但是认为很不错 的新特性
 ** [[https://emacs-china.org/t/emacs/19806]["真" 背景透明]]
@@ -24,6 +59,8 @@
 
 ** [[https://www.emacswiki.org/emacs/SmoothScrolling][平滑滚动]]
 搜索 emacs29 蹦出来的
+
+** elisp-byte-compile-file
 
 ** emoji 😀
 
@@ -43,6 +80,4 @@
 
 * 29.1
 - =use-package=
-- =*-ts-mode=
-
-
+- more =*-ts-mode=
