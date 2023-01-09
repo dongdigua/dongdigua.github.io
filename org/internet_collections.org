@@ -232,6 +232,10 @@ int function(void) {
 ** [[http://ewontfix.com][EWONTFIX - a blog of bugs]]
 ** [[https://ifaceless.github.io/2019/11/17/guide-to-linux-scheduler/][论文学习之 Linux 调度器]]
 *** [[https://ifaceless.github.io/2019/10/30/linux-kernel-dev-notes/][Linux Kernel Development 学习与总结]]
+** [[https://www.zxzyl.com][朱忠旭 blog]]
+#+BEGIN_QUOTE
+A biology dog in computer science, but also a coding dog in biology science. 
+#+END_QUOTE
 
 ** B
 *** [[https://shakaianee.top/][社会易姐]]
@@ -333,6 +337,7 @@ inspiration: Veritasium
 =0x5f3759df=
 *** [[https://www.youtube.com/playlist?list=PLknodeJt-I5H_zK-udgi5XhhYrnDoLHkP][Gavin Freeborn: Commandline tools and tips]]
 *** [[https://youtu.be/CFRhGnuXG-4][Why You Shouldn't Nest Your Code]]
+*** TODO [[https://youtu.be/crnEygp4C6g][FINALLY! A GPU works on the Raspberry Pi!]]
 
 **  [[https://www.youtube.com/@Computerphile][<C>]]
 *** [[https://youtu.be/BAo5C2qbLq8][Network Time Protocol (NTP)]]

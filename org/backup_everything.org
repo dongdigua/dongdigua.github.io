@@ -1,0 +1,133 @@
+#+TITLE: 一次大备份
+#+DATE: <2023-01-08 日>
+
+* My GREAT server board!
+#+BEGIN_EXAMPLE
+CPU: 6-core Intel Xeon E5645
+Mem: 8GiB
+Graphics:
+  Device-1: AMD Juniper PRO [Radeon HD 6750] driver: radeon v: kernel
+  tty: 80x21 resolution: 1366x768
+BIOS: ami
+机箱: 纸壳
+#+END_EXAMPLE
+平常不开 CPU 风扇就 40 度, 开风扇 25 度 :)
+但是这种 IO 密集型任务南桥会很烫烫烫, 所以还是开着
+
+* Alpine? no
+Alpine 是一个很好的发行版, 使用 "suck less" 的 musl 和 OpenRC
+ps 看进程不到一页
+*但 是*
+- 我开始使用 Linux 是 systemd 已经占领天下了, 所以使用的非常熟练, 而 OpenRC 没那么熟
+- vsftpd =500 OOPS child died= 解决不了
+
+* Fedora ♥️
+所以我转回熟悉的 Fedora Server 了, 开箱即用, 安全 (SELinux), 稳定 
+这些对于服务器来说是很重要的
+
+至于 GUI 环境, 根本不用, tty 多美妙!
+当然, 要用 =tmux= 做一些复杂的工作
+
+Cockpit 有一处翻译有点搞笑
+[[../images/usage_cockpit.png]]
+
+* FTP? no
+刚开始我想用 ftp, 因为 linux 下用的熟悉
+*但 是*
+ftp 没法保存时间戳等元数据
+所以果断选择 Samba
+
+* Oops, SDcard broken!
+我的第二张 SD 卡!
+这张卡是用的最久的, 自从 2019 年下学期.
+结果 有一个文件夹 =Input/Output Error= 了, 这也是预料到的,
+毕竟经过了三个相机, 而且之前 Windows 上读就有些问题.
+后来 testdisk 没完全修好, 还好坏的那个文件夹在别的盘有备份
+#+BEGIN_EXAMPLE
+Warning: number of heads/cylinder mismatches 255 (FAT) != 64 (HD)
+Warning: number of sectors per track mismatches 63 (FAT) != 32 (HD)
+
+Warning: the current number of heads per cylinder is 64
+but the correct value may be 32.
+#+END_EXAMPLE
+
+** Oops, 128G USB drive broken!
+这个救不了了, 完全无法读
+
+* iPad
+使用 =ifuse= 挂载. 注意, 如果想看到更多文件夹要手动挂载而不是文件管理器自动的(只能看到照片)
+似乎我那个老主板 iPad 识别不着, 哈哈
+所以就远程
+
+* HUAWEI 啊啊啊
+备份我妈的手机, 并不像之前那几个手机那么简单...
+她自从换到华为之后, 相片都自动存的云, 她也不知道发生了什么.
+然后前年, 空间不足.
+这些云存储厂商都是, 想方设法引导你使用并且依赖他们的服务, 然后让你充钱!
+
+华为拍出来的图片都是带经纬度的, 吓人!
+而我之前几个手机都没有这个 "贴心" 的功能
+#+BEGIN_QUOTE
+It's the metadata, stupid
+#+END_QUOTE
+
+手机相册里的图片, 有些是能看见, 但仔细看, 是云上的, 本地只有预览.
+下呗, 一次不能超过 500个 或 1.75G
+然后有些 zip 文件还是坏的:
+#+BEGIN_EXAMPLE
+Archive:  foo.zip
+  End-of-central-directory signature not found.  Either this file is not
+  a zipfile, or it constitutes one disk of a multi-part archive.  In the
+  latter case the central directory and zipfile comment will be found on
+  the last disk(s) of this archive.
+note:  foo.zip may be a plain executable, not an archive
+unzip:  cannot find zipfile directory in one of foo.zip or
+        foo.zip.zip, and cannot find foo.zip.ZIP, period.
+#+END_EXAMPLE
+
+后来发现 FireFox 似乎产生了 =.cache/.fr*= 一些缓存文件 (下载文件的完全拷贝)
+
+* Backup /home
+家目录也得备份啦, 当前系统最重要的数据都在那.
+当然先要排除一些垃圾或备份到其他地方的东西:
+#+BEGIN_SRC shell
+( .-.)
+[~]── ─ cat rsync-exclude 
+minecraft
+git
+VirtualBox VMs
+chroot
+rpmbuild
+kernel
+.cache
+.var
+.cargo
+.rustup
+[~]── ─ rsync -avh --exclude-from=rsync-exclude --delete-excluded /home/digua DEST
+#+END_SRC
+
+对于 git 目录比较特殊, 使用 CVS 忽略模式, 但保留每个 =.git= 目录:
+#+BEGIN_SRC shell
+rsync -avhC --delete-excluded --include .git /home/digua/git DEST
+#+END_SRC
+
+* Change drive
+我之前的那个 WD 金盘噪音和振动有点大, 我整个桌子都能感受到,
+而且我那个盘没有使用分区表, 是直接在裸盘上创建的文件系统...
+所以我准备换成一个更安静的东芝的盘用于日常备份运行, WD 的就用于同步备份那个盘.
+所以现在第一次需要先把数据完全拷过去过去, 之后就可以 rsync 增量备份了.
+先 =xfs_fsr= 减少一下碎片, 然后开始备份.
+正常来说用 =dd= 就行了, 但是 dd 的缺点放大到 1T 的数据量上就是大问题:
+*dd 也会拷贝空的部分*
+emm... 有什么解决方案
+** [[https://serverfault.com/questions/439128/dd-on-entire-disk-but-do-not-want-empty-portion][serverfault: dd on entire disk, but do not want empty portion]]
+这里主要讨论的是把磁盘剩余空间都填满 0, 然后再忽略/压缩
+不好!
+** [[https://wiki.archlinux.org/title/Disk_cloning][ArchWiki: Disk cloning]]
+提到了 Partclone "free-space aware"
+*好!*
+然后: =bad superblock=, 因为目标盘多了 2048 字节的分区表, 所以使用了危险的 =-C= 选项导致的
+** xfs_copy
+也不行, 也是因为空间差那么一点
+** 那就 cp 直接来吧
+

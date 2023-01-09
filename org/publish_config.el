@@ -33,6 +33,7 @@
 (add-to-list 'org-export-filter-final-output-functions 'html-body-id-filter)
 
 (setq org-html-validation-link nil
+      org-export-with-toc 1
       org-export-with-sub-superscripts '{})
 (setq org-html-postamble-format
       '(("en"
