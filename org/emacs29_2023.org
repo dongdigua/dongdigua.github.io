@@ -7,8 +7,9 @@
 完整的新特性去看 =etc/NEWS= (btw, =emacs-news-mode= 也是新加的)
 
 * build emacs (with musl?)
+[[https://zhuanlan.zhihu.com/p/172518559][gcc 参数来源]]
 #+BEGIN_SRC sh
-./configure CFLAGS="-march=native -O3 -pipe -finline-functions -floop-nest-optimize -ftree-loop-distribution" \
+./configure CFLAGS="-march=native -O3 -pipe -finline-functions -fno-math-errno -fno-trapping-math -fgraphite-identity -floop-nest-optimize -ftree-loop-distribution -fno-semantic-interposition -fipa-pta -fno-plt" \
             --with-x=no \
             --with-gpm=no \
             --with-pgtk \
@@ -19,8 +20,6 @@
             --with-webp \
             --with-gif
 #+END_SRC
-
-现在 =dump-emacs-portable= 没法弄, 见: [[https://emacs-china.org/t/emacs-29-with-native-comp-dump/22762][emacs china: emacs 29 with native-comp 无法 dump]]
 
 @@html:<details>@@
 @@html:<summary>but what about musl? (CC=musl-gcc)</summary>@@
@@ -51,6 +50,10 @@ configure: error: Gtk+ wanted, but it does not compile, see config.log.
 ERC>
 #+END_SRC
 @@html:</details>@@
+
+* dump?
+现在开启 =native-comp= 时 =dump-emacs-portable= 没法弄, 见: [[https://emacs-china.org/t/emacs-29-with-native-comp-dump/22762][emacs china: emacs 29 with native-comp 无法 dump]]
+试着不开 native-comp dump 了一下, 也就加快了 0.2 s, 而且有各种问题, 算啦算啦
 
 * 我 有切身体会/还没体验但是认为很不错 的新特性
 ** [[https://emacs-china.org/t/emacs/19806]["真" 背景透明]]

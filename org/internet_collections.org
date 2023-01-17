@@ -232,10 +232,7 @@ int function(void) {
 ** [[http://ewontfix.com][EWONTFIX - a blog of bugs]]
 ** [[https://ifaceless.github.io/2019/11/17/guide-to-linux-scheduler/][论文学习之 Linux 调度器]]
 *** [[https://ifaceless.github.io/2019/10/30/linux-kernel-dev-notes/][Linux Kernel Development 学习与总结]]
-** [[https://www.zxzyl.com][朱忠旭 blog]]
-#+BEGIN_QUOTE
-A biology dog in computer science, but also a coding dog in biology science. 
-#+END_QUOTE
+** [[https://hardenedlinux.github.io][Hardened GNU/Linux]]                                                 :hack:
 
 ** B
 *** [[https://shakaianee.top/][社会易姐]]
@@ -325,6 +322,7 @@ intro: he talked about Russian gov and where to flee
 inspiration: Veritasium
 *** [[https://youtu.be/0rJ94rbdteE][Rust 让你感觉像个天才]]
 *** [[https://youtu.be/nfF91Z6fqGk][CMD 登录B站]]
+*** [[https://youtu.be/crnEygp4C6g][Jeff Geerling: FINALLY! A GPU works on the Raspberry Pi!]]
 *** [[https://youtu.be/jlPaby7suOc][Every Clojure Talk Ever]]
 *** [[https://youtu.be/Fq9chEBQMFE][what if I try to malloc too much memory]]
 *** [[https://youtu.be/zJ-8DZhzBEE][what your favourite pl says about you]]
@@ -337,7 +335,9 @@ inspiration: Veritasium
 =0x5f3759df=
 *** [[https://www.youtube.com/playlist?list=PLknodeJt-I5H_zK-udgi5XhhYrnDoLHkP][Gavin Freeborn: Commandline tools and tips]]
 *** [[https://youtu.be/CFRhGnuXG-4][Why You Shouldn't Nest Your Code]]
-*** TODO [[https://youtu.be/crnEygp4C6g][FINALLY! A GPU works on the Raspberry Pi!]]
+*** [[https://youtu.be/JcJSW7Rprio][Harder Drive: Hard drives we didn't want or need]]
+???
+*** [[https://youtu.be/NrjXEaTSyrw][A Checklist for Writing Linux Real-Time Applications]]
 
 **  [[https://www.youtube.com/@Computerphile][<C>]]
 *** [[https://youtu.be/BAo5C2qbLq8][Network Time Protocol (NTP)]]
@@ -443,6 +443,7 @@ not only harmful stuff <3
 学习通事件相关
 *** [[https://mrxn.net/][mrxn]]
 data-leak
+** [[https://masa.dy.fi][masa mods]]
 ** [[https://blog.stenmans.org/theBeamBook/][the beam book]] and [[https://learnyousomeerlang.com/content][learn you some erlang]]
 ** [[https://inadequacy.org/public/stories/2001.12.2.42056.2147.html][Adequacy: Is Your Son a Computer Hacker?]]
 #+BEGIN_QUOTE
@@ -480,3 +481,4 @@ good learning resource!
 *** [[http://int80h.org]]
 BSD asm
 ** [[https://512pixels.net/projects/default-mac-wallpapers-in-5k/][Every Default macOS Wallpaper]]
+** [[https://killedbymicrosoft.info][Killed by Microsoft]] and [[https://killedbygoogle.com][Killed by Google]]
