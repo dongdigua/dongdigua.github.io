@@ -30,6 +30,7 @@
 | g ;      | goto last change           |
 | g */#    | 正/反查找光标下的词        |
 | g d/D    | 跳转到本地/全局定义        |
+| C-w      | jump between splits        |
 
 ** file/split
 | key         | usage        |

@@ -32,13 +32,11 @@ var data = [
     "<a id=quote href=damn_tencent_meeting>有什么业务是腾讯不做的吗?!</a>",
     "Your text editor runs in a web browser,\nMy web browser runs inside a text editor,\nWe are not the same",
     "<a id=quote href=https://youbroketheinternet.org>It’s the metadata, stupid</a>",
-    "<a id=quote href=https://youtu.be/8QP2fDBIxjM>tsoding: </a><a id=quote href=https://en.wikipedia.org/wiki/Python_(missile)>I know there is Python-5</a>",
     "他很善于表达, 可惜没什么可表达的",
     "<a id=quote href=emgud2lraXBlZGlhLm9yZy96aC1jbi/pmLLngavplb/ln44K>It's confidential</a>",
     "你说得对，但是《长安汽车》是由艺画开天自主研发的一款全新开放世界冒险游戏。",
     "Emacs has Evil, but Vim doesn't have Magit",
     "免费服务的代价就是你自己",
-    "Any fool can write code that a computer can understand.\nGood programmers write code that humans can understand.",
 ];
 
 var index = Math.floor((Math.random() * data.length));

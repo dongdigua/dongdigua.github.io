@@ -195,7 +195,6 @@ Don't get me wrong, there's nonsense on Gopher too, but far less of it.
 ** [[https://phenix3443.github.io/notebook/][phenix3443]]                                                      :c:emacs:
 刘尚亮
 *** [[https://phenix3443.github.io/notebook/emacs/modes/use-package-manual.html][use-package manual]]
-*** [[https://phenix3443.github.io/notebook/emacs/emacs-startup-process.html][Emacs 启动过程介绍]]
 *** [[https://phenix3443.github.io/notebook/c/tinyhttpd-analysis.html][TinyHTTPd 源码分析]]
 ** [[https://julienblanchard.com][julienblanchard/typed-hole]]                                        :plan9:
 *** [[https://pmikkelsen.com][Peter's random notes/pmikkelsen]]
@@ -295,14 +294,14 @@ U boom tu
 **** [[https://youtu.be/hmMtQe_mYr0][helloworld in c]]
 **** [[https://www.youtube.com/playlist?list=PLpM-Dvs8t0VY73ytTCQqgvgCWttV3m8LM][virtual machine in C]] , [[https://dongdigua.github.io/tsoding_bm][some notes]]
 **** [[https://youtu.be/ziXgdkTfmPU][irc client in ocaml]]
-#+BEGIN_QUOTE
+#+BEGIN_EXAMPLE
 0:50 List.fold_left faster than fold_right, but haskell is opposite
 1:00 I like ocaml, that's how python should look like,
      but ocaml itself is not ideal, you have to take ocaml and throw O away, and that's perfect
 1:03 to be fair p___hub is more interesting than this, that's for sure, so let's use Makefile (instead of dune)
 1:50 sexplib?
 2:14 "how many american server you have already hacked" - "I don't count them I'm sorry"
-#+END_QUOTE
+#+END_EXAMPLE
 **** [[https://youtu.be/67FmRyv8jTM][Parsing Java Bytecode with Python]]
 0:05 look how TINY Java code is
 0:06 nonono all the opensource are controlled by coporation actually,
@@ -320,6 +319,11 @@ but fasm don't support debug information (dwarf2)
 **** [[https://youtu.be/WEk_grxrCcg][First Ancient Neural Network in C]]
 intro: he talked about Russian gov and where to flee
 inspiration: Veritasium
+**** [[https://youtu.be/tR6p7ZC7RaU][Terminal To-Do App in Rust]]
+0:10 [[https://www.youtube.com/@baldandbankrupt][bald and bankrupt]], SOVIET, half life II
+0:13 wait what are you doing emacs, this emacs is so weird
+0:14 goto in rust?
+0:52 BLOCKCHAIN? byebye
 *** [[https://youtu.be/0rJ94rbdteE][Rust 让你感觉像个天才]]
 *** [[https://youtu.be/nfF91Z6fqGk][CMD 登录B站]]
 *** [[https://youtu.be/crnEygp4C6g][Jeff Geerling: FINALLY! A GPU works on the Raspberry Pi!]]
@@ -334,7 +338,8 @@ inspiration: Veritasium
 *** [[https://youtu.be/p8u_k2LIZyo][Fast Inverse Square Root — A Quake III Algorithm]]
 =0x5f3759df=
 *** [[https://www.youtube.com/playlist?list=PLknodeJt-I5H_zK-udgi5XhhYrnDoLHkP][Gavin Freeborn: Commandline tools and tips]]
-*** [[https://youtu.be/CFRhGnuXG-4][Why You Shouldn't Nest Your Code]]
+*** [[https://youtu.be/CFRhGnuXG-4][CodeAesthetic: Why You Shouldn't Nest Your Code]]                   :wow:
+**** [[https://youtu.be/Bf7vDBBOBUA][Don't Write Comments]]
 *** [[https://youtu.be/JcJSW7Rprio][Harder Drive: Hard drives we didn't want or need]]
 ???
 *** [[https://youtu.be/NrjXEaTSyrw][A Checklist for Writing Linux Real-Time Applications]]
