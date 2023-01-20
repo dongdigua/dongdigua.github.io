@@ -12,6 +12,7 @@
 ./configure CFLAGS="-march=native -O3 -pipe -finline-functions -fno-math-errno -fno-trapping-math -fgraphite-identity -floop-nest-optimize -ftree-loop-distribution -fno-semantic-interposition -fipa-pta -fno-plt" \
             --with-x=no \
             --with-gpm=no \
+            --without-dbus \
             --with-pgtk \
             --with-native-compilation \
             --with-json \
@@ -53,7 +54,17 @@ ERC>
 
 * dump?
 现在开启 =native-comp= 时 =dump-emacs-portable= 没法弄, 见: [[https://emacs-china.org/t/emacs-29-with-native-comp-dump/22762][emacs china: emacs 29 with native-comp 无法 dump]]
-试着不开 native-comp dump 了一下, 也就加快了 0.2 s, 而且有各种问题, 算啦算啦
++试着不开 native-comp dump 了一下, 也就加快了 0.2s, 而且有各种问题, 算啦算啦+
+作为一个追求极致的人, 怎么能算了! 不能 dump 已经 dump 的 emacs, 那就放到第一步的 dump 里.
+在 [[https://git.savannah.gnu.org/cgit/emacs.git/tree/INSTALL#n516][INSTALL]] 文件里说了, 自定义的配置放在 =site-init.el=
+我把一些必要的配置用 =;;;ifdef dump= =;;;endif= 包上, 然后随便写一个[[https://github.com/dongdigua/configs/blob/main/epp.ex][脚本]], 只保留之间的部分.
+
+这些 "必要的配置" 是主要 GUI 相关的和不须要额外包的配置,
+dump GUI 的配置很好, 之前会看到 窗口缩放以及 tool-bar 和 menu-bar 一闪而过, 现在好了.
+(GUI 模式) 这为我节省了 (0.8 - 0.6)s 和(14 - 12)次 gc
+
+btw, 后来我用 =(setq use-package-verbose t)= 找出来了一个我一直不咋用但是还启动时加载的包: ement,
+加上另外几个包也都 defer, 降到 0.4s 了
 
 * 我 有切身体会/还没体验但是认为很不错 的新特性
 ** [[https://emacs-china.org/t/emacs/19806]["真" 背景透明]]
