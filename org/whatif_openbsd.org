@@ -33,7 +33,7 @@ base64: ZG9uZ2RpZ3VhLmdpdGh1Yi5pby93aGF0aWZfb3BlbmJzZA==
 
 然后问题就是, 怎么启动它? 官网上说:
 #+BEGIN_QUOTE
-rEFInd is reported to usually work. GRUB is reported to usually fail. In either case, you are completely on your own. 
+rEFInd is reported to usually work. GRUB is reported to usually fail. In either case, you are completely on your own.
 #+END_QUOTE
 然后? 扔一句 "you are completely on your own." 也不告诉具体咋办啊?
 然后我就搜, 可几乎都是 FreeBSD 的, 毕竟 OpenBSD 很罕见.
@@ -65,8 +65,54 @@ grub> boot
 2. 输入 exit
 3. here you go!
 #+END_EXAMPLE
-然后我停止了 Linux 内核编译, 去试了一下, 我超!
+我立马停止了 Linux 内核编译, 去试了一下, 我超!
 
+* First time using OpenBSD
+现在这段文字是在 OpenBSD 上的 emacs 上写的!
+第一次启动, 现让它自己把更新那些东西跑完.
+
+然后就是安装一堆软件
+我没有安装那些 "现代化 UNIX 工具", 比如 htop bat zoxide, (ripgrep 除外, 太好用了)
+#+BEGIN_SRC ksh
+doas pkg_add firefox neovim git pcmanfm noto-cjk # 特别必要的软件
+doas pkg_add ripgrep fzf ncdu neofetch ranger p7zip # 好用的工具
+doas pkg_add gmake elixir gnutls # dev
+#+END_SRC
+
+我跑了一下 WebGL 水族馆[fn:5], 500 条鱼只有 10fps...
+
+** B 站放不了, 音视频解码都有问题
+先按照 /usr/local/share/doc/pkg-readmes/firefox 里面
+layers.acceleration.force-enable gfx.webrender.enabled 都 true
+uhh, 水族馆帧率没变...
+
+然后, 凭直觉安 openh264, 似乎没用, 那就 gstreamer,
+准确来说是 =gstreamer1-plugins-libav=
+好耶! 能看B站了!
+
+** 超级工具箱: emacs
+这个当然要自己编译, 今天 git.sv.gnu.org 特别慢, 而 github 快得离谱
+源码下载下来之后编译, 由于是纯 X, 所以选项和之前那篇[fn:6]里面的不一样
+着急用, 所以参数还没加全
+#+BEGIN_SRC ksh
+./configure CFLAGS="-march=native -O3 -pipe -flto=thin" --with-x --with-gif=ifavailable
+#+END_SRC
+然后就是各种依赖, 大多数 X 相关的系统都自带了
+*** autoconf
+autoconf 有不少选择, 但须要注意的是要设置 =AUTOCONF_VERSION= 这个变量, 我选的是最新的 2.71
+*** texinfo
+OpenBSD 自带的太老了, 所以要自己编译新的.
+但是我删除了自带的 texinfo 之后 /usr/bin/texinfo 还残留着不知为啥, 我暂时先手动删了
+*** TODO libgccjit
+
+** suckless 三件套
+这个我可不想自己打 patch, 遂使用 flexipatch 构建
+编译出问题先看 config.mk 和 Makefile
+典型的是 freetype 和 cp -n
+具体的配置放 github, 还是那夹 configs repo
+还有把 /etc/X11/xenodm/Xsetup_0 里面 xconsole 那行去掉, 难看
+
+换掉 fvwm, 舒服~
 
 
 * Footnotes
@@ -74,6 +120,8 @@ grub> boot
 [fn:2] OpenBSD em Dual Boot com Linux (Partição Única) https://terminalroot.com/openbsd-dual-boot-with-linux-single-partition/
 [fn:3] GNU GRUB Manual section 5.4.3 NetBSD https://www.gnu.org/software/grub/manual/grub/grub.html#NetBSD
 [fn:4] Dualboot GNU/Linux and OpenBSD from GRUB2 like a BOSS! https://youtu.be/H2bSXURnqHQ
+[fn:5] http://webglsamples.org/aquarium/aquarium.html
+[fn:6] 2023 了, 试试 emacs 29 https://dongdigua.github.io/emacs29_2023
 
 * Related Links
 - [[https://paedubucher.ch/articles/2020-09-05-openbsd-on-the-desktop-part-i.html][OpenBSD on the Desktop (Part I)]]
