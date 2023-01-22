@@ -145,6 +145,7 @@ funny byte
          memmove(pDecoded + i + 1, pDecoded + i,
 #+END_SRC
 *** [[https://xeiaso.net/blog/rip-twitter][Goodbye Twitter, Hello Fediverse!]]
+*** [[https://xeiaso.net/blog/🥺][🥺]]
 ** [[https://lantian.pub/][蓝天]]
 大佬!
 *** [[https://lantian.pub/article/chat/how-i-nuked-my-btrfs-partition.lantian/][我把硬盘换到了新电脑上，这是 Btrfs 上的数据发生的变化]]
@@ -343,6 +344,7 @@ inspiration: Veritasium
 *** [[https://youtu.be/JcJSW7Rprio][Harder Drive: Hard drives we didn't want or need]]
 ???
 *** [[https://youtu.be/NrjXEaTSyrw][A Checklist for Writing Linux Real-Time Applications]]
+*** [[https://youtu.be/nZudFif409M][Gentoo Linux on a 133Mhz Pentium!]]
 
 **  [[https://www.youtube.com/@Computerphile][<C>]]
 *** [[https://youtu.be/BAo5C2qbLq8][Network Time Protocol (NTP)]]
@@ -435,6 +437,7 @@ to filing patently fraudulent DMCA counter-notifications to avoid the terminatio
 ** [[https://lore.kernel.org/lkml/20221102084921.1615-3-thunder.leizhen@huawei.com/][Christmas present with Linux 6.2]]
 Huwawei NB!
 ** [[https://lkml.org/lkml/2007/7/27/426][Linus re SD]]
+** [[https://marc.info/?l=openbsd-tech&m=167374666324119&w=2][openbsd-tech: xonly on amd64: testing wanted]]
 
 * Other
 :PROPERTIES:

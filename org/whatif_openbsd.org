@@ -1,0 +1,85 @@
+#+TITLE: 我要不要试试 OpenBSD
+#+DESCRIPTION: 你很罕见
+#+DATE: <2023-01-21 六>
+
+又一篇中文文章
+这个文章可能是我写过最长的了 (internet_collections 不算)
+请不要不知好歹地转载!
+地址: dongdigua.github.io/whatif_openbsd
+base64: ZG9uZ2RpZ3VhLmdpdGh1Yi5pby93aGF0aWZfb3BlbmJzZA==
+
+* Intro
+我想整 OpenBSD 已经蓄谋已久了: 在 Windows 和 Fedora(160G) 之间我空出了 100G,
+当然只是试试, 可能不会作为日常使用, 当然是因为软件生态.
+
+我现在这个 Fedora 真的就是 BLOATED, 默认 Workstation 安装太多东西了, 但就是能用,
+至于都安装了什么, 看我给 COSSIG 写的这篇文章[fn:1].
+哦, 对, 还有 yue, systemd.
+
+我可能之后再装电脑要不就是基于 Fedora Server 开始, 要么就是 Gentoo + Nix,
+但总之肯定是 Linux, 并且显示肯定是 Wayland, 因为软件生态和性能.
+
+那我为什么要整 OpenBSD, 因为简洁和统一, 安全的话, 算是一个原因, 因为我对性能已经没有期待了.
+还有就是, Linux 上 "现代" 的东西都用 Wayland, BSD 这种传统的东西对 wayland 支持不怎么样,
+我这回就要安心地探索 old school 的 X, suckless 三件套, 合成器效果.
+
+这次我想把整个折腾系统的过程都记下来, 便于维护, 以防到最后我都不知道某个目录/软件是从哪来的.
+
+对于这个系统的定位, 我觉得就是一个能用的 上网+开发环境,
+那些比较大的东西, 比如 Minecraft, QQ, 视频制作相关(Kdenlive, GIMP), 就不碰了.
+
+* Boot OpenBSD with Grub?
+安装, 就很朴实无华且枯燥, 硬盘分区小心点就是了
+
+然后问题就是, 怎么启动它? 官网上说:
+#+BEGIN_QUOTE
+rEFInd is reported to usually work. GRUB is reported to usually fail. In either case, you are completely on your own. 
+#+END_QUOTE
+然后? 扔一句 "you are completely on your own." 也不告诉具体咋办啊?
+然后我就搜, 可几乎都是 FreeBSD 的, 毕竟 OpenBSD 很罕见.
+那里面有一些要 =insmod ufs2=, 我才发现我对 grub 竟没那些 modules, 于是就 =doas dnf in grub2-efi-x64-modules=.
+在 yt 上看到了一个葡萄牙语小哥的教程[fn:2], 发现几年前官网上是有具体办法的,
+#+BEGIN_SRC grub
+menuentry 'OpenBSD' {
+        set root=(hd0,gptX)
+        chainloader +1
+}
+#+END_SRC
+照着试了, 不行...
+然后又看 GNU Grub Manual, 里面说了 NetBSD[fn:3]:
+#+BEGIN_SRC grub
+grub> insmod part_gpt
+grub> set root=(hd0,gptX)
+grub> knetbsd /netbsd
+grub> boot
+#+END_SRC
+我寻思既然 OpenBSD 和 NetBSD 是同族的, 那我就 =kopenbsd=?
+也不行...
+既然 bing 搜不到, 那就上世界上第二大搜索引擎 YouTube!
+看到了 Root BSD 的这个视频[fn:4]
+首先也吐槽了闪烁其词的文档, 然后, chainloading 须要 BOOTX64.efi, 而我根目录没有, 难怪!
+正当我准备重新编译内核加入 UFS 可写时, 他展示了一个离谱方法:
+#+BEGIN_EXAMPLE
+0. 在 grub 界面选择 OpenBSD entry
+1. 不进去, 而是按 c 启动命令行
+2. 输入 exit
+3. here you go!
+#+END_EXAMPLE
+然后我停止了 Linux 内核编译, 去试了一下, 我超!
+
+
+
+* Footnotes
+[fn:1] CentOS/Fedora 不同配置/变体都默认安装了什么软件(组) https://dongdigua.github.io/anaconda_kickstarts
+[fn:2] OpenBSD em Dual Boot com Linux (Partição Única) https://terminalroot.com/openbsd-dual-boot-with-linux-single-partition/
+[fn:3] GNU GRUB Manual section 5.4.3 NetBSD https://www.gnu.org/software/grub/manual/grub/grub.html#NetBSD
+[fn:4] Dualboot GNU/Linux and OpenBSD from GRUB2 like a BOSS! https://youtu.be/H2bSXURnqHQ
+
+* Related Links
+- [[https://paedubucher.ch/articles/2020-09-05-openbsd-on-the-desktop-part-i.html][OpenBSD on the Desktop (Part I)]]
+- [[https://nanxiao.me/openbsd-one-year-experience/][使用OpenBSD一年的总结]]
+- [[https://www.c0ffee.net/blog/openbsd-on-a-laptop][OpenBSD on a Laptop]]
+- [[https://webzine.puffy.cafe][OpenBSD Webzine by solene%]]
+- [[https://youtu.be/1GYq8eD90nE][OpenBSD and DWM: True Minimalism]]
+
+

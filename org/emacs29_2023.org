@@ -12,7 +12,6 @@
 ./configure CFLAGS="-march=native -O3 -pipe -finline-functions -fno-math-errno -fno-trapping-math -fgraphite-identity -floop-nest-optimize -ftree-loop-distribution -fno-semantic-interposition -fipa-pta -fno-plt" \
             --with-x=no \
             --with-gpm=no \
-            --without-dbus \
             --with-pgtk \
             --with-native-compilation \
             --with-json \
