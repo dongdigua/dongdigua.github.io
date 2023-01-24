@@ -8,6 +8,33 @@
 地址: dongdigua.github.io/whatif_openbsd
 base64: ZG9uZ2RpZ3VhLmdpdGh1Yi5pby93aGF0aWZfb3BlbmJzZA==
 
+#+BEGIN_EXAMPLE
+                                     _
+                                    (_)
+              |    .
+          .   |L  /|   .          _
+      _ . |\ _| \--+._/| .       (_)
+     / ||\| Y J  )   / |/| ./
+    J  |)'( |        ` F`.'/        _
+  -<|  F         __     .-<        (_)
+    | /       .-'. `.  /-. L___
+    J \      <    \  | | O\|.-'  _
+  _J \  .-    \/ O | | \  |F    (_)
+ '-F  -<_.     \   .-'  `-' L__
+__J  _   _.     >-'  )._.   |-'
+ `-|.'   /_.          \_|   F
+  /.-   .                _.<
+ /'    /.'             .'  `\
+  /L  /'   |/      _.-'-\
+ /'J       ___.---'\|
+   |\  .--' V  | `. `
+   |/`. `-.     `._)
+      / .-.\
+      \ (  `\
+       `.\
+
+#+END_EXAMPLE
+
 * Intro
 我想整 OpenBSD 已经蓄谋已久了: 在 Windows 和 Fedora(160G) 之间我空出了 100G,
 当然只是试试, 可能不会作为日常使用, 当然是因为软件生态.
@@ -72,14 +99,15 @@ grub> boot
 第一次启动, 现让它自己把更新那些东西跑完.
 
 然后就是安装一堆软件
-我没有安装那些 "现代化 UNIX 工具", 比如 htop bat zoxide, (ripgrep 除外, 太好用了)
+我没有安装那些 "现代化 UNIX 工具", 比如 htop bat exa zoxide, (ripgrep 除外, 太好用了)
 #+BEGIN_SRC ksh
-doas pkg_add firefox neovim git pcmanfm noto-cjk # 特别必要的软件
-doas pkg_add ripgrep fzf ncdu neofetch ranger p7zip # 好用的工具
+doas pkg_add firefox neovim git pcmanfm noto-cjk # 特别必要的
+doas pkg_add ripgrep fzf ncdu neofetch ranger p7zip colortree # 好用的工具
 doas pkg_add gmake elixir gnutls # dev
 #+END_SRC
 
-我跑了一下 WebGL 水族馆[fn:5], 500 条鱼只有 10fps...
+我跑了一下 WebGL 水族馆[fn:5], 500 条鱼只有 10fps... 实际上 1 条鱼也一样...
+而相比之下 Linux Wayland 5k 条鱼都能满 60
 
 ** B 站放不了, 音视频解码都有问题
 先按照 /usr/local/share/doc/pkg-readmes/firefox 里面
@@ -98,6 +126,8 @@ uhh, 水族馆帧率没变...
 ./configure CFLAGS="-march=native -O3 -pipe -flto=thin" --with-x --with-gif=ifavailable
 #+END_SRC
 然后就是各种依赖, 大多数 X 相关的系统都自带了
+之后各种包就容易了, 用我写的 =setup-what-pkg= 宏自动安装所有包
+
 *** autoconf
 autoconf 有不少选择, 但须要注意的是要设置 =AUTOCONF_VERSION= 这个变量, 我选的是最新的 2.71
 *** texinfo
@@ -105,7 +135,8 @@ OpenBSD 自带的太老了, 所以要自己编译新的.
 但是我删除了自带的 texinfo 之后 /usr/bin/texinfo 还残留着不知为啥, 我暂时先手动删了
 *** TODO libgccjit
 
-** suckless 三件套
+
+** suckless X
 这个我可不想自己打 patch, 遂使用 flexipatch 构建
 编译出问题先看 config.mk 和 Makefile
 典型的是 freetype 和 cp -n
@@ -113,6 +144,37 @@ OpenBSD 自带的太老了, 所以要自己编译新的.
 还有把 /etc/X11/xenodm/Xsetup_0 里面 xconsole 那行去掉, 难看
 
 换掉 fvwm, 舒服~
+
+uhh, firefox 有屏幕刷新的问题, 我尝试使用 Intel TearFree
+#+BEGIN_SRC /etc/X11/xorg.conf.d/intel.conf
+Section "Device"
+  Identifier "drm" # or "Intel Graphics"
+  Driver "intel"
+  Option "TearFree" "true"
+EndSection
+#+END_SRC
+但是 =(EE) intel(0): No outputs and no modes.=
+因为 =(II) intel(0): Using Kernel Mode Setting driver: i915, version 1.6.0 20201103=
+驱动太老了...
+
+** ksh
+只写 .profile 不够, 还得在 .xsession 里加 ~ENV=$HOME/.profile~,
+这样 ksh 才能每次加载配置, 否则只有 login shell 能
+
+** v2ray
+就把 Linux 下的配置拷贝过来, 不好使
+一直 connection reset by peer (curl)
+或 PR_ENF_OF_FILE_ERROR (firefox)
+
+** email
+既然在一个传统 UNIX 上, 那就试试终端邮件客户端, 然后试试订阅 OpenBSD 邮件列表.
+然后就按照这篇文章[fn:7]里面配置 smtpd 和 mail,
+试了好久都不行, 好乱.
+那就试试别的? 我切回 Fedora 看了几个 YouTube 视频, 里面都用 ssmtp, 那就试试?
+也试了好久, 发现是网易邮箱不支持 starttls! 估计 smtpd 也是这个原因.
+然后切回 OpenBSD, 没有 ssmtp? 那试试传说中的 mutt 吧!
+经过上面两个摧残之后这个配置感觉容易多了(注意启用 sasl), 很容易就发出了第一封邮件, 然后是怎么收邮件.
+smtp 收不了邮件, 得用 pop 或 imap
 
 
 * Footnotes
@@ -122,12 +184,14 @@ OpenBSD 自带的太老了, 所以要自己编译新的.
 [fn:4] Dualboot GNU/Linux and OpenBSD from GRUB2 like a BOSS! https://youtu.be/H2bSXURnqHQ
 [fn:5] http://webglsamples.org/aquarium/aquarium.html
 [fn:6] 2023 了, 试试 emacs 29 https://dongdigua.github.io/emacs29_2023
+[fn:7] [[https://www.c0ffee.net/blog/openbsd-on-a-laptop][OpenBSD on a Laptop]]
+  - [[https://youtu.be/cLk5PYYdi3A][a good video based on this article]]
+  - other resources: https://romanzolotarev.com/
 
 * Related Links
 - [[https://paedubucher.ch/articles/2020-09-05-openbsd-on-the-desktop-part-i.html][OpenBSD on the Desktop (Part I)]]
 - [[https://nanxiao.me/openbsd-one-year-experience/][使用OpenBSD一年的总结]]
-- [[https://www.c0ffee.net/blog/openbsd-on-a-laptop][OpenBSD on a Laptop]]
 - [[https://webzine.puffy.cafe][OpenBSD Webzine by solene%]]
 - [[https://youtu.be/1GYq8eD90nE][OpenBSD and DWM: True Minimalism]]
-
-
+- [[https://kevinthomas.dev/posts/openbsd-thinkpadt480.html][Installing and setting up OpenBSD on Thinkpad T480 + improving slowness]]
+- [[https://youtu.be/zXaHM7114Uk][Puffy vs. Tux! The difference between OpenBSD and GNU/Linux]]
