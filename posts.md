@@ -1,5 +1,6 @@
 ## Table of Contents
 ### Posts (sorted by time)
+- [我要不要试试 OpenBSD](whatif_openbsd)<br>
 - [一个乐子 commit](lol.diff.txt)<br>
 - [一次大备份](backup_everything)<br>
 - [2023 了, 试试 emacs 29](emacs29_2023)<br>
