@@ -198,11 +198,31 @@ st 里中文显示一直是重叠的, 字符的排布和英文字母一样.
 就把 Linux 下的配置拷贝过来, 不好使
 一直 connection reset by peer (curl)
 或 PR_ENF_OF_FILE_ERROR (firefox)
+后来发现是时间的问题
 
-我之前以为时间不对是因为没配置时区的事,
+** date
+:PROPERTIES:
+:CUSTOM_ID: date
+:END:
+
+我之前以为时间不对是因为没配置时区的事, 因为只有小时是错的. (但我没有意识到一个问题, 为什么小时是 UTC+16)
 然后我配置 dwm 状态栏的时候发现时区是对的, 但是 ntpd 说 time unsynced,
 因为时间差太多了, 几千秒!
 手动调了下时间然后自动同步了, v2ray 就能用了.
+
+但是, 重启之后时间又变回去了!
+我猜是我 BIOS 用的是 UTC+8, 但是 OpenBSD 给它当成 UTC 了, 所以又加了 8 小时...
+那就写个自启动每次开机自动同步一下吧? 我不想再改 BIOS 时间然后另外几个系统再出什么问题.
+#+BEGIN_EXAMPLE
+doas rdate ntp.ntsc.ac.cn
+#+END_EXAMPLE
+
+然后我看到了一个日本人(公司?)写的文章[fn:9], 他遇到的问题完全一样, 也是重复加时区.
+配置内核选项, 加上 utc_offset (sysctl(2))
+#+BEGIN_SRC /etc/sysctl.conf
+kern.utc_offset=480
+#+END_SRC
+
 
 * Daily?
 弄了那么多, 现在可以算是日常使用了
@@ -239,6 +259,18 @@ SELECT Unsafe Login. Please contact kefu@188.com for help
 
 头一次自己配邮件客户端, 真学到了很多!
 
+然后, 又是收不到邮件? 试了 mail.com, 不给中国注册. 
+最后发现, 不在 INBOX, 而在 Notification...
+
+*** dmesg
+邮件配置好了, 按照 FAQ[fn:10], 把 dmesg 发给 mailto:dmesg@openbsd.org , 帮助开发者更好地支持硬件
+我的标题是
+#+BEGIN_QUOTE
+Lenovo V15 G2 laptop, i915 driver cannot TearFree, Intel Wireless-AC 9560 recognized as Intel Wi-Fi 6 AX201
+#+END_QUOTE
+
+然后我又发现了这个讨论[fn:11], dmesg@openbsd.org 只是开发者可见, 公开的看 NYCBUG [fn:12]
+
 ** 性能调优
 :PROPERTIES:
 :CUSTOM_ID: tune
@@ -272,7 +304,7 @@ iwx0 at pci0 dev 20 function 3 "Intel Wi-Fi 6 AX201" rev 0x20, msix
 巧合的是我在帮另外一个人弄服务器, 他是 B660I d4, wifi 也是 AX201, 然后他说 Ubuntu 驱动有问题.
 坏了, 我成 AX201了!
 这些硬件问题我准备都确定完之后给 mailto:dmesg@openbsd.org 发过去我的 dmesg,
-这个是我在引用那个文章的视频里[fn:9]看到的, 帮助那些开发者更好的适配新硬件.
+这个是我在引用那个文章[fn:7]的视频里看到的, 帮助那些开发者更好的适配新硬件.
 
 所以嘛, OpenBSD 就适合运行在老 ThinkPad 上 :(
 
@@ -283,20 +315,24 @@ iwx0 at pci0 dev 20 function 3 "Intel Wi-Fi 6 AX201" rev 0x20, msix
 
 我有时候会想访问 Linux 上的文件, 但是似乎不支持 btrfs...
 
+
 * Footnotes
 :PROPERTIES:
 :CUSTOM_ID: fn
 :END:
 
-[fn:1] CentOS/Fedora 不同配置/变体都默认安装了什么软件(组) https://dongdigua.github.io/anaconda_kickstarts
+[fn:1] 我: CentOS/Fedora 不同配置/变体都默认安装了什么软件(组) https://dongdigua.github.io/anaconda_kickstarts
 [fn:2] OpenBSD em Dual Boot com Linux (Partição Única) https://terminalroot.com/openbsd-dual-boot-with-linux-single-partition/
 [fn:3] GNU GRUB Manual section 5.4.3 NetBSD https://www.gnu.org/software/grub/manual/grub/grub.html#NetBSD
 [fn:4] Dualboot GNU/Linux and OpenBSD from GRUB2 like a BOSS! https://youtu.be/H2bSXURnqHQ
-[fn:5] http://webglsamples.org/aquarium/aquarium.html
-[fn:6] 2023 了, 试试 emacs 29 https://dongdigua.github.io/emacs29_2023
-[fn:7] [[https://www.c0ffee.net/blog/openbsd-on-a-laptop][OpenBSD on a Laptop]]
+[fn:5] WebGL 水族馆 http://webglsamples.org/aquarium/aquarium.html
+[fn:6] 我: 2023 了, 试试 emacs 29 https://dongdigua.github.io/emacs29_2023
+[fn:7] OpenBSD on a Laptop https://www.c0ffee.net/blog/openbsd-on-a-laptop and [[https://youtu.be/cLk5PYYdi3A][a good video based on this article]]
 [fn:8] https://wiki.archlinux.org/title/Mutt
-[fn:9] [[https://youtu.be/cLk5PYYdi3A][a good video based on this article]] [fn:7]
+[fn:9] OpenBSD pkg_add didn't work due to incorrect system time https://obsd.solutions/en/blog/2022/02/18/openbsd-pkg_add-didnt-work-due-to-wrong-time/index.html
+[fn:10] https://www.openbsd.org/faq/faq4.html#SendDmesg
+[fn:11] FAQ: dmesg archive https://www.mail-archive.com/misc@openbsd.org/msg162300.html
+[fn:12] NYC*BUG dmesgd https://dmesgd.nycbug.org/index.cgi
 
 * Related Links
 :PROPERTIES:
@@ -310,4 +346,3 @@ iwx0 at pci0 dev 20 function 3 "Intel Wi-Fi 6 AX201" rev 0x20, msix
 - [[https://kevinthomas.dev/posts/openbsd-thinkpadt480.html][Installing and setting up OpenBSD on Thinkpad T480 + improving slowness]]
 - [[https://youtu.be/zXaHM7114Uk][Puffy vs. Tux! The difference between OpenBSD and GNU/Linux]]
 - [[https://videos.lukesmith.xyz/w/ion4TuavEAqKRWeavWTCBe][LukeSmith: Email on the terminal with mutt]]
-- [[https://youtu.be/zXaHM7114Uk][Puffy vs. Tux! The difference between OpenBSD and GNU/Linux]]
