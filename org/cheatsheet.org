@@ -19,18 +19,20 @@
 | "{register}y/p | 向/从寄存器拷贝  |
 
 ** movement
-| key      | usage                      |
-|----------+----------------------------|
-| w/e      | 下一个单词/单词尾          |
-| b        | 单词头                     |
+| key      | usage                  |
+|----------+------------------------|
+| w/e      | 下一个单词/单词尾         |
+| b        | 单词头                  |
 | H/M/L    | 当前页面可见顶部/中间/底部 |
-| C-u(f)/d | 上/下翻页                  |
-| %        | 到对应括号                 |
-| {}       | 段落跳转                   |
-| g ;      | goto last change           |
-| g */#    | 正/反查找光标下的词        |
-| g d/D    | 跳转到本地/全局定义        |
-| C-w      | jump between splits        |
+| C-u(f)/d | 上/下翻页                |
+| %        | 到对应括号               |
+| {}       | 段落跳转                 |
+| g ;      | goto last change       |
+| g */#    | 正/反查找光标下的词       |
+| g d/D    | 跳转到本地/全局定义       |
+| C-w      | jump between splits    |
+| C-o/i    | Older/Newer position   |
+| `        | mark                   |
 
 ** file/split
 | key         | usage        |

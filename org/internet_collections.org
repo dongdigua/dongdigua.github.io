@@ -2,6 +2,7 @@
 #+TAGS: lowlevel(w) frontend(f) backend(b) algorithm(a) math(t)
 #+TAGS: hack(h) fun(u) wow(O)
 #+TAGS: emacs(m) linux(x) iot(i) plan9(9) BSD(B)
+#+TAGS: smth
 #+OPTIONS: toc:1 ^:{}
 
 #+TITLE: Internet Collections
@@ -13,13 +14,19 @@
  /--\   \_ (/_ |   |_ (_| | | |   |  | (_| (_| | (_ (_| |   _|_ | | (_| (/_ ><
                                             _|
 #+END_SRC
+
+#+BEGIN_QUOTE
+这才是互联网好玩的地方, 你总能在某个奇怪的角落发现神奇的东西
+-- 我
+#+END_QUOTE
+
 * (Personal) Blogs
 :PROPERTIES:
 :CUSTOM_ID: blog
 :END:
 #+TAGS: rssable(s) rssub(U) gopher(g)
 ** Random Stuff Floating Around
-not related to the root blog entry (I don't know what I mean)
+not related to the root blog entry (I don't know what I mean, do you?)
 *** [[https://www.luogu.com.cn/blog/ivystorm/emacs-adventuredunnet-tong-guan-jiao-cheng][luogu blog: emacs dunnet 教程]]                                   :emacs:
 *** [[https://bheisler.github.io/post/state-of-gpgpu-in-rust/][The State of GPGPU in Rust]]                              :rust:lowlevel:
 *** [[https://secretgeek.github.io/html_wysiwyg/][巧用 CSS 显示 HTML 源码]]                                      :frontend:
@@ -234,8 +241,10 @@ int function(void) {
 ** [[https://ifaceless.github.io/2019/11/17/guide-to-linux-scheduler/][论文学习之 Linux 调度器]]
 *** [[https://ifaceless.github.io/2019/10/30/linux-kernel-dev-notes/][Linux Kernel Development 学习与总结]]
 ** [[https://hardenedlinux.github.io][Hardened GNU/Linux]]                                                 :hack:
+** TODO [[https://briancallahan.net][Dr. Brian Robert Callahan]]                                      :BSD:
+*** [[https://briancallahan.net/blog/20220629.html][OpenBSD has two new C compilers: chibicc and kefir]]               :smth:
 
-** B
+** B/HWS/fri3nds
 *** [[https://shakaianee.top/][社会易姐]]
 *** [[https://blog.yangmame.org/][yanemame]]
 猴哥推荐的
@@ -251,14 +260,22 @@ EvanMeek / B站: 美味的樱桃菌
 **** [[https://sh.alynx.one/posts/Linux-Mooncake-Jokes/][Linux 用户的月饼食用手册]]                                        :fun:
 **** [[https://sh.alynx.one/posts/Do-Not-Fill-My-Email-with-Silly-Ads/][不要拿愚蠢的广告来污染我的邮箱]]
 **** [[https://sh.alynx.one/posts/Emacs-Monaco-Box-drawing-Character/][Emacs 和 Monaco 字体和 Box-drawing Character]]
+*** [[http://www.z.org.cn/][老网虫]]
+*** [[https://blog.yang-qwq.ml][yang-qwq]]
+*** [[http://blog.zhanganzhi.com/][zhanganzhi]]
+*** [[https://blog.bluemangoo.net/][芒果快评]]
+今年的新博客, 友链有踏浪
+*** [[https://acyanbird.github.io][山奈]]
+
 ** ZhiHu
 *** [[https://zhuanlan.zhihu.com/p/138719668][用Go语言汇编计算fibonacci数列]]                                :lowlevel:
 *** [[https://www.cnblogs.com/zjjws/p/13346020.html][第 N 个质数]]                                               :c:algorithm:
 看不懂, 先收藏着
 *** [[https://www.zhihu.com/column/c_1313110231912726528][倔强的程序员]]
 编! 译! 原! 理!
-*** [[https://www.zhihu.com/column/c_185117725][专栏: 技术考古]]                                              :plan9:
-plan9
+*** [[https://www.zhihu.com/column/c_185117725][专栏: 技术考古]]                                              :wow:plan9:
+**** [[https://web.archive.org/web/20220423091317/https://zhuanlan.zhihu.com/p/502733643][archive: 那些古老又优美的 GUI]]                                  :smth:
+***** [[https://guidebookgallery.org][GUI Gallery]]
 *** [[https://www.zhihu.com/column/roartalk][专栏: 嘶吼RoarTalk]]                                           :hack:
 回归最本质的信息安全
 *** [[https://zhuanlan.zhihu.com/p/464565089][我抵制Notepad++的理由]]
@@ -279,12 +296,6 @@ use the power of tor:
 *** [[https://www.zhihu.com/question/306745383][ubuntu重启变成了debian怎么办?]]
 U boom tu
 
-** shenjack/HWS/fri3nds
-*** [[http://www.z.org.cn/][老网虫]]
-*** [[https://blog.yang-qwq.ml][yang-qwq]]
-*** [[http://blog.zhanganzhi.com/][zhanganzhi]]
-*** [[https://blog.bluemangoo.net/][芒果快评]]
-今年的新博客, 友链有踏浪
 
 * YouTube (没有账号, 这就是我的收藏夹)
 :PROPERTIES:
@@ -404,11 +415,12 @@ to filing patently fraudulent DMCA counter-notifications to avoid the terminatio
 **** [[https://youtu.be/2CnAzLB0OjU][DT: As The Web Grows Bigger, It Seems Smaller]]
 *** [[https://youtu.be/Rsxao9ptdmI][Beating 5 Scam Arcade Games with Science]]
 街机科学家～
-*** [[https://youtube.com/playlist?list=PLgE-9Sxs2IBVgJkY-1ZMj0tIFxsJ-vOkv][BBS The Documentary(8)]]
 *** [[https://youtu.be/k35uDHs7Z9E][DT: A Disturbing Descent Into The Mind Of A Mad Man]]
 *** [[https://youtu.be/GlovVvBAIGk][DT: Keeping A Positive Attitude Even After Storm Destroys My Backyard]]
 *** [[https://www.youtube.com/@lecturesbywalterlewin.they9259][Lectures by Walter Lewin. They will make you ♥ Physics]]            :wow:
 *** [[https://youtu.be/dIivJwz5jL8][Nyan Cat piano arrangement sight-read by Tom Brier]]
+*** [[https://www.youtube.com/playlist?list=PLop3s1hMlSJKXqmuFjK7gbJh2WAyllTTY][Back to the BBS]]
+**** [[https://www.erb.pw][homepage]]
 
 * r
 :PROPERTIES:
@@ -441,6 +453,8 @@ to filing patently fraudulent DMCA counter-notifications to avoid the terminatio
 Huwawei NB!
 ** [[https://lkml.org/lkml/2007/7/27/426][Linus re SD]]
 ** [[https://marc.info/?l=openbsd-tech&m=167374666324119&w=2][openbsd-tech: xonly on amd64: testing wanted]]
+** [[https://lists.freebsd.org/pipermail/freebsd-current/2003-July/006889.html][freebsd : Annoucning DragonFly BSD!]]
+** [[https://minnie.tuhs.org/pipermail/tuhs/2022-April/025643.html][TUHS: Sad News - we last two wonderful people in the past few weeks]]
 
 * Other
 :PROPERTIES:

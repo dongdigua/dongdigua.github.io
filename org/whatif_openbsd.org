@@ -109,6 +109,7 @@ grub> boot
 
 然后就是安装一堆软件
 我没有安装那些 "现代化 UNIX 工具", 比如 htop bat exa zoxide, (ripgrep 除外, 太好用了)
+7z 真的好用, 但是我觉得更应该学学标准的 UNIX 压缩解压工具 
 #+BEGIN_SRC ksh
 doas pkg_add firefox neovim git pcmanfm noto-cjk # 特别必要的
 doas pkg_add ripgrep fzf ncdu neofetch ranger p7zip colortree # 好用的工具
@@ -313,7 +314,9 @@ iwx0 at pci0 dev 20 function 3 "Intel Wi-Fi 6 AX201" rev 0x20, msix
 :CUSTOM_ID: btrfs
 :END:
 
-我有时候会想访问 Linux 上的文件, 但是似乎不支持 btrfs...
+我有时候会想访问 Linux 上的文件, 但是似乎不支持 btrfs...[fn:13]
+
+** [[https://dongdigua.github.io/bbs_gbk_utf8][支线任务: 中文 BBS GBK 转 UTF8]]
 
 
 * Footnotes
@@ -333,6 +336,7 @@ iwx0 at pci0 dev 20 function 3 "Intel Wi-Fi 6 AX201" rev 0x20, msix
 [fn:10] https://www.openbsd.org/faq/faq4.html#SendDmesg
 [fn:11] FAQ: dmesg archive https://www.mail-archive.com/misc@openbsd.org/msg162300.html
 [fn:12] NYC*BUG dmesgd https://dmesgd.nycbug.org/index.cgi
+[fn:13] Accessing Other Filesystems https://www.openbsd.org/faq/faq14.html#foreignfs
 
 * Related Links
 :PROPERTIES:

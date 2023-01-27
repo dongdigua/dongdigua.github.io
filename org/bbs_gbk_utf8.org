@@ -1,0 +1,82 @@
+#+TITLE: 支线任务: 中文 BBS GBK 转 UTF8
+#+DESCRIPTION: 造轮子好玩
+#+DATE: <2023-01-27 五>
+
+我过年这两天在服务器运维群看到了 水木清华BBS 这个东西,
+于是就 telnet 试了下, 发现字符集是 GBK!
+emmm, 设置环境变量启动终端不行, 就得在 gnome-terminal 设置里面弄.
+
+进去看了, 发现好多神奇的东西, 但整体还是没落, 现在还是虎年的欢迎页面...
+接合我之前在 sdf.org, 新黑客词典, youtube 等地方看到的关于 BBS 的记忆片段,
+使我开始考古这个从曾经那个时代来的我从没接触过的东西.
+
+先解决客户端问题:
+我在 Back To BBS 节目里面看到了 [[https://syncterm.bbsdev.net][Syncterm]] 和 [[http://www.mysticbbs.com/downloads.html][Netrunner]],
+一个不支持中文, 一个根本无法启动 (cannot open display).
+然后我找到了 qterm, 先是在水木 FreeBSD 版块看见的, 后来搜索 BBS 客户端时想起来了.
+下下来试一下, 不错. 但是我不想为了这一个东西而装一个额外软件, 还得编译.
+
+然后就想, 如果不能终端解码, 那为啥不先转换成 UTF8 再显示呢?
+那就 iconv? 结果人家是全输入完 EOF 了才显示...
+有没有方式能不缓冲而是 on-the-fly 呢? 搜索引擎没搜到.
+
+那就自己写!
+iconv 是基于 libiconv 库, 看看文档就能写了, 虽然我基本没写过 C 代码.
+#+BEGIN_SRC c
+#include <stdio.h>
+#include <iconv.h>
+
+#define UTF8_SIZE 4
+
+int
+convert_one(iconv_t cd)
+{
+    char inbuf[2] = {0};
+    char outbuf[UTF8_SIZE] = {0};
+    size_t insize = 1;
+    size_t outsize = UTF8_SIZE;
+
+    char c = getchar();
+    if (c == EOF)
+        return 1;
+    inbuf[0] = c;
+
+    char * pIn = inbuf;
+    char * pOut = (char*) outbuf;
+
+    size_t iconv_result = iconv(cd, &pIn, &insize, &pOut, &outsize);
+    if (iconv_result == (size_t) -1) {
+        inbuf[1] = getchar();
+        insize = 2;
+        iconv(cd, &pIn, &insize, &pOut, &outsize);
+    }
+
+    for (int i = 0; i < UTF8_SIZE; i++) {
+        if (outbuf[i] != 0)
+            putchar(outbuf[i]);
+        fflush(stdout);
+    }
+    return 0;
+}
+
+int
+main(void)
+{
+    iconv_t cd = iconv_open("UTF8", "GBK");
+    while (1)
+        if (convert_one(cd) == 1) break;
+
+    iconv_close(cd);
+    return 0;
+}
+#+END_SRC
+
+好使, 但是, 我写这篇文章的时候又过去看了眼那个帖子的回复, 发现有这个:
+#+BEGIN_EXAMPLE
+luit -encoding gbk <command>
+#+END_EXAMPLE
+嗯, 好使...
+另一个帖子说 GNU screen 也可以,
+然后搜索 screen 转码的时候看到了这个 [[https://wadarochi.github.io/2011/05/24/GNU-screen-encoding的替代品，自制BBS转码脚本/][GNU screen encoding的替代品，自制BBS转码脚本]]
+
+*但自己造轮子还是很开心哈哈*
