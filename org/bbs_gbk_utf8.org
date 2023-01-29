@@ -7,7 +7,7 @@
 emmm, 设置环境变量启动终端不行, 就得在 gnome-terminal 设置里面弄.
 
 进去看了, 发现好多神奇的东西, 但整体还是没落, 现在还是虎年的欢迎页面...
-接合我之前在 sdf.org, 新黑客词典, youtube 等地方看到的关于 BBS 的记忆片段,
+结合我之前在 sdf.org, 新黑客词典, youtube 等地方看到的关于 BBS 的记忆片段,
 使我开始考古这个从曾经那个时代来的我从没接触过的东西.
 
 先解决客户端问题:
@@ -22,7 +22,8 @@ emmm, 设置环境变量启动终端不行, 就得在 gnome-terminal 设置里�
 
 那就自己写!
 iconv 是基于 libiconv 库, 看看文档就能写了, 虽然我基本没写过 C 代码.
-#+BEGIN_SRC c
+为什么不用 Rust? 因为我弄这个主要还是想弄到 OpenBSD 上, Rust 要一些依赖, 而 C 直接就能用.
+#+BEGIN_SRC C
 #include <stdio.h>
 #include <iconv.h>
 

@@ -163,6 +163,7 @@ OpenBSD 自带的太老了, 所以要自己编译新的.
 典型的是 freetype 和 cp -n
 具体的配置放 github, 还是那夹 configs repo
 还有把 /etc/X11/xenodm/Xsetup_0 里面 xconsole 那行去掉, 难看
+还有就是进 tty 了发现图形没了要按 f5[fn:12]
 
 换掉 fvwm, 舒服~
 
@@ -270,7 +271,7 @@ SELECT Unsafe Login. Please contact kefu@188.com for help
 Lenovo V15 G2 laptop, i915 driver cannot TearFree, Intel Wireless-AC 9560 recognized as Intel Wi-Fi 6 AX201
 #+END_QUOTE
 
-然后我又发现了这个讨论[fn:11], dmesg@openbsd.org 只是开发者可见, 公开的看 NYCBUG [fn:12]
+然后我又发现了这个讨论[fn:11], dmesg@openbsd.org 只是开发者可见, 公开的看 NYCBUG
 
 ** 性能调优
 :PROPERTIES:
@@ -303,18 +304,22 @@ iwx0 at pci0 dev 20 function 3 "Intel Wi-Fi 6 AX201" rev 0x20, msix
 [    3.542438] iwlwifi 0000:00:14.3: Detected Intel(R) Wireless-AC 9560, REV=0x351
 #+END_EXAMPLE
 巧合的是我在帮另外一个人弄服务器, 他是 B660I d4, wifi 也是 AX201, 然后他说 Ubuntu 驱动有问题.
-坏了, 我成 AX201了!
-这些硬件问题我准备都确定完之后给 mailto:dmesg@openbsd.org 发过去我的 dmesg,
-这个是我在引用那个文章[fn:7]的视频里看到的, 帮助那些开发者更好的适配新硬件.
++坏了, 我成 AX201了!+
++所以嘛, OpenBSD 就适合运行在老 ThinkPad 上 :(+
 
-所以嘛, OpenBSD 就适合运行在老 ThinkPad 上 :(
+原来 =hostname.iwx0= 里面, 密码要加引号...[fn:12]
+hostname.if(5):
+#+BEGIN_SRC diff
+-join mynwid wpakey mywpakey
++join mynwid wpakey "mywpakey"
+#+END_SRC
 
 ** btrfs?
 :PROPERTIES:
 :CUSTOM_ID: btrfs
 :END:
 
-我有时候会想访问 Linux 上的文件, 但是似乎不支持 btrfs...[fn:13]
+我有时候会想访问 Linux 上的文件, 但是似乎不支持 btrfs...
 
 ** [[https://dongdigua.github.io/bbs_gbk_utf8][支线任务: 中文 BBS GBK 转 UTF8]]
 
@@ -334,9 +339,8 @@ iwx0 at pci0 dev 20 function 3 "Intel Wi-Fi 6 AX201" rev 0x20, msix
 [fn:8] https://wiki.archlinux.org/title/Mutt
 [fn:9] OpenBSD pkg_add didn't work due to incorrect system time https://obsd.solutions/en/blog/2022/02/18/openbsd-pkg_add-didnt-work-due-to-wrong-time/index.html
 [fn:10] https://www.openbsd.org/faq/faq4.html#SendDmesg
-[fn:11] FAQ: dmesg archive https://www.mail-archive.com/misc@openbsd.org/msg162300.html
-[fn:12] NYC*BUG dmesgd https://dmesgd.nycbug.org/index.cgi
-[fn:13] Accessing Other Filesystems https://www.openbsd.org/faq/faq14.html#foreignfs
+[fn:11] FAQ: dmesg archive https://www.mail-archive.com/misc@openbsd.org/msg162300.html; NYC*BUG dmesgd https://dmesgd.nycbug.org/index.cgi
+[fn:12] Switching to -current, installing firmware and wireless configuration https://youtu.be/i7WY_TVJfdA
 
 * Related Links
 :PROPERTIES:

@@ -131,3 +131,6 @@ emm... 有什么解决方案
 也不行, 也是因为空间差那么一点
 ** 那就 cp 直接来吧
 
+
+* 扩展阅读
+https://research.exoticsilicon.com/articles/backup_strategies
