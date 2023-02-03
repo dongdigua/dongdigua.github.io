@@ -7,9 +7,11 @@
 完整的新特性去看 =etc/NEWS= (btw, =emacs-news-mode= 也是新加的)
 
 * build emacs (with musl?)
-[[https://zhuanlan.zhihu.com/p/172518559][gcc 参数来源]]
+gcc (it's GNU emacs, so...) 参数来源:
+- https://zhuanlan.zhihu.com/p/172518559
+- https://snoopitek.com/make.conf
 #+BEGIN_SRC sh
-./configure CFLAGS="-march=native -O3 -pipe -finline-functions -fno-math-errno -fno-trapping-math -fgraphite-identity -floop-nest-optimize -ftree-loop-distribution -fno-semantic-interposition -fipa-pta -fno-plt" \
+./configure CFLAGS="-march=native -O3 -pipe -fno-math-errno -fgraphite-identity -floop-nest-optimize -fno-semantic-interposition -fno-strict-aliasing -fno-common -fipa-pta -fno-plt" \
             --with-x=no \
             --with-gpm=no \
             --with-pgtk \

@@ -20,6 +20,10 @@ so I use emacs pyim
 ** Authorization required, but no authorization protocol specified
 *** =sudo -E=
 *** lxpolkit(directly execute) or polkit-gnome(prettier, at /usr/libexec/polkit-gnome-authentication-agent-1)
+*** pkexec
+:PROPERTIES:
+:CUSTOM_ID: pkexec
+:END:
 ** cannot start sway on lightdm
 :PROPERTIES:
 :CUSTOM_ID: dm

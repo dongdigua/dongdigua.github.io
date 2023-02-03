@@ -9,8 +9,7 @@ you can steal them, but you'd better let me know and add a reference
 * Rust wasm 制作 schemetic/litemetica 渲染器
 ** [[https://github.com/misode/vscode-nbt][a vscode extension]]
 * 用 sway 实现[[https://www.bilibili.com/video/BV1TE41147gK][用窗口玩游戏(×)用游戏玩窗口(√)]]的效果
-* 不同 Linux 内核(xanmod, clear)玩 MC 性能对比
-* emacs mode: eww show =console.log()= in Message
+* 不同 Linux 内核(xanmod, lqx, clear)玩 MC 性能对比
 * win7WM
 just a [[https://support.microsoft.com/en-us/windows/windows-7-support-ended-on-january-14-2020-b75d4580-2cc7-895a-2c9c-1466d9a53962][dream]]
 * join DN42
@@ -20,3 +19,7 @@ just a [[https://support.microsoft.com/en-us/windows/windows-7-support-ended-on-
 呵呵, 在B站看到这样的基本就是壁纸软件的广告
 * Nethack x Minecraft
 * 穿越机/无人机竞速
+* local search engine
+like: https://github.com/tsoding/seroost
+(tsoding twitch 2023.2.1~)
+for searching through blogs I collected

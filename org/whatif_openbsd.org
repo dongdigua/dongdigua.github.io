@@ -96,10 +96,9 @@ grub> boot
 首先也吐槽了闪烁其词的文档, 然后, chainloading 须要 BOOTX64.efi, 而我根目录没有, 难怪!
 正当我准备重新编译内核加入 UFS 可写时, 他展示了一个离谱方法:
 #+BEGIN_EXAMPLE
-0. 在 grub 界面选择 OpenBSD entry
-1. 不进去, 而是按 c 启动命令行
-2. 输入 exit
-3. here you go!
+0. 在 grub 界面不回车, 而是按 c 启动命令行
+1. 输入 exit
+2. here you go!
 #+END_EXAMPLE
 我立马停止了 Linux 内核编译, 去试了一下, 我超!
 
@@ -141,7 +140,8 @@ uhh, 水族馆帧率没变...
 源码下载下来之后编译, 由于是纯 X, 所以选项和之前那篇[fn:6]里面的不一样
 着急用, 所以参数还没加全
 #+BEGIN_SRC ksh
-./configure CFLAGS="-march=native -O3 -pipe -flto=thin" --with-x --with-gif=ifavailable
+./configure CFLAGS="-march=native -O3 -pipe -flto=thin -fstack-protector-strong" \
+            --with-x --with-gif=ifavailable
 #+END_SRC
 然后就是各种依赖, 大多数 X 相关的系统都自带了
 之后各种包就容易了, 用我写的 =setup-what-pkg= 宏自动安装所有包
@@ -308,8 +308,10 @@ iwx0 at pci0 dev 20 function 3 "Intel Wi-Fi 6 AX201" rev 0x20, msix
 +所以嘛, OpenBSD 就适合运行在老 ThinkPad 上 :(+
 
 原来 =hostname.iwx0= 里面, 密码要加引号...[fn:12]
-hostname.if(5):
 #+BEGIN_SRC diff
+--- src/share/man/man5/hostname.if.5
++++ src/share/man/man5/hostname.if.5
+@@ -76,1 +76,1 @@
 -join mynwid wpakey mywpakey
 +join mynwid wpakey "mywpakey"
 #+END_SRC
@@ -354,3 +356,4 @@ hostname.if(5):
 - [[https://kevinthomas.dev/posts/openbsd-thinkpadt480.html][Installing and setting up OpenBSD on Thinkpad T480 + improving slowness]]
 - [[https://youtu.be/zXaHM7114Uk][Puffy vs. Tux! The difference between OpenBSD and GNU/Linux]]
 - [[https://videos.lukesmith.xyz/w/ion4TuavEAqKRWeavWTCBe][LukeSmith: Email on the terminal with mutt]]
+- [[https://youtu.be/o8aiSJ2nXcc][OpenBSD Guy: ffmpeg screencast]]
