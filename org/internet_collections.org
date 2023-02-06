@@ -2,7 +2,7 @@
 #+TAGS: lowlevel(w) frontend(f) backend(b) algorithm(a) math(t)
 #+TAGS: hack(h) fun(u) wow(O)
 #+TAGS: emacs(m) linux(x) iot(i) plan9(9) BSD(B)
-#+TAGS: smth
+#+TAGS: smth mailinglist
 #+OPTIONS: toc:1 ^:{}
 
 #+TITLE: Internet Collections
@@ -231,6 +231,7 @@ int function(void) {
 ** [[https://madaidans-insecurities.github.io][Security & Privacy Evaluations]]
 *** [[https://madaidans-insecurities.github.io/guides/linux-hardening.html][Linux Hardening Guide]]
 ** [[https://www.nayuki.io][Project Nayuki]]
+*** [[https://www.nayuki.io/page/a-fundamental-introduction-to-x86-assembly-programming][A fundamental introduction to x86 assembly prorgamming]]
 *** [[https://www.nayuki.io/page/i-type-in-dvorak][Dvorak FAQ]]
 ** [[https://bt.ht][bt.ht]]
 网页小, 文笔好
@@ -241,8 +242,13 @@ int function(void) {
 ** [[https://ifaceless.github.io/2019/11/17/guide-to-linux-scheduler/][论文学习之 Linux 调度器]]
 *** [[https://ifaceless.github.io/2019/10/30/linux-kernel-dev-notes/][Linux Kernel Development 学习与总结]]
 ** [[https://hardenedlinux.github.io][Hardened GNU/Linux]]                                                 :hack:
-** TODO [[https://briancallahan.net][Dr. Brian Robert Callahan]]                                      :BSD:
+** [[https://briancallahan.net][Dr. Brian Robert Callahan]]                                           :BSD:
 *** [[https://briancallahan.net/blog/20220629.html][OpenBSD has two new C compilers: chibicc and kefir]]               :smth:
+** [[https://research.exoticsilicon.com][exotic silicon]]                                                      :wow:
+very beautiful page
+*** [[https://research.exoticsilicon.com/articles/console_screendumps][Console Screendumps]]                                       :mailinglist:
+** [[https://www.a1k0n.net][a1k0n]]                                                              :math:
+*** [[https://www.a1k0n.net/2011/07/20/donut-math.html][donut.c]]
 
 ** B/HWS/fri3nds
 *** [[https://shakaianee.top/][社会易姐]]
@@ -264,8 +270,10 @@ EvanMeek / B站: 美味的樱桃菌
 *** [[https://blog.yang-qwq.ml][yang-qwq]]
 *** [[http://blog.zhanganzhi.com/][zhanganzhi]]
 *** [[https://blog.bluemangoo.net/][芒果快评]]
-今年的新博客, 友链有踏浪
+22年新博客, 友链有踏浪
 *** [[https://acyanbird.github.io][山奈]]
+*** [[https://minecraft1248.github.io][minecraft1248]]
+今年的新博客
 
 ** ZhiHu
 *** [[https://zhuanlan.zhihu.com/p/138719668][用Go语言汇编计算fibonacci数列]]                                :lowlevel:
@@ -337,7 +345,11 @@ inspiration: Veritasium
 0:13 wait what are you doing emacs, this emacs is so weird
 0:14 goto in rust?
 0:52 BLOCKCHAIN? byebye
-**** TODO [[https://youtu.be/YBzNFt4wapA][Hash Table in Rust]]
+**** [[https://youtu.be/h_D4P-KRNKs][HaskellRank #01: just one line!]]
+**** [[https://youtu.be/sFYFuBzu9Ow][mmap syscall]]
+- allocate memory
+- rw files
+- IPC
 *** [[https://youtu.be/0rJ94rbdteE][Rust 让你感觉像个天才]]
 *** [[https://youtu.be/nfF91Z6fqGk][CMD 登录B站]]
 *** [[https://youtu.be/crnEygp4C6g][Jeff Geerling: FINALLY! A GPU works on the Raspberry Pi!]]
@@ -355,9 +367,9 @@ inspiration: Veritasium
 *** [[https://youtu.be/CFRhGnuXG-4][CodeAesthetic: Why You Shouldn't Nest Your Code]]                   :wow:
 **** [[https://youtu.be/Bf7vDBBOBUA][Don't Write Comments]]
 *** [[https://youtu.be/JcJSW7Rprio][Harder Drive: Hard drives we didn't want or need]]
-???
 *** [[https://youtu.be/NrjXEaTSyrw][A Checklist for Writing Linux Real-Time Applications]]
 *** [[https://youtu.be/nZudFif409M][Gentoo Linux on a 133Mhz Pentium!]]
+*** [[https://youtu.be/MnJh1xJ7rDY][lisp on arduino (Tuesday Streams)]]
 
 **  [[https://www.youtube.com/@Computerphile][<C>]]
 *** [[https://youtu.be/BAo5C2qbLq8][Network Time Protocol (NTP)]]
@@ -368,6 +380,8 @@ inspiration: Veritasium
 *** [[https://youtu.be/XiFkyR35v2Y][Slow Loris Attack]]
 *** [[https://youtu.be/kzdugwr4Fgk][The Kindle Text Problem]]
 *** [[https://youtu.be/gYng1yypNCA][DEC PDP-11 & Zork]]
+*** [[https://youtu.be/bnRNiE_OVWA][Infinite Data Structures in Haskell]]
+*** [[https://xkcd.com/936/][xdcd: Password Strength]]
 
 ** Cyber Security
 *** LiveOverflow
@@ -384,6 +398,7 @@ inspiration: Veritasium
 *** [[https://youtu.be/I4_ide0tEG8][JH: zip files & hack... (CVE-2022-1271 zgrep/gzip)]]
 *** [[https://youtu.be/dT9y-KQbqi4][How I hacked a hardware crypto wallet and recovered $2 million]]
 even caught by police when he was a child
+*** [[https://youtu.be/eTcVLqKpZJc][PwnFunction: Dangerous Code Hidden in Plain Sight for 12 years]] in [[https://dongdigua.github.io/wayland#pkexec][pkexec]]
 
 ** Math
 *** [[https://youtu.be/KufsL2VgELo][Group Theory]]
@@ -421,6 +436,8 @@ to filing patently fraudulent DMCA counter-notifications to avoid the terminatio
 *** [[https://youtu.be/dIivJwz5jL8][Nyan Cat piano arrangement sight-read by Tom Brier]]
 *** [[https://www.youtube.com/playlist?list=PLop3s1hMlSJKXqmuFjK7gbJh2WAyllTTY][Back to the BBS]]
 **** [[https://www.erb.pw][homepage]]
+*** [[https://youtu.be/Q8WXvDLofL8][Plasma piano]]
+赛博钢琴家
 
 * r
 :PROPERTIES:
@@ -469,7 +486,6 @@ not only harmful stuff <3
 *** [[https://mrxn.net/][mrxn]]
 data-leak
 ** [[https://masa.dy.fi][masa mods]]
-** [[https://blog.stenmans.org/theBeamBook/][the beam book]] and [[https://learnyousomeerlang.com/content][learn you some erlang]]
 ** [[https://inadequacy.org/public/stories/2001.12.2.42056.2147.html][Adequacy: Is Your Son a Computer Hacker?]]
 #+BEGIN_QUOTE
 BSD, Lunix, Debian and Mandrake are all versions of an illegal hacker operation system,

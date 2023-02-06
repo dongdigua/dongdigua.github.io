@@ -8,7 +8,7 @@ defmodule GitMonthlyTag do
   def main do
     get_log()
     |> parse_date()
-    |> IO.inspect()
+    #|> IO.inspect()
     |> sort_by_m()
     |> Enum.map(&gen_tag_cmd(&1))
     #|> Enum.each(&IO.puts(&1))
