@@ -274,6 +274,7 @@ EvanMeek / B站: 美味的樱桃菌
 *** [[https://acyanbird.github.io][山奈]]
 *** [[https://minecraft1248.github.io][minecraft1248]]
 今年的新博客
+*** [[https://fallenbreath.me][狐狸姐姐!]]
 
 ** ZhiHu
 *** [[https://zhuanlan.zhihu.com/p/138719668][用Go语言汇编计算fibonacci数列]]                                :lowlevel:

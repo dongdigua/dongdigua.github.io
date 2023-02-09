@@ -33,6 +33,7 @@
 | C-w      | jump between splits    |
 | C-o/i    | Older/Newer position   |
 | `        | mark                   |
+| ~        | change case            |
 
 ** file/split
 | key         | usage        |

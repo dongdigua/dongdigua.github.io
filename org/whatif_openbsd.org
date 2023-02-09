@@ -163,7 +163,7 @@ OpenBSD 自带的太老了, 所以要自己编译新的.
 典型的是 freetype 和 cp -n
 具体的配置放 github, 还是那夹 configs repo
 还有把 /etc/X11/xenodm/Xsetup_0 里面 xconsole 那行去掉, 难看
-还有就是进 tty 了发现图形没了要按 f5[fn:12]
+还有就是进 tty 了图形没了要按 C-M-f5[fn:9]
 
 换掉 fvwm, 舒服~
 
@@ -219,7 +219,7 @@ st 里中文显示一直是重叠的, 字符的排布和英文字母一样.
 doas rdate ntp.ntsc.ac.cn
 #+END_EXAMPLE
 
-然后我看到了一个日本人(公司?)写的文章[fn:9], 他遇到的问题完全一样, 也是重复加时区.
+然后我看到了一个日本人(公司?)写的文章[fn:8], 他遇到的问题完全一样, 也是重复加时区.
 配置内核选项, 加上 utc_offset (sysctl(2))
 #+BEGIN_SRC /etc/sysctl.conf
 kern.utc_offset=480
@@ -229,49 +229,7 @@ kern.utc_offset=480
 * Daily?
 弄了那么多, 现在可以算是日常使用了
 
-** email
-:PROPERTIES:
-:CUSTOM_ID: email
-:END:
-
-既然在一个传统 UNIX 上, 那就试试终端邮件客户端, 然后试试订阅 OpenBSD 邮件列表.
-然后就按照这篇文章[fn:7]里面配置 smtpd 和 mail,
-试了好久都不行, 好乱.
-那就试试别的? 我切回 Fedora 看了几个 YouTube 视频, 里面都用 ssmtp, 那就试试?
-也试了好久, 发现是网易邮箱不支持 starttls! 估计 smtpd 也是这个原因.
-
-然后切回 OpenBSD, 没有 ssmtp? 那试试传说中的 mutt 吧!
-文档还是得看 ArchWiki[fn:8]
-经过上面两个摧残之后这个配置感觉容易多了(注意启用 sasl), 很容易就发出了第一封邮件, 然后是怎么收邮件.
-smtp 收不了邮件, 得用 pop 或 imap.
-
-然后网易的 imap 有这个恶心东西: RFC 2971 的 ID 指令
-#+BEGIN_EXAMPLE
-SELECT Unsafe Login. Please contact kefu@188.com for help
-#+END_EXAMPLE
-我用网易只是因为我有这么一个闲邮箱,
-网易整个邮箱网站我感觉挺糟糕的, 一堆广告, 各种帮助页面都 404...
-而且我 openbsd 的邮件好长时间才送到, 不知道之后会不会丢邮件...
-鬼!
-
-那看看有什么比较好的, 上知乎一顿搜, 最后感觉 zoho mail 还可以.
-注册了一下, 我去! 配置和说明特别明了,
-密码也不是难记的 app 密码, 就是邮箱密码, 5 分钟就搞定 smtp+imap!
-再简单弄一下 gpg 加密, 能用了!
-
-头一次自己配邮件客户端, 真学到了很多!
-
-然后, 又是收不到邮件? 试了 mail.com, 不给中国注册. 
-最后发现, 不在 INBOX, 而在 Notification...
-
-*** dmesg
-邮件配置好了, 按照 FAQ[fn:10], 把 dmesg 发给 mailto:dmesg@openbsd.org , 帮助开发者更好地支持硬件
-我的标题是
-#+BEGIN_QUOTE
-Lenovo V15 G2 laptop, i915 driver cannot TearFree, Intel Wireless-AC 9560 recognized as Intel Wi-Fi 6 AX201
-#+END_QUOTE
-
-然后我又发现了这个讨论[fn:11], dmesg@openbsd.org 只是开发者可见, 公开的看 NYCBUG
+** [[https://dongdigua.github.io/mailinglist][mail]]
 
 ** 性能调优
 :PROPERTIES:
@@ -307,7 +265,7 @@ iwx0 at pci0 dev 20 function 3 "Intel Wi-Fi 6 AX201" rev 0x20, msix
 +坏了, 我成 AX201了!+
 +所以嘛, OpenBSD 就适合运行在老 ThinkPad 上 :(+
 
-原来 =hostname.iwx0= 里面, 密码要加引号...[fn:12]
+原来 =hostname.iwx0= 里面, 密码要加引号...[fn:9]
 #+BEGIN_SRC diff
 --- src/share/man/man5/hostname.if.5
 +++ src/share/man/man5/hostname.if.5
@@ -338,11 +296,8 @@ iwx0 at pci0 dev 20 function 3 "Intel Wi-Fi 6 AX201" rev 0x20, msix
 [fn:5] WebGL 水族馆 http://webglsamples.org/aquarium/aquarium.html
 [fn:6] 我: 2023 了, 试试 emacs 29 https://dongdigua.github.io/emacs29_2023
 [fn:7] OpenBSD on a Laptop https://www.c0ffee.net/blog/openbsd-on-a-laptop and [[https://youtu.be/cLk5PYYdi3A][a good video based on this article]]
-[fn:8] https://wiki.archlinux.org/title/Mutt
-[fn:9] OpenBSD pkg_add didn't work due to incorrect system time https://obsd.solutions/en/blog/2022/02/18/openbsd-pkg_add-didnt-work-due-to-wrong-time/index.html
-[fn:10] https://www.openbsd.org/faq/faq4.html#SendDmesg
-[fn:11] FAQ: dmesg archive https://www.mail-archive.com/misc@openbsd.org/msg162300.html; NYC*BUG dmesgd https://dmesgd.nycbug.org/index.cgi
-[fn:12] Switching to -current, installing firmware and wireless configuration https://youtu.be/i7WY_TVJfdA
+[fn:8] OpenBSD pkg_add didn't work due to incorrect system time https://obsd.solutions/en/blog/2022/02/18/openbsd-pkg_add-didnt-work-due-to-wrong-time/index.html
+[fn:9] Switching to -current, installing firmware and wireless configuration https://youtu.be/i7WY_TVJfdA
 
 * Related Links
 :PROPERTIES:
