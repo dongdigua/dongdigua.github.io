@@ -2,7 +2,7 @@
 #+DESCRIPTION: 不只是支线任务
 #+DATE: <2023-02-09 四>
 
-这些内容最开始是放在 [[https://dongdigua.github.io/whatif_openbsd][OpenBSD 那篇文章]] 里面的,
+这些内容最开始是放在 [[./whatif_openbsd.org][OpenBSD 那篇文章]] 里面的,
 但是写的越来越多, 而且与系统本身关系不大, 所以就拿出来单独作为一篇文章.
 
 * email
@@ -18,7 +18,9 @@
 
 然后切回 OpenBSD, 没有 ssmtp? 那试试传说中的 mutt 吧!
 文档还是得看 [[https://wiki.archlinux.org/title/Mutt][ArchWiki]]
-经过上面两个摧残之后这个配置感觉容易多了(注意启用 sasl), 很容易就发出了第一封邮件, 然后是怎么收邮件.
+这有一篇很好的文章: https://coda.world/neomutt
+
+经过上面那两个摧残之后 mutt 配置感觉容易多了(注意启用 sasl), 很容易就发出了第一封邮件, 然后是怎么收邮件.
 smtp 收不了邮件, 得用 pop 或 imap.
 
 然后网易的 imap 有这个恶心东西: RFC 2971 的 ID 指令

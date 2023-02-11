@@ -25,8 +25,7 @@
 :CUSTOM_ID: blog
 :END:
 #+TAGS: rssable(s) rssub(U) gopher(g)
-** Random Stuff Floating Around
-not related to the root blog entry (I don't know what I mean, do you?)
+** Random Single Entry Floating Around
 *** [[https://www.luogu.com.cn/blog/ivystorm/emacs-adventuredunnet-tong-guan-jiao-cheng][luogu blog: emacs dunnet 教程]]                                   :emacs:
 *** [[https://bheisler.github.io/post/state-of-gpgpu-in-rust/][The State of GPGPU in Rust]]                              :rust:lowlevel:
 *** [[https://secretgeek.github.io/html_wysiwyg/][巧用 CSS 显示 HTML 源码]]                                      :frontend:
@@ -41,8 +40,11 @@ not related to the root blog entry (I don't know what I mean, do you?)
 ** [[http://www.paulgraham.com/todo.html][Paul Graham]]
 ** [[http://www.qiusir.com/][qiusir]]                                                            :rssub:
 ** [[http://xahlee.info][XahLee]]
+@@html:<details>@@
+@@html:<summary>emacs magic</summary>@@
 #+ATTR_HTML: :width 256px
 [[http://xahlee.info/emacs/misc/i/Marisa_Kirisame_emacs_magic.png]]
+@@html:</details>@@
 ** [[http://www.catb.org/esr/][Eric S. Raymond]]
 ** [[http://www.yinwang.org/][王垠]]
 ** [[http://ruanyifeng.com/blog/][阮一峰]]                                                            :rssub:
@@ -68,6 +70,10 @@ elixir/erlang大佬, 公众号: HelloElixir
 ** [[http://blog.lujun9972.win][lujun9972]]                                                   :emacs:rssub:
 超~~~多emacs
 *** [[http://blog.lujun9972.win/emacs-document/][emacs document]]
+** [[https://justine.lol][Justine Tunney]]                                               :c:lowlevel:
+CRAZY!!!!!
+*** [[https://justine.lol/ape.html][actually portable executable]]
+
 
 ** [[https://petermolnar.net/index.html][Peter 's Homepage]]                                                 :rssub:
 #+BEGIN_QUOTE
@@ -371,6 +377,7 @@ inspiration: Veritasium
 *** [[https://youtu.be/NrjXEaTSyrw][A Checklist for Writing Linux Real-Time Applications]]
 *** [[https://youtu.be/nZudFif409M][Gentoo Linux on a 133Mhz Pentium!]]
 *** [[https://youtu.be/MnJh1xJ7rDY][lisp on arduino (Tuesday Streams)]]
+*** [[https://youtu.be/QaLvtNpoc5o][RubyKaigi 2015: JIT]]
 
 **  [[https://www.youtube.com/@Computerphile][<C>]]
 *** [[https://youtu.be/BAo5C2qbLq8][Network Time Protocol (NTP)]]
@@ -399,7 +406,7 @@ inspiration: Veritasium
 *** [[https://youtu.be/I4_ide0tEG8][JH: zip files & hack... (CVE-2022-1271 zgrep/gzip)]]
 *** [[https://youtu.be/dT9y-KQbqi4][How I hacked a hardware crypto wallet and recovered $2 million]]
 even caught by police when he was a child
-*** [[https://youtu.be/eTcVLqKpZJc][PwnFunction: Dangerous Code Hidden in Plain Sight for 12 years]] in [[https://dongdigua.github.io/wayland#pkexec][pkexec]]
+*** [[https://youtu.be/eTcVLqKpZJc][PwnFunction: Dangerous Code Hidden in Plain Sight for 12 years]] in [[./wayland.org::#pkexec][pkexec]]
 
 ** Math
 *** [[https://youtu.be/KufsL2VgELo][Group Theory]]
@@ -439,6 +446,7 @@ to filing patently fraudulent DMCA counter-notifications to avoid the terminatio
 **** [[https://www.erb.pw][homepage]]
 *** [[https://youtu.be/Q8WXvDLofL8][Plasma piano]]
 赛博钢琴家
+*** [[https://youtu.be/cGR9EOgMY6w][CYBERTRUCK BUILD (1/5)]]
 
 * r
 :PROPERTIES:
