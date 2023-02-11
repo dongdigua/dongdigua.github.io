@@ -2,7 +2,7 @@
 #+DESCRIPTION: 不只是支线任务
 #+DATE: <2023-02-09 四>
 
-这些内容最开始是放在 OpenBSD 那篇文章里面的,
+这些内容最开始是放在 [[https://dongdigua.github.io/whatif_openbsd][OpenBSD 那篇文章]] 里面的,
 但是写的越来越多, 而且与系统本身关系不大, 所以就拿出来单独作为一篇文章.
 
 * email
@@ -69,14 +69,15 @@ Lenovo V15 G2 laptop, i915 driver cannot TearFree, Intel Wireless-AC 9560 recogn
 
 emm, 看起来还算靠谱, 只是俄文读不明白.
 试了一下, 收发特别快, 不像国内邮件服务商那样磨磨蹭蹭, 就是我这边访问不够快.
+或许我要弄个 offlineimap, 暂时懒得弄了.
 还有就是切换文件夹不能从 imap 根目录, 得用比如 ==INBOX=
+
+然后我发现 mail.ru 也丢邮件[id:mailru]
 
 * mailing list
 :PROPERTIES:
 :CUSTOM_ID: list
 :END:
-
-zoho 还是丢邮件啊...
 
 关于是否 CC, 我第一次 CC 了, 根据我看到其他邮件的总结.
 CC 的邮件会在 mutt 里面有 =T= 标记, 但是会有两份.
@@ -84,11 +85,26 @@ CC 的邮件会在 mutt 里面有 =T= 标记, 但是会有两份.
 #+BEGIN_QUOTE
 No need to cc: me. I's subscribed to misc@.
 #+END_QUOTE
-所以我要不要 CC? 不幸的是, 我没收到前一封邮件, 而网页版没法看到底怎么 CC 的...
-但至少我觉得特别须要提醒的要 to 那个人并 CC 邮件列表.
++所以我要不要 CC? 不幸的是, 我没收到前一封邮件, 而网页版没法看到底怎么 CC 的...+
++但至少我觉得特别须要提醒的要 to 那个人并 CC 邮件列表.+
+to 并 cc 是对的, 这样如果这是一个有很多回复的 thread, 不会弄乱回复树
 
 ** [[https://marc.info/?t=167575668100001&r=1&w=2][Cannot use Intel Tearfree on Lenovo V15 G2 laptop]]
+:PROPERTIES:
+:CUSTOM_ID: intel
+:END:
 头一次在邮件列表发声, 真不错, 十分滴核邪铀碍, 很块得到了解决方案.
 ** [[https://marc.info/?t=167576751200001&r=1&w=2][keyboad left ALT not working on console - thinkpad t410]]
 遇到了相同问题, 并解决了!
 这个邮件的回复等半天(真的是半天12h)还没送到[id:delay], 我是手动下载下来然后 =mutt -f marc.mbox= 回复的
+** [[https://marc.info/?t=167599483300001&r=1&w=2][Why some mail were lost, is this common?]]
+:PROPERTIES:
+:CUSTOM_ID: mailru
+:END:
+换 OpenMbox.net 了, 希望是最后一次换邮件服务商
+** [[https://www.mail-archive.com/misc@openbsd.org/msg184084.html][Live stick / cd from official sources]]
+2023.2 讨论最火的一个帖子了, 提到这个链接不错: https://liveusb-openbsd.sourceforge.io
+我用 mail-archive.org 因为能看回复树, 我邮件收不全, 从 marc 下载再手动 =link-threads= 真的太累了..
+这个 my25mb, 似乎是个中国人, 真的是大闹邮件列表.
+
+

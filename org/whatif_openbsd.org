@@ -179,6 +179,8 @@ EndSection
 因为 =(II) intel(0): Using Kernel Mode Setting driver: i915, version 1.6.0 20201103=
 驱动太老了...
 
+在邮件列表问了[fn:10], intel(4) 已经停了, 解决方案是用 =picom= 的 vsync
+
 *** st 中文显示重叠
 st 里中文显示一直是重叠的, 字符的排布和英文字母一样.
 废了我好大劲, 我安装了巨大的 gnome-terminal (用 dbus-launch gnome-terminal 启动), 好使.
@@ -298,6 +300,7 @@ iwx0 at pci0 dev 20 function 3 "Intel Wi-Fi 6 AX201" rev 0x20, msix
 [fn:7] OpenBSD on a Laptop https://www.c0ffee.net/blog/openbsd-on-a-laptop and [[https://youtu.be/cLk5PYYdi3A][a good video based on this article]]
 [fn:8] OpenBSD pkg_add didn't work due to incorrect system time https://obsd.solutions/en/blog/2022/02/18/openbsd-pkg_add-didnt-work-due-to-wrong-time/index.html
 [fn:9] Switching to -current, installing firmware and wireless configuration https://youtu.be/i7WY_TVJfdA
+[fn:10] https://dongdigua.github.com/mailinglist#intel
 
 * Related Links
 :PROPERTIES:
