@@ -1,0 +1,79 @@
+--- ../bbs_gbk_utf8.html	2023-02-11 13:09:55.659432422 +0800
++++ bbs_gbk_utf8.html	2023-02-11 13:29:23.784185878 +0800
+@@ -236,49 +236,49 @@
+ <div class="org-src-container">
+-<pre class="src src-C"><span style="font-weight: bold;">#include</span> <span style="font-style: italic;">&lt;stdio.h&gt;</span>
+-<span style="font-weight: bold;">#include</span> <span style="font-style: italic;">&lt;iconv.h&gt;</span>
++<pre class="src src-C"><span style="color: #e67e80;">#include</span> <span style="color: #4E9A06;">&lt;stdio.h&gt;</span>
++<span style="color: #e67e80;">#include</span> <span style="color: #4E9A06;">&lt;iconv.h&gt;</span>
+ 
+-<span style="font-weight: bold;">#define</span> <span style="font-weight: bold; font-style: italic;">UTF8_SIZE</span> 4
++<span style="color: #e67e80;">#define</span> <span style="color: #0084C8; font-weight: bold;">UTF8_SIZE</span> 4
+ 
+-<span style="font-weight: bold; text-decoration: underline;">int</span>
+-<span style="font-weight: bold;">convert_one</span>(<span style="font-weight: bold; text-decoration: underline;">iconv_t</span> <span style="font-weight: bold; font-style: italic;">cd</span>)
++<span style="color: #2F8B58; font-weight: bold;">int</span>
++<span style="color: #00578E; font-weight: bold;">convert_one</span>(<span style="color: #2F8B58; font-weight: bold;">iconv_t</span> <span style="color: #0084C8; font-weight: bold;">cd</span>)
+ {
+-    <span style="font-weight: bold; text-decoration: underline;">char</span> <span style="font-weight: bold; font-style: italic;">inbuf</span>[2] = {0};
+-    <span style="font-weight: bold; text-decoration: underline;">char</span> <span style="font-weight: bold; font-style: italic;">outbuf</span>[UTF8_SIZE] = {0};
+-    <span style="font-weight: bold; text-decoration: underline;">size_t</span> <span style="font-weight: bold; font-style: italic;">insize</span> = 1;
+-    <span style="font-weight: bold; text-decoration: underline;">size_t</span> <span style="font-weight: bold; font-style: italic;">outsize</span> = UTF8_SIZE;
+-
+-    <span style="font-weight: bold; text-decoration: underline;">char</span> <span style="font-weight: bold; font-style: italic;">c</span> = getchar();
+-    <span style="font-weight: bold;">if</span> (c == EOF)
+-        <span style="font-weight: bold;">return</span> 1;
++    <span style="color: #2F8B58; font-weight: bold;">char</span> <span style="color: #0084C8; font-weight: bold;">inbuf</span>[2] = {0};
++    <span style="color: #2F8B58; font-weight: bold;">char</span> <span style="color: #0084C8; font-weight: bold;">outbuf</span>[UTF8_SIZE] = {0};
++    <span style="color: #2F8B58; font-weight: bold;">size_t</span> <span style="color: #0084C8; font-weight: bold;">insize</span> = 1;
++    <span style="color: #2F8B58; font-weight: bold;">size_t</span> <span style="color: #0084C8; font-weight: bold;">outsize</span> = UTF8_SIZE;
++
++    <span style="color: #2F8B58; font-weight: bold;">char</span> <span style="color: #0084C8; font-weight: bold;">c</span> = getchar();
++    <span style="color: #A52A2A; font-weight: bold;">if</span> (c == EOF)
++        <span style="color: #A52A2A; font-weight: bold;">return</span> 1;
+     inbuf[0] = c;
+ 
+-    <span style="font-weight: bold; text-decoration: underline;">char</span> * <span style="font-weight: bold; font-style: italic;">pIn</span> = inbuf;
+-    <span style="font-weight: bold; text-decoration: underline;">char</span> * <span style="font-weight: bold; font-style: italic;">pOut</span> = (<span style="font-weight: bold; text-decoration: underline;">char</span>*) outbuf;
++    <span style="color: #2F8B58; font-weight: bold;">char</span> * <span style="color: #0084C8; font-weight: bold;">pIn</span> = inbuf;
++    <span style="color: #2F8B58; font-weight: bold;">char</span> * <span style="color: #0084C8; font-weight: bold;">pOut</span> = (<span style="color: #2F8B58; font-weight: bold;">char</span>*) outbuf;
+ 
+-    <span style="font-weight: bold; text-decoration: underline;">size_t</span> <span style="font-weight: bold; font-style: italic;">iconv_result</span> = iconv(cd, &amp;pIn, &amp;insize, &amp;pOut, &amp;outsize);
+-    <span style="font-weight: bold;">if</span> (iconv_result == (<span style="font-weight: bold; text-decoration: underline;">size_t</span>) -1) {
++    <span style="color: #2F8B58; font-weight: bold;">size_t</span> <span style="color: #0084C8; font-weight: bold;">iconv_result</span> = iconv(cd, &amp;pIn, &amp;insize, &amp;pOut, &amp;outsize);
++    <span style="color: #A52A2A; font-weight: bold;">if</span> (iconv_result == (<span style="color: #2F8B58; font-weight: bold;">size_t</span>) -1) {
+         inbuf[1] = getchar();
+         insize = 2;
+         iconv(cd, &amp;pIn, &amp;insize, &amp;pOut, &amp;outsize);
+     }
+ 
+-    <span style="font-weight: bold;">for</span> (<span style="font-weight: bold; text-decoration: underline;">int</span> <span style="font-weight: bold; font-style: italic;">i</span> = 0; i &lt; UTF8_SIZE; i++) {
+-        <span style="font-weight: bold;">if</span> (outbuf[i] != 0)
++    <span style="color: #A52A2A; font-weight: bold;">for</span> (<span style="color: #2F8B58; font-weight: bold;">int</span> <span style="color: #0084C8; font-weight: bold;">i</span> = 0; i &lt; UTF8_SIZE; i++) {
++        <span style="color: #A52A2A; font-weight: bold;">if</span> (outbuf[i] != 0)
+             putchar(outbuf[i]);
+         fflush(stdout);
+     }
+-    <span style="font-weight: bold;">return</span> 0;
++    <span style="color: #A52A2A; font-weight: bold;">return</span> 0;
+ }
+ 
+-<span style="font-weight: bold; text-decoration: underline;">int</span>
+-<span style="font-weight: bold;">main</span>(<span style="font-weight: bold; text-decoration: underline;">void</span>)
++<span style="color: #2F8B58; font-weight: bold;">int</span>
++<span style="color: #00578E; font-weight: bold;">main</span>(<span style="color: #2F8B58; font-weight: bold;">void</span>)
+ {
+-    <span style="font-weight: bold; text-decoration: underline;">iconv_t</span> <span style="font-weight: bold; font-style: italic;">cd</span> = iconv_open(<span style="font-style: italic;">"UTF8"</span>, <span style="font-style: italic;">"GBK"</span>);
+-    <span style="font-weight: bold;">while</span> (1)
+-        <span style="font-weight: bold;">if</span> (convert_one(cd) == 1) <span style="font-weight: bold;">break</span>;
++    <span style="color: #2F8B58; font-weight: bold;">iconv_t</span> <span style="color: #0084C8; font-weight: bold;">cd</span> = iconv_open(<span style="color: #4E9A06;">"UTF8"</span>, <span style="color: #4E9A06;">"GBK"</span>);
++    <span style="color: #A52A2A; font-weight: bold;">while</span> (1)
++        <span style="color: #A52A2A; font-weight: bold;">if</span> (convert_one(cd) == 1) <span style="color: #A52A2A; font-weight: bold;">break</span>;
+ 
+     iconv_close(cd);
+-    <span style="font-weight: bold;">return</span> 0;
++    <span style="color: #A52A2A; font-weight: bold;">return</span> 0;
+ }
+ </pre>
+ </div>
+\ No newline at end of file

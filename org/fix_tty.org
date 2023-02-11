@@ -4,7 +4,7 @@
 
 * What Happened
 After switching to f37, something changed:
-- [[https://dongdigua.github.io/wayland#dm][sddm]] don't work
+- [[./wayland.org::#dm][sddm]] don't work
 - sway don't have environment variables
 - v2rayA don't start automatically
 

@@ -9,19 +9,6 @@ https://github.com/rgb-24bit/org-html-theme-list org-joshua
     font-style: normal;
 }
 
-@font-face{ /* FROM https://tlakh.xyz */
-    font-family: Source Serif;
-    font-display: auto;
-    src: url(https://cdn.jsdelivr.net/npm/@fontsource/source-serif-4@4.5.16/files/source-serif-4-all-400-normal.woff) format('woff');
-    font-style: normal;
-}
-@font-face{
-    font-family: Source Serif;
-    font-display: auto;
-    src: url(https://cdn.jsdelivr.net/npm/@fontsource/source-serif-4@4.5.16/files/source-serif-4-all-400-italic.woff) format('woff');
-    font-style: italic;
-}
-
 @media all
 {
     body {

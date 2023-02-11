@@ -231,7 +231,7 @@ kern.utc_offset=480
 * Daily?
 弄了那么多, 现在可以算是日常使用了
 
-** [[https://dongdigua.github.io/mailinglist][mail]]
+** [[./mailinglist.org][mail]]
 
 ** 性能调优
 :PROPERTIES:
@@ -283,7 +283,7 @@ iwx0 at pci0 dev 20 function 3 "Intel Wi-Fi 6 AX201" rev 0x20, msix
 
 我有时候会想访问 Linux 上的文件, 但是似乎不支持 btrfs...
 
-** [[https://dongdigua.github.io/bbs_gbk_utf8][支线任务: 中文 BBS GBK 转 UTF8]]
+** [[./bbs_gbk_utf8.org][支线任务: 中文 BBS GBK 转 UTF8]]
 
 
 * Footnotes
