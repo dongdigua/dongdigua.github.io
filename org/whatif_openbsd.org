@@ -108,7 +108,7 @@ grub> boot
 
 然后就是安装一堆软件
 我没有安装那些 "现代化 UNIX 工具", 比如 htop bat exa zoxide, (ripgrep 除外, 太好用了)
-7z 真的好用, 但是我觉得更应该学学标准的 UNIX 压缩解压工具 
+7z 真的好用, 但是我觉得更应该学学标准的 UNIX 压缩解压工具
 #+BEGIN_SRC ksh
 doas pkg_add firefox neovim git pcmanfm noto-cjk # 特别必要的
 doas pkg_add ripgrep fzf ncdu neofetch ranger p7zip colortree # 好用的工具
@@ -285,6 +285,22 @@ iwx0 at pci0 dev 20 function 3 "Intel Wi-Fi 6 AX201" rev 0x20, msix
 
 ** [[./bbs_gbk_utf8.org][支线任务: 中文 BBS GBK 转 UTF8]]
 
+** @@html:<a href=https://dongdigua.github.io/code/bsd_tetris_add_reverse_rotate.patch type=text/plain>add reverse rotation to BSD Tetris</a>@@
+:PROPERTIES:
+:CUSTOM_ID: tetris
+:END:
+
+** songs I like
+#+MACRO: song [[https://www.openbsd.org/lyrics.html#$1][song$1]]
+- {{{song(57)}}}: Source Fish
+- {{{song(62)}}}: A 3 line diff (低沉的小调)
+- {{{song(49)}}}: The Answer
+- {{{song(58d)}}}: A Year in the Life
+- {{{song(54)}}}: Our favorite hacks (女声)
+- {{{song(69)}}}: Vetera Novis (中国古典音乐)
+- {{{song(46)}}}: Planet of the Users (Cyberpunk)
+- {{{song(45)}}}: Games
+
 
 * Footnotes
 :PROPERTIES:
@@ -313,5 +329,6 @@ iwx0 at pci0 dev 20 function 3 "Intel Wi-Fi 6 AX201" rev 0x20, msix
 - [[https://youtu.be/1GYq8eD90nE][OpenBSD and DWM: True Minimalism]]
 - [[https://kevinthomas.dev/posts/openbsd-thinkpadt480.html][Installing and setting up OpenBSD on Thinkpad T480 + improving slowness]]
 - [[https://youtu.be/zXaHM7114Uk][Puffy vs. Tux! The difference between OpenBSD and GNU/Linux]]
-- [[https://videos.lukesmith.xyz/w/ion4TuavEAqKRWeavWTCBe][LukeSmith: Email on the terminal with mutt]]
+- [[https://videos.lukesmith.xyz/w/ion4TuavEAqKRWeavWTCBe][LukeSmith video: Email on the terminal with mutt]]
 - [[https://youtu.be/o8aiSJ2nXcc][OpenBSD Guy: ffmpeg screencast]]
+- [[https://videos.pair2jeux.tube/a/solene][solene's video]]
