@@ -361,6 +361,7 @@ inspiration: Veritasium
 *** [[https://youtu.be/nfF91Z6fqGk][CMD 登录B站]]
 *** [[https://youtu.be/crnEygp4C6g][Jeff Geerling: FINALLY! A GPU works on the Raspberry Pi!]]
 *** [[https://youtu.be/jlPaby7suOc][Every Clojure Talk Ever]]
+*** [[https://youtu.be/CnbVCNIh1NA][Fructure: A Structured Editing Engine in Racket]]
 *** [[https://youtu.be/Fq9chEBQMFE][what if I try to malloc too much memory]]
 *** [[https://youtu.be/zJ-8DZhzBEE][what your favourite pl says about you]]
 *** [[https://youtu.be/9vXKvku6y5A][ArcaOS: Modern OS/2]]
@@ -481,6 +482,7 @@ Huwawei NB!
 ** [[https://marc.info/?l=openbsd-tech&m=167374666324119&w=2][openbsd-tech: xonly on amd64: testing wanted]]
 ** [[https://lists.freebsd.org/pipermail/freebsd-current/2003-July/006889.html][freebsd : Annoucning DragonFly BSD!]]
 ** [[https://minnie.tuhs.org/pipermail/tuhs/2022-April/025643.html][TUHS: Sad News - we last two wonderful people in the past few weeks]]
+** [[https://lore.kernel.org/lkml/63efd7ab.170a0220.3442b.6609@mx.google.com/][Linus: If you cannot explain a merge, then JUST DON'T DO IT]]
 
 * Other
 :PROPERTIES:

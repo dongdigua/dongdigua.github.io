@@ -285,7 +285,7 @@ iwx0 at pci0 dev 20 function 3 "Intel Wi-Fi 6 AX201" rev 0x20, msix
 
 ** [[./bbs_gbk_utf8.org][支线任务: 中文 BBS GBK 转 UTF8]]
 
-** @@html:<a href=https://dongdigua.github.io/code/bsd_tetris_add_reverse_rotate.patch type=text/plain>add reverse rotation to BSD Tetris</a>@@
+** [[https://github.com/dongdigua/tetris-custom][Add some useful feature in BSD Tetris]]
 :PROPERTIES:
 :CUSTOM_ID: tetris
 :END:

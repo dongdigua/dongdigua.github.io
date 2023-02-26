@@ -62,16 +62,17 @@ https://orgmode.org/worg/dev/org-export-reference.html
 *Bold* /italic/ _underline_ +strikethrough+ ~code~ =verbatim=
 
 ** normal
-| key     | usage               |
-|---------+---------------------|
-| M-%     | 替换                |
-| M-;     | 区域切换注释        |
-| C-x C-; | 行切换注释          |
-| C-y     | paste to minibuffer |
-| M-&/!   | async/shell command |
-| C-M-\   | indent-region       |
-| M-y     | past previous       |
-| C-x ^   | enlarge-window      |
+| key       | usage               |
+|-----------+---------------------|
+| M-%       | 替换                |
+| M-;       | 区域切换注释        |
+| C-x C-;   | 行切换注释          |
+| C-y       | paste to minibuffer |
+| M-&/!     | async/shell command |
+| C-M-\     | indent-region       |
+| M-y       | past previous       |
+| C-x ^     | enlarge-window      |
+| C-q <tab> | insert a tab        |
 
 https://www.masteringemacs.org/article/fun-games-in-emacs
 
