@@ -300,6 +300,7 @@ iwx0 at pci0 dev 20 function 3 "Intel Wi-Fi 6 AX201" rev 0x20, msix
 - {{{song(69)}}}: Vetera Novis (中国古典音乐)
 - {{{song(46)}}}: Planet of the Users (Cyberpunk)
 - {{{song(45)}}}: Games
+- {{{song(39)}}}: Blob (from [[./mailinglist.org::#livecd][mailing list]])
 
 
 * Footnotes

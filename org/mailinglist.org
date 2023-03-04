@@ -105,8 +105,12 @@ to 并 cc 是对的, 这样如果这是一个有很多回复的 thread, 不会�
 :END:
 换 OpenMbox.net 了, 希望是最后一次换邮件服务商
 ** [[https://www.mail-archive.com/misc@openbsd.org/msg184084.html][Live stick / cd from official sources]]
+:PROPERTIES:
+:CUSTOM_ID: livecd
+:END:
 2023.2 讨论最火的一个帖子了, 提到这个链接不错: https://liveusb-openbsd.sourceforge.io
 我用 mail-archive.org 因为能看回复树, 我邮件收不全, 从 marc 下载再手动 =link-threads= 真的太累了..
 这个 my25mb, 似乎是个中国人, 真的是大闹邮件列表.
-
+** [[https://marc.info/?l=openbsd-misc&m=167785692131164&w=2][openbsd get really hot/warm]]
+又一个别人跟我遇到相同问题然后我顺便解决了我的问题
 

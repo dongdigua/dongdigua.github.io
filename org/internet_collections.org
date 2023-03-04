@@ -60,7 +60,7 @@ Two Principles of Deadlines:
 #+END_QUOTE
 *** [[https://bford.info/pub/net/p2pnat/][Peer-to-Peer Communication Across Network Address Translators]]     :wow:
 ** [[https://coredumped.dev/][Core Dumped]]                                         :rust:lowlevel:emacs:
-all 7 article are of high quality
+a guy trying to rust emacs
 ** [[http://www.jinbuguo.com][金步国作品集]]                                             :lowlevel:linux:
 kernel, LFS
 ** [[https://nullprogram.com][null program]]                                                   :lowlevel:
@@ -73,6 +73,7 @@ elixir/erlang大佬, 公众号: HelloElixir
 ** [[https://justine.lol][Justine Tunney]]                                               :c:lowlevel:
 CRAZY!!!!!
 *** [[https://justine.lol/ape.html][actually portable executable]]
+**** [[https://jeskin.net/blog/getting-started-with-cosmopolitan-libc][Getting Started with Cosmopolitan Libc]]
 
 
 ** [[https://petermolnar.net/index.html][Peter 's Homepage]]                                                 :rssub:
@@ -255,6 +256,8 @@ very beautiful page
 *** [[https://research.exoticsilicon.com/articles/console_screendumps][Console Screendumps]]                                       :mailinglist:
 ** [[https://www.a1k0n.net][a1k0n]]                                                              :math:
 *** [[https://www.a1k0n.net/2011/07/20/donut-math.html][donut.c]]
+** [[https://prithu.dev][prithu.dev]]
+** [[https://awesomekling.github.io][Andreas Kling (SerenityOS)]]
 
 ** B/HWS/fri3nds
 *** [[https://shakaianee.top/][社会易姐]]
@@ -408,6 +411,7 @@ inspiration: Veritasium
 *** [[https://youtu.be/dT9y-KQbqi4][How I hacked a hardware crypto wallet and recovered $2 million]]
 even caught by police when he was a child
 *** [[https://youtu.be/eTcVLqKpZJc][PwnFunction: Dangerous Code Hidden in Plain Sight for 12 years]] in [[./wayland.org::#pkexec][pkexec]]
+*** [[https://youtu.be/GEbn3nHyKnA][How One Line of Code Almost Blew Up the Internet]]
 
 ** Math
 *** [[https://youtu.be/KufsL2VgELo][Group Theory]]
@@ -475,14 +479,14 @@ to filing patently fraudulent DMCA counter-notifications to avoid the terminatio
 ** [[https://news-web.php.net/php.internals/70691][PHP function hashing mechanism was strlen()]]
 ** [[https://swtch.com/duffs-device/td-1983.txt][Duffs device]]
 ** [[https://lists.freedesktop.org/archives/systemd-devel/2022-September/048352.html][Support for unmerged-usr systems will be REMOVED]]
-** [[https://lists.gnu.org/archive/html/emacs-devel/2020-10/msg00376.html][Include leaf in Emacs distribution]]
 ** [[https://lore.kernel.org/lkml/20221102084921.1615-3-thunder.leizhen@huawei.com/][Christmas present with Linux 6.2]]
 Huwawei NB!
 ** [[https://lkml.org/lkml/2007/7/27/426][Linus re SD]]
-** [[https://marc.info/?l=openbsd-tech&m=167374666324119&w=2][openbsd-tech: xonly on amd64: testing wanted]]
 ** [[https://lists.freebsd.org/pipermail/freebsd-current/2003-July/006889.html][freebsd : Annoucning DragonFly BSD!]]
 ** [[https://minnie.tuhs.org/pipermail/tuhs/2022-April/025643.html][TUHS: Sad News - we last two wonderful people in the past few weeks]]
 ** [[https://lore.kernel.org/lkml/63efd7ab.170a0220.3442b.6609@mx.google.com/][Linus: If you cannot explain a merge, then JUST DON'T DO IT]]
+** [[https://lists.gnu.org/archive/html/emacs-devel/2023-01/msg00425.html][Re: Consideration for Rust contributions in Emacs]]
+from emacs-china, about multi-thread
 
 * Other
 :PROPERTIES:
@@ -510,9 +514,9 @@ a webos using oxygen visual design
 worth reading
 *** [[http://phrack.org/issues/49/14.html][Smashing The Stack For Fun And Profit]]
 *** [[http://phrack.org/issues/70/15.html][YouTube Security Scene - LiveOverflow!]]
-** [[https://akrl.sdf.org/gccemacs.html][gccemacs]]
-*** [[https://akrl.sdf.org/gccemacs_els2020.pdf][slides_els2020]]
-** [[https://quotes.tilde.chat]]
+** [[https://akrl.sdf.org][akrl]]
+*** [[https://akrl.sdf.org/gccemacs.html][gccemacs]]
+**** [[https://akrl.sdf.org/gccemacs_els2020.pdf][slides_els2020]]
 ** [[http://decss.zoy.org][42 ways to distribute DeCSS]]
 *** [[http://www.cs.cmu.edu/~dst/DeCSS/Kesden/index.html][Lecture 33: Content Scrambling System]]
 ** [[https://custodians.online/chinese.html][声援 Library Genesis 和 Sci-Hub]]
@@ -534,3 +538,4 @@ good learning resource!
 BSD asm
 ** [[https://512pixels.net/projects/default-mac-wallpapers-in-5k/][Every Default macOS Wallpaper]]
 ** [[https://killedbymicrosoft.info][Killed by Microsoft]] and [[https://killedbygoogle.com][Killed by Google]]
+** [[https://neal.fun/wonders-of-street-view/][Wonders of Street View]]
