@@ -258,6 +258,8 @@ very beautiful page
 *** [[https://www.a1k0n.net/2011/07/20/donut-math.html][donut.c]]
 ** [[https://prithu.dev][prithu.dev]]
 ** [[https://awesomekling.github.io][Andreas Kling (SerenityOS)]]
+** [[https://blog.codingnow.com][云风的 BLOG]]
+*** [[https://blog.codingnow.com/2012/07/c_coroutine.html][C 的 coroutine 库]]
 
 ** B/HWS/fri3nds
 *** [[https://shakaianee.top/][社会易姐]]
@@ -382,6 +384,7 @@ inspiration: Veritasium
 *** [[https://youtu.be/nZudFif409M][Gentoo Linux on a 133Mhz Pentium!]]
 *** [[https://youtu.be/MnJh1xJ7rDY][lisp on arduino (Tuesday Streams)]]
 *** [[https://youtu.be/QaLvtNpoc5o][RubyKaigi 2015: JIT]]
+*** [[https://youtu.be/1EIpek60rs0][DT: Linux Has Become Complicated And Limiting]]
 
 **  [[https://www.youtube.com/@Computerphile][<C>]]
 *** [[https://youtu.be/BAo5C2qbLq8][Network Time Protocol (NTP)]]

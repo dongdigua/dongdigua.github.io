@@ -38,6 +38,7 @@ var data = [
     "Emacs has Evil, but Vim doesn't have Magit",
     "免费服务的代价就是你自己",
     "<a id=quote href=https://www.openbsd.org/lyrics.html#62> The only change that was required was a three-line diff</a>",
+    "<a id=quote href=https://www.gnu.org/music/free-software-song.en.html>GNU SLASH MUZIC</a>",
 ];
 
 var index = Math.floor((Math.random() * data.length));
