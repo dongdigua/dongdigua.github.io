@@ -1,7 +1,7 @@
 ## Table of Contents
 ### Posts (sorted by time)
+- [Project that Annoys Me](annoying_project.gmi.txt)<br>
 - [玩转邮件列表](mailinglist)<br>
-- [支线任务: 中文 BBS GBK 转 UTF8](bbs_gbk_utf8)<br>
 - [我要不要试试 OpenBSD](whatif_openbsd)<br>
 - [一个乐子 commit](lol.diff.txt)<br>
 - [一次大备份](backup_everything)<br>

@@ -1,0 +1,20 @@
+# Project that Annoys Me
+2023-03-31 Fri
+
+First of all, I'm a noob to C.
+
+I've been working on a project this month to experiment porting TUI application to ape[1].
+It was too hard for me, more than just modifying the build script (I also know little about it).
+
+Tetris[2] in bsdgames, for example (actually I spent most time on it), uses termcap, which is not portable.
+
+So I have to either write a "termcap" that only uses VT escape character,
+or just write some helper function like other Cosmopolitan projects[3].
+
+I had no experience at all, I need to learn more, but where should I start from?
+HELP!
+
+
+=> https://justine.lol/ape.html                   [1]
+=> https://github.com/dongdigua/tetris-custom     [2]
+=> https://github.com/shmup/awesome-cosmopolitan  [3]

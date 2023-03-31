@@ -139,9 +139,11 @@ uhh, 水族馆帧率没变...
 这个当然要自己编译, 今天 git.sv.gnu.org 特别慢, 而 github 快得离谱
 源码下载下来之后编译, 由于是纯 X, 所以选项和之前那篇[fn:6]里面的不一样
 着急用, 所以参数还没加全
-#+BEGIN_SRC ksh
+#+BEGIN_SRC shell
 ./configure CFLAGS="-march=native -O3 -pipe -flto=thin -fstack-protector-strong" \
-            --with-x --with-gif=ifavailable
+            --with-x \
+            --with-gif=ifavailable \
+            --enable-link-time-optimization
 #+END_SRC
 然后就是各种依赖, 大多数 X 相关的系统都自带了
 之后各种包就容易了, 用我写的 =setup-what-pkg= 宏自动安装所有包
@@ -282,8 +284,6 @@ iwx0 at pci0 dev 20 function 3 "Intel Wi-Fi 6 AX201" rev 0x20, msix
 :END:
 
 我有时候会想访问 Linux 上的文件, 但是似乎不支持 btrfs...
-
-** [[./bbs_gbk_utf8.org][支线任务: 中文 BBS GBK 转 UTF8]]
 
 ** [[https://github.com/dongdigua/tetris-custom][Add some useful feature in BSD Tetris]]
 :PROPERTIES:

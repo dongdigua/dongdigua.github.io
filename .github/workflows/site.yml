@@ -52,7 +52,6 @@ jobs:
           cd _site && tree
           sudo ./patches/icons.sh
           sudo ./patches/color.sh
-          sudo patch -p1 < ./patches/bbs_gbk_utf8-highlight-adwaita.patch
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
