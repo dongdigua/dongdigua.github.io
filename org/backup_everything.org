@@ -15,6 +15,9 @@ BIOS: ami
 但是这种 IO 密集型任务南桥会很烫烫烫, 所以还是开着
 
 * Alpine? no
+:PROPERTIES:
+:CUSTOM_ID: alpine
+:END:
 Alpine 是一个很好的发行版, 使用 "suck less" 的 musl 和 OpenRC
 ps 看进程不到一页
 *但 是*

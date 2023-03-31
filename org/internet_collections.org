@@ -1,7 +1,7 @@
 #+TAGS: elixir(e) rust(r) c(c) lisp(l) python(p) nim(n)
 #+TAGS: lowlevel(w) frontend(f) backend(b) algorithm(a) math(t)
 #+TAGS: hack(h) fun(u) wow(O)
-#+TAGS: emacs(m) linux(x) iot(i) plan9(9) BSD(B)
+#+TAGS: emacs(m) linux(x) iot(i) plan9(9) BSD(B) PGP(P)
 #+TAGS: smth mailinglist
 #+OPTIONS: toc:1 ^:{}
 
@@ -16,8 +16,8 @@
 #+END_SRC
 
 #+BEGIN_QUOTE
-这才是互联网好玩的地方, 你总能在某个奇怪的角落发现神奇的东西
--- 我
+You can always find something magical on the Internet.
+-- says an anonymous AI
 #+END_QUOTE
 
 * (Personal) Blogs
@@ -171,13 +171,14 @@ funny byte
 **** [[https://lantian.pub/article/modify-website/how-to-kill-the-dn42-network.lantian/][如何引爆 DN42 网络]]
 ** [[https://ulyc.github.io/][UlyC]]                                                             :python:
 *** [[https://ulyc.github.io/2022/08/10/sourcehut-the-hackers-forge/][sourcehut,  一个反叛而又正统的代码托管平台]]
-*** [[https://ulyc.github.io/2021/01/13/2021年-用更现代的方法使用PGP-上/][2021年, 用更现代的方法使用PGP]]
+*** [[https://ulyc.github.io/2021/01/13/2021年-用更现代的方法使用PGP-上/][2021年, 用更现代的方法使用PGP]]                                     :PGP:
 #+BEGIN_QUOTE
 同样是非对称算法, 为什么PGP的私钥就长这么多呢？
 因为他们用的算法不同, 比特币默认使用的是ECDSA的 secp256k1算法, 该算法只是用来签名和认证, 并不用来加密
 (signify 只用于签名认证, age 只用于加密, 所以密钥也比较短)
 #+END_QUOTE
 **** [[https://spwo.notion.site/GitHub-6b1e1d57f52c4664bff61cadb3f9cb8d][震惊! 竟然有人在 GitHub 上冒充我的身份!]]
+**** [[https://chenhe.me/post/yubikey-starting-gpg/][YubiKey 入手记 - GPG]]
 *** [[https://ulyc.github.io/2019/08/01/初窥CORB/][Cross-Origin Read Blocking]]
 ** [[https://kernal.eu][kernal]]
 Welcome to the darkest dungeon of kernal
@@ -260,6 +261,10 @@ very beautiful page
 ** [[https://awesomekling.github.io][Andreas Kling (SerenityOS)]]
 ** [[https://blog.codingnow.com][云风的 BLOG]]
 *** [[https://blog.codingnow.com/2012/07/c_coroutine.html][C 的 coroutine 库]]
+** [[https://feng.si][feng.si]]
+*** [[https://dejavu.moe/posts/vanity-pgp/][某科学的 PGP 算号指南]]                                             :PGP:
+*** [[https://feng.si/posts/2019/07/centos-the-last-linux-distro-you-should-ever-consider][CentOS: 永远有多远就离它多远]]
+
 
 ** B/HWS/fri3nds
 *** [[https://shakaianee.top/][社会易姐]]
@@ -385,6 +390,7 @@ inspiration: Veritasium
 *** [[https://youtu.be/MnJh1xJ7rDY][lisp on arduino (Tuesday Streams)]]
 *** [[https://youtu.be/QaLvtNpoc5o][RubyKaigi 2015: JIT]]
 *** [[https://youtu.be/1EIpek60rs0][DT: Linux Has Become Complicated And Limiting]]
+*** [[https://youtu.be/saq3JGOsB3M][How to Predict a DVD Logo Hitting the Corner!]]
 
 **  [[https://www.youtube.com/@Computerphile][<C>]]
 *** [[https://youtu.be/BAo5C2qbLq8][Network Time Protocol (NTP)]]
@@ -490,6 +496,7 @@ Huwawei NB!
 ** [[https://lore.kernel.org/lkml/63efd7ab.170a0220.3442b.6609@mx.google.com/][Linus: If you cannot explain a merge, then JUST DON'T DO IT]]
 ** [[https://lists.gnu.org/archive/html/emacs-devel/2023-01/msg00425.html][Re: Consideration for Rust contributions in Emacs]]
 from emacs-china, about multi-thread
+** [[https://lore.kernel.org/all/20230314103316.313e5f61@kernel.org/][We don't feel comfortable accepting patches from or relating to hardware produced by your organization]]
 
 * Other
 :PROPERTIES:

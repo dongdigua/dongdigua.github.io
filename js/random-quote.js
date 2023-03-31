@@ -37,8 +37,10 @@ var data = [
     "你说得对，但是《长安汽车》是由艺画开天自主研发的一款全新开放世界冒险游戏。",
     "Emacs has Evil, but Vim doesn't have Magit",
     "免费服务的代价就是你自己",
-    "<a id=quote href=https://www.openbsd.org/lyrics.html#62> The only change that was required was a three-line diff</a>",
+    "<a id=quote href=https://www.openbsd.org/lyrics.html#62>The only change that was required was a three-line diff</a>",
     "<a id=quote href=https://www.gnu.org/music/free-software-song.en.html>GNU SLASH MUZIC</a>",
+    "<a id=quote href=https://book.bsdcn.org/di-19-zhang-wen-xue-gu-shi/di-19.3-jie-linux-yu-ku-nan-zhe-xue.html>FreeBSD 拼写有四样写法，你知道么？”，“不能写罢？……我教给你，记着！\n‘FreeBSD’、‘freeBSD’、‘Freebsd’、‘freebsd’这些字应该记着。\n以后做 FreeBSD 管理员的时候，写文档要用。</a>",
+    "不要说我们一无所有, 我们要把世界格式化",
 ];
 
 var index = Math.floor((Math.random() * data.length));

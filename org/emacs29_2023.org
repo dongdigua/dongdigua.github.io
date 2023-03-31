@@ -12,6 +12,7 @@ gcc (it's GNU emacs, so...) 参数来源:
 - https://snoopitek.com/make.conf
 #+BEGIN_SRC sh
 ./configure CFLAGS="-march=native -O3 -pipe -fno-math-errno -fgraphite-identity -floop-nest-optimize -fno-semantic-interposition -fno-strict-aliasing -fno-common -fipa-pta -fno-plt" \
+            LDFLAGS="-Wl,-no-as-needed -ljemalloc -Wl,-as-needed" \
             --with-x=no \
             --with-gpm=no \
             --with-pgtk \
