@@ -36,6 +36,7 @@ You can always find something magical on the Internet.
 *** [[https://snarfed.org/2022-03-10_were-drowning-software-dependencies][We're Drowning Software Dependencies]]
 *** [[http://ck.kolivas.org/pictures/Screenshot_20170905_134246.png][ck: ]][[https://ck-hack.blogspot.com/2021/08/514-and-future-of-muqss-and-ck-once.html][5.14 and the future of MuQSS and -ck once again (END)]]
 *** [[https://blogs.gnome.org/aday/2023/01/18/gnome-info-collect-what-we-learned/][gnome-info-collect: What we learned]]
+*** [[http://mindhacks.cn/2006/10/15/cantor-godel-turing-an-eternal-golden-diagonal/][康托尔、哥德尔、图灵——永恒的金色对角线]]
 
 ** [[http://www.paulgraham.com/todo.html][Paul Graham]]
 ** [[http://www.qiusir.com/][qiusir]]                                                            :rssub:
@@ -46,7 +47,8 @@ You can always find something magical on the Internet.
 [[http://xahlee.info/emacs/misc/i/Marisa_Kirisame_emacs_magic.png]]
 @@html:</details>@@
 ** [[http://www.catb.org/esr/][Eric S. Raymond]]
-** [[http://www.yinwang.org/][王垠]]
+** [[http://www.yinwang.org][当然我在扯淡]]
+*** [[https://docs.huihoo.com/homepage/shredderyin/index.html][王垠的个人主页]]
 ** [[http://ruanyifeng.com/blog/][阮一峰]]                                                            :rssub:
 ** [[https://blog.lilydjwg.me/][依云]]                                                              :rssub:
 ** [[http://www.hackdig.com/][黑客技术]]                                                           :hack:
@@ -105,17 +107,17 @@ CPU, IC, ARM
 [[http://jujuba.me/imgs/linus-on-TED.png]]
 ** [[https://cireu.github.io/2019/09/17/lisp-setf/][NIL: setf 中「f」的本意]]
 *** [[https://cireu.github.io/2019/10/18/doom-emacs-issue/][doom-emacs 配置的问题]]
-** [[http://incf19.com][include-yy 攒 emacs]]                                        :c:lisp:emacs:
+** [[http://egh0bww1.com][include-yy 攒 emacs]]                                        :c:lisp:emacs:
 许多东方的图诶
-*** [[http://incf19.com/yynotes/posts/2021-10-25-14-蝴蝶效应与emacs动画][蝴蝶效应与emacs动画]]
-*** [[http://incf19.com/yynotes/posts/2021-05-28-5-emacs的cl扩展][emacs的cl扩展]]
-*** [[http://incf19.com/yynotes/posts/2021-03-22-1-由(λ(x)(x x))看elisp与scheme之区别][由(λ(x)(x x))看elisp与scheme之区别]]
+*** [[https://egh0bww1.com/posts/2021-10-25-14-butterfly-emacs-animation/][蝴蝶效应与emacs动画]]
+*** [[https://egh0bww1.com/posts/2021-05-28-5-emacs-cl-lib][emacs的cl扩展]]
+*** [[https://egh0bww1.com/posts/2021-03-22-1-scheme-elisp-self-apply-difference][由(λ(x)(x x))看elisp与scheme之区别]]
 #+BEGIN_QUOTE
 这个问题其实就是 Lisp-1 和 Lisp-2 的区别导致的
 Lisp-1 的变量命名空间和函数命名空间是统一的，而在 Lisp-2 中两者是分开的
 #+END_QUOTE
 **** [[http://xahlee.info/emacs/emacs/lisp1_vs_lisp2.html][Xah Lee Lisp-1 vs Lisp-2]]
-*** [[http://incf19.com/yynotes/posts/2022-10-07-23-用elisp玩brainfuck-I][(不只是)用elisp玩brainfuck]]
+*** [[https://egh0bww1.com/posts/2022-10-07-23-elisp-play-brainfuck-i][(不只是)用elisp玩brainfuck]]
 ** [[https://nihil.cc][Nihil]]                                                              :rust:
 *** [[https://nihil.cc/posts/rust_closure_and_y/][Rust 闭包递归与 Y 组合子]]
 **** [[https://cps.ninja/2020/04/13/deriving-y-combinator/][行侠何须仗名剑: 推导 Y Combinator]]
@@ -461,6 +463,8 @@ to filing patently fraudulent DMCA counter-notifications to avoid the terminatio
 *** [[https://youtu.be/Q8WXvDLofL8][Plasma piano]]
 赛博钢琴家
 *** [[https://youtu.be/cGR9EOgMY6w][CYBERTRUCK BUILD (1/5)]]
+*** [[https://youtu.be/Khs60fil0Cg][These Youtubers are EVIL]]
+yes
 
 * r
 :PROPERTIES:
