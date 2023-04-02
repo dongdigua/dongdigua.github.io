@@ -1,0 +1,54 @@
+#+TITLE: Join Fedora and Maintain Package
+#+DATE: <2023-04-01 六>
+
+* The story
+[[https://github.com/dom-kital][Someone]] in the [[https://cossig.org][COSSIG]] said Slackware is good, so I took a look.
+I noticed in the [[http://www.slackbook.org/html/book.html#VI][book]] that the vi(1) in Slackware is elvis, it is amazing.
+Then this monthly holiday, I installed a Slackware VM. In the installation process,
+I found that the nvi in Slackware supports UTF-8! WTF!
+The nvi in OpenBSD and NixOS don't support UTF-8, why the Slack build have?
+So I looked at the [[https://mirrors.slackware.com/slackware/slackware/source/a/nvi/][source]], +it have 30 patches applied on nvi-1.81.6+ it is configured with =--enable-widechar=
+So I wanted to add a UTF-8 nvi in my nur, so I copied the NixOS build script,
+and found it has patches from a fedora repo!
+Then I checked that [[https://src.fedoraproject.org/rpms/nvi][repo]], it have the exact same patch series as Slackware,
+BUTT orphaned since f33...
+
+* Why retired, nvi is a good software, isn't it?
+The reason why it is orphaned and retired is "Failed to build from source".
+Actually it is because unable to fetch source from http://www.kotnet.org/~skimo/nvi
+since kotnet.org is a student orgnization and seems disappeared in 2014.
+But we can get alternative source from [[https://repo.or.cz/nvi.git][git]] or Debian(NixOS gets it from there) or Slackware(mentioned above) etc.
+
+* Join
+So I want to help. If I can make this package available, thousands of user will benifit from this.
+*I love this distro.*
+I created BugZilla and Fedora account, the fedora account is useable in nearly all fedora services, great!
+这里面水很深 [[https://apps.fedoraproject.org][Fedora Infrastructure Map]]
+
+Fixing the code is easy, +but following the polices and communicating with people is the hard part I guess+.
+After reading /The Cathedral and the Bazaar/, I think Fedora is Cathedral, and NixOS's noisy github issue is Bazar.
+
+To start, I need to follow the guides:
+- https://docs.fedoraproject.org/en-US/package-maintainers/Joining_the_Package_Maintainers
+- https://docs.fedoraproject.org/en-US/fesco/Policy_for_orphan_and_retired_packages/#unorphaning_and_unretiring_packages
+- https://docs.fedoraproject.org/en-US/package-maintainers/Packaging_Tutorial_GNU_Hello
+
+I submitted review request to BZ[fn:1]: https://bugzilla.redhat.com/show_bug.cgi?id=2183721
+And fill in the releng issue with BZ url: https://pagure.io/releng/issue/11370
+And send an email to devel: [[https://lists.fedoraproject.org/archives/list/devel@lists.fedoraproject.org/thread/3FVVQXJMJDH6TTOWJZV2QLSZG4QO42WU][Unretire nvi (make Berkeley vi great again)]]
+
+btw you can check repo through api using curl (learned in mailing list)
+#+BEGIN_SRC shell
+curl https://src.fedoraproject.org/api/0/rpms/nvi
+#+END_SRC
+
+* Mailing list
+some interesting thread in the list
+** [[https://lists.fedoraproject.org/archives/list/devel@lists.fedoraproject.org/thread/YUMAS5GP7QTKVRX4PHKAMFYVZQRDVXZP][Anyone interested in packaging nim-lang?]]
+first, I'm also interested in Nim and found it not available
+second, it is also orphaned and then retired
+** [[https://lists.fedoraproject.org/archives/list/devel@lists.fedoraproject.org/thread/VBFDPQHAHF3WG6WBZR2L5GSWMW6CVTJS][%patchN deprecated?]]
+yes, deprecated, so I need to change it in my packages
+
+* Footnotes
+[fn:1] [[https://acyanbird.github.io/2022/10/15/向EPEL请求新的包][向EPEL请求新的包(群主写的)]]

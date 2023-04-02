@@ -31,3 +31,5 @@ What if everyone archive on their own like, and join a distributed network.
 You want to archive some page, then just store it on your machine, then others can get it.
 *But the problem is: how can I trust you, how can I know if your page is real*
 * 《中学计算机课外实践简要读本》
+* news from the past
+news group server, but the daily content is from the past

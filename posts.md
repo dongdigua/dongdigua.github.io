@@ -1,5 +1,6 @@
 ## Table of Contents
 ### Posts (sorted by time)
+- [Join Fedora and Maintain Package](fedora_contrib)<br>
 - [Project that Annoys Me](annoying_project.gmi.txt)<br>
 - [玩转邮件列表](mailinglist)<br>
 - [我要不要试试 OpenBSD](whatif_openbsd)<br>
