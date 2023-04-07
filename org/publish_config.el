@@ -24,10 +24,8 @@
 (setq org-html-postamble-format
       '(("en"
          "
-<p class=\"author\">Author: dongdigua(dongdigua.github.io)</p>
-<p class=\"date\">Date: %d</p>
-<p class=\"date\">Build: %T</p>
-<p>LICENCE: CC BY-NC-SA</p>
+<p>dongdigua(dongdigua.github.io) CC BY-NC-SA</p>
+<p class=\"date\">Date: %d Build: %T</p>
 <p>Proudly made with Emacs Org mode</p>
 <p>If you have any idea, please contact me! I may add your comment</p>
 ")))

@@ -1,4 +1,5 @@
 #+TITLE: Join Fedora and Maintain Package
+#+DESCRIPTION: I love this distro
 #+DATE: <2023-04-01 六>
 
 * The story
@@ -49,6 +50,8 @@ first, I'm also interested in Nim and found it not available
 second, it is also orphaned and then retired
 ** [[https://lists.fedoraproject.org/archives/list/devel@lists.fedoraproject.org/thread/VBFDPQHAHF3WG6WBZR2L5GSWMW6CVTJS][%patchN deprecated?]]
 yes, deprecated, so I need to change it in my packages
+** [[https://lwn.net/Articles/912202][LWN: Packaging Rust for Fedora]]
+not mail, but interesting
 
 * Footnotes
 [fn:1] [[https://acyanbird.github.io/2022/10/15/向EPEL请求新的包][向EPEL请求新的包(群主写的)]]
