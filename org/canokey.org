@@ -1,0 +1,69 @@
+#+TITLE: 一位 PGP 进步青年的 Canokey 历程
+#+DESCRIPTION: Frequently Questioned Answers
+#+OPTIONS: num:1
+
+作为一个注重网络隐私进步青年, 当然要使用 PGP +以提升逼格+, 而为了追求极端的安全性, 就不能把私钥明晃晃地摆在电脑里.
+这个时候, 就需要使用与电脑分离硬件密钥, 来防备那些妄想中可能窥探你电脑的敌人.
+当然, 我使用硬件密钥还因为我同时使用 Linux 和 OpenBSD, 使用硬件使共享密钥更容易, 因为这一份私钥就代表了你在网络上的身份.
+
+Yubikey 太贵, 所以选择咱国产的 [[https://www.canokeys.org][Canokey]].
+基本的使用不必赘述, 我看见的几乎每一篇文章都会长篇大论地讲最基本的使用, 好像你能比 manual 或 wiki 讲的更明白更全面似的, 关于基本使用请看文章末尾推荐的[[id:good][几篇好文章]]
+我不想重复讲这些, instead, 我想讲讲我使用 Canokey 过程中遇到的问题:
+
+* 设定触控 (Touch Policy)
+[[https://docs.canokeys.org/userguide/openpgp/#touch-policy][文档]]是这么说的:
+#+BEGIN_QUOTE
+You may turn ON or OFF touch policies for SIG, DEC, AUT in the admin applet in the web console or via the gpg command.
+#+END_QUOTE
+事实上
+- 我试了 gpg 命令, 翻遍了整个 manpage, 搜索了整个 [[https://www.gnupg.org/documentation/manuals/gnupg/gpg_002dcard.html][GPG 文档]], 也没找到 gpg 里面能开启触控的地方.
+- 然后打开 Chromium, 使用那个 suspicious(当然那个页面没什么可疑的, 只不过我对使用联网应用操作这种设备感觉不舒服) 的 [[https://console.canokeys.org][web console]], 结果也不好使, 因为什么 255.
+- 然后使用 =ykman -r Canokey=, 不好使, 然后运行了他们 fork 的 [[https://github.com/canokeys/yubikey-manager][yubikey-manager]] (也加到我的[[https://github.com/dongdigua/nur-pkg][nur 仓库]]了), 经过漫长的 poetry 构建, 好使了.
+准确来说, 是运行第一次不好使, 第二次之后就好了, 并且 web console 之后也好使了...
+
+文档似乎造成了一些迷惑, 我应该提一个 pr 修复这件事, 但是这个项目自从去年8月份就没什么进展了.
+顺便说一嘴, 我注意到 GitHub 上好多项目都在 Nov 2022 归档了, 这似乎不是个别的现象, 那时发生了什么事情吗? 有人能解释一下吗?
+#+BEGIN_COMMENT
+或许我之后再见到那个时间段存档的项目应该拿一个文件记下来, 放在一起看看发生了什么事
+#+END_COMMENT
+
+* 日用的子密钥往哪放
+我日常会使用 gpg 加密一些配置文件里的东西, 但是我不可能每次想读邮件都插上硬件密钥, 那就太费劲了, 所以我想使用加密子密钥来做这件事,
+这样给我的感觉是有一个特别安全的主钥匙串, 上面挂着一些不太安全的子钥匙, 但是有些地方使我困惑:
+- PGP 会默认使用所有子密钥公钥中最新的一个来加密, 所以我导出公钥的时候就要去掉其中的子密钥而只保留生成密钥时附带的加密子密钥, which is safe on the Canokey
+- 这个子密钥由于放在电脑上, 不能保证安全, 所以不能让别人用它的公钥给我加密, 所以这上的身份信息没有意义了
+- PGP 的子密钥会继承主密钥的 UID 而不会有自己的 UID, 所以当我加密的时候就是用的主 UID, 而我的想法是使用不同的 UID 来加密
+所以经过思考, 我还是重新生成一对密钥来日常加密吧, 就像我曾经一直在用的方式, 只不过之前日常的密钥就是我公布出去的公钥, 本地有多个密钥也不会造成什么混乱.
+
+倒是应该生成一个靓号用来做签名子密钥, 而不是使用主密钥签名
+
+** 不同机器?
+具体请看下方 Debian 文章的 "Caveats: Multiple Subkeys per Machine vs. One Single Subkey for All Machines"
+不同机器使用相同日常密钥倒是能使交换文件更方便, 但是如果一个机器被泄漏也会影响到那些机器的文件, 再去挨个更换也是费劲.
+既然我有一个安全的密钥在不同机器之间共享, 我需要交换的文件可以使用共用的密钥加密.
+
+* TODO 缝合曾经的主密钥
+之前其实早就想弄硬件密钥了, 但是一直没有什么事情驱使我去做, 直到有一天, 我导入靓号(又想删除)的时候, 一不小心把我的主密钥删了, 大概是 fish 补全的锅.
+所以我才想重新生成一个密钥并且保证安全. 但是后来又想到, 我实际上之前[[./backup_everything.org][大备份]]的时候有我主目录的备份, 也有我那时后的私钥, 有希望啊!
+(有一个词叫 rotate key, 就是用老密钥签名新密钥来证明新密钥属于你)
+我就想把曾经那个密钥缝合到现在的密钥环上作为子密钥, 但是之前在[[https://dejavu.moe/posts/vanity-pgp/#缝合密钥][某科学的 PGP 算号指南]]里看见
+#+BEGIN_QUOTE
+在缝合密钥的时候，有个大前提：主密钥的生成时间必须比子密钥要早 6。因此对于上面的一组待缝合密钥，只有生成时间最早的那个「靓号」可以做为主密钥。
+#+END_QUOTE
+显然, 我之前的密钥比现在这个早, 那会出现什么问题呢? 人家没说...
+
+难道就没有可能吗? [[https://security.stackexchange.com/questions/32935/migrating-gpg-master-keys-as-subkeys-to-new-master-key][Security StackExchange: Migrating GPG master keys as subkeys to new master key]] 是十年前的了, 而且过于复杂.
++等我有时间慢慢研究去吧, 说不定会出一个(视频)教程+
+
+* 好文章
+:PROPERTIES:
+:CUSTOM_ID: good
+:END:
+** Debian Wiki 系列
+因为 Debian 的开发者比较依赖 PGP, 所以有很多不错的文章很好的解释了 GnuPG
+- [[https://wiki.debian.org/Subkeys][Using OpenPGP subkeys in Debian development]]
+
+** 在我[[./internet_collections.org][收藏夹]]中的
+*** [[https://ulyc.github.io/2021/01/13/2021年-用更现代的方法使用PGP-上/][2021年, 用更现代的方法使用PGP]]
+*** [[https://chenhe.me/post/yubikey-starting-gpg/][YubiKey 入手记 - GPG]]
+

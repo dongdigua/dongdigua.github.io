@@ -37,6 +37,7 @@ You can always find something magical on the Internet.
 *** [[http://ck.kolivas.org/pictures/Screenshot_20170905_134246.png][ck: ]][[https://ck-hack.blogspot.com/2021/08/514-and-future-of-muqss-and-ck-once.html][5.14 and the future of MuQSS and -ck once again (END)]]
 *** [[https://blogs.gnome.org/aday/2023/01/18/gnome-info-collect-what-we-learned/][gnome-info-collect: What we learned]]
 *** [[http://mindhacks.cn/2006/10/15/cantor-godel-turing-an-eternal-golden-diagonal/][康托尔、哥德尔、图灵——永恒的金色对角线]]
+*** TODO [[https://ferd.ca/ten-years-of-erlang.html][Ten Years of Erlang]]
 
 ** [[http://www.paulgraham.com/todo.html][Paul Graham]]
 ** [[http://www.qiusir.com/][qiusir]]                                                            :rssub:
@@ -553,3 +554,5 @@ BSD asm
 ** [[https://512pixels.net/projects/default-mac-wallpapers-in-5k/][Every Default macOS Wallpaper]]
 ** [[https://killedbymicrosoft.info][Killed by Microsoft]] and [[https://killedbygoogle.com][Killed by Google]]
 ** [[https://neal.fun/wonders-of-street-view/][Wonders of Street View]]
+** [[https://quotes.tilde.chat][~chat irc quote database]]
+*** [[http://bash.org][bash.org Quote Database]]

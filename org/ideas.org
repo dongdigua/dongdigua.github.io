@@ -33,3 +33,4 @@ You want to archive some page, then just store it on your machine, then others c
 * 《中学计算机课外实践简要读本》
 * news from the past
 news group server, but the daily content is from the past
+* bili dynamic news reader with api/rss

@@ -1,5 +1,6 @@
 ## Table of Contents
 ### Posts (sorted by time)
+- [一位 PGP 进步青年的 Canokey 历程](canokey)<br>
 - [Join Fedora and Maintain Package](fedora_contrib)<br>
 - [Project that Annoys Me](annoying_project.gmi.txt)<br>
 - [玩转邮件列表](mailinglist)<br>
