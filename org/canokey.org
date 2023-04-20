@@ -2,12 +2,15 @@
 #+DESCRIPTION: Frequently Questioned Answers
 #+OPTIONS: num:1
 
-作为一个注重网络隐私进步青年, 当然要使用 PGP +以提升逼格+, 而为了追求极端的安全性, 就不能把私钥明晃晃地摆在电脑里.
-这个时候, 就需要使用与电脑分离硬件密钥, 来防备那些妄想中可能窥探你电脑的敌人.
+作为一个注重网络隐私进步青年, 当然要使用 PGP +以提升逼格+.
+#+BEGIN_COMMENT
+CITIZENFOUR 多帅呀! 但是嘛, 这话不能放在网页上...
+#+END_COMMENT
+而为了追求极端的安全性, 就不能把私钥明晃晃地摆在电脑里. 这个时候, 就需要使用与电脑分离硬件密钥, 来防备那些妄想中可能窥探你电脑的敌人.
 当然, 我使用硬件密钥还因为我同时使用 Linux 和 OpenBSD, 使用硬件使共享密钥更容易, 因为这一份私钥就代表了你在网络上的身份.
 
 Yubikey 太贵, 所以选择咱国产的 [[https://www.canokeys.org][Canokey]].
-基本的使用不必赘述, 我看见的几乎每一篇文章都会长篇大论地讲最基本的使用, 好像你能比 manual 或 wiki 讲的更明白更全面似的, 关于基本使用请看文章末尾推荐的[[id:good][几篇好文章]]
+基本的使用不必赘述, 我看见的几乎每一篇文章都会长篇大论地讲最基本的使用, 好像你能比 manual 或 wiki 讲的更明白更全面似的, 关于基本使用请看文章末尾推荐的[[#good][几篇好文章]]
 我不想重复讲这些, instead, 我想讲讲我使用 Canokey 过程中遇到的问题:
 
 * 设定触控 (Touch Policy)
@@ -18,52 +21,111 @@ You may turn ON or OFF touch policies for SIG, DEC, AUT in the admin applet in t
 事实上
 - 我试了 gpg 命令, 翻遍了整个 manpage, 搜索了整个 [[https://www.gnupg.org/documentation/manuals/gnupg/gpg_002dcard.html][GPG 文档]], 也没找到 gpg 里面能开启触控的地方.
 - 然后打开 Chromium, 使用那个 suspicious(当然那个页面没什么可疑的, 只不过我对使用联网应用操作这种设备感觉不舒服) 的 [[https://console.canokeys.org][web console]], 结果也不好使, 因为什么 255.
-- 然后使用 =ykman -r Canokey=, 不好使, 然后运行了他们 fork 的 [[https://github.com/canokeys/yubikey-manager][yubikey-manager]] (也加到我的[[https://github.com/dongdigua/nur-pkg][nur 仓库]]了), 经过漫长的 poetry 构建, 好使了.
+- 然后使用 =ykman -r Canokey=, 不好使, 然后运行了他们 fork 的 [[https://github.com/canokeys/yubikey-manager][yubikey-manager]] (+也加到我的[[https://github.com/dongdigua/nur-pkg][nur 仓库]]了+ 还没测试构建完), 经过漫长的 poetry 构建, 好使了.
 准确来说, 是运行第一次不好使, 第二次之后就好了, 并且 web console 之后也好使了...
 
-文档似乎造成了一些迷惑, 我应该提一个 pr 修复这件事, 但是这个项目自从去年8月份就没什么进展了.
+文档似乎造成了一些迷惑, 我提了一个 [[https://github.com/canokeys/canokey-documentation/pull/19][pr]] 修复这件事, 但是这个项目自从去年8月份就没什么进展了.
 顺便说一嘴, 我注意到 GitHub 上好多项目都在 Nov 2022 归档了, 这似乎不是个别的现象, 那时发生了什么事情吗? 有人能解释一下吗?
 #+BEGIN_COMMENT
 或许我之后再见到那个时间段存档的项目应该拿一个文件记下来, 放在一起看看发生了什么事
 #+END_COMMENT
 
-* 日用的子密钥往哪放
-我日常会使用 gpg 加密一些配置文件里的东西, 但是我不可能每次想读邮件都插上硬件密钥, 那就太费劲了, 所以我想使用加密子密钥来做这件事,
+* 日常使用用子密钥
+我日常会使用 gpg 加密一些配置文件里的东西, 但是我不可能每次想读邮件都插上硬件密钥, 那就太费劲了, 所以我想使用另外一个加密子密钥来做这件事,
 这样给我的感觉是有一个特别安全的主钥匙串, 上面挂着一些不太安全的子钥匙, 但是有些地方使我困惑:
 - PGP 会默认使用所有子密钥公钥中最新的一个来加密, 所以我导出公钥的时候就要去掉其中的子密钥而只保留生成密钥时附带的加密子密钥, which is safe on the Canokey
 - 这个子密钥由于放在电脑上, 不能保证安全, 所以不能让别人用它的公钥给我加密, 所以这上的身份信息没有意义了
-- PGP 的子密钥会继承主密钥的 UID 而不会有自己的 UID, 所以当我加密的时候就是用的主 UID, 而我的想法是使用不同的 UID 来加密
+- PGP 的子密钥会继承主密钥的 UID 而不会有自己的 UID, 所以当我加密的时候就是用的主 UID, 而我的想法是区分不同的 UID 来加密
+
 所以经过思考, 我还是重新生成一对密钥来日常加密吧, 就像我曾经一直在用的方式, 只不过之前日常的密钥就是我公布出去的公钥, 本地有多个密钥也不会造成什么混乱.
 
-倒是应该生成一个靓号用来做签名子密钥, 而不是使用主密钥签名
+** 我对加密子密钥和签名子密钥的理解
+可以有多个签名子密钥并公布相应的公钥, 但加密公钥应该公布那个可以保证安全那个子密钥的公钥, 当然, 最好保证所有密钥的安全.
+
+- 如果签名子密钥泄漏, 你可以吊销使其作废, 使该子密钥签过或将来签的名全部作废, 你的签名信誉也不会受影响.
+- 而如果加密子密钥泄漏, 所有已经存在的使用该公钥加密的文件都可以被解密, 吊销只能使别人不再使用次密钥给你加密, 阻止不了使用私钥解密, 也大概会影响信誉.
+
+所以 Debian 讲 Subkey 时提到的情形也只是签名, 而不是加密. 签名也是 WOT 的基础, 而加密是另一码事.
+那么是否和何时使用加密子密钥有什么讲究吗? [[https://security.stackexchange.com/questions/58834/utility-of-multiple-signing-subkeys-when-were-restricted-to-a-single-encryption][Security StackExchange: Utility of multiple signing subkeys when we're restricted to a single encryption subkey in GnuPG (PGP)]]
 
 ** 不同机器?
 具体请看下方 Debian 文章的 "Caveats: Multiple Subkeys per Machine vs. One Single Subkey for All Machines"
 不同机器使用相同日常密钥倒是能使交换文件更方便, 但是如果一个机器被泄漏也会影响到那些机器的文件, 再去挨个更换也是费劲.
 既然我有一个安全的密钥在不同机器之间共享, 我需要交换的文件可以使用共用的密钥加密.
+但是, 我日常使用需要忽略硬件密钥对应的私钥, 否则它总会尝试使用那个私钥解密, 何如?
 
-* TODO 缝合曾经的主密钥
+** TODO 靓号?
+倒是应该生成一个靓号用来做签名子密钥, 而不是使用主密钥签名.
+[[https://github.com/RedL0tus/VanityGPG][vanity_gpg]] 使用 [[https://sequoia-pgp.org][sequoia]]([[https://fedoraproject.org/wiki/Changes/RpmSequoia][fedora 现在也使用 sq 了]]) 作为后端, 通过修改时间戳来快速改变密钥生成.
+时间戳是向后修改的, 大概是为了防止 =gpg: key X was created Y seconds in the future (time warp or clock problem)= 这种警告
+但是, 作为子密钥, 时间必须在主密钥之后(见下文), 所以, 应该让向过去走的时间有一个限度.
+那么就改源码吧!
+
+
+* 缝合曾经的主密钥
 之前其实早就想弄硬件密钥了, 但是一直没有什么事情驱使我去做, 直到有一天, 我导入靓号(又想删除)的时候, 一不小心把我的主密钥删了, 大概是 fish 补全的锅.
 所以我才想重新生成一个密钥并且保证安全. 但是后来又想到, 我实际上之前[[./backup_everything.org][大备份]]的时候有我主目录的备份, 也有我那时后的私钥, 有希望啊!
 (有一个词叫 rotate key, 就是用老密钥签名新密钥来证明新密钥属于你)
+
+** 可行性?
 我就想把曾经那个密钥缝合到现在的密钥环上作为子密钥, 但是之前在[[https://dejavu.moe/posts/vanity-pgp/#缝合密钥][某科学的 PGP 算号指南]]里看见
 #+BEGIN_QUOTE
-在缝合密钥的时候，有个大前提：主密钥的生成时间必须比子密钥要早 6。因此对于上面的一组待缝合密钥，只有生成时间最早的那个「靓号」可以做为主密钥。
+在缝合密钥的时候，有个大前提：主密钥的生成时间必须比子密钥要早。因此对于上面的一组待缝合密钥，只有生成时间最早的那个「靓号」可以做为主密钥。
 #+END_QUOTE
 显然, 我之前的密钥比现在这个早, 那会出现什么问题呢? 人家没说...
+难道就没有可能吗? 那个文章引用的 [[https://security.stackexchange.com/questions/32935/migrating-gpg-master-keys-as-subkeys-to-new-master-key][Security StackExchange: Migrating GPG master keys as subkeys to new master key]] 是十年前的了, 而且过于复杂.
+(其中提到的老教程存档于互联网档案馆: [[https://web.archive.org/web/20200620041634/http://atom.smasher.org/gpg/gpg-migrate.txt][http://atom.smasher.org/gpg/gpg-migrate.txt]] 使用 GnuPG v1)
 
-难道就没有可能吗? [[https://security.stackexchange.com/questions/32935/migrating-gpg-master-keys-as-subkeys-to-new-master-key][Security StackExchange: Migrating GPG master keys as subkeys to new master key]] 是十年前的了, 而且过于复杂.
-+等我有时间慢慢研究去吧, 说不定会出一个(视频)教程+
+那讨论里面说了, GnuPG 2.1 之后可以把任何密钥变成子密钥, *但 是*, 直接加会改变子密钥的指纹!
+所以要使用 =--faked-system-time='timestamp!'=, 如果子密钥时间更早, 的确能成功加上, *但 是*, 主密钥的时间会变成最早子密钥的时间, 产生警告!
+#+BEGIN_EXAMPLE
+gpg: public key B8B791E307A9887E is 17 days newer than the signature
+sec   ed25519/B8B791E307A9887E 2023-04-16 [SC] [expires: 2025-04-15]
+      54E849C81A511739C6A12D23B8B791E307A9887E
+      Keygrip = 306F8BD727C402801BCF773F4BB367CCF8B3D017
+uid                 [ultimate] testmigrate
+ssb   cv25519/18A470DFAFA4339C 2023-04-16 [E] [expires: 2025-04-15]
+      Keygrip = 053B88E19B5839C7A6549237E4ADA01F106CA026
+ssb   ed25519/0D8DD61234B1287A 2023-03-29 []
+      Keygrip = A110196057DDA134F4360662936EB5AE4F337B33
+
+sec   ed25519/0D8DD61234B1287A 2023-03-29 [SC]
+      996AAA92AB43EE992005A7A50D8DD61234B1287A
+      Keygrip = A110196057DDA134F4360662936EB5AE4F337B33
+uid                 [ unknown] earlier
+ssb   cv25519/28905D27051C7D61 2023-03-29 [E]
+      Keygrip = 8A99C8A1406C9A3A3EA2D40F1637A5F4D3415FA8
+#+END_EXAMPLE
+
+所以还是算了吧? 这种警告挺烦人的
+
+** TODO 意义
+
 
 * 好文章
 :PROPERTIES:
 :CUSTOM_ID: good
 :END:
+掰锝胃, DuckDuckGo 比 Bing 的搜索结果质量高多了
+
 ** Debian Wiki 系列
-因为 Debian 的开发者比较依赖 PGP, 所以有很多不错的文章很好的解释了 GnuPG
+因为 Debian 的开发高度依赖 PGP, 所以有很多不错的文章很好的解释了 GnuPG
+Debian 将 PGP 形容为 [[https://wiki.debian.org/DebianServiceForDD]["This is your source of power"]], 感觉他们好传统啊, 相比之下, Fedora 的开发方式被大公司带的更现代.
+Debian Wiki 质量真高, 页面也十分简洁, 相比 Arch, 经过了多年的沉淀, 而且比较像 "大教堂" 的维护模式.
+
 - [[https://wiki.debian.org/Subkeys][Using OpenPGP subkeys in Debian development]]
+- [[https://wiki.debian.org/Keysigning][Keysigning]]
 
 ** 在我[[./internet_collections.org][收藏夹]]中的
-*** [[https://ulyc.github.io/2021/01/13/2021年-用更现代的方法使用PGP-上/][2021年, 用更现代的方法使用PGP]]
+*** [[https://ulyc.github.io/2021/01/13/2021年-用更现代的方法使用PGP-上/][2021年, 用更现代的方法使用PGP]] (上中下)
+#+BEGIN_QUOTE
+世界上有两种密码: 一种是防止你的小妹妹偷看你的文件; 另一种是防止当局阅读你的文件.
+--[[https://www.schneier.com/books/applied-cryptography/][Applied Cryptography]]
+#+END_QUOTE
 *** [[https://chenhe.me/post/yubikey-starting-gpg/][YubiKey 入手记 - GPG]]
 
+** other
+*** [[https://help.riseup.net/en/security/message-security/openpgp/best-practices][OpenPGP Best Practices]]
+被很多人乃至 Debian Wiki 放到相关链接
+*** [[https://linux.cn/article-10432-1.html][LCTT: 用 PGP 保护代码完整性]] (一~七)
+一系列详细的教程, 翻译的不错

@@ -370,6 +370,7 @@ inspiration: Veritasium
 - allocate memory
 - rw files
 - IPC
+**** [[https://youtu.be/Yi6NxMxCFY8][Ok, I made C compiler in PHP]]
 *** [[https://youtu.be/0rJ94rbdteE][Rust 让你感觉像个天才]]
 *** [[https://youtu.be/nfF91Z6fqGk][CMD 登录B站]]
 *** [[https://youtu.be/crnEygp4C6g][Jeff Geerling: FINALLY! A GPU works on the Raspberry Pi!]]
@@ -466,6 +467,7 @@ to filing patently fraudulent DMCA counter-notifications to avoid the terminatio
 *** [[https://youtu.be/cGR9EOgMY6w][CYBERTRUCK BUILD (1/5)]]
 *** [[https://youtu.be/Khs60fil0Cg][These Youtubers are EVIL]]
 yes
+*** [[https://youtu.be/n9YDz-Iwgyw][Reclaim your freedom with free libre software now - Richard Stallman of Free Software Movement]]
 
 * r
 :PROPERTIES:

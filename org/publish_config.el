@@ -24,7 +24,7 @@
 (setq org-html-postamble-format
       '(("en"
          "
-<p>dongdigua(dongdigua.github.io) CC BY-NC-SA</p>
+<p>dongdigua(dongdigua.github.io) CC BY-NC-SA, 禁止转载到私域(公众号，非自己托管的博客等)</p>
 <p class=\"date\">Date: %d Build: %T</p>
 <p>Proudly made with Emacs Org mode</p>
 <p>If you have any idea, please contact me! I may add your comment</p>
