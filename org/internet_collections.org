@@ -267,6 +267,7 @@ very beautiful page
 ** [[https://feng.si][feng.si]]
 *** [[https://dejavu.moe/posts/vanity-pgp/][某科学的 PGP 算号指南]]                                             :PGP:
 *** [[https://feng.si/posts/2019/07/centos-the-last-linux-distro-you-should-ever-consider][CentOS: 永远有多远就离它多远]]
+** TODO [[https://drewdevault.com][Drew DeVault's blog]]
 
 
 ** B/HWS/fri3nds
@@ -415,6 +416,7 @@ inspiration: Veritasium
 **** [[https://youtu.be/UeAKTjx_eKA][Student Finds Hidden Devices in the College Library]]
 **** [[https://youtu.be/MS7WRuzNYDc][is leaking your IP really dangerous]]
 **** [[https://youtu.be/oJ6t7AImTdE][CSS Keylogger - old is new again]]
+**** [[https://youtu.be/Sv5OLj2nVAQ][Attacking LLM - Prompt Injection]]
 *** [[https://youtu.be/2--1ph-4IaY][shit express hacked]]
 *** [[https://www.youtube.com/playlist?list=PL5--8gKSku15NSeLgrZX9hSEnqPTWoSJ0][DT: Privacy & Security]]
 *** [[https://youtu.be/QxNsyrftJ8I][Chris Titus Tech: The Biggest Linux Security Mistakes]]
@@ -468,6 +470,7 @@ to filing patently fraudulent DMCA counter-notifications to avoid the terminatio
 *** [[https://youtu.be/Khs60fil0Cg][These Youtubers are EVIL]]
 yes
 *** [[https://youtu.be/n9YDz-Iwgyw][Reclaim your freedom with free libre software now - Richard Stallman of Free Software Movement]]
+When I was trying to download this video, I found that youtube-dl was broken!
 
 * r
 :PROPERTIES:

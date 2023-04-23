@@ -6,11 +6,11 @@
 #+BEGIN_COMMENT
 CITIZENFOUR 多帅呀! 但是嘛, 这话不能放在网页上...
 #+END_COMMENT
-而为了追求极端的安全性, 就不能把私钥明晃晃地摆在电脑里. 这个时候, 就需要使用与电脑分离硬件密钥, 来防备那些妄想中可能窥探你电脑的敌人.
+而为了追求极端的安全性, 就不能把私钥明晃晃地摆在电脑里. 这时, 就需要使用与电脑分离硬件密钥, 来防备那些妄想中可能窥探你电脑的敌人.
 当然, 我使用硬件密钥还因为我同时使用 Linux 和 OpenBSD, 使用硬件使共享密钥更容易, 因为这一份私钥就代表了你在网络上的身份.
 
 Yubikey 太贵, 所以选择咱国产的 [[https://www.canokeys.org][Canokey]].
-基本的使用不必赘述, 我看见的几乎每一篇文章都会长篇大论地讲最基本的使用, 好像你能比 manual 或 wiki 讲的更明白更全面似的, 关于基本使用请看文章末尾推荐的[[#good][几篇好文章]]
+我看见的几乎每一篇文章都会长篇大论地讲最基本的使用, 好像你能比 manual 或 wiki 讲的更明白更全面似的, 关于基本使用请看文章末尾推荐的[[#good][几篇好文章]]
 我不想重复讲这些, instead, 我想讲讲我使用 Canokey 过程中遇到的问题:
 
 * 设定触控 (Touch Policy)
@@ -19,16 +19,39 @@ Yubikey 太贵, 所以选择咱国产的 [[https://www.canokeys.org][Canokey]].
 You may turn ON or OFF touch policies for SIG, DEC, AUT in the admin applet in the web console or via the gpg command.
 #+END_QUOTE
 事实上
-- 我试了 gpg 命令, 翻遍了整个 manpage, 搜索了整个 [[https://www.gnupg.org/documentation/manuals/gnupg/gpg_002dcard.html][GPG 文档]], 也没找到 gpg 里面能开启触控的地方.
+- 我试了 gpg 命令, 翻遍了整个 gpg(1) manpage, 搜索(with keyword "touch")了整个 [[https://www.gnupg.org/documentation/manuals/gnupg/gpg_002dcard.html][GPG 文档]], 也没找到 gpg 里面能开启触控的地方.
 - 然后打开 Chromium, 使用那个 suspicious(当然那个页面没什么可疑的, 只不过我对使用联网应用操作这种设备感觉不舒服) 的 [[https://console.canokeys.org][web console]], 结果也不好使, 因为什么 255.
-- 然后使用 =ykman -r Canokey=, 不好使, 然后运行了他们 fork 的 [[https://github.com/canokeys/yubikey-manager][yubikey-manager]] (+也加到我的[[https://github.com/dongdigua/nur-pkg][nur 仓库]]了+ 还没测试构建完), 经过漫长的 poetry 构建, 好使了.
+- 然后使用 =ykman -r Canokey=, 不好使, 然后运行了他们 fork 的 [[https://github.com/canokeys/yubikey-manager][yubikey-manager]] (加到我的[[https://github.com/dongdigua/nur-pkg][nur 仓库]]了), 经过漫长的 poetry 构建, 好使了.
 准确来说, 是运行第一次不好使, 第二次之后就好了, 并且 web console 之后也好使了...
 
-文档似乎造成了一些迷惑, 我提了一个 [[https://github.com/canokeys/canokey-documentation/pull/19][pr]] 修复这件事, 但是这个项目自从去年8月份就没什么进展了.
-顺便说一嘴, 我注意到 GitHub 上好多项目都在 Nov 2022 归档了, 这似乎不是个别的现象, 那时发生了什么事情吗? 有人能解释一下吗?
++文档似乎造成了一些迷惑, 我提了一个 [[https://github.com/canokeys/canokey-documentation/pull/19][pr]] 修复这件事, 但是这个项目自从去年8月份就没什么进展了.+
++顺便说一嘴, 我注意到 GitHub 上好多项目都在 Nov 2022 归档了, 这似乎不是个别的现象, 那时发生了什么事情吗? 有人能解释一下吗?+
 #+BEGIN_COMMENT
 或许我之后再见到那个时间段存档的项目应该拿一个文件记下来, 放在一起看看发生了什么事
 #+END_COMMENT
+
+pr 太尬了, 人家(以及文档)告诉我用 =uif= 能修改, 然而我当时没注意. 现在翻了下源码:
+#+BEGIN_SRC c
+/*
+  include/openpgp.h
+,*/
+#define TAG_UIF_SIG 0xD6
+#define TAG_UIF_DEC 0xD7
+#define TAG_UIF_AUT 0xD8
+#define TAG_UIF_CACHE_TIME 0x0102
+
+/*
+  applets/openpgp/openpgp.c
+,*/
+static int UIF_TO_TOUCH_POLICY[3] = {[UIF_DISABLED] = TOUCH_POLICY_DEFAULT,
+                                     [UIF_ENABLED] = TOUCH_POLICY_CACHED,
+                                     [UIF_PERMANENTLY] = TOUCH_POLICY_PERMANENT};
+#+END_SRC
+然后 gpg-card 里说的是 "button", 我搜索 "touch" 就忽略掉了...
+以及 [[https://gnupg.org/ftp/specs/OpenPGP-smart-card-application-3.4.1.pdf][Functional Specification of the OpenPGP application on ISO Smart Card Operating Systems]] 的 4.4.3.6 节
+
+好吧, 虽然 pr 弄的很尴尬, 但通过提问是解决了问题, 否则我可能会一直陷在我的思维模式里也想不明白.
+
 
 * 日常使用用子密钥
 我日常会使用 gpg 加密一些配置文件里的东西, 但是我不可能每次想读邮件都插上硬件密钥, 那就太费劲了, 所以我想使用另外一个加密子密钥来做这件事,
@@ -46,26 +69,71 @@ You may turn ON or OFF touch policies for SIG, DEC, AUT in the admin applet in t
 - 而如果加密子密钥泄漏, 所有已经存在的使用该公钥加密的文件都可以被解密, 吊销只能使别人不再使用次密钥给你加密, 阻止不了使用私钥解密, 也大概会影响信誉.
 
 所以 Debian 讲 Subkey 时提到的情形也只是签名, 而不是加密. 签名也是 WOT 的基础, 而加密是另一码事.
-那么是否和何时使用加密子密钥有什么讲究吗? [[https://security.stackexchange.com/questions/58834/utility-of-multiple-signing-subkeys-when-were-restricted-to-a-single-encryption][Security StackExchange: Utility of multiple signing subkeys when we're restricted to a single encryption subkey in GnuPG (PGP)]]
+那么是否和何时使用加密子密钥有什么讲究吗?
+[[https://security.stackexchange.com/questions/58834/utility-of-multiple-signing-subkeys-when-were-restricted-to-a-single-encryption][Security StackExchange: Utility of multiple signing subkeys when we're restricted to a single encryption subkey in GnuPG (PGP)]]
 
 ** 不同机器?
 具体请看下方 Debian 文章的 "Caveats: Multiple Subkeys per Machine vs. One Single Subkey for All Machines"
 不同机器使用相同日常密钥倒是能使交换文件更方便, 但是如果一个机器被泄漏也会影响到那些机器的文件, 再去挨个更换也是费劲.
-既然我有一个安全的密钥在不同机器之间共享, 我需要交换的文件可以使用共用的密钥加密.
-但是, 我日常使用需要忽略硬件密钥对应的私钥, 否则它总会尝试使用那个私钥解密, 何如?
+至于保证不同机器导出的公钥是全的, 都导入公钥就行了.
 
-** TODO 靓号?
+既然我有一个安全的密钥在不同机器之间共享, 我需要交换的文件可以使用共用的密钥加密, 也方便我 rotate encryption.
++但是, 我日常使用需要忽略硬件密钥对应的私钥, 否则它总会尝试使用那个私钥解密, 何如?+
+哦! 重启一下 =gpg-agent= 就好了, 能在智能卡不在的时候用本地的私钥解密, 而不是要求我插入智能卡.
+
+** 靓号?
 倒是应该生成一个靓号用来做签名子密钥, 而不是使用主密钥签名.
 [[https://github.com/RedL0tus/VanityGPG][vanity_gpg]] 使用 [[https://sequoia-pgp.org][sequoia]]([[https://fedoraproject.org/wiki/Changes/RpmSequoia][fedora 现在也使用 sq 了]]) 作为后端, 通过修改时间戳来快速改变密钥生成.
-时间戳是向后修改的, 大概是为了防止 =gpg: key X was created Y seconds in the future (time warp or clock problem)= 这种警告
+时间戳是向过去修改的, 大概是为了防止 =gpg: key X was created Y seconds in the future (time warp or clock problem)= 这种警告
 但是, 作为子密钥, 时间必须在主密钥之后(见下文), 所以, 应该让向过去走的时间有一个限度.
-那么就改源码吧!
++那么就改源码吧!+
+稍微看了一下 =main()= 函数, 发现前面有一个常量
+#+BEGIN_SRC rust
+/// Key reshuffle limit
+const KEY_RESHUFFLE_LIMIT: usize = 60 * 60 * 24 * 30; // One month ago at worst
+
+/* ... */
+
+} else if reshuffle_counter == 0 {
+    info!(
+        "({}): Reshuffle limit reached, generating new primary key",
+        thread_id
+    );
+    key = Key::new(DefaultBackend::new(cipher_suite.clone()).unwrap());
+    reshuffle_counter = KEY_RESHUFFLE_LIMIT;
+#+END_SRC
+作者也考虑到了, 如果时间过早就重新生成, 限度是一个月. 拖了这么长时间, 也差不多一个月了, 所以在时间上没问题了.
+
+那就生成一个, 开始缝合, 一切顺利.
+不过, 当我准备删除临时导入的私钥时, 问题出现了, 而我也知道了之前主私钥是怎么丢失的了!
+当我试图删除导入为主私钥的靓号时, 会同时删除以靓号作为子密钥的那个主密钥,
+因为那两个靓号密钥是等同的, 是一个密钥的 keyrip 同时作为主密钥和子密钥, 还好我手里的主密钥是放在 canokey 上的.
+所以就需要先把整个私钥导出, 再删除靓号主私钥, 再导入回来, 就 ok 啦.
+
+靓号我先用着一个没花太长时间就生成的(regxp:AAA520$), 之后感觉可以时再多花点时间生成个好的.
+
+
+* gpg.conf 和 gpg-agent.conf
+主要想弄一个事, 就是输入密码的时候不弹出窗口, 而是用终端界面, 看起来更 hack 一些.
+这个是在 gpg-agent.conf 里 =pinentry-program /usr/bin/pinentry-curses= (有些系统上叫 pinentry-tty)
+
+gpg.conf 我没放太多东西:
+default-key 倒是能指定硬件密钥的子密钥而非本地的另一个主密钥来签名, 但是解密的时候却也优先使用硬件的密钥, which 我刚弄明白怎么样才能不使用它.
+而 local-user 则解决了这个问题, 吗? -u 是可以覆写 default-key 的, 但是没人能覆写它, 而且再加 -u 不会替代 gpg.conf 里的 local-user, 而是都加上.
+这就是我之前对同时持有多个主密钥及绑定的子密钥这件事的担忧, 会变得混乱.
+
+而我用来验证我使用的是正确的签名密钥时:
+#+BEGIN_SRC shell
+[~]── ─ echo aaa | gpg --clearsign | gpg --verify
+gpg: signing failed: Inappropriate ioctl for device
+gpg: [stdin]: clear-sign failed: Inappropriate ioctl for device
+#+END_SRC
+是因为我硬件密钥的签名子密钥设置了密码, 而密码使用的是终端输入, 所以 stdin 无法输入密码...
 
 
 * 缝合曾经的主密钥
-之前其实早就想弄硬件密钥了, 但是一直没有什么事情驱使我去做, 直到有一天, 我导入靓号(又想删除)的时候, 一不小心把我的主密钥删了, 大概是 fish 补全的锅.
+之前其实早就想弄硬件密钥了, 但是一直没有什么事情驱使我去做, 直到有一天, 我导入靓号(又想删除)的时候, 一不小心把我的主密钥删了, +大概是 fish 补全的锅+ 原因见上.
 所以我才想重新生成一个密钥并且保证安全. 但是后来又想到, 我实际上之前[[./backup_everything.org][大备份]]的时候有我主目录的备份, 也有我那时后的私钥, 有希望啊!
-(有一个词叫 rotate key, 就是用老密钥签名新密钥来证明新密钥属于你)
 
 ** 可行性?
 我就想把曾经那个密钥缝合到现在的密钥环上作为子密钥, 但是之前在[[https://dejavu.moe/posts/vanity-pgp/#缝合密钥][某科学的 PGP 算号指南]]里看见
@@ -77,7 +145,7 @@ You may turn ON or OFF touch policies for SIG, DEC, AUT in the admin applet in t
 (其中提到的老教程存档于互联网档案馆: [[https://web.archive.org/web/20200620041634/http://atom.smasher.org/gpg/gpg-migrate.txt][http://atom.smasher.org/gpg/gpg-migrate.txt]] 使用 GnuPG v1)
 
 那讨论里面说了, GnuPG 2.1 之后可以把任何密钥变成子密钥, *但 是*, 直接加会改变子密钥的指纹!
-所以要使用 =--faked-system-time='timestamp!'=, 如果子密钥时间更早, 的确能成功加上, *但 是*, 主密钥的时间会变成最早子密钥的时间, 产生警告!
+所以要使用 =--faked-system-time=timestamp!=, 如果子密钥时间更早, 的确能成功加上, *但 是*, 主密钥的时间会变成最早子密钥的时间, 产生警告!
 #+BEGIN_EXAMPLE
 gpg: public key B8B791E307A9887E is 17 days newer than the signature
 sec   ed25519/B8B791E307A9887E 2023-04-16 [SC] [expires: 2025-04-15]
@@ -97,9 +165,38 @@ ssb   cv25519/28905D27051C7D61 2023-03-29 [E]
       Keygrip = 8A99C8A1406C9A3A3EA2D40F1637A5F4D3415FA8
 #+END_EXAMPLE
 
+对比加入老密钥作为子密钥之前和之后比较 =gpg -K --with-colons= 的输出, 会发现实际上主密钥本身的时间戳并没有改动, 只是加了一个时间戳更早的子密钥.
+所以推断, =--faked-system-time= 并不会玩坏主密钥的时间, gpg 是根据最早的时间(不管是主密钥还是子密钥)作为一个密钥的时间, 但是会与主密钥的时间进行对比, 产生警告.
+#+BEGIN_SRC diff
+diff -u --label \#\<buffer\ bbb\> --label \#\<buffer\ aaa\> /tmp/buffer-content-6AjMJE /tmp/buffer-content-yx7Sxg
+--- #<buffer bbb>
++++ #<buffer aaa>
+@@ -12,6 +13,9 @@
+ ssb:u:255:18:18A470DFAFA4339C:1681624598:1744696598:::::e:::+::cv25519::
+ fpr:::::::::FE55371FE6BB6C7B93DEA6FB18A470DFAFA4339C:
+ grp:::::::::053B88E19B5839C7A6549237E4ADA01F106CA026:
++ssb:i:255:22:0D8DD61234B1287A:1680094463:::::::::+::ed25519::
++fpr:::::::::996AAA92AB43EE992005A7A50D8DD61234B1287A:
++grp:::::::::A110196057DDA134F4360662936EB5AE4F337B33:
+ sec:-:255:22:0D8DD61234B1287A:1680094463:::-:::scESC:::+::ed25519:::0:
+ fpr:::::::::996AAA92AB43EE992005A7A50D8DD61234B1287A:
+ grp:::::::::A110196057DDA134F4360662936EB5AE4F337B33:
+#+END_SRC
+
 所以还是算了吧? 这种警告挺烦人的
 
-** TODO 意义
+** 意义
+其实我就是想能不作为主密钥的形式让曾经的私钥复活, 并且一同放在导出的公钥, 用于验证我之前的签名.
+不过, 我之前似乎也没签过几次名, 即使有, 也有一些被 =git rebase= 覆写掉了.
+
+
+* Very short signature?
+I'saw some very short signature when investigating PGP usage in openbsd-misc mailing list, some are just 2.5 line!
+so I made a comparison:
+#+BEGIN_EXAMPLE
+RSA > ED25519 > DSA2048 > DSA1024
+>5l   3l+       2.5l+     2l+
+#+END_EXAMPLE
 
 
 * 好文章
@@ -109,11 +206,19 @@ ssb   cv25519/28905D27051C7D61 2023-03-29 [E]
 掰锝胃, DuckDuckGo 比 Bing 的搜索结果质量高多了
 
 ** Debian Wiki 系列
+#+BEGIN_EXAMPLE
+ .''`.  ** Debian GNU/Linux **
+: :' :      The  universal
+`. `'      Operating System
+  `-    http://www.debian.org/
+#+END_EXAMPLE
+
 因为 Debian 的开发高度依赖 PGP, 所以有很多不错的文章很好的解释了 GnuPG
 Debian 将 PGP 形容为 [[https://wiki.debian.org/DebianServiceForDD]["This is your source of power"]], 感觉他们好传统啊, 相比之下, Fedora 的开发方式被大公司带的更现代.
 Debian Wiki 质量真高, 页面也十分简洁, 相比 Arch, 经过了多年的沉淀, 而且比较像 "大教堂" 的维护模式.
 
 - [[https://wiki.debian.org/Subkeys][Using OpenPGP subkeys in Debian development]]
+- [[https://wiki.debian.org/OpenPGP][CategoryOpenPGP]]
 - [[https://wiki.debian.org/Keysigning][Keysigning]]
 
 ** 在我[[./internet_collections.org][收藏夹]]中的
@@ -123,9 +228,15 @@ Debian Wiki 质量真高, 页面也十分简洁, 相比 Arch, 经过了多年的
 --[[https://www.schneier.com/books/applied-cryptography/][Applied Cryptography]]
 #+END_QUOTE
 *** [[https://chenhe.me/post/yubikey-starting-gpg/][YubiKey 入手记 - GPG]]
+*** [[https://dejavu.moe/posts/vanity-pgp/][某科学的 PGP 算号指南]]
+**** [[https://www.douban.com/note/763978955/?_i=5587236kugBn1j,5704819kugBn1j][一位 PGP 进步青年的科学算号实践]]
 
 ** other
 *** [[https://help.riseup.net/en/security/message-security/openpgp/best-practices][OpenPGP Best Practices]]
 被很多人乃至 Debian Wiki 放到相关链接
 *** [[https://linux.cn/article-10432-1.html][LCTT: 用 PGP 保护代码完整性]] (一~七)
 一系列详细的教程, 翻译的不错
+*** [[https://lwn.net/Articles/742542/][LWN: Future directions for PGP]]
+both [[http://www.netpgp.com][NetPGP]] and [[https://web.archive.org/web/20190829071132/https://neopg.io/][NeoPG]] are died
+I tried to build netpgp, but too many errors!
+*** [[https://danielpecos.com/2019/03/30/how-to-rotate-your-openpgp-gnupg-keys][How to rotate your OpenPGP / GnuPG keys]]

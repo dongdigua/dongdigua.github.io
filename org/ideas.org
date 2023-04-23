@@ -34,3 +34,5 @@ You want to archive some page, then just store it on your machine, then others c
 * news from the past
 news group server, but the daily content is from the past
 * bili dynamic news reader with api/rss
+* an input method that inputs predefined Chinese paragraph
+to fight against those exam website
