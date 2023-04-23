@@ -1,6 +1,9 @@
 #+TITLE: 一位 PGP 进步青年的 Canokey 历程
+#+DATE: <2023-04-16 日>
 #+DESCRIPTION: Frequently Questioned Answers
 #+OPTIONS: num:1
+
+#+MACRO: ruby @@html:<ruby>$1<rt>$2</rt></ruby>@@
 
 作为一个注重网络隐私进步青年, 当然要使用 PGP +以提升逼格+.
 #+BEGIN_COMMENT
@@ -53,7 +56,7 @@ static int UIF_TO_TOUCH_POLICY[3] = {[UIF_DISABLED] = TOUCH_POLICY_DEFAULT,
 好吧, 虽然 pr 弄的很尴尬, 但通过提问是解决了问题, 否则我可能会一直陷在我的思维模式里也想不明白.
 
 
-* 日常使用用子密钥
+* 日常使用子密钥
 我日常会使用 gpg 加密一些配置文件里的东西, 但是我不可能每次想读邮件都插上硬件密钥, 那就太费劲了, 所以我想使用另外一个加密子密钥来做这件事,
 这样给我的感觉是有一个特别安全的主钥匙串, 上面挂着一些不太安全的子钥匙, 但是有些地方使我困惑:
 - PGP 会默认使用所有子密钥公钥中最新的一个来加密, 所以我导出公钥的时候就要去掉其中的子密钥而只保留生成密钥时附带的加密子密钥, which is safe on the Canokey
@@ -80,6 +83,8 @@ static int UIF_TO_TOUCH_POLICY[3] = {[UIF_DISABLED] = TOUCH_POLICY_DEFAULT,
 既然我有一个安全的密钥在不同机器之间共享, 我需要交换的文件可以使用共用的密钥加密, 也方便我 rotate encryption.
 +但是, 我日常使用需要忽略硬件密钥对应的私钥, 否则它总会尝试使用那个私钥解密, 何如?+
 哦! 重启一下 =gpg-agent= 就好了, 能在智能卡不在的时候用本地的私钥解密, 而不是要求我插入智能卡.
+
+这很清晰了吗? *见下文 gpg.conf 以及 age 的讨论*
 
 ** 靓号?
 倒是应该生成一个靓号用来做签名子密钥, 而不是使用主密钥签名.
@@ -117,11 +122,6 @@ const KEY_RESHUFFLE_LIMIT: usize = 60 * 60 * 24 * 30; // One month ago at worst
 主要想弄一个事, 就是输入密码的时候不弹出窗口, 而是用终端界面, 看起来更 hack 一些.
 这个是在 gpg-agent.conf 里 =pinentry-program /usr/bin/pinentry-curses= (有些系统上叫 pinentry-tty)
 
-gpg.conf 我没放太多东西:
-default-key 倒是能指定硬件密钥的子密钥而非本地的另一个主密钥来签名, 但是解密的时候却也优先使用硬件的密钥, which 我刚弄明白怎么样才能不使用它.
-而 local-user 则解决了这个问题, 吗? -u 是可以覆写 default-key 的, 但是没人能覆写它, 而且再加 -u 不会替代 gpg.conf 里的 local-user, 而是都加上.
-这就是我之前对同时持有多个主密钥及绑定的子密钥这件事的担忧, 会变得混乱.
-
 而我用来验证我使用的是正确的签名密钥时:
 #+BEGIN_SRC shell
 [~]── ─ echo aaa | gpg --clearsign | gpg --verify
@@ -129,6 +129,23 @@ gpg: signing failed: Inappropriate ioctl for device
 gpg: [stdin]: clear-sign failed: Inappropriate ioctl for device
 #+END_SRC
 是因为我硬件密钥的签名子密钥设置了密码, 而密码使用的是终端输入, 所以 stdin 无法输入密码...
+
+gpg.conf 我没放太多东西:
+default-key 倒是能指定硬件密钥的子密钥而非本地的另一个主密钥来签名, 但是解密的时候却也优先使用硬件的密钥, which 我刚弄明白怎么样才能不使用它.
+而 local-user 则解决了这个问题, 吗? -u 是可以覆写 default-key 的, 但是没人能覆写它, 而且再加 -u 不会替代 gpg.conf 里的 local-user, 而是都加上.
+这就是我之前对同时持有多个主密钥及绑定的子密钥这件事的担忧, 会变得混乱.
+一个比较激进的做法是直接移走日常加密的主密钥来防止被用于签名, 反正我也用不到.
+但是, (友好的问候语) gpg 还会尝试使用已经删除的私钥进行加密!!! 彻底服了...
+
+
+* [[https://github.com/FiloSottile/age][age]]
+:PROPERTIES:
+:CUSTOM_ID: age
+:END:
+加密改用 age 吧, stateless 比 stateful 容易多了 (stateless 另一个例子就是 sequoia-cli)
+反正无论 gpg 还是 age, 如果没有保护的私钥放在本地, 安全性都是差不多. gpg 还是用来签名和 WOT 更有用一些...
+Xe 也受不了 gpg 改用 age 加密了: [[https://xeiaso.net/blog/new-gpg-key-2021-01-15][I fucked it up, this key is broken]]
+当然, 我这里暂时先不公布 age 的公钥, 还是因为私钥在硬盘上, 这是对发送加密消息的对方的不负责.
 
 
 * 缝合曾经的主密钥
@@ -190,13 +207,26 @@ diff -u --label \#\<buffer\ bbb\> --label \#\<buffer\ aaa\> /tmp/buffer-content-
 不过, 我之前似乎也没签过几次名, 即使有, 也有一些被 =git rebase= 覆写掉了.
 
 
-* Very short signature?
-I'saw some very short signature when investigating PGP usage in openbsd-misc mailing list, some are just 2.5 line!
-so I made a comparison:
+* 极短的签名?
+我在调查 [[https://marc.info/?l=openbsd-misc][openbsd-misc]] 上的 PGP 使用情况时发现有人签名比我三行多一点的 Ed25519 还要短?!
+[[https://ulyc.github.io/2021/01/18/2021年-用更现代的方法使用PGP-中/#rsa-vs-ecc][UlyC]] 说 ECC 的优势之一就是比 RSA 短, 那谁还比 ECC 更短呢?
+开个 voidlinux 的 chroot (避免污染 stateful 环境) 做了点实验
 #+BEGIN_EXAMPLE
-RSA > ED25519 > DSA2048 > DSA1024
->5l   3l+       2.5l+     2l+
+RSA > ED25519 > secp256k1 = DSA2048 > DSA1024
+>5l   3l+       2.5l+       2.5l+     2l+
 #+END_EXAMPLE
+(secp256k1 是比特币的算法) (1024位的显然[[https://lists.debian.org/debian-devel-announce/2010/09/msg00003.html][不应该使用]])
+
+其实 OpenBSD [[https://isopenbsdsecu.re/mitigations/signify/][signify]] 更短, 但是人家没有 uid wot 等身份的东西, 只是签名/验证一个{{{ruby(文件,artifact)}}}.
+
+
+* TODO Outro
+:PROPERTIES:
+:CUSTOM_ID: outro
+:END:
+最近脑子里都是这些东西, 不少是在学校拿草纸写的. 感冒在家, 身体停下了脑子也停不下, 一直在完善这个草稿.
+总算把一直盘旋在脑子里的思路理得差不多清楚了!
+这只是一个刚研究 PGP 两周的无聊高中牲的一些想法, 肯定有诸多不足与错误, 欢迎给我发邮件或提 issue 讨论.
 
 
 * 好文章
