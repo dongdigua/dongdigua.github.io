@@ -1,7 +1,8 @@
 #+TITLE: 一位 PGP 进步青年的 Canokey 历程
 #+DATE: <2023-04-16 日>
-#+DESCRIPTION: Frequently Questioned Answers
+#+DESCRIPTION: 不只是 Canokey, 也不只是 PGP
 #+OPTIONS: num:1
+#+TAGS: negative(-)
 
 #+MACRO: ruby @@html:<ruby>$1<rt>$2</rt></ruby>@@
 
@@ -53,7 +54,7 @@ static int UIF_TO_TOUCH_POLICY[3] = {[UIF_DISABLED] = TOUCH_POLICY_DEFAULT,
 然后 gpg-card 里说的是 "button", 我搜索 "touch" 就忽略掉了...
 以及 [[https://gnupg.org/ftp/specs/OpenPGP-smart-card-application-3.4.1.pdf][Functional Specification of the OpenPGP application on ISO Smart Card Operating Systems]] 的 4.4.3.6 节
 
-好吧, 虽然 pr 弄的很尴尬, 但通过提问是解决了问题, 否则我可能会一直陷在我的思维模式里也想不明白.
+好吧, 虽然 pr 弄的很尴尬, 但通过提问总算是解决了问题, 否则我可能会一直陷在我的思维模式里也想不明白.
 
 
 * 日常使用子密钥
@@ -113,12 +114,12 @@ const KEY_RESHUFFLE_LIMIT: usize = 60 * 60 * 24 * 30; // One month ago at worst
 不过, 当我准备删除临时导入的私钥时, 问题出现了, 而我也知道了之前主私钥是怎么丢失的了!
 当我试图删除导入为主私钥的靓号时, 会同时删除以靓号作为子密钥的那个主密钥,
 因为那两个靓号密钥是等同的, 是一个密钥的 keyrip 同时作为主密钥和子密钥, 还好我手里的主密钥是放在 canokey 上的.
-所以就需要先把整个私钥导出, 再删除靓号主私钥, 再导入回来, 就 ok 啦.
+所以就需要先把整个私钥导出, 再删除靓号主私钥, 再导入回来, 就 ok 啦. (/呕/)
 
 靓号我先用着一个没花太长时间就生成的(regxp:AAA520$), 之后感觉可以时再多花点时间生成个好的.
 
 
-* gpg.conf 和 gpg-agent.conf
+* gpg.conf 和 gpg-agent.conf                                       :negative:
 主要想弄一个事, 就是输入密码的时候不弹出窗口, 而是用终端界面, 看起来更 hack 一些.
 这个是在 gpg-agent.conf 里 =pinentry-program /usr/bin/pinentry-curses= (有些系统上叫 pinentry-tty)
 
@@ -129,23 +130,26 @@ gpg: signing failed: Inappropriate ioctl for device
 gpg: [stdin]: clear-sign failed: Inappropriate ioctl for device
 #+END_SRC
 是因为我硬件密钥的签名子密钥设置了密码, 而密码使用的是终端输入, 所以 stdin 无法输入密码...
+包括 git commit -S 的时候也会输入不了密码, 所以还是改回去吧, 用弹出窗口...
 
 gpg.conf 我没放太多东西:
 default-key 倒是能指定硬件密钥的子密钥而非本地的另一个主密钥来签名, 但是解密的时候却也优先使用硬件的密钥, which 我刚弄明白怎么样才能不使用它.
 而 local-user 则解决了这个问题, 吗? -u 是可以覆写 default-key 的, 但是没人能覆写它, 而且再加 -u 不会替代 gpg.conf 里的 local-user, 而是都加上.
 这就是我之前对同时持有多个主密钥及绑定的子密钥这件事的担忧, 会变得混乱.
 一个比较激进的做法是直接移走日常加密的主密钥来防止被用于签名, 反正我也用不到.
-但是, (友好的问候语) gpg 还会尝试使用已经删除的私钥进行加密!!! 彻底服了...
+但是, (/友好的问候语/) gpg 还会尝试使用已经删除的私钥进行加密!!! 彻底服了...
 
 
-* [[https://github.com/FiloSottile/age][age]]
+* [[https://github.com/FiloSottile/age][age]]                                                              :negative:
 :PROPERTIES:
 :CUSTOM_ID: age
 :END:
 加密改用 age 吧, stateless 比 stateful 容易多了 (stateless 另一个例子就是 sequoia-cli)
+age 这种小工具, 以及下文提到的 signify, 都是比较接近 UNIX 哲学的, 而 gpg, 则是 GNU 软件那种复杂的全能的瑞士军刀.
 反正无论 gpg 还是 age, 如果没有保护的私钥放在本地, 安全性都是差不多. gpg 还是用来签名和 WOT 更有用一些...
 Xe 也受不了 gpg 改用 age 加密了: [[https://xeiaso.net/blog/new-gpg-key-2021-01-15][I fucked it up, this key is broken]]
 当然, 我这里暂时先不公布 age 的公钥, 还是因为私钥在硬盘上, 这是对发送加密消息的对方的不负责.
+如果之后公布的话, age 的公钥弄成 [[https://github.com/seaofmars/vanity-age][vanity]] 能更有趣, 因为{{{ruby(收件人,recipient)}}}能包含更多字母.
 
 
 * 缝合曾经的主密钥
@@ -205,6 +209,7 @@ diff -u --label \#\<buffer\ bbb\> --label \#\<buffer\ aaa\> /tmp/buffer-content-
 ** 意义
 其实我就是想能不作为主密钥的形式让曾经的私钥复活, 并且一同放在导出的公钥, 用于验证我之前的签名.
 不过, 我之前似乎也没签过几次名, 即使有, 也有一些被 =git rebase= 覆写掉了.
+所以之前的那个主密钥没多大意义, 扔了得了, GitHub 上面也要删了, 不然 https://github.com/dongdigua.gpg 还是之前那个.
 
 
 * 极短的签名?
@@ -218,6 +223,16 @@ RSA > ED25519 > secp256k1 = DSA2048 > DSA1024
 (secp256k1 是比特币的算法) (1024位的显然[[https://lists.debian.org/debian-devel-announce/2010/09/msg00003.html][不应该使用]])
 
 其实 OpenBSD [[https://isopenbsdsecu.re/mitigations/signify/][signify]] 更短, 但是人家没有 uid wot 等身份的东西, 只是签名/验证一个{{{ruby(文件,artifact)}}}.
+btw, [[https://www.openbsd.org/papers/bsdcan-signify.html][signify 论文]] 里提到的 FreeBSD Security Officer 的 600 行的公钥我导入看了下, 好家伙, 整整 150 个签名!
+#+BEGIN_EXAMPLE
+pub   dsa1024 2002-08-27 [SCA] [expired: 2014-01-01]
+      C3740FC569A6FBB14AEDB13115D68804CA6CDFB2
+uid           [ expired] FreeBSD Security Officer <security-officer@FreeBSD.org>
+
+pub   rsa4096 2013-09-24 [SC] [expired: 2018-01-01]
+      1CF7FF6FADF5CA9FBE1B8CB2ED67ECD65DCF6AE7
+uid           [ expired] FreeBSD Security Officer <security-officer@FreeBSD.org>
+#+END_EXAMPLE
 
 
 * TODO Outro
@@ -228,12 +243,20 @@ RSA > ED25519 > secp256k1 = DSA2048 > DSA1024
 总算把一直盘旋在脑子里的思路理得差不多清楚了!
 这只是一个刚研究 PGP 两周的无聊高中牲的一些想法, 肯定有诸多不足与错误, 欢迎给我发邮件或提 issue 讨论.
 
+近几天我在各搜索引擎里的东西全是 gpg, 密码学, 隐私, (甚至还有 CITIZEN4), 等相关的东西, 也在担心是否会被盯上.
+即使我学习使用这些加密手段, 也还是不可避免的在正常浏览中要遭受追踪和审察.
+
+到这里, 我听到有人在问 「这是不是有病？」
+是的
+可是，亲爱的朋友，一个没病的人又怎么会去使用 PGP 呢？
+
+
 
 * 好文章
 :PROPERTIES:
 :CUSTOM_ID: good
 :END:
-掰锝胃, DuckDuckGo 比 Bing 的搜索结果质量高多了
+DuckDuckGo 比 Bing 的搜索结果质量高多了
 
 ** Debian Wiki 系列
 #+BEGIN_EXAMPLE
@@ -260,6 +283,9 @@ Debian Wiki 质量真高, 页面也十分简洁, 相比 Arch, 经过了多年的
 *** [[https://chenhe.me/post/yubikey-starting-gpg/][YubiKey 入手记 - GPG]]
 *** [[https://dejavu.moe/posts/vanity-pgp/][某科学的 PGP 算号指南]]
 **** [[https://www.douban.com/note/763978955/?_i=5587236kugBn1j,5704819kugBn1j][一位 PGP 进步青年的科学算号实践]]
+*** [[https://www.agwa.name/blog/post/ssh_signatures][It's Now Possible To Sign Arbitrary Data With Your SSH Keys]]
+所以, 现在 ssh key 既能用于 age 加密, 又能签名, 🤔
+**** [[https://zhuanlan.zhihu.com/p/428029268][zhihu: 如何用SSH密钥实现加密和电子签名?]]
 
 ** other
 *** [[https://help.riseup.net/en/security/message-security/openpgp/best-practices][OpenPGP Best Practices]]
@@ -270,3 +296,13 @@ Debian Wiki 质量真高, 页面也十分简洁, 相比 Arch, 经过了多年的
 both [[http://www.netpgp.com][NetPGP]] and [[https://web.archive.org/web/20190829071132/https://neopg.io/][NeoPG]] are died
 I tried to build netpgp, but too many errors!
 *** [[https://danielpecos.com/2019/03/30/how-to-rotate-your-openpgp-gnupg-keys][How to rotate your OpenPGP / GnuPG keys]]
+
+** negative words                                                 :negative:
+*** [[https://latacora.micro.blog/2019/07/16/the-pgp-problem.html][The PGP Problem]]
+*** [[https://words.filippo.io/giving-up-on-long-term-pgp/][I'm giving up on PGP]]
+the author of age
+**** [[http://www.phrack.org/issues/69/4.html][phrack69: dissecting the packet format to bruteforce short IDs]]
+#+BEGIN_COMMENT
+begin 644 gpg-crash.tar.gz
+is uuencoding
+#+END_COMMENT

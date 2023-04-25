@@ -1,5 +1,5 @@
 #+TAGS: elixir(e) rust(r) c(c) lisp(l) python(p) nim(n)
-#+TAGS: lowlevel(w) frontend(f) backend(b) algorithm(a) math(t)
+#+TAGS: lowlevel(w) frontend(f) backend(b) algorithm(a) math(t) crypto(C)
 #+TAGS: hack(h) fun(u) wow(O)
 #+TAGS: emacs(m) linux(x) iot(i) plan9(9) BSD(B) PGP(P)
 #+TAGS: smth mailinglist
@@ -42,11 +42,6 @@ You can always find something magical on the Internet.
 ** [[http://www.paulgraham.com/todo.html][Paul Graham]]
 ** [[http://www.qiusir.com/][qiusir]]                                                            :rssub:
 ** [[http://xahlee.info][XahLee]]
-@@html:<details>@@
-@@html:<summary>emacs magic</summary>@@
-#+ATTR_HTML: :width 256px
-[[http://xahlee.info/emacs/misc/i/Marisa_Kirisame_emacs_magic.png]]
-@@html:</details>@@
 ** [[http://www.catb.org/esr/][Eric S. Raymond]]
 ** [[http://www.yinwang.org][当然我在扯淡]]
 *** [[https://docs.huihoo.com/homepage/shredderyin/index.html][王垠的个人主页]]
@@ -268,6 +263,9 @@ very beautiful page
 *** [[https://dejavu.moe/posts/vanity-pgp/][某科学的 PGP 算号指南]]                                             :PGP:
 *** [[https://feng.si/posts/2019/07/centos-the-last-linux-distro-you-should-ever-consider][CentOS: 永远有多远就离它多远]]
 ** TODO [[https://drewdevault.com][Drew DeVault's blog]]
+the author of sway & sourcehut
+** [[https://www.agwa.name][Andrew Ayer]]
+*** [[https://www.agwa.name/blog/post/ssh_signatures][It's Now Possible To Sign Arbitrary Data With Your SSH Keys]]
 
 
 ** B/HWS/fri3nds
