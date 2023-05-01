@@ -114,7 +114,8 @@ const KEY_RESHUFFLE_LIMIT: usize = 60 * 60 * 24 * 30; // One month ago at worst
 不过, 当我准备删除临时导入的私钥时, 问题出现了, 而我也知道了之前主私钥是怎么丢失的了!
 当我试图删除导入为主私钥的靓号时, 会同时删除以靓号作为子密钥的那个主密钥,
 因为那两个靓号密钥是等同的, 是一个密钥的 keyrip 同时作为主密钥和子密钥, 还好我手里的主密钥是放在 canokey 上的.
-所以就需要先把整个私钥导出, 再删除靓号主私钥, 再导入回来, 就 ok 啦. (/呕/)
++所以就需要先把整个私钥导出, 再删除靓号主私钥, 再导入回来, 就 ok 啦. (/呕/)+
+还是 Debian Sunkey 那篇里面说的, 直接删 =~/.gnupg/private-keys-v1.d/= 对应的 keyrip 就行啦
 
 靓号我先用着一个没花太长时间就生成的(regxp:AAA520$), 之后感觉可以时再多花点时间生成个好的.
 
@@ -131,6 +132,7 @@ gpg: [stdin]: clear-sign failed: Inappropriate ioctl for device
 #+END_SRC
 是因为我硬件密钥的签名子密钥设置了密码, 而密码使用的是终端输入, 所以 stdin 无法输入密码...
 包括 git commit -S 的时候也会输入不了密码, 所以还是改回去吧, 用弹出窗口...
+(而 git 使用 ssh 签名的时候就能很好的处理终端密码输入)
 
 gpg.conf 我没放太多东西:
 default-key 倒是能指定硬件密钥的子密钥而非本地的另一个主密钥来签名, 但是解密的时候却也优先使用硬件的密钥, which 我刚弄明白怎么样才能不使用它.
@@ -210,6 +212,17 @@ diff -u --label \#\<buffer\ bbb\> --label \#\<buffer\ aaa\> /tmp/buffer-content-
 其实我就是想能不作为主密钥的形式让曾经的私钥复活, 并且一同放在导出的公钥, 用于验证我之前的签名.
 不过, 我之前似乎也没签过几次名, 即使有, 也有一些被 =git rebase= 覆写掉了.
 所以之前的那个主密钥没多大意义, 扔了得了, GitHub 上面也要删了, 不然 https://github.com/dongdigua.gpg 还是之前那个.
+#+BEGIN_EXAMPLE
+-----BEGIN PGP PUBLIC KEY BLOCK-----
+Comment: This is a revocation certificate
+
+iJwEIBYKAEQWIQRWzuFXyfUzT8pSzsPRhOgogGKQtgUCZE8SMSYdAWFuZCBpdCdz
+IG5vdCBjb25zaWRlcmVkIHNhZmUgYW55bW9yZQAKCRDRhOgogGKQthfeAQDKFM3d
+CPH1XPIdHlVomS60QYOnCQqx94tZZHoDXiF6ugEA5EV5mQ1L8kFJErUxF+66VFg/
+pBxFcd/TsbHah3HNowc=
+=YTGm
+-----END PGP PUBLIC KEY BLOCK-----
+#+END_EXAMPLE
 
 
 * 极短的签名?
@@ -223,7 +236,7 @@ RSA > ED25519 > secp256k1 = DSA2048 > DSA1024
 (secp256k1 是比特币的算法) (1024位的显然[[https://lists.debian.org/debian-devel-announce/2010/09/msg00003.html][不应该使用]])
 
 其实 OpenBSD [[https://isopenbsdsecu.re/mitigations/signify/][signify]] 更短, 但是人家没有 uid wot 等身份的东西, 只是签名/验证一个{{{ruby(文件,artifact)}}}.
-btw, [[https://www.openbsd.org/papers/bsdcan-signify.html][signify 论文]] 里提到的 FreeBSD Security Officer 的 600 行的公钥我导入看了下, 好家伙, 整整 150 个签名!
+btw, [[https://www.openbsd.org/papers/bsdcan-signify.html][signify 论文]] 里提到的 FreeBSD Security Officer 的 600 行的公钥我看了下(--show-keys), 好家伙, 整整 150 个签名!
 #+BEGIN_EXAMPLE
 pub   dsa1024 2002-08-27 [SCA] [expired: 2014-01-01]
       C3740FC569A6FBB14AEDB13115D68804CA6CDFB2
@@ -268,7 +281,6 @@ DuckDuckGo 比 Bing 的搜索结果质量高多了
 
 因为 Debian 的开发高度依赖 PGP, 所以有很多不错的文章很好的解释了 GnuPG
 Debian 将 PGP 形容为 [[https://wiki.debian.org/DebianServiceForDD]["This is your source of power"]], 感觉他们好传统啊, 相比之下, Fedora 的开发方式被大公司带的更现代.
-Debian Wiki 质量真高, 页面也十分简洁, 相比 Arch, 经过了多年的沉淀, 而且比较像 "大教堂" 的维护模式.
 
 - [[https://wiki.debian.org/Subkeys][Using OpenPGP subkeys in Debian development]]
 - [[https://wiki.debian.org/OpenPGP][CategoryOpenPGP]]
@@ -285,17 +297,25 @@ Debian Wiki 质量真高, 页面也十分简洁, 相比 Arch, 经过了多年的
 **** [[https://www.douban.com/note/763978955/?_i=5587236kugBn1j,5704819kugBn1j][一位 PGP 进步青年的科学算号实践]]
 *** [[https://www.agwa.name/blog/post/ssh_signatures][It's Now Possible To Sign Arbitrary Data With Your SSH Keys]]
 所以, 现在 ssh key 既能用于 age 加密, 又能签名, 🤔
+不过, =-sk= 的 FIDO 硬件验证密钥, which 能提高一些安全性, 不能用于 age 加密, age 本身的[[https://github.com/riastradh/age-plugin-fido][FIDO 支持]]还不完善
 **** [[https://zhuanlan.zhihu.com/p/428029268][zhihu: 如何用SSH密钥实现加密和电子签名?]]
 
 ** other
 *** [[https://help.riseup.net/en/security/message-security/openpgp/best-practices][OpenPGP Best Practices]]
 被很多人乃至 Debian Wiki 放到相关链接
+*** [[http://rossde.com/PGP][rossde's words on PGP (not just GPG)]]
 *** [[https://linux.cn/article-10432-1.html][LCTT: 用 PGP 保护代码完整性]] (一~七)
 一系列详细的教程, 翻译的不错
 *** [[https://lwn.net/Articles/742542/][LWN: Future directions for PGP]]
 both [[http://www.netpgp.com][NetPGP]] and [[https://web.archive.org/web/20190829071132/https://neopg.io/][NeoPG]] are died
 I tried to build netpgp, but too many errors!
 *** [[https://danielpecos.com/2019/03/30/how-to-rotate-your-openpgp-gnupg-keys][How to rotate your OpenPGP / GnuPG keys]]
+*** [[https://lists.gnupg.org/pipermail/gnupg-users/2002-August/014721.html][gnupg-users: using various subkeys]]
+*** [[https://bbs.archlinuxcn.org/viewtopic.php?pid=39883#p39883][archbbs: 个人使用如何选择GnuPG密钥方案？使用子密钥还是不用？]]
+#+BEGIN_QUOTE
+世界上有两种密钥信任体系，PGP 的 web of trust 和 TLS 证书的 CA。前者是社交化的，相信你所相信的人。后者是相信权威。
+-- 依云
+#+END_QUOTE
 
 ** negative words                                                 :negative:
 *** [[https://latacora.micro.blog/2019/07/16/the-pgp-problem.html][The PGP Problem]]

@@ -106,12 +106,12 @@ kernel
 .var
 .cargo
 .rustup
-[~]── ─ rsync -avh --exclude-from=rsync-exclude --delete-excluded /home/digua DEST
+[~]── ─ rsync -avh --info=progress2 --exclude-from=rsync-exclude /home/digua DEST
 #+END_SRC
 
 对于 git 目录比较特殊, 使用 CVS 忽略模式, 但保留每个 =.git= 目录:
 #+BEGIN_SRC shell
-rsync -avhC --delete-excluded --include .git /home/digua/git DEST
+rsync -avhC --include .git --exclude target /home/digua/git DEST
 #+END_SRC
 
 * Change drive

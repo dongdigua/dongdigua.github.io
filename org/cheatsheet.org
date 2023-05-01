@@ -36,12 +36,13 @@
 | ~        | change case            |
 
 ** file/split
-| key         | usage        |
-|-------------+--------------|
-| :n/:N       | 文件之间切换 |
-| :b          | 切换到文件   |
-| C-w h/j/k/l | 切换分屏窗口 |
-| :%!xxd (-r) | edit in hex  |
+| key         | usage         |
+|-------------+---------------|
+| :n/:N       | 文件之间切换    |
+| :b          | 切换到文件      |
+| C-w h/j/k/l | 切换分屏窗口    |
+| gt/T        | next/prev tab |
+| :%!xxd (-r) | edit in hex   |
 
 * EMACS
 :PROPERTIES:
