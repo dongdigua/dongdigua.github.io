@@ -36,7 +36,6 @@ You can always find something magical on the Internet.
 *** [[https://snarfed.org/2022-03-10_were-drowning-software-dependencies][We're Drowning Software Dependencies]]
 *** [[http://ck.kolivas.org/pictures/Screenshot_20170905_134246.png][ck: ]][[https://ck-hack.blogspot.com/2021/08/514-and-future-of-muqss-and-ck-once.html][5.14 and the future of MuQSS and -ck once again (END)]]
 *** [[https://blogs.gnome.org/aday/2023/01/18/gnome-info-collect-what-we-learned/][gnome-info-collect: What we learned]]
-*** [[http://mindhacks.cn/2006/10/15/cantor-godel-turing-an-eternal-golden-diagonal/][康托尔、哥德尔、图灵——永恒的金色对角线]]
 *** TODO [[https://ferd.ca/ten-years-of-erlang.html][Ten Years of Erlang]]
 
 ** [[http://www.paulgraham.com/todo.html][Paul Graham]]
@@ -72,6 +71,8 @@ elixir/erlang大佬, 公众号: HelloElixir
 CRAZY!!!!!
 *** [[https://justine.lol/ape.html][actually portable executable]]
 **** [[https://jeskin.net/blog/getting-started-with-cosmopolitan-libc][Getting Started with Cosmopolitan Libc]]
+** [[http://mindhacks.cn][刘未鹏 | Mind Hacks]]                                                 :wow:
+*** [[http://mindhacks.cn/2006/10/15/cantor-godel-turing-an-eternal-golden-diagonal/][康托尔、哥德尔、图灵——永恒的金色对角线]]
 
 
 ** [[https://petermolnar.net/index.html][Peter 's Homepage]]                                                 :rssub:
@@ -165,8 +166,7 @@ funny byte
 [[https://lantian.pub/usr/uploads/202112/chubbyemu.jpg.thumb.png]]
 *** [[https://lantian.pub/article/forward/foolish-code-typo.lantian/][最傻的代码错误：一个空格酿成的血案]]
 *** [[https://lantian.pub/article/modify-website/serve-gopher-with-nginx.lantian/][用 nginx 建立 Gopher 网站]]                                      :gopher:
-*** [[https://lantian.pub/article/modify-website/dn42-experimental-network-2020.lantian/][DN42 实验网络介绍及注册教程]]
-**** [[https://lantian.pub/article/modify-website/how-to-kill-the-dn42-network.lantian/][如何引爆 DN42 网络]]
+*** [[https://lantian.pub/article/modify-website/how-to-kill-the-dn42-network.lantian/][如何引爆 DN42 网络]]
 ** [[https://ulyc.github.io/][UlyC]]                                                             :python:
 *** [[https://ulyc.github.io/2022/08/10/sourcehut-the-hackers-forge/][sourcehut,  一个反叛而又正统的代码托管平台]]
 *** [[https://ulyc.github.io/2021/01/13/2021年-用更现代的方法使用PGP-上/][2021年, 用更现代的方法使用PGP]]                                     :PGP:
@@ -266,7 +266,16 @@ very beautiful page
 the author of sway & sourcehut
 ** [[https://www.agwa.name][Andrew Ayer]]
 *** [[https://www.agwa.name/blog/post/ssh_signatures][It's Now Possible To Sign Arbitrary Data With Your SSH Keys]]
+** [[https://theoryware.net][Theory-of-Everything]]
+[[https://theoryware.net/button.gif]]
+everforest theme, also have a big collection
 
+** fedorapeople
+*** [[https://microcai.org][菜菜博士 - 博士在网络的家]]
+很敢说啊
+**** [[https://microcai.fedorapeople.org]]
+I found this in his gpg key
+# so uploading key really leaks information
 
 ** B/HWS/fri3nds
 *** [[https://shakaianee.top/][社会易姐]]
@@ -275,7 +284,6 @@ the author of sway & sourcehut
 *** [[https://evanmeek.github.io/][我不会编程]]
 EvanMeek / B站: 美味的樱桃菌
 *** [[https://yaocc.cc/][称呼我C先生]]                                                     :linux:
-*** [[https://blog.lunaixsky.com/][lunaixsky]]                                                  :c:lowlevel:
 *** [[https://endlesspeak.gitee.io/][EndlessPeak]]                                                     :linux:
 *** [[https://hackflow.org][GNUman]]
 **** [[https://hackflow.org/index.php/archives/124][谈 HTTPS 协议的缺陷与反 HTTPS 联盟的谬误]]
@@ -285,13 +293,11 @@ EvanMeek / B站: 美味的樱桃菌
 **** [[https://sh.alynx.one/posts/Do-Not-Fill-My-Email-with-Silly-Ads/][不要拿愚蠢的广告来污染我的邮箱]]
 **** [[https://sh.alynx.one/posts/Emacs-Monaco-Box-drawing-Character/][Emacs 和 Monaco 字体和 Box-drawing Character]]
 *** [[http://www.z.org.cn/][老网虫]]
-*** [[https://blog.yang-qwq.ml][yang-qwq]]
+*** [[https://yang-qwq.ml][Yang]]
 *** [[http://blog.zhanganzhi.com/][zhanganzhi]]
 *** [[https://blog.bluemangoo.net/][芒果快评]]
 22年新博客, 友链有踏浪
 *** [[https://acyanbird.github.io][山奈]]
-*** [[https://minecraft1248.github.io][minecraft1248]]
-今年的新博客
 *** [[https://fallenbreath.me][狐狸姐姐!]]
 
 ** ZhiHu
@@ -559,3 +565,4 @@ BSD asm
 ** [[https://neal.fun/wonders-of-street-view/][Wonders of Street View]]
 ** [[https://quotes.tilde.chat][~chat irc quote database]]
 *** [[http://bash.org][bash.org Quote Database]]
+** [[https://github.com/zepouet/Xee-xCode-4.5/blob/master/XeePhotoshopLoader.m#L108][PSD is not my favourite file format]]

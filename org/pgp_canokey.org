@@ -155,6 +155,9 @@ Xe 也受不了 gpg 改用 age 加密了: [[https://xeiaso.net/blog/new-gpg-key-
 
 
 * 缝合曾经的主密钥
+:PROPERTIES:
+:CUSTOM_ID: obsolete
+:END:
 之前其实早就想弄硬件密钥了, 但是一直没有什么事情驱使我去做, 直到有一天, 我导入靓号(又想删除)的时候, 一不小心把我的主密钥删了, +大概是 fish 补全的锅+ 原因见上.
 所以我才想重新生成一个密钥并且保证安全. 但是后来又想到, 我实际上之前[[./backup_everything.org][大备份]]的时候有我主目录的备份, 也有我那时后的私钥, 有希望啊!
 
@@ -297,7 +300,7 @@ Debian 将 PGP 形容为 [[https://wiki.debian.org/DebianServiceForDD]["This is 
 **** [[https://www.douban.com/note/763978955/?_i=5587236kugBn1j,5704819kugBn1j][一位 PGP 进步青年的科学算号实践]]
 *** [[https://www.agwa.name/blog/post/ssh_signatures][It's Now Possible To Sign Arbitrary Data With Your SSH Keys]]
 所以, 现在 ssh key 既能用于 age 加密, 又能签名, 🤔
-不过, =-sk= 的 FIDO 硬件验证密钥, which 能提高一些安全性, 不能用于 age 加密, age 本身的[[https://github.com/riastradh/age-plugin-fido][FIDO 支持]]还不完善
+不过, =-sk= 的 FIDO 硬件验证密钥, which 能提高一些安全性, [[https://github.com/FiloSottile/age/discussions/360][不能用于 age 加密]], age 本身的[[https://github.com/riastradh/age-plugin-fido][FIDO 支持]]还不完善
 **** [[https://zhuanlan.zhihu.com/p/428029268][zhihu: 如何用SSH密钥实现加密和电子签名?]]
 
 ** other

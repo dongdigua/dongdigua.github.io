@@ -85,7 +85,7 @@
       "feed.xml"
       "./../"
       "https://dongdigua.github.io"
-      (delete "404.html" (delete "xmr.html" (delete "index.html" (directory-files "./../" nil ".*\.html$"))))
+      (delete "kernel.html" (delete "404.html" (delete "xmr.html" (delete "index.html" (directory-files "./../" nil ".*\.html$")))))
       :title "dongdigua's blog"
       :description "Blog!"
       :builder 'webfeeder-make-rss)
