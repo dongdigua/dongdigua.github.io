@@ -1,0 +1,27 @@
+# Disable Fish Shell's GPG Completion
+2023-05-02 Tue
+
+Fish's gpg completion is bad, it previously led to my accidentally deletion of
+my secret key[1]. And as I add more people's key, the completion starts to
+become too long and is's really nonsense unless you can remenber everyone's key
+and subkey properly. So I want to disable it (or switch to ksh for daily use?).
+
+Fish uses its complete(1) to, apparently, do completion.
+`complete gpg` will print out all the predefined gpg completion,
+and the keyid completion is the `__fish_complete_gpg_user_id` function.
+So let's hack it.
+
+First `complete gpg > gpg.fish` to dump all the `complete ...` so I can edit it with vim.
+Then I remove all the lines that don't have the __fish_complete_gpg_user_id by `:g!/__fish_complete_gpg_user_id/d`.
+Then record a macro to add -e at every end of line,
+but I found that all these command arguments itself such as --export won't show up in completion. So just remove the `-a (__fish_complete_gpg_user_id)`.
+Then I mv the file to ~/.config/fish/config.fish, only to find the rest of completion that is not redefined by me are lost,
+add a `__fish_complete_gpg gpg` line on top of those lines don't work either,
+it will make all the completion come back and my re-definition becomes useless.
+
+So, just put an empty `~/.config/fish/completions/gpg.fish` is ok...
+I think those completions will make me less focused, not knowing what exactly I'm doing but just follow the completion.
+One day my laptop's power was off so I worked on my Fedora server that only have a console. It made me focused.
+
+
+=> https://dongdigua.github.io/pgp_canokey#obsolete [1]
