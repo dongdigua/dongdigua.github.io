@@ -123,5 +123,5 @@ git rebase --committer-date-is-author-date
 :CUSTOM_ID:ffmpeg:
 :END:
 #+BEGIN_SRC shell
-ffmpeg -hwaccel qsv -i IN -ss 5:00 -t 30:00 -s 720x480 -r 30 -an -threads 2 OUT
+ffmpeg -hwaccel qsv -i IN -ss 5:00 -t 60 -s 720x480 -r 30 -an -threads 2 OUT
 #+END_SRC

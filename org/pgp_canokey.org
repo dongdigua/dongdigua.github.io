@@ -1,6 +1,6 @@
 #+TITLE: 一位 PGP 进步青年的 Canokey 历程
 #+DATE: <2023-04-16 日>
-#+DESCRIPTION: 不只是 Canokey, 也不只是 PGP
+#+DESCRIPTION: 混乱的笔记: 不只是 Canokey, 也不只是 PGP
 #+OPTIONS: num:1
 #+TAGS: negative(-)
 
@@ -153,6 +153,24 @@ Xe 也受不了 gpg 改用 age 加密了: [[https://xeiaso.net/blog/new-gpg-key-
 当然, 我这里暂时先不公布 age 的公钥, 还是因为私钥在硬盘上, 这是对发送加密消息的对方的不负责.
 如果之后公布的话, age 的公钥弄成 [[https://github.com/seaofmars/vanity-age][vanity]] 能更有趣, 因为{{{ruby(收件人,recipient)}}}能包含更多字母.
 
+** pass
+这种密码管理器直接用明文目录结构存储密码, 会泄漏元数据啊!
+更糟糕的是如果放到 GitHub repo (比如 gopass), 就相当于告诉人家你都有什么账号以及什么时候更改了哪个账号的密码.
+而我的想法是, 须要分文件存储而不是使用整个一个加密文件, 但文件名不能泄漏元数据.
+应该让密钥的安全性作为最后的防线, 而不只是保证文件不泄漏, 在这之前不要透露任何额外信息.
+
+但是当我开始写的时候发现一个大问题: gpg 加密每一次结果都不一样...
+那么就不能进行双向的 (用户查询加密后匹配), 只能把所有名字都解密再匹配.
+
+* SSH/硬件
+age 能用 SSH 密钥, 很棒.
+不过, =-sk= 的 FIDO 硬件验证密钥, which 能提高一些安全性, [[https://github.com/FiloSottile/age/discussions/360][不能用于 age 加密]], age 本身的[[https://github.com/riastradh/age-plugin-fido][FIDO 支持]]还不完善, age 的 [[https://github.com/str4d/age-plugin-yubikey][piv]] 不能用 Canokey.
+所以硬件支持方面还是 PGP 更好...
+
+那我就试试能不能加入这个特性呗!
+首先加密很容易, 就是从公钥中抽出密码学的部分, 然后就和一般的 ed25519 一样了.
+解密就费劲了...
+
 
 * 缝合曾经的主密钥
 :PROPERTIES:
@@ -251,7 +269,7 @@ uid           [ expired] FreeBSD Security Officer <security-officer@FreeBSD.org>
 #+END_EXAMPLE
 
 
-* TODO Outro
+* Outro
 :PROPERTIES:
 :CUSTOM_ID: outro
 :END:
@@ -261,6 +279,8 @@ uid           [ expired] FreeBSD Security Officer <security-officer@FreeBSD.org>
 
 近几天我在各搜索引擎里的东西全是 gpg, 密码学, 隐私, (甚至还有 CITIZEN4), 等相关的东西, 也在担心是否会被盯上.
 即使我学习使用这些加密手段, 也还是不可避免的在正常浏览中要遭受追踪和审察.
+
+开发者们创造各种软件为了让互联网更安全, 但是技术还是拯救不了愚蠢的人.
 
 到这里, 我听到有人在问 「这是不是有病？」
 是的
@@ -300,7 +320,6 @@ Debian 将 PGP 形容为 [[https://wiki.debian.org/DebianServiceForDD]["This is 
 **** [[https://www.douban.com/note/763978955/?_i=5587236kugBn1j,5704819kugBn1j][一位 PGP 进步青年的科学算号实践]]
 *** [[https://www.agwa.name/blog/post/ssh_signatures][It's Now Possible To Sign Arbitrary Data With Your SSH Keys]]
 所以, 现在 ssh key 既能用于 age 加密, 又能签名, 🤔
-不过, =-sk= 的 FIDO 硬件验证密钥, which 能提高一些安全性, [[https://github.com/FiloSottile/age/discussions/360][不能用于 age 加密]], age 本身的[[https://github.com/riastradh/age-plugin-fido][FIDO 支持]]还不完善
 **** [[https://zhuanlan.zhihu.com/p/428029268][zhihu: 如何用SSH密钥实现加密和电子签名?]]
 
 ** other

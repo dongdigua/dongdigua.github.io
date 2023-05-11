@@ -43,6 +43,10 @@ btw you can check repo through api using curl (learned in mailing list)
 curl https://src.fedoraproject.org/api/0/rpms/nvi
 #+END_SRC
 
+* Copr
+(2023.5) When building kernel on copr,
+I found that everytime the build time on f37 is always shorter than f38. Strange still, rawhide is slightly faster than f38 too!
+
 * Mailing list
 some interesting thread in the list
 ** [[https://lists.fedoraproject.org/archives/list/devel@lists.fedoraproject.org/thread/YUMAS5GP7QTKVRX4PHKAMFYVZQRDVXZP][Anyone interested in packaging nim-lang?]]
