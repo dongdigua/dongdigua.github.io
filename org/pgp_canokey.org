@@ -153,7 +153,9 @@ Xe 也受不了 gpg 改用 age 加密了: [[https://xeiaso.net/blog/new-gpg-key-
 当然, 我这里暂时先不公布 age 的公钥, 还是因为私钥在硬盘上, 这是对发送加密消息的对方的不负责.
 如果之后公布的话, age 的公钥弄成 [[https://github.com/seaofmars/vanity-age][vanity]] 能更有趣, 因为{{{ruby(收件人,recipient)}}}能包含更多字母.
 
-** pass
+* pass
+首先, 密码的准则: https://xkcd.com/936/
+
 这种密码管理器直接用明文目录结构存储密码, 会泄漏元数据啊!
 更糟糕的是如果放到 GitHub repo (比如 gopass), 就相当于告诉人家你都有什么账号以及什么时候更改了哪个账号的密码.
 而我的想法是, 须要分文件存储而不是使用整个一个加密文件, 但文件名不能泄漏元数据.

@@ -1,10 +1,11 @@
 ## Table of Contents
 ### Posts (sorted by time)
+- [Clean Up Home Directory](cleanup_home.gmi.txt)<br>
 - [一位 PGP 进步青年的 Canokey 历程](pgp_canokey)<br>
 - [Join Fedora and Maintain Package](fedora_contrib)<br>
 - [Project that Annoys Me](annoying_project.gmi.txt)<br>
 - [玩转邮件列表](mailinglist)<br>
-- [我要不要试试 OpenBSD](whatif_openbsd)<br>
+- [我要不要试试 OpenBSD 🐡](whatif_openbsd)<br>
 - [一个乐子 commit](lol.diff.txt)<br>
 - [一次大备份](backup_everything)<br>
 - [2023 了, 试试 emacs 29](emacs29_2023)<br>

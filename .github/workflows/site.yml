@@ -29,7 +29,7 @@ jobs:
       - name: Prepare
         run: |
           curl "https://raw.githubusercontent.com/dongdigua/configs/main/kernel/README.org" -o org/kernel.org
-          curl "https://raw.githubusercontent.com/dongdigua/configs/main/.tmux.conf" -O
+          curl "https://raw.githubusercontent.com/dongdigua/configs/main/.tmux.conf" -o tmux.conf
 
       - name: Build with Org
         run: |
@@ -48,7 +48,7 @@ jobs:
           source: ./
           destination: ./_site
 
-      - name: Patch HTML
+      - name: Patch HTML & Get Static File
         run: |
           cd _site && tree
           sudo ./patches/icons.sh

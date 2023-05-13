@@ -1,0 +1,52 @@
+# Clean My Home Directory
+
+Luke Smith's Video:
+=> https://videos.lukesmith.xyz/w/t5WcCYv58zDur45LRC1KFE  Spring Cleaning your Home! (~/, That is...)
+After watching for 30secs, I'm shocked. `ls -a | wc -l` he: 18, me: 150+
+
+It's a total mess! Last time when I'm backing up my old Manjaro, I found it's far more messy than this machine.
+On that Manjaro, I remenbered that I installed at least KDE, Gnome, Mate, AwesomeWM, i3wm...
+Each desktop environment have their own set of application and each of them will create mass of configuration file and even collide with each other (e.g default application in start menu). And I never wanted to clean them up.
+
+I think the ultimate principle to avoid the mess is to only install and run the software I needed.
+I have experimented a lot of different softwares on my three OS
+* handmade Manjaro workstation
+* Fedora laptop now I'm using
+* OpenBSD on the same disk with Fedora
+
+The Fedora machine should have been even more messy, but I broke the BIOS somehow with fw-update (that's why I NEVER use fw-update and gnome-software anymore). So it's returned to factory and resetted the whole disk, so I reinstalled Fedora, which is the Fedora I'm using now. It has 3000+ packages installed (last year it's around 2900), holy shit!
+The OpenBSD machine only have less than 40 items in ~, because I seldom use it now (after a lot of experiment in [1]). But it's still a little messy, it's about software, because I tried many different software solution and don't know if I have deleted those unused ones, now it have around 150 packages. But still, better than my Fedora machine.
+
+All the problem originates from one fact:
+I WAS not a stable user from the beginning and always tried new things, and now I'm sort of a stable user, I need to clean the waste I made earlier.
+Actually, in my early crazy days of trying Linux, I did a lot of installation on my old 2008 laptop (with Nvidia!), looking back then, I think I got some experience how to customize the installation, but after I become a stable user, I just don't do that anymore. I think I need to try more. And there's a list[3] of packages that fedora uses for installation (anaconda).
+Luke, on the contrast, is a very stable/experienced user, have a clean installation, and know what package to have. (And seems Luke and DT these guys sometimes re-install the system known as distro-hopping)
+
+I'm still on the road of becoming a experienced Linux user. What I need to do:
+* REINSTALL THE SYSTEM
+* have a minimal base system (like: OpenBSD, unlike: Fedora Workstation, Manjaro KDE)
+* have a stable working environment and get rid of DE (I'm using SwayWM now and I think it is the solution, probably try out Hyprland when it is stable enough on Fedora)
+* keep track of installed packages, delete all the related files after removal (the really hard part)
+* the last one is clean up files regularly
+
+but can I really get rid of DE like Gnome?
+I sometimes need to use ibus to enter into some suspicious Chinese website that can't copy-and-paste from emacs pyim.
+I sometimes need to use some old application that depends on X window system, such as the sunloginclient in China.
+
+
+well, well, well, now first cleanup the home!
+I struggled a few hours to reduce the amount from 150+ to 100, mostly using ls, stat, and rm -r.
+Then the next morning, I found xdg-ninja[2] in ArchWiki. I ran it and found a big problem:
+I didn't even set these $XDG_*_HOME variables!
+After some cleaning-up, the number drops to around 80, it's fine now.
+My workflow is indeed much more complex than Luke, I probably can never achieve his mimnimalist.
+
+then the .config also need some cleaning, it have 175 items.
+WAAAAAAAAAAAAAAAAAAAAAAAAA!
+headache, do it later.
+
+
+
+=> https://dongdigua.github.io/whatif_openbsd     [1]
+=> https://github.com/b3nj5m1n/xdg-ninja          [2]
+=> https://dongdigua.github.io/anaconda_kickstart [3]

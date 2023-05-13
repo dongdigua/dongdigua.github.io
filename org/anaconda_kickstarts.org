@@ -113,7 +113,8 @@ CentOS-Stream 8 为例, 定义软件组的文件是 [[https://git.centos.org/cen
 那里面的 =*-comps-*.xml= 的 =<environment>= 的 =<display_order>=
 就正好是 1~4 和两个 99
 
-=comps-AppStream.x86_64.xml=
+@@html:<details>@@
+@@html:<summary>comps-AppStream.x86_64.xml</summary>@@
 #+BEGIN_SRC xml
   <environment>
     <id>graphical-server-environment</id>
@@ -190,8 +191,10 @@ CentOS-Stream 8 为例, 定义软件组的文件是 [[https://git.centos.org/cen
     <optionlist><!----></optionlist>
   </environment>
 #+END_SRC
+@@html:</details>@@
 
-=comps-BaseOS.x86_64.xml=
+@@html:<details>@@
+@@html:<summary>comps-BaseOS.x86_64.xml</summary>@@
 #+BEGIN_SRC xml
   <environment>
     <id>custom-environment</id>
@@ -228,6 +231,7 @@ CentOS-Stream 8 为例, 定义软件组的文件是 [[https://git.centos.org/cen
     <optionlist><!----></optionlist>
   </environment>
 #+END_SRC
+@@html:</details>@@
 
 * Fedora
 Fedora 分不同的变体, 常见的是 Server 和 Workstation
@@ -260,6 +264,7 @@ Fedora 分不同的变体, 常见的是 Server 和 Workstation
     <optionlist><!----></optionlist>
   </environment>
 #+END_SRC
+
 ** Server
 =server-product-environment=
 #+BEGIN_SRC xml
@@ -278,3 +283,127 @@ Fedora 分不同的变体, 常见的是 Server 和 Workstation
     <optionlist><!----></optionlist>
   </environment>
 #+END_SRC
+
+** What I want
+花了一阵从 comps.xml 里搜所有安装界面的选项, 只有几个我能全选, 别的就慢慢手动安吧
+(emacs web-mode 和 ripgrep 是好帮手)
+@@html:<details>@@
+@@html:<summary>my choice</summary>@@
+#+BEGIN_SRC xml
+  <group>
+    <id>standard</id>
+    <_name>Standard</_name>
+    <_description>Common set of utilities that extend the minimal installation.</_description>
+    <default>false</default>
+    <uservisible>false</uservisible>
+    <packagelist><!----></packagelist>
+  </group>
+  <group>
+    <id>c-development</id>
+    <_name>C Development Tools and Libraries</_name>
+    <_description>These tools include core development tools such as automake, gcc and debuggers.</_description>
+    <default>false</default>
+    <uservisible>true</uservisible>
+    <packagelist>
+      <packagereq type="mandatory">autoconf</packagereq>
+      <packagereq type="mandatory">automake</packagereq>
+      <packagereq type="mandatory">binutils</packagereq>
+      <packagereq type="mandatory">bison</packagereq>
+      <packagereq type="mandatory">flex</packagereq>
+      <packagereq basearchonly="true" type="mandatory">gcc</packagereq>
+      <packagereq basearchonly="true" type="mandatory">gcc-c++</packagereq>
+      <packagereq basearchonly="true" type="mandatory">gdb</packagereq>
+      <packagereq type="mandatory">glibc-devel</packagereq>
+      <packagereq type="mandatory">libtool</packagereq>
+      <packagereq type="mandatory">make</packagereq>
+      <packagereq type="mandatory">pkgconf</packagereq>
+      <packagereq type="mandatory">strace</packagereq>
+      <packagereq type="default">byacc</packagereq>
+      <packagereq type="default">ccache</packagereq>
+      <packagereq type="default">cscope</packagereq>
+      <packagereq type="default">ctags</packagereq>
+      <packagereq type="default">elfutils</packagereq>
+      <packagereq type="default">indent</packagereq>
+      <packagereq basearchonly="true" type="default">ltrace</packagereq>
+      <packagereq basearchonly="true" type="default">perf</packagereq>
+      <packagereq type="default">valgrind</packagereq>
+      <packagereq type="optional">astyle</packagereq>
+      <packagereq type="optional">cbmc</packagereq>
+      <packagereq type="optional">check</packagereq>
+      <packagereq type="optional">cmake</packagereq>
+      <packagereq type="optional">coan</packagereq>
+      <packagereq type="optional">cproto</packagereq>
+      <packagereq type="optional">ElectricFence</packagereq>
+      <packagereq type="optional">insight</packagereq>
+      <packagereq type="optional">nasm</packagereq>
+      <packagereq type="optional">pscan</packagereq>
+      <packagereq type="optional">python3-scons</packagereq>
+      <packagereq type="optional">remake</packagereq>
+      <packagereq type="optional">scorep</packagereq>
+      <packagereq type="optional">splint</packagereq>
+      <packagereq type="optional">yasm</packagereq>
+      <packagereq type="optional">zzuf</packagereq>
+    </packagelist>
+  </group>
+  <group>
+    <id>container-management</id>
+    <_name>Container Management</_name>
+    <_description>Tools for managing Linux containers</_description>
+    <default>false</default>
+    <uservisible>true</uservisible>
+    <packagelist>
+      <packagereq type="default">podman</packagereq>
+      <packagereq type="optional">buildah</packagereq>
+      <packagereq type="optional">flatpak</packagereq>
+      <packagereq type="optional">flatpak-builder</packagereq>
+    </packagelist>
+  </group>
+  <group>
+    <id>rpm-development-tools</id>
+    <_name>RPM Development Tools</_name>
+    <_description>These tools include core development tools such rpmbuild.</_description>
+    <default>false</default>
+    <uservisible>true</uservisible>
+    <packagelist>
+      <packagereq type="mandatory">redhat-rpm-config</packagereq>
+      <packagereq type="mandatory">rpm-build</packagereq>
+      <packagereq type="default">koji</packagereq>
+      <packagereq type="default">mock</packagereq>
+      <packagereq type="default">rpmdevtools</packagereq>
+      <packagereq type="optional">pungi</packagereq>
+      <packagereq type="optional">rpmlint</packagereq>
+    </packagelist>
+  </group>
+  <group>
+    <id>multimedia</id>
+    <_name>Multimedia</_name>
+    <_description>Audio/video framework common to desktops</_description>
+    <default>false</default>
+    <uservisible>false</uservisible>
+    <packagelist>
+      <packagereq>alsa-ucm</packagereq>
+      <packagereq>alsa-utils</packagereq>
+      <packagereq>gstreamer1-plugin-libav</packagereq>
+      <packagereq>gstreamer1-plugin-openh264</packagereq>
+      <packagereq>gstreamer1-plugins-bad-free</packagereq>
+      <packagereq>gstreamer1-plugins-good</packagereq>
+      <packagereq>gstreamer1-plugins-ugly-free</packagereq>
+      <packagereq>PackageKit-gstreamer-plugin</packagereq>
+      <packagereq>pipewire-alsa</packagereq>
+      <packagereq>pipewire-gstreamer</packagereq>
+      <packagereq>pipewire-pulseaudio</packagereq>
+      <packagereq>pipewire-utils</packagereq>
+      <packagereq>wireplumber</packagereq>
+      <packagereq type="conditional" requires="gstreamer">gstreamer-plugins-espeak</packagereq>
+    </packagelist>
+  </group>
+#+END_SRC
+@@html:</details>@@
+剩下的不在选项里, 只能和某些环境捆绑的组:
+- swaywm (没错, 因为 sway-desktop-environment 环境也有我不像要的包)
+- multimedia
+- fonts
+- development-libs
+
+当我越来越追求极简主义的时候, 我真的适合再接着用 Fedora 吗? 我可能就是需要一个机会尝试其他发行版了.
+我剩下的牢骚在这: https://dongdigua.github.io/cleanup_home.gmi.txt
