@@ -36,7 +36,8 @@ You can always find something magical on the Internet.
 *** [[https://snarfed.org/2022-03-10_were-drowning-software-dependencies][We're Drowning Software Dependencies]]
 *** [[http://ck.kolivas.org/pictures/Screenshot_20170905_134246.png][ck: ]][[https://ck-hack.blogspot.com/2021/08/514-and-future-of-muqss-and-ck-once.html][5.14 and the future of MuQSS and -ck once again (END)]]
 *** [[https://blogs.gnome.org/aday/2023/01/18/gnome-info-collect-what-we-learned/][gnome-info-collect: What we learned]]
-*** TODO [[https://ferd.ca/ten-years-of-erlang.html][Ten Years of Erlang]]
+*** [[https://ferd.ca/ten-years-of-erlang.html][Ten Years of Erlang]]
+*** [[https://prithu.dev/posts/unix-pipeline/][The beauty of Unix pipelines]]
 
 ** [[http://www.paulgraham.com/todo.html][Paul Graham]]
 ** [[http://www.qiusir.com/][qiusir]]                                                            :rssub:
@@ -255,7 +256,6 @@ very beautiful page
 *** [[https://research.exoticsilicon.com/articles/console_screendumps][Console Screendumps]]                                       :mailinglist:
 ** [[https://www.a1k0n.net][a1k0n]]                                                              :math:
 *** [[https://www.a1k0n.net/2011/07/20/donut-math.html][donut.c]]
-** [[https://prithu.dev][prithu.dev]]
 ** [[https://awesomekling.github.io][Andreas Kling (SerenityOS)]]
 ** [[https://blog.codingnow.com][云风的 BLOG]]
 *** [[https://blog.codingnow.com/2012/07/c_coroutine.html][C 的 coroutine 库]]
@@ -269,6 +269,9 @@ the author of sway & sourcehut
 ** [[https://theoryware.net][Theory-of-Everything]]
 [[https://theoryware.net/button.gif]]
 everforest theme, also have a big collection
+** [[https://xosc.org/][xosc]]
+gemini://xosc.org
+finger m@f.xosc.org
 
 ** fedorapeople
 *** [[https://microcai.org][菜菜博士 - 博士在网络的家]]
@@ -400,6 +403,18 @@ inspiration: Veritasium
 *** [[https://youtu.be/QaLvtNpoc5o][RubyKaigi 2015: JIT]]
 *** [[https://youtu.be/1EIpek60rs0][DT: Linux Has Become Complicated And Limiting]]
 *** [[https://youtu.be/saq3JGOsB3M][How to Predict a DVD Logo Hitting the Corner!]]
+*** [[https://youtu.be/ARINIdYXCVE][Hyprland on Fedora Install]]
+a good example for my probable feora minimal re-installation
+0:32 RockyLinux rock solid
+0:52 if you don't want failed boot after changing fstab, run `systemctl daemon-reload`
+0:55 Windows95 bash shell
+1:15 start build
+1:44 we got Hyprland now
+2:27 Hyprland lets go, how do we get here? no idea, but at least we get a recording
+4:15 you can call yourself a ricer when you have an anime girl sit in the background, that's true
+**** [[https://youtu.be/ltGNxWvZZuM][Resolve is Impossible to Install on Fedora 38]]
+quote: [[https://youtu.be/aWSQQUXmVVs?t=376][this operating system, the operating system we do not speak its name]] (in that video he succesfully installed DaVinci on Rocky)
+0:18 if you start seeing a whole bunch of tesla streams on my channel tomorrow you guys know what happened
 
 **  [[https://www.youtube.com/@Computerphile][<C>]]
 *** [[https://youtu.be/BAo5C2qbLq8][Network Time Protocol (NTP)]]
@@ -408,6 +423,7 @@ inspiration: Veritasium
 *** [[https://youtu.be/Qow8pIvExH4][Brain-Like (Neuromorphic) Computing]]
 **** [[http://bit.ly/C_AtomicBrain][Atomic Brain?]]
 *** [[https://youtu.be/XiFkyR35v2Y][Slow Loris Attack]]
+**** [[https://www.funtoo.org/Slowloris_DOS_Mitigation_Guide][Funtoo: Slowloris DOS Mitigation Guide]]
 *** [[https://youtu.be/kzdugwr4Fgk][The Kindle Text Problem]]
 *** [[https://youtu.be/gYng1yypNCA][DEC PDP-11 & Zork]]
 *** [[https://youtu.be/bnRNiE_OVWA][Infinite Data Structures in Haskell]]

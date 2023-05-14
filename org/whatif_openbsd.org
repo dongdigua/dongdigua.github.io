@@ -1,4 +1,4 @@
-#+TITLE: 我要不要试试 OpenBSD
+#+TITLE: 我要不要试试 OpenBSD 🐡
 #+DESCRIPTION: 你很罕见
 #+DATE: <2023-01-21 六>
 #+OPTIONS: toc:2
@@ -115,8 +115,12 @@ doas pkg_add ripgrep fzf ncdu neofetch ranger p7zip colortree # 好用的工具
 doas pkg_add gmake elixir gnutls # dev
 #+END_SRC
 
-我跑了一下 WebGL 水族馆[fn:5], 500 条鱼只有 10fps... 实际上 1 条鱼也一样...
+我跑了一下 WebGL 水族馆[fn:5], +500 条鱼只有 10fps... 实际上 1 条鱼也一样...+
 而相比之下 Linux Wayland 5k 条鱼都能满 60
+(2023.5) 不知道是因为升级 -current 还是 firefox, 现在 1000 条鱼也能 60fps 了,
+我怀疑是 firefox, 因为 firefox-esr 还是 10fps, 而且现在下文的那些硬件加速设置都默认没启用
+然后我看了下 /var/log/Xorg.0.log, 突然想起来我之前[[./mailinglist.org::#intel][邮件列表]]问过这事, 但是我那时只把出错的 log 发上去了, 正常启动的没发全...
+那究其根源就有些费劲了
 
 ** B 站放不了, 音视频解码都有问题
 :PROPERTIES:
