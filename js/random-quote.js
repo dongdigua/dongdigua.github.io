@@ -43,6 +43,7 @@ var data = [
     "<a id=quote href=https://book.bsdcn.org/di-19-zhang-wen-xue-gu-shi/di-19.3-jie-linux-yu-ku-nan-zhe-xue.html>FreeBSD 拼写有四样写法，你知道么？”，“不能写罢？……我教给你，记着！\n‘FreeBSD’、‘freeBSD’、‘Freebsd’、‘freebsd’这些字应该记着。\n以后做 FreeBSD 管理员的时候，写文档要用。</a>",
     "不要说我们一无所有, 我们要把世界格式化",
     "<a id=quote href=https://www.bilibili.com/video/BV1Ho4y1b7E8>不是你把你那破代码发到 GitHub, 你就是开源软件开发者, 你那个最多叫<b>网络垃圾制造者</b></a>",
+    "I'm using Linux. A library that emacs uses to communicate with Intel hardware.",
 ];
 
 var index = Math.floor((Math.random() * data.length));

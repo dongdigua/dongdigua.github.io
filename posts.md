@@ -1,5 +1,6 @@
 ## Table of Contents
 ### Posts (sorted by time)
+- [Usenet 新闻组 和 命令行浏览器选择 (w3m, lynx, links)](usenet_and_cli_browsers)<br>
 - [Clean Up Home Directory](cleanup_home.gmi.txt)<br>
 - [一位 PGP 进步青年的 Canokey 历程](pgp_canokey)<br>
 - [Join Fedora and Maintain Package](fedora_contrib)<br>

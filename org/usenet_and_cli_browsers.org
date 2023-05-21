@@ -1,0 +1,58 @@
+#+TITLE: Usenet 新闻组 和 命令行浏览器选择 (w3m, lynx, links)
+#+DATE: <2023-05-21 日>
+
+这个文章还是中文写, 因为中文互联网相关内容真的太少了.
+
+* Usenet 新闻组
+
+一直以来, 我从各个地方 (主要是历史资料里 comp.*) 都有看到 Usenet 新闻组一事.
+但我的认知里, 这种服务怎么也得有个服务器地址 URL 吧 (比如 news://news.tilde.club), 怎么能就只是组名?
+而 Wikipedia 英文文章并没有提到 URL, 这使我困惑, 曾一度以为 Usenet 是一个历史的东西, 在当今已经消逝了.
+但是访问不到不代表不存在, 如著名不存在网站 Google, 问题是一样的.
+我们这里没有这样的服务, 而这个服务在国外是如此常见以至于就是服务商的 news://news 解析, 这也是 gnus 和 tin 的默认 URL, 国内三大服务商一直以来都没有.
+后来用中文搜索 (习惯了 DugkDuckGo 的英文搜索), 发现了 ruanyifeng 关于 Usenet 的[[https://www.ruanyifeng.com/blog/2007/11/usenet.html][文章]] [fn:1], 他介绍 (打广告) 了一个付费的 Usenet 代理,
+我当然不想刚入门就用付费的. 在评论区里发现了 news.cn99.com 可惜已经没了, 于是又突发奇想, 为什么不上中文维基,
+在那里, 终于找到了这篇 [[https://zh.wikipedia.org/wiki/新闻组][新闻组]], 看起来有点像宣传文章 [fn:2] 维基百科也是这样评定的, 但终于在提供的几个链接里找到了唯一一个能用的: 一个台区域名提供商.
+#+BEGIN_CENTER
+news://freenews.netfront.net
+#+END_CENTER
+一个全新的世界为我敞开!
+
+
+* 浏览器
+有三大命令行浏览器--国内那些搬运文章经常这么说, links, lynx 和 w3m.
+links 和 lynx 是我最开始 (比我得知 emacs eww 还早) 在 [[https://wiki.gentoo.org/wiki/Handbook:AMD64/Installation/Stage/zh-cn#.E5.91.BD.E4.BB.A4.E8.A1.8C.E6.B5.8F.E8.A7.88.E5.99.A8][Gentoo Install Wiki]] 里看到的, w3m 是作为 ranger 图片渲染得知的.
+这三者我都尝试使用过 (然后在主目录下[[https://dongdigua.github.io/cleanup_home.gmi.txt][产生了一堆垃圾文件]]), 但实际上除了上下键/jk 翻页, TAB 跳链接, Enter 跟随, 我并没有太重度使用过.
+这次弄新闻组, 开始不知道 tin 如何加载组目录的时候, 才发现 lynx 这种多协议通用纯文本浏览器的好处:
+学会一套快捷键, 不管是 http, ftp. gopher, nntp 甚至 gemini 都可以访问. 在一个纯终端的机器比如[[./backup_everything.org][我的家里云]]上这也是一个必要的技能.
+而这三个浏览器就必须一决高下了, 我可不想装一堆浏览器 (+怎么感觉这话是在说可怜的国内 Windows 用户呢+)(GUI 我几乎只用 FireFox, Chromium Freeword 只用于 B 站直播).
+
+** (e)links
+links 中文都显示不了, 不行, 而且 html 渲染也很离谱, 比如我的主页.
+[[https://src.fedoraproject.org/rpms/elinks/c/b2270a2f6ebba9364bc644c8bb5fc95eea6b2566?branch=rawhide][JavaScript 支持不再维护]], js 终端里有时候很有用, 另外的方式就是用 GUI 浏览器 (firefox) 渲染然后在终端里显示那些项目.
+elinks 调用 lynx 访问 news 和 gopher.
+
+** lynx 与 w3m
+实验报告:
+| ~              | w3m              | lynx                   |
+|----------------+------------------+------------------------|
+| image          | probably (!tmux) | no                     |
+| html render    | seems better     | ok                     |
+| news render    | bad              | ok                     |
+| gopher render  | [directory]      | (DIR)                  |
+| gemini support | [[https://rkta.de/w3m-gemini.html][ok since 2023.1]]  | [[https://lists.nongnu.org/archive/html/lynx-dev/2020-09/msg00007.html][waiting]]                |
+| color          | not too much     | colorful but looks old |
+| vi key         | default          | -vikeys                |
+| man page lines | 268 (so simpler) | 1239                   |
+
+所以又是不同的需求不可兼得, 可能现在 w3m 还可以吧...
+anyway, 我用 Nix 打包了支持 gemini 的 w3m https://github.com/dongdigua/nur-pkg/tree/master/pkgs/w3m
+
+
+* Footnotes & Related Link
+youtube: [[https://youtu.be/mfnCqn4qhL0][用代理来兼容 gemini]]
+r/slackware: [[https://www.reddit.com/r/slackware/comments/83tyke/which_browser_is_better_w3m_or_lynx/][Which browser is better? (w3m or Lynx)]]
+linuxquestions: [[https://www.linuxquestions.org/questions/slackware-14/links-lynx-w3m-307128/][links, lynx, w3m??]]
+
+[fn:1] 其中提到的服务商列表的存档 https://web.archive.org/web/20210429221158/http://www.exit109.com/~jeremy/news/providers/providers.html
+[fn:2] [[https://groups.google.com/g/cn.fan/c/QYxmmeyuq6E/m/Os1xzY7llaUJ][朋友，欢迎来到新闻组（雅科.定稿）]]

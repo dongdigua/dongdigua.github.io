@@ -45,7 +45,8 @@ then the .config also need some cleaning, it have 175 items.
 WAAAAAAAAAAAAAAAAAAAAAAAAA!
 headache, do it later.
 
-
+I found that fzf is somehow useful when testing new package that will potencially pollute my home directory.
+It always put the most recent file at the bottom, so I can easily figure out what new file is added.
 
 => https://dongdigua.github.io/whatif_openbsd     [1]
 => https://github.com/b3nj5m1n/xdg-ninja          [2]
