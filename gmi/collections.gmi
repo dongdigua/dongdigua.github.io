@@ -21,7 +21,7 @@ SDF Public Access UNIX System .. Est. 1987
 => gemini://gem.sdf.org/oak3/                                         ++ Oak3's Cafe Gem
 => gopher://circumlunar.space                                         + Circumlunar
 => gemini://gemini.circumlunar.space/~solderpunk/                     ++ solderpunk
-the founder
+the creater of gemini
 > This is where I "eat my own dogfood"
 => gemini://gemini.circumlunar.space/users/hundredrabbits/            ++ HundredRabbits
 exploring and documenting  minimum viable solutions for living and technological tooling
@@ -44,3 +44,5 @@ Gemcast, Esperanto
 undergoes frequent maintenance, PDA?
 => gemini://gemini.cyberbot.space/smolzine/                           ++ smolzine
 => gemini://warmedal.se/~bjorn                                        + bjorn
+=> gemini://ploum.net/index_en.gmi                                    + Ploum
+author of offpunk

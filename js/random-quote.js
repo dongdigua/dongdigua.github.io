@@ -15,6 +15,7 @@ var data = [
     "我们从这里启航♫",
     "Learn. Unlearn. Relearn.",
     "My .emacs have 600+ lines!",
+    "Reduce the frequency of your Github CI crontab to protect the environment.",
 
     "The internet is FULL, go away!",
     "<a id=quote href=new_blog_arch>May the --force be with you</a>",
