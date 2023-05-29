@@ -13,13 +13,15 @@
     (package-install p)))
 
 (eval-when-compile
+  (require 'org)
   (require 'ox-publish)
+  (require 'ox-html)
+  (require 'htmlize)
   (require 'webfeeder))
 
-(add-to-list 'custom-theme-load-path "~/.emacs.d/everforest")
-(load-theme 'everforest-hard-light t)
-
 (setq org-html-validation-link nil
+      ;; https://emacs-china.org/t/org-emacs-script-org-publish-all/20782
+      org-html-htmlize-output-type 'css
       org-export-with-toc 1
       org-export-with-sub-superscripts '{})
 
@@ -42,7 +44,7 @@
          :preserve-breaks t
 
          :org-html-validation-link nil
-         :html-head "<link rel='stylesheet' type='text/css' href='css/main.css' />"
+         :html-head "<link rel='stylesheet' href='css/main.css' />"
          ;; :html-head-include-default-style nil
          :html-link-home "https://dongdigua.github.io"
          :html-link-up "./../posts"

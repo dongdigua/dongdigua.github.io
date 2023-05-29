@@ -21,9 +21,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Everforest Theme
-        run: git clone --depth 1 https://github.com/dongdigua/everforest-emacs.git ~/.emacs.d/everforest
-
       - name: Install Emacs
         uses: purcell/setup-emacs@master
         with:
