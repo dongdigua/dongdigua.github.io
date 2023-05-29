@@ -13,14 +13,16 @@
     (package-install p)))
 
 (eval-when-compile
-  (require 'org)
-  (require 'ox)
+  (require 'ox-publish)
   (require 'webfeeder))
 
+(add-to-list 'custom-theme-load-path "~/.emacs.d/everforest")
+(load-theme 'everforest-hard-light t)
 
 (setq org-html-validation-link nil
       org-export-with-toc 1
       org-export-with-sub-superscripts '{})
+
 (setq org-html-postamble-format
       '(("en"
          "
@@ -89,5 +91,6 @@
       :title "dongdigua's blog"
       :description "Blog!"
       :builder 'webfeeder-make-rss)
-     )
+
+     (kill-emacs))
 

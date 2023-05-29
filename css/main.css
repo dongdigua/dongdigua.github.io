@@ -199,9 +199,9 @@ https://github.com/rgb-24bit/org-html-theme-list org-joshua
 
     pre {
         font-family: Monaco, Consolas, "Lucida Console", monospace;
-        color: black;
-        /* background-color: #f2f2f2;  /\* FROM worg.css *\/ */
-        background-color: #d7dfed;  /* FROM Bryan Ford */
+        /* color: black; */
+        background-color: #f2f2f2;  /* FROM worg.css */
+        /* background-color: #d7dfed;  /\* FROM Bryan Ford *\/ */
         padding: 1.2em;
         overflow: auto;
     }
@@ -308,7 +308,7 @@ https://github.com/rgb-24bit/org-html-theme-list org-joshua
     #postamble {
         padding: .3em;
         margin-bottom: 1em;
-        border: 1px solid gray;
+        /* border: 1px solid gray; */
         background-color: #dddaec;  /* Gentoo Purple */
     }
 
