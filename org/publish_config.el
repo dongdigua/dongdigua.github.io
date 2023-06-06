@@ -34,6 +34,13 @@
 <p>If you have any idea, please contact me! I may add your comment</p>
 ")))
 
+(setq org-html-home/up-format "
+<div id=\"org-div-home-and-up\">
+ <a accesskey=\"h\" href=\"%s\"> ../ </a>
+ |
+ <a accesskey=\"H\" href=\"%s\"> ~dongdigua </a>
+</div>")
+
 (setq org-publish-project-alist
       '(("org-pages"
          :base-directory "."
