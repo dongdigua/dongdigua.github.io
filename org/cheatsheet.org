@@ -17,6 +17,7 @@
 | u/C-r          | 撤销/重做        |
 | c i {          | change inside {} |
 | "{register}y/p | 向/从寄存器拷贝  |
+| =              | indent           |
 
 ** movement
 | key      | usage                  |
@@ -33,7 +34,7 @@
 | C-w      | jump between splits    |
 | C-o/i    | Older/Newer position   |
 | `        | mark                   |
-| ~        | change case            |
+| g-j/k    | move visual line       |
 
 ** file/split
 | key         | usage         |

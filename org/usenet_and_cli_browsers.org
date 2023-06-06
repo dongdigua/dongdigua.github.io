@@ -46,7 +46,30 @@ elinks 调用 lynx 访问 news 和 gopher.
 | man page lines | 268 (so simpler) | 1239                   |
 
 所以又是不同的需求不可兼得, 可能现在 w3m 还可以吧...
+现在(2023.5)的补丁有个 bug: 加载页面之后鼠标会跑到页面最下面, 有时间我修一下. =TODO=
 anyway, 我用 Nix 打包了支持 gemini 的 w3m https://github.com/dongdigua/nur-pkg/tree/master/pkgs/w3m
+
+** [[https://git.sr.ht/~lioploum/offpunk][offpunk]] 与 [[https://thelambdalab.xyz/elpher/][elpher]]
+elpher 很好, 但是当我在 aur 搜索 av-98 时发现的 offpunk 使我眼前一亮, 它拥有一个我我一直想要的功能:
+*将访问过的正文存储在本地留个记录, 以便之后查找 (fzf/ripgrep)* (这个也记录在我的[[./ideas.org][画饼想法]]里)
+html 做这种事很难, 而 gemini 这种轻量级标记文本就太适合这种场合了.
+我要是逛 gemweb 早些时候就用 offpunk, 现在也不至于突然想起来一个之前看过的文章然后怎么找都找不到...[fn:3]
+elpher 只能加书签, 没有存储的历史记录, 那种当时看到没在意, 事后突然回想起的就没办法.
+
+offpunk 的两个优点:
+*** 开箱即用
+offpunk 就是个 python 文件, 依赖项都是可选的.
+(btw, 像 offpunk 这样的单文件程序就不要 Nix 安装了, locale, $LESSHISTFILE, xdg 这些事费劲.)
+(btw, offpunk 其实有点慢, offpunkrc 里 quit, 时间是 200ms, 用 pypy 能减到 100ms, 原因是许多依赖不兼容)
+而 elpher 的依赖项是 emacs, 我在服务器上不想弄 emacs.
+
+*** 根正苗红
+offpunk 源于 [[https://tildegit.org/solderpunk/AV-98][AV-98]], AV-98 作者是 Gemini 协议的创始人 Solderpunk,
+新协议, 就要有新力量, 他肯定比其他人更清楚 建设什么样的客户端, 怎样建设客户端.
+这里面比较有趣的一个功能 =tour= 是一个 FIFO 队列, 很能体现他的思考.
+
+而 elpher 只是一个简单的 emacs 客户端, 甚至都没有 [[https://drewdevault.com/2020/09/21/Gemini-TOFU.html][TOFU]]
+最好是能让 elpher 访问过的页面也按照 offpunk 的方式存储, 倒不一定要让 elpher 支持 offline, 以及历史记录. 感觉不难 =TODO=
 
 
 * Footnotes & Related Link
@@ -56,3 +79,4 @@ linuxquestions: [[https://www.linuxquestions.org/questions/slackware-14/links-ly
 
 [fn:1] 其中提到的服务商列表的存档 https://web.archive.org/web/20210429221158/http://www.exit109.com/~jeremy/news/providers/providers.html
 [fn:2] [[https://groups.google.com/g/cn.fan/c/QYxmmeyuq6E/m/Os1xzY7llaUJ][朋友，欢迎来到新闻组（雅科.定稿）]]
+[fn:3] https://dongdigua.github.io/re.gmi.txt

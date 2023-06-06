@@ -23,6 +23,7 @@ SDF Public Access UNIX System .. Est. 1987
 => gemini://gemini.circumlunar.space/~solderpunk/                     ++ solderpunk
 the creater of gemini
 > This is where I "eat my own dogfood"
+=> gopher://zaibatsu.circumlunar.space/1/~solderpunk/roophloch/       +++ Remote Outdoor Off-Grid Phlogging Challenge
 => gemini://gemini.circumlunar.space/users/hundredrabbits/            ++ HundredRabbits
 exploring and documenting  minimum viable solutions for living and technological tooling
 => gopher://dataswamp.org                                             + dataswamp
