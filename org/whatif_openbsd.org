@@ -2,6 +2,7 @@
 #+DESCRIPTION: 你很罕见
 #+DATE: <2023-01-21 六>
 #+OPTIONS: toc:2
+#+HTML_HEAD_EXTRA: <link rel="shortcut icon" href=/images/pufferfish.png>
 
 又一篇中文文章
 这个文章可能是我写过最长的了 (internet_collections 不算)

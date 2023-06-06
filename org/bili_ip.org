@@ -1,6 +1,7 @@
 #+TITLE: 这一天终于来了, B站显示 IP 属地
 #+DATE: <2022-06-18 六>
 #+OPTIONS: toc:nil num:nil
+#+HTML_HEAD_EXTRA: <link rel="shortcut icon" href=https://www.bilibili.com/favicon.ico>
 
 卸载吧!
 * 我的看法
