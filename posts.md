@@ -32,8 +32,6 @@ any kind of contribution is welcome
 ---
 
 ### Long Term Update
-- [<font color=red>大概是语文知识整理</font>](digua-YW)<br>
-Big project
 - [\[Mirror\] My kernel config recipe](kernel)<br>
 - [Gopher/Gemini reactions](gmi/re.gmi.txt)<br>
 - [Gopher/Gemini collections, a quiet web](gmi/collections.gmi.txt)<br>

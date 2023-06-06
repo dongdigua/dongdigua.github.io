@@ -1,0 +1,4 @@
+org/*.org: text/plain
+misc/*: text/plain
+pgp: text/plain
+
