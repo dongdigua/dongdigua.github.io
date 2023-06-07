@@ -1,6 +1,9 @@
-~dongdigua
+# ~dongdigua
 
-(a fancy homepage coming soon)
+=> posts.gmi post index
+=> collections.gmi smolweb collections
+=> pgp 2394861A728929E3755D8FFADB55889E730F5B41
+=> https://dongdigua.github.io https site
 
-=> posts.gmi posts
-=> https://dongdigua.github.io HyperTextMachineLearning site
+
+$Id$

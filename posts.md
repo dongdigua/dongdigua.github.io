@@ -41,3 +41,20 @@ if you have some problem with sway, you can probably find solution here
 - [(Editor) Cheatsheet](cheatsheet)<br>
 - [Internet Collections](internet_collections)<br>
 博客, YouTube 等收集
+
+---
+
+### 为什么中英文混杂? Why a mixture of Chinese and English?
+
+1. 目标读者不同: 中文主要是中文互联网缺少的内容, 英文则是我希望全世界人读懂的<br>
+   Different target readers: Chinese for something that ChinaWeb lack, English for more people on WorldWideWeb to understand
+
+2. 有些时候英文方便: 不用切换输入法<br>
+   Sometimes English is more convenient: no need to switch input method
+
+3. 练习英文写作技能<br>
+   Practice English writing skills
+
+---
+
+$Id$

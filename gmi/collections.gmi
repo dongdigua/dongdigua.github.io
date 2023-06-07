@@ -29,7 +29,6 @@ exploring and documenting  minimum viable solutions for living and technological
 => gopher://dataswamp.org                                             + dataswamp
 => gopher://dataswamp.org/1/~solene                                   ++ Solene
 => gemini://perso.pw/blog/                                            +++ Solene gem
-BSD
 > parker(circumlunar.space): I like her stuff.  ¯\_(ツ)_/¯
 => gopher://baud.baby                                                 + Y0UR 515T3R'Z F4V0R1T3 H4CK3R
 => gopher://schinkel.bevuta.com                                       + Author of CHICKEN Scheme

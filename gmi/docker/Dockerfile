@@ -10,7 +10,7 @@ RUN git clone https://github.com/dongdigua/dongdigua.github.io.git --depth 1 \
 
 COPY run-wrapper.sh .
 # https://weinan.io/2019/04/06/cron.html
-COPY update-git.sh /etc/periotic/hourly/
+COPY update-git.sh /etc/periodic/hourly/
 
 # for testing purpose only
 # RUN mkdir /etc/periodic/1min \
