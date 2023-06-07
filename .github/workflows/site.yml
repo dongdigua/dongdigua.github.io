@@ -28,7 +28,6 @@ jobs:
 
       - name: Prepare
         run: |
-          curl "https://raw.githubusercontent.com/dongdigua/configs/main/kernel/README.org" -o org/kernel.org
           curl "https://raw.githubusercontent.com/dongdigua/configs/main/.tmux.conf" -o misc/tmux.conf
 
       - name: Build with Org
@@ -48,10 +47,15 @@ jobs:
           source: ./
           destination: ./_site
 
-      - name: Patch HTML & Get Static File
+      - name: Post-Jekyll Build
         run: |
-          cd _site && tree
+          tree
+          cd _site
           sudo ./patches/color.sh
+          sudo apt install pandoc
+          # use jekyll to check link but actually use pandoc
+          sudo pandoc posts.md --css=css/everforest.css -s -o posts.html
+
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1

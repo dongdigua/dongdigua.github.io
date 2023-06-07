@@ -13,7 +13,7 @@ https://github.com/rgb-24bit/org-html-theme-list org-joshua
 {
     body {
         font-family: "Source Serif", "Helvetica Neue", "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, sans-serif !important;
-        /* font-size: 18px; */
+        font-size: 18px;
         /* line-height: 21px; */
         color: black;
         /* margin: auto; */
