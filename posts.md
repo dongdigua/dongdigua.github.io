@@ -1,6 +1,7 @@
 ## Table of Contents
 ### Posts (sorted by time)
-- [2023-05-21 : Usenet 新闻组 和 命令行浏览器选择 (w3m, lynx, links)](usenet_and_cli_browsers)<br>
+- [2023-06-07 : Org Preserve Source Bock Highlighting when Exporting Non-Interactively](org_export_highlight)<br>
+- [2023-05-21 : Usenet 新闻组 和 命令行浏览器选择 (w3m, lynx, links, elpher, offpunk)](usenet_and_cli_browsers)<br>
 - [2023-05-13 : Clean Up Home Directory](gmi/cleanup_home.gmi.txt)<br>
 - [2023-04-16 : 一位 PGP 进步青年的 Canokey 历程](pgp_canokey)<br>
 - [2023-04-01 : Join Fedora and Maintain Package](fedora_contrib)<br>

@@ -1,0 +1,60 @@
+#+TITLE: Org Preserve Source Bock HIghlighting when Exporting Non-Interactively
+#+DATE: <2023-06-07 三>
+
+I want to talk about a long-confusing problem I have met since I created my first source block in org blog.
+
+It's really hard to find the solution since the search engine is always flooded with articles that only introduce how to start from scratch (mostly taken from quick-start section in document), but don't explin deeper about the details or internal implementations.
+These kind of articles are really common on popular "Tech" platforms, because the writer don't need necessarily need to be a user, and they just keep updating.
+Another type of search result is StackOverslow, where most user don't know programming :)
+
+* Problem Solving Roadmap
+it started with two facts:
+1. many other org-powered blog have colorful highlighting
+2. color is available when exporting interactively with org-export-dispatch
+
+I don't want to talk on and on about how all the clues were linked together through the timeline, but still need to show the key points. Actually I don't even know how I found the clear path in that tangled web, there's too many times I went into the wrong direction.
+
+With fact 1, I researched their blogs and they can be concluded into three types:
+- build locally and upload html so I don't know how they build
+- use some JS to highlight, I dislike this
+- transparent build process, but I don't understand the .el file
+  some examples:
+  - [[https://github.com/include-yy/notes/blob/master/yynt.el][include-yy]]
+  - [[https://codeberg.org/SystemCrafters/systemcrafters-site/src/branch/v2/publish.el][systemcrafter]]
+
+With fact 2, one day I somehow had the idea of batch build with GUI/TUI open, it worked. But didn't work on CI.
+
+Depressed, I wanted to email someone who did it well, but I know I hadn't finished my homework: I didn't read the whole manual and any of the source code. However, finishing all of these takes too much time which I lack.
+
+The something stroke my mind: I haven't searched emacs-china! I then got the solution [[https://emacs-china.org/t/org-emacs-script-org-publish-all/20782][there]], partially. They gave a [[https://orgmode.org/worg/org-faq.html#preserving-faces-during-batch-export][link to FAQ]] and the questioner said it's okey, thus no direct code solution provided in thread. When I follewed the link and tried out the solution, it didn't work. I ran ripgrep in the source tree, and found the function =org-export-htmlize-generate-css= [[https://git.savannah.gnu.org/cgit/emacs.git/tree/lisp/org/ChangeLog.1?id=229f0b8dd3b92827b6e0c6fc105508e8b80858f5#n7641][last appeared in 2012]].
+
+Now the .el files I had read came into use. I remenbered a similar function in systemcrafter's repo named =org-html-htmlize-generate-css=. It just [[https://git.sr.ht/~bzg/org-mode/commit/8134e80bdfb55bbce9aecf3f5958a2bd43cc0b63][got renamed]] in these years.
+
+The idea is: export the emacs faces to css and have the corresponding class in html to apply css. [[https://systemcrafters.net/publishing-websites-with-org-mode/building-the-site/#generating-pages-with-code-blocks][Systemcrafter also mentioned this]] and he said he would make a video on this. But with too many modes loaded up, the number of duplicated face is enormous and the size of css is more than 50KB!
+
+So the next step is to have a minor config to bootstrap the css and cherry-pick the faces I need. In this way I can keep my page lightweight enough and probably even lighter than inline-css.
+
+I'm just finding the balance between simplicity and viewing experience. It's a plkace between --batch generated html and those with full color.
+Just like Gemini is in the space between gopher and HTTP.
+
+* Gemini
+I've long been eager to serve my blog through [[https://gemini.circumlunar.space][Gemini]] protocol.
+(The ideal choice is [[gemini://srht.site][srht.site]] gemini hosting, but I don't have available payment mehod now. I'll certainly migrate from github to sourcehut someday)
+So I built a docker image and tried to persuade my freind to serve it on his homelab.
+
+Although the blog is served on Gemini, I won't switch my future blog to gemtext like previous .md to .org switch. Only some small words and complaints will be written in plain gemtext, because they don't need to be indexed by the search engine.
+
+I want my blog to be indexed by the search engine, so people can with same problem can find the solution instead of reading garbage. But the search engine isn't the main problem, gemtext can also be exported to html.
+
+Most of by blog are actually notes, not just plain articles. Notes really rely on org's rich feature, especially source block and inline hyperlink between two files with ID precision.
+
+Exporting to HTML is an okey way to preserve the structure of org, but in gemini, you can M-x org-mode in elpher or open offline files in [[./usenet_and_cli_browsers.org][offpunk]] cache.
+I don't want to convert any of my content in other format to .gmi, because any conversion process losses file structure to some extent.
+
+As of post index, I've been writing it manually due to mixed content format. So just write a simple [[https://github.com/dongdigua/dongdigua.github.io/blob/main/misc/mdlist2gmi.py][python script]] to convert entries in .md to Gemini links.
+
+
+* Outro
+This article is entirely written in school.
+I wrote 4.5 * B4 paper in one week, and the finished one is 2 * B4 paper.
+Thank my English teacher for reviewing my draft and fixing grammar and typo.

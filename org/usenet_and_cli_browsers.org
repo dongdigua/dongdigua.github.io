@@ -1,4 +1,4 @@
-#+TITLE: Usenet 新闻组 和 命令行浏览器选择 (w3m, lynx, links)
+#+TITLE: Usenet 新闻组 和 命令行浏览器选择 (w3m, lynx, links, elpher, offpunk)
 #+DATE: <2023-05-21 日>
 
 这个文章还是中文写, 因为中文互联网相关内容真的太少了.
