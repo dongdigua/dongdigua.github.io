@@ -1,0 +1,98 @@
+/* generic code */
+.org-variable-name {
+    /* font-lock-variable-name-face */
+    color: #3a94c5;
+}
+.org-preprocessor {
+    /* font-lock-preprocessor-face */
+    color: #f85552;
+}
+.org-keyword {
+    /* font-lock-keyword-face */
+    color: #f85552;
+}
+.org-string {
+    /* font-lock-string-face */
+    color: #8da101;
+}
+.org-type {
+    /* font-lock-type-face */
+    color: #8da101;
+}
+.org-builtin, .org-elixir-atom {
+    /* font-lock-builtin-face */
+    color: #35a77c;
+}
+.org-comment, .org-comment-delimiter, .org-doc {
+    /* font-lock-comment-face */
+    color: #829181;
+    font-style: italic;
+}
+
+/* diff */
+.org-diff-added {
+    /* diff-added */
+    background-color: #eeffee;
+}
+.org-diff-file-header {
+    /* diff-file-header */
+    background-color: #bfbfbf;
+    font-weight: bold;
+}
+.org-diff-function {
+    /* diff-function */
+    background-color: #d9d9d9;
+}
+.org-diff-header {
+    /* diff-header */
+    background-color: #d9d9d9;
+}
+.org-diff-hunk-header {
+    /* diff-hunk-header */
+    background-color: #d9d9d9;
+}
+.org-diff-index {
+    /* diff-index */
+    background-color: #bfbfbf;
+    font-weight: bold;
+}
+.org-diff-indicator-added {
+    /* diff-indicator-added */
+    color: #22aa22;
+    background-color: #eeffee;
+}
+.org-diff-indicator-changed {
+    /* diff-indicator-changed */
+    color: #aaaa22;
+}
+.org-diff-indicator-removed {
+    /* diff-indicator-removed */
+    color: #aa2222;
+    background-color: #ffeeee;
+}
+.org-diff-refine-added {
+    /* diff-refine-added */
+    background-color: #bbffbb;
+}
+.org-diff-refine-changed {
+    /* diff-refine-changed */
+    background-color: #ffff55;
+}
+.org-diff-refine-removed {
+    /* diff-refine-removed */
+    background-color: #ffcccc;
+}
+.org-diff-removed {
+    /* diff-removed */
+    background-color: #ffeeee;
+}
+
+/* sh */
+.org-sh-escaped-newline, .org-sh-heredoc {
+    /* sh-escaped-newline */
+    color: #8da101;
+}
+.org-sh-quoted-exec {
+    /* sh-quoted-exec */
+    color: #ff00ff;
+}

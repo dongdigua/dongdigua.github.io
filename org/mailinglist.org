@@ -104,6 +104,7 @@ to 并 cc 是对的, 这样如果这是一个有很多回复的 thread, 不会�
 :CUSTOM_ID: mailru
 :END:
 换 OpenMbox.net 了, 希望是最后一次换邮件服务商
+(2023.5) 好吧... 也被墙了
 ** [[https://www.mail-archive.com/misc@openbsd.org/msg184084.html][Live stick / cd from official sources]]
 :PROPERTIES:
 :CUSTOM_ID: livecd

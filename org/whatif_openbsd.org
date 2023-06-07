@@ -110,7 +110,7 @@ grub> boot
 然后就是安装一堆软件
 我没有安装那些 "现代化 UNIX 工具", 比如 htop bat exa zoxide, (ripgrep 除外, 太好用了)
 7z 真的好用, 但是我觉得更应该学学标准的 UNIX 压缩解压工具
-#+BEGIN_SRC ksh
+#+BEGIN_SRC shell
 doas pkg_add firefox neovim git pcmanfm noto-cjk # 特别必要的
 doas pkg_add ripgrep fzf ncdu neofetch ranger p7zip colortree # 好用的工具
 doas pkg_add gmake elixir gnutls # dev

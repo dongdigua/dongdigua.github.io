@@ -4,6 +4,7 @@
 *.html
 *.xml
 *.gmi.txt
+org.css
 !index.html
 !xmr.html
 !404.html
