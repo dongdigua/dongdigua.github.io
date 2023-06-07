@@ -4,6 +4,7 @@
 #+TAGS: emacs(m) linux(x) iot(i) plan9(9) BSD(B) PGP(P)
 #+TAGS: smth mailinglist
 #+OPTIONS: toc:1 ^:{}
+#+HTML_HEAD_EXTRA: <link rel="shortcut icon" href=https://static.wikia.nocookie.net/minecraft_gamepedia/images/5/55/Enchanted_Book.gif>
 
 #+TITLE: Internet Collections
 #+DATE: <2022-06-05 日>
@@ -38,6 +39,7 @@ You can always find something magical on the Internet.
 *** [[https://blogs.gnome.org/aday/2023/01/18/gnome-info-collect-what-we-learned/][gnome-info-collect: What we learned]]
 *** [[https://ferd.ca/ten-years-of-erlang.html][Ten Years of Erlang]]
 *** [[https://prithu.dev/posts/unix-pipeline/][The beauty of Unix pipelines]]
+*** [[https://blog.xen0n.name/posts/tinkering/loongarch-faq][非官方但全面的 LoongArch 常见问题解答]]
 
 ** [[http://www.paulgraham.com/todo.html][Paul Graham]]
 ** [[http://www.qiusir.com/][qiusir]]                                                            :rssub:
@@ -74,6 +76,11 @@ CRAZY!!!!!
 **** [[https://jeskin.net/blog/getting-started-with-cosmopolitan-libc][Getting Started with Cosmopolitan Libc]]
 ** [[http://mindhacks.cn][刘未鹏 | Mind Hacks]]                                                 :wow:
 *** [[http://mindhacks.cn/2006/10/15/cantor-godel-turing-an-eternal-golden-diagonal/][康托尔、哥德尔、图灵——永恒的金色对角线]]
+** [[https://ploum.net][Ploum]]
+一个作家对现代互联网的 "彷徨"
+#+BEGIN_QUOTE
+I like to explore how technology impacts society
+#+END_QUOTE
 
 
 ** [[https://petermolnar.net/index.html][Peter 's Homepage]]                                                 :rssub:
@@ -264,6 +271,10 @@ very beautiful page
 *** [[https://feng.si/posts/2019/07/centos-the-last-linux-distro-you-should-ever-consider][CentOS: 永远有多远就离它多远]]
 ** TODO [[https://drewdevault.com][Drew DeVault's blog]]
 the author of sway & sourcehut
+*** [[https://drewdevault.com/2020/11/01/What-is-Gemini-anyway.html][What is this Gemini thing anyway, and why am I excited about it?]]
+#+BEGIN_SRC shell
+openssl s_client -crlf -servername shenjack.top -connect shenjack.top:1965
+#+END_SRC
 ** [[https://www.agwa.name][Andrew Ayer]]
 *** [[https://www.agwa.name/blog/post/ssh_signatures][It's Now Possible To Sign Arbitrary Data With Your SSH Keys]]
 ** [[https://theoryware.net][Theory-of-Everything]]
@@ -454,6 +465,7 @@ even caught by police when he was a child
 *** [[https://youtu.be/4nG49xTTjIA][The Real Reason Why Negative Times Negative is Positive, Intro to Rings]]
 *** [[https://youtu.be/v_HeaeUUOnc][How to Take the Factorial of Any Number]]
 *** [[https://youtu.be/NJCiUVGiNyA][Coding a 3D Fractal: Mandelbulb]]
+*** [[https://youtu.be/uqwC41RDPyg][Calculus Rhapsody]]
 
 ** Minecraft
 *** [[https://youtu.be/VKydXD6Lr20][Mojang & Minecraft 开始衰落了吗?]]
@@ -506,7 +518,7 @@ When I was trying to download this video, I found that youtube-dl was broken!
 *** [[https://www.reddit.com/r/ProgrammerHumor/comments/wsw78u/regex_be_like/][MC enchant: regex be like...]]
 *** [[https://www.reddit.com/r/ProgrammerHumor/comments/mr8gqx/new_episode_of_electricianhumor/][New episode of ElectricianHumor]]
 
-* Mail
+* Mail/Kernel/BZ
 :PROPERTIES:
 :CUSTOM_ID: mail
 :END:
@@ -527,6 +539,7 @@ Huwawei NB!
 ** [[https://lists.gnu.org/archive/html/emacs-devel/2023-01/msg00425.html][Re: Consideration for Rust contributions in Emacs]]
 from emacs-china, about multi-thread
 ** [[https://lore.kernel.org/all/20230314103316.313e5f61@kernel.org/][We don't feel comfortable accepting patches from or relating to hardware produced by your organization]]
+** [[https://bugzilla.redhat.com/show_bug.cgi?id=2208553][xfs metadata corruption after upgrade to 6.3.3 kernel]]
 
 * Other
 :PROPERTIES:

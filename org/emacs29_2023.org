@@ -10,9 +10,11 @@
 gcc (it's GNU emacs, so...) 参数来源:
 - https://zhuanlan.zhihu.com/p/172518559
 - https://snoopitek.com/make.conf
-#+BEGIN_SRC sh
+
+don't run this in fish, use bash or ksh instead
+#+BEGIN_SRC bash
 ./configure CFLAGS="-march=native -O3 -pipe -fno-math-errno -fgraphite-identity -floop-nest-optimize -fno-semantic-interposition -fno-strict-aliasing -fno-common -fipa-pta -fno-plt" \
-            LDFLAGS="-Wl,-no-as-needed -ljemalloc -Wl,-as-needed" \
+            LDFLAGS="-L`jemalloc-config --libdir` -Wl,-rpath,`jemalloc-config --libdir` -ljemalloc `jemalloc-config --libs`" \
             --with-x=no \
             --with-gpm=no \
             --with-pgtk \
@@ -21,7 +23,8 @@ gcc (it's GNU emacs, so...) 参数来源:
             --with-sqlite3 \
             --with-tree-sitter \
             --with-webp \
-            --with-gif
+            --with-gif \
+            --with-rsvg
 #+END_SRC
 
 @@html:<details>@@

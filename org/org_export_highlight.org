@@ -1,5 +1,6 @@
 #+TITLE: Org Preserve Source Bock HIghlighting when Exporting Non-Interactively
 #+DATE: <2023-06-07 三>
+#+OPTIONS: \n:nil
 
 I want to talk about a long-confusing problem I have met since I created my first source block in org blog.
 
@@ -39,7 +40,7 @@ Just like Gemini is in the space between gopher and HTTP.
 
 * Gemini
 I've long been eager to serve my blog through [[https://gemini.circumlunar.space][Gemini]] protocol.
-(The ideal choice is [[gemini://srht.site][srht.site]] gemini hosting, but I don't have available payment mehod now. I'll certainly migrate from github to sourcehut someday)
+(The ideal choice is [[gemini://srht.site][srht.site]] gemini hosting, but I don't have available payment mehod now. I'll certainly [[https://ploum.net/2023-02-20-boucle-inspiration.html][migrate from github to sourcehut]] someday)
 So I built a docker image and tried to persuade my freind to serve it on his homelab.
 
 Although the blog is served on Gemini, I won't switch my future blog to gemtext like previous .md to .org switch. Only some small words and complaints will be written in plain gemtext, because they don't need to be indexed by the search engine.
@@ -53,6 +54,28 @@ I don't want to convert any of my content in other format to .gmi, because any c
 
 As of post index, I've been writing it manually due to mixed content format. So just write a simple [[https://github.com/dongdigua/dongdigua.github.io/blob/main/misc/mdlist2gmi.py][python script]] to convert entries in .md to Gemini links.
 
+* Contribute
+So I mailed a patch to [[mailto:emacs-orgmode@gnu.org][emacs-orgmode@gnu.org]], but it need some time to be processed:
+#+BEGIN_EXAMPLE
+
+<dongdigua> hello, I sent a patch to emacs-orgmode@gnu.org three hours ago
+            using outlook,                                              [13:56]
+<dongdigua> but didn't appear on https://list.orgmode.org what's wrong?
+                                                                        [13:57]
+<yantar92Orgcontr> dongdigua: If it is your first email to Org mailing list,
+                 it will first go through moderators                    [14:08]
+<yantar92Orgcontr> usually takes a few days
+<dongdigua> yes it's first
+<yantar92Orgcontr> If you look at https://orgmode.org/manual/Feedback.html
+                                                                        [14:09]
+<yantar92Orgcontr> "If you are not a member of the mailing list, your mail
+                 will be passed to the list after a moderator has approved it"
+<dongdigua> so if I subscribe it, it will be a lot faster?              [14:13]
+<yantar92Orgcontr> I assume so, but it is too late now. Moderation is one-time
+                 activity. Upon passing it, your email will be whitelisted
+                                                                        [14:14]
+<dongdigua> ok, I'll wait, thank you                                    [14:17]
+#+END_EXAMPLE
 
 * Outro
 This article is entirely written in school.
