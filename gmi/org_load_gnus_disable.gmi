@@ -1,0 +1,186 @@
+# Org: Disable Gnus Loading when Org is Loaded
+2023-06-08 Thu
+
+When I load a org file, eww and gnus are also loaded, eww is fine, but gnus is HUGE and will cause lag. I got the solution in #emacs irc:
+
+the variable `org-modules`
+(but don't put ol-eww, because eww will also load gnus)
+
+```
+<dongdigua> I configured org eww gnus with use-package, all :defer t    [09:24]
+<dongdigua> but when I load an org file, it will also load eww and gnus, why?
+...
+<dongdigua> and if I don't configure gnus with use-package, it will not load
+<parsnip> oh, Gnus, hmm
+...
+<habamax> dongdigua: it looks like you have quite a fancy setup. One should do
+          some extra to make it happen
+<olivermead> dongdigua: may you please elaborate? maybe send us a paste of the
+             relevant config
+<olivermead> ,paste
+...
+<dongdigua> olivermead habamax: https://bpa.st/ZKDJA                    [10:17]
+<emacsman> guys go sleep
+<acdw> no u
+<olivermead> dongdigua: my apologies but emacsman is right, I must sleep
+<emacsman> :)
+<dongdigua> ok                                                          [10:19]
+...
+<parsnip> dongdigua: i might have some ideas, but they'll be tedious, not
+          clever, and i probably won't be testing this myself           [10:34]
+<parsnip> basically ideas about how to methodically try to isolate the issue
+<dongdigua> ?                                                           [10:36]
+<parsnip> i don't know what a question mark means here.                 [10:37]
+<parsnip> ,?                                                            [10:38]
+<fsbot> To invoke fsbot, type fsbot: <command> or , <command>
+<parsnip> ,why
+<fsbot> why not?
+<parsnip> ,huh
+<fsbot> try:  Nyuhuhuu shuhari
+<dongdigua> parsnip: I mean, what is your idea?                         [10:41]
+<parsnip> it's a long one, not all known ahead of time, and potentially
+          fruitless. let me know at any point if you'd rather not       [10:42]
+<parsnip> i guess for starters, are you using any kit, like spacemacs, doom,
+          nix, guix, lambda, etc
+<dongdigua> vanilla emacs 29
+<parsnip> okay, and are you using irc from the one emacs?               [10:44]
+<parsnip> looks like erc
+<dongdigua> yes
+<parsnip> so you can still troubleshoot this by opening a second emacs, and
+          you don't have to exit irc, right?                            [10:45]
+<dongdigua> y
+<parsnip> okay, so are you able to easily reproduce this issue every time you
+          start emacs?
+<parsnip> like in just a few steps or w/e?
+<dongdigua> just visit an org document and loog at *Messages*
+<dongdigua> I just found another thing: seems eww loads gnus, and org loads
+            eww                                                         [10:47]
+<parsnip> okay. how about if you copy your init file to like, /tmp/testing/,
+          and then do `export HOME=/tmp/testing`, and start emacs from that
+          session?
+<parsnip> okay, maybe you'll solve your issue before any of my tedious
+          isolating is needed
+<dongdigua> parsnip: I have no idea
+<parsnip> so that last sentence has about as much information as your earlier
+          "?"                                                           [10:53]
+<parsnip> try to communicate more                                       [10:54]
+<dongdigua> sorry                                                       [10:58]
+<dongdigua> if I only comment out gnus section in the config provided before,
+            org and eww wont load gnus,
+<dongdigua> if only comment out eww, org won't load eww but load gnus   [10:59]
+<dongdigua> so it's not org -> eww -> gnus, org can still directly load gnus
+<user363628> dongdigua: this is your configuration? https://bpa.st/ZKDJA
+<dongdigua> yes, org eww gnus fragment, not the whole one               [11:05]
+<user363628> dongdigua: if so, what happens when you remove my/orgurl?  [11:06]
+<user363628> also, have you tried doing a binary search like manual bisect on
+             this? that's an effective way to narrow down on the root cause
+<dongdigua> user363628: remove my/orgurl don't work                     [11:07]
+<user363628> what do you mean "don't work"?                             [11:08]
+...
+<dongdigua> still load eww and gnus when org is loaded, which I don't want
+<lockywolf> dongdigua: why would you care if eww and gnus are loaded?
+<user363628> dongdigua: assuming you're not using emacsclient and are using
+             different sessions my only recommendation is to bisect - keep
+             removing ~50% of sections till problem doesn't present, then
+             backtrack etc                                              [11:10]
+<parsnip> ,bisect                                                       [11:11]
+<fsbot> parsnip: bisect is [0] If you can reproduce your issue reliably in a
+        new emacs, try bisecting your user-init-file
+<fsbot> [1] Comment out lower half of your init file and try to reproduce the
+        issue. Recurse as needed.
+<fsbot> [2] Use M-; to comment or uncomment selected region
+<fsbot> [3] See also ,keep-one-open
+<user363628> ,parsnip++
+<fsbot> Noted, user363628. One fsbot-point for parsnip!
+<parsnip> user363628: i feel like mre might be sooner useful here       [11:12]
+<user363628> possibly
+<dongdigua> lockywolf: I just don't want the lag when I'm just opening a
+            single org file, org should be just org, don't need to something
+            else
+<parsnip> i tried to start walking them through it, but they seemed to lose
+          interest, or generally showed not much care for communicating well
+<lockywolf> dongdigua: load it on emacs start
+<lockywolf> dongdigua: you are using emacsclient, don't you?            [11:13]
+<lockywolf> *aren't you
+<dongdigua> no, just emacs
+<user363628> ,mre                                                       [11:16]
+<fsbot> MRE is help US to help YOU
+        <https://en.wikipedia.org/wiki/Minimal_reproducible_example>
+        <various-mre-approaches-in-emacs>
+<parsnip> ,various-mre-approaches-in-emacs                              [11:17]
+<fsbot> various-mre-approaches-in-emacs: [0] DRAFT: try `mkdir /tmp/test;
+...
+<parsnip> dongdigua: your report probably has too many lines of code in it for
+          it to really be a good report                                 [11:18]
+<parsnip> also, it would be nice if you can reproduce the issue without
+          use-package, as use-package is not yet on emacs stable, iiuc  [11:19]
+<parsnip> just keep removing lines from your config, until you've got the
+          fewest number of lines possible                               [11:20]
+<dongdigua> you mean, with-eval-after-load ?
+<dongdigua> without use-package
+<parsnip> sure, but you can defer that till later if you want. if you can cut
+          down the number of lines while still using use-package, that should
+          help
+<parsnip> i would say priority is, just get the number of lines of code to
+          like under 10 or so, it looks like you have a lot of unnecessary
+          code for a report                                             [11:21]
+<user363628> and number of lines above means in the entire init file that is
+             able to reproduce the error
+<parsnip> take "mre" seriously
+<parsnip> you can get a dozen people in here looking at your report, no need
+          to have them all reading unnecessary code                     [11:22]
+<lockywolf> dongdigua: user emacsclient, it's your best bet             [11:23]
+<dongdigua> just one line in .emacs:                                    [11:30]
+<dongdigua> (with-eval-after-load 'gnus (message "1"))
+<dongdigua> and gnus will also load when org document is loaded
+<habamax> new gnupg 2.4.2 is out and emacs + save encrypted file issue is
+          still not fixed. I hope fedora wouldn't push an update for the
+          package till it is resolved                                   [11:33]
+<dongdigua> oh in the beginning I got the message that gnus is loaded by (setq
+            use-package-verbose t)
+<dongdigua> so I won't know if gnus is loaded if use-package is commented out
+<parsnip> dongdigua: is the org file minimal too?                       [11:35]
+<dongdigua> yes
+<dongdigua> so it seems that org loading eww and gnus is work as intended?
+<parsnip> okay, so do you have an mre now? or are you still working on
+          isolating the behavior?
+<parsnip> you can check (featurep 'gnus)                                [11:37]
+<parsnip> if i start a new emacs and open an org file, (featurep 'gnus)
+          returns nil
+<dongdigua> .emacs: (with-eval-after-load 'gnus (message "1"))
+            (with-eval-after-load 'eww  (message "2")) and open a .org file,
+            got 1 and 2                                                 [11:38]
+<dongdigua> habamax: what is the issue                                  [11:39]
+<habamax> can't save encrypted buffer, that is the issue :)
+<habamax> as for yours, have you checked what org does?
+<parsnip> dongdigua: huh, that's weird
+<habamax> (eval-when-compile (require 'gnus-sum))
+<habamax> and "Modules that should always be loaded together with org.el...
+<habamax> include ol-eww
+<habamax> and ol-gnus
+<parsnip> ah, empty config will do it too
+<parsnip> weird, so -Q does not                                         [11:42]
+<parsnip> emacs foo.org reproduces with empty config. emacs -q foo.org does
+          not
+<habamax> you can play with org-modules I think
+<dongdigua> oh thanks
+<parsnip> hmm, no
+<parsnip> emacs -Q -nw /tmp/test/foo.org -eval "(message \"%S\" (featurep
+          'gnus))"
+<parsnip> t
+<parsnip> okay, it always does
+<dongdigua> parship: me too
+<habamax> it is in org-modules
+<parsnip> i somehow confused myself by not keeping mental track of what i was
+          doing
+<dongdigua> habamax: that's the point!!                                 [11:49]
+<habamax> (setq org-modules nil)  <-- will it help?
+<dongdigua> yes
+<dongdigua> thank you!
+<habamax> yw
+<dongdigua> I'll probably put this conversation log on my blog          [11:55]
+<parsnip> dongdigua: well... no public logging. can you edit out my goof up
+          above?                                                        [11:56]
+<dongdigua> I'll just keep fragments useful to the final result         [11:58]
+! You have left channel #emacs
+```

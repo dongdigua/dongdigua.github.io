@@ -1,5 +1,6 @@
 ## Table of Contents
 ### Posts (sorted by time)
+- [2023-06-08 : Org: Disable Gnus Loading when Org is Loaded](gmi/org_load_gnus_disable.gmi.txt)<br>
 - [2023-06-07 : Org Preserve Source Bock Highlighting when Exporting Non-Interactively](org_export_highlight)<br>
 - [2023-05-21 : Usenet 新闻组 和 命令行浏览器选择 (w3m, lynx, links, elpher, offpunk)](usenet_and_cli_browsers)<br>
 - [2023-05-13 : Clean Up Home Directory](gmi/cleanup_home.gmi.txt)<br>
