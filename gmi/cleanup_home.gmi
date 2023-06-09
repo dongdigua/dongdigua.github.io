@@ -49,6 +49,8 @@ headache, do it later.
 I found that fzf is somehow useful when testing new package that will potencially pollute my home directory.
 It always put the most recent file at the bottom, so I can easily figure out what new file is added.
 
-=> https://dongdigua.github.io/whatif_openbsd     [1]
-=> https://github.com/b3nj5m1n/xdg-ninja          [2]
-=> https://dongdigua.github.io/anaconda_kickstart [3]
+=> https://dongdigua.github.io/whatif_openbsd     [1] OpenBSD experiment
+=> https://github.com/b3nj5m1n/xdg-ninja          [2] xdg-ninja
+=> https://dongdigua.github.io/anaconda_kickstart [3] what's in fedora default installation
+
+=> gemini://gluonspace.com/gemlog/home_directory_hierarchy.gmi Home directory hierarchy (something I found when searching my own article)

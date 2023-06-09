@@ -26,13 +26,12 @@ You can always find something magical on the Internet.
 :CUSTOM_ID: blog
 :END:
 #+TAGS: rssable(s) rssub(U) gopher(g)
-** Random Single Entry Floating Around
+** Single Entries
 *** [[https://www.luogu.com.cn/blog/ivystorm/emacs-adventuredunnet-tong-guan-jiao-cheng][luogu blog: emacs dunnet 教程]]                                   :emacs:
 *** [[https://bheisler.github.io/post/state-of-gpgpu-in-rust/][The State of GPGPU in Rust]]                              :rust:lowlevel:
 *** [[https://secretgeek.github.io/html_wysiwyg/][巧用 CSS 显示 HTML 源码]]                                      :frontend:
 *** [[https://blog.pg999w.top/too-many-channels/][Too many channels in Rust but only one in Go]]                     :rust:
 *** [[https://bugs.xdavidhu.me/google/2022/11/10/accidental-70k-google-pixel-lock-screen-bypass/][Accidental $70k Google Pixel Lock Screen Bypass]]
-*** [[https://isamert.net/2022/03/16/global-interactive-emacs-functions.html][Global interactive Emacs functions]]                              :emacs:
 *** [[https://www.engraved.blog/building-a-virtual-machine-inside/][Building A Virtual Machine inside ChatGPT]]
 *** [[https://snarfed.org/2022-03-10_were-drowning-software-dependencies][We're Drowning Software Dependencies]]
 *** [[http://ck.kolivas.org/pictures/Screenshot_20170905_134246.png][ck: ]][[https://ck-hack.blogspot.com/2021/08/514-and-future-of-muqss-and-ck-once.html][5.14 and the future of MuQSS and -ck once again (END)]]
@@ -40,6 +39,9 @@ You can always find something magical on the Internet.
 *** [[https://ferd.ca/ten-years-of-erlang.html][Ten Years of Erlang]]
 *** [[https://prithu.dev/posts/unix-pipeline/][The beauty of Unix pipelines]]
 *** [[https://blog.xen0n.name/posts/tinkering/loongarch-faq][非官方但全面的 LoongArch 常见问题解答]]
+*** [[https://mako.cc/writing/hill-free_tools.html][Free Software Needs Free Tools]]
+*** [[https://magcius.github.io/xplain/article/][explain X window system]]
+*** [[https://ifaceless.github.io/2019/10/30/linux-kernel-dev-notes/][Linux Kernel Development 学习与总结]]
 
 ** [[http://www.paulgraham.com/todo.html][Paul Graham]]
 ** [[http://www.qiusir.com/][qiusir]]                                                            :rssub:
@@ -53,17 +55,12 @@ You can always find something magical on the Internet.
 really good website, butt, no rss
 ** [[https://bford.info][Bryan Ford]]
 leads the [[https://dedis.epfl.ch][Decentralized/Distributed Systems (DEDIS) lab]]
-#+BEGIN_QUOTE
-Two Principles of Deadlines:
-1. All deadlines converge on the same day—Deadline Day.
-2. Every day is Deadline Day.
-#+END_QUOTE
 *** [[https://bford.info/pub/net/p2pnat/][Peer-to-Peer Communication Across Network Address Translators]]     :wow:
 ** [[https://coredumped.dev/][Core Dumped]]                                         :rust:lowlevel:emacs:
 a guy trying to rust emacs
 ** [[http://www.jinbuguo.com][金步国作品集]]                                             :lowlevel:linux:
 kernel, LFS
-** [[https://nullprogram.com][null program]]                                                   :lowlevel:
+** [[https://nullprogram.com][null program]]                                             :lowlevel:rssub:
 author of =elfeed=, =nasm-mode=
 ** [[https://www.cnblogs.com/zhongwencool/][写着写着就懂了]]                                                   :elixir:
 elixir/erlang大佬, 公众号: HelloElixir
@@ -83,17 +80,10 @@ I like to explore how technology impacts society
 #+END_QUOTE
 
 
-** [[https://petermolnar.net/index.html][Peter 's Homepage]]                                                 :rssub:
-#+BEGIN_QUOTE
-GE d@ s: a C++$ UBL+++$ P++(--)$ L++(-)$ !E W+++(-)$ !N !o K--? w !O !M  !V PS++ PE- Y+ PGP+ t+ 5+++ X+ R tv b+ DI D+ G e++ h r+++ y+++*
-#+END_QUOTE
 ** [[https://floooh.github.io/][floooh(The Brain Dump)]]                                                :c:
 since 2007, cpu emulator
 *** [[https://floooh.github.io/2021/12/17/cycle-stepped-z80.html][2021: A new cycle-stepped Z80 emulator]]
-*** [[https://floooh.github.io/2019/09/27/modern-c-for-cpp-peeps.html][Modern C for C++ Peeps]]
-#+BEGIN_QUOTE
-Modern C is not a subset of C++
-#+END_QUOTE
+*** [[https://floooh.github.io/2019/09/27/modern-c-for-cpp-peeps.html][Modern C is not a subset of C++]]
 ** [[https://blog.stdio.io/438][King's way: Linux内核学习阶段小结 (MOOC)]]
 *** [[https://blog.stdio.io/935][一次意外的 hello world 探索之旅]]
 ** [[https://www.wenhui.space/docs][文辉的烂笔头]]                                                   :lowlevel:
@@ -112,7 +102,7 @@ CPU, IC, ARM
 [[http://jujuba.me/imgs/linus-on-TED.png]]
 ** [[https://cireu.github.io/2019/09/17/lisp-setf/][NIL: setf 中「f」的本意]]
 *** [[https://cireu.github.io/2019/10/18/doom-emacs-issue/][doom-emacs 配置的问题]]
-** [[http://egh0bww1.com][include-yy 攒 emacs]]                                        :c:lisp:emacs:
+** [[http://egh0bww1.com][include-yy 攒 emacs]]                                  :c:lisp:emacs:rssub:
 许多东方的图诶
 *** [[https://egh0bww1.com/posts/2021-10-25-14-butterfly-emacs-animation/][蝴蝶效应与emacs动画]]
 *** [[https://egh0bww1.com/posts/2021-05-28-5-emacs-cl-lib][emacs的cl扩展]]
@@ -136,7 +126,7 @@ migrated to codeberg
 *** [[https://liujiacai.net/blog/2022/04/30/modern-c/][现代化 C]]                                                            :c:
 *** [[https://liujiacai.net/blog/2018/06/15/garbage-collection-intro/][深入浅出垃圾回收(1/4)]]
 ** [[http://tomasp.net/][Tomas Petricek]]                                                    :rssub:
-F#, M1(r0$0f+, very high quality
+F#, M1(r0$0f+
 *** [[http://tomasp.net/commodore64][commodore64 BASIC]]
 *** [[http://tomasp.net/blog/csharp-async-gotchas.aspx][async in C#(gotchas) and F#]]
 ** [[http://www.xianwaizhiyin.net/][弦外之音]]                                                     :c:lowlevel:
@@ -184,7 +174,6 @@ funny byte
 (signify 只用于签名认证, age 只用于加密, 所以密钥也比较短)
 #+END_QUOTE
 **** [[https://spwo.notion.site/GitHub-6b1e1d57f52c4664bff61cadb3f9cb8d][震惊! 竟然有人在 GitHub 上冒充我的身份!]]
-**** [[https://chenhe.me/post/yubikey-starting-gpg/][YubiKey 入手记 - GPG]]
 *** [[https://ulyc.github.io/2019/08/01/初窥CORB/][Cross-Origin Read Blocking]]
 ** [[https://kernal.eu][kernal]]
 Welcome to the darkest dungeon of kernal
@@ -195,18 +184,12 @@ Written with Vim and Emacs. A member of Linux Club of Peking University.
 with cat-v-like sidebar style
 *** [[https://vimacs.wehack.space/Mail-vs-IM.htm][谈电子邮件和即时通讯]]
 **** [[https://citizenlab.ca/2016/11/wechat-china-censorship-one-app-two-systems/][微信一app两制]]
+*** [[https://vimacs.wehack.space/notes/GFW.htm][GFW]]
 ** [[http://www.matrix67.com/blog/][Matrix67]]                                                           :math:
 The Aha Moments
 *** [[http://www.matrix67.com/blog/archives/6039][用三段 140 字符以内的代码生成一张 1024×1024 的图片]]               :wow:
 *** [[http://localhost-8080.com/][❤ localhost-8080]]
-** [[https://nyxt.atlas.engineer/article/gopher.org][Nyxt: Why should I care about Gopher?]]                            :gopher:
-By making something a little bit more inaccessible, we are inadvertently putting a filter on what is being posted.
-#+BEGIN_QUOTE
-This makes it a great way to avoid a lot of the low effort noise published on popular/accessible platforms.
-As a result, Gopher is full of interesting, enriching, high quality content.
-The authors are posting out of passion, and with great commitment.
-Don't get me wrong, there's nonsense on Gopher too, but far less of it.
-#+END_QUOTE
+** TODO [[https://www.orangeclk.com][半瓶]]
 *** [[https://www.orangeclk.com/2022/08/22/eternal-september-community-locals/][社区本地人与永恒的九月(Eternal September)]]
 #+BEGIN_QUOTE
 几乎所有大众互联网社区都难逃此宿命。要想避免永恒九月，社区必须要足够克制，有节奏地引导新人加入。
@@ -215,8 +198,11 @@ Don't get me wrong, there's nonsense on Gopher too, but far less of it.
 #+END_QUOTE
 #+ATTR_HTML: :width 256px
 [[https://upload.wikimedia.org/wikipedia/commons/d/d7/Internet_is_Full_-_Go_Away_t-shirt.jpg]]
-** [[https://phenix3443.github.io/notebook/][phenix3443]]                                                      :c:emacs:
-刘尚亮
+**** [[https://nyxt.atlas.engineer/article/gopher.org][Nyxt: Why should I care about Gopher?]]                        :gopher:
+#+BEGIN_QUOTE
+By making something a little bit more inaccessible, we are inadvertently putting a filter on what is being posted.
+#+END_QUOTE
+** [[https://phenix3443.github.io/notebook/][phenix3443 刘尚亮]]                                               :c:emacs:
 *** [[https://phenix3443.github.io/notebook/emacs/modes/use-package-manual.html][use-package manual]]
 *** [[https://phenix3443.github.io/notebook/c/tinyhttpd-analysis.html][TinyHTTPd 源码分析]]
 ** [[https://julienblanchard.com][julienblanchard/typed-hole]]                                        :plan9:
@@ -241,21 +227,17 @@ int function(void) {
     crFinish;
 }
 #+END_SRC
-** [[https://magcius.github.io/xplain/article/][explain X window system]]
 ** [[https://madaidans-insecurities.github.io][Security & Privacy Evaluations]]
 *** [[https://madaidans-insecurities.github.io/guides/linux-hardening.html][Linux Hardening Guide]]
+*** [[https://hardenedlinux.github.io][Hardened GNU/Linux]]
 ** [[https://www.nayuki.io][Project Nayuki]]
 *** [[https://www.nayuki.io/page/a-fundamental-introduction-to-x86-assembly-programming][A fundamental introduction to x86 assembly prorgamming]]
 *** [[https://www.nayuki.io/page/i-type-in-dvorak][Dvorak FAQ]]
 ** [[https://bt.ht][bt.ht]]
-网页小, 文笔好
-** [[https://hsingko.github.io][hsingko]]
-*** [[https://hsingko.github.io/post/2022/06/17/i-am-not-my-brain/][我不等于我的大脑]]
-*** [[https://hsingko.github.io/post/2022/04/27/why-blog/][写博客至今的小结]]
+** TODO [[https://hsingko.pages.dev][hsingko]]
+*** [[https://hsingko.pages.dev/post/2022/06/17/i-am-not-my-brain/][我不等于我的大脑]]
+*** [[https://hsingko.pages.dev/post/2022/04/27/why-blog/][写博客至今的小结]]
 ** [[http://ewontfix.com][EWONTFIX - a blog of bugs]]
-** [[https://ifaceless.github.io/2019/11/17/guide-to-linux-scheduler/][论文学习之 Linux 调度器]]
-*** [[https://ifaceless.github.io/2019/10/30/linux-kernel-dev-notes/][Linux Kernel Development 学习与总结]]
-** [[https://hardenedlinux.github.io][Hardened GNU/Linux]]                                                 :hack:
 ** [[https://briancallahan.net][Dr. Brian Robert Callahan]]                                           :BSD:
 *** [[https://briancallahan.net/blog/20220629.html][OpenBSD has two new C compilers: chibicc and kefir]]               :smth:
 ** [[https://research.exoticsilicon.com][exotic silicon]]                                                      :wow:
@@ -269,7 +251,7 @@ very beautiful page
 ** [[https://feng.si][feng.si]]
 *** [[https://dejavu.moe/posts/vanity-pgp/][某科学的 PGP 算号指南]]                                             :PGP:
 *** [[https://feng.si/posts/2019/07/centos-the-last-linux-distro-you-should-ever-consider][CentOS: 永远有多远就离它多远]]
-** TODO [[https://drewdevault.com][Drew DeVault's blog]]
+** [[https://drewdevault.com][Drew DeVault's blog]]
 the author of sway & sourcehut
 *** [[https://drewdevault.com/2020/11/01/What-is-Gemini-anyway.html][What is this Gemini thing anyway, and why am I excited about it?]]
 #+BEGIN_SRC shell
@@ -280,16 +262,18 @@ openssl s_client -crlf -servername shenjack.top -connect shenjack.top:1965
 ** [[https://theoryware.net][Theory-of-Everything]]
 [[https://theoryware.net/button.gif]]
 everforest theme, also have a big collection
+** [[https://microcai.org][菜菜博士 - 博士在网络的家]]
+很敢说啊
+*** [[https://microcai.fedorapeople.org]]
+I found this in his PGP key
+# an example of data leak in pgp key upload
 ** [[https://xosc.org/][xosc]]
 gemini://xosc.org
 finger m@f.xosc.org
+** [[https://tylercipriani.com][Tyler]]                                                               :git:
+*** [[https://tylercipriani.com/blog/2022/11/19/git-notes-gits-coolest-most-unloved-feature/][Git Notes: git's coolest, most unloved­ feature]]
+It's so cool, especially for testing and reviewing.(from [[https://www.ruanyifeng.com/blog/2023/02/weekly-issue-241.html][ruanyifeng 241]])
 
-** fedorapeople
-*** [[https://microcai.org][菜菜博士 - 博士在网络的家]]
-很敢说啊
-**** [[https://microcai.fedorapeople.org]]
-I found this in his gpg key
-# so uploading key really leaks information
 
 ** B/HWS/fri3nds
 *** [[https://shakaianee.top/][社会易姐]]
@@ -390,6 +374,7 @@ inspiration: Veritasium
 - rw files
 - IPC
 **** [[https://youtu.be/Yi6NxMxCFY8][Ok, I made C compiler in PHP]]
+**** [[https://youtu.be/9s8vjf_vLaA][SmoothLife on GPU]]
 *** [[https://youtu.be/0rJ94rbdteE][Rust 让你感觉像个天才]]
 *** [[https://youtu.be/nfF91Z6fqGk][CMD 登录B站]]
 *** [[https://youtu.be/crnEygp4C6g][Jeff Geerling: FINALLY! A GPU works on the Raspberry Pi!]]
@@ -458,6 +443,7 @@ quote: [[https://youtu.be/aWSQQUXmVVs?t=376][this operating system, the operatin
 even caught by police when he was a child
 *** [[https://youtu.be/eTcVLqKpZJc][PwnFunction: Dangerous Code Hidden in Plain Sight for 12 years]] in [[./wayland.org::#pkexec][pkexec]]
 *** [[https://youtu.be/GEbn3nHyKnA][How One Line of Code Almost Blew Up the Internet]]
+*** [[https://youtu.be/aNEqC-U5tHM][Malware Development (1/2)]]
 
 ** Math
 *** [[https://youtu.be/KufsL2VgELo][Group Theory]]
@@ -595,3 +581,5 @@ BSD asm
 ** [[https://quotes.tilde.chat][~chat irc quote database]]
 *** [[http://bash.org][bash.org Quote Database]]
 ** [[https://github.com/zepouet/Xee-xCode-4.5/blob/master/XeePhotoshopLoader.m#L108][PSD is not my favourite file format]]
+** [[https://hackway.org/docs/cs/intro][计算机专业学习路线]]
+** [[https://github.com/torvalds/linux/pull/17][torvalds: I don't do github pull requests]]

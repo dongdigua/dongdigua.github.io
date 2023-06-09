@@ -118,7 +118,7 @@ const KEY_RESHUFFLE_LIMIT: usize = 60 * 60 * 24 * 30; // One month ago at worst
 还是 Debian Sunkey 那篇里面说的, 直接删 =~/.gnupg/private-keys-v1.d/= 对应的 keyrip 就行啦
 
 靓号我先用着一个没花太长时间就生成的(regxp:AAA520$), 之后感觉可以时再多花点时间生成个好的.
-候选: 66CCFF
+candidate: 66CCFF
 
 
 * gpg.conf 和 gpg-agent.conf                                       :negative:
@@ -153,6 +153,7 @@ age 这种小工具, 以及下文提到的 signify, 都是比较接近 UNIX 哲�
 Xe 也受不了 gpg 改用 age 加密了: [[https://xeiaso.net/blog/new-gpg-key-2021-01-15][I fucked it up, this key is broken]]
 当然, 我这里暂时先不公布 age 的公钥, 还是因为私钥在硬盘上, 这是对发送加密消息的对方的不负责.
 如果之后公布的话, age 的公钥弄成 [[https://github.com/seaofmars/vanity-age][vanity]] 能更有趣, 因为{{{ruby(收件人,recipient)}}}能包含更多字母.
+candidate: rtx3090
 
 * pass
 首先, 密码的准则: https://xkcd.com/936/

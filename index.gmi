@@ -1,9 +1,11 @@
 # ~dongdigua
 
+Hello! this is the dondigua's home on Gemini
+
 => posts.gmi post index
-=> collections.gmi smolweb collections
-=> pgp 2394861A728929E3755D8FFADB55889E730F5B41
-=> https://dongdigua.github.io https site
+=> gmi/collections.gmi smolweb collections
+=> pgp sec>  ed25519/DB55889E730F5B41
+=> https://dongdigua.github.io https site mirror
 
 
 $Id$
