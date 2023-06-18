@@ -8,4 +8,4 @@ Hello! this is the dondigua's home on Gemini
 => https://dongdigua.github.io https site mirror
 
 
-$Id$
+$Date$

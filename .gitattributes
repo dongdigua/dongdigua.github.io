@@ -3,5 +3,4 @@
 *.org linguist-vendored=false
 *.org linguist-detectable=true
 
-index.gmi ident
-posts.md  ident
+index.gmi filter=dater

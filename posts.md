@@ -57,5 +57,3 @@ if you have some problem with sway, you can probably find solution here
    Practice English writing skills
 
 ---
-
-$Id$

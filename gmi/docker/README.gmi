@@ -1,0 +1,23 @@
+# Docker & Gemini
+
+## Server Program
+=> https://github.com/mbrubeck/agate agate
+
+alternatives:
+=> https://gmid.omarpolo.com gmid
+=> https://tildegit.org/solene/vger vger
+
+
+## TODO
+CGI script:
+* inform the server to update git
+* check the log
+
+both need authentication, idea:
+* 6x (CLIENT CERTIFICATE REQUIRED)
+=> gemini://gemini.circumlunar.space/docs/tls-tutorial.gmi doc: TLS
+=> https://adnano.co/2021/03/06/gemini-tls/ TLS recommendations for Gemini
+
+* GPG in 1x (INPUT)
+client: date -u +%Y%m%dT%H | gpg -as
+server: verify time then signature
