@@ -20,6 +20,7 @@ both need authentication, idea:
 * 6x (CLIENT CERTIFICATE REQUIRED)
 => gemini://gemini.circumlunar.space/docs/tls-tutorial.gmi doc: TLS
 => https://adnano.co/2021/03/06/gemini-tls/ TLS recommendations for Gemini
+=> gemini://caseyrichins.online/logs/2023-06-09_gemini-client-certificates.gmi Client Certificates in Gemini
 
 * GPG in 1x (INPUT)
 client: date -u +%Y%m%dT%H | gpg -as

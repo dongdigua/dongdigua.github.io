@@ -13,8 +13,8 @@ RUN git clone https://github.com/dongdigua/dongdigua.github.io.git --depth 1 \
 
 COPY run-wrapper.sh .
 COPY gmid.conf /dongdigua.github.io/gmi/docker/
-COPY cgi/*     /dongdigua.github.io/cgi/
 COPY update-git.sh /etc/periodic/hourly/
+COPY cgi/*     /dongdigua.github.io/cgi/
 
 # for testing purpose only
 # RUN mkdir /etc/periodic/1min \
