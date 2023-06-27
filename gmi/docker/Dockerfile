@@ -2,14 +2,16 @@ FROM alpine:latest
 
 RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.tuna.tsinghua.edu.cn/g' /etc/apk/repositories \
     && sed -i 'a https://mirrors.tuna.tsinghua.edu.cn/alpine/edge/testing' /etc/apk/repositories \
-    && apk add agate git python3 \
-    && touch /var/log/git.log
-
-RUN git clone https://github.com/dongdigua/dongdigua.github.io.git --depth 1 \
+    && apk add agate git python3 perl \
+    && touch /var/log/git.log \
     && echo "0  *  *  *  *  run-parts /etc/periodic/hourly" > /var/spool/cron/crontabs/root
 
+RUN git clone https://github.com/dongdigua/dongdigua.github.io.git --depth 1 \
+    && cd dongdigua.github.io \
+    && git config filter.dater.smudge 'perl -pe "\$last_date = `git log --pretty=format:\\"%ad\\" -1`;s/\\\$Date\\\$/\\\$Date: \$last_date\\\$/"' \
+    && git config filter.dater.clean 'perl -pe "s/\\\$Date[^\\\$]*\\\$/\\\$Date\\\$/"' \
+
 COPY run-wrapper.sh .
-# https://weinan.io/2019/04/06/cron.html
 COPY update-git.sh /etc/periodic/hourly/
 
 # for testing purpose only

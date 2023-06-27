@@ -1,0 +1,10 @@
+# gitattributes filter=dater
+
+better than the ruby solution in ProGit
+=> https://git-scm.com/book/en/v2/Customizing-Git-Git-Attributes 8.2 Customizing Git - Git Attributes
+
+(do not run it in fish shell, use bash/ksh instead)
+```
+git config filter.dater.smudge 'perl -pe "\$last_date = `git log --pretty=format:\\"%ad\\" -1`;s/\\\$Date\\\$/\\\$Date: \$last_date\\\$/"'
+git config filter.dater.clean 'perl -pe "s/\\\$Date[^\\\$]*\\\$/\\\$Date\\\$/"'
+```
