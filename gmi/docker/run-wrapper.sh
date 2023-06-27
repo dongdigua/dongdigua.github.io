@@ -1,8 +1,10 @@
 #! /bin/sh
 
+sh genkey.sh
+
 crond -f -d 8 &
 tail -f /var/log/git.log &
-agate -C --content dongdigua.github.io --hostname $GEMINI_HOST
+gmid -f -c /dongdigua.github.io/gmi/docker/gmid.conf -Dgem_host=$GEMINI_HOST
 
 wait -n
 echo $?
