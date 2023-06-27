@@ -14,12 +14,13 @@
  *::-webkit-scrollbar{width:auto}
  *::-webkit-scrollbar-track{background:#404040}
  *::-webkit-scrollbar-thumb{background:gray}
- body{background-color:#2f383e;color:#d3c6aa;font-family:Monaco,Lucida Console,courier new,monospace;font-size:16px;padding:5em 0 0;margin:0}
+ body{background-color:#2f383e;color:#d3c6aa;font-family:Monaco,Lucida Console,courier new,monospace;font-size:16px;margin:0}
  a{color:#83c092;text-decoration:none}
  a:visited{color:#a7c080}
  a:hover{color:#d699b6}
- .home{position:absolute;width:100%;text-align:center}
- .home pre{max-width:80ch;padding:0 1rem;margin-left:auto;margin-right:auto;line-height:1.5em;overflow:auto;display:inline-block;text-align:left}
+ .home{width:100%;min-height:calc(100vh - 50px);text-align:center}
+ .home pre{max-width:80ch;padding-top:2em;margin-left:auto;margin-right:auto;line-height:1.5em;overflow:auto;display:inline-block;text-align:left}
+ footer{height:50px;text-align:center;background:#323d43}
  pre{font-family:inherit;margin:1rem}
  #quote{color:#7fbbb3;font-style:italic;text-align:center}
  #comment{color:#7a8478;font-style:italic}
@@ -30,7 +31,7 @@
   <script src="https://fastly.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/autoload.js"></script>
   <link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css">
   -->
-  <div class="home p-contact contact h-card vcard">
+  <div class="home">
     <pre>
 (<font color=#e67e80>let</font> ((blog <strong>"<a href=https://dongdigua.github.io/posts>posts/</a>"</strong>)
       (collections "<a href=https://dongdigua.github.io/internet_collections>MagicalIndex</a>")
@@ -48,10 +49,10 @@
          (<a id="normal" href="https://xkcd.com/297">Lost (In (Suspicious (Parentheses)))</a>)))))</pre>
     <br>
     <pre id="quote"></pre>
-
-    <p><pre>
-Gemini available! <b><a href=gemini://shenjack.top>gemini://shenjack.top</a></b>
-    </pre></p>
   </div>
+  <footer>
+      © 2022-2023 dongdigua<br>
+      Gemini: <a href=gemini://shenjack.top>gemini://shenjack.top</a><br>
+  </footer>
 </body>
 <script src="./js/random-quote.js"></script>
