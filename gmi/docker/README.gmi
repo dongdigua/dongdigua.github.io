@@ -5,12 +5,11 @@ alpine linux
 => https://weinan.io/2019/04/06/cron.html cron
 
 ## Server Program
-=> https://github.com/mbrubeck/agate agate
-
-alternatives:
 => https://gmid.omarpolo.com gmid
-=> https://tildegit.org/solene/vger vger
 
+## Hot Update
+* git pull
+* gmid.conf reload
 
 ## TODO
 CGI script:

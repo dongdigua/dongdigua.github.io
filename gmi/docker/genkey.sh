@@ -1,4 +1,4 @@
-#! /usr/bin/sh
+#! /bin/sh
 
 if test -f /etc/ssl/gmid.pem; then
     echo "OK certificate exists"
