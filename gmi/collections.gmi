@@ -1,6 +1,8 @@
+```
      o
     /\--)
    /\  gem
+```
 
 # Gopher/Gemini collections
 A quiet place in the internet other than HyperText Machine Learning
@@ -18,6 +20,8 @@ a lot of information of historic interest, funny, or just plain entertaining
 => gopher://gopher.quux.org/g/Software/Gopher/screenshots/mozilla.gif ++ mozilla 0.9 with gopher tree view
 => gopher://sdf.org                                                   + SDF
 SDF Public Access UNIX System .. Est. 1987
+=> gopher://sdf.org/0/users/d1337                                     ++ d1337 (1990s)
+from nyxt blog
 => gemini://gem.sdf.org/oak3/                                         ++ Oak3's Cafe Gem
 => gopher://circumlunar.space                                         + Circumlunar
 => gemini://gemini.circumlunar.space/~solderpunk/                     ++ solderpunk

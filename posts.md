@@ -45,7 +45,7 @@ if you have some problem with sway, you can probably find solution here
 
 ---
 
-### 为什么中英文混杂? Why a mixture of Chinese and English?
+### 为什么中英文混杂? Why a mix of Chinese and English?
 
 1. 目标读者不同: 中文主要是中文互联网缺少的内容, 英文则是我希望全世界人读懂的<br>
    Different target readers: Chinese for something that ChinaWeb lack, English for more people on WorldWideWeb to understand

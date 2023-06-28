@@ -67,6 +67,7 @@ offpunk 就是个 python 文件, 依赖项都是可选的.
 offpunk 源于 [[https://tildegit.org/solderpunk/AV-98][AV-98]], AV-98 作者是 Gemini 协议的创始人 Solderpunk,
 新协议, 就要有新力量, 他肯定比其他人更清楚 建设什么样的客户端, 怎样建设客户端.
 这里面比较有趣的一个功能 =tour= 是一个 FIFO 队列, 很能体现他的思考.
+(6.27) 当我研究 CGI 的 6x client cert 的时候发现 offpunk 的 cert 命令也特别好.
 
 而 elpher 只是一个简单的 emacs 客户端, 甚至都没有 [[https://drewdevault.com/2020/09/21/Gemini-TOFU.html][TOFU]]
 最好是能让 elpher 访问过的页面也按照 offpunk 的方式存储, 倒不一定要让 elpher 支持 offline, 以及历史记录. 感觉不难 =TODO=
