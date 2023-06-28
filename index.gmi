@@ -1,6 +1,17 @@
 # ~dongdigua
 
-Hello! this is the dondigua's home on Gemini
+```
+       |
+     \|/|/
+   \|\\|//|/
+    \|\|/|/
+     \\|//
+      \|/
+      \|/
+       |
+ _\|/__|_\|/____\|/_
+```
+
 
 => posts.gmi post index
 => gmi/collections.gmi smolweb collections
