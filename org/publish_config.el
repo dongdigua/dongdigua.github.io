@@ -30,7 +30,7 @@
 
 (setq org-html-home/up-format "
 <div id=\"org-div-home-and-up\">
- <a accesskey=\"h\" href=\"%s\"> ../ </a>
+ <a accesskey=\"h\" href=\"%s\"> index </a>
  |
  <a accesskey=\"H\" href=\"%s\"> ~dongdigua </a>
 </div>")

@@ -20,7 +20,7 @@ Actually it is because unable to fetch source from http://www.kotnet.org/~skimo/
 since kotnet.org is a student orgnization and seems disappeared in 2014.
 But we can get alternative source from [[https://repo.or.cz/nvi.git][git]] or Debian(NixOS gets it from there) or Slackware(mentioned above) etc.
 
-* Join
+* Do it
 So I want to help. If I can make this package available, thousands of user will benifit from this.
 *I love this distro.*
 I created BugZilla and Fedora account, the fedora account is useable in nearly all fedora services, great!
@@ -43,9 +43,8 @@ btw you can check repo through api using curl (learned in mailing list)
 curl https://src.fedoraproject.org/api/0/rpms/nvi
 #+END_SRC
 
-* Copr
-(2023.5) When building kernel on copr,
-I found that everytime the build time on f37 is always shorter than f38. Strange still, rawhide is slightly faster than f38 too!
+(2023.6.28) Nyxt 3.0 released, but the Nix one don't work well on Fedora.
+If they don't make a flatpak release, I will build it on copr then add it to the main repo.
 
 * Mailing list
 some interesting thread in the list

@@ -37,3 +37,5 @@ news group server, but the daily content is from the past
 * an input method that inputs predefined Chinese paragraph
 to fight against those exam website
 * refactor .emacs using org-mode literate programming and file structure
+* webzine
+* 完美随身听

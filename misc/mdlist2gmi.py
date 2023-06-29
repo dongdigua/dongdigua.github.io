@@ -15,6 +15,8 @@ for l in lines:
     if l == "### Long Term Update\n":
         print("")
         print(l, end="")
+    elif l == "## Table of Contents\n":
+        print(l, end="")
 
     match = regxp.match(l)
     if match:
