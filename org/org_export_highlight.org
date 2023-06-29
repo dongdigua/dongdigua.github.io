@@ -1,4 +1,4 @@
-#+TITLE: Org Preserve Source Bock HIghlighting when Exporting Non-Interactively
+#+TITLE: Org Preserve Source Bock Highlighting when Exporting Non-Interactively
 #+DATE: <2023-06-07 三>
 #+OPTIONS: \n:nil
 

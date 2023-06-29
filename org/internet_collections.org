@@ -2,7 +2,7 @@
 #+TAGS: lowlevel(w) frontend(f) backend(b) algorithm(a) math(t) crypto(C)
 #+TAGS: hack(h) fun(u) wow(O)
 #+TAGS: emacs(m) linux(x) iot(i) plan9(9) BSD(B) PGP(P)
-#+TAGS: smth mailinglist
+#+TAGS: dead(D)
 #+OPTIONS: toc:1 ^:{}
 #+HTML_HEAD_EXTRA: <link rel="shortcut icon" href=https://static.wikia.nocookie.net/minecraft_gamepedia/images/5/55/Enchanted_Book.gif>
 
@@ -202,6 +202,7 @@ The Aha Moments
 #+BEGIN_QUOTE
 By making something a little bit more inaccessible, we are inadvertently putting a filter on what is being posted.
 #+END_QUOTE
+*** [[https://www.orangeclk.com/2023/04/15/chatgpt-is-not-aggregator/][ChatGPT is Not an Aggregator]]
 ** [[https://phenix3443.github.io/notebook/][phenix3443 刘尚亮]]                                               :c:emacs:
 *** [[https://phenix3443.github.io/notebook/emacs/modes/use-package-manual.html][use-package manual]]
 *** [[https://phenix3443.github.io/notebook/c/tinyhttpd-analysis.html][TinyHTTPd 源码分析]]
@@ -273,6 +274,7 @@ finger m@f.xosc.org
 ** [[https://tylercipriani.com][Tyler]]                                                               :git:
 *** [[https://tylercipriani.com/blog/2022/11/19/git-notes-gits-coolest-most-unloved-feature/][Git Notes: git's coolest, most unloved­ feature]]
 It's so cool, especially for testing and reviewing.(from [[https://www.ruanyifeng.com/blog/2023/02/weekly-issue-241.html][ruanyifeng 241]])
+** [[https://akarin.dev][✨小透明・宸✨ 存在感消失的地方|ω•`)]]
 
 
 ** B/HWS/fri3nds
@@ -283,13 +285,12 @@ It's so cool, especially for testing and reviewing.(from [[https://www.ruanyifen
 EvanMeek / B站: 美味的樱桃菌
 *** [[https://yaocc.cc/][称呼我C先生]]                                                     :linux:
 *** [[https://endlesspeak.gitee.io/][EndlessPeak]]                                                     :linux:
-*** [[https://hackflow.org][GNUman]]
+*** [[https://hackflow.org][GNUman]]                                                           :dead:
 **** [[https://hackflow.org/index.php/archives/124][谈 HTTPS 协议的缺陷与反 HTTPS 联盟的谬误]]
 *** [[https://sh.alynx.one/][Alynx Zhou]]
 口琴, author of =showmethekey=
 **** [[https://sh.alynx.one/posts/Linux-Mooncake-Jokes/][Linux 用户的月饼食用手册]]                                        :fun:
 **** [[https://sh.alynx.one/posts/Do-Not-Fill-My-Email-with-Silly-Ads/][不要拿愚蠢的广告来污染我的邮箱]]
-**** [[https://sh.alynx.one/posts/Emacs-Monaco-Box-drawing-Character/][Emacs 和 Monaco 字体和 Box-drawing Character]]
 *** [[http://www.z.org.cn/][老网虫]]
 *** [[https://yang-qwq.ml][Yang]]
 *** [[http://blog.zhanganzhi.com/][zhanganzhi]]
@@ -297,6 +298,7 @@ EvanMeek / B站: 美味的樱桃菌
 22年新博客, 友链有踏浪
 *** [[https://acyanbird.github.io][山奈]]
 *** [[https://fallenbreath.me][狐狸姐姐!]]
+*** [[https://dsy4567.cf/][dsy4567 的小站]]
 
 ** ZhiHu
 *** [[https://zhuanlan.zhihu.com/p/138719668][用Go语言汇编计算fibonacci数列]]                                :lowlevel:
@@ -375,6 +377,7 @@ inspiration: Veritasium
 - IPC
 **** [[https://youtu.be/Yi6NxMxCFY8][Ok, I made C compiler in PHP]]
 **** [[https://youtu.be/9s8vjf_vLaA][SmoothLife on GPU]]
+**** [[https://youtu.be/iPrltr1b6Q4][I implemented Goto in OCaml]]
 *** [[https://youtu.be/0rJ94rbdteE][Rust 让你感觉像个天才]]
 *** [[https://youtu.be/nfF91Z6fqGk][CMD 登录B站]]
 *** [[https://youtu.be/crnEygp4C6g][Jeff Geerling: FINALLY! A GPU works on the Raspberry Pi!]]
@@ -411,6 +414,7 @@ a good example for my probable feora minimal re-installation
 **** [[https://youtu.be/ltGNxWvZZuM][Resolve is Impossible to Install on Fedora 38]]
 quote: [[https://youtu.be/aWSQQUXmVVs?t=376][this operating system, the operating system we do not speak its name]] (in that video he succesfully installed DaVinci on Rocky)
 0:18 if you start seeing a whole bunch of tesla streams on my channel tomorrow you guys know what happened
+*** [[https://youtu.be/GWYhtksrmhE][how NASA writes space-proof code]]
 
 **  [[https://www.youtube.com/@Computerphile][<C>]]
 *** [[https://youtu.be/BAo5C2qbLq8][Network Time Protocol (NTP)]]
@@ -583,3 +587,5 @@ BSD asm
 ** [[https://github.com/zepouet/Xee-xCode-4.5/blob/master/XeePhotoshopLoader.m#L108][PSD is not my favourite file format]]
 ** [[https://hackway.org/docs/cs/intro][计算机专业学习路线]]
 ** [[https://github.com/torvalds/linux/pull/17][torvalds: I don't do github pull requests]]
+** [[https://cohost.org/blackle/post/42994-div-style-pointer][CSS 的机械装置 (from ruanyifeng 252)]]
+** [[https://oldcompcz.github.io/jgs/][jgs ASCII art]]
