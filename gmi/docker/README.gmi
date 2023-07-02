@@ -12,16 +12,12 @@ alpine linux
 * gmid.conf reload
 
 ## TODO
-CGI script:
-* inform the server to update git
+I want to write CGI script to:
 * check the log
+* upload dynamic file
 
-both need authentication, idea:
-* 6x (CLIENT CERTIFICATE REQUIRED)
-=> gemini://gemini.circumlunar.space/docs/tls-tutorial.gmi doc: TLS
-=> https://adnano.co/2021/03/06/gemini-tls/ TLS recommendations for Gemini
-=> gemini://caseyrichins.online/logs/2023-06-09_gemini-client-certificates.gmi Client Certificates in Gemini
+First I need to get my client cert hash uploaded, so I came up an idea:
+upload a pgp-signed message contains: HOSTNAME:CERTHASH, then use that client cert hash
 
-* GPG in 1x (INPUT)
-client: date -u +%Y%m%dT%H | gpg -as
-server: verify time then signature
+But later I thought it makes my server too complicated.
+I just need a static site server, these are bloated.
