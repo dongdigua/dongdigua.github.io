@@ -50,3 +50,5 @@ undergoes frequent maintenance, PDA?
 => gemini://warmedal.se/~bjorn                                        + bjorn
 => gemini://ploum.net/index_en.gmi                                    + Ploum
 author of offpunk
+=> gemini://gemini.thegonz.net                                        + Things
+=> gemini://cdg.thegonz.net/                                          ++ Collaborative Directory of Geminispace

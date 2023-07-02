@@ -180,7 +180,7 @@ Welcome to the darkest dungeon of kernal
 *** [[https://kernal.eu/posts/linuxfx/][Dumping Linuxfx customers]]                                         :fun:
 A Windows-like distro including the spyware and activation
 ** [[https://vimacs.wehack.space/laptop/][vimacs]]
-Written with Vim and Emacs. A member of Linux Club of Peking University.
+Written with Vim and Emacs. A member of Linux Club of Peking University. [[https://beijinglug.club/wiki/doku.php?id=blug-canary-3][blug]] signer
 with cat-v-like sidebar style
 *** [[https://vimacs.wehack.space/Mail-vs-IM.htm][谈电子邮件和即时通讯]]
 **** [[https://citizenlab.ca/2016/11/wechat-china-censorship-one-app-two-systems/][微信一app两制]]

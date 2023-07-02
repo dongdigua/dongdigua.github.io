@@ -12,12 +12,4 @@ alpine linux
 * gmid.conf reload
 
 ## TODO
-I want to write CGI script to:
-* check the log
-* upload dynamic file
-
-First I need to get my client cert hash uploaded, so I came up an idea:
-upload a pgp-signed message contains: HOSTNAME:CERTHASH, then use that client cert hash
-
-But later I thought it makes my server too complicated.
-I just need a static site server, these are bloated.
+execute as normal user?
