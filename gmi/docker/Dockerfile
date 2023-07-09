@@ -2,7 +2,7 @@ FROM alpine:latest
 
 RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.tuna.tsinghua.edu.cn/g' /etc/apk/repositories \
     && sed -i 'a https://mirrors.tuna.tsinghua.edu.cn/alpine/edge/testing' /etc/apk/repositories \
-    && apk add gmid git python3 perl \
+    && apk add --no-cache gmid git python3 perl \
     && touch /var/log/git.log \
     && echo "0  *  *  *  *  run-parts /etc/periodic/hourly" > /var/spool/cron/crontabs/root
 
