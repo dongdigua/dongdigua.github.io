@@ -156,8 +156,8 @@ funny byte
 
          memmove(pDecoded + i + 1, pDecoded + i,
 #+END_SRC
-*** [[https://xeiaso.net/blog/rip-twitter][Goodbye Twitter, Hello Fediverse!]]
 *** [[https://xeiaso.net/blog/🥺][🥺]]
+*** [[https://xeiaso.net/blog/HVE-BC1750-0001][HVE-BC1750-0001: Deceptive Information Disclosure Vulnerability in Human Interaction Protocols]]
 ** [[https://lantian.pub/][蓝天]]
 大佬!
 *** [[https://lantian.pub/article/chat/how-i-nuked-my-btrfs-partition.lantian/][我把硬盘换到了新电脑上，这是 Btrfs 上的数据发生的变化]]
@@ -306,7 +306,8 @@ EvanMeek / B站: 美味的樱桃菌
 看不懂, 先收藏着
 *** [[https://www.zhihu.com/column/c_1313110231912726528][倔强的程序员]]
 编! 译! 原! 理!
-*** [[https://www.zhihu.com/column/c_185117725][专栏: 技术考古]]                                              :wow:plan9:
+*** [[https://www.zhihu.com/column/c_185117725][技术考古]]                                                    :wow:plan9:
+古老的技术，闪耀的光芒
 **** [[https://web.archive.org/web/20220423091317/https://zhuanlan.zhihu.com/p/502733643][archive: 那些古老又优美的 GUI]]                                  :smth:
 ***** [[https://guidebookgallery.org][GUI Gallery]]
 *** [[https://www.zhihu.com/column/roartalk][专栏: 嘶吼RoarTalk]]                                           :hack:
@@ -589,3 +590,4 @@ BSD asm
 ** [[https://github.com/torvalds/linux/pull/17][torvalds: I don't do github pull requests]]
 ** [[https://cohost.org/blackle/post/42994-div-style-pointer][CSS 的机械装置 (from ruanyifeng 252)]]
 ** [[https://oldcompcz.github.io/jgs/][jgs ASCII art]]
+** TODO [[http://retrobase.cn][retrobase 识旧知新]]

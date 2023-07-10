@@ -3,16 +3,10 @@
 #+DATE: <2023-04-01 六>
 
 * The story
-[[https://github.com/dom-kital][Someone]] in the [[https://cossig.org][COSSIG]] said Slackware is good, so I took a look.
-I noticed in the [[http://www.slackbook.org/html/book.html#VI][book]] that the vi(1) in Slackware is elvis, it is amazing.
-Then this monthly holiday, I installed a Slackware VM. In the installation process,
-I found that the nvi in Slackware supports UTF-8! WTF!
-The nvi in OpenBSD and NixOS don't support UTF-8, why the Slack build have?
-So I looked at the [[https://mirrors.slackware.com/slackware/slackware/source/a/nvi/][source]], +it have 30 patches applied on nvi-1.81.6+ it is configured with =--enable-widechar=
-So I wanted to add a UTF-8 nvi in my nur, so I copied the NixOS build script,
-and found it has patches from a fedora repo!
-Then I checked that [[https://src.fedoraproject.org/rpms/nvi][repo]], it have the exact same patch series as Slackware,
-BUTT orphaned since f33...
+nvi installed on fedora using =nix-env= can't dieplay widechar, but fedora native build can.
+And the nix build is using patches from f33 repo, so I want to bring nvi back to Fedora.
+(2023.7) I tried hours to figure out how to build nvi that can display widechar using nix, but failed each time.
+It's actually because nix uses C locale by default ([[./usenet_and_cli_browsers.org][mentioned with offpunk]]).
 
 * Why retired, nvi is a good software, isn't it?
 The reason why it is orphaned and retired is "Failed to build from source".

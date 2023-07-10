@@ -52,3 +52,4 @@ undergoes frequent maintenance, PDA?
 author of offpunk
 => gemini://gemini.thegonz.net                                        + Things
 => gemini://cdg.thegonz.net/                                          ++ Collaborative Directory of Geminispace
+=> gopher://bitreich.org/                                             + bitreich
