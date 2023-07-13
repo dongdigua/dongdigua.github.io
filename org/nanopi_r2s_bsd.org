@@ -4,14 +4,14 @@
 曾经有两个树莓派, Pi3 因为碰水, Zero 因为腐蚀, 都报废了
 
 我想在 R2S 上运行 BSD, 因为:
-1) it's cool, 2) [[https://feng.si/posts/2019/06/freebsd-and-risc-v-the-future-of-open-source-iot-ecosystem/][diff FreeBSD Linux | grep IoT]]
+1) it's cool 2) base system 足够, 只需要安装少量包 3) 简洁, 适合小设备
 
 * 艰辛的历程
 - 带上手套防止腐蚀, 用螺丝刀和弯头镊子 (文具盒里随手使用) 撬开外壳
 - 缝合了一个 OpenBSD 镜像, 用 Arduino Uno 当串口连接 UART, 输出毫无意义的字符
 - 运行 OpwnWRT, 依旧输出垃圾
 - 运行 Armbian, 依旧输出垃圾, 弹了一会琴后开始思考是不是串口出错了
-- 翻箱倒柜找到一个 USB Mini-B 线用于 Arduino Nano (山寨版 CH340 芯片)
+- 翻箱倒柜找到一个 USB Mini-B 线用于 山寨版 Arduino Nano (CH340 芯片)
 - 重新烧写 OpenBSD 镜像, 成功启动, 但键盘无法输入, 无法安装
 - 缝合 FreeBSD 镜像, 成功启动, ssh 登录 (user/passwd:freebsd), 耶!
 - 合上外壳
@@ -45,11 +45,13 @@ hostname freebsd-r2s
 vi /etc/rc.conf
 #+END_SRC
 - 改 shell 配置, [[https://github.com/dongdigua/configs/blob/main/.profile.in][基本还是之前那样]]
+- HZ? 在 Linux 上降低 HZ 是能减少能耗的, 但这里至少温度没降, 先改成 250 吧
 
 * 第一个服务: gopher
 #+BEGIN_SRC sh
 su
-pkg add gophernicus
+# freecolor 用于 https://github.com/dongdigua/dongdigua.github.io/blob/main/gmi/docker/cgi/stat.cgi
+pkg add gophernicus freecolor
 vi /etc/inetd.conf
 echo 'inetd_enable="YES"' >> /etc/rc.conf
 mkdir /var/gopher
@@ -59,19 +61,102 @@ chmod 775 /var/gopher
 service inetd onestart
 #+END_SRC
 
-* TODO frpc daemon
+* frpc daemon
 frp 这完意好啊, 但是 [[https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=1030841][Debian 搁置了挺长时间]]也没加入
-
 我作为 RHEL7 入坑 Linux 的用户, 没有体验过 systemd 之前的服务管理, 这里可以体验一把.
-(关于 systemd 有个不错的视频: [[https://www.bilibili.com/video/BV1oo4y1x7Nw][【人肉精翻】systemd的悲剧]] [[https://youtu.be/o_AIw9bGogo][YouTube]])
-=/usr/local/etc/rc.d/frpc=:
-#+BEGIN_SRC sh
-#+END_SRC
-
+本来以为还得学 rc 脚本, 结果把同目录的 frps 改改就行了
 别忘了把 gophernicus 的 host 和 port 改成远程主机的
 
-* TODO git 服务器
+** SSH 命根子
+有时想加一个端口转发, 然后一 restart, SSH 也断了, 所以应该把 SSH 转发分开来单独一个服务
 
+* git 服务器
+本来想弄个 ssh git 和 cgit, 但仔细考虑感觉没有啥用, 我的 repo 都托管在我朋友的服务器上.
+又想弄个 sourcehut, 但真的太麻烦了.
+那不如弄个 gitea, 测试一下一些奇怪的功能, 再做一份镜像.
+很重要的一点: =HTTP_ADDR= 应设置成 0.0.0.0
+
+这种比较大的服务可以放在 jail 里, 参考 Absolute FreeBSD
+
+* TODO microbin
+FreeBSD 还没更新 2.0 的 [[https://microbin.eu/docs/installation-and-configuration/configuration/#microbin_data_dir][MICROBIN_DATA_DIR]], 等更新再弄吧.
+暂时就手动启动
+
+* Gemini
+曾经我的 Gemini 是用 Docker 跑在朋友的服务器上, 但是一出问题调试很费劲.
+现在有个稳定的服务器, 就可以本地跑, 省去许多麻烦.
+
+依旧使用 jail
+#+BEGIN_SRC sh
+su
+pkg -j gemini install gmid git # python39 and perl5 are included in git
+jexec -U root gemini git clone https://github.com/dongdigua/dongdigua.github.io.git --depth 1 /dongdigua.github.io
+jexec -U root gemini sh
+#+END_SRC
+then run in sh:
+#+BEGIN_SRC sh
+cd /dongdigua.github.io
+git config --global filter.dater.smudge 'perl -pe "\$last_date = `git log --pretty=format:\\"%ad\\" -1`;s/\\\$Date\\\$/\\\$Date: \$last_date\\\$/"'
+git config --global filter.dater.clean 'perl -pe "s/\\\$Date[^\\\$]*\\\$/\\\$Date\\\$/"'
+openssl req -x509 -newkey rsa:4096 -nodes             \
+        -out /usr/local/etc/ssl/gmid/localhost.crt      \
+        -keyout /usr/local/etc/ssl/gmid/localhost.key   \
+        -subj "/CN=localhost"
+
+openssl req -x509 -newkey rsa:4096 -nodes             \
+        -out /usr/local/etc/ssl/gmid/example.com.crt      \
+        -keyout /usr/local/etc/ssl/gmid/example.com.key   \
+        -subj "/CN=example.com"
+
+# disable save-entropy and adjkerntz
+vi /etc/crontab
+#+END_SRC
+
+=/usr/local/etc/gmid.conf=:
+#+BEGIN_SRC conf
+user "_gmid"
+
+server "freebsd-r2s" {
+        root "/dongdigua.github.io"
+        cert "/usr/local/etc/ssl/gmid/localhost.crt"
+        key  "/usr/local/etc/ssl/gmid/localhost.key"
+
+        cgi "/cgi/*"
+        default type "text/plain"
+}
+
+server "example.com" {
+        root "/dongdigua.github.io"
+        cert "/usr/local/etc/ssl/gmid/example.com.crt"
+        key  "/usr/local/etc/ssl/gmid/example.com.key"
+
+        cgi "/cgi/*"
+        default type "text/plain"
+}
+#+END_SRC
+
+=/etc/rc.conf=:
+#+BEGIN_SRC conf
+gmid_enable="YES"
+cron_enable="YES"
+sendmail_submit_enable="NO"
+sendmail_outbound_enable="NO"
+sendmail_msp_queue_enable="NO"
+#+END_SRC
+
+=/etc/periodic/daily/update-git=:
+#+BEGIN_SRC sh
+#! /bin/sh
+
+cd /dongdigua.github.io
+git pull --rebase
+python misc/mdlist2gmi.py > posts.gmi
+cp -r gmi/docker/cgi .
+rm index.gmi
+git checkout -- index.gmi
+#+END_SRC
 
 * Ref
+- [[https://feng.si/posts/2019/06/freebsd-and-risc-v-the-future-of-open-source-iot-ecosystem/][FreeBSD 与 RISC-V: 开源物联网生态系统的未来]]
 - [[https://hauweele.net/~gawen/blog/?p=2662][FreeBSD on NanoPi R2S]] 提到网络有时会卡住, 我也遇到了
+- 关于 systemd 有个不错的视频: [[https://www.bilibili.com/video/BV1oo4y1x7Nw][【人肉精翻】systemd的悲剧]] [[https://youtu.be/o_AIw9bGogo][YouTube]]

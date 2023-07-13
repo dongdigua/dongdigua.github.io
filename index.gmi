@@ -16,6 +16,7 @@
 => posts.gmi post index
 => gmi/collections.gmi smolweb collections
 => pgp sec>  ed25519/DB55889E730F5B41
+=> cgi/stat.cgi server status
 => https://dongdigua.github.io https site mirror
 
 
