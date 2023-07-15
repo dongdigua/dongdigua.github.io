@@ -1,6 +1,10 @@
 #+TITLE: 一次大备份
 #+DATE: <2023-01-08 日>
 
+我的数据安全之前一直不能得到保障.
+家里人没有好的备份习惯, 所有数据都放在一个盘上, 也没有清晰的命名规则.
+我必须自立自强, 将所有数据进行备份!
+
 * My GREAT server board!
 #+BEGIN_EXAMPLE
 CPU: 6-core Intel Xeon E5645

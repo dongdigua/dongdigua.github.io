@@ -1,0 +1,109 @@
+#+TITLE: 个人历史
+#+TAGS: git(g) blog(b) video(v)
+
+突然发现时间过的好快, 我有必要记录一下我的历史了, 至少是在技术方面
+
+* 2023 暑假
+
+* 2023 春
+** Fedora                                                             :blog:
+** PGP                                                                :blog:
+
+* 2022-2023 寒假
+** [[./backup_everything.org][NAS]]                                                                :blog:
+用我之前自己装的电脑做了个 Samba 服务器, 用于备份
+** 与 shenjack, Zn_Ar 创建 VAS 1.12.2 服务器
+我当了一周多物理服主, 就跑在我的 NAS 上, 后来过年回家就把服务器交给别人托管
+** [[./whatif_openbsd.org][实验 OpenBSD]]                                                       :blog:
+
+* 2022 秋
+** /Pro Git/
+** [[https://github.com/dongdigua/configs/tree/main/kernel][定制 Linux Kernel]]                                                   :git:
+
+* 2022 春, 暑假
+** 2022.5 创建博客                                                :git:blog:
+** 2022.5 学习 Rust
+世人都说 Rust 好
+** 2022.7 玩具解释器 AxolotlVM                                         :git:
+是我写过最大的一个项目
+** 2022.8 [[https://github.com/dongdigua/configs/commit/c548f441344313f8b74f2e2bc00003a16677765a][切换到 Sway 窗口管理器]]                                       :git:
+
+* 2021-2022 寒假
+** 2022.2 加入 exercism.org 学习 elixir
+elixir 是至今我学的最扎实的语言了
+** 2022.2 加入 土豆(外), FAS, PPP 服务器                             :video:
+新年礼物是 MC 正版账号, 终于能加入服务器了, 之前单人档太孤独了.
+认识了许多 MC "圈子" 的人
+** 学会使用魔法
+开启新世界, 从此获取信息基本无阻碍
+
+* 2021 秋
+** MC 1.17.1 单人档                                                  :video:
+** 《函数式编程入门: 使用 elixir》和《Elixir 程序设计》
+
+* 2021 春, 暑假
+** 开始玩 MC
+MC 给了我一个逃避的地方
+** 2021.6 鹦鹉
+** 买笔记本电脑
+Lenovo V15 G2 82KB
+终于有自己的还算像样的笔记本电脑了, 自己装的电脑可以退休了
+** /Structure and Interpretation of Computer Programs/
+
+* 2020-2021 寒假
+** 组装自己的电脑
+花了大概 1000 多, 组装了一个能用的电脑
+#+BEGIN_EXAMPLE
+CPU: 6-core Intel Xeon E5645
+Mem: 8GiB
+Graphics:
+  Device-1: AMD Juniper PRO [Radeon HD 6750] driver: radeon v: kernel
+  tty: 80x21 resolution: 1366x768
+BIOS: ami
+机箱: 纸壳
+#+END_EXAMPLE
+当时是用于个人桌面, 装了个 Manjaro, 实验了很多桌面环境和软件包 (导致系统极其臃肿)
+** 《笨方法学 Python》
+** 尝试 Julia 语言
+** 尝试 Colemak 键位
+确实能使我打字更省力, 但是使我几乎完全丧失了在正常电脑上打字的能力, 所以后来放弃了
+** 2021.2 创建 GitHub 账号
+** 2021.2 第一次成功安装 Gentoo (当然是虚拟机)
+
+* 2020 秋
+** 了解加密货币
+** 挖矿 XMR
+
+* 2020 暑假
+** 树莓派 (Zero, 3B)
+** 多次安装 Linux 发行版
+先是在家里那个零几年的老笔记本上尝试, 之后在家里的一体机上作死
+一次次的尝试给我积累了很多经验
+** 虚拟机尝试各种 Linux 发行版
+哈哈, 单位的电脑可比家里一体机的性能强多了, 我用虚拟机至少尝试了 10 个发行版
+
+* 2020 春 (网课 mostly)
+** 各种电路
+** Arduino
+上网课偷摸编一些小东西, 但是硬件还不够, 只弄了简单的显示屏
+** Arduino -> 树莓派 -> Linux
+从 Arduino 相关信息了解到更强大的树莓派及其操作系统 Linux
+** 《Linux 就该这么学》 (version: el7)
+这本书使我对 Linux 有了大体的了解, 网课期间只能用 WSL 稍微实践
+
+* 2019-2020 寒假
+这个寒假很长, 在别人都在偷摸卷的时候我在玩
+** 各种电路
+** 玩高压电                                                          :video:
+寒假刚开始和同学在家
+ZVS+电视机变压器, 特斯拉线圈
+** 求师得: 总结先前做过的电路                                        :video:
+** 从 GreatScott 了解到 Arduino
+但是由于疫情, 迟迟邮不到, 就只能码上谈兵
+
+* 2019 秋
+** 少许电路
+第一个功放
+
+* 2019 春
+** 科技节
