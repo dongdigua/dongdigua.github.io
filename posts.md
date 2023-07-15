@@ -1,6 +1,6 @@
 ## Table of Contents
 ### Posts (sorted by time)
-- [2023-07-10 : 在 NanoPi R2S 上运行 FreeBSD/OpenBSD](nanopi_r2s_bsd)<br>
+- [2023-07-10 : 在 NanoPi R2S 上运行 FreeBSD/OpenBSD](nanopi_freebsd)<br>
 - [2023-06-08 : Org: Disable Gnus Loading when Org is Loaded](gmi/org_load_gnus_disable.gmi.txt)<br>
 - [2023-06-07 : Org Preserve Source Bock Highlighting when Exporting Non-Interactively](org_export_highlight)<br>
 - [2023-05-21 : Usenet 新闻组 和 命令行浏览器选择 (w3m, lynx, links, elpher, offpunk)](usenet_and_cli_browsers)<br>

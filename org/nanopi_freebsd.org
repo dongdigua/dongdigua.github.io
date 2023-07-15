@@ -78,7 +78,28 @@ frp 这完意好啊, 但是 [[https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=
 
 这种比较大的服务可以放在 jail 里, 参考 Absolute FreeBSD
 
+* jail(8)
+通用 jail 设置:
+** 主机
+=/etc/jail.conf=
+#+BEGIN_SRC conf
+exec.clean;
+exec.start="sh /etc/rc";
+exec.stop="sh /etc/rc.shutdown";
+mount.devfs;
+#+END_SRC
+
+** in-jail
+=/etc/crontab= 取消 save-entropy 和 adjkerntz
+=/etc/rc.conf= 进程越少越好, 似乎我不需要 sendmail
+#+BEGIN_SRC conf
+sendmail_submit_enable="NO"
+sendmail_outbound_enable="NO"
+sendmail_msp_queue_enable="NO"
+#+END_SRC
+
 * TODO microbin
+足够 micro, 不需要 jail
 FreeBSD 还没更新 2.0 的 [[https://microbin.eu/docs/installation-and-configuration/configuration/#microbin_data_dir][MICROBIN_DATA_DIR]], 等更新再弄吧.
 暂时就手动启动
 
@@ -135,15 +156,6 @@ server "example.com" {
 }
 #+END_SRC
 
-=/etc/rc.conf=:
-#+BEGIN_SRC conf
-gmid_enable="YES"
-cron_enable="YES"
-sendmail_submit_enable="NO"
-sendmail_outbound_enable="NO"
-sendmail_msp_queue_enable="NO"
-#+END_SRC
-
 =/etc/periodic/daily/update-git=:
 #+BEGIN_SRC sh
 #! /bin/sh
@@ -156,7 +168,16 @@ rm index.gmi
 git checkout -- index.gmi
 #+END_SRC
 
+* pf
+我唯一能控制机器的方式就是 SSH, 使用 pf 可能会有危险.
+反正服务器是在内网, 只有少数服务通过转发暴露出去.
+
+* ipfs
+*提示: =ipfs= 在 FreeBSD 上叫 =ipfs-go=, 不要和已有的程序搞混了*
+今天我发现 Z Library 开始把书放在 IPFS 上了, 我就想起来要不自己架设个节点.
+
 * Ref
 - [[https://feng.si/posts/2019/06/freebsd-and-risc-v-the-future-of-open-source-iot-ecosystem/][FreeBSD 与 RISC-V: 开源物联网生态系统的未来]]
+- [[https://lists.freebsd.org/archives/freebsd-arm/2021-June/000149.html][freebsd-arm: FriendlyARM NanoPi R2S board support.]]
 - [[https://hauweele.net/~gawen/blog/?p=2662][FreeBSD on NanoPi R2S]] 提到网络有时会卡住, 我也遇到了
 - 关于 systemd 有个不错的视频: [[https://www.bilibili.com/video/BV1oo4y1x7Nw][【人肉精翻】systemd的悲剧]] [[https://youtu.be/o_AIw9bGogo][YouTube]]
