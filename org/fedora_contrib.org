@@ -2,6 +2,8 @@
 #+DESCRIPTION: I love this distro
 #+DATE: <2023-04-01 六>
 
+(2023.7) I don't quite like RedHat now, although I started from it. So I'm leaving...
+
 * The story
 nvi installed on fedora using =nix-env= can't dieplay widechar, but fedora native build can.
 And the nix build is using patches from f33 repo, so I want to bring nvi back to Fedora.

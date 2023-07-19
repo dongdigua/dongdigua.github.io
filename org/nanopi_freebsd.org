@@ -1,4 +1,4 @@
-#+TITLE: 在 NanoPi R2S 上运行 FreeBSD/OpenBSD
+#+TITLE: 在 NanoPi R2S 上运行 FreeBSD
 #+DATE: <2023-07-10 一>
 
 曾经有两个树莓派, Pi3 因为碰水, Zero 因为腐蚀, 都报废了
@@ -45,7 +45,12 @@ hostname freebsd-r2s
 vi /etc/rc.conf
 #+END_SRC
 - 改 shell 配置, [[https://github.com/dongdigua/configs/blob/main/.profile.in][基本还是之前那样]]
-- HZ? 在 Linux 上降低 HZ 是能减少能耗的, 但这里至少温度没降, 先改成 250 吧
+在 fortune 里看到一个不错的 PS1, 弄个新 PS1 换换口味
+#+BEGIN_SRC sh
+PS1='(\[$(tput md)\]\t <\w>\[$(tput me)\]) $(echo $?) \[\033[01;31m\]\[\033[00m\] '
+#+END_SRC
+- HZ? 在 Linux 上降低 HZ 是能减少能耗的, 但这里至少温度没降, 先改成 250 吧 =/boot/loader.conf=
+- 降 CPU 频率是当然能减少能耗的 =/etc/sysctl.conf=
 
 * 第一个服务: gopher
 #+BEGIN_SRC sh
@@ -98,10 +103,9 @@ sendmail_outbound_enable="NO"
 sendmail_msp_queue_enable="NO"
 #+END_SRC
 
-* TODO microbin
+* microbin
 足够 micro, 不需要 jail
-FreeBSD 还没更新 2.0 的 [[https://microbin.eu/docs/installation-and-configuration/configuration/#microbin_data_dir][MICROBIN_DATA_DIR]], 等更新再弄吧.
-暂时就手动启动
+终于[[https://cgit.freebsd.org/ports/commit/?id=3083ea7074cf7d5dce8ad64ea6779e824c28bde0][更新 2.0]] 了, 虽然没到 quarterly, 但可以 =pkg add <url>= 安装
 
 * Gemini
 曾经我的 Gemini 是用 Docker 跑在朋友的服务器上, 但是一出问题调试很费劲.
@@ -172,12 +176,60 @@ git checkout -- index.gmi
 我唯一能控制机器的方式就是 SSH, 使用 pf 可能会有危险.
 反正服务器是在内网, 只有少数服务通过转发暴露出去.
 
-* ipfs
-*提示: =ipfs= 在 FreeBSD 上叫 =ipfs-go=, 不要和已有的程序搞混了*
-今天我发现 Z Library 开始把书放在 IPFS 上了, 我就想起来要不自己架设个节点.
+* samba
+弄着个电子垃圾 64G U盘, 想架个 Samba
+要安好多软件包, 果断开 jail
+=security = share= 在 4.x 版本被移除了, 注意下
+samba 分为 smbd, nmbd, winbindd.
+我只用 smbd, 但是跑起来发现光是 smbd 就占用了 1G 的 25%, 15%, 15%, 太耗资源了.
+
+所以这使我必须得用 port 精简功能了.
+然后解压 ports tree 的时候死机了, 拔电然后文件系统坏了...
+
+还是 NFS 吧, 反正我又不用 Windows.
+至于权限, -mapall=freebsd 就行
+
+* LED
+:PROPERTIES:
+:CUSTOM_ID: led
+:END:
+死机这一教训使我意识到必须得有一个不用网络的方式观察服务器状态, 正常 LED 是常亮的, 但死机也亮着.
+先写一个 blink, 就像 Arduino 入门那样.
+
+...太无趣了, 不是吗. 我看 led(4) 的时候发现 morse(6) 有意思, 于是就写了一个用摩斯码打印温度和内存的 rc
+#+BEGIN_SRC sh
+#!/bin/sh
+
+# PROVIDE: blink
+# KEYWORD: shutdown
+
+. /etc/rc.subr
+
+name=blink
+rcvar=blink_enable
+blink_enable=${blink_enable:-"NO"}
+
+start_cmd="${name}_start &"
+stop_cmd="morse -l sos > /dev/led/nanopi-r2s\:red\:sys"
+
+blink_start() {
+while true
+do
+        echo 0 > /dev/led/nanopi-r2s\:red\:sys
+        tm="$(sysctl -n hw.temperature.CPU | cut -c 1-2) $(($(sysctl -n vm.stats.vm.v_free_count) * $(sysctl -n hw.pagesize) / 1048576))"
+        morse -l $tm > /dev/led/nanopi-r2s\:red\:sys
+        sleep 60
+done
+}
+
+load_rc_config $name
+run_rc_command "$1"
+#+END_SRC
+
 
 * Ref
 - [[https://feng.si/posts/2019/06/freebsd-and-risc-v-the-future-of-open-source-iot-ecosystem/][FreeBSD 与 RISC-V: 开源物联网生态系统的未来]]
 - [[https://lists.freebsd.org/archives/freebsd-arm/2021-June/000149.html][freebsd-arm: FriendlyARM NanoPi R2S board support.]]
 - [[https://hauweele.net/~gawen/blog/?p=2662][FreeBSD on NanoPi R2S]] 提到网络有时会卡住, 我也遇到了
 - 关于 systemd 有个不错的视频: [[https://www.bilibili.com/video/BV1oo4y1x7Nw][【人肉精翻】systemd的悲剧]] [[https://youtu.be/o_AIw9bGogo][YouTube]]
+- [[https://docs.freebsd.org/en/articles/rc-scripting/][Practical rc.d scripting in BSD]]

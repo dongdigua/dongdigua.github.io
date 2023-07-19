@@ -338,3 +338,4 @@ iwx0 at pci0 dev 20 function 3 "Intel Wi-Fi 6 AX201" rev 0x20, msix
 - [[https://videos.lukesmith.xyz/w/ion4TuavEAqKRWeavWTCBe][LukeSmith video: Email on the terminal with mutt]]
 - [[https://youtu.be/o8aiSJ2nXcc][OpenBSD Guy: ffmpeg screencast]]
 - [[https://videos.pair2jeux.tube/a/solene][solene's video]]
+- [[https://undeadly.org/cgi?action=article;sid=20230711113344][Wayland on OpenBSD]]
