@@ -1,13 +1,13 @@
 #+TITLE: 个人历史
 #+TAGS: git(g) blog(b) video(v)
 
-突然发现时间过的好快, 我有必要记录一下我的历史了, 至少是在技术方面
-
 * 2023 暑假
 
 * 2023 春
-** Fedora                                                             :blog:
+** Fedora 打包                                                        :blog:
+** [[https://github.com/dongdigua/nur-pkg][Nix 打包]]                                                            :git:
 ** PGP                                                                :blog:
+** 《应用密码学》
 
 * 2022-2023 寒假
 ** [[./backup_everything.org][NAS]]                                                                :blog:
@@ -21,10 +21,11 @@
 ** [[https://github.com/dongdigua/configs/tree/main/kernel][定制 Linux Kernel]]                                                   :git:
 
 * 2022 春, 暑假
-** 2022.5 创建博客                                                :git:blog:
+** 2022.4 [[https://github.com/dongdigua/a_docker_site][尝试 Docker]]                                                  :git:
+** 2022.5 创建博客 dongdigua.github.io                            :git:blog:
 ** 2022.5 学习 Rust
 世人都说 Rust 好
-** 2022.7 玩具解释器 AxolotlVM                                         :git:
+** 2022.7 [[https://github.com/dongdigua/AxolotlVM][玩具解释器 AxolotlVM]]                                         :git:
 是我写过最大的一个项目
 ** 2022.8 [[https://github.com/dongdigua/configs/commit/c548f441344313f8b74f2e2bc00003a16677765a][切换到 Sway 窗口管理器]]                                       :git:
 
@@ -38,7 +39,7 @@ elixir 是至今我学的最扎实的语言了
 开启新世界, 从此获取信息基本无阻碍
 
 * 2021 秋
-** MC 1.17.1 单人档                                                  :video:
+** [[https://www.bilibili.com/video/BV1G34y1E7HW][MC 1.17.1 单人档]]                                                  :video:
 ** 《函数式编程入门: 使用 elixir》和《Elixir 程序设计》
 
 * 2021 春, 暑假
@@ -73,6 +74,7 @@ BIOS: ami
 * 2020 秋
 ** 了解加密货币
 ** 挖矿 XMR
+先是在树莓派上, 后来... 总之很疯狂
 
 * 2020 暑假
 ** 树莓派 (Zero, 3B)
@@ -94,7 +96,7 @@ BIOS: ami
 * 2019-2020 寒假
 这个寒假很长, 在别人都在偷摸卷的时候我在玩
 ** 各种电路
-** 玩高压电                                                          :video:
+** [[https://www.bilibili.com/video/BV1HJ411V7LP][玩高压电]]                                                          :video:
 寒假刚开始和同学在家
 ZVS+电视机变压器, 特斯拉线圈
 ** 求师得: 总结先前做过的电路                                        :video:
