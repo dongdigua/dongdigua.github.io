@@ -5,5 +5,4 @@ printf "Domain: $SERVER_NAME\r\n"
 printf "Server: $SERVER_SOFTWARE\r\n"
 printf "OS: $(uname -or)\r\n"
 printf "Up: $(uptime)\r\n"
-printf "\n"
-printf "$(free -h)\r\n"
+sh stat.cgi.local || :

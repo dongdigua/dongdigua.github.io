@@ -70,6 +70,11 @@ service inetd onestart
 frp 这完意好啊, 但是 [[https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=1030841][Debian 搁置了挺长时间]]也没加入
 我作为 RHEL7 入坑 Linux 的用户, 没有体验过 systemd 之前的服务管理, 这里可以体验一把.
 本来以为还得学 rc 脚本, 结果把同目录的 frps 改改就行了
+#+BEGIN_SRC sh
+cd /usr/local/etc/rc.d
+cp frps frpc
+sed -i '' 's/frps/frpc/g' frpc
+#+END_SRC
 别忘了把 gophernicus 的 host 和 port 改成远程主机的
 
 ** SSH 命根子
@@ -132,9 +137,6 @@ openssl req -x509 -newkey rsa:4096 -nodes             \
         -out /usr/local/etc/ssl/gmid/example.com.crt      \
         -keyout /usr/local/etc/ssl/gmid/example.com.key   \
         -subj "/CN=example.com"
-
-# disable save-entropy and adjkerntz
-vi /etc/crontab
 #+END_SRC
 
 =/usr/local/etc/gmid.conf=:
@@ -166,7 +168,7 @@ server "example.com" {
 
 cd /dongdigua.github.io
 git pull --rebase
-python misc/mdlist2gmi.py > posts.gmi
+python3.9 misc/mdlist2gmi.py > posts.gmi
 cp -r gmi/docker/cgi .
 rm index.gmi
 git checkout -- index.gmi
