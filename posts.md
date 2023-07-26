@@ -1,5 +1,6 @@
 ## Table of Contents
 ### Posts (sorted by time)
+- [2023-07-25 : Run a Lua Demo](lua_demo)<br>
 - [2023-07-10 : 在 NanoPi R2S 上运行 FreeBSD](nanopi_freebsd)<br>
 - [2023-06-08 : Org: Disable Gnus Loading when Org is Loaded](gmi/org_load_gnus_disable.gmi.txt)<br>
 - [2023-06-07 : Org Preserve Source Bock Highlighting when Exporting Non-Interactively](org_export_highlight)<br>

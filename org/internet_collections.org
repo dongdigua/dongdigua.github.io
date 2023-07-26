@@ -159,6 +159,9 @@ funny byte
 *** [[https://xeiaso.net/blog/🥺][🥺]]
 *** [[https://xeiaso.net/blog/HVE-BC1750-0001][HVE-BC1750-0001: Deceptive Information Disclosure Vulnerability in Human Interaction Protocols]]
 ** [[https://lantian.pub/][蓝天]]
+:PROPERTIES:
+:CUSTOM_ID: lantian
+:END:
 大佬!
 *** [[https://lantian.pub/article/chat/how-i-nuked-my-btrfs-partition.lantian/][我把硬盘换到了新电脑上，这是 Btrfs 上的数据发生的变化]]
 [[https://lantian.pub/usr/uploads/202112/chubbyemu.jpg.thumb.png]]
@@ -591,3 +594,4 @@ BSD asm
 ** [[https://cohost.org/blackle/post/42994-div-style-pointer][CSS 的机械装置 (from ruanyifeng 252)]]
 ** [[https://oldcompcz.github.io/jgs/][jgs ASCII art]]
 ** TODO [[http://retrobase.cn][retrobase 识旧知新]]
+** [[https://www.zzzuckerberg.com][Legal Lullabies]]

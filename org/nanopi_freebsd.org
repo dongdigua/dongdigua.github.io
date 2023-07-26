@@ -188,7 +188,7 @@ samba 分为 smbd, nmbd, winbindd.
 所以这使我必须得用 port 精简功能了.
 然后解压 ports tree 的时候死机了, 拔电然后文件系统坏了...
 
-还是 NFS 吧, 反正我又不用 Windows.
+还是 NFS 吧, Need For Speed, 反正我又不用 Windows.
 至于权限, -mapall=freebsd 就行
 
 * LED
@@ -227,6 +227,16 @@ done
 load_rc_config $name
 run_rc_command "$1"
 #+END_SRC
+
+* obhttpd
+OpenBSD 的软件向来很棒!
+httpd 其实算是一个比较年轻的软件, [[https://www.openbsd.org/papers/httpd-asiabsdcon2015.pdf][这里]]有关于为什么 OpenBSD 要自己做一个 Web Server 的历史
+重载配置:
+#+BEGIN_SRC sh
+sudo pkill -HUP obhttpd
+#+END_SRC
+
+(slowcgi 很重要的一点: 如果用 chroot 也需要把运行时等一切文件都放在里面)
 
 
 * Ref

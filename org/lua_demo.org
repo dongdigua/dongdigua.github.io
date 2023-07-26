@@ -1,0 +1,67 @@
+#+TITLE: Run a Lua Demo
+#+DATE: <2023-07-25 二>
+#+OPTIONS: \n:nil
+
+Lua is everywhere.
+Neovim uses lua, Vis uses lua; when I visited [[./internet_collections.org::#lantian][Lantian]]'s website[fn:1], it's running [[https://openresty.org/][OpenResty]];
+when I'm [[https://bookfere.com/post/970.html][jailbreaking]] Kindle, it uses a lua script and [[https://github.com/koreader/koreader][Koreader]] uses lua.
+
+So I want to learn a little lua, just enough to handle daily tasks.
+
+I visited lua.org and found the [[https://www.lua.org/cgi-bin/demo][demo]]. The idea of knowing how it works immediately came to my mind.
+By searching on DDG[fn:2] I fount it have a hidden demo program called demo,
+it's just the script for running demo (talk about that later why I'm sure about it).
+
+I copied it and added the essential html in the print block,
+put it on the server, use [[https://man.openbsd.org/slowcgi.8][slowcgi(8)]] to serve it with [[https://man.openbsd.org/httpd.8][httpd(8)]].
+Then I got "No such file or directory".
+I carefully checked the path and permission, but the error still exists
+
+Finally StackOverflow taught me that the execution environment should also
+be located in the chroot environment. For security, chroot is needed.
+Well, just [[https://blog.syndcat.com/?p=181][statically]] link lua[fn:3].
+#+BEGIN_SRC makefile
+MYLDFLAGS= -static
+#+END_SRC
+
+It runs well, but the =-- continue HTML began in shell script= line
+indicates it's not the only file in the CGI application.
+I found the rest of them at [[https://web.tecgraf.puc-rio.br/~lhf/ftp/lua/#demo]] from [[http://lua-users.org/lists/lua-l/][lua-l]] mailing list.
+
+It contains 3 files
+#+BEGIN_EXAMPLE
+        demo            the CGI script
+        demo.html       the HTML page
+        demo.lua        the Lua program that runs user programs
+#+END_EXAMPLE
+The shell script takes =QUERY_STRING= and replace textarea with =$QUERY_STRING.lua=.
+So demo?demo just prints the demo.lua itself in the same directory.
+
+I thought my single-file solution is better because it don't need to fork twice and perform file IO,
+and it can be even better.
+
+I added resource limit according to [[https://www.lua.org/pil/][PIL]] chapter 25 "SandBoxing"
+#+BEGIN_SRC lua
+local steplimit = 100
+local memlimit  = 100
+
+local count = 0
+local function step ()
+	count = count + 1
+	if collectgarbage("count") > memlimit then
+		error("DoSer uses too much memory")
+	end
+	if count > steplimit then
+		error("DoSer uses too much CPU")
+	end
+end
+
+debug.sethook(step, "", 100)
+#+END_SRC
+
+source code: https://github.com/dongdigua/demo.lua
+
+* Footnotes
+[fn:1] I found his page all empty so I sent him an email, he quickly fixed it.
+[fn:2] DuckDuckGo, not DongDiGua
+[fn:3] If =make freebsd= don't work, try =make generic=

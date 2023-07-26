@@ -52,10 +52,10 @@ yes, deprecated, so I need to change it in my packages
 ** [[https://lwn.net/Articles/912202][LWN: Packaging Rust for Fedora]]
 not mail, but interesting
 
-* Review Request I'm interested in
-It will be good if I can review for them...
+* BZs I'm interested in
 ** [[https://bugzilla.redhat.com/show_bug.cgi?id=2183700][Review Request: nim - A statically typed compiled systems programming language]]
 ** [[https://bugzilla.redhat.com/show_bug.cgi?id=2192986][Review Request: hyprland - Dynamic tiling Wayland compositor that doesn't sacrifice on its looks]]
+** [[https://bugzilla.redhat.com/show_bug.cgi?id=2152222][Update vis editor to 0.8]]
 
 * Footnotes
 [fn:1] [[https://acyanbird.github.io/2022/10/15/向EPEL请求新的包][向EPEL请求新的包(群主写的)]]

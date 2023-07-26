@@ -22,6 +22,7 @@
 ** [[https://github.com/dongdigua/configs/tree/main/kernel][定制 Linux Kernel]]                                                   :git:
 
 * 2022 春, 暑假
+** 2022.4 开始使用 emacs
 ** 2022.4 [[https://github.com/dongdigua/a_docker_site][尝试 Docker]]                                                  :git:
 ** 2022.5 创建博客 dongdigua.github.io                            :git:blog:
 ** 2022.5 学习 Rust
