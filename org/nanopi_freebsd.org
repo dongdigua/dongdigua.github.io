@@ -218,8 +218,7 @@ blink_start() {
 while true
 do
         echo 0 > /dev/led/nanopi-r2s\:red\:sys
-        tm="$(sysctl -n hw.temperature.CPU | cut -c 1-2) $(($(sysctl -n vm.stats.vm.v_free_count) * $(sysctl -n hw.pagesize) / 1048576))"
-        morse -l $tm > /dev/led/nanopi-r2s\:red\:sys
+        morse -l "$(sysctl -n hw.temperature.CPU | cut -c 1-2)" > /dev/led/nanopi-r2s\:red\:sys
         sleep 60
 done
 }
@@ -237,6 +236,13 @@ sudo pkill -HUP obhttpd
 #+END_SRC
 
 (slowcgi 很重要的一点: 如果用 chroot 也需要把运行时等一切文件都放在里面)
+
+* [[https://www.mediawiki.org/wiki/Manual:Running_MediaWiki_on_FreeBSD][MediaWiki]]?
+don't
+如果你不想被嵌入式设备糟糕的性能浪费一上午的时间最后得到加载时间大于10秒的网页, 放弃吧...
+有足够性能的服务器还可以编译带 SQLite 支持的 port
+
+我想使用 MediaWiki 主要想尝试 MinecraftWiki [[https://minecraft.fandom.com/wiki/Module:Schematic][Schematic Module]]
 
 
 * Ref

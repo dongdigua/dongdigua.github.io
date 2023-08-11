@@ -4,7 +4,8 @@
 
 Lua is everywhere.
 Neovim uses lua, Vis uses lua; when I visited [[./internet_collections.org::#lantian][Lantian]]'s website[fn:1], it's running [[https://openresty.org/][OpenResty]];
-when I'm [[https://bookfere.com/post/970.html][jailbreaking]] Kindle, it uses a lua script and [[https://github.com/koreader/koreader][Koreader]] uses lua.
+when I'm [[https://bookfere.com/post/970.html][jailbreaking]] Kindle, it uses a lua script and [[https://github.com/koreader/koreader][Koreader]] uses lua;
+[[https://www.huijiwiki.com/wiki/帮助:模块][MediaWiki Modules]] are powered by lua.
 
 So I want to learn a little lua, just enough to handle daily tasks.
 
@@ -60,6 +61,15 @@ debug.sethook(step, "", 100)
 #+END_SRC
 
 source code: https://github.com/dongdigua/demo.lua
+
+
+Tsoding made a stream yesterday [[https://www.twitch.tv/videos/1879677165][twitch: New Apartment]] trying to compile lua to wasm using clang.
+He failed, and said "Lua is not a real language, it's a toy language." The stream is really fun, though.
+I found some solution:
+- [[https://github.com/vvanders/wasm_lua][wasm_lua]]
+- [[https://github.com/daurnimator/lua.vm.js][lua.vm.js]]
+- [[https://fengari.io][Fengari]]
+
 
 * Footnotes
 [fn:1] I found his page all empty so I sent him an email, he quickly fixed it.

@@ -42,9 +42,11 @@ You can always find something magical on the Internet.
 *** [[https://mako.cc/writing/hill-free_tools.html][Free Software Needs Free Tools]]
 *** [[https://magcius.github.io/xplain/article/][explain X window system]]
 *** [[https://ifaceless.github.io/2019/10/30/linux-kernel-dev-notes/][Linux Kernel Development 学习与总结]]
+*** [[https://blog.qartis.com/decoding-small-qr-codes-by-hand/][Decoding small QR codes by hand]]
 
 ** [[http://www.paulgraham.com/todo.html][Paul Graham]]
 ** [[http://www.qiusir.com/][qiusir]]                                                            :rssub:
+*** [[http://www.qiusir.com/wp-content/plugins/download-monitor/download.php?id=The+Better+Butterfly+Theorems+.pdf][TheBetterButterflyTheorems]]
 ** [[http://xahlee.info][XahLee]]
 ** [[http://www.catb.org/esr/][Eric S. Raymond]]
 ** [[http://www.yinwang.org][当然我在扯淡]]
@@ -278,6 +280,7 @@ finger m@f.xosc.org
 *** [[https://tylercipriani.com/blog/2022/11/19/git-notes-gits-coolest-most-unloved-feature/][Git Notes: git's coolest, most unloved­ feature]]
 It's so cool, especially for testing and reviewing.(from [[https://www.ruanyifeng.com/blog/2023/02/weekly-issue-241.html][ruanyifeng 241]])
 ** [[https://akarin.dev][✨小透明・宸✨ 存在感消失的地方|ω•`)]]
+** [[https://nichi.co][Nick Cao (#archlinux-cn matrix)]]
 
 
 ** B/HWS/fri3nds
@@ -382,6 +385,7 @@ inspiration: Veritasium
 **** [[https://youtu.be/Yi6NxMxCFY8][Ok, I made C compiler in PHP]]
 **** [[https://youtu.be/9s8vjf_vLaA][SmoothLife on GPU]]
 **** [[https://youtu.be/iPrltr1b6Q4][I implemented Goto in OCaml]]
+**** [[https://youtu.be/PgDqBZFir1A][Weird Parts of C you probably never heard of: Hot loading, X macro]]
 *** [[https://youtu.be/0rJ94rbdteE][Rust 让你感觉像个天才]]
 *** [[https://youtu.be/nfF91Z6fqGk][CMD 登录B站]]
 *** [[https://youtu.be/crnEygp4C6g][Jeff Geerling: FINALLY! A GPU works on the Raspberry Pi!]]
@@ -507,6 +511,7 @@ When I was trying to download this video, I found that youtube-dl was broken!
 *** [[https://www.reddit.com/r/unixporn/comments/wkba0x/jwm_if_i_had_a_pda/][pocket pc]]
 *** [[https://www.reddit.com/r/unixporn/comments/b83fex/win7_my_first_rice/][win7 :)]]
 *** [[https://www.reddit.com/r/unixporn/comments/wtvj46/kde_cherry_blossoms/][[KDE] Cherry Blossoms]]
+*** [[https://www.reddit.com/r/unixporn/comments/ujjok6/chalkboard_btw_i_use_fedora_3/][[chalkboard] Btw i use fedora <3]]
 ** [[https://www.reddit.com/r/ProgrammerHumor][ProgrammerHumor]]
 *** [[https://www.reddit.com/r/ProgrammerHumor/comments/wpnvtg/microsoft_visual_rust_2018/][Microsoft Visual Rust]]
 *** [[https://www.reddit.com/r/ProgrammerHumor/comments/wsw78u/regex_be_like/][MC enchant: regex be like...]]

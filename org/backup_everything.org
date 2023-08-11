@@ -29,7 +29,7 @@ ps 看进程不到一页
 - vsftpd =500 OOPS child died= 解决不了
 
 * Fedora ♥️
-所以我转回熟悉的 Fedora Server 了, 开箱即用, 安全 (SELinux), 稳定 
+所以我转回熟悉的 Fedora Server 了, 开箱即用, 安全 (SELinux), 稳定
 这些对于服务器来说是很重要的
 
 至于 GUI 环境, 根本不用, tty 多美妙!
@@ -37,6 +37,9 @@ ps 看进程不到一页
 
 Cockpit 有一处翻译有点搞笑
 [[../images/usage_cockpit.png]]
+
+* I use Arch btw
+2023.8 厌倦了 Fedora, 切换到 Arch Linux, 没错我很疯狂
 
 * FTP? no
 刚开始我想用 ftp, 因为 linux 下用的熟悉
@@ -96,27 +99,26 @@ unzip:  cannot find zipfile directory in one of foo.zip or
 
 * Backup /home
 家目录也得备份啦, 当前系统最重要的数据都在那.
-当然先要排除一些垃圾或备份到其他地方的东西:
-#+BEGIN_SRC shell
-( .-.)
-[~]── ─ cat rsync-exclude 
+选项参考[[https://blog.lilydjwg.me/2013/12/29/rsync-btrfs-dm-crypt-full-backup.42219.html][依云的博客]]
+#+BEGIN_SRC
+rsync -aAXxvh --numeric-ids --info=progress2 --exclude-from=rsync-exclude /home/digua DEST
+#+END_SRC
+忽略掉一些不用的目录
+#+BEGIN_EXAMPLE
 minecraft
-git
 VirtualBox VMs
+qemu
 chroot
 rpmbuild
 kernel
+tmp
 .cache
-.var
 .cargo
 .rustup
-[~]── ─ rsync -avh --info=progress2 --exclude-from=rsync-exclude /home/digua DEST
-#+END_SRC
-
-对于 git 目录比较特殊, 使用 CVS 忽略模式, 但保留每个 =.git= 目录:
-#+BEGIN_SRC shell
-rsync -avhC --include .git --exclude target /home/digua/git DEST
-#+END_SRC
+.emacs.d/eln-cache
+.emacs.d/emacs
+.local/share/docker
+#+END_EXAMPLE
 
 * Change drive
 我之前的那个 WD 金盘噪音和振动有点大, 我整个桌子都能感受到,
