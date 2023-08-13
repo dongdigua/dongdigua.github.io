@@ -227,15 +227,17 @@ load_rc_config $name
 run_rc_command "$1"
 #+END_SRC
 
-* obhttpd
-OpenBSD 的软件向来很棒!
+* obhttpd?
 httpd 其实算是一个比较年轻的软件, [[https://www.openbsd.org/papers/httpd-asiabsdcon2015.pdf][这里]]有关于为什么 OpenBSD 要自己做一个 Web Server 的历史
 重载配置:
 #+BEGIN_SRC sh
 sudo pkill -HUP obhttpd
 #+END_SRC
 
-(slowcgi 很重要的一点: 如果用 chroot 也需要把运行时等一切文件都放在里面)
+当我弄 [[https://bluemap.bluecolored.de/wiki/webserver/ExternalWebserversFile.html][BlueMap]] 的时候, 发现只有 gzip 压缩文件的时间比原文件新的时候才会加上 =Content-Encoding: gzip=
+但是, BlueMap 这种东西只有 .gz 文件, 所以就 404, httpd 也没有手动加 header 的方式.
+
+=nginx, 启动!=
 
 * [[https://www.mediawiki.org/wiki/Manual:Running_MediaWiki_on_FreeBSD][MediaWiki]]?
 don't

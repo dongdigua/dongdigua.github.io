@@ -1,5 +1,6 @@
 ## Table of Contents
 ### Posts (sorted by time)
+- [2023-08-11 : MC 知识体系构建的思考](tmc_archive)<br>
 - [2023-07-25 : Run a Lua Demo](lua_demo)<br>
 - [2023-07-10 : 在 NanoPi R2S 上运行 FreeBSD](nanopi_freebsd)<br>
 - [2023-06-08 : Org: Disable Gnus Loading when Org is Loaded](gmi/org_load_gnus_disable.gmi.txt)<br>
