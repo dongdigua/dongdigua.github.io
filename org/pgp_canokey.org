@@ -175,6 +175,11 @@ age 能用 SSH 密钥, 很棒.
 首先加密很容易, 就是从公钥中抽出密码学的部分, 然后就和一般的 ed25519 一样了.
 解密就费劲了...
 
+* 2FA
+[[https://github.blog/2023-03-09-raising-the-bar-for-software-security-github-2fa-begins-march-13/][github 弄 2FA 了]]
+我试图用 canokey 做 oath, 还是只有 ckman 能用. yubico authenticator Linux 版无法使用 custom reader, chrome 能用 web console.
+使用 FIDO 需要设置 PIN, 但是 ckman 无法设置, 文档建议用 Windows Hello, 行.
+这些验证方式都好方便啊! 希望在未来互些技术能普及到更多人, 也希望各平台能更加统一.
 
 * 缝合曾经的主密钥
 :PROPERTIES:
@@ -259,18 +264,6 @@ RSA > ED25519 > secp256k1 = DSA2048 > DSA1024
 >5l   3l+       2.5l+       2.5l+     2l+
 #+END_EXAMPLE
 (secp256k1 是比特币的算法) (1024位的显然[[https://lists.debian.org/debian-devel-announce/2010/09/msg00003.html][不应该使用]])
-
-其实 OpenBSD [[https://isopenbsdsecu.re/mitigations/signify/][signify]] 更短, 但是人家没有 uid wot 等身份的东西, 只是签名/验证一个{{{ruby(文件,artifact)}}}.
-btw, [[https://www.openbsd.org/papers/bsdcan-signify.html][signify 论文]] 里提到的 FreeBSD Security Officer 的 600 行的公钥我看了下(--show-keys), 好家伙, 整整 150 个签名!
-#+BEGIN_EXAMPLE
-pub   dsa1024 2002-08-27 [SCA] [expired: 2014-01-01]
-      C3740FC569A6FBB14AEDB13115D68804CA6CDFB2
-uid           [ expired] FreeBSD Security Officer <security-officer@FreeBSD.org>
-
-pub   rsa4096 2013-09-24 [SC] [expired: 2018-01-01]
-      1CF7FF6FADF5CA9FBE1B8CB2ED67ECD65DCF6AE7
-uid           [ expired] FreeBSD Security Officer <security-officer@FreeBSD.org>
-#+END_EXAMPLE
 
 
 * Outro

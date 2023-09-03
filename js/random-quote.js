@@ -46,6 +46,7 @@ var data = [
     "<a id=quote href=https://www.bilibili.com/video/BV1Ho4y1b7E8>不是你把你那破代码发到 GitHub, 你就是开源软件开发者, 你那个最多叫<b>网络垃圾制造者</b></a>",
     "I'm using Linux. A library that emacs uses to communicate with Intel hardware.",
     "TERRAIN, TERRAIN, PULL UP... dongdigua experienced kinetic energy",
+    "Minecraft 1.1⑨.84 The Chat Report Update"
 ];
 
 var index = Math.floor((Math.random() * data.length));

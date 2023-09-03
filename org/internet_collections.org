@@ -382,7 +382,6 @@ inspiration: Veritasium
 - allocate memory
 - rw files
 - IPC
-**** [[https://youtu.be/Yi6NxMxCFY8][Ok, I made C compiler in PHP]]
 **** [[https://youtu.be/9s8vjf_vLaA][SmoothLife on GPU]]
 **** [[https://youtu.be/iPrltr1b6Q4][I implemented Goto in OCaml]]
 **** [[https://youtu.be/PgDqBZFir1A][Weird Parts of C you probably never heard of: Hot loading, X macro]]
@@ -423,6 +422,23 @@ a good example for my probable feora minimal re-installation
 quote: [[https://youtu.be/aWSQQUXmVVs?t=376][this operating system, the operating system we do not speak its name]] (in that video he succesfully installed DaVinci on Rocky)
 0:18 if you start seeing a whole bunch of tesla streams on my channel tomorrow you guys know what happened
 *** [[https://youtu.be/GWYhtksrmhE][how NASA writes space-proof code]]
+*** [[https://youtu.be/dsHyUgGMht0][How GitHub's Database Self-Destructed in 43 Seconds]]
+#+BEGIN_EXAMPLE
+Come back in 2047 when BitBucket's
+lunar data center failure causes extreme latency
+as the terrestrial hardware was incapable of
+communicating with the Martian data center
+without the extra hop at the Moon causing the
+fail-safe mechanism to launch the backup lunar proxy
+which had its calculation incorrectly
+done using inches instead of centimeters so
+it veered off course into the primary us-east
+data center which caused a new primary to be
+promoted on Mars exacerbating the latency
+of services running on Earth and eventually
+bringing down BitBucket entirely as it could not
+handle writing through this interplanetary loop.
+#+END_EXAMPLE
 
 **  [[https://www.youtube.com/@Computerphile][<C>]]
 *** [[https://youtu.be/BAo5C2qbLq8][Network Time Protocol (NTP)]]
@@ -445,6 +461,7 @@ quote: [[https://youtu.be/aWSQQUXmVVs?t=376][this operating system, the operatin
 **** [[https://youtu.be/MS7WRuzNYDc][is leaking your IP really dangerous]]
 **** [[https://youtu.be/oJ6t7AImTdE][CSS Keylogger - old is new again]]
 **** [[https://youtu.be/Sv5OLj2nVAQ][Attacking LLM - Prompt Injection]]
+**** [[https://youtu.be/neWc0H1k2Lc][The Discovery of Zenbleed (CVE-2023-20593)]]
 *** [[https://youtu.be/2--1ph-4IaY][shit express hacked]]
 *** [[https://www.youtube.com/playlist?list=PL5--8gKSku15NSeLgrZX9hSEnqPTWoSJ0][DT: Privacy & Security]]
 *** [[https://youtu.be/QxNsyrftJ8I][Chris Titus Tech: The Biggest Linux Security Mistakes]]
@@ -469,6 +486,7 @@ even caught by police when he was a child
 *** [[https://youtu.be/VKydXD6Lr20][Mojang & Minecraft 开始衰落了吗?]]
 *** [[https://youtu.be/Y9DIIh0s9cg][SciCraft Update Plans]]
 *** [[https://youtu.be/m5S0gLgg2rs][Tantan: MC + Fez]]
+*** [[https://youtu.be/_swcgay0zW8?si=VOizq1akWJa0X-Rr][ilmango's intro Baila mi cumbia (Minecraft note block cover)]]
 
 ** ?
 *** [[https://www.youtube.com/c/IceGuye][IceGuye aka 姑射冰尘]]

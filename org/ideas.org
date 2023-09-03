@@ -39,3 +39,4 @@ to fight against those exam website
 * refactor .emacs using org-mode literate programming and file structure
 * webzine
 * 完美随身听
+* start wayland WM/DE in systemd-nspawn

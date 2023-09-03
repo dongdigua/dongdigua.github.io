@@ -113,7 +113,7 @@ https://github.com/rgb-24bit/org-html-theme-list org-joshua
     a {
         cursor: crosshair;
         text-decoration: none; 
-        color: #3399cc;
+        color: #08c;            /* FROM Arch */
     }
     a:hover {
         text-decoration: underline; 
