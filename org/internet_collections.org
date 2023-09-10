@@ -562,8 +562,6 @@ from emacs-china, about multi-thread
 :PROPERTIES:
 :CUSTOM_ID: misc
 :END:
-#+BEGIN_COMMENT
-#+END_COMMENT
 ** [[http://cat-v.org/][cat -v]]
 not only harmful stuff <3
 ** [[https://piaogewala.ga/][这可太刑了]]

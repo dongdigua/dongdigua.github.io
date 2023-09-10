@@ -108,6 +108,11 @@ sendmail_outbound_enable="NO"
 sendmail_msp_queue_enable="NO"
 #+END_SRC
 
+** rm: Operation not permitted
+#+BEGIN_SRC sh
+chflags -R noschg file/folder
+#+END_SRC
+
 * microbin
 足够 micro, 不需要 jail
 终于[[https://cgit.freebsd.org/ports/commit/?id=3083ea7074cf7d5dce8ad64ea6779e824c28bde0][更新 2.0]] 了, 虽然没到 quarterly, 但可以 =pkg add <url>= 安装
@@ -237,7 +242,7 @@ sudo pkill -HUP obhttpd
 当我弄 [[https://bluemap.bluecolored.de/wiki/webserver/ExternalWebserversFile.html][BlueMap]] 的时候, 发现只有 gzip 压缩文件的时间比原文件新的时候才会加上 =Content-Encoding: gzip=
 但是, BlueMap 这种东西只有 .gz 文件, 所以就 404, httpd 也没有手动加 header 的方式.
 
-=nginx, 启动!=
+*nginx, 启动!*
 
 * [[https://www.mediawiki.org/wiki/Manual:Running_MediaWiki_on_FreeBSD][MediaWiki]]?
 don't
@@ -246,6 +251,66 @@ don't
 
 我想使用 MediaWiki 主要想尝试 MinecraftWiki [[https://minecraft.fandom.com/wiki/Module:Schematic][Schematic Module]]
 
+* Avahi
+慢
+
+* nginx
+由于默认的 nginx autoindex 太难看, 我想用 [[https://github.com/aperezdc/ngx-fancyindex][fancyindex]] 但是默认安装里又没带.
+反正得自己编译, 那不如用 ports 编译一个.
+其实 apache 的 autoindex 挺好, 还带 icon, 但是 apache 的配置我真的受不了.
+之前有一次用 portsnap(8) 解包 ports 结果崩了, 这回用 git, 没事.
+
+默认的 fancyindex 颜色有点丑, 写个 patch 改一下 (能 inline 就不加 CSS)
+根本不用看 doc, 直接凭直觉照猫画虎, 先在 =Makefile.extmod= 里面加上
+#+BEGIN_SRC makefile
+HTTP_FANCYINDEX_EXTRA_PATCHES=  ${PATCHDIR}/extra-patch-nginx-http-fancyindex-css
+#+END_SRC
+颜色基本上是 aur.archlinux.org, Arch Blue 是[[https://bbs.archlinux.org/viewtopic.php?id=110936][这个帖子]], #39c5bb 懂的都懂.
+#+BEGIN_CENTER
+archlinux.org      #08c
+wiki.archlinux.org #0077bb
+bbs.archlinux.org  #07b
+aur.archlinux.org  #07b
+#+END_CENTER
+#+BEGIN_SRC diff
+--- ../ngx-fancyindex-0.5.2/template.h.orig     2021-10-28 19:28:07.000000000 +0000
++++ ../ngx-fancyindex-0.5.2/template.h  2023-08-30 11:36:48.142878000 +0000
+@@ -9,9 +9,8 @@
+ "body,html {"
+ "background:#fff;"
+-"font-family:\"Bitstream Vera Sans\",\"Lucida Grande\","
+-"\"Lucida Sans Unicode\",Lucidux,Verdana,Lucida,sans-serif;"
++"font-family:monospace;" 
+ "}"
+ "tr:nth-child(even) {"
+-"background:#f4f4f4;"
++"background:#e4eeff;"
+ "}"
+ "th,td {"
+@@ -21,5 +20,5 @@
+ "text-align:left;"
+ "font-weight:bold;"
+-"background:#eee;"
++"background:#ecf2f5;"
+ "border-bottom:1px solid #aaa;"
+ "}"
+@@ -29,8 +28,9 @@
+ "}"
+ "a {"
+-"color:#a33;"
+-"}"
+-"a:hover {"
+-"color:#e33;"
++"text-decoration:none;"
++"color:#1793d1;"
++"}" 
++"a:hover {" 
++"color:#39c5bb;"
+ "}"
+ "</style>"
+#+END_SRC
+
+我甚至还可以把 IPv6, SSL, MAIL, STREAM 的功能通通去掉, 因为我的环境用不到.
 
 * Ref
 - [[https://feng.si/posts/2019/06/freebsd-and-risc-v-the-future-of-open-source-iot-ecosystem/][FreeBSD 与 RISC-V: 开源物联网生态系统的未来]]
