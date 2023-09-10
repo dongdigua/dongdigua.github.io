@@ -36,6 +36,7 @@ any kind of contribution is welcome
 ---
 
 ### Long Term Update
+- [study4fun archives](study4fun)<br>
 - [Gopher/Gemini reactions](gmi/re.gmi.txt)<br>
 - [Gopher/Gemini collections, a quiet web](gmi/collections.gmi.txt)<br>
 - [Random Ideas](ideas)<br>
