@@ -39,4 +39,7 @@ to fight against those exam website
 * refactor .emacs using org-mode literate programming and file structure
 * webzine
 * 完美随身听
+- 转盘输入
+- 能作为 TOTP 生成器
+- 能播放 bad apple
 * start wayland WM/DE in systemd-nspawn

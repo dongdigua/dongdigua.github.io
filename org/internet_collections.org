@@ -281,6 +281,8 @@ finger m@f.xosc.org
 It's so cool, especially for testing and reviewing.(from [[https://www.ruanyifeng.com/blog/2023/02/weekly-issue-241.html][ruanyifeng 241]])
 ** [[https://akarin.dev][✨小透明・宸✨ 存在感消失的地方|ω•`)]]
 ** [[https://nichi.co][Nick Cao (#archlinux-cn matrix)]]
+** TODO [[http://akkartik.name/][Kartik Agaram]]
+*** [[http://akkartik.name/post/literate-programming][Literate programming: Knuth is doing it wrong]]
 
 
 ** B/HWS/fri3nds
@@ -385,6 +387,7 @@ inspiration: Veritasium
 **** [[https://youtu.be/9s8vjf_vLaA][SmoothLife on GPU]]
 **** [[https://youtu.be/iPrltr1b6Q4][I implemented Goto in OCaml]]
 **** [[https://youtu.be/PgDqBZFir1A][Weird Parts of C you probably never heard of: Hot loading, X macro]]
+**** [[https://youtu.be/b-q4QBy52AA][Web in Native Assembly (Linux x86_64)]]
 *** [[https://youtu.be/0rJ94rbdteE][Rust 让你感觉像个天才]]
 *** [[https://youtu.be/nfF91Z6fqGk][CMD 登录B站]]
 *** [[https://youtu.be/crnEygp4C6g][Jeff Geerling: FINALLY! A GPU works on the Raspberry Pi!]]
@@ -439,6 +442,7 @@ of services running on Earth and eventually
 bringing down BitBucket entirely as it could not
 handle writing through this interplanetary loop.
 #+END_EXAMPLE
+*** [[https://youtu.be/Kn0MxHlima0][My4TH - A discrete CPU Forth computer]]
 
 **  [[https://www.youtube.com/@Computerphile][<C>]]
 *** [[https://youtu.be/BAo5C2qbLq8][Network Time Protocol (NTP)]]
@@ -519,6 +523,10 @@ to filing patently fraudulent DMCA counter-notifications to avoid the terminatio
 yes
 *** [[https://youtu.be/n9YDz-Iwgyw][Reclaim your freedom with free libre software now - Richard Stallman of Free Software Movement]]
 When I was trying to download this video, I found that youtube-dl was broken!
+*** [[https://youtu.be/UDE4NxawbCs][Nostalgic Minecraft Music with Cool Instruments]]
+*** [[https://youtu.be/48AOOynnmqU][What Happened To Google Search?]]
+[[https://news.ycombinator.com/item?id=30347719][Hacker News: Google Search Is Dying]]
+*** [[https://youtu.be/k2C4lbbIH0c][How Raspberry Pis are made (Factory Tour)]]
 
 * r
 :PROPERTIES:
@@ -555,8 +563,7 @@ Huwawei NB!
 ** [[https://lore.kernel.org/lkml/63efd7ab.170a0220.3442b.6609@mx.google.com/][Linus: If you cannot explain a merge, then JUST DON'T DO IT]]
 ** [[https://lists.gnu.org/archive/html/emacs-devel/2023-01/msg00425.html][Re: Consideration for Rust contributions in Emacs]]
 from emacs-china, about multi-thread
-** [[https://lore.kernel.org/all/20230314103316.313e5f61@kernel.org/][We don't feel comfortable accepting patches from or relating to hardware produced by your organization]]
-** [[https://bugzilla.redhat.com/show_bug.cgi?id=2208553][xfs metadata corruption after upgrade to 6.3.3 kernel]]
+** [[https://lists.opensuse.org/archives/list/factory@lists.opensuse.org/thread/KJMMAZFTP2MPKWKFZCYUROZFJ44BNVB5/][Leap Replacement - Results from recent contributor survey]]
 
 * Other
 :PROPERTIES:
@@ -616,3 +623,5 @@ BSD asm
 ** [[https://oldcompcz.github.io/jgs/][jgs ASCII art]]
 ** TODO [[http://retrobase.cn][retrobase 识旧知新]]
 ** [[https://www.zzzuckerberg.com][Legal Lullabies]]
+** [[https://11-90-an.github.io/rseditor][rseditor]]
+** [[https://floooh.github.io/visualz80remix/][Visual Z80 Remix]]

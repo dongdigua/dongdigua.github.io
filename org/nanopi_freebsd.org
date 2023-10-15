@@ -312,9 +312,66 @@ aur.archlinux.org  #07b
 
 我甚至还可以把 IPv6, SSL, MAIL, STREAM 的功能通通去掉, 因为我的环境用不到.
 
+* ZFS?
+之前我只是在唯一的U口上插了一个 32G U盘, 但随着我在服务器上放的东西越来越多并越来越依赖它,
+我开始对数据安全担忧: 万一哪天整个U盘坏了呢? 而且这似乎正在发生着, 我已经看到这样的报错了:
+#+BEGIN_EXAMPLE
+(da1:umass-sim1:1:0:0): CAM status: CCB request completed with an error
+(da1:umass-sim1:1:0:0): Retrying command, 1 more tries remain
+#+END_EXAMPLE
+所以我考虑用 ZFS 组个 RAIDz, 这样 3 块 32G U盘可以得到接近 64G 的空间并且允许一个U盘坏掉.
+创建存储池等基本操作请看 [[https://docs.freebsd.org/en/books/handbook/zfs/][Chapter 22. The Z File System (ZFS)]]
+弄完我就开心地睡觉了, 后台把之前U盘的东西 =rsync= 过来, 寻思这么先进的文件系统不会出什么问题吧, 即使有也能自我修复.
+第二天一早醒来, DEGRADED, 一个盘掉了, 查看 dmesg, 又是大量的报错:
+#+BEGIN_EXAMPLE
+(da1:umass-sim1:1:0:0): Retrying command, 0 more tries remain
+(da1:umass-sim1:1:0:0): SYNCHRONIZE CACHE(10). CDB: 35 00 00 00 00 00 00 00 00 00 
+(da1:umass-sim1:1:0:0): CAM status: CCB request completed with an error
+(da1:umass-sim1:1:0:0): Error 5, Retries exhausted
+(da1:umass-sim1:1:0:0): got CAM status 0x44
+(da1:umass-sim1:1:0:0): fatal error, failed to attach to device
+da1 at umass-sim1 bus 1 scbus1 target 0 lun 0
+da1: <Netac OnlyDisk 2.00>  s/n 8355111095836336751 detached
+(da1:umass-sim1:1:0:0): Periph destroyed
+#+END_EXAMPLE
+嘶~ 不应该呀, 新买的盘. 拔掉尝试修复以及几次重启和重新创建阵列后, 还是过一段时间三个盘中就会有 1~2 个坏的.
+因为之前的盘一直没坏, 所以可以排除 USB 集线器的问题, 所以问题就出在 *朗科京东自营旗舰店* 上买的这仨盘.
+上 #archlinux-cn-offtopic 问一圈:
+#+BEGIN_EXAMPLE
+18:27 <digua> 各位, 朗科京东自营旗舰店 的U盘质量怎么样啊, 我买了 3 个, 组 ZFS 坏了俩
+...
+18:28 <nichi_bot> [啥玩意啊 咋回事啊 那咋整啊 大佬帮帮忙啊] > <@matterbridge:nichi.co> [digua] 各位, 朗科京东自营旗舰店 的U盘质量怎么样啊, 我买了 3 个, 组 ZFS 坏了俩
+18:28 <nichi_bot> [啥玩意啊 咋回事啊 那咋整啊 大佬帮帮忙啊] 。。。。。
+18:28 <nichi_bot> [gauge] u 盘还要 zfs 嘛
+18:28 <nichi_bot> [啥玩意啊 咋回事啊 那咋整啊 大佬帮帮忙啊] 你不知道 U 盘用的是最次最次的颗粒吗
+18:29 <nichi_bot> [啥玩意啊 咋回事啊 那咋整啊 大佬帮帮忙啊] 起夜级挑剩下来的给消费级 nvme 挑剩下来的给 sata 硬盘挑剩下来的给 U 盘
+18:29 <digua> gauge, 用在软路由上(
+18:30 <nichi_bot> [啥玩意啊 咋回事啊 那咋整啊 大佬帮帮忙啊] ？你软路由还 zfs
+18:30 <nichi_bot> [Kimiblock Moe] U 盘不就拿来刷 archiso 嘛
+18:30 <nichi_bot> [Kimiblock Moe] 除此以外还有啥用啊
+18:30 <nichi_bot> [啥玩意啊 咋回事啊 那咋整啊 大佬帮帮忙啊] 我以为 j1900 跑 esxi 和 pve 已经够离谱了
+18:31 <digua> 弄着玩呀
+18:31 <HoroBot> 🍋🙈🐰🙊🍈🌝
+18:31 <nichi_bot> [啥玩意啊 咋回事啊 那咋整啊 大佬帮帮忙啊] 你真要弄的话 建议搞点硬盘盒然后插 nvme
+...
+18:34 <nichi_bot> [Jack Smith] > <@matterbridge:nichi.co> [digua] 各位, 朗科京东自营旗舰店 的U盘质量怎么样啊, 我买了 3 个, 组 ZFS 坏了俩
+18:34 <nichi_bot> [Jack Smith] u盘不可靠🤣
+...
+18:34 <nichi_bot> [Jack Smith] > <啥玩意啊 咋回事啊 那咋整啊 大佬帮帮忙啊> ？你软路由还 zfs
+18:34 <nichi_bot> [Jack Smith] 我tf卡btrfs🙈
+#+END_EXAMPLE
+ZFS 这个技术很棒, 但得等我弄到靠谱的盘...
+
+又买了两个海康威视星云固态盘, 只买两个是因为我感觉小处理器可能计算校验和会有压力.
+这回速度可以, 3MB/s
+
+大量 IO 任务还是会阻塞, 可以用 =nq= 排个队列.
+
+
 * Ref
 - [[https://feng.si/posts/2019/06/freebsd-and-risc-v-the-future-of-open-source-iot-ecosystem/][FreeBSD 与 RISC-V: 开源物联网生态系统的未来]]
 - [[https://lists.freebsd.org/archives/freebsd-arm/2021-June/000149.html][freebsd-arm: FriendlyARM NanoPi R2S board support.]]
 - [[https://hauweele.net/~gawen/blog/?p=2662][FreeBSD on NanoPi R2S]] 提到网络有时会卡住, 我也遇到了
 - 关于 systemd 有个不错的视频: [[https://www.bilibili.com/video/BV1oo4y1x7Nw][【人肉精翻】systemd的悲剧]] [[https://youtu.be/o_AIw9bGogo][YouTube]]
 - [[https://docs.freebsd.org/en/articles/rc-scripting/][Practical rc.d scripting in BSD]]
+- [[https://szclsya.me/zh-cn/posts/storage/zfs-setup/][ZFS 入门指北：规划与创建存储池]]
