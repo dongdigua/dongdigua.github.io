@@ -43,6 +43,7 @@ You can always find something magical on the Internet.
 *** [[https://magcius.github.io/xplain/article/][explain X window system]]
 *** [[https://ifaceless.github.io/2019/10/30/linux-kernel-dev-notes/][Linux Kernel Development 学习与总结]]
 *** [[https://blog.qartis.com/decoding-small-qr-codes-by-hand/][Decoding small QR codes by hand]]
+*** [[https://blog.trailofbits.com/2019/07/02/state/][State of the Art Proof-of-Work: RandomX]]
 
 ** [[http://www.paulgraham.com/todo.html][Paul Graham]]
 ** [[http://www.qiusir.com/][qiusir]]                                                            :rssub:
@@ -283,6 +284,7 @@ It's so cool, especially for testing and reviewing.(from [[https://www.ruanyifen
 ** [[https://nichi.co][Nick Cao (#archlinux-cn matrix)]]
 ** TODO [[http://akkartik.name/][Kartik Agaram]]
 *** [[http://akkartik.name/post/literate-programming][Literate programming: Knuth is doing it wrong]]
+** TODO [[https://seh.dev][seh.dev]]
 
 
 ** B/HWS/fri3nds
@@ -491,6 +493,7 @@ even caught by police when he was a child
 *** [[https://youtu.be/Y9DIIh0s9cg][SciCraft Update Plans]]
 *** [[https://youtu.be/m5S0gLgg2rs][Tantan: MC + Fez]]
 *** [[https://youtu.be/_swcgay0zW8?si=VOizq1akWJa0X-Rr][ilmango's intro Baila mi cumbia (Minecraft note block cover)]]
+*** [[https://youtu.be/Mz2RotrHHk4][Minecraft Beaten in 0:00.050 Using Log4j Exploit]]
 
 ** ?
 *** [[https://www.youtube.com/c/IceGuye][IceGuye aka 姑射冰尘]]

@@ -41,5 +41,6 @@ to fight against those exam website
 * 完美随身听
 - 转盘输入
 - 能作为 TOTP 生成器
+https://github.com/Devnol/pico-2fa-token
 - 能播放 bad apple
 * start wayland WM/DE in systemd-nspawn
