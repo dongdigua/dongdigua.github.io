@@ -1,0 +1,29 @@
+#+TITLE: 消失的 emacs dunnet 教程
+#+DATE： <2023-12-29 五>
+
+大概一年多之前, 我玩 dunnet 时搜到了这个 [[https://www.luogu.com.cn/blog/ivystorm/emacs-adventuredunnet-tong-guan-jiao-cheng][emacs - adventure/dunnet 通关教程 - Ivystorm 的博客 - 洛谷博客]].
+这是中文互联网少有的认真写的 dunnet 攻略, 我最欣赏的是那张手绘的地图, 在我能搜到的互联网上, 他是唯一一个.
+但是今天一看, 文章没了, [[https://archive.org][archive.org]] 和 [[https://archive.today][archive.today]] 也没有存档. 还好我当时把地图下下来了, 但放谷歌上也搜不到来源.
+我想, 为了更多人能了解, 我把这张图分享出来吧:
+[[../images/dunnet.png]]
+#+BEGIN_EXAMPLE
+eda0ca4b2ccc1247f66e55a703cb2168606d76926772e4c009991fcc235e9ef3  dunnet.png
+#+END_EXAMPLE
+联系不上原作者, 如果您看到了, 能不能把您的文章恢复?
+
+研究过程中, 我还发现了一些比较有用的资源放在这:
+- [[http://www.driver-aces.com/dunhints.html][official hints]]
+  其实看这个就够了, 比第三方的解释得清楚多了, it's org mode btw
+- [[http://coolwanglu.github.io/dunnet.js][dunnet.js]]
+  可以自动跑, 邮件列表消息: [[https://lists.gnu.org/archive/html/help-gnu-emacs/2015-05/msg00254.html][Dunnet on the Web]]
+- [[https://gist.github.com/kiedtl/06f728a414a7804826c378b214bf7726][gist: [Dunnet Guide] A guide for those who struggle with the game Dunnet on Emacs.]]
+  后半段解释的不清楚, 直接放的指令
+- [[https://github.com/tx/dunnet-map][tx/dunnet-map]]
+  只有最开始的岔路口
+
+终于在这个游戏 40 岁的尾巴通关了.
+
+最后, 说一下我的一个想法:
+收藏夹里的东西经常 404, 很多人 (比如我) 没有存档网站的意识, 普通浏览器也不像 [[./usenet_and_cli_browsers.org][offpunk]] 那样有离线功能, 比较小众的网页没了就没了, 没地方找存档去.
+有些人会存档这些网站, 但是怎么联系上是个问题. 如果做一个互联网资源存档交易(悬赏)网站, 让找不到资源的人有地方问, 有资源的人也有动力拿出手中的资源.
+当然会存在伪造的现象, 不过一般来说会对浏览过的网页有个印象吧.

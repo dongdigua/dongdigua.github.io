@@ -1,0 +1,1865 @@
+multicolored rock and are quite beautiful.
+>e
+N/S/W Junction
+You are at the junction of two passages. One goes north/south, and
+the other goes west.
+>n
+North end of cave passage
+You are at the north end of a north/south passageway.  There are stairs
+leading down from here.  There is also a door leading west.
+>d
+Bedroom
+You are in what appears to be a worker's bedroom.  There is a queen-
+sized bed in the middle of the room, and a painting hanging on the
+wall.  A door leads to another room to the south, and stairways
+lead up and down.
+>sleep
+As soon as you start to doze off you begin dreaming.  You see images of
+workers digging caves, slaving in the humid heat.  Then you see yourself
+as one of these workers.  While no one is looking, you leave the group
+and walk into a room.  The room is bare except for a horseshoe
+shaped piece of stone in the center.  You see yourself digging a hole in
+the ground, then putting some kind of treasure in it, and filling the hole
+with dirt again.  After this, you immediately wake up.
+>d
+NE end of NE/SW cave passage
+You are at the northeast end of a northeast/southwest passageway.
+Stairs lead up out of sight.
+>ne
+You can't go that way.
+>sw
+NE/SW-E/W junction
+You are at the junction of northeast/southwest and east/west passages.
+>sw
+SW end of NE/SW cave passage
+You are at the southwest end of a northeast/southwest passageway.
+>l
+SW end of NE/SW cave passage
+You are at the southwest end of a northeast/southwest passageway.
+>sw
+You can't go that way.
+>l
+SW end of NE/SW cave passage
+You are at the southwest end of a northeast/southwest passageway.
+>se
+You can't go that way.
+>n
+You can't go that way.
+>w
+You can't go that way.
+>e
+You can't go that way.
+>s
+You can't go that way.
+>ne
+NE/SW-E/W junction
+>sw
+SW end of NE/SW cave passage
+>se
+You can't go that way.
+>nw
+You can't go that way.
+>l
+SW end of NE/SW cave passage
+You are at the southwest end of a northeast/southwest passageway.
+>ne
+NE/SW-E/W junction
+>l
+NE/SW-E/W junction
+You are at the junction of northeast/southwest and east/west passages.
+>e
+East end of E/W cave passage
+You are at the east end of an E/W passage.  There are stairs leading up
+to a room above.
+>u
+Horseshoe boulder room
+You are in a room which is bare, except for a horseshoe shaped boulder
+in the center.  Stairs lead down from here.
+>dig
+I think you found something.
+>l
+Horseshoe boulder room
+You are in a room which is bare, except for a horseshoe shaped boulder
+in the center.  Stairs lead down from here.
+There is a platinum bar here.
+>take platinum
+Taken.
+>l
+Horseshoe boulder room
+You are in a room which is bare, except for a horseshoe shaped boulder
+in the center.  Stairs lead down from here.
+>d
+East end of E/W cave passage
+>l
+East end of E/W cave passage
+You are at the east end of an E/W passage.  There are stairs leading up
+to a room above.
+>w
+NE/SW-E/W junction
+>l
+NE/SW-E/W junction
+You are at the junction of northeast/southwest and east/west passages.
+>ne
+NE end of NE/SW cave passage
+>l
+NE end of NE/SW cave passage
+You are at the northeast end of a northeast/southwest passageway.
+Stairs lead up out of sight.
+>u
+Bedroom
+>l
+Bedroom
+You are in what appears to be a worker's bedroom.  There is a queen-
+sized bed in the middle of the room, and a painting hanging on the
+wall.  A door leads to another room to the south, and stairways
+lead up and down.
+>u
+North end of cave passage
+>l
+North end of cave passage
+You are at the north end of a north/south passageway.  There are stairs
+leading down from here.  There is also a door leading west.
+>d
+Bedroom
+>l
+Bedroom
+You are in what appears to be a worker's bedroom.  There is a queen-
+sized bed in the middle of the room, and a painting hanging on the
+wall.  A door leads to another room to the south, and stairways
+lead up and down.
+>d
+NE end of NE/SW cave passage
+>l
+NE end of NE/SW cave passage
+You are at the northeast end of a northeast/southwest passageway.
+Stairs lead up out of sight.
+>sw
+NE/SW-E/W junction
+>e
+East end of E/W cave passage
+>l
+East end of E/W cave passage
+You are at the east end of an E/W passage.  There are stairs leading up
+to a room above.
+>w
+NE/SW-E/W junction
+>l
+NE/SW-E/W junction
+You are at the junction of northeast/southwest and east/west passages.
+>w
+West end of E/W cave passage
+You are at the west end of an E/W passage.  There is a hole on the ground
+which leads down out of sight.
+>l
+West end of E/W cave passage
+You are at the west end of an E/W passage.  There is a hole on the ground
+which leads down out of sight.
+>d
+Empty room
+You are in a room which is completely empty.  Doors lead out to the north
+and east.
+>n
+Blue room
+You are in an empty room.  Interestingly enough, the stones in this
+room are painted blue.  Doors lead out to the east and south.
+>e
+Yellow room
+You are in an empty room.  Interestingly enough, the stones in this
+room are painted yellow.  Doors lead out to the south and west.
+>s
+Red room
+You are in an empty room.  Interestingly enough, the stones in this room
+are painted red.  Doors lead out to the west and north.
+There is a beach towel on the ground here.
+>look towel
+It has a picture of snoopy on it.
+>take towel
+Taken.  Taking the towel reveals a hole in the floor.
+>l
+Red room
+You are in an empty room.  Interestingly enough, the stones in this room
+are painted red.  Doors lead out to the west and north.
+There is a hole in the floor here.
+>d
+Long n/s hallway
+You are in the middle of a long north/south hallway.
+>n
+3/4 north
+You are 3/4 of the way towards the north end of a long north/south hallway.
+>n
+North end of long hallway
+You are at the north end of a long north/south hallway.  There are stairs
+leading upwards.
+>u
+Stair landing
+You are at a landing in a stairwell which continues up and down.
+There is a box with a slit in it, bolted to the wall here.
+>l box
+The box has a slit in the top of it, and on it, in sloppy handwriting, is
+written: ‘For key upgrade, put key in here.’
+>put key in box
+As you drop the key, the box begins to shake.  Finally it explodes
+with a bang.  The key seems to have vanished!
+>l
+Stair landing
+You are at a landing in a stairwell which continues up and down.
+>u
+Up/down staircase
+You are at the continuation of an up/down staircase.
+>u
+Top of staircase.
+You are at the top of a staircase leading down.  A crawlway leads off
+to the northeast.
+>ne
+NE crawlway
+You are in a crawlway that leads northeast or southwest.
+>ne
+Small crawlspace
+You are in a small crawlspace.  There is a hole in the ground here, and
+a small passage back to the southwest.
+There is an axe here.
+>take axe
+Taken.
+>l
+Small crawlspace
+You are in a small crawlspace.  There is a hole in the ground here, and
+a small passage back to the southwest.
+>d
+N/S/W Junction
+>l
+N/S/W Junction
+You are at the junction of two passages. One goes north/south, and
+the other goes west.
+>s
+South end of cave passage
+You are at the south end of a north/south passageway.  There is a hole
+in the floor here, into which you could probably fit.
+>d
+Bathroom
+You are in a bathroom built for workers in the cave.  There is a
+urinal hanging on the wall, and some exposed pipes on the opposite
+wall where a sink used to be.  To the north is a bedroom.
+>i
+You currently have:
+A lamp
+A shovel
+A floppy disk
+A life preserver
+A gold bar
+A platinum bar
+A beach towel
+An axe
+>put platinum in urinal
+You hear it plop down in some water below.
+>put gold in urinal
+You hear it plop down in some water below.
+>flush
+Whoooosh!!
+You have scored 40 out of a possible 90 points.
+>flush
+Whoooosh!!
+>l
+Bathroom
+You are in a bathroom built for workers in the cave.  There is a
+urinal hanging on the wall, and some exposed pipes on the opposite
+wall where a sink used to be.  To the north is a bedroom.
+>n
+Bedroom
+>l
+Bedroom
+You are in what appears to be a worker's bedroom.  There is a queen-
+sized bed in the middle of the room, and a painting hanging on the
+wall.  A door leads to another room to the south, and stairways
+lead up and down.
+>u
+North end of cave passage
+>l
+North end of cave passage
+You are at the north end of a north/south passageway.  There are stairs
+leading down from here.  There is also a door leading west.
+>w
+You must type a 3 digit combination code to enter this room.
+Enter it here: 351
+Gamma computing center
+You are in the Gamma Computing Center.  An IBM 3090/600s is whirring
+away in here.  There is an ethernet cable coming out of one of the units,
+and going through the ceiling.  There is no console here on which you
+could type.
+>i
+You currently have:
+A lamp
+A shovel
+A floppy disk
+A life preserver
+A beach towel
+An axe
+>cut cable
+As you break the ethernet cable, everything starts to blur.  You collapse
+for a moment, then straighten yourself up.
+
+Connection closed.
+$ ls
+total 467
+drwxr-xr-x  3 toukmond restricted      512 Jan 1 1970 .
+drwxr-xr-x  3 root     staff          2048 Jan 1 1970 ..
+-rwxr-xr-x  1 toukmond restricted    10423 Jan 1 1970 ls
+-rwxr-xr-x  1 toukmond restricted    10423 Jan 1 1970 ftp
+-rwxr-xr-x  1 toukmond restricted    10423 Jan 1 1970 echo
+-rwxr-xr-x  1 toukmond restricted    10423 Jan 1 1970 exit
+-rwxr-xr-x  1 toukmond restricted    10423 Jan 1 1970 cd
+-rwxr-xr-x  1 toukmond restricted    10423 Jan 1 1970 pwd
+-rwxr-xr-x  1 toukmond restricted    10423 Jan 1 1970 rlogin
+-rwxr-xr-x  1 toukmond restricted    10423 Jan 1 1970 ssh
+-rwxr-xr-x  1 toukmond restricted    10423 Jan 1 1970 uncompress
+-rwxr-xr-x  1 toukmond restricted    10423 Jan 1 1970 cat
+$ exit
+
+You step back from the console.
+
+Computer room
+The panel lights are flashing in a seemingly organized pattern.
+There is a slip of paper here.
+There is a shiny brass key here.
+>i
+You currently have:
+>take key
+Taken.
+>save teleport-back
+Done.
+>l
+Computer room
+You are in a computer room.  It seems like most of the equipment has
+been removed.  There is a VAX 11/780 in front of you, however, with
+one of the cabinets wide open.  A sign on the front of the machine
+says: This VAX is named ‘pokey’.  To type on the console, use the
+‘type’ command.  The exit is to the east.
+The panel lights are flashing in a seemingly organized pattern.
+There is a slip of paper here.
+>w
+You can't go that way.
+>e
+Old Building hallway
+>l
+Old Building hallway
+You are in the hallway of an old building.  There are rooms to the east
+and west, and doors leading out to the north and south.
+>s
+Building front
+>n
+You can't go that way.
+>l
+Building front
+You are at the end of the road.  There is a building in front of you
+to the northeast, and the road leads back to the southwest.
+>ne
+Old Building hallway
+>l
+Old Building hallway
+You are in the hallway of an old building.  There are rooms to the east
+and west, and doors leading out to the north and south.
+>n
+Meadow
+You are in a meadow in the back of an old building.  A small path leads
+to the west, and a door leads to the south.
+There is a lamp nearby.
+There is a bus driver's license here.
+There is a silver bar here.
+>take lamp
+Taken.
+>take all
+A license: Taken.
+A silver bar: Taken.
+>l
+Meadow
+You are in a meadow in the back of an old building.  A small path leads
+to the west, and a door leads to the south.
+>w
+Post office
+You are near the remains of a post office.  There is a mail drop on the
+face of the building, but you cannot see where it leads.  A path leads
+back to the east, and a road leads to the north.
+>i
+You currently have:
+A brass key
+A lamp
+A license
+A silver bar
+>put silver in mail
+You hear it slide down the chute and off into the distance.
+You have scored 50 out of a possible 90 points.
+>i
+You currently have:
+A brass key
+A lamp
+A license
+>n
+Main-Maple intersection
+You are at the intersection of Main Street and Maple Ave.  Main street
+runs north and south, and Maple Ave runs east off into the distance.
+If you look north and east you can see many intersections, but all of
+the buildings that used to stand here are gone.  Nothing remains except
+street signs.
+There is a road to the northwest leading to a gate that guards a building.
+>n
+Main-Oaktree intersection
+You are at the intersection of Main Street and the west end of Oaktree Ave.
+There is a jewel-encrusted egg here.
+>n
+Main-Vermont intersection
+You are at the intersection of Main Street and the west end of Vermont Ave.
+>n
+Main-Sycamore intersection
+You are at the north end of Main Street at the west end of Sycamore Ave.
+>n
+You can't go that way.
+>e
+First-Sycamore intersection
+You are at the north end of First Street at Sycamore Ave.
+>e
+Second-Sycamore intersection
+You are at the north end of Second Street at Sycamore Ave.
+>e
+Third-Sycamore intersection
+You are at the north end of Third Street at Sycamore Ave.
+>e
+Fourth-Sycamore intersection
+You are at the north end of Fourth Street at Sycamore Ave.
+>e
+Fifth-Sycamore intersection
+You are at the north end of Fifth Street and the east end of Sycamore Ave.
+There is a bus here.
+>in bus
+You board the bus and get in the driver's seat.
+>off
+You hop off the bus.
+>drop license
+Done.
+>in bus
+You are not licensed for this type of vehicle.
+>take license
+Taken.
+>in bus
+You board the bus and get in the driver's seat.
+>w
+The bus lurches ahead and comes to a screeching halt.
+Fourth-Sycamore intersection
+You are on the bus.
+>w
+The bus lurches ahead and comes to a screeching halt.
+Third-Sycamore intersection
+You are on the bus.
+>w
+The bus lurches ahead and comes to a screeching halt.
+Second-Sycamore intersection
+You are on the bus.
+>w
+The bus lurches ahead and comes to a screeching halt.
+First-Sycamore intersection
+You are on the bus.
+>w
+The bus lurches ahead and comes to a screeching halt.
+Main-Sycamore intersection
+You are on the bus.
+>w
+You can't go that way.
+>s
+The bus lurches ahead and comes to a screeching halt.
+Main-Vermont intersection
+You are on the bus.
+>s
+The bus lurches ahead and comes to a screeching halt.
+Main-Oaktree intersection
+There is a jewel-encrusted egg here.
+You are on the bus.
+>s
+The bus lurches ahead and comes to a screeching halt.
+Main-Maple intersection
+You are on the bus.
+>s
+The bus lurches ahead and comes to a screeching halt.
+Post office
+You are on the bus.
+>s
+You can't go that way.
+>l
+Post office
+You are near the remains of a post office.  There is a mail drop on the
+face of the building, but you cannot see where it leads.  A path leads
+back to the east, and a road leads to the north.
+You are on the bus.
+>n
+The bus lurches ahead and comes to a screeching halt.
+Main-Maple intersection
+You are on the bus.
+>l
+Main-Maple intersection
+You are at the intersection of Main Street and Maple Ave.  Main street
+runs north and south, and Maple Ave runs east off into the distance.
+If you look north and east you can see many intersections, but all of
+the buildings that used to stand here are gone.  Nothing remains except
+street signs.
+There is a road to the northwest leading to a gate that guards a building.
+You are on the bus.
+>nw
+As the bus approaches, the gate opens and you drive through.
+Museum entrance
+You are in front of the Museum of Natural History.  A door leads into
+the building to the north, and a road leads to the southeast.
+You are on the bus.
+>l
+Museum entrance
+You are in front of the Museum of Natural History.  A door leads into
+the building to the north, and a road leads to the southeast.
+You are on the bus.
+>off bus
+You hop off the bus.
+>n
+Museum lobby
+You are in the main lobby for the Museum of Natural History.  In the center
+of the room is the huge skeleton of a dinosaur.  Doors lead out to the
+south and east.
+There is a dinosaur bone here.
+>l bone
+I see nothing special about that.
+>take bone
+Taken.
+>l bone
+I see nothing special about that.
+>examine bone
+I see nothing special about that.
+>l
+Museum lobby
+You are in the main lobby for the Museum of Natural History.  In the center
+of the room is the huge skeleton of a dinosaur.  Doors lead out to the
+south and east.
+>e
+Geological display
+You are in the geological display.  All of the objects that used to
+be on display are missing.  There are rooms to the east, west, and
+north.
+>n
+Marine life area
+You are in the marine life area.  The room is filled with fish tanks,
+which are filled with dead fish that have apparently died due to
+starvation.  Doors lead out to the south and east.
+There is a glass jar here.
+There is a valuable ruby here.
+>take ruby
+Taken.
+>take jar
+Taken.
+>e
+Classroom
+You are in a classroom where school children were taught about natural
+history.  On the blackboard is written, ‘No children allowed downstairs.’
+There is a door to the east with an ‘exit’ sign on it.  There is another
+door to the west.
+There is a packet of glycerine here.
+>take glycerine
+Taken.
+>n
+You can't go that way.
+>s
+Maintenance room
+You are in some sort of maintenance room for the museum.  There is a
+switch on the wall labeled ‘BL’.  There are doors to the west and north.
+There is a packet of nitric acid here.
+>l
+Maintenance room
+You are in some sort of maintenance room for the museum.  There is a
+switch on the wall labeled ‘BL’.  There are doors to the west and north.
+There is a packet of nitric acid here.
+>take acid
+Taken.
+>switch switch
+The button is now in the on position.
+>w
+Geological display
+>l
+Geological display
+You are in the geological display.  All of the objects that used to
+be on display are missing.  There are rooms to the east, west, and
+north.
+>n
+Marine life area
+The room is lit by a black light, causing the fish, and some of
+your objects, to give off an eerie glow.
+>l bone
+In this light you can see some writing on the bone.  It says:
+For an explosive time, go to Fourth St. and Vermont.
+>s
+Geological display
+>w
+Museum lobby
+>l
+Museum lobby
+You are in the main lobby for the Museum of Natural History.  In the center
+of the room is the huge skeleton of a dinosaur.  Doors lead out to the
+south and east.
+>s
+Museum entrance
+There is a bus here.
+>in pus
+You board the bus and get in the driver's seat.
+>se
+The bus lurches ahead and comes to a screeching halt.
+Main-Maple intersection
+You are on the bus.
+>n
+The bus lurches ahead and comes to a screeching halt.
+Main-Oaktree intersection
+There is a jewel-encrusted egg here.
+You are on the bus.
+>take egg
+You can't take anything while on the bus.
+>score
+You have scored 50 out of a possible 90 points.
+>m
+I don't understand that.
+>n
+The bus lurches ahead and comes to a screeching halt.
+Main-Vermont intersection
+You are on the bus.
+>s
+The bus lurches ahead and comes to a screeching halt.
+Main-Oaktree intersection
+There is a jewel-encrusted egg here.
+You are on the bus.
+>e
+The bus lurches ahead and comes to a screeching halt.
+First-Oaktree intersection
+You are at the intersection of First Street and Oaktree Ave.
+You are on the bus.
+>e
+The bus lurches ahead and comes to a screeching halt.
+Second-Oaktree intersection
+You are at the intersection of Second Street and Oaktree Ave.
+You are on the bus.
+>e
+The bus lurches ahead and comes to a screeching halt.
+Third-Oaktree intersection
+You are at the intersection of Third Street and Oaktree Ave.
+You are on the bus.
+>e
+The bus lurches ahead and comes to a screeching halt.
+Fourth-Oaktree intersection
+You are at the intersection of Fourth Street and Oaktree Ave.
+You are on the bus.
+>e
+The bus lurches ahead and comes to a screeching halt.
+Fifth-Oaktree intersection
+You are at the intersection of Fifth Street and the east end of Oaktree Ave.
+There is a cliff off to the east.
+There are some valuable coins here.
+You are on the bus.
+>take coin
+I don't know what that is.
+>take coins
+You can't take anything while on the bus.
+>n
+The bus lurches ahead and comes to a screeching halt.
+Fifth-Vermont intersection
+You are at the intersection of Fifth Street and the east end of Vermont Ave.
+You are on the bus.
+>w
+The bus lurches ahead and comes to a screeching halt.
+Fourth-Vermont intersection
+You are at the intersection of Fourth Street and Vermont Ave.
+You are on the bus.
+>off
+You hop off the bus.
+>save va-4s
+Done.
+>i
+You currently have:
+A brass key
+A lamp
+A license
+A bone
+A ruby
+A glass jar
+Some glycerine
+Some nitric acid
+>put glycrine in jar
+I don't know what that object is.
+>put glycerine in jar
+Done.
+>put acid in jar
+Done.
+>drop jar
+Done.
+As the jar impacts the ground it explodes into many pieces.
+The explosion causes a hole to open up in the ground, which you fall
+through.
+Vermont station
+You are at the Vermont St. subway station.  A train is sitting here waiting.
+>in train
+As you board the train it immediately leaves the station.  It is a very
+bumpy ride.  It is shaking from side to side, and up and down.  You
+sit down in one of the chairs in order to be more comfortable.
+
+Finally the train comes to a sudden stop, and the doors open, and some
+force throws you out.  The train speeds away.
+
+Museum station
+You are at the Museum subway stop.  A passage leads off to the north.
+>n
+N/S tunnel
+You are in a north/south tunnel.
+>n
+North end of N/S tunnel
+You are at the north end of a north/south tunnel.  Stairs lead up and
+down from here.  There is a garbage disposal here.
+>i
+You currently have:
+A brass key
+A lamp
+A license
+A bone
+A ruby
+>drop ruby in disposal
+Done.
+>i
+You currently have:
+A brass key
+A lamp
+A license
+A bone
+>score
+You have scored 50 out of a possible 90 points.
+>l
+North end of N/S tunnel
+You are at the north end of a north/south tunnel.  Stairs lead up and
+down from here.  There is a garbage disposal here.
+There is a valuable ruby here.
+>take ruby
+Taken.
+>put ruby in garbage
+You hear it slide down the chute and off into the distance.
+You have scored 60 out of a possible 90 points.
+>l
+North end of N/S tunnel
+You are at the north end of a north/south tunnel.  Stairs lead up and
+down from here.  There is a garbage disposal here.
+>u
+Top of subway stairs
+You are at the top of some stairs near the subway station.  There is
+a door to the west.
+>w
+Classroom
+>w
+Marine life area
+The room is lit by a black light, causing the fish, and some of
+your objects, to give off an eerie glow.
+>w
+You can't go that way.
+>s
+Geological display
+>w
+Museum lobby
+>l
+Museum lobby
+You are in the main lobby for the Museum of Natural History.  In the center
+of the room is the huge skeleton of a dinosaur.  Doors lead out to the
+south and east.
+>s
+Museum entrance
+>l
+Museum entrance
+You are in front of the Museum of Natural History.  A door leads into
+the building to the north, and a road leads to the southeast.
+>se
+Main-Maple intersection
+>n
+Main-Oaktree intersection
+There is a jewel-encrusted egg here.
+>take egg
+Taken.
+>n
+Main-Vermont intersection
+>e
+First-Vermont intersection
+You are at the intersection of First Street and Vermont Ave.
+>e
+Second-Vermont intersection
+You are at the intersection of Second Street and Vermont Ave.
+>e
+Third-Vermont intersection
+You are at the intersection of Third Street and Vermont Ave.
+>e
+Fourth-Vermont intersection
+You fall into a hole in the ground.
+Vermont station
+There is a bus here.
+>u
+You can't go that way.
+>l
+Vermont station
+You are at the Vermont St. subway station.  A train is sitting here waiting.
+>in train
+As you board the train it immediately leaves the station.  It is a very
+bumpy ride.  It is shaking from side to side, and up and down.  You
+sit down in one of the chairs in order to be more comfortable.
+
+Finally the train comes to a sudden stop, and the doors open, and some
+force throws you out.  The train speeds away.
+
+Museum station
+>l
+Museum station
+You are at the Museum subway stop.  A passage leads off to the north.
+>n
+N/S tunnel
+>n
+North end of N/S tunnel
+>l
+North end of N/S tunnel
+You are at the north end of a north/south tunnel.  Stairs lead up and
+down from here.  There is a garbage disposal here.
+>u
+Top of subway stairs
+>l
+Top of subway stairs
+You are at the top of some stairs near the subway station.  There is
+a door to the west.
+>w
+Classroom
+>l
+Classroom
+You are in a classroom where school children were taught about natural
+history.  On the blackboard is written, ‘No children allowed downstairs.’
+There is a door to the east with an ‘exit’ sign on it.  There is another
+door to the west.
+>w
+Marine life area
+The room is lit by a black light, causing the fish, and some of
+your objects, to give off an eerie glow.
+>
+>s
+Geological display
+>w
+Museum lobby
+>s
+Museum entrance
+>l
+Museum entrance
+You are in front of the Museum of Natural History.  A door leads into
+the building to the north, and a road leads to the southeast.
+>se
+Main-Maple intersection
+>n
+Main-Oaktree intersection
+>e
+First-Oaktree intersection
+>e
+Second-Oaktree intersection
+>e
+Third-Oaktree intersection
+>e
+Fourth-Oaktree intersection
+>e
+Fifth-Oaktree intersection
+There are some valuable coins here.
+>take coins
+Taken.
+>l
+Fifth-Oaktree intersection
+You are at the intersection of Fifth Street and the east end of Oaktree Ave.
+There is a cliff off to the east.
+>n
+Fifth-Vermont intersection
+>w
+Fourth-Vermont intersection
+You fall into a hole in the ground.
+Vermont station
+There is a bus here.
+>in train
+As you board the train it immediately leaves the station.  It is a very
+bumpy ride.  It is shaking from side to side, and up and down.  You
+sit down in one of the chairs in order to be more comfortable.
+
+Finally the train comes to a sudden stop, and the doors open, and some
+force throws you out.  The train speeds away.
+
+Museum station
+>n
+N/S tunnel
+>n
+North end of N/S tunnel
+>d
+Bottom of subway stairs
+You are at the bottom of some stairs near the subway station.  There is
+a room to the northeast.
+There is a valuable amethyst here.
+>take amethyst
+Taken.
+>u
+North end of N/S tunnel
+>l
+North end of N/S tunnel
+You are at the north end of a north/south tunnel.  Stairs lead up and
+down from here.  There is a garbage disposal here.
+>i
+You currently have:
+A brass key
+A lamp
+A license
+A bone
+A valuable egg
+Some valuable coins
+An amethyst
+>put amethyst in garbage
+You hear it slide down the chute and off into the distance.
+You have scored 70 out of a possible 90 points.
+>put egg in garbage
+You hear it slide down the chute and off into the distance.
+You have scored 80 out of a possible 90 points.
+>put coins in garbage
+You hear it slide down the chute and off into the distance.
+You have scored 90 out of a possible 90 points.
+>l
+North end of N/S tunnel
+You are at the north end of a north/south tunnel.  Stairs lead up and
+down from here.  There is a garbage disposal here.
+>d
+Bottom of subway stairs
+>d
+You can't go that way.
+>l
+Bottom of subway stairs
+You are at the bottom of some stairs near the subway station.  There is
+a room to the northeast.
+>ne
+Endgame computer room
+You are in another computer room.  There is a computer in here larger
+than you have ever seen.  It has no manufacturers name on it, but it
+does have a sign that says: This machine's name is ‘endgame’.  The
+exit is to the southwest.  There is no console here on which you could
+type.
+>u
+You can't go that way.
+>u
+You can't go that way.
+>u
+You can't go that way.
+>sw
+Bottom of subway stairs
+>u
+North end of N/S tunnel
+>u
+Top of subway stairs
+>l
+Top of subway stairs
+You are at the top of some stairs near the subway station.  There is
+a door to the west.
+>w
+Classroom
+>w
+Marine life area
+The room is lit by a black light, causing the fish, and some of
+your objects, to give off an eerie glow.
+>s
+Geological display
+>w
+Museum lobby
+>s
+Museum entrance
+>se
+Main-Maple intersection
+>s
+Post office
+>l
+Post office
+You are near the remains of a post office.  There is a mail drop on the
+face of the building, but you cannot see where it leads.  A path leads
+back to the east, and a road leads to the north.
+>e
+Meadow
+>l
+Meadow
+You are in a meadow in the back of an old building.  A small path leads
+to the west, and a door leads to the south.
+>s
+Old Building hallway
+>l
+Old Building hallway
+You are in the hallway of an old building.  There are rooms to the east
+and west, and doors leading out to the north and south.
+>w
+Computer room
+The panel lights are flashing in a seemingly organized pattern.
+There is a slip of paper here.
+>type
+$ ssh endgame
+You have scored 90 out of a possible 90 points.
+
+Welcome to the endgame.  You are a truly noble adventurer.
+
+You step back from the console.
+
+Treasure room
+You are in the treasure room.  A door leads out to the north.
+There is a shimmering diamond here.
+There is an emerald bracelet here.
+There is a platinum bar here.
+There is a gold bar here.
+There is a silver bar here.
+There is a valuable ruby here.
+There is a valuable amethyst here.
+There is a jewel-encrusted egg here.
+There are some valuable coins here.
+>save endgame
+Done.
+>l
+Treasure room
+You are in the treasure room.  A door leads out to the north.
+There is a shimmering diamond here.
+There is an emerald bracelet here.
+There is a platinum bar here.
+There is a gold bar here.
+There is a silver bar here.
+There is a valuable ruby here.
+There is a valuable amethyst here.
+There is a jewel-encrusted egg here.
+There are some valuable coins here.
+>n
+Endgame N/S hallway
+You are in a north/south hallway.
+>n
+Question room 1
+You have reached a question room.  You must answer a question correctly in
+order to get by.  Use the ‘answer’ command to answer the question.
+Your question is:
+How many corners are there in town (excluding the one with the Post Office)?
+>answer 34
+That answer is incorrect.
+>answer 24
+Correct.
+Endgame N/S hallway
+You are in a north/south hallway.
+>n
+Question room 2
+You are in a second question room.
+Your question is:
+What is your password on the machine called ‘pokey’?
+>worms
+I don't understand that.
+>answer worms
+That answer is incorrect.
+>answer robert
+Correct.
+Endgame N/S hallway
+You are in a north/south hallway.
+>n
+Question room 3
+You are in a third question room.
+Your question is:
+What is your login name on the ‘endgame’ machine?
+>answer toukmod
+That answer is incorrect.
+>answer toukmond
+Correct.
+Endgame treasure room
+You are in the endgame treasure room.  A door leads out to the north, and
+a hallway leads to the south.
+There is a 100 dollar bill here.
+>n
+Winner's room
+You are in the winner's room.  A door leads back to the south.
+The Mona Lisa is here.
+>take mona lisa
+Taken.
+>s
+Endgame treasure room
+There is a 100 dollar bill here.
+>l
+Endgame treasure room
+You are in the endgame treasure room.  A door leads out to the north, and
+a hallway leads to the south.
+There is a 100 dollar bill here.
+>i
+You currently have:
+A brass key
+A lamp
+A license
+A bone
+The Mona Lisa
+>drop mona lisa
+Done.
+>score
+You have scored 20 endgame points out of a possible 110.
+>take bill
+Taken.
+>score
+You have scored 10 endgame points out of a possible 110.
+>drop bill
+Done.
+>l
+Endgame treasure room
+You are in the endgame treasure room.  A door leads out to the north, and
+a hallway leads to the south.
+The Mona Lisa is here.
+There is a 100 dollar bill here.
+>score
+You have scored 20 endgame points out of a possible 110.
+>s
+Question room 3
+Your question is:
+What is the nearest whole dollar to the price of the shovel?
+>100
+I don't understand that.
+>answer 100
+That answer is incorrect.
+>answer 20
+Correct.
+Endgame N/S hallway
+>s
+Question room 2
+Your question is:
+What network protocol is used between pokey and gamma?
+>answer ssh
+That answer is incorrect.
+>answer tcp
+Correct.
+Endgame N/S hallway
+>s
+Question room 1
+Your question is:
+How many pounds did the weight weigh?
+>answer 10
+Correct.
+Endgame N/S hallway
+>s
+Treasure room
+You are in the treasure room.  A door leads out to the north.
+There is a shimmering diamond here.
+There is an emerald bracelet here.
+There is a platinum bar here.
+There is a gold bar here.
+There is a silver bar here.
+There is a valuable ruby here.
+There is a valuable amethyst here.
+There is a jewel-encrusted egg here.
+There are some valuable coins here.
+>take all
+A diamond: Taken.
+A bracelet: Taken.
+A platinum bar: Taken.
+A gold bar: Taken.
+A silver bar: Taken.
+A ruby: Taken.
+An amethyst: Your load would be too heavy.
+A valuable egg: Your load would be too heavy.
+Some valuable coins: Your load would be too heavy.
+>l
+Treasure room
+You are in the treasure room.  A door leads out to the north.
+There is a valuable amethyst here.
+There is a jewel-encrusted egg here.
+There are some valuable coins here.
+>n
+Endgame N/S hallway
+>n
+Question room 1
+Your question is:
+Excluding the endgame, how many places are there where you can put
+treasures for points?
+>answer 4
+Correct.
+Endgame N/S hallway
+>n
+Question room 2
+Your question is:
+What is the name of the bus company serving the town?
+>answer mobytours
+Correct.
+Endgame N/S hallway
+>n
+Question room 3
+Your question is:
+How many megabytes of memory is on the CPU board for the Vax?
+>answer 10
+That answer is incorrect.
+>answer 2
+Correct.
+Endgame treasure room
+The Mona Lisa is here.
+There is a 100 dollar bill here.
+>drop all
+I don't know what that is.
+>i
+You currently have:
+A brass key
+A lamp
+A license
+A bone
+A diamond
+A bracelet
+A platinum bar
+A gold bar
+A silver bar
+A ruby
+>drop gold
+Done.
+>drop diamond
+Done.
+>drop platinum
+Done.
+>drop ruby
+Done.
+>drop silver
+Done.
+>score
+You have scored 70 endgame points out of a possible 110.
+>i
+You currently have:
+A brass key
+A lamp
+A license
+A bone
+A bracelet
+>drop bracelet
+Done.
+>s
+Question room 3
+Your question is:
+What type of bear was hiding your key?
+>answer grizzly
+Correct.
+Endgame N/S hallway
+>s
+Question room 2
+Your question is:
+Name either of the two objects you found by digging.
+>anseer key
+I don't understand that.
+>answer key
+That answer is incorrect.
+>answer cpu
+Correct.
+Endgame N/S hallway
+>s
+Question room 1
+Your question is:
+Name the STREET which runs right over the subway stop.
+>answer Vermont
+That answer is incorrect.
+>answer Fourth
+Correct.
+Endgame N/S hallway
+>s
+Treasure room
+You are in the treasure room.  A door leads out to the north.
+There is a valuable amethyst here.
+There is a jewel-encrusted egg here.
+There are some valuable coins here.
+>take all
+An amethyst: Taken.
+A valuable egg: Taken.
+Some valuable coins: Taken.
+>n
+Endgame N/S hallway
+>n
+Question room 1
+Your question is:
+What is the last name of the author of EMACS?
+>answer rms
+That answer is incorrect.
+>answer stallman
+Correct.
+Endgame N/S hallway
+>n
+Question room 2
+Your question is:
+Give either of the two last names in the mailroom, other than your own.
+>answer collier stock
+Correct.
+Endgame N/S hallway
+>n
+Question room 3
+Your question is:
+Which street in town is named after a U.S. state?
+>answer Vermont
+Correct.
+Endgame treasure room
+The Mona Lisa is here.
+There is a 100 dollar bill here.
+There is a gold bar here.
+There is a shimmering diamond here.
+There is a platinum bar here.
+There is a valuable ruby here.
+There is a silver bar here.
+There is an emerald bracelet here.
+>i
+You currently have:
+A brass key
+A lamp
+A license
+A bone
+An amethyst
+A valuable egg
+Some valuable coins
+>drop amethyst
+Done.
+>drop coins
+Done.
+>drop egg
+Done.
+>score
+You have scored 110 endgame points out of a possible 110.
+
+
+Congratulations.  You have won.  The wizard password is ‘moby’
+>save win
+Done.
+>
+Error: end-of-file ("Error reading from stdin")
+  mapbacktrace(#f(compiled-function (evald func args flags) #<bytecode -0x2fdc5f4be510f35>))
+  debug-early-backtrace()
+  debug-early(error (end-of-file "Error reading from stdin"))
+  dun-read-line()
+  dun-batch-loop()
+  dun--batch()
+  byte-code("\10\203\17\0\302\11\235\303\232\203\17\0\304 \210\305\306!\207" [noninteractive command-line-args "-l" ("-l" "dunnet") dun--batch provide dunnet] 2)
+  command-line-1(("-l" "dunnet"))
+  command-line()
+  normal-top-level()
+End of file during parsing: Error reading from stdin
+[~]─── rlwrap emacs -batch -l dunnet
+Loading /usr/share/emacs/site-lisp/site-start.d/autoconf-init.el (source)...
+Loading /usr/share/emacs/site-lisp/site-start.d/cmake-init.el (source)...
+Loading /usr/share/emacs/site-lisp/site-start.d/desktop-entry-mode-init.el (source)...
+Loading /usr/share/emacs/site-lisp/site-start.d/erlang-init.el (source)...
+Loading /usr/share/emacs/site-lisp/site-start.d/gforth-init.el (source)...
+Loading /usr/share/emacs/site-lisp/site-start.d/mercurial-site-start.el (source)...
+Loading /usr/share/emacs/site-lisp/site-start.d/rpmdev-init.el (source)...
+
+Dead end
+You are at a dead end of a dirt road.  The road goes to the east.
+In the distance you can see that it will eventually fork off.  The
+trees here are very tall royal palms, and they are spaced equidistant
+from each other.
+There is a shovel here.
+>e
+E/W Dirt road
+You are on the continuation of a dirt road.  There are more trees on
+both sides of you.  The road continues to the east and west.
+There is a large boulder here.
+>e
+Fork
+You are at a fork of two passages, one to the northeast, and one to the
+southeast.  The ground here seems very soft. You can also go back west.
+>sw
+You can't go that way.
+>se
+SE/NW road
+You are on a southeast/northwest road.
+There is some food here.
+>se
+Bear hangout
+You are standing at the end of a road.  A passage leads back to the
+northwest.
+There is a ferocious bear here!
+>shake bear
+As you go up to the bear, it removes your head and places it on the ground.
+You are dead.
+You have scored 0 out of a possible 90 points.
+[~]─── rlwrap emacs -batch -l dunnet
+Loading /usr/share/emacs/site-lisp/site-start.d/autoconf-init.el (source)...
+Loading /usr/share/emacs/site-lisp/site-start.d/cmake-init.el (source)...
+Loading /usr/share/emacs/site-lisp/site-start.d/desktop-entry-mode-init.el (source)...
+Loading /usr/share/emacs/site-lisp/site-start.d/erlang-init.el (source)...
+Loading /usr/share/emacs/site-lisp/site-start.d/gforth-init.el (source)...
+Loading /usr/share/emacs/site-lisp/site-start.d/mercurial-site-start.el (source)...
+Loading /usr/share/emacs/site-lisp/site-start.d/rpmdev-init.el (source)...
+
+Dead end
+You are at a dead end of a dirt road.  The road goes to the east.
+In the distance you can see that it will eventually fork off.  The
+trees here are very tall royal palms, and they are spaced equidistant
+from each other.
+There is a shovel here.
+>e
+E/W Dirt road
+You are on the continuation of a dirt road.  There are more trees on
+both sides of you.  The road continues to the east and west.
+There is a large boulder here.
+>e
+Fork
+You are at a fork of two passages, one to the northeast, and one to the
+southeast.  The ground here seems very soft. You can also go back west.
+>se
+SE/NW road
+You are on a southeast/northwest road.
+There is some food here.
+>se
+Bear hangout
+You are standing at the end of a road.  A passage leads back to the
+northwest.
+There is a ferocious bear here!
+>sw
+Hidden area
+There is an emerald bracelet here.
+>take bracelet
+Taken.
+>ne
+Bear hangout
+There is a ferocious bear here!
+>nw
+SE/NW road
+There is some food here.
+>
+Error: end-of-file ("Error reading from stdin")
+  mapbacktrace(#f(compiled-function (evald func args flags) #<bytecode 0x20b420b41aef0ca>))
+  debug-early-backtrace()
+  debug-early(error (end-of-file "Error reading from stdin"))
+  dun-read-line()
+  dun-batch-loop()
+  dun--batch()
+  byte-code("\10\203\17\0\302\11\235\303\232\203\17\0\304 \210\305\306!\207" [noninteractive command-line-args "-l" ("-l" "dunnet") dun--batch provide dunnet] 2)
+  command-line-1(("-l" "dunnet"))
+  command-line()
+  normal-top-level()
+End of file during parsing: Error reading from stdin
+[~]─── ls
+...
+[~]─── rlwrap emacs -batch -l dunnet
+Loading /usr/share/emacs/site-lisp/site-start.d/autoconf-init.el (source)...
+Loading /usr/share/emacs/site-lisp/site-start.d/cmake-init.el (source)...
+Loading /usr/share/emacs/site-lisp/site-start.d/desktop-entry-mode-init.el (source)...
+Loading /usr/share/emacs/site-lisp/site-start.d/erlang-init.el (source)...
+Loading /usr/share/emacs/site-lisp/site-start.d/gforth-init.el (source)...
+Loading /usr/share/emacs/site-lisp/site-start.d/mercurial-site-start.el (source)...
+Loading /usr/share/emacs/site-lisp/site-start.d/rpmdev-init.el (source)...
+
+Dead end
+You are at a dead end of a dirt road.  The road goes to the east.
+In the distance you can see that it will eventually fork off.  The
+trees here are very tall royal palms, and they are spaced equidistant
+from each other.
+There is a shovel here.
+>restore teleport-back
+Done.
+Computer room
+The panel lights are flashing in a seemingly organized pattern.
+There is a slip of paper here.
+>l
+Computer room
+You are in a computer room.  It seems like most of the equipment has
+been removed.  There is a VAX 11/780 in front of you, however, with
+one of the cabinets wide open.  A sign on the front of the machine
+says: This VAX is named ‘pokey’.  To type on the console, use the
+‘type’ command.  The exit is to the east.
+The panel lights are flashing in a seemingly organized pattern.
+There is a slip of paper here.
+>w
+You can't go that way.
+>e
+Old Building hallway
+>n
+Meadow
+You are in a meadow in the back of an old building.  A small path leads
+to the west, and a door leads to the south.
+There is a lamp nearby.
+There is a bus driver's license here.
+There is a silver bar here.
+>w
+Post office
+You are near the remains of a post office.  There is a mail drop on the
+face of the building, but you cannot see where it leads.  A path leads
+back to the east, and a road leads to the north.
+>n
+Main-Maple intersection
+You are at the intersection of Main Street and Maple Ave.  Main street
+runs north and south, and Maple Ave runs east off into the distance.
+If you look north and east you can see many intersections, but all of
+the buildings that used to stand here are gone.  Nothing remains except
+street signs.
+There is a road to the northwest leading to a gate that guards a building.
+>s
+Post office
+>e
+Meadow
+There is a lamp nearby.
+There is a bus driver's license here.
+There is a silver bar here.
+>take license
+Taken.
+>w
+Post office
+>n
+Main-Maple intersection
+>e
+First-Maple intersection
+You are at the south end of First Street at Maple Ave.
+>e
+Second-Maple intersection
+You are at the south end of Second Street at Maple Ave.
+>e
+Third-Maple intersection
+You are at the south end of Third Street at Maple Ave.
+>e
+Fourth-Maple intersection
+You are at the south end of Fourth Street at Maple Ave.
+>e
+Fifth-Maple intersection
+You are at the south end of Fifth Street at the east end of Maple Ave.
+>e
+You can't go that way.
+>n
+Fifth-Oaktree intersection
+You are at the intersection of Fifth Street and the east end of Oaktree Ave.
+There is a cliff off to the east.
+There are some valuable coins here.
+>e
+You fall down the cliff and land on your head.
+
+You are dead.
+You have scored 40 out of a possible 90 points.
+[~]─── rlwrap emacs -batch -l dunnet
+Loading /usr/share/emacs/site-lisp/site-start.d/autoconf-init.el (source)...
+Loading /usr/share/emacs/site-lisp/site-start.d/cmake-init.el (source)...
+Loading /usr/share/emacs/site-lisp/site-start.d/desktop-entry-mode-init.el (source)...
+Loading /usr/share/emacs/site-lisp/site-start.d/erlang-init.el (source)...
+Loading /usr/share/emacs/site-lisp/site-start.d/gforth-init.el (source)...
+Loading /usr/share/emacs/site-lisp/site-start.d/mercurial-site-start.el (source)...
+Loading /usr/share/emacs/site-lisp/site-start.d/rpmdev-init.el (source)...
+
+Dead end
+You are at a dead end of a dirt road.  The road goes to the east.
+In the distance you can see that it will eventually fork off.  The
+trees here are very tall royal palms, and they are spaced equidistant
+from each other.
+There is a shovel here.
+>restore teleport-back
+Done.
+Computer room
+The panel lights are flashing in a seemingly organized pattern.
+There is a slip of paper here.
+>l
+Computer room
+You are in a computer room.  It seems like most of the equipment has
+been removed.  There is a VAX 11/780 in front of you, however, with
+one of the cabinets wide open.  A sign on the front of the machine
+says: This VAX is named ‘pokey’.  To type on the console, use the
+‘type’ command.  The exit is to the east.
+The panel lights are flashing in a seemingly organized pattern.
+There is a slip of paper here.
+>e
+Old Building hallway
+>s
+Building front
+>l
+Building front
+You are at the end of the road.  There is a building in front of you
+to the northeast, and the road leads back to the southwest.
+>se
+You can't go that way.
+>n
+You can't go that way.
+>ne
+Old Building hallway
+>n
+Meadow
+You are in a meadow in the back of an old building.  A small path leads
+to the west, and a door leads to the south.
+There is a lamp nearby.
+There is a bus driver's license here.
+There is a silver bar here.
+>take license
+Taken.
+>n
+You can't go that way.
+>w
+Post office
+You are near the remains of a post office.  There is a mail drop on the
+face of the building, but you cannot see where it leads.  A path leads
+back to the east, and a road leads to the north.
+>n
+Main-Maple intersection
+You are at the intersection of Main Street and Maple Ave.  Main street
+runs north and south, and Maple Ave runs east off into the distance.
+If you look north and east you can see many intersections, but all of
+the buildings that used to stand here are gone.  Nothing remains except
+street signs.
+There is a road to the northwest leading to a gate that guards a building.
+>n
+Main-Oaktree intersection
+You are at the intersection of Main Street and the west end of Oaktree Ave.
+There is a jewel-encrusted egg here.
+>n
+Main-Vermont intersection
+You are at the intersection of Main Street and the west end of Vermont Ave.
+>n
+Main-Sycamore intersection
+You are at the north end of Main Street at the west end of Sycamore Ave.
+>n
+You can't go that way.
+>e
+First-Sycamore intersection
+You are at the north end of First Street at Sycamore Ave.
+>e
+Second-Sycamore intersection
+You are at the north end of Second Street at Sycamore Ave.
+>e
+Third-Sycamore intersection
+You are at the north end of Third Street at Sycamore Ave.
+>e
+Fourth-Sycamore intersection
+You are at the north end of Fourth Street at Sycamore Ave.
+>e
+Fifth-Sycamore intersection
+You are at the north end of Fifth Street and the east end of Sycamore Ave.
+There is a bus here.
+>in bus
+You board the bus and get in the driver's seat.
+>s
+The bus lurches ahead and comes to a screeching halt.
+Fifth-Vermont intersection
+You are at the intersection of Fifth Street and the east end of Vermont Ave.
+You are on the bus.
+>s
+The bus lurches ahead and comes to a screeching halt.
+Fifth-Oaktree intersection
+You are at the intersection of Fifth Street and the east end of Oaktree Ave.
+There is a cliff off to the east.
+There are some valuable coins here.
+You are on the bus.
+>e
+The bus flies off the cliff, and plunges to the bottom, where it explodes.
+
+You are dead.
+You have scored 40 out of a possible 90 points.
+[~]─── ls
+...
+[~]─── rlwrap emacs -batch -l dunnet
+Loading /usr/share/emacs/site-lisp/site-start.d/autoconf-init.el (source)...
+Loading /usr/share/emacs/site-lisp/site-start.d/cmake-init.el (source)...
+Loading /usr/share/emacs/site-lisp/site-start.d/desktop-entry-mode-init.el (source)...
+Loading /usr/share/emacs/site-lisp/site-start.d/erlang-init.el (source)...
+Loading /usr/share/emacs/site-lisp/site-start.d/gforth-init.el (source)...
+Loading /usr/share/emacs/site-lisp/site-start.d/mercurial-site-start.el (source)...
+Loading /usr/share/emacs/site-lisp/site-start.d/rpmdev-init.el (source)...
+
+Dead end
+You are at a dead end of a dirt road.  The road goes to the east.
+In the distance you can see that it will eventually fork off.  The
+trees here are very tall royal palms, and they are spaced equidistant
+from each other.
+There is a shovel here.
+>restore cave-entrance
+Done.
+Cave Entrance
+>l
+Cave Entrance
+The entrance to a cave is to the south.  To the north, a road leads
+towards a deep lake.  On the ground nearby there is a chute, with a sign
+that says ‘put treasures here for points’.
+>n
+Lakefront South
+>n
+Lakefront North
+>l
+Lakefront North
+You are at the north side of a lake.  On the other side you can see
+a road which leads to a cave.  The water appears very deep.
+>n
+Health Club front
+>l
+Health Club front
+You are outside a large building to the north which used to be a health
+and fitness center.  A road leads to the south.
+>n
+Reception area
+>l
+Reception area
+You are in a reception area for a health and fitness center.  The place
+appears to have been recently ransacked, and nothing is left.  There is
+a door out to the south, and a crawlspace to the southeast.
+>se
+Maze
+>l
+Maze
+You are in a maze of thirsty little passages, all alike.
+>se
+Maze
+>d
+Maze
+>nw
+Maze
+>ne
+Weight room
+>l
+Weight room
+You are in an old weight room.  All of the equipment is either destroyed
+or completely broken.  There is a door out to the west, and there is a ladder
+leading down a hole in the floor.
+>w
+End of N/S Hallway
+>l
+End of N/S Hallway
+You are at the end of a north/south hallway.  You can go back to the south,
+or off to a room to the east.
+>s
+Northbound Hallway
+>l
+Northbound Hallway
+You are at the south end of a hallway that leads to the north.  There
+are rooms to the east and west.
+>e
+Sauna
+It is normal room temperature in here.
+>turn dial clockwise
+It is now luke warm in here.  You are perspiring.
+>turn dial clockwise
+It is pretty hot in here.  It is still very comfortable.
+>turn dial clockwise
+It is now very hot.  There is something very refreshing about this.
+You notice your floppy disk beginning to melt.  As you grab for it, the
+disk bursts into flames, and disintegrates.
+>turn dial clockwise
+As the dial clicks into place, you immediately burst into flames.
+
+You are dead.
+You have scored 20 out of a possible 90 points.
+[~]─── rlwrap emacs -batch -l dunnet
+Loading /usr/share/emacs/site-lisp/site-start.d/autoconf-init.el (source)...
+Loading /usr/share/emacs/site-lisp/site-start.d/cmake-init.el (source)...
+Loading /usr/share/emacs/site-lisp/site-start.d/desktop-entry-mode-init.el (source)...
+Loading /usr/share/emacs/site-lisp/site-start.d/erlang-init.el (source)...
+Loading /usr/share/emacs/site-lisp/site-start.d/gforth-init.el (source)...
+Loading /usr/share/emacs/site-lisp/site-start.d/mercurial-site-start.el (source)...
+Loading /usr/share/emacs/site-lisp/site-start.d/rpmdev-init.el (source)...
+
+Dead end
+You are at a dead end of a dirt road.  The road goes to the east.
+In the distance you can see that it will eventually fork off.  The
+trees here are very tall royal palms, and they are spaced equidistant
+from each other.
+There is a shovel here.
+>restore cave-entrance
+Done.
+Cave Entrance
+>l
+Cave Entrance
+The entrance to a cave is to the south.  To the north, a road leads
+towards a deep lake.  On the ground nearby there is a chute, with a sign
+that says ‘put treasures here for points’.
+>n
+Lakefront South
+>n
+Lakefront North
+>n
+Health Club front
+>l
+Health Club front
+You are outside a large building to the north which used to be a health
+and fitness center.  A road leads to the south.
+>n
+Reception area
+>l
+Reception area
+You are in a reception area for a health and fitness center.  The place
+appears to have been recently ransacked, and nothing is left.  There is
+a door out to the south, and a crawlspace to the southeast.
+>se
+Maze
+>se
+Maze
+>down
+Maze
+>nw
+Maze
+>ne
+Weight room
+>l
+Weight room
+You are in an old weight room.  All of the equipment is either destroyed
+or completely broken.  There is a door out to the west, and there is a ladder
+leading down a hole in the floor.
+>e
+You can't go that way.
+>w
+End of N/S Hallway
+>l
+End of N/S Hallway
+You are at the end of a north/south hallway.  You can go back to the south,
+or off to a room to the east.
+>s
+Northbound Hallway
+>s
+You can't go that way.
+>l
+Northbound Hallway
+You are at the south end of a hallway that leads to the north.  There
+are rooms to the east and west.
+>e
+Sauna
+It is normal room temperature in here.
+>w
+Northbound Hallway
+>w
+Receiving room
+>e
+Northbound Hallway
+>e
+Sauna
+It is normal room temperature in here.
+>turn dial clockwise
+It is now luke warm in here.  You are perspiring.
+>turn dial clockwise
+It is pretty hot in here.  It is still very comfortable.
+>turn dial clockwise
+It is now very hot.  There is something very refreshing about this.
+You notice your floppy disk beginning to melt.  As you grab for it, the
+disk bursts into flames, and disintegrates.
+>w
+Northbound Hallway
+>w
+Receiving room
+>l
+Receiving room
+You are in a round, stone room with a door to the east.  There
+is a sign on the wall that reads: ‘receiving room’.
+>e
+Northbound Hallway
+>n
+End of N/S Hallway
+>e
+Weight room
+>l
+Weight room
+You are in an old weight room.  All of the equipment is either destroyed
+or completely broken.  There is a door out to the west, and there is a ladder
+leading down a hole in the floor.
+>d
+Maze button room
+There is a 10 pound weight here.
+>d
+Maze button room
+There is a 10 pound weight here.
+>nw
+Maze
+>u
+Maze
+>se
+Maze
+>d
+Maze
+>nw
+Maze
+>nw
+Reception area
+>l
+Reception area
+You are in a reception area for a health and fitness center.  The place
+appears to have been recently ransacked, and nothing is left.  There is
+a door out to the south, and a crawlspace to the southeast.
+>s
+As you exit the building, you notice some flames coming out of one of the
+windows.  Suddenly, the building explodes in a huge ball of fire.  The flames
+engulf you, and you burn to death.
+
+You are dead.
+You have scored 20 out of a possible 90 points.
+

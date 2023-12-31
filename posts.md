@@ -1,5 +1,6 @@
 ## Table of Contents
 ### Posts (sorted by time)
+- [2023-12-29 : 消失的 emacs dunnet 教程](dunnet)<br>
 <!--
 - [2023-08-11 : MC 知识体系构建的思考](tmc_archive)<br>
 -->
