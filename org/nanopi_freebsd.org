@@ -148,7 +148,7 @@ openssl req -x509 -newkey rsa:4096 -nodes             \
 #+BEGIN_SRC conf
 user "_gmid"
 
-server "freebsd-r2s" {
+server "r2s.local" {
         root "/dongdigua.github.io"
         cert "/usr/local/etc/ssl/gmid/localhost.crt"
         key  "/usr/local/etc/ssl/gmid/localhost.key"
@@ -252,7 +252,11 @@ don't
 我想使用 MediaWiki 主要想尝试 MinecraftWiki [[https://minecraft.fandom.com/wiki/Module:Schematic][Schematic Module]]
 
 * Avahi
-慢
+两个都要开啊, 要不然会很慢的!
+#+BEGIN_EXAMPLE
+avahi_daemon_enable="YES"
+avahi_dnsconfd_enable="YES"
+#+END_EXAMPLE
 
 * nginx
 由于默认的 nginx autoindex 太难看, 我想用 [[https://github.com/aperezdc/ngx-fancyindex][fancyindex]] 但是默认安装里又没带.
@@ -367,6 +371,53 @@ ZFS 这个技术很棒, 但得等我弄到靠谱的盘...
 
 大量 IO 任务还是会阻塞, 可以用 =nq= 排个队列.
 
+* Upgrade to 14.0
+我发现默认安装是带 debug symbol 的, 但对我来说没用, 想取消掉.
+#+BEGIN_EXAMPLE
+The following components of FreeBSD seem to be installed:
+kernel/generic kernel/generic-dbg world/base world/base-dbg
+
+The following components of FreeBSD do not seem to be installed:
+
+Does this look reasonable (y/n)? n
+#+END_EXAMPLE
+[[https://forums.freebsd.org/threads/how-to-remove-debug-components-from-system.57740/#post-329653][How to remove debug components from system]]
+给出的方案是 =rm -rf /usr/lib/debug=, 但我也与下面帖子的人有一样的疑问: 是否在别的地方还有 debug 的东西?
+我下了 base-dbg.txz 和 kernel-dbg.txz 然后 =tar tvf=, 哦, 只有 =/usr/lib/debug/=.
+然后:
+#+BEGIN_EXAMPLE
+The following components of FreeBSD seem to be installed:
+kernel/generic world/base
+
+The following components of FreeBSD do not seem to be installed:
+kernel/generic-dbg world/base-dbg
+#+END_EXAMPLE
+
+* BBR
+#+BEGIN_SRC sh
+ftp ftp.freebsd.org
+tar -C / -zxf src.txz
+cd /usr/src/sys/arm64/conf
+mv ROCKCHIP ROCKCHIP-bbr
+cd /usr/src
+make buildkernel TARGET_ARCH=aarch64
+make installkernel TARGET_ARCH=aarch64 DESTDIR=/root/aarch64
+#+END_SRC
+在 vbox 里 900 多秒就编译完了
+
+ROCKCHIP-bbr
+#+BEGIN_SRC
+#+END_SRC
+
+/etc/src.conf
+#+BEGIN_EXAMPLE
+KERNCONF=ROCKCHIP-bbr
+MALLOC_PRODUCTION=yes
+#+END_EXAMPLE
+
+重启时我心里也没底, 但没发生什么意外.
+
+
 
 * Ref
 - [[https://feng.si/posts/2019/06/freebsd-and-risc-v-the-future-of-open-source-iot-ecosystem/][FreeBSD 与 RISC-V: 开源物联网生态系统的未来]]
@@ -375,3 +426,4 @@ ZFS 这个技术很棒, 但得等我弄到靠谱的盘...
 - 关于 systemd 有个不错的视频: [[https://www.bilibili.com/video/BV1oo4y1x7Nw][【人肉精翻】systemd的悲剧]] [[https://youtu.be/o_AIw9bGogo][YouTube]]
 - [[https://docs.freebsd.org/en/articles/rc-scripting/][Practical rc.d scripting in BSD]]
 - [[https://szclsya.me/zh-cn/posts/storage/zfs-setup/][ZFS 入门指北：规划与创建存储池]]
+- [[https://hostalk.net/posts/tor_bridges_proxy.html][如何优雅地用Tor_下篇]]

@@ -44,3 +44,5 @@ to fight against those exam website
 https://github.com/Devnol/pico-2fa-token
 - 能播放 bad apple
 * start wayland WM/DE in systemd-nspawn
+* 基于频谱可视化的彩虹六号直播方案
+* 用 Bevy 实现华为 watch 3 pro 趣味弹球表盘
