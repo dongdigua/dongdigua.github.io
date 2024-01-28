@@ -78,6 +78,10 @@
     t)))
 (add-to-list 'org-export-filter-final-output-functions 'html-body-id-filter)
 
+(defun my/delete-multiple (src l)
+  (mapcar (lambda (x) (setq src (delete x src))) l)
+  src)
+
 
 (defun myweb-publish ()
      "Publish myweb."
@@ -89,7 +93,7 @@
       "feed.xml"
       "./../"
       "https://dongdigua.github.io"
-      (delete "kernel.html" (delete "404.html" (delete "xmr.html" (delete "index.html" (directory-files "./../" nil ".*\.html$")))))
+      (my/delete-multiple (directory-files "./../" nil ".*\.html$") '("about.html" "my_timeline.html" "kernel.html" "404.html" "xmr.html" "index.html"))
       :title "dongdigua's blog"
       :description "Blog!"
       :builder 'webfeeder-make-rss)
