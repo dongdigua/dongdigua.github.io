@@ -60,6 +60,9 @@ this feature is not compatible with i3, so sway didn't accept the pr
 [[https://github.com/jtheoof/swappy][swappy]] is probably an idea
 I odn't want to make it too complicated,
 just shot the whole screen and edit with GIMP later
+** dark mode
+[[https://gitlab.com/WhyNotHugo/darkman][darkman]]
+but, if you are using swayfx, [[https://github.com/WillPower3309/swayfx/issues/226#issuecomment-1879642217][#226]]
 
 
 * Ref

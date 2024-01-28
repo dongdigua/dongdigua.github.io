@@ -27,7 +27,6 @@ You can always find something magical on the Internet.
 :END:
 #+TAGS: rssable(s) rssub(U) gopher(g)
 ** Single Entries
-*** [[https://www.luogu.com.cn/blog/ivystorm/emacs-adventuredunnet-tong-guan-jiao-cheng][luogu blog: emacs dunnet 教程]]                                   :emacs:
 *** [[https://bheisler.github.io/post/state-of-gpgpu-in-rust/][The State of GPGPU in Rust]]                              :rust:lowlevel:
 *** [[https://secretgeek.github.io/html_wysiwyg/][巧用 CSS 显示 HTML 源码]]                                      :frontend:
 *** [[https://blog.pg999w.top/too-many-channels/][Too many channels in Rust but only one in Go]]                     :rust:
@@ -44,6 +43,8 @@ You can always find something magical on the Internet.
 *** [[https://ifaceless.github.io/2019/10/30/linux-kernel-dev-notes/][Linux Kernel Development 学习与总结]]
 *** [[https://blog.qartis.com/decoding-small-qr-codes-by-hand/][Decoding small QR codes by hand]]
 *** [[https://blog.trailofbits.com/2019/07/02/state/][State of the Art Proof-of-Work: RandomX]]
+*** [[https://kio.dev/blog/mixing-websockets-and-http-endpoints-in-elixir-with-cowboy-plug][Mixing WebSockets & HTTP endpoints in Elixir with Cowboy + Plug]]
+*** [[https://www.cnblogs.com/caoweixiong/p/12213993.html][Nginx——proxy_pass url 反向代理]]
 
 ** [[http://www.paulgraham.com/todo.html][Paul Graham]]
 ** [[http://www.qiusir.com/][qiusir]]                                                            :rssub:
@@ -73,7 +74,7 @@ elixir/erlang大佬, 公众号: HelloElixir
 ** [[https://justine.lol][Justine Tunney]]                                               :c:lowlevel:
 CRAZY!!!!!
 *** [[https://justine.lol/ape.html][actually portable executable]]
-**** [[https://jeskin.net/blog/getting-started-with-cosmopolitan-libc][Getting Started with Cosmopolitan Libc]]
+*** [[https://justine.lol/lambda][Lambda Calculus in 383 Bytes]]
 ** [[http://mindhacks.cn][刘未鹏 | Mind Hacks]]                                                 :wow:
 *** [[http://mindhacks.cn/2006/10/15/cantor-godel-turing-an-eternal-golden-diagonal/][康托尔、哥德尔、图灵——永恒的金色对角线]]
 ** [[https://ploum.net][Ploum]]
@@ -81,6 +82,7 @@ CRAZY!!!!!
 #+BEGIN_QUOTE
 I like to explore how technology impacts society
 #+END_QUOTE
+** [[https://joearms.github.io][Joe Armstrong (tiddlywiki)]]
 
 
 ** [[https://floooh.github.io/][floooh(The Brain Dump)]]                                                :c:
@@ -282,12 +284,26 @@ finger m@f.xosc.org
 It's so cool, especially for testing and reviewing.(from [[https://www.ruanyifeng.com/blog/2023/02/weekly-issue-241.html][ruanyifeng 241]])
 ** [[https://akarin.dev][✨小透明・宸✨ 存在感消失的地方|ω•`)]]
 ** [[https://nichi.co][Nick Cao (#archlinux-cn matrix)]]
-** TODO [[http://akkartik.name/][Kartik Agaram]]
-*** [[http://akkartik.name/post/literate-programming][Literate programming: Knuth is doing it wrong]]
-** TODO [[https://seh.dev][seh.dev]]
+** [[https://seh.dev][seh.dev]]                                                           :plan9:
+** [[https://cs.lmu.edu/~ray/][ray@lmu]]
+** [[https://blog.itswincer.com/][Wincer]]
+和我一样比较喜欢小众的东西
+** [[https://blog.benjojo.co.uk][Benjojo]]
+*** [[https://blog.benjojo.co.uk/post/auditing-github-users-keys][Auditing GitHub users’ SSH key quality]]
+** [[https://zu1k.com][zu1k]]
+** [[https://whynothugo.nl][ben Hugo]]
+author of darkman
+** [[https://cascade.moe][七碳烷烃 Isoheptane (工程师猫娘)]]
+*** [[https://cascade.moe/posts/arch-with-zfs/][在 ZFS 上安装 Arch Linux]]
+** [[https://dataswamp.org/~lich/][lich (dataswamp)]]
+** [[https://nyk.ma][Nayuki's]] 
+*** [[https://nyk.ma/posts/password-store/][pass : 密码管理本不复杂]] 
+*** [[https://nyk.ma/posts/nix-and-nixos/][Nix 和 NixOS：你们安利方法错了]] 
+
+# LABLE
 
 
-** B/HWS/fri3nds
+** Bili/HWS/fri3nds
 *** [[https://shakaianee.top/][社会易姐]]
 *** [[https://blog.yangmame.org/][yanemame]]
 猴哥推荐的
@@ -300,7 +316,7 @@ EvanMeek / B站: 美味的樱桃菌
 *** [[https://sh.alynx.one/][Alynx Zhou]]
 口琴, author of =showmethekey=
 **** [[https://sh.alynx.one/posts/Linux-Mooncake-Jokes/][Linux 用户的月饼食用手册]]                                        :fun:
-**** [[https://sh.alynx.one/posts/Do-Not-Fill-My-Email-with-Silly-Ads/][不要拿愚蠢的广告来污染我的邮箱]]
+**** [[https://sh.alynx.one/posts/YubiKey-GNOME-Smartcard-Login/][YubiKey 和 GNOME 和智能卡登录]]
 *** [[http://www.z.org.cn/][老网虫]]
 *** [[https://yang-qwq.ml][Yang]]
 *** [[http://blog.zhanganzhi.com/][zhanganzhi]]
@@ -309,6 +325,7 @@ EvanMeek / B站: 美味的樱桃菌
 *** [[https://acyanbird.github.io][山奈]]
 *** [[https://fallenbreath.me][狐狸姐姐!]]
 *** [[https://dsy4567.cf/][dsy4567 的小站]]
+*** [[https://litterhougelangley.club/blog][Houge's Madness Blog]]
 
 ** ZhiHu
 *** [[https://zhuanlan.zhihu.com/p/138719668][用Go语言汇编计算fibonacci数列]]                                :lowlevel:
@@ -376,20 +393,17 @@ but fasm don't support debug information (dwarf2)
 **** [[https://youtu.be/WEk_grxrCcg][First Ancient Neural Network in C]]
 intro: he talked about Russian gov and where to flee
 inspiration: Veritasium
-**** [[https://youtu.be/tR6p7ZC7RaU][Terminal To-Do App in Rust]]
-0:10 [[https://www.youtube.com/@baldandbankrupt][bald and bankrupt]], SOVIET, half life II
-0:13 wait what are you doing emacs, this emacs is so weird
-0:14 goto in rust?
-0:52 BLOCKCHAIN? byebye
 **** [[https://youtu.be/h_D4P-KRNKs][HaskellRank #01: just one line!]]
 **** [[https://youtu.be/sFYFuBzu9Ow][mmap syscall]]
 - allocate memory
 - rw files
 - IPC
-**** [[https://youtu.be/9s8vjf_vLaA][SmoothLife on GPU]]
+**** TODO [[https://youtu.be/9s8vjf_vLaA][SmoothLife on GPU]]
 **** [[https://youtu.be/iPrltr1b6Q4][I implemented Goto in OCaml]]
 **** [[https://youtu.be/PgDqBZFir1A][Weird Parts of C you probably never heard of: Hot loading, X macro]]
 **** [[https://youtu.be/b-q4QBy52AA][Web in Native Assembly (Linux x86_64)]]
+**** TODO [[https://youtu.be/n-S9DBwPGTo][Hash Table in C]]
+1:09 competitive programming
 *** [[https://youtu.be/0rJ94rbdteE][Rust 让你感觉像个天才]]
 *** [[https://youtu.be/nfF91Z6fqGk][CMD 登录B站]]
 *** [[https://youtu.be/crnEygp4C6g][Jeff Geerling: FINALLY! A GPU works on the Raspberry Pi!]]
@@ -445,6 +459,8 @@ bringing down BitBucket entirely as it could not
 handle writing through this interplanetary loop.
 #+END_EXAMPLE
 *** [[https://youtu.be/Kn0MxHlima0][My4TH - A discrete CPU Forth computer]]
+*** [[https://youtu.be/tZ5FBBnHfm4][Intro to Competitive Programming]]
+*** [[https://youtu.be/msdymgkhePo][This Website has No Code, or Does it?]]
 
 **  [[https://www.youtube.com/@Computerphile][<C>]]
 *** [[https://youtu.be/BAo5C2qbLq8][Network Time Protocol (NTP)]]
@@ -461,6 +477,7 @@ handle writing through this interplanetary loop.
 
 ** Cyber Security
 *** LiveOverflow
+**** [[https://www.youtube.com/playlist?list=PLhixgUqwRTjxglIswKp9mpkfPNfHkzyeN][Binary Exploitation / Memory Corruption by LiveOverflow]]
 **** [[https://www.youtube.com/playlist?list=PLhixgUqwRTjwvBI-hmbZ2rpkAl4lutnJG][Minecraft HACKED]]
 **** [[https://youtu.be/x_R1DeZxGc0][Discover Vulnerabilities in Intel CPUs!]]
 **** [[https://youtu.be/UeAKTjx_eKA][Student Finds Hidden Devices in the College Library]]
@@ -468,6 +485,7 @@ handle writing through this interplanetary loop.
 **** [[https://youtu.be/oJ6t7AImTdE][CSS Keylogger - old is new again]]
 **** [[https://youtu.be/Sv5OLj2nVAQ][Attacking LLM - Prompt Injection]]
 **** [[https://youtu.be/neWc0H1k2Lc][The Discovery of Zenbleed (CVE-2023-20593)]]
+**** [[https://youtu.be/lAyhKaclsPM][A Vulnerability to Hack The World - CVE-2023-4863 (webp)]]
 *** [[https://youtu.be/2--1ph-4IaY][shit express hacked]]
 *** [[https://www.youtube.com/playlist?list=PL5--8gKSku15NSeLgrZX9hSEnqPTWoSJ0][DT: Privacy & Security]]
 *** [[https://youtu.be/QxNsyrftJ8I][Chris Titus Tech: The Biggest Linux Security Mistakes]]
@@ -530,6 +548,11 @@ When I was trying to download this video, I found that youtube-dl was broken!
 *** [[https://youtu.be/48AOOynnmqU][What Happened To Google Search?]]
 [[https://news.ycombinator.com/item?id=30347719][Hacker News: Google Search Is Dying]]
 *** [[https://youtu.be/k2C4lbbIH0c][How Raspberry Pis are made (Factory Tour)]]
+*** [[https://youtu.be/DXwZ_n80xhk][Korobeiniki]]
+*** [[https://youtu.be/uyrlEE9AV58][90's MTB masters (1992)]]
+*** [[https://youtu.be/x_QmvZRS85U][How To Reply To Negative Comments (90s Tutorial)]]
+*** [[https://youtu.be/-b-BQZi7MvI][Silicon carbide / SiC used to emit photons (homemade LED)]]
+*** [[https://youtu.be/vuvckBQ1bME][How To Make A CPU]]
 
 * r
 :PROPERTIES:
@@ -567,6 +590,9 @@ Huwawei NB!
 ** [[https://lists.gnu.org/archive/html/emacs-devel/2023-01/msg00425.html][Re: Consideration for Rust contributions in Emacs]]
 from emacs-china, about multi-thread
 ** [[https://lists.opensuse.org/archives/list/factory@lists.opensuse.org/thread/KJMMAZFTP2MPKWKFZCYUROZFJ44BNVB5/][Leap Replacement - Results from recent contributor survey]]
+** [[https://lists.debian.org/debian-riscv/2023/07/msg00053.html][debian: riscv64 is now an official architecture]]
+** [[https://lore.kernel.org/lkml/CA+55aFxtD2VYW2R0JwjFkZkvzQzcN7qK3m6ReR+BBXtfyDHx7g@mail.gmail.com/][Re: [GIT] Networking (Linus used Fedora)]]
+** [[https://lore.kernel.org/all/20221130082313.3241517-1-tj@kernel.org/][[PATCHSET RFC] sched: Implement BPF extensible scheduler class]]
 
 * Other
 :PROPERTIES:
@@ -628,3 +654,5 @@ BSD asm
 ** [[https://www.zzzuckerberg.com][Legal Lullabies]]
 ** [[https://11-90-an.github.io/rseditor][rseditor]]
 ** [[https://floooh.github.io/visualz80remix/][Visual Z80 Remix]]
+** [[https://lab.magiconch.com][神奇海螺试验场]]
+** [[https://tilde.team/wiki/other-tildes][tilde.team wiki: other tildes]]

@@ -1,10 +1,11 @@
 #+TITLE: 消失的 emacs dunnet 教程
-#+DATE： <2023-12-29 五>
+#+DATE: <2023-12-29 五>
 
 大概一年多之前, 我玩 dunnet 时搜到了这个 [[https://www.luogu.com.cn/blog/ivystorm/emacs-adventuredunnet-tong-guan-jiao-cheng][emacs - adventure/dunnet 通关教程 - Ivystorm 的博客 - 洛谷博客]].
 这是中文互联网少有的认真写的 dunnet 攻略, 我最欣赏的是那张手绘的地图, 在我能搜到的互联网上, 他是唯一一个.
 但是今天一看, 文章没了, [[https://archive.org][archive.org]] 和 [[https://archive.today][archive.today]] 也没有存档. 还好我当时把地图下下来了, 但放谷歌上也搜不到来源.
 我想, 为了更多人能了解, 我把这张图分享出来吧:
+#+ATTR_HTML: :width 512px
 [[../images/dunnet.png]]
 #+BEGIN_EXAMPLE
 eda0ca4b2ccc1247f66e55a703cb2168606d76926772e4c009991fcc235e9ef3  dunnet.png
@@ -21,9 +22,48 @@ eda0ca4b2ccc1247f66e55a703cb2168606d76926772e4c009991fcc235e9ef3  dunnet.png
 - [[https://github.com/tx/dunnet-map][tx/dunnet-map]]
   只有最开始的岔路口
 
-终于在这个游戏 40 岁的尾巴通关了.
+终于在这个游戏 40 岁的尾巴 (根据地图) 通关了.
+
+...
+
+然后我又想起另一个经典文字冒险游戏 [[https://man.openbsd.org/adventure][adventure(6)]][fn:1], 这个我最早在 Learn Python The Hard Way ex43 看到的.
+这东西在 debian[fn:2] update-alternatives(1) 有 bsdgames 和 open-adventure 两个版本
+esr 写的 [[https://gitlab.com/esr/open-adventure][open-adventure]] 有一个 make_graph.py, 能把生成洞穴的整体或部分地图, 我还整了个 [[https://gitlab.com/esr/open-adventure/-/merge_requests/294][merge request]], 没错只有一个字符 :)
+#+BEGIN_SRC sh
+python make_graph.py -a | dot -Tsvg -o dungeon.svg
+#+END_SRC
+#+ATTR_HTML: :width 512px
+[[../images/adventure.svg]]
+图太大了, 以后慢慢玩吧...
 
 最后, 说一下我的一个想法:
 收藏夹里的东西经常 404, 很多人 (比如我) 没有存档网站的意识, 普通浏览器也不像 [[./usenet_and_cli_browsers.org][offpunk]] 那样有离线功能, 比较小众的网页没了就没了, 没地方找存档去.
 有些人会存档这些网站, 但是怎么联系上是个问题. 如果做一个互联网资源存档交易(悬赏)网站, 让找不到资源的人有地方问, 有资源的人也有动力拿出手中的资源.
 当然会存在伪造的现象, 不过一般来说会对浏览过的网页有个印象吧.
+
+* Footnotes
+[fn:1] 这几天 man.openbsd.org 在维护 [[https://marc.info/?l=openbsd-tech&m=170301840617581&w=2][man.openbsd.org, cvsweb.openbsd.org maintenance]]
+[fn:2] 我在 docker 里跑 debian 的时候没用 https, 然后小米路由器又抽风了 [[https://www.chiphell.com/thread-2556691-1-1.html][chiphell]] [[https://www.bilibili.com/read/cv21298361/][bilibili]]
+@@html:<details>@@
+@@html:<summary>抽风实况</summary>@@
+#+BEGIN_EXAMPLE
+Get:8 http://deb.debian.org/debian trixie/main amd64 libgpm2 amd64 1.20.7-10+b1 [14.2 kB]
+Get:1 http://deb.debian.org/debian trixie/main amd64 libtinfo6 amd64 6.4+20231209-1 [341 kB]
+Ign:1 http://deb.debian.org/debian trixie/main amd64 libtinfo6 amd64 6.4+20231209-1
+Get:7 http://deb.debian.org/debian trixie/main amd64 bsdgames amd64 2.17-30 [966 kB]
+Err:7 http://deb.debian.org/debian trixie/main amd64 bsdgames amd64 2.17-30
+  File has unexpected size (1624 != 966160). Mirror sync in progress? [IP: 192.168.31.1 80]
+  Hashes of expected file:
+   - SHA256:91cc293d80f158093b60ba1dfafcb559a23252497f60c1c05247400bea01524b
+   - MD5Sum:a6ab7ee321eeb45c69bddd9456dec8cb [weak]
+   - Filesize:966160 [weak]
+Get:1 http://deb.debian.org/debian trixie/main amd64 libtinfo6 amd64 6.4+20231209-1 [341 kB]
+Fetched 1187 kB in 15min 52s (1246 B/s)
+E: Failed to fetch http://miwifi.com/diagnosis/index.html  File has unexpected size (1624 != 966160). Mirror sync in progress? [IP: 192.168.31.1 80]
+   Hashes of expected file:
+    - SHA256:91cc293d80f158093b60ba1dfafcb559a23252497f60c1c05247400bea01524b
+    - MD5Sum:a6ab7ee321eeb45c69bddd9456dec8cb [weak]
+    - Filesize:966160 [weak]
+E: Unable to fetch some archives, maybe run apt-get update or try with --fix-missing?
+#+END_EXAMPLE
+@@html:</details>@@

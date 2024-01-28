@@ -1,8 +1,12 @@
-#+TITLE: 个人历史
+#+TITLE: 我的赛博大事记
 #+OPTIONS: toc:nil
 #+TAGS: git(g) blog(b) video(v)
 
+* 2023-2024 寒假
+** I use Arch btw
+
 * 2023 暑假
+** [[./nanopi_freebsd.org][在 NanoPi R2S 上运行 FreeBSD]]
 
 * 2023 春
 ** Fedora 打包                                                        :blog:
@@ -30,6 +34,7 @@
 ** 2022.7 [[https://github.com/dongdigua/AxolotlVM][玩具解释器 AxolotlVM]]                                         :git:
 是我写过最大的一个项目
 ** 2022.8 [[https://github.com/dongdigua/configs/commit/c548f441344313f8b74f2e2bc00003a16677765a][切换到 Sway 窗口管理器]]                                       :git:
+** 注册 Libera.Chat IRC 网络
 
 * 2021-2022 寒假
 ** 2022.2 加入 exercism.org 学习 elixir

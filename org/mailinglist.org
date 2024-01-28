@@ -74,7 +74,7 @@ emm, 看起来还算靠谱, 只是俄文读不明白.
 或许我要弄个 offlineimap, 暂时懒得弄了.
 还有就是切换文件夹不能从 imap 根目录, 得用比如 ==INBOX=
 
-然后我发现 mail.ru 也丢邮件[id:mailru]
+然后我发现 mail.ru 也丢邮件[[#mailru]]
 
 * mailing list
 :PROPERTIES:
@@ -104,7 +104,8 @@ to 并 cc 是对的, 这样如果这是一个有很多回复的 thread, 不会�
 :CUSTOM_ID: mailru
 :END:
 换 OpenMbox.net 了, 希望是最后一次换邮件服务商
-(2023.5) 好吧... 也被墙了
+(2023.5) OpenMbox 不提供 IMAP/SMTP 了
+(2024.1) cock.li 开放注册了竟然! 为了能发邮件需要在浏览器完成 PoW 算法, 这招很聪明地避免了滥用.
 ** [[https://www.mail-archive.com/misc@openbsd.org/msg184084.html][Live stick / cd from official sources]]
 :PROPERTIES:
 :CUSTOM_ID: livecd
