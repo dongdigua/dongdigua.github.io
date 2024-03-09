@@ -42,7 +42,11 @@ var data = [
     "Nice terrain, see you soon!",
     "<ruby>静<rp>(</rp><rt>static</rt><rp>)</rp></ruby>",
     "<a id=quote href=https://cascade.moe/posts/arch-with-zfs/>你说的对，但 ZFS 是一款由 Sun Microsystems 自主研发的一款全新卷系统管理器和文件系统。\n文件系统运行在一个被称作「Linux」的幻想世界，在这里，被 root 选中的存储池将被授予「lz4」，导引存储之力。\n你将扮演一位名为「系统管理员」的神秘角色，在自由的 zpool create 中邂逅功能各异、feature 独特的 vdevs 们，\n和他们一起「state: DEGRADED」，找回失散的数据集——同时，逐步发掘 「BtrFS」 的真相……</a>",
-    ":: Starting full system upgrade...\n  there is nothing to do"
+    ":: Starting full system upgrade...\n  there is nothing to do",
+    "还是PVP大佬",
+    "橙白橙绿白蓝蓝白绿棕白棕",
+    "<a id=quote href=https://www.huorong.cn/info/17082473711122.html>您可能是正版软件的受害者</a>",
+    "你可以逃避现实，但你无法逃避\"逃避现实\"的后果。"
 ];
 
 var index = Math.floor((Math.random() * data.length));

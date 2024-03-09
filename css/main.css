@@ -2,17 +2,22 @@
 https://github.com/rgb-24bit/org-html-theme-list org-joshua
 */
 
-@font-face{ /* FROM isopenbsdsecu.re */
+@font-face { /* FROM isopenbsdsecu.re */
     font-family: miriam libre;
     font-display: auto;
     src: url(https://cdn.jsdelivr.net/npm/@fontsource/miriam-libre/files/miriam-libre-all-400-normal.woff) format('woff');
     font-style: normal;
 }
 
+@font-face { /* FROM https://jabberwocky.ca */
+    font-family: Recursive;
+    src: url(https://fonts.gstatic.com/s/recursive/v38/8vJN7wMr0mhh-RQChyHEH06TlXhq_gukbYrFMk1QuAIcyEwG_X-dpEfaE5YaERmK-CImKsvxvU-MXGX2fSqasNfUvz2xbXfn1uEQadCCk317tQ0.woff2)
+}
+
 @media all
 {
     body {
-        font-family: "Source Serif", "Helvetica Neue", "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, sans-serif !important;
+        font-family: "Recursive", "Source Serif", "Helvetica Neue", "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, sans-serif !important;
         font-size: 18px;
         /* line-height: 21px; */
         /* FROM https://github.com/ZenLian/ZenLian.github.io/blob/zola/themes/cattery/static/css/style.css */
