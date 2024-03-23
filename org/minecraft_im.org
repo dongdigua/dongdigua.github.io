@@ -1,0 +1,17 @@
+#+TITLE: Wayland 下在 Minecraft (1.12) 里输入中文
+#+DATE: <2024-02-29 四>
+
+TL;DR [[https://github.com/Yesterday17/KokoaLinux][KokoaLinux]]
+
+我玩一个 1.12.2 原版服务器，还是此服的前服主。
+或曰：现在都 2024 年了，怎么还玩上古版本？答曰：利用特性获取某些（下落）方块，如基岩，末地传送门，地狱传送门，水等，以及操控 RNG。
+但是，在 2017 年 1.12.2 发布时，Wayland 还不是很普及，所以 bugjang 没有做这方面的支持。
+其实当时也有解决方案，不过也是在 X 下：[[https://blog.lilydjwg.me/2015/5/17/input-chinese-to-minecraft-in-linux.93167.html][依云's Blog: Linux 下在 Minecraft 里输入中文]]，Wayland 下类似的 *dotool 只能模拟按键输入，而不能输入 UTF-8 字符。
+如今日常使用 sway，我日常使用的其他程序[[https://github.com/swaywm/sway/pull/7226][几乎都能用输入法了]]，就 MC 不行。
+想要说中文还是有办法，用 emacs 中的输入法拷贝过去，但是一是费劲，二是告示排等无法输入。所以我能不说中文就不说中文，以至于服务器的新人会以为我是外国人……
+
+今天逛（考古） ArchLinuxCN 论坛，发现个令人眼前一亮的帖子：[[https://bbs.archlinuxcn.org/viewtopic.php?id=13945][MC中无法使用输入法]]，此人使用 hyprland (hyper means high :) 正好符合我的现状！
+[[https://github.com/Yesterday17/KokoaLinux][KokoaLinux]] 是一个 Forge mod，就扔进 mods 文件夹里就行。
+
+还有一个小问题，我的 sway 是用的 =sway-git= ，因为上述的输入法 PR 还没有进入 release，但是现在 [[https://aur.archlinux.org/packages/sway-git#comment-952005][xwayland 的 OpenGL 加速坏了]]……
+看我博客的未来人应该能等到这些修复合入稳定版，那时应该问题不大。
