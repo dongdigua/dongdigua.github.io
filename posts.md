@@ -3,9 +3,7 @@
 - [2024-02-29 : Wayland 下在 Minecraft (1.12) 里输入中文](minecraft_im)<br>
 - [2024-02-14 : 智能闹钟不如随身听不如派](alarm_clock)<br>
 - [2023-12-29 : 消失的 emacs dunnet 教程](dunnet)<br>
-<!--
-- [2023-08-11 : MC 知识体系构建的思考](tmc_archive)<br>
--->
+<!-- - [2023-08-11 : MC 知识体系构建的思考](tmc_archive)<br> -->
 - [2023-07-25 : Run a Lua Demo](lua_demo)<br>
 - [2023-07-10 : 在 NanoPi R2S 上运行 FreeBSD](nanopi_freebsd)<br>
 - [2023-06-08 : Org: Disable Gnus Loading when Org is Loaded](gmi/org_load_gnus_disable.gmi.txt)<br>
@@ -20,35 +18,27 @@
 - [2023-01-02 : 2023 了, 试试 emacs 29](emacs29_2023)<br>
 - [2022-12-19 : Fix TTY after Fedora 37 Upgrade](fix_tty)<br>
 - [2022-12-02 : 狗日的腾讯会议](damn_tencent_meeting)<br>
-上网课有感而发
 - [2022-11-20 : New Blog Architecture](new_blog_arch)<br>
-mess -> branch -> CI
 - [2022-11-13 : 记一次帮老师修U盘](recover_udisk)<br>
 - [2022-11-04 : Clear Kernel Compile Error? Fix It](clear_kernel_compile_fix)<br>
 - [2022-10-29 : Gentoo LLVM\_TARGETS not Working?](gentoo_llvm_targets)<br>
-- [2022-09-29 : CentOS/Fedora 不同的配置默认都安装了什么软件](anaconda_kickstarts)<br>
-for [COSSIG](https://www.cossig.org)
+- [2022-09-29 : CentOS/Fedora 不同的配置默认都安装了什么软件 (cossig.org)](anaconda_kickstarts)<br>
 - [2022-09-11 : moonboos, 懂的都懂](moonboos)<br>
 - [2022-08-17 : MGLNDD scans](weird_mglndd)<br>
 - [2022-07-08 : My gnome config](my_gnome_config)<br>
 - [2022-07-06 : 我对 SciCraft 更新1.19的看法](gmi/scicraft_update.gmi.txt)<br>
 - [2022-06-27 : 推荐 everforest 主题](recommend_everforest_theme)<br>
-any kind of contribution is welcome
-- [2022-06-18 : 我对显示 IP 属地的看法](bili_ip)<br>
+<!-- - [2022-06-18 : 我对显示 IP 属地的看法](bili_ip)<br> -->
 
 ---
 
 ### Long Term Update
+- [Arch 滚挂二三事](arch_syyu)<br>
 - [study4fun archives](study4fun)<br>
-- [Gopher/Gemini reactions](gmi/re.gmi.txt)<br>
 - [Gopher/Gemini collections, a quiet web](gmi/collections.gmi.txt)<br>
-- [Random Ideas](ideas)<br>
-画大饼
 - [Play with Swaywm and Nixos (solutions)](wayland)<br>
-if you have some problem with sway, you can probably find solution here
 - [(Editor) Cheatsheet](cheatsheet)<br>
-- [Internet Collections](internet_collections)<br>
-博客, YouTube 等收集
+- [Internet Collections (博客, YouTube 等收集)](internet_collections)<br>
 
 ---
 

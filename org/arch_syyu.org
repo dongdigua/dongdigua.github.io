@@ -1,0 +1,34 @@
+#+TITLE: Arch 滚挂二三事
+#+DATE: <2024-03-24 日>
+#+OPTIONS: \n:t
+
+今儿早 Arch 滚挂了，遂打算开一个长期更新主题，记录计算机维修艺术。
+
+* 2024-03-24
+一周没滚 Arch，早上八点多一滚，挂了！首先是更新时报错：
+#+BEGIN_EXAMPLE
+[2024-03-24T08:30:37+0800] [ALPM] running 'gdk-pixbuf-query-loaders.hook'...
+[2024-03-24T08:30:37+0800] [ALPM-SCRIPTLET] /usr/bin/gdk-pixbuf-query-loaders: /usr/lib/libmount.so.1: version `MOUNT_2_40' not found (required by /usr/lib/libgio-2.0.so.0)
+[2024-03-24T08:30:37+0800] [ALPM] running 'gio-querymodules.hook'...
+[2024-03-24T08:30:37+0800] [ALPM] running 'glib-compile-schemas.hook'...
+[2024-03-24T08:30:37+0800] [ALPM-SCRIPTLET] /usr/bin/glib-compile-schemas: /usr/lib/libmount.so.1: version `MOUNT_2_40' not found (required by /usr/lib/libgio-2.0.so.0)
+[2024-03-24T08:30:37+0800] [ALPM] running 'gtk-update-icon-cache.hook'...
+[2024-03-24T08:30:37+0800] [ALPM-SCRIPTLET] gtk-update-icon-cache: /usr/lib/libmount.so.1: version `MOUNT_2_40' not found (required by /usr/lib/libgio-2.0.so.0)
+#+END_EXAMPLE
+然后一堆程序报错：
+#+BEGIN_EXAMPLE
+/usr/lib/libmount.so.1: version `MOUNT_2_40' not found (required by /usr/lib/libgio-2.0.so.0)
+#+END_EXAMPLE
+重启直接进不去桌面了，也连不上网了（NetworkManager）。
+我手里的 Arch 镜像还因为太老被我从 Ventoy 删掉了（没错，作为 Arch 用户这很尴尬），
+我就启动原来的 Fedora 系统下了个最新的 =util-linux-libs= 包替换掉老的 =libmount.so= （这个操作不要学，有危险，可以直接安装本地包），能联网了，再更新一遍。
+但 gdm 进去白屏 =:(= 脸，nautilus 也不能启动，log 都指向了 gsettings schema，
+所以就重装任意一个 gnome 程序（比如 nautilus），pacman 就会运行相应的 hook。
+
+这次滚挂的原因我猜可能国内源同步的时候 =glib2= 已经更新了，但 =util-linux-libs= 还没，然后恰好被我赶上了……
+#+BEGIN_EXAMPLE
+util-linux-libs 2.40rc2-1 Last Updated: 	2024-03-23 23:34 UTC
+glib2 2.80.0-2            Last Updated: 	2024-03-23 22:55 UTC
+#+END_EXAMPLE
+
+

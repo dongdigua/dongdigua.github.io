@@ -7,3 +7,4 @@
 - Minecraft JE 技术生存 (MC 正统在 JE!)
 - 骑公路车的
 - Elixir > Rust > Python
+- 不是很喜欢扁平化设计
