@@ -4,12 +4,6 @@
 #+OPTIONS: toc:2
 #+HTML_HEAD_EXTRA: <link rel="shortcut icon" href=/images/pufferfish.png>
 
-又一篇中文文章
-这个文章可能是我写过最长的了 (internet_collections 不算)
-请不要不知好歹地转载!
-地址: dongdigua.github.io/whatif_openbsd
-base64: ZG9uZ2RpZ3VhLmdpdGh1Yi5pby93aGF0aWZfb3BlbmJzZA==
-
 #+BEGIN_EXAMPLE
                                      _
                                     (_)

@@ -45,16 +45,18 @@ You can always find something magical on the Internet.
 *** [[https://blog.trailofbits.com/2019/07/02/state/][State of the Art Proof-of-Work: RandomX]]
 *** [[https://kio.dev/blog/mixing-websockets-and-http-endpoints-in-elixir-with-cowboy-plug][Mixing WebSockets & HTTP endpoints in Elixir with Cowboy + Plug]]
 *** [[https://www.cnblogs.com/caoweixiong/p/12213993.html][Nginx——proxy_pass url 反向代理]]
+*** [[https://www.cnblogs.com/fly-fish/archive/2011/08/16/2140695.html][如何看懂man page？]]
+*** [[https://manas.tech/blog/2023/10/25/approaching-unconventional-problems][How to find a lost phone in a no-cell-coverage camping site]]
 
 ** [[http://www.paulgraham.com/todo.html][Paul Graham]]
 ** [[http://www.qiusir.com/][qiusir]]                                                            :rssub:
-*** [[http://www.qiusir.com/wp-content/plugins/download-monitor/download.php?id=The+Better+Butterfly+Theorems+.pdf][TheBetterButterflyTheorems]]
 ** [[http://xahlee.info][XahLee]]
 ** [[http://www.catb.org/esr/][Eric S. Raymond]]
 ** [[http://www.yinwang.org][当然我在扯淡]]
 *** [[https://docs.huihoo.com/homepage/shredderyin/index.html][王垠的个人主页]]
 ** [[http://ruanyifeng.com/blog/][阮一峰]]                                                            :rssub:
 ** [[https://blog.lilydjwg.me/][依云]]                                                              :rssub:
+*** [[https://blog.lilydjwg.me/2017/2/28/if-i-could-go-back-to-my-teenage.208794.html][如果重回到学生时代，我想这样做]]
 ** [[http://www.hackdig.com/][黑客技术]]                                                           :hack:
 really good website, butt, no rss
 ** [[https://bford.info][Bryan Ford]]
@@ -192,7 +194,6 @@ Written with Vim and Emacs. A member of Linux Club of Peking University. [[https
 with cat-v-like sidebar style
 *** [[https://vimacs.wehack.space/Mail-vs-IM.htm][谈电子邮件和即时通讯]]
 **** [[https://citizenlab.ca/2016/11/wechat-china-censorship-one-app-two-systems/][微信一app两制]]
-*** [[https://vimacs.wehack.space/notes/GFW.htm][GFW]]
 ** [[http://www.matrix67.com/blog/][Matrix67]]                                                           :math:
 The Aha Moments
 *** [[http://www.matrix67.com/blog/archives/6039][用三段 140 字符以内的代码生成一张 1024×1024 的图片]]               :wow:
@@ -299,6 +300,9 @@ author of darkman
 ** [[https://nyk.ma][Nayuki's]] 
 *** [[https://nyk.ma/posts/password-store/][pass : 密码管理本不复杂]] 
 *** [[https://nyk.ma/posts/nix-and-nixos/][Nix 和 NixOS：你们安利方法错了]] 
+** [[https://www.gd1214b.icu][gd1214b]]
+>‍‌⁭⁫⁪‌‍⁮<
+** [[https://soha.moe][海上的宫殿]]
 
 # LABLE
 
@@ -356,6 +360,7 @@ use the power of tor:
 #+END_SRC
 *** [[https://www.zhihu.com/question/306745383][ubuntu重启变成了debian怎么办?]]
 U boom tu
+*** [[https://www.zhihu.com/question/20034686][计算机领域有哪些经典的典故或笑话？]]
 
 
 * YouTube (没有账号, 这就是我的收藏夹)
@@ -398,7 +403,7 @@ inspiration: Veritasium
 - allocate memory
 - rw files
 - IPC
-**** TODO [[https://youtu.be/9s8vjf_vLaA][SmoothLife on GPU]]
+**** [[https://youtu.be/9s8vjf_vLaA][SmoothLife on GPU]]
 **** [[https://youtu.be/iPrltr1b6Q4][I implemented Goto in OCaml]]
 **** [[https://youtu.be/PgDqBZFir1A][Weird Parts of C you probably never heard of: Hot loading, X macro]]
 **** [[https://youtu.be/b-q4QBy52AA][Web in Native Assembly (Linux x86_64)]]
@@ -442,6 +447,8 @@ quote: [[https://youtu.be/aWSQQUXmVVs?t=376][this operating system, the operatin
 0:18 if you start seeing a whole bunch of tesla streams on my channel tomorrow you guys know what happened
 *** [[https://youtu.be/GWYhtksrmhE][how NASA writes space-proof code]]
 *** [[https://youtu.be/dsHyUgGMht0][How GitHub's Database Self-Destructed in 43 Seconds]]
+@@html:<details>@@
+@@html:<summary>click to open</summary>@@
 #+BEGIN_EXAMPLE
 Come back in 2047 when BitBucket's
 lunar data center failure causes extreme latency
@@ -458,9 +465,11 @@ of services running on Earth and eventually
 bringing down BitBucket entirely as it could not
 handle writing through this interplanetary loop.
 #+END_EXAMPLE
+@@html:</details>@@
 *** [[https://youtu.be/Kn0MxHlima0][My4TH - A discrete CPU Forth computer]]
 *** [[https://youtu.be/tZ5FBBnHfm4][Intro to Competitive Programming]]
 *** [[https://youtu.be/msdymgkhePo][This Website has No Code, or Does it?]]
+*** [[https://youtu.be/7taNCDMpPvc][I Read The Entire Bash Reference Manual (8.5h)]]
 
 **  [[https://www.youtube.com/@Computerphile][<C>]]
 *** [[https://youtu.be/BAo5C2qbLq8][Network Time Protocol (NTP)]]
@@ -497,6 +506,7 @@ even caught by police when he was a child
 *** [[https://youtu.be/eTcVLqKpZJc][PwnFunction: Dangerous Code Hidden in Plain Sight for 12 years]] in [[./wayland.org::#pkexec][pkexec]]
 *** [[https://youtu.be/GEbn3nHyKnA][How One Line of Code Almost Blew Up the Internet]]
 *** [[https://youtu.be/aNEqC-U5tHM][Malware Development (1/2)]]
+*** [[https://youtu.be/wTl4vEednkQ][stacksmashing: Breaking Bitlocker - Bypassing the Windows Disk Encryption]]
 
 ** Math
 *** [[https://youtu.be/KufsL2VgELo][Group Theory]]
@@ -564,10 +574,13 @@ When I was trying to download this video, I found that youtube-dl was broken!
 *** [[https://www.reddit.com/r/unixporn/comments/b83fex/win7_my_first_rice/][win7 :)]]
 *** [[https://www.reddit.com/r/unixporn/comments/wtvj46/kde_cherry_blossoms/][[KDE] Cherry Blossoms]]
 *** [[https://www.reddit.com/r/unixporn/comments/ujjok6/chalkboard_btw_i_use_fedora_3/][[chalkboard] Btw i use fedora <3]]
+*** [[https://www.reddit.com/r/unixporn/comments/1aers96/kde_laptop_stuff/][[kde] laptop stuff (very pink)]]
+*** [[https://www.reddit.com/r/unixporn/comments/1afiymb/hyprland_wip_soot_sprites_i_love_them/][[hyprland] wip soot sprites (I love them)]]
 ** [[https://www.reddit.com/r/ProgrammerHumor][ProgrammerHumor]]
 *** [[https://www.reddit.com/r/ProgrammerHumor/comments/wpnvtg/microsoft_visual_rust_2018/][Microsoft Visual Rust]]
 *** [[https://www.reddit.com/r/ProgrammerHumor/comments/wsw78u/regex_be_like/][MC enchant: regex be like...]]
 *** [[https://www.reddit.com/r/ProgrammerHumor/comments/mr8gqx/new_episode_of_electricianhumor/][New episode of ElectricianHumor]]
+** [[https://www.reddit.com/r/kde/comments/1599vc4/kde_on_windows_im_not_joking/][KDE on Windows (I'm not joking)]]
 
 * Mail/Kernel/BZ
 :PROPERTIES:
@@ -593,6 +606,7 @@ from emacs-china, about multi-thread
 ** [[https://lists.debian.org/debian-riscv/2023/07/msg00053.html][debian: riscv64 is now an official architecture]]
 ** [[https://lore.kernel.org/lkml/CA+55aFxtD2VYW2R0JwjFkZkvzQzcN7qK3m6ReR+BBXtfyDHx7g@mail.gmail.com/][Re: [GIT] Networking (Linus used Fedora)]]
 ** [[https://lore.kernel.org/all/20221130082313.3241517-1-tj@kernel.org/][[PATCHSET RFC] sched: Implement BPF extensible scheduler class]]
+** TODO [[https://lists.suckless.org/dev/1409/23497.html][[suckless-dev] [RFC] Design of a vim like text editor]]
 
 * Other
 :PROPERTIES:
@@ -650,9 +664,12 @@ BSD asm
 ** [[https://github.com/torvalds/linux/pull/17][torvalds: I don't do github pull requests]]
 ** [[https://cohost.org/blackle/post/42994-div-style-pointer][CSS 的机械装置 (from ruanyifeng 252)]]
 ** [[https://oldcompcz.github.io/jgs/][jgs ASCII art]]
-** TODO [[http://retrobase.cn][retrobase 识旧知新]]
+** [[http://retrobase.cn][retrobase 识旧知新]]
 ** [[https://www.zzzuckerberg.com][Legal Lullabies]]
 ** [[https://11-90-an.github.io/rseditor][rseditor]]
 ** [[https://floooh.github.io/visualz80remix/][Visual Z80 Remix]]
 ** [[https://lab.magiconch.com][神奇海螺试验场]]
 ** [[https://tilde.team/wiki/other-tildes][tilde.team wiki: other tildes]]
+** [[https://artsey.io][ARTSEY one-handed keyboard system]]
+** [[https://joakimthorsen.github.io/MCPropertyEncyclopedia][MCPropertyEncyclopedia]]
+** [[https://0xinfection.github.io/reversing][Reverse Engineering For Everyone!]]

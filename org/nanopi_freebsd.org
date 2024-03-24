@@ -179,10 +179,6 @@ rm index.gmi
 git checkout -- index.gmi
 #+END_SRC
 
-* pf
-我唯一能控制机器的方式就是 SSH, 使用 pf 可能会有危险.
-反正服务器是在内网, 只有少数服务通过转发暴露出去.
-
 * samba
 弄着个电子垃圾 64G U盘, 想架个 Samba
 要安好多软件包, 果断开 jail
