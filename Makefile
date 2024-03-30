@@ -1,7 +1,8 @@
-all: org posts gmi
+all: describe org posts gmi
 
+.PHONY: org
 org:
-	cd org && make
+	cd org; $(MAKE)
 
 posts:
 	pandoc posts.md --css=css/everforest.css -s -o posts.html
@@ -10,7 +11,6 @@ gmi:
 	misc/mdlist2gmi.py > posts.gmi
 
 describe:
-	git describe --tags HEAD
 	sed -i "s/\$$v\\$$/\$$v: $$(git describe --tags HEAD)\\$$/g" index.html
 
 clean:

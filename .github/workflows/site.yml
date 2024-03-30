@@ -19,7 +19,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           fetch-depth: 30
           fetch-tags: true
@@ -27,23 +27,18 @@ jobs:
       - name: Install Emacs
         uses: purcell/setup-emacs@master
         with:
-          version: 28.2
+          version: 29.3
 
-      - name: Prepare
+      - name: make
         run: |
-          curl "https://raw.githubusercontent.com/dongdigua/configs/main/.tmux.conf" -o misc/tmux.conf
-
-      - name: Build with Org
-        run: |
-          make describe
-          cd org
-          make clean
+          sudo apt-get -q install pandoc
           make
-          cd ..
+          curl "https://raw.githubusercontent.com/dongdigua/configs/main/.tmux.conf" -o misc/tmux.conf
           ./patches/txt.sh
+          ./patches/color.sh
 
       - name: Setup Pages
-        uses: actions/configure-pages@v2
+        uses: actions/configure-pages@v5
 
       - name: Build with Jekyll
         uses: actions/jekyll-build-pages@v1
@@ -51,18 +46,8 @@ jobs:
           source: ./
           destination: ./_site
 
-      - name: Post-Jekyll Build
-        run: |
-          tree
-          cd _site
-          sudo ./patches/color.sh
-          sudo apt install pandoc
-          # use jekyll to check link but actually use pandoc
-          sudo pandoc posts.md --css=css/everforest.css -s -o posts.html
-
-
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
+        uses: actions/upload-pages-artifact@v3
 
   deploy:
     environment:
@@ -73,5 +58,5 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v1
+        uses: actions/deploy-pages@v4
 
