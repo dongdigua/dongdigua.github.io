@@ -3,4 +3,5 @@
 *.org linguist-vendored=false
 *.org linguist-detectable=true
 
-index.gmi filter=dater
+index.gmi filter=myversion
+index.html filter=myversion

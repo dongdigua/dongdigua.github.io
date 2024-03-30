@@ -1,4 +1,5 @@
 #+TITLE: about
+#+OPTIONS: \n:nil
 
 - 哺乳纲 灵长目 人科 人属 智人
 - I use Arch btw
@@ -8,3 +9,10 @@
 - 骑公路车的
 - Elixir > Rust > Python
 - 不是很喜欢扁平化设计
+
+-----
+
+[[https://licensebuttons.net/l/by-nc-sa/4.0/88x31.png]]
+[[../images/badges/made4.gif]]
+[[../images/badges/Arch.png]]
+[[https://www.freebsd.org/gifs/power-button.gif]]

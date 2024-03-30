@@ -20,4 +20,4 @@
 => https://dongdigua.github.io https site mirror
 
 
-$Date$
+$v$

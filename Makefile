@@ -9,6 +9,10 @@ posts:
 gmi:
 	misc/mdlist2gmi.py > posts.gmi
 
+describe:
+	git describe --tags HEAD
+	sed -i "s/\$$v\\$$/\$$v: $$(git describe --tags HEAD)\\$$/g" index.html
+
 clean:
 	rm posts.html
 	rm posts.gmi
