@@ -9,6 +9,7 @@
 - 骑公路车的
 - Elixir > Rust > Python
 - 不是很喜欢扁平化设计
+- GNOME > KDE
 
 -----
 

@@ -10,7 +10,7 @@
 - 带上手套防止腐蚀, 用螺丝刀和弯头镊子 (文具盒里随手使用) 撬开外壳
 - 缝合了一个 OpenBSD 镜像, 用 Arduino Uno 当串口连接 UART, 输出毫无意义的字符
 - 运行 OpwnWRT, 依旧输出垃圾
-- 运行 Armbian, 依旧输出垃圾, 弹了一会琴后开始思考是不是串口出错了
+- 运行 Armbian, 依旧输出垃圾, 想到是不是串口出错了
 - 翻箱倒柜找到一个 USB Mini-B 线用于 山寨版 Arduino Nano (CH340 芯片)
 - 重新烧写 OpenBSD 镜像, 成功启动, 但键盘无法输入, 无法安装
 - 缝合 FreeBSD 镜像, 成功启动, ssh 登录 (user/passwd:freebsd), 耶!
@@ -33,15 +33,11 @@ doas dd if=root.img of=/dev/sda
 
 * 开始
 - 中国用户第一件事先换源: [[https://mirror.bjtu.edu.cn/help/freebsd/][bjtu FreeBSD 镜像]]
-- 然后像之前 [[./whatif_openbsd.org][OpenBSD]] 一样还是装机必备软件, 因为是服务器所以没几个
-#+BEGIN_SRC sh
-pkg install neofetch oksh sudo git fzf frp
-#+END_SRC
 - 改密码, =/usr/local/etc/sudoers=
   不用 doas 因为 persist 选项只在 OpenBSD 上可用
 - 主机名, 路由器配置 DHCP 静态 IP, 本机 =/etc/hosts= 加入主机名解析
 #+BEGIN_SRC sh
-hostname freebsd-r2s
+hostname r2s
 vi /etc/rc.conf
 #+END_SRC
 - 改 shell 配置, [[https://github.com/dongdigua/configs/blob/main/.profile.in][基本还是之前那样]]
@@ -112,10 +108,6 @@ sendmail_msp_queue_enable="NO"
 #+BEGIN_SRC sh
 chflags -R noschg file/folder
 #+END_SRC
-
-* microbin
-足够 micro, 不需要 jail
-终于[[https://cgit.freebsd.org/ports/commit/?id=3083ea7074cf7d5dce8ad64ea6779e824c28bde0][更新 2.0]] 了, 虽然没到 quarterly, 但可以 =pkg add <url>= 安装
 
 * Gemini
 曾经我的 Gemini 是用 Docker 跑在朋友的服务器上, 但是一出问题调试很费劲.
@@ -310,7 +302,7 @@ aur.archlinux.org  #07b
  "</style>"
 #+END_SRC
 
-我甚至还可以把 IPv6, SSL, MAIL, STREAM 的功能通通去掉, 因为我的环境用不到.
+我甚至还可以把 SSL, MAIL, STREAM 的功能通通去掉, 因为我的环境用不到.
 
 * ZFS?
 之前我只是在唯一的U口上插了一个 32G U盘, 但随着我在服务器上放的东西越来越多并越来越依赖它,

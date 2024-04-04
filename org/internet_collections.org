@@ -189,7 +189,7 @@ funny byte
 Welcome to the darkest dungeon of kernal
 *** [[https://kernal.eu/posts/linuxfx/][Dumping Linuxfx customers]]                                         :fun:
 A Windows-like distro including the spyware and activation
-** [[https://vimacs.wehack.space/laptop/][vimacs]]
+** [[https://vimacs.wehack.space][vimacs]]
 Written with Vim and Emacs. A member of Linux Club of Peking University. [[https://beijinglug.club/wiki/doku.php?id=blug-canary-3][blug]] signer
 with cat-v-like sidebar style
 *** [[https://vimacs.wehack.space/Mail-vs-IM.htm][谈电子邮件和即时通讯]]
@@ -198,7 +198,7 @@ with cat-v-like sidebar style
 The Aha Moments
 *** [[http://www.matrix67.com/blog/archives/6039][用三段 140 字符以内的代码生成一张 1024×1024 的图片]]               :wow:
 *** [[http://localhost-8080.com/][❤ localhost-8080]]
-** TODO [[https://www.orangeclk.com][半瓶]]
+** [[https://www.orangeclk.com][半瓶]]
 *** [[https://www.orangeclk.com/2022/08/22/eternal-september-community-locals/][社区本地人与永恒的九月(Eternal September)]]
 #+BEGIN_QUOTE
 几乎所有大众互联网社区都难逃此宿命。要想避免永恒九月，社区必须要足够克制，有节奏地引导新人加入。
@@ -243,8 +243,8 @@ int function(void) {
 ** [[https://www.nayuki.io][Project Nayuki]]
 *** [[https://www.nayuki.io/page/a-fundamental-introduction-to-x86-assembly-programming][A fundamental introduction to x86 assembly prorgamming]]
 *** [[https://www.nayuki.io/page/i-type-in-dvorak][Dvorak FAQ]]
-** [[https://bt.ht][bt.ht]]
-** TODO [[https://hsingko.pages.dev][hsingko]]
+** [[https://btxx.org][bt]]
+** [[https://hsingko.pages.dev][hsingko]]
 *** [[https://hsingko.pages.dev/post/2022/06/17/i-am-not-my-brain/][我不等于我的大脑]]
 *** [[https://hsingko.pages.dev/post/2022/04/27/why-blog/][写博客至今的小结]]
 ** [[http://ewontfix.com][EWONTFIX - a blog of bugs]]
@@ -303,6 +303,8 @@ author of darkman
 ** [[https://www.gd1214b.icu][gd1214b]]
 >‍‌⁭⁫⁪‌‍⁮<
 ** [[https://soha.moe][海上的宫殿]]
+** [[https://breq.dev][breq.dev]]
+*** [[https://breq.dev/projects/eightyeightthirtyone][eightyeightthirty.one - A snapshot of the social graph of 88x31 badges]]
 
 # LABLE
 
@@ -563,6 +565,7 @@ When I was trying to download this video, I found that youtube-dl was broken!
 *** [[https://youtu.be/x_QmvZRS85U][How To Reply To Negative Comments (90s Tutorial)]]
 *** [[https://youtu.be/-b-BQZi7MvI][Silicon carbide / SiC used to emit photons (homemade LED)]]
 *** [[https://youtu.be/vuvckBQ1bME][How To Make A CPU]]
+*** TODO [[https://youtu.be/oNXzMBA9VU4][Windows XP Installation Music]]
 
 * r
 :PROPERTIES:
@@ -602,11 +605,11 @@ Huwawei NB!
 ** [[https://lore.kernel.org/lkml/63efd7ab.170a0220.3442b.6609@mx.google.com/][Linus: If you cannot explain a merge, then JUST DON'T DO IT]]
 ** [[https://lists.gnu.org/archive/html/emacs-devel/2023-01/msg00425.html][Re: Consideration for Rust contributions in Emacs]]
 from emacs-china, about multi-thread
-** [[https://lists.opensuse.org/archives/list/factory@lists.opensuse.org/thread/KJMMAZFTP2MPKWKFZCYUROZFJ44BNVB5/][Leap Replacement - Results from recent contributor survey]]
 ** [[https://lists.debian.org/debian-riscv/2023/07/msg00053.html][debian: riscv64 is now an official architecture]]
 ** [[https://lore.kernel.org/lkml/CA+55aFxtD2VYW2R0JwjFkZkvzQzcN7qK3m6ReR+BBXtfyDHx7g@mail.gmail.com/][Re: [GIT] Networking (Linus used Fedora)]]
 ** [[https://lore.kernel.org/all/20221130082313.3241517-1-tj@kernel.org/][[PATCHSET RFC] sched: Implement BPF extensible scheduler class]]
-** TODO [[https://lists.suckless.org/dev/1409/23497.html][[suckless-dev] [RFC] Design of a vim like text editor]]
+** [[https://lists.suckless.org/dev/1409/23497.html][[suckless-dev] [RFC] Design of a vim like text editor]]
+** [[https://www.openwall.com/lists/oss-security/2024/03/29/4][oss-security - backdoor in upstream xz/liblzma leading to ssh server compromise]]
 
 * Other
 :PROPERTIES:
