@@ -46,7 +46,8 @@ var data = [
     "还是PVP大佬",
     "橙白橙绿白蓝蓝白绿棕白棕",
     "<a id=quote href=https://www.huorong.cn/info/17082473711122.html>您可能是正版软件的受害者</a>",
-    "你可以逃避现实，但你无法逃避\"逃避现实\"的后果。"
+    "你可以逃避现实，但你无法逃避\"逃避现实\"的后果。",
+    " I'm async, I like the video before it is finished loading."
 ];
 
 var index = Math.floor((Math.random() * data.length));

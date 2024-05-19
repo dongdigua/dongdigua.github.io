@@ -1,5 +1,6 @@
 #+TITLE: 在 NanoPi R2S 上运行 FreeBSD
 #+DATE: <2023-07-10 一>
+#+STARTUP: overview
 
 曾经有两个树莓派, Pi3 因为碰水, Zero 因为腐蚀, 都报废了
 
@@ -32,21 +33,19 @@ doas dd if=root.img of=/dev/sda
 
 
 * 开始
-- 中国用户第一件事先换源: [[https://mirror.bjtu.edu.cn/help/freebsd/][bjtu FreeBSD 镜像]]
+- 中国用户第一件事先换源: [[https://mirror.bjtu.edu.cn/help/freebsd/][bjtu FreeBSD 镜像]] 或 [[https://mirrors.ustc.edu.cn/help/freebsd-pkg.html][USTC]]
 - 改密码, =/usr/local/etc/sudoers=
   不用 doas 因为 persist 选项只在 OpenBSD 上可用
 - 主机名, 路由器配置 DHCP 静态 IP, 本机 =/etc/hosts= 加入主机名解析
-#+BEGIN_SRC sh
-hostname r2s
-vi /etc/rc.conf
-#+END_SRC
 - 改 shell 配置, [[https://github.com/dongdigua/configs/blob/main/.profile.in][基本还是之前那样]]
-在 fortune 里看到一个不错的 PS1, 弄个新 PS1 换换口味
-#+BEGIN_SRC sh
-PS1='(\[$(tput md)\]\t <\w>\[$(tput me)\]) $(echo $?) \[\033[01;31m\]\[\033[00m\] '
-#+END_SRC
-- HZ? 在 Linux 上降低 HZ 是能减少能耗的, 但这里至少温度没降, 先改成 250 吧 =/boot/loader.conf=
+    在 fortune 里看到一个不错的 PS1, 弄个新 PS1 换换口味
+    #+BEGIN_SRC sh
+    PS1='(\[$(tput md)\]\t <\w>\[$(tput me)\]) $(echo $?) \[\033[01;31m\]\[\033[00m\] '
+    #+END_SRC
 - 降 CPU 频率是当然能减少能耗的 =/etc/sysctl.conf=
+    #+BEGIN_EXAMPLE
+    dev.cpu.0.freq=408
+    #+END_EXAMPLE
 
 * 第一个服务: gopher
 #+BEGIN_SRC sh
@@ -92,17 +91,20 @@ sed -i '' 's/frps/frpc/g' frpc
 exec.clean;
 exec.start="sh /etc/rc";
 exec.stop="sh /etc/rc.shutdown";
+exec.consolelog = "/var/log/jail_console_${name}.log";
+exec.clean;
 mount.devfs;
 #+END_SRC
 
 ** in-jail
 =/etc/crontab= 取消 save-entropy 和 adjkerntz
-=/etc/rc.conf= 进程越少越好, 似乎我不需要 sendmail
+=/etc/rc.conf= 进程越少越好, 似乎我不需要 sendmail (14.0 默认 dma 了，可以不用加这三行)
 #+BEGIN_SRC conf
 sendmail_submit_enable="NO"
 sendmail_outbound_enable="NO"
 sendmail_msp_queue_enable="NO"
 #+END_SRC
+pkg mirror
 
 ** rm: Operation not permitted
 #+BEGIN_SRC sh
@@ -171,19 +173,6 @@ rm index.gmi
 git checkout -- index.gmi
 #+END_SRC
 
-* samba
-弄着个电子垃圾 64G U盘, 想架个 Samba
-要安好多软件包, 果断开 jail
-=security = share= 在 4.x 版本被移除了, 注意下
-samba 分为 smbd, nmbd, winbindd.
-我只用 smbd, 但是跑起来发现光是 smbd 就占用了 1G 的 25%, 15%, 15%, 太耗资源了.
-
-所以这使我必须得用 port 精简功能了.
-然后解压 ports tree 的时候死机了, 拔电然后文件系统坏了...
-
-还是 NFS 吧, Need For Speed, 反正我又不用 Windows.
-至于权限, -mapall=freebsd 就行
-
 * LED
 :PROPERTIES:
 :CUSTOM_ID: led
@@ -220,7 +209,8 @@ load_rc_config $name
 run_rc_command "$1"
 #+END_SRC
 
-* obhttpd?
+* Web Server
+** obhttpd?
 httpd 其实算是一个比较年轻的软件, [[https://www.openbsd.org/papers/httpd-asiabsdcon2015.pdf][这里]]有关于为什么 OpenBSD 要自己做一个 Web Server 的历史
 重载配置:
 #+BEGIN_SRC sh
@@ -232,25 +222,10 @@ sudo pkill -HUP obhttpd
 
 *nginx, 启动!*
 
-* [[https://www.mediawiki.org/wiki/Manual:Running_MediaWiki_on_FreeBSD][MediaWiki]]?
-don't
-如果你不想被嵌入式设备糟糕的性能浪费一上午的时间最后得到加载时间大于10秒的网页, 放弃吧...
-有足够性能的服务器还可以编译带 SQLite 支持的 port
-
-我想使用 MediaWiki 主要想尝试 MinecraftWiki [[https://minecraft.fandom.com/wiki/Module:Schematic][Schematic Module]]
-
-* Avahi
-两个都要开啊, 要不然会很慢的!
-#+BEGIN_EXAMPLE
-avahi_daemon_enable="YES"
-avahi_dnsconfd_enable="YES"
-#+END_EXAMPLE
-
-* nginx
+** nginx
 由于默认的 nginx autoindex 太难看, 我想用 [[https://github.com/aperezdc/ngx-fancyindex][fancyindex]] 但是默认安装里又没带.
 反正得自己编译, 那不如用 ports 编译一个.
 其实 apache 的 autoindex 挺好, 还带 icon, 但是 apache 的配置我真的受不了.
-之前有一次用 portsnap(8) 解包 ports 结果崩了, 这回用 git, 没事.
 
 默认的 fancyindex 颜色有点丑, 写个 patch 改一下 (能 inline 就不加 CSS)
 根本不用看 doc, 直接凭直觉照猫画虎, 先在 =Makefile.extmod= 里面加上
@@ -272,7 +247,7 @@ aur.archlinux.org  #07b
  "background:#fff;"
 -"font-family:\"Bitstream Vera Sans\",\"Lucida Grande\","
 -"\"Lucida Sans Unicode\",Lucidux,Verdana,Lucida,sans-serif;"
-+"font-family:monospace;" 
++"font-family:monospace;"
  "}"
  "tr:nth-child(even) {"
 -"background:#f4f4f4;"
@@ -295,14 +270,47 @@ aur.archlinux.org  #07b
 -"color:#e33;"
 +"text-decoration:none;"
 +"color:#1793d1;"
-+"}" 
-+"a:hover {" 
++"}"
++"a:hover {"
 +"color:#39c5bb;"
  "}"
  "</style>"
 #+END_SRC
 
 我甚至还可以把 SSL, MAIL, STREAM 的功能通通去掉, 因为我的环境用不到.
+
+** Caddy
+不舒服 :(
+
+* [[https://www.mediawiki.org/wiki/Manual:Running_MediaWiki_on_FreeBSD][MediaWiki]]?
+don't
+如果你不想被嵌入式设备糟糕的性能浪费一上午的时间最后得到加载时间大于10秒的网页, 放弃吧...
+有足够性能的服务器还可以编译带 SQLite 支持的 port
+
+我想使用 MediaWiki 主要想尝试 MinecraftWiki [[https://minecraft.fandom.com/wiki/Module:Schematic][Schematic Module]]
+
+* mDNS
+先是 =avahi-app=
+两个都要开啊, 要不然会很慢的!
+#+BEGIN_EXAMPLE
+avahi_daemon_enable="YES"
+avahi_dnsconfd_enable="YES"
+#+END_EXAMPLE
+
+但是 =avahi-app= 依赖项太多了，很多都是跟图形界面有关的
+然后我看到了这个 [[https://forums.freebsd.org/threads/how-to-install-and-configure-mdnsresponder.70713/][How to install and configure mDNSResponder]]
+#+BEGIN_EXAMPLE
+mdnsresponderposix_enable="YES"
+mdnsresponderposix_flags="-n $hostname"
+#+END_EXAMPLE
+
+* ports
+之前有一次用 portsnap(8) 解包 ports 结果崩了然后文件系统坏了, 这回用 git, 没事.
+#+BEGIN_SRC sh
+git clone --depth=1 https://git.FreeBSD.org/ports.git /usr/ports
+#+END_SRC
+** install ports's dependencies with pkg
+=USE_PACKAGE_DEPENDS=1=
 
 * ZFS?
 之前我只是在唯一的U口上插了一个 32G U盘, 但随着我在服务器上放的东西越来越多并越来越依赖它,
@@ -317,7 +325,7 @@ aur.archlinux.org  #07b
 第二天一早醒来, DEGRADED, 一个盘掉了, 查看 dmesg, 又是大量的报错:
 #+BEGIN_EXAMPLE
 (da1:umass-sim1:1:0:0): Retrying command, 0 more tries remain
-(da1:umass-sim1:1:0:0): SYNCHRONIZE CACHE(10). CDB: 35 00 00 00 00 00 00 00 00 00 
+(da1:umass-sim1:1:0:0): SYNCHRONIZE CACHE(10). CDB: 35 00 00 00 00 00 00 00 00 00
 (da1:umass-sim1:1:0:0): CAM status: CCB request completed with an error
 (da1:umass-sim1:1:0:0): Error 5, Retries exhausted
 (da1:umass-sim1:1:0:0): got CAM status 0x44
@@ -393,10 +401,6 @@ make installkernel TARGET_ARCH=aarch64 DESTDIR=/root/aarch64
 #+END_SRC
 在 vbox 里 900 多秒就编译完了
 
-ROCKCHIP-bbr
-#+BEGIN_SRC
-#+END_SRC
-
 /etc/src.conf
 #+BEGIN_EXAMPLE
 KERNCONF=ROCKCHIP-bbr
@@ -404,7 +408,6 @@ MALLOC_PRODUCTION=yes
 #+END_EXAMPLE
 
 重启时我心里也没底, 但没发生什么意外.
-
 
 
 * Ref
@@ -415,3 +418,4 @@ MALLOC_PRODUCTION=yes
 - [[https://docs.freebsd.org/en/articles/rc-scripting/][Practical rc.d scripting in BSD]]
 - [[https://szclsya.me/zh-cn/posts/storage/zfs-setup/][ZFS 入门指北：规划与创建存储池]]
 - [[https://hostalk.net/posts/tor_bridges_proxy.html][如何优雅地用Tor_下篇]]
+- [[https://www.reddit.com/r/freebsd/comments/mrkysj/how_to_install_portss_dependencies_with_pkg/][install ports's dependencies with pkg]]

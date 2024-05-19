@@ -14,4 +14,4 @@ TL;DR [[https://github.com/Yesterday17/KokoaLinux][KokoaLinux]]
 [[https://github.com/Yesterday17/KokoaLinux][KokoaLinux]] 是一个 Forge mod，就扔进 mods 文件夹里就行。
 
 还有一个小问题，我的 sway 是用的 =sway-git= ，因为上述的输入法 PR 还没有进入 release，但是现在 [[https://aur.archlinux.org/packages/sway-git#comment-952005][xwayland 的 OpenGL 加速坏了]]……
-看我博客的未来人应该能等到这些修复合入稳定版，那时应该问题不大。
+看我博客的未来人应该能等到这些修复合入稳定版 (v1.10?)，那时应该问题不大。
