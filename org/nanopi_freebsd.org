@@ -24,10 +24,10 @@
 
 总的来说就是:
 #+BEGIN_SRC sh
-dd if=FreeBSD-13.2-RELEASE-arm64-aarch64-ROCK64.img of=root.img bs=1M
-dd if=usr/lib/linux-u-boot-edge-nanopi-r2s_22.05.3_arm64/idbloader.bin of=root.img seek=64 conv=notrunc
-dd if=usr/lib/linux-u-boot-edge-nanopi-r2s_22.05.3_arm64/uboot.img of=root.img seek=16384 conv=notrunc
-dd if=usr/lib/linux-u-boot-edge-nanopi-r2s_22.05.3_arm64/trust.bin of=root.img seek=24576 conv=notrunc
+dd if=FreeBSD-14.1-RELEASE-arm64-aarch64-ROCK64.img of=root.img bs=1M
+dd if=usr/lib/linux-u-boot-edge-nanopi-r2s/idbloader.bin of=root.img seek=64 conv=notrunc
+dd if=usr/lib/linux-u-boot-edge-nanopi-r2s/uboot.img of=root.img seek=16384 conv=notrunc
+dd if=usr/lib/linux-u-boot-edge-nanopi-r2s/trust.bin of=root.img seek=24576 conv=notrunc
 doas dd if=root.img of=/dev/sda
 #+END_SRC
 
@@ -409,6 +409,13 @@ MALLOC_PRODUCTION=yes
 
 重启时我心里也没底, 但没发生什么意外.
 
+* When Things Go Wrong
+换新插排断电后又启动不了了，修复文件系统也没用。
+这时，FreeBSD 发行模式的优点就体现出来了：
+只需启动 FreeBSD Live 系统（Linux 内核默认不开启 =UFS_FS_WRITE= ），
+把旧系统的 SD 卡和新刷系统的 SD 卡挂上，把 =/usr/local= =/etc= =/var/db= 拷过去，基本就复刻了原来的系统。
+（如果啥都不想变，也可以把原来系统直接装 Jail 里）
+难以想象如果这是个 Linux 发行版会怎样困难……
 
 * Ref
 - [[https://feng.si/posts/2019/06/freebsd-and-risc-v-the-future-of-open-source-iot-ecosystem/][FreeBSD 与 RISC-V: 开源物联网生态系统的未来]]

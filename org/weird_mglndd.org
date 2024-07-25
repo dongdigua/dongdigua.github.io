@@ -10,6 +10,7 @@ it's this domain's workers that COMSTANTLY scanning the WHOLE internet
 ** [[https://isc.sans.edu/diary/MGLNDD_%2A+Scans/28458][SANS internet storm center diary]]
 about the scanner and IP range
 *** [[https://cybersafenv.org/2022/03/20/mglndd-scans-sun-mar-20th/][repost on cybersafenv]]
+*** [[https://isc.sans.edu/diary/Update+MGLNDD+Scans/30686][Update: MGLNDD_* Scans]]
 ** [[http://www.hackdig.com/04/hack-81133.htm][知名网络空间普查与网络测绘组织研究报告 第一期-组织名录篇]]
 ** [[https://duanmofan.com/archives/librarymanagementsystem][【水蓝石】 近日图书馆出入人员信息逸事和小恶魔创造【持续更新】]]
 #+BEGIN_COMMENT

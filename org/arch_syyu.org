@@ -31,4 +31,10 @@ util-linux-libs 2.40rc2-1 Last Updated: 	2024-03-23 23:34 UTC
 glib2 2.80.0-2            Last Updated: 	2024-03-23 22:55 UTC
 #+END_EXAMPLE
 
-
+* TODO 2024-07-06
+这周不知道哪次更新之后开机就没声了，得按两次静音键才有声。
+搜了一下 Arch Linux Forum，删一下 =wireplumber= 缓存就行：
+#+BEGIN_SRC shell
+rm -r .local/state/wireplumber/
+#+END_SRC
+不行，下下次还会有问题，#archlinux-cn 也有几个人有此问题，依云说是驱动的事

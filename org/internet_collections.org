@@ -296,6 +296,7 @@ It's so cool, especially for testing and reviewing.(from [[https://www.ruanyifen
 ** [[https://zu1k.com][zu1k]]
 ** [[https://whynothugo.nl][ben Hugo]]
 author of darkman
+*** [[https://whynothugo.nl/journal/2024/06/13/ssh-as-a-sudo-replacement/][SSH as a sudo replacement]]
 ** [[https://cascade.moe][七碳烷烃 Isoheptane (工程师猫娘)]]
 *** [[https://cascade.moe/posts/arch-with-zfs/][在 ZFS 上安装 Arch Linux]]
 ** [[https://dataswamp.org/~lich/][lich (dataswamp)]]
@@ -310,12 +311,17 @@ author of darkman
 ** [[https://blog.outv.im][Re:Linked]]
 ** [[https://ibcl.us][I BCL]]                                                               :sdr:
 *** [[https://ibcl.us/archive/RTLSDR-Modifying_20190323.html][Re：从零开始的 RTL-SDR 折腾记]]
-** [[https://evilpan.com][有价值炮灰]]
+** [[https://evilpan.com][有价值炮灰]]                                                         :hack:
+** [[https://djh-sudo.github.io/Blog/#/][djh-sudo]]
+*** [[https://djh-sudo.github.io/Blog/#/OS-learning/docs/process][Process - hand-written CE]]
+** [[https://lyra.horse][lyra.horse]]                                                         :hack:
+*** [[https://lyra.horse/blog/2024/05/exploiting-v8-at-openecsc/][Exploiting V8 at openECSC]]
 
 # LABLE
 
 
 ** Bili/HWS/fri3nds
+*** [[https://auriel.top][Aurielの小破站]]
 *** [[https://shakaianee.top/][社会易姐]]
 *** [[https://blog.yangmame.org/][yanemame]]
 猴哥推荐的
@@ -409,9 +415,8 @@ inspiration: Veritasium
 **** [[https://youtu.be/iPrltr1b6Q4][I implemented Goto in OCaml]]
 **** [[https://youtu.be/PgDqBZFir1A][Weird Parts of C you probably never heard of: Hot loading, X macro]]
 **** [[https://youtu.be/b-q4QBy52AA][Web in Native Assembly (Linux x86_64)]]
-**** TODO [[https://youtu.be/n-S9DBwPGTo][Hash Table in C]]
-1:09 competitive programming
 **** TODO [[https://youtu.be/3jxCDCiozAU][Parsing Lisp with Rust (Tula Ep.03)]]
+**** TODO [[https://youtu.be/fJbAiXIum0k][Obfuscate C Code]]
 *** [[https://youtu.be/0rJ94rbdteE][Rust 让你感觉像个天才]]
 *** [[https://youtu.be/nfF91Z6fqGk][CMD 登录B站]]
 *** [[https://youtu.be/crnEygp4C6g][Jeff Geerling: FINALLY! A GPU works on the Raspberry Pi!]]
@@ -679,3 +684,5 @@ BSD asm
 ** [[https://artsey.io][ARTSEY one-handed keyboard system]]
 ** [[https://joakimthorsen.github.io/MCPropertyEncyclopedia][MCPropertyEncyclopedia]]
 ** [[https://0xinfection.github.io/reversing][Reverse Engineering For Everyone!]]
+** [[https://oldwestenglish.github.io/grammar/#/][薄冰英语语法]]
+** [[https://aem1k.com/qlock/][Quine Clock]]

@@ -20,7 +20,7 @@ a lot of information of historic interest, funny, or just plain entertaining
 => gopher://gopher.quux.org/g/Software/Gopher/screenshots/mozilla.gif ++ mozilla 0.9 with gopher tree view
 => gopher://sdf.org                                                   + SDF
 SDF Public Access UNIX System .. Est. 1987
-=> gopher://sdf.org/0/users/d1337                                     ++ d1337 (1990s)
+=> gopher://sdf.org/1/users/d1337                                     ++ d1337 (1990s)
 from nyxt blog
 => gemini://gem.sdf.org/oak3/                                         ++ Oak3's Cafe Gem
 => gopher://circumlunar.space                                         + Circumlunar
@@ -34,22 +34,21 @@ exploring and documenting  minimum viable solutions for living and technological
 => gopher://dataswamp.org/1/~solene                                   ++ Solene
 => gemini://perso.pw/blog/                                            +++ Solene gem
 > parker(circumlunar.space): I like her stuff.  ¯\_(ツ)_/¯
-=> gopher://baud.baby                                                 + Y0UR 515T3R'Z F4V0R1T3 H4CK3R
 => gopher://schinkel.bevuta.com                                       + Author of CHICKEN Scheme
 => gemini://ew.srht.site/                                             + ew
 almost 60! lots of 'Re:'
 => gemini://ew.srht.site/library/                                     + ew's library
-=> gemini://perplexing.space/                                         + perplexing
-=> gemini://kwiecien.us/                                              ++ kwiecien
-Gemcast, Esperanto
+=> gemini://perplexing.space/                                         + perplexing (offline)
 => gemini://gemi.dev/                                                 + Gemi.dev Heavy Industries
 => gemini://gemi.dev/cgi-bin/wp.cgi/welcome/zh                        ++ gemipedia
 => gemini://gemini.cyberbot.space/                                    + cyberbot
 undergoes frequent maintenance, PDA?
-=> gemini://gemini.cyberbot.space/smolzine/                           ++ smolzine
-=> gemini://warmedal.se/~bjorn                                        + bjorn
+=> gemini://warmedal.se/~bjorn/                                       + bjorn
+=> gemini://warmedal.se/~bjorn/posts/2021-10-06-all-those-posts-about-pdas.gmi ++ All Those Posts About PDAs
 => gemini://ploum.net/index_en.gmi                                    + Ploum
 author of offpunk
 => gemini://gemini.thegonz.net                                        + Things
 => gemini://cdg.thegonz.net/                                          ++ Collaborative Directory of Geminispace
 => gopher://bitreich.org/                                             + bitreich
+=> gemini://thrig.me/                                                 + You descend a maze of stairs...
+=> nex://nightfall.city                                               + Nightfall City

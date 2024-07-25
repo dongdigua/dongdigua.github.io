@@ -13,6 +13,7 @@ var data = [
     "圈纸带回家研磨了",
     "我们从这里启航♫",
     "Reduce the frequency of your Github CI crontab to protect the environment.",
+    "生命不息，折腾不止！",
 
     "May the --force be with you",
     "<a id=quote href=https://suckless.org>Software that sucks less</a>",
@@ -47,7 +48,10 @@ var data = [
     "橙白橙绿白蓝蓝白绿棕白棕",
     "<a id=quote href=https://www.huorong.cn/info/17082473711122.html>您可能是正版软件的受害者</a>",
     "你可以逃避现实，但你无法逃避\"逃避现实\"的后果。",
-    " I'm async, I like the video before it is finished loading."
+    " I'm async, I like the video before it is finished loading.",
+    "<a id=quote href=https://web.archive.org/web/20240606081039/https://sjtug.org/post/mirror-news/2024-06-06-takedown-dockerhub/>非常遗憾，接上级通知，即时起我们将中止对 dockerhub 仓库的镜像……</a>",
+    "<a id=quote href=https://www.bilibili.com/video/BV1nm41117cs>进步 就是求真求实</a>",
+    "Only My Fieldgun"
 ];
 
 var index = Math.floor((Math.random() * data.length));
