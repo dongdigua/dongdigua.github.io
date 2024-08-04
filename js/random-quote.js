@@ -51,7 +51,9 @@ var data = [
     " I'm async, I like the video before it is finished loading.",
     "<a id=quote href=https://web.archive.org/web/20240606081039/https://sjtug.org/post/mirror-news/2024-06-06-takedown-dockerhub/>非常遗憾，接上级通知，即时起我们将中止对 dockerhub 仓库的镜像……</a>",
     "<a id=quote href=https://www.bilibili.com/video/BV1nm41117cs>进步 就是求真求实</a>",
-    "Only My Fieldgun"
+    "Only My Fieldgun",
+    "Creeper? AWW MAN",
+    "I got vape"
 ];
 
 var index = Math.floor((Math.random() * data.length));

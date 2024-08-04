@@ -1,5 +1,6 @@
 #+TITLE: 消失的 emacs dunnet 教程
 #+DATE: <2023-12-29 五>
+#+HTML_HEAD_EXTRA: <link rel="shortcut icon" href=https://www.luogu.com.cn/favicon.ico>
 
 大概一年多之前, 我玩 dunnet 时搜到了这个 [[https://www.luogu.com.cn/blog/ivystorm/emacs-adventuredunnet-tong-guan-jiao-cheng][emacs - adventure/dunnet 通关教程 - Ivystorm 的博客 - 洛谷博客]].
 这是中文互联网少有的认真写的 dunnet 攻略, 我最欣赏的是那张手绘的地图, 在我能搜到的互联网上, 他是唯一一个.
@@ -36,10 +37,13 @@ python make_graph.py -a | dot -Tsvg -o dungeon.svg
 [[../images/adventure.svg]]
 图太大了, 以后慢慢玩吧...
 
+@@html:<details>@@
+@@html:<summary>胡言乱语</summary>@@
 最后, 说一下我的一个想法:
 收藏夹里的东西经常 404, 很多人 (比如我) 没有存档网站的意识, 普通浏览器也不像 [[./usenet_and_cli_browsers.org][offpunk]] 那样有离线功能, 比较小众的网页没了就没了, 没地方找存档去.
 有些人会存档这些网站, 但是怎么联系上是个问题. 如果做一个互联网资源存档交易(悬赏)网站, 让找不到资源的人有地方问, 有资源的人也有动力拿出手中的资源.
 当然会存在伪造的现象, 不过一般来说会对浏览过的网页有个印象吧.
+@@html:</details>@@
 
 * Footnotes
 [fn:1] 这几天 man.openbsd.org 在维护 [[https://marc.info/?l=openbsd-tech&m=170301840617581&w=2][man.openbsd.org, cvsweb.openbsd.org maintenance]]

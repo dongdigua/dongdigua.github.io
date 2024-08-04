@@ -33,8 +33,25 @@ glib2 2.80.0-2            Last Updated: 	2024-03-23 22:55 UTC
 
 * TODO 2024-07-06
 这周不知道哪次更新之后开机就没声了，得按两次静音键才有声。
-搜了一下 Arch Linux Forum，删一下 =wireplumber= 缓存就行：
+搜了一下 Arch Linux Forum，删一下 =wireplumber= 缓存?
 #+BEGIN_SRC shell
 rm -r .local/state/wireplumber/
 #+END_SRC
-不行，下下次还会有问题，#archlinux-cn 也有几个人有此问题，依云说是驱动的事
+不行，下下次还会有问题，#archlinux-cn 也有几个人有此问题
+#+BEGIN_EXAMPLE
+07/28
+nichi_bot  [影翼] > <@matterbridge:nichi.co> [dongdigua] 那天开机没声音的问题我发了个贴
+           https://bbs.archlinux.org/viewtopic.php?id=298114
+nichi_bot  [影翼] pipewire的bug，等上游修吧
+dongdigua  上游 bug 链接？
+nichi_bot  [影翼] > <@matterbridge:nichi.co> [dongdigua] 上游 bug 链接？
+nichi_bot  [影翼] 往上翻记录
+nichi_bot  [影翼] 很多天前提到的
+#+END_EXAMPLE
+#+BEGIN_EXAMPLE
+│07/16       dongdigua  请问 pipewire 开机后没有声音，必须按两下静音键才有声为啥？尝试删 .local/state/wireplumber
+│07/25       nichi_bot  [None None] 应该是 pipewire 的问题
+│17:52       nichi_bot  [oldherl] > <None None> 应该是 pipewire 的问题
+│07/26       nichi_bot  [Aalivexy] 发现好像是因为pipewire的新Bug
+│            nichi_bot  [Aalivexy] https://gitlab.freedesktop.org/pipewire/pipewire/-/issues/4084
+#+END_EXAMPLE

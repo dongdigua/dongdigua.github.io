@@ -118,7 +118,7 @@ const KEY_RESHUFFLE_LIMIT: usize = 60 * 60 * 24 * 30; // One month ago at worst
 还是 Debian Sunkey 那篇里面说的, 直接删 =~/.gnupg/private-keys-v1.d/= 对应的 keyrip 就行啦
 
 靓号我先用着一个没花太长时间就生成的(regxp:AAA520$), 之后感觉可以时再多花点时间生成个好的.
-candidate: 66CCFF
+candidate: 66CCFF, DEADBEEF, CCEFBFBD
 
 
 * gpg.conf 和 gpg-agent.conf                                       :negative:
