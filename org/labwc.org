@@ -1,0 +1,26 @@
+#+TITLE: 从 sway 到 labwc
+#+DATE: <2024-08-04 日>
+#+OPTIONS: \n:nil
+
+[[https://github.com/dongdigua/configs/commit/c548f441344313f8b74f2e2bc00003a16677765a][两年]]以来，我都是忠诚的 sway 用户，期间想过换 hyprland，但担忧稳定性和复杂性，并且除了视觉上的效果，功能变化不大，就没去试。
+我也遇到过不少问题，但我以为这是由于它不是一个完整的桌面环境造成的，毕竟在窗口管理器中，sway 算功能很完善的。
+
+直到一天 [[https://space.bilibili.com/2080342022/][COSSIG]] 群里谈到窗口管理器的时候谈到 labwc，我想起来好像在哪见过，但似乎不怎么出名，我之前也没看中。
+后来又有人问 1366x768 是否适合 tiling，我才意识到我似乎并没有利用好 tiling， 反而被平铺窗口比例不对、宽度不够等事情困扰，
+导致我基本上一个工作区一个窗口（群里也有人这么干哈哈）。
+所以我给他推荐了 stacking（而且早些年间屏幕小的时候好像也是 stacking 比较流行），并自己开始探索。
+我发现 [[https://www.phoronix.com/news/Raspberry-Pi-OS-2024-07-04][raspberrypi OS 也用上了 labwc]] ，这使我对它更有好感。
+
+我是真的不愿意写教程，人家官方文档写得清清楚楚，我自己复述一遍还会过时。
+
+本来我以为 xml 会很难写/看，其实还好。配置不费什么劲，waybar 基本照搬之前的，一套配置，两个环境。
+而且我还解决了之前的一个坑。众所周知 sway 无法设置环境变量，所以我把他们放在 =.zprofile= 然后在 =sway.desktop= 里 =zsh -lc sway=
+其中 ssh-agent 我是用 =eval $(ssh-agent)= 作为整个桌面环境的 agent，但现在 =labwc/environment= 中似乎无法执行命令。
+解决方案是用 [[https://wiki.archlinux.org/title/SSH_keys#Start_ssh-agent_with_systemd_user][ssh-agent.serive]]
+
+用了一会发现 labwc 解决了之前的几个问题:
+1. [[https://github.com/swaywm/sway/pull/7226][input method popup]] 合入比友商 sway 晚但发布早，irc 聊天终于不用 emacs 当输入法了
+2. nautilus 等可以拖拽
+3. 腾讯会议的悬浮窗口不会自己单独成一个窗口看着很奇怪了
+
+本篇似乎是第二个关于 labwc 的中文博客（第一篇：[[https://mephisto.cc/tech/labwc/][窗口管理器labwc使用记]]）
