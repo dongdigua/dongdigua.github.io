@@ -316,6 +316,7 @@ author of darkman
 *** [[https://djh-sudo.github.io/Blog/#/OS-learning/docs/process][Process - hand-written CE]]
 ** [[https://lyra.horse][lyra.horse]]                                                         :hack:
 *** [[https://lyra.horse/blog/2024/05/exploiting-v8-at-openecsc/][Exploiting V8 at openECSC]]
+** [[https://io-oi.me][reuixiy]]
 
 # LABLE
 
@@ -687,3 +688,4 @@ BSD asm
 ** [[https://oldwestenglish.github.io/grammar/#/][薄冰英语语法]]
 ** [[https://aem1k.com][JavaScript Hacks and Creative Coding]]
 *** [[https://aem1k.com/qlock/][Quine Clock]]
+** [[https://luc.devroye.org/fonts-51468.html][3x3 typeface]]

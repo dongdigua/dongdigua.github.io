@@ -417,6 +417,11 @@ MALLOC_PRODUCTION=yes
 （如果啥都不想变，也可以把原来系统直接装 Jail 里）
 难以想象如果这是个 Linux 发行版会怎样困难……
 
+* Linux® emulation
+我想自建一个 [[https://gotify.net][gotify]] 用于监控我 MC 服玩家登录（保安大爷模拟器），但没有 FreeBSD 的 port/build， 那只好使用 Linux 兼容层了。
+虽然是 go 程序，但不是静态链接的，所以需要一个基本系统比如 =linux_base-rl9= 。
+本来我有点打醋使用兼容层，结果运行毫无问题，FreeBSD 真好！
+
 * Ref
 - [[https://feng.si/posts/2019/06/freebsd-and-risc-v-the-future-of-open-source-iot-ecosystem/][FreeBSD 与 RISC-V: 开源物联网生态系统的未来]]
 - [[https://lists.freebsd.org/archives/freebsd-arm/2021-June/000149.html][freebsd-arm: FriendlyARM NanoPi R2S board support.]]

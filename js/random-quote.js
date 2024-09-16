@@ -3,7 +3,7 @@ var data = [
     "绿水青山就是金山银山",
     "为中华之崛起而读书!",
     "减轻义务教育阶段学生作业负担、减轻校外培训负担",
-    "实践是检验真理的唯一标准",
+    "石剑是检验真理的唯一标准",
 
     "<a id=quote href=https://www.bilibili.com/video/BV1vW411g7tN>谁甘人生黯淡无光 谁愿做叶不争艳芳</a>",
     "Fly high my friend, until we meet again",
@@ -53,7 +53,8 @@ var data = [
     "<a id=quote href=https://www.bilibili.com/video/BV1nm41117cs>进步 就是求真求实</a>",
     "Only My Fieldgun",
     "Creeper? AWW MAN",
-    "I got vape"
+    "I got vape",
+    "Someone tell Vedal there's a problem with my AI"
 ];
 
 var index = Math.floor((Math.random() * data.length));
