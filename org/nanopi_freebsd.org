@@ -72,9 +72,6 @@ sed -i '' 's/frps/frpc/g' frpc
 #+END_SRC
 别忘了把 gophernicus 的 host 和 port 改成远程主机的
 
-** SSH 命根子
-有时想加一个端口转发, 然后一 restart, SSH 也断了, 所以应该把 SSH 转发分开来单独一个服务
-
 * git 服务器
 本来想弄个 ssh git 和 cgit, 但仔细考虑感觉没有啥用, 我的 repo 都托管在我朋友的服务器上.
 又想弄个 sourcehut, 但真的太麻烦了.
@@ -226,68 +223,18 @@ sudo pkill -HUP obhttpd
 由于默认的 nginx autoindex 太难看, 我想用 [[https://github.com/aperezdc/ngx-fancyindex][fancyindex]] 但是默认安装里又没带.
 反正得自己编译, 那不如用 ports 编译一个.
 其实 apache 的 autoindex 挺好, 还带 icon, 但是 apache 的配置我真的受不了.
-
-默认的 fancyindex 颜色有点丑, 写个 patch 改一下 (能 inline 就不加 CSS)
-根本不用看 doc, 直接凭直觉照猫画虎, 先在 =Makefile.extmod= 里面加上
-#+BEGIN_SRC makefile
-HTTP_FANCYINDEX_EXTRA_PATCHES=  ${PATCHDIR}/extra-patch-nginx-http-fancyindex-css
-#+END_SRC
-颜色基本上是 aur.archlinux.org, Arch Blue 是[[https://bbs.archlinux.org/viewtopic.php?id=110936][这个帖子]], #39c5bb 懂的都懂.
-#+BEGIN_CENTER
-archlinux.org      #08c
-wiki.archlinux.org #0077bb
-bbs.archlinux.org  #07b
-aur.archlinux.org  #07b
-#+END_CENTER
-#+BEGIN_SRC diff
---- ../ngx-fancyindex-0.5.2/template.h.orig     2021-10-28 19:28:07.000000000 +0000
-+++ ../ngx-fancyindex-0.5.2/template.h  2023-08-30 11:36:48.142878000 +0000
-@@ -9,9 +9,8 @@
- "body,html {"
- "background:#fff;"
--"font-family:\"Bitstream Vera Sans\",\"Lucida Grande\","
--"\"Lucida Sans Unicode\",Lucidux,Verdana,Lucida,sans-serif;"
-+"font-family:monospace;"
- "}"
- "tr:nth-child(even) {"
--"background:#f4f4f4;"
-+"background:#e4eeff;"
- "}"
- "th,td {"
-@@ -21,5 +20,5 @@
- "text-align:left;"
- "font-weight:bold;"
--"background:#eee;"
-+"background:#ecf2f5;"
- "border-bottom:1px solid #aaa;"
- "}"
-@@ -29,8 +28,9 @@
- "}"
- "a {"
--"color:#a33;"
--"}"
--"a:hover {"
--"color:#e33;"
-+"text-decoration:none;"
-+"color:#1793d1;"
-+"}"
-+"a:hover {"
-+"color:#39c5bb;"
- "}"
- "</style>"
-#+END_SRC
-
 我甚至还可以把 SSL, MAIL, STREAM 的功能通通去掉, 因为我的环境用不到.
 
 ** Caddy
 不舒服 :(
 
-* [[https://www.mediawiki.org/wiki/Manual:Running_MediaWiki_on_FreeBSD][MediaWiki]]?
+** [[https://www.mediawiki.org/wiki/Manual:Running_MediaWiki_on_FreeBSD][MediaWiki]]?
 don't
 如果你不想被嵌入式设备糟糕的性能浪费一上午的时间最后得到加载时间大于10秒的网页, 放弃吧...
-有足够性能的服务器还可以编译带 SQLite 支持的 port
+#+BEGIN_QUOTE
+如果说 LAMP 撑起了互联网兴起时期的百花齐放，那么 [[https://learnbchs.org][BCHS]] 就是 Unix 老登在各种框架过度膨胀的当今对极简主义的追求。
+#+END_QUOTE
 
-我想使用 MediaWiki 主要想尝试 MinecraftWiki [[https://minecraft.fandom.com/wiki/Module:Schematic][Schematic Module]]
 
 * mDNS
 先是 =avahi-app=
@@ -310,7 +257,8 @@ mdnsresponderposix_flags="-n $hostname"
 git clone --depth=1 https://git.FreeBSD.org/ports.git /usr/ports
 #+END_SRC
 ** install ports's dependencies with pkg
-=USE_PACKAGE_DEPENDS=1=
+[[https://github.com/FreeBSD-Ask/FreeBSD-Ask/pull/147][added to book.bsdcn.org]]
+=make install-missing-packages=
 
 * ZFS?
 之前我只是在唯一的U口上插了一个 32G U盘, 但随着我在服务器上放的东西越来越多并越来越依赖它,
@@ -389,26 +337,6 @@ The following components of FreeBSD do not seem to be installed:
 kernel/generic-dbg world/base-dbg
 #+END_EXAMPLE
 
-* BBR
-#+BEGIN_SRC sh
-ftp ftp.freebsd.org
-tar -C / -zxf src.txz
-cd /usr/src/sys/arm64/conf
-mv ROCKCHIP ROCKCHIP-bbr
-cd /usr/src
-make buildkernel TARGET_ARCH=aarch64
-make installkernel TARGET_ARCH=aarch64 DESTDIR=/root/aarch64
-#+END_SRC
-在 vbox 里 900 多秒就编译完了
-
-/etc/src.conf
-#+BEGIN_EXAMPLE
-KERNCONF=ROCKCHIP-bbr
-MALLOC_PRODUCTION=yes
-#+END_EXAMPLE
-
-重启时我心里也没底, 但没发生什么意外.
-
 * When Things Go Wrong
 换新插排断电后又启动不了了，修复文件系统也没用。
 这时，FreeBSD 发行模式的优点就体现出来了：
@@ -417,12 +345,26 @@ MALLOC_PRODUCTION=yes
 （如果啥都不想变，也可以把原来系统直接装 Jail 里）
 难以想象如果这是个 Linux 发行版会怎样困难……
 
+原来默认是没有启用 soft update journaling: (-j) 的，难怪文件系统那么容易坏（
+
 * Linux® emulation
 我想自建一个 [[https://gotify.net][gotify]] 用于监控我 MC 服玩家登录（保安大爷模拟器），但没有 FreeBSD 的 port/build， 那只好使用 Linux 兼容层了。
 虽然是 go 程序，但不是静态链接的，所以需要一个基本系统比如 =linux_base-rl9= 。
 本来我有点打醋使用兼容层，结果运行毫无问题，FreeBSD 真好！
 
+** Run Monerod on FreeBSD
+:PROPERTIES:
+:ID: monerod_on_freebsd
+:END:
+[[https://www.freshports.org/net-p2p/monero-cli][net-p2p/monero-cli]] 之前 =UNMAINTAINED= 现在又 =BROKEN= ， 而且 aarch64 一直 =BROKEN= ， 所以只能用 Linux 兼容层试试。
+用正常用户跑会 =Operation not permitted= ， =truss= 一看，用到了 =linux_sched_setscheduler= 调用。
+用 root 跑这一关过了，但是还缺一堆 =setsockopt= 调用，还好能跑，但是跑的性能极差，而且大概四小时就会系统崩溃。
+
+论语曰，“不在其位，不谋其政”。这种小设备的性能真的不能指望太多，性能跟 PC 能差出几个数量级，在这上跑一些非瞬时完成的操作就是纯纯的浪费时间。
+FreeBSD 在上面也不是很稳定，同时高 CPU 和 IO 就很容易崩。所以要找准定位，它还是适合跑一些小服务，在家庭内网够用就行。
+
 * Ref
+- [[https://book.bsdcn.org][FreeBSD 从入门到跑路]]
 - [[https://feng.si/posts/2019/06/freebsd-and-risc-v-the-future-of-open-source-iot-ecosystem/][FreeBSD 与 RISC-V: 开源物联网生态系统的未来]]
 - [[https://lists.freebsd.org/archives/freebsd-arm/2021-June/000149.html][freebsd-arm: FriendlyARM NanoPi R2S board support.]]
 - [[https://hauweele.net/~gawen/blog/?p=2662][FreeBSD on NanoPi R2S]] 提到网络有时会卡住, 我也遇到了
@@ -430,4 +372,3 @@ MALLOC_PRODUCTION=yes
 - [[https://docs.freebsd.org/en/articles/rc-scripting/][Practical rc.d scripting in BSD]]
 - [[https://szclsya.me/zh-cn/posts/storage/zfs-setup/][ZFS 入门指北：规划与创建存储池]]
 - [[https://hostalk.net/posts/tor_bridges_proxy.html][如何优雅地用Tor_下篇]]
-- [[https://www.reddit.com/r/freebsd/comments/mrkysj/how_to_install_portss_dependencies_with_pkg/][install ports's dependencies with pkg]]

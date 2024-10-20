@@ -689,3 +689,4 @@ BSD asm
 ** [[https://aem1k.com][JavaScript Hacks and Creative Coding]]
 *** [[https://aem1k.com/qlock/][Quine Clock]]
 ** [[https://luc.devroye.org/fonts-51468.html][3x3 typeface]]
+** [[https://windowswallpaper.miraheze.org/wiki/Main_Page][Windows Wallpaper Wiki]]
