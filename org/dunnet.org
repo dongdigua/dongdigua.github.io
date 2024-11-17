@@ -5,11 +5,12 @@
 大概一年多之前, 我玩 dunnet 时搜到了这个 [[https://www.luogu.com.cn/blog/ivystorm/emacs-adventuredunnet-tong-guan-jiao-cheng][emacs - adventure/dunnet 通关教程 - Ivystorm 的博客 - 洛谷博客]].
 这是中文互联网少有的认真写的 dunnet 攻略, 我最欣赏的是那张手绘的地图, 在我能搜到的互联网上, 他是唯一一个.
 但是今天一看, 文章没了, [[https://archive.org][archive.org]] 和 [[https://archive.today][archive.today]] 也没有存档. 还好我当时把地图下下来了, 但放谷歌上也搜不到来源.
-我想, 为了更多人能了解, 我把这张图分享出来吧:
+我想, 为了更多人能了解, 我把这张图分享出来吧 (有 IPFS 的可以 pin 一下):
 #+ATTR_HTML: :width 512px
 [[../images/dunnet.png]]
 #+BEGIN_EXAMPLE
 eda0ca4b2ccc1247f66e55a703cb2168606d76926772e4c009991fcc235e9ef3  dunnet.png
+ipfs://bafybeidpgepmufflyaeefdmzwwtdlnj53qwaqus6wknjw2gpq5ukzbhuia
 #+END_EXAMPLE
 联系不上原作者, 如果您看到了, 能不能把您的文章恢复?
 

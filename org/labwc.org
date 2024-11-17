@@ -22,7 +22,7 @@
 1. [[https://github.com/swaywm/sway/pull/7226][input method popup]] 合入比友商 sway 晚但发布早，irc 聊天终于不用 emacs 当输入法了
 2. nautilus 等可以拖拽
 3. 腾讯会议的悬浮窗口不会自己单独成一个窗口看着很奇怪了
-4. 有屏幕放大器（sway 还是太保守了）
+4. 有屏幕放大器（[[https://github.com/swaywm/sway/issues/2781][sway 还是太保守了]]）
 
 但也有缺陷
 1. 不支持 =ext_workspace_unstable_v1= ，没法在 waybar 上显示工作区

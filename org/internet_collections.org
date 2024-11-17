@@ -317,6 +317,11 @@ author of darkman
 ** [[https://lyra.horse][lyra.horse]]                                                         :hack:
 *** [[https://lyra.horse/blog/2024/05/exploiting-v8-at-openecsc/][Exploiting V8 at openECSC]]
 ** [[https://io-oi.me][reuixiy]]
+** [[https://ononoki.org][ononoki.org]]
+** [[https://flak.tedunangst.com][flak]]                                                              :c:BSD:
+*** [[https://flak.tedunangst.com/post/reversing-an-openbsd-syspatch][reversing an openbsd kernel syspatch]]
+*** [[https://flak.tedunangst.com/post/memory-leak-proof-every-C-program][memory leak proof every C program]]
+*** [[https://flak.tedunangst.com/post/warning-implicit-backdoor][warning: implicit backdoor]]
 
 # LABLE
 
