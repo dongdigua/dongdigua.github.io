@@ -44,7 +44,7 @@
          :publishing-function org-html-publish-to-html
          :preserve-breaks t
 
-         :html-head "<link rel='stylesheet' href='css/main.css' /><link rel='stylesheet' href='css/org.small.css' />"
+         :html-head "<link rel='stylesheet' href='css/main.css' /><link rel='stylesheet' href='css/org.small.css' /><link rel='stylesheet' href='css/dark.css' />"
          ;; :html-head-include-default-style nil
          :html-link-home "https://dongdigua.github.io"
          :html-link-up "./../posts"

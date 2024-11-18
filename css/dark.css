@@ -1,0 +1,21 @@
+/* minimal darkmode
+   this sucks. but I don't want to edit main.css shit */
+@media (prefers-color-scheme: dark) {
+    * {
+        background-color: #1e1e2e !important;
+        color: #cdd6f4 !important;
+    }
+    h1, h2, h3, h4 {
+        color: #b4befe !important;
+    }
+    img {
+        filter: grayscale(50%);
+    }
+    a {
+        color: #89b4fa !important;
+    }
+    pre, pre span, code {
+        color: #a6e3a1 !important;
+    }
+}
+
