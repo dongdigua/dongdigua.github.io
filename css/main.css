@@ -13,9 +13,13 @@ body {
 }
 body #content {
     padding-top: 1em;
+    max-width: 60em;
+    margin: auto;
 }
 body .title {
     margin-left: 0;
+    text-align: center;
+    margin-bottom: .2em;
 }
 
 #org-div-home-and-up {
@@ -191,11 +195,12 @@ img {
 
 pre {
     font-family: monospace;
-    /* color: black; */
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
     background-color: #dce0e8;  /* FROM cattery */
-    /* background-color: #d7dfed;  /\* FROM Bryan Ford *\/ */
-    padding: 1.2em;
     overflow: auto;
+    padding: 1.2em;
+    margin: 1.2em;
 }
 
 div.summary {
@@ -302,16 +307,15 @@ pre.a:hover {
     text-align: center;
     padding: .3em;
     margin-bottom: 1em;
-    /* border: 1px solid gray; */
     background-color: #eaeaea;  /* orgmode.org */
 }
+
+#postamble p, #preamble p { font-size: 90%; margin: .2em; }
 
 #show_source {
     float: right;
     margin: .7em;
 }
-
-
 
 
 @media screen

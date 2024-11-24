@@ -16,6 +16,7 @@
 (setq org-html-validation-link nil
       ;; https://emacs-china.org/t/org-emacs-script-org-publish-all/20782
       org-html-htmlize-output-type 'css
+      org-html-head-include-default-style nil
       org-export-with-toc 1
       org-export-with-sub-superscripts '{})
 
