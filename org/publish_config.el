@@ -23,9 +23,9 @@
       '(("en"
          "
 <p>dongdigua CC BY-NC-SA 禁止转载到私域(公众号，非自己托管的博客等)</p>
-<p class=\"date\">Date: %d Build: %T</p>
-<p>Proudly made with Emacs Org mode</p>
 <p>Email me to add comment</p>
+<p>Proudly made with Emacs Org mode</p>
+<p class=\"date\">Date: %d Build: %T Size: PAGE_SIZE</p>
 ")))
 
 (setq org-html-home/up-format "
