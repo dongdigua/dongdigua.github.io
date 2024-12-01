@@ -17,8 +17,8 @@
 #+END_SRC
 
 #+BEGIN_QUOTE
-You can always find something magical on the Internet.
--- says an anonymous AI
+An internet with links.
+-- [[https://www.ruanyifeng.com/blog/2024/11/weekly-issue-327.html][The Zero Click Internet]]
 #+END_QUOTE
 
 * (Personal) Blogs
@@ -322,6 +322,7 @@ author of darkman
 *** [[https://flak.tedunangst.com/post/reversing-an-openbsd-syspatch][reversing an openbsd kernel syspatch]]
 *** [[https://flak.tedunangst.com/post/memory-leak-proof-every-C-program][memory leak proof every C program]]
 *** [[https://flak.tedunangst.com/post/warning-implicit-backdoor][warning: implicit backdoor]]
+** [[https://www.leavesongs.com][离别歌]]
 
 # LABLE
 
@@ -422,7 +423,9 @@ inspiration: Veritasium
 **** [[https://youtu.be/PgDqBZFir1A][Weird Parts of C you probably never heard of: Hot loading, X macro]]
 **** [[https://youtu.be/b-q4QBy52AA][Web in Native Assembly (Linux x86_64)]]
 **** TODO [[https://youtu.be/3jxCDCiozAU][Parsing Lisp with Rust (Tula Ep.03)]]
-**** TODO [[https://youtu.be/fJbAiXIum0k][Obfuscate C Code]]
+**** [[https://youtu.be/dkNv3KGOFT0][Server-Side Rendering in C]]
+**** [[https://youtu.be/SbpusG7sHF4][This Library Turned my C into JavaScript wtf]]
+0:09 This was the attitude: lets just have fun, and that's what we need to bring back
 *** [[https://youtu.be/0rJ94rbdteE][Rust 让你感觉像个天才]]
 *** [[https://youtu.be/nfF91Z6fqGk][CMD 登录B站]]
 *** [[https://youtu.be/crnEygp4C6g][Jeff Geerling: FINALLY! A GPU works on the Raspberry Pi!]]

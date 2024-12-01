@@ -2,6 +2,11 @@
 #+OPTIONS: toc:nil
 #+TAGS: git(g) blog(b) video(v)
 
+* 2024 秋
+** [[https://t.bilibili.com/989280489005121542][PPP_Party 服务器 1000day]]
+
+* 2024 暑假
+
 * 2023-2024 寒假
 ** I use Arch btw
 

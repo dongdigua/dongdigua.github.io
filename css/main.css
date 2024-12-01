@@ -3,7 +3,7 @@ https://github.com/rgb-24bit/org-html-theme-list org-joshua
 */
 
 body {
-    font-family: Inter, "Source Serif", Arial, sans-serif !important;
+    font-family: system-ui, sans-serif !important;
     font-size: 18px;
     /* line-height: 21px; */
     /* FROM https://github.com/ZenLian/ZenLian.github.io/blob/zola/themes/cattery/static/css/style.css */
