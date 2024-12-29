@@ -94,7 +94,8 @@
       "feed.xml"
       "./../"
       "https://dongdigua.github.io"
-      (my/delete-multiple (directory-files "./../" nil ".*\.html$") '("about.html" "my_timeline.html" "kernel.html" "404.html" "xmr.html" "index.html"))
+      (my/delete-multiple (directory-files "./../" nil ".*\.html$")
+                          '("projects.html" "about.html" "my_timeline.html" "kernel.html" "404.html" "xmr.html" "index.html"))
       :title "dongdigua's blog"
       :description "Blog!"
       :builder 'webfeeder-make-rss)

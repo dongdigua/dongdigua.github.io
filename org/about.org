@@ -8,9 +8,10 @@
 - Minecraft JE 技术生存 (MC 正统在 JE!)
 - 骑公路车的
 - Elixir > Rust > Python
-- 歌单里基本都是纯音乐 (C418, ConcernedApe, Toby Fox, Lena Raine)
+- 歌单里基本都是纯音乐 (C418, ConcernedApe, Toby Fox, Lena Raine, George Winston)
 - 不是很喜欢扁平化设计
 - GNOME > KDE
+- Fonts: JetBrainsMono NF, IntoneMono NF
 
 -----
 

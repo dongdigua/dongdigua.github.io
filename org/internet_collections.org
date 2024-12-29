@@ -323,6 +323,10 @@ author of darkman
 *** [[https://flak.tedunangst.com/post/memory-leak-proof-every-C-program][memory leak proof every C program]]
 *** [[https://flak.tedunangst.com/post/warning-implicit-backdoor][warning: implicit backdoor]]
 ** [[https://www.leavesongs.com][离别歌]]
+** [[https://cjting.me][CJ Ting]]
+*** [[https://cjting.me/2020/07/01/douyu-crawler-and-font-anti-crawling/][斗鱼关注人数爬取 ── 字体反爬的攻与防]]
+** [[https://xairy.io][Andrey Konovalov]]
+Linux kernel security researcher
 
 # LABLE
 
@@ -347,7 +351,7 @@ EvanMeek / B站: 美味的樱桃菌
 *** [[http://blog.zhanganzhi.com/][zhanganzhi]]
 *** [[https://blog.bluemangoo.net/][芒果快评]]
 22年新博客, 友链有踏浪
-*** [[https://acyanbird.github.io][山奈]]
+*** [[https://acyanbird.tech][山奈 (COSSIG 群主)]]
 *** [[https://fallenbreath.me][狐狸姐姐!]]
 *** [[https://dsy4567.cf/][dsy4567 的小站]]
 *** [[https://litterhougelangley.club/blog][Houge's Madness Blog]]
@@ -426,6 +430,8 @@ inspiration: Veritasium
 **** [[https://youtu.be/dkNv3KGOFT0][Server-Side Rendering in C]]
 **** [[https://youtu.be/SbpusG7sHF4][This Library Turned my C into JavaScript wtf]]
 0:09 This was the attitude: lets just have fun, and that's what we need to bring back
+**** TODO [[https://youtu.be/JRTLSxGf_6w][You Don't Know Network Programming]]
+[[https://blog.netherlabs.nl/articles/2009/01/18/the-ultimate-so_linger-page-or-why-is-my-tcp-not-reliable][tcp SO_LINGER]]
 *** [[https://youtu.be/0rJ94rbdteE][Rust 让你感觉像个天才]]
 *** [[https://youtu.be/nfF91Z6fqGk][CMD 登录B站]]
 *** [[https://youtu.be/crnEygp4C6g][Jeff Geerling: FINALLY! A GPU works on the Raspberry Pi!]]
@@ -698,3 +704,4 @@ BSD asm
 *** [[https://aem1k.com/qlock/][Quine Clock]]
 ** [[https://luc.devroye.org/fonts-51468.html][3x3 typeface]]
 ** [[https://windowswallpaper.miraheze.org/wiki/Main_Page][Windows Wallpaper Wiki]]
+** [[https://erikdemaine.org/fonts/dissect/][Dissection Font by Erik Demaine, Martin Demaine, Donald E. Knuth, Yushi Uno, 2018]]

@@ -1,0 +1,20 @@
+#+TITLE: My Projects
+#+TAGS: active(a) archive(c)
+
+* [[https://github.com/dongdigua/difficult-alarmclock][difficult-alarmclock]]                                               :active:
+Turn your Unix box into a music clock that sucks less.
+named after [[https://github.com/shenjackyuanjie/Difficult-Rocket][shenjack's Difficult-Rocket]]
+blog: [[./alarm_clock.org]]
+
+* [[https://github.com/dongdigua/alkaneo][alkane^{o}]]
+Generate alkanes using Racket and miniKanren.
+
+* [[https://github.com/dongdigua/demo.lua][demo.lua]]
+The [[https://www.lua.org/cgi-bin/demo?demo][old lua.org demo]] in lua.
+blog: [[./lua_demo.org]]
+
+* [[https://github.com/dongdigua/AxolotlVM][AxolotlVM]]
+A toy virtual machine for learning purpose.
+
+* [[https://github.com/dongdigua/dongdigua.github.io][dongdigua.github.io]]                                                :active:
+This is what you are looking at.
