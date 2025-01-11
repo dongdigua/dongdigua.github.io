@@ -1,5 +1,5 @@
 #+TITLE: My Projects
-#+TAGS: active(a) archive(c) MC(m)
+#+TAGS: active(a) archived(c) MC(m)
 
 * [[https://github.com/dongdigua/difficult-alarmclock][difficult-alarmclock]]                                               :active:
 Turn your Unix box into a music clock that sucks less.
@@ -13,7 +13,7 @@ Generate alkanes using Racket and miniKanren.
 The [[https://www.lua.org/cgi-bin/demo?demo][old lua.org demo]] in lua.
 blog: [[./lua_demo.org]]
 
-* [[https://www.bilibili.com/video/BV1yt4y1t7qe/][二半异构活塞铁路建造飞行器 (demi-bolt builder)]]                         :MC:
+* [[https://www.bilibili.com/video/BV1yt4y1t7qe/][二半异构活塞铁路建造飞行器 (demi-bolt builder)]]                :archived:MC:
 
 * [[https://github.com/dongdigua/AxolotlVM][AxolotlVM]]
 A toy virtual machine for learning purpose.

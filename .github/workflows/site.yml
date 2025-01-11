@@ -33,9 +33,6 @@ jobs:
         run: |
           sudo apt-get -q install pandoc
           make
-          curl "https://raw.githubusercontent.com/dongdigua/configs/main/.tmux.conf" -o misc/tmux.conf
-          ./patches/txt.sh
-          ./patches/color.sh
 
       - name: Setup Pages
         uses: actions/configure-pages@v5

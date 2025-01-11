@@ -49,6 +49,7 @@ An internet with links.
 *** [[https://manas.tech/blog/2023/10/25/approaching-unconventional-problems][How to find a lost phone in a no-cell-coverage camping site]]
 *** [[https://predr.ag/blog/wifi-only-works-when-its-raining/][The Wi-Fi only works when it's raining]]
 *** [[https://msfjarvis.dev/posts/a-tour-of-my-screenshots-folder][A tour of my screenshots folder]]                             :minecraft:
+*** [[https://www.bbspot.com/news/2008/12/linux-on-a-potato.html][Hackers Successfully Install Linux on a Potato]]
 
 ** [[http://www.paulgraham.com/todo.html][Paul Graham]]
 ** [[http://www.qiusir.com/][qiusir]]                                                            :rssub:
@@ -293,6 +294,9 @@ It's so cool, especially for testing and reviewing.(from [[https://www.ruanyifen
 和我一样比较喜欢小众的东西
 ** [[https://blog.benjojo.co.uk][Benjojo]]
 *** [[https://blog.benjojo.co.uk/post/auditing-github-users-keys][Auditing GitHub users’ SSH key quality]]
+*** [[https://blog.benjojo.co.uk/post/ssh-port-fluxing-with-totp][TOTP SSH port fluxing]]
+*** [[https://blog.benjojo.co.uk/post/traceroute-haikus][Traceroute Haiku’s]]
+*** [[https://blog.benjojo.co.uk/post/ssh-randomart-how-does-it-work-art][Making art with SSH key randomart]]
 ** [[https://zu1k.com][zu1k]]
 ** [[https://whynothugo.nl][ben Hugo]]
 author of darkman
@@ -494,6 +498,7 @@ handle writing through this interplanetary loop.
 *** [[https://youtu.be/msdymgkhePo][This Website has No Code, or Does it?]]
 *** [[https://youtu.be/7taNCDMpPvc][I Read The Entire Bash Reference Manual (8.5h)]]
 *** [[https://youtu.be/WuRPOPocEXY][怎样用 Emacs 做所有事]]
+*** [[https://youtu.be/5rZWLZEMkgE][The Linux AX.25 Stack: A Forgotten Feature That Is Used To Talk To Space Stations!]]
 
 **  [[https://www.youtube.com/@Computerphile][<C>]]
 *** [[https://youtu.be/BAo5C2qbLq8][Network Time Protocol (NTP)]]
