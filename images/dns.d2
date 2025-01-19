@@ -1,0 +1,32 @@
+direction: right
+PC: {
+  cloudflared
+  dnsmasq: {
+    shape: cylinder
+  }
+  application
+  dnsmasq -> cloudflared
+  application -> dnsmasq
+}
+
+cf worker: {
+  shape: hexagon
+}
+Google: {
+  shape: cloud
+}
+Cloudflare bootstrap: {
+  shape: cloud
+  style.font-color: "#FF6633"
+}
+DNS53: {
+  shape: person
+}
+cf worker -> Google
+PC.cloudflared -> cf worker: {
+  style.stroke-dash: 3
+}
+PC.cloudflared -> Cloudflare bootstrap: {
+  style.stroke-dash: 3
+}
+PC.dnsmasq -> DNS53

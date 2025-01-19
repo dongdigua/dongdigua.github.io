@@ -1,0 +1,52 @@
+#+TITLE: 我有奇妙的 DNS 设置
+#+DATE: <2025-01-17 五>
+#+OPTIONS: \n:nil
+
+#+BEGIN_CENTER
+本篇记录了我从 24 年暑假到寒假追求完美 DNS 解决方案的过程
+#+END_CENTER
+
+* 背景
+DNS 真是一个糟糕的协议，这个诞生于互联网蛮荒时代的协议没有任何加密或验证机制，如今却还作为基础设施存在着。
+这使得对其的篡改十分容易，而使用这一手段最常见的就是 ＊＊＊ 了。
+凭我的经验，基本上出现“不安全连接”就是被 DNS 污染了（比如开会前一个月的 github pages，我还见过 gnu.org 被污染），
+这时候切换到一个可靠的 DNS 基本就能正常访问（当然如果 connection reset 就寄了）
+
+我正常浏览都挂着 ＊＊，所以网页访问没有障碍，终端可以设环境变量。
+但我还有一个场景：玩 MC。微软的服务经常被 DNS 污染（尤其是移动），但我又不能把整个 MC 都挂上 ＊＊，也不想用 iptables 什么的整得太复杂。
+之前我都是写 hosts，但长时间不更新会失效，所以我决定，彻底解决 DNS 这个不稳定因素！
+#+BEGIN_COMMENT
+TODO: r2s + mc dns list (cron)
+#+END_COMMENT
+
+* 尝试
+DoH 应该是使用最广泛的加密 DNS 协议，然后就是两个问题：选软件，选服务。
+软件我在 ArchWiki 上一翻，在 =extra= 的有 =cloudflared=, =dnscrypt-proxy=, 在 AUR 的有一堆，比如 =coredns=, =dnsproxy=.
+因为我有赛博菩萨 cloudflare 号，我就选了 cloudflared + cf worker 反代 Google DNS（因为 cloudflare DNS 没 ENDS），好简单。
+（这里省略了一大堆测试其他几个软件的记录）
+
+打开浏览器，感受准确的 DNS 吧！然后就出现了第一个问题：CDN 优化。
+B 站需要老长时间加载，且很不稳定，一看，解析到美国去了。显然，国内网站是不能直接用国外 DNS 的。
+第二个问题是 cloudflared 没缓存，一旦断连就寄。
+找来找去发现 [[https://github.com/felixonmars/dnsmasq-china-list][dnsmasq-china-list]]，正好解决了缓存和国内分流的问题，现在的架构就是：
+[[../images/dns.svg]]
+
+* 问题不断
+这个方案看起来不错，但在接下来的一段时间中使我使我饱受折磨
+1. 国外 DoH 不稳定，cf worker 和 NextDNS 都存在断连的情况。timeout, connection reset, network unreachable 比比皆是。
+   一天中大概 16 时到 22 时最明显。
+2. cache。可能使我配置的问题，也可能是查询太多把之前的挤掉了。
+   总之，一旦缓存未命中和 DoH 断连同时发生，我的网络基本上是瘫痪了。
+
+以至于我后来把 114 加到 127.0.0.1 下一行再 =strict-order= 才能在 DoH 连不上的时候回退到 DNS53。
+
+* 又一方案
+在 dnsmasq-china-list 的 Makefile 里看到 [[https://github.com/DNSCrypt/dnscrypt-proxy][dnscrypt-proxy]] 的适配，之前我嫌它配置太麻烦而且 stamp 格式费劲，
+但经历这些再看，它集 DoH，缓存于一身，几乎完美符合我的需求。
+如果再出现问题，或许应该考虑试试 [[https://github.com/zfl9/chinadns-ng][chinadns-ng]] 了。
+
+* 总结
+一个简单的 DNS 服务就能如此激发创造力，这还得归功于国内优质的网络环境 :)
+
+* Ref
+- [[https://sh.alynx.one/posts/Who-Moved-My-DNS-Resolving-Remastered/][谁动了我的 DNS 解析？（重制版）]]

@@ -1,5 +1,6 @@
 ## Table of Contents
 ### Posts (sorted by time)
+- [2025-01-17 : 我有奇妙的 DNS 设置](dns_setup)<br>
 - [2025-01-11 : pia! Slow down processes using cgroup v2](pia)<br>
 - [2024-09-15 : Minecraft 随想录#1 衰落的服务器](mc1_downfall_of_smp)<br>
 - [2024-08-04 : 从 sway 到 labwc](labwc)<br>
