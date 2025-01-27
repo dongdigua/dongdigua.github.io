@@ -31,7 +31,8 @@ jobs:
 
       - name: make
         run: |
-          sudo apt-get -q install pandoc
+          sudo apt-get -q install --no-install-recommends pandoc npm
+          npm install @tgwf/co2
           make
 
       - name: Setup Pages
