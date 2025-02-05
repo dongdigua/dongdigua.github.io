@@ -63,3 +63,4 @@ l(a\nle\naf\nfa\nll\ns)\none\nl\niness
 <a id=quote href=https://www.luogu.com.cn/problem/P8941>我用烟花宣告，用挥手告别，用鞠躬感谢，\n过去的都已经过去，接下来的路我要悠闲地走，愉悦地走，脚步如同时间不会停止，\n下一年，我们还会再会。</a>
 Bug #1 "Microsoft has a majority market share"
 方入生界...
+<a id=quote href=https://web.archive.org/web/20240523001943/https:/mp.weixin.qq.com/s/afg3zHPpEyRzSfOR1Aeh3w>太阳系被歌者文明的二向箔拍扁之后，好歹还留下了一幅《星空》图，而互联网被时间的二向箔吞噬后，只留下一片虚空。</a>
