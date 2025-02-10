@@ -24,15 +24,16 @@ jobs:
           fetch-depth: 30
           fetch-tags: true
 
-      - name: Install Emacs
-        uses: purcell/setup-emacs@master
-        with:
-          version: 29.3
+      - uses: oven-sh/setup-bun@v2
+
+      - name: Install Deps
+        run: |
+          sudo apt-get -q install --no-install-recommends pandoc emacs-nox
+          bun add @tgwf/co2
 
       - name: make
         run: |
-          sudo apt-get -q install --no-install-recommends pandoc npm
-          npm install @tgwf/co2
+          git fetch --tags # https://github.com/actions/checkout/issues/2041
           make
 
       - name: Setup Pages

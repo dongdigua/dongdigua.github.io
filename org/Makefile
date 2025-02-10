@@ -20,7 +20,7 @@ size:
 	$(TARGET) | xargs -I {} sh -c 'sed -i "s/PAGE_SIZE/$$(du -h --apparent-size {} | cut -f1)/g" {}'
 
 co2:
-	$(TARGET) | xargs -I {} node ../misc/co2.js {}
+	$(TARGET) | xargs -I {} bun ../misc/co2.js {}
 
 keyword:
 	$(TARGET) | xargs -I {} python3 ../misc/rcs_kw.py {}
