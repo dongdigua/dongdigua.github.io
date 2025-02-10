@@ -50,6 +50,7 @@ An internet with links.
 *** [[https://predr.ag/blog/wifi-only-works-when-its-raining/][The Wi-Fi only works when it's raining]]
 *** [[https://msfjarvis.dev/posts/a-tour-of-my-screenshots-folder][A tour of my screenshots folder]]                             :minecraft:
 *** [[https://www.bbspot.com/news/2008/12/linux-on-a-potato.html][Hackers Successfully Install Linux on a Potato]]
+*** [[https://danwilkerson.com/posts/2024-12-04-square-zero][边框码]]
 
 ** [[http://www.paulgraham.com/todo.html][Paul Graham]]
 ** [[http://www.qiusir.com/][qiusir]]                                                            :rssub:
@@ -326,11 +327,13 @@ author of darkman
 *** [[https://flak.tedunangst.com/post/reversing-an-openbsd-syspatch][reversing an openbsd kernel syspatch]]
 *** [[https://flak.tedunangst.com/post/memory-leak-proof-every-C-program][memory leak proof every C program]]
 *** [[https://flak.tedunangst.com/post/warning-implicit-backdoor][warning: implicit backdoor]]
+*** [[https://flak.tedunangst.com/post/an-autoflusher][an autoflusher]]
 ** [[https://www.leavesongs.com][离别歌]]
 ** [[https://cjting.me][CJ Ting]]
 *** [[https://cjting.me/2020/07/01/douyu-crawler-and-font-anti-crawling/][斗鱼关注人数爬取 ── 字体反爬的攻与防]]
 ** [[https://xairy.io][Andrey Konovalov]]
 Linux kernel security researcher
+** [[https://ldbeth.sdf.org][LdBeth]]                                                            :emacs:
 
 # LABLE
 
@@ -552,6 +555,7 @@ even caught by police when he was a child
 *** [[https://youtu.be/m5S0gLgg2rs][Tantan: MC + Fez]]
 *** [[https://youtu.be/_swcgay0zW8?si=VOizq1akWJa0X-Rr][ilmango's intro Baila mi cumbia (Minecraft note block cover)]]
 *** [[https://youtu.be/Mz2RotrHHk4][Minecraft Beaten in 0:00.050 Using Log4j Exploit]]
+*** [[https://youtu.be/mjLDM1AY1-E][Minecraft 8 Track Music Sequencer (I glove thy flob)]]
 
 ** ?
 *** [[https://www.youtube.com/c/IceGuye][IceGuye aka 姑射冰尘]]
@@ -594,6 +598,7 @@ When I was trying to download this video, I found that youtube-dl was broken!
 *** [[https://youtu.be/-b-BQZi7MvI][Silicon carbide / SiC used to emit photons (homemade LED)]]
 *** [[https://youtu.be/vuvckBQ1bME][How To Make A CPU]]
 *** [[https://youtu.be/k1BneeJTDcU][Welcome to the Internet - Bo Burnham (from "Inside" -- ALBUM OUT NOW)]]
+*** [[https://youtu.be/bW1otBbTh-E][live-coding ambient music in SuperCollider]]
 
 * r
 :PROPERTIES:
@@ -638,6 +643,7 @@ from emacs-china, about multi-thread
 ** [[https://lore.kernel.org/all/20221130082313.3241517-1-tj@kernel.org/][[PATCHSET RFC] sched: Implement BPF extensible scheduler class]]
 ** [[https://lists.suckless.org/dev/1409/23497.html][[suckless-dev] [RFC] Design of a vim like text editor]]
 ** [[https://www.openwall.com/lists/oss-security/2024/03/29/4][oss-security - backdoor in upstream xz/liblzma leading to ssh server compromise]]
+** [[https://bugzilla.mozilla.org/show_bug.cgi?id=18732][[FEATURE] Gnome and KDE integration for new mail notification (linux)]]
 
 * Other
 :PROPERTIES:

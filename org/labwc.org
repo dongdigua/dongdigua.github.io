@@ -1,4 +1,4 @@
-#+TITLE: 从 sway 到 labwc
+#+TITLE: 从 sway 到 labwc 再到 sway
 #+DATE: <2024-08-04 日>
 #+OPTIONS: \n:nil
 
@@ -29,3 +29,11 @@
 2. 只有最基本的 openbox 主题支持，许多装饰没法用
 
 本篇似乎是第二个关于 labwc 的中文博客（第一篇：[[https://mephisto.cc/tech/labwc/][窗口管理器labwc使用记]]）
+
+* Update (2025.2)
+受不了堆叠窗口管理！正好 sway 到 10 了，我想要的功能也差不多了，又回到了忠！诚！的 sway。
+之前 labwc 总得在同一工作区切换不同层，而且我也看不出来哪个应用在哪个工作区，找一个窗口左手得按一堆键，用多了都有点腕管综合征的迹象 :(
+想换个简洁一点的 bar，比如类似 dwm 的，但是 sway-bar 太丑， [[https://codeberg.org/sewn/dam][dam]]，[[https://github.com/kolunmi/sandbar][sandbar]] 之类的只支持 river，[[https://sr.ht/~raphi/somebar/][somebar]] 只支持 dwl，但我又不想换 wm，
+尤其是 river，文档一坨屎，并且配置方式好怪呀。
+最后重新配了下 waybar 使其像 dwm。
+[[../images/sway_new_waybar.jpg]]

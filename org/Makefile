@@ -4,7 +4,7 @@ TARGET=ls ../*.html* | grep -v "index\|xmr\|404.html"
 
 EMACS_OPTS=--script $(ORG_CONFIG_FILE) -f myweb-publish
 
-all: html size co2
+all: html size co2 keyword
 
 html:
 	@echo "Generating HTML..."
@@ -21,3 +21,6 @@ size:
 
 co2:
 	$(TARGET) | xargs -I {} node ../misc/co2.js {}
+
+keyword:
+	$(TARGET) | xargs -I {} python3 ../misc/rcs_kw.py {}

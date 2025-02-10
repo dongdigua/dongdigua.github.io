@@ -4,7 +4,7 @@
 - [2025-01-17 : 我有奇妙的 DNS 设置](dns_setup)<br>
 - [2025-01-11 : pia! Slow down processes using cgroup v2](pia)<br>
 - [2024-09-15 : Minecraft 随想录#1 衰落的服务器](mc1_downfall_of_smp)<br>
-- [2024-08-04 : 从 sway 到 labwc](labwc)<br>
+- [2024-08-04 : 从 sway 到 labwc 再到 sway](labwc)<br>
 - [2024-02-29 : Wayland 下在 Minecraft (1.12) 里输入中文](minecraft_im)<br>
 - [2024-02-14 : 智能闹钟不如随身听不如派](alarm_clock)<br>
 - [2023-12-29 : 消失的 emacs dunnet 教程](dunnet)<br>
