@@ -4,8 +4,8 @@ https://github.com/rgb-24bit/org-html-theme-list org-joshua
 
 body {
     font-family: system-ui, sans-serif !important;
-    font-size: 18px;
-    /* line-height: 21px; */
+    font-size: 16px;
+    line-height: 1.5;
     /* FROM https://github.com/ZenLian/ZenLian.github.io/blob/zola/themes/cattery/static/css/style.css */
     color: #4c4f69;
     background-color: #eff1f5;
