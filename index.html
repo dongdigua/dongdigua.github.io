@@ -58,7 +58,7 @@
            console.log(text)
            lines = text.split(/\r?\n/).filter(item => item !== "").map(item => item.replace(/\\n/g, '\n'));
            var index = Math.floor((Math.random() * lines.length));
-           window.document.getElementById("quote").innerHTML = "\"" + lines[index] + "\"";
+           window.document.getElementById("quote").innerHTML = lines[index];
        });
   </script>
 </body>

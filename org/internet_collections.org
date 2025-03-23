@@ -1,5 +1,5 @@
 #+TAGS: elixir(e) rust(r) c(c) lisp(l) python(p) nim(n)
-#+TAGS: lowlevel(w) frontend(f) backend(b) algorithm(a) math(t) crypto(C)
+#+TAGS: lowlevel(w) frontend(f) backend(b) algorithm(a) math(t) crypto(C) AI(A)
 #+TAGS: hack(h) fun(u) wow(O)
 #+TAGS: emacs(m) linux(x) iot(i) plan9(9) BSD(B) PGP(P)
 #+TAGS: dead(D)
@@ -339,6 +339,9 @@ Linux kernel security researcher
 ** [[https://embracethered.com/blog][Embrace The Red]]                                                    :hack:
 *** [[https://embracethered.com/blog/posts/2021/offensive-bpf-bpftrace/][Offensive BPF: Malicious bpftrace 🤯]]
 *** [[https://embracethered.com/blog/posts/2024/claude-computer-use-c2-the-zombais-are-coming/][ZombAIs: From Prompt Injection to C2 with Claude Computer Use]]
+** [[https://wiki.alopex.li][Alopex Networks - a wiki runs on Gitit]]
+** [[https://ghuntley.com][Geoffrey Huntley]]                                                     :AI:
+*** [[https://ghuntley.com/tradecraft/][Yes, Claude Code can decompile itself. Here's the source code.]]
 
 # LABLE
 
@@ -605,6 +608,7 @@ When I was trying to download this video, I found that youtube-dl was broken!
 *** [[https://youtu.be/vuvckBQ1bME][How To Make A CPU]]
 *** [[https://youtu.be/k1BneeJTDcU][Welcome to the Internet - Bo Burnham (from "Inside" -- ALBUM OUT NOW)]]
 *** [[https://youtu.be/bW1otBbTh-E][live-coding ambient music in SuperCollider]]
+*** [[https://youtu.be/NX7GHqq28uU][Making a PCB Motor spin 30,000 RPM FASTER]]
 
 * r
 :PROPERTIES:
@@ -652,6 +656,7 @@ from emacs-china, about multi-thread
 ** [[https://bugzilla.mozilla.org/show_bug.cgi?id=18732][[FEATURE] Gnome and KDE integration for new mail notification (linux)]]
 ** [[https://bugs.mysql.com/bug.php?id=11472][Triggers not executed following foreign key updates/deletes]]
 20 years!
+** [[https://lore.kernel.org/rust-for-linux/CAHk-=wgLbz1Bm8QhmJ4dJGSmTuV5w_R0Gwvg5kHrYr4Ko9dUHQ@mail.gmail.com/][Re: Rust kernel policy]]
 
 * Other
 :PROPERTIES:
@@ -718,10 +723,11 @@ BSD asm
 ** [[https://artsey.io][ARTSEY one-handed keyboard system]]
 ** [[https://joakimthorsen.github.io/MCPropertyEncyclopedia][MCPropertyEncyclopedia]]
 ** [[https://0xinfection.github.io/reversing][Reverse Engineering For Everyone!]]
-** [[https://oldwestenglish.github.io/grammar/#/][薄冰英语语法]]
 ** [[https://aem1k.com][JavaScript Hacks and Creative Coding]]
 *** [[https://aem1k.com/qlock/][Quine Clock]]
 ** [[https://luc.devroye.org/fonts-51468.html][3x3 typeface]]
 ** [[https://windowswallpaper.miraheze.org/wiki/Main_Page][Windows Wallpaper Wiki]]
 ** [[https://erikdemaine.org/fonts/dissect/][Dissection Font by Erik Demaine, Martin Demaine, Donald E. Knuth, Yushi Uno, 2018]]
 ** [[http://shorthornproject.com][transform Windows XP/2003 in a moderns systems, with beatiful interface, compatible and very fast, based in One-Core-API tecnology]]
+** [[http://textfiles.com][textfiles.com]]
+** [[https://2005.wong2.me][上网2005]]
