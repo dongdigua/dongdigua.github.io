@@ -1,5 +1,7 @@
 ## Table of Contents
 ### Posts (sorted by time)
+- [2025-04-05 : Wayland 开发日记（一）：定时更新显示](wayland_dev_periodic_update)<br>
+- [2025-04-05 : Wayland 开发日记（〇）：目录](wayland_dev_index)<br>
 - [2025-02-03 : 考赛博壁画，刨红帽祖坟 (RHEL 5~10 Backgrounds)](rhel_wallpapers)<br>
 - [2025-01-17 : 我有奇妙的 DNS 设置](dns_setup)<br>
 - [2025-01-11 : pia! Slow down processes using cgroup v2](pia)<br>
@@ -41,7 +43,6 @@
 - [Arch 滚挂二三事](arch_syyu)<br>
 - [study4fun archives](study4fun)<br>
 - [Gopher/Gemini collections, a quiet web](gmi/collections.gmi.txt)<br>
-- [Play with Swaywm and Nixos (solutions)](wayland)<br>
 - [(Editor) Cheatsheet](cheatsheet)<br>
 - [Internet Collections (博客, YouTube 等收集)](internet_collections)<br>
 

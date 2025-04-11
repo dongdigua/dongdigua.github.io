@@ -1,0 +1,15 @@
+#+TITLE: Wayland 开发日记（〇）：目录
+#+DATE: <2025-04-05 六>
+
+* Index
+
+
+* Resources
+- [[https://wayland.app/][wayland explorer - A better way to read Wayland documentation]]
+- [[https://wayland-book.com/][wayland book]]
+- [[https://gitlab.freedesktop.org/emersion/hello-wayland][emersion/hello-wayland]] reference implementation
+- [[https://github.com/PurestAsh/wayland_hello_world_rust][PurestAsh/wayland_hello_world_rust]] rust reference implementation of xdg-shell and wlr-layer-shell-unstable-v1
+- [[https://git.sr.ht/~leon_plickat][~leon_plickat]] some wlr-layer-shell-unstable-v1 widgets
+- [[https://zhuanlan.zhihu.com/p/423462310][zhihu: Wayland开发入门系列索引]]
+- [[https://blog.jackeylea.com/wayland/wayland-learning-indexes/][食铁兽: Wayland入门教程索引]]
+- [[https://gaultier.github.io/blog/wayland_from_scratch.html][Learn Wayland by writing a GUI from scratch]]
