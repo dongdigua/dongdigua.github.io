@@ -273,6 +273,9 @@ the author of sway & sourcehut
 #+BEGIN_SRC shell
 openssl s_client -crlf -servername shenjack.top -connect shenjack.top:1965
 #+END_SRC
+*** [[https://drewdevault.com/2025/03/17/2025-03-17-Stop-externalizing-your-costs-on-me.html][Please stop externalizing your costs directly into my face]]
+红温了
+**** [[https://thelibre.news/foss-infrastructure-is-under-attack-by-ai-companies/][FOSS infrastructure is under attack by AI companies]]
 ** [[https://www.agwa.name][Andrew Ayer]]
 *** [[https://www.agwa.name/blog/post/ssh_signatures][It's Now Possible To Sign Arbitrary Data With Your SSH Keys]]
 ** [[https://theoryware.net][Theory-of-Everything]]

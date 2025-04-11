@@ -1,0 +1,121 @@
+#+TITLE: Wayland 开发日记（一）：定时更新显示
+#+DATE: <2025-04-05 六>
+
+目标：处理 Wayland 事件的同时定时更新显示（精度越高越好）
+本人菜菜，请多多指教！
+
+* Powered By std::thread::sleep()
+最近写了个[[https://github.com/dongdigua/wl-binclock][二进制时钟小组件]]，本来主循环是这样：
+#+BEGIN_SRC rust
+let mut speedup = 2;
+while !my_app.exit {
+    event_queue.blocking_dispatch(&mut my_app).unwrap();
+    let buffer = my_painter.draw(&my_app);
+    buffer.attach_to(&my_app.wl_surface).unwrap();
+    my_app.wl_surface.damage(0, 0, i32::MAX, i32::MAX);
+    my_app.wl_surface.commit();
+    if speedup > 0 {
+        speedup -= 1;
+    } else {
+        std::thread::sleep(std::time::Duration::from_millis(1000));
+    }
+}
+#+END_SRC
+但有个很明显的问题：不能及时响应 event
+（倒是不会因为没有 event 而阻塞，因为启动的时候会有一些 event，显示之后又会产生 event）
+
+* poll(2)
+#+BEGIN_QUOTE
+I have a rust wayland app that I want to update the display every 1 second while processing wayland events, how can I do it?
+#+END_QUOTE
+与 ChatGPT 友好交流一番后它让我 =event_queue.dispatch()= 加入 timeout，但是 wayland-rs 并没有实现此功能。
+追问之后告诉我用 poll 的 timeout。我恍然大悟为什么之前被我当作参考实现的 [[https://git.sr.ht/~leon_plickat/wayloadmon][wayloadmon]] 要引入 poll 了。
+这算是个 best practice 吧，任务管理器看好多 wayland 程序都在 do_sys_poll
+#+BEGIN_SRC c
+/* Flush pending Wayland events/requests. */
+while ( wl_display_prepare_read(wl_display) != 0 )
+{
+    if ( wl_display_dispatch_pending(wl_display) != 0 )
+        /* error handling */
+}
+while (true)
+{
+    /* Returns the amount of bytes flushed. */
+    const int flush_ret = wl_display_flush(wl_display);
+    if (flush_ret == -1) /* Error. */
+        /* error handling */
+    else if (flush_ret == 0) /* Done flushing. */
+        break;
+}
+
+poll(pollfds, 1, current_timeout)
+wl_display_read_events(wl_display)
+wl_display_dispatch_pending(wl_display)
+#+END_SRC
+于是 1.2 版本改成了这样：
+#+BEGIN_SRC rust
+let mut last_update = Instant::now();
+loop {
+    event_queue.flush().unwrap();
+    let read_guard = event_queue.prepare_read().unwrap();
+    let wl_fd = read_guard.connection_fd();
+
+    let elapsed = last_update.elapsed();
+    const MIN_DELAY: u16 = 1;
+    let timeout_ms = if elapsed >= Duration::from_secs(1) {
+        MIN_DELAY
+    } else {
+        let mut diff = (Duration::from_secs(1) - elapsed).as_millis() as u16;
+        if diff == 0 { diff += MIN_DELAY; }
+        diff
+    };
+
+    // Wait for events or timeout.
+    let mut poll_fds = [PollFd::new(wl_fd, PollFlags::POLLIN)];
+
+    let poll_ret = poll(&mut poll_fds, timeout_ms).unwrap();
+    if  poll_ret > 0 {
+        read_guard.read().unwrap();
+        event_queue.dispatch_pending(&mut my_app).unwrap();
+    } else if poll_ret == 0 {
+        std::mem::drop(read_guard);
+    } else {
+        eprintln!("poll failed");
+    }
+
+    if elapsed >= Duration::from_secs(1) {
+        /* update display */
+        last_update += Duration::from_secs(1);
+    }
+}
+#+END_SRC
+这样 dispatch 就不会在没有事件的时候阻塞，计时也不会影响 wayland 处理事件。
+
+* calloop
+也是 ChatGPT 提到的，并且还有个 [[https://github.com/Smithay/calloop-wayland-source][calloop-wayland-source]] 可以省去一些麻烦。
+
+* tokio::select!
+之前寻找解决方案的时候在 grep.app 上搜 =event_queue.prepare_read().unwrap()= 找到了[[https://blog.lilydjwg.me][依云]]的 [[https://github.com/lilydjwg/taskmaid/blob/master/src/wayland.rs][taskmaid]]，是这么写的
+（另外两个例子一个是 mio 一个是 rustix::event::epoll，不过写起来都没有这个简单）
+#+BEGIN_SRC rust
+let afd = AsyncFd::new(conn.as_fd()).unwrap();
+
+while !state.finished {
+    event_queue.flush().unwrap();
+    let read_guard = event_queue.prepare_read().unwrap();
+
+    debug!("waiting to read from wayland server...");
+    tokio::select! {
+        guard = afd.readable() => {
+            guard.unwrap().clear_ready();
+            read_guard.read().unwrap();
+            event_queue.dispatch_pending(&mut state).unwrap();
+        }
+        action = action_rx.recv() => match action.unwrap() {
+            Action::Close(id) => state.close(id)
+        }
+    }
+}
+#+END_SRC
+这种写法确实优雅很多，我这个项目暂时没用，先积累一下。
+之前跟 DeepSeek 聊的时候似乎也提过，可以用一个 channel 做时钟同步，一端用一个线程定时往里发信号。

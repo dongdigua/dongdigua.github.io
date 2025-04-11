@@ -1,12 +1,15 @@
 #+TITLE: My Projects
-#+TAGS: active(a) archived(c) MC(m)
+#+TAGS: active(a) archived(c) MC(M) maintain(m)
+
+* [[https://github.com/dongdigua/wl-binclock][wl-binclock]]                                                        :active:
+Wayland Binary Clock (the first graphical project I've ever written)
 
 * [[https://github.com/dongdigua/difficult-alarmclock][difficult-alarmclock]]                                               :active:
 Turn your Unix box into a music clock that sucks less.
 named after [[https://github.com/shenjackyuanjie/Difficult-Rocket][shenjack's Difficult-Rocket]]
 blog: [[./alarm_clock.org]]
 
-* [[https://github.com/dongdigua/alkaneo][alkane^{o}]]
+* [[https://github.com/dongdigua/alkaneo][alkane^{o}]]                                                       :archived:
 Generate alkanes using Racket and miniKanren.
 
 * [[https://github.com/dongdigua/demo.lua][demo.lua]]
