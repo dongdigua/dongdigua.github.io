@@ -1,0 +1,34 @@
+#+TITLE: Wayland 开发日记（〇）：目录
+#+DATE: <2025-04-05 六>
+
+* Index
+#+BEGIN_SRC elisp :results replace :exports none
+(defun get-first-line-title (filepath)
+  "仅读取文件第一行提取 TITLE，否则返回文件名（无后缀）"
+  (with-temp-buffer
+    (insert-file-contents filepath nil 0 200) ; 仅读取前200字符（避免加载大文件）
+    (goto-char (point-min))
+    (if (re-search-forward "^#\\+TITLE: \\(.*\\)" nil t)
+        (match-string 1)
+      (file-name-base filepath))))
+
+(let ((files (directory-files default-directory nil "wayland_dev.*\\.org$")))
+  (dolist (file files)
+    (unless (string-prefix-p "." file) ; 过滤隐藏文件
+      (let ((fullpath (expand-file-name file default-directory)))
+        (insert (format "- [[file:%s][%s]]\n"
+                        file
+                        (get-first-line-title fullpath)))))))
+#+END_SRC
+- [[file:wayland_dev0_index.org][Wayland 开发日记（〇）：目录]]
+- [[file:wayland_dev1_periodic_update.org][Wayland 开发日记（一）：定时更新显示]]
+
+* Resources
+- [[https://wayland.app/][wayland explorer - A better way to read Wayland documentation]]
+- [[https://wayland-book.com/][wayland book]]
+- [[https://gitlab.freedesktop.org/emersion/hello-wayland][emersion/hello-wayland]] reference implementation
+- [[https://github.com/PurestAsh/wayland_hello_world_rust][PurestAsh/wayland_hello_world_rust]] rust reference implementation of xdg-shell and wlr-layer-shell-unstable-v1
+- [[https://git.sr.ht/~leon_plickat][~leon_plickat]] some wlr-layer-shell-unstable-v1 widgets
+- [[https://zhuanlan.zhihu.com/p/423462310][zhihu: Wayland开发入门系列索引]]
+- [[https://blog.jackeylea.com/wayland/wayland-learning-indexes/][食铁兽: Wayland入门教程索引]]
+- [[https://gaultier.github.io/blog/wayland_from_scratch.html][Learn Wayland by writing a GUI from scratch]]

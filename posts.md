@@ -1,10 +1,9 @@
 ## Table of Contents
 ### Posts (sorted by time)
-- [2025-04-05 : Wayland 开发日记（一）：定时更新显示](wayland_dev_periodic_update)<br>
-- [2025-04-05 : Wayland 开发日记（〇）：目录](wayland_dev_index)<br>
+- [2025-04-05 : Wayland 开发日记（一）：定时更新显示](wayland_dev1_periodic_update)<br>
+- [2025-04-05 : Wayland 开发日记（〇）：目录](wayland_dev0_index)<br>
 - [2025-02-03 : 考赛博壁画，刨红帽祖坟 (RHEL 5~10 Backgrounds)](rhel_wallpapers)<br>
 - [2025-01-17 : 我有奇妙的 DNS 设置](dns_setup)<br>
-- [2025-01-11 : pia! Slow down processes using cgroup v2](pia)<br>
 - [2024-09-15 : Minecraft 随想录#1 衰落的服务器](mc1_downfall_of_smp)<br>
 - [2024-08-04 : 从 sway 到 labwc 再到 sway](labwc)<br>
 - [2024-02-29 : Wayland 下在 Minecraft (1.12) 里输入中文](minecraft_im)<br>

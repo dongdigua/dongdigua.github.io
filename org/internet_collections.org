@@ -333,6 +333,7 @@ author of darkman
 *** [[https://flak.tedunangst.com/post/memory-leak-proof-every-C-program][memory leak proof every C program]]
 *** [[https://flak.tedunangst.com/post/warning-implicit-backdoor][warning: implicit backdoor]]
 *** [[https://flak.tedunangst.com/post/an-autoflusher][an autoflusher]]
+*** [[https://flak.tedunangst.com/post/what-if-the-poison-were-rust][what if the poison were rust?]]
 ** [[https://www.leavesongs.com][离别歌]]
 ** [[https://cjting.me][CJ Ting]]
 *** [[https://cjting.me/2020/07/01/douyu-crawler-and-font-anti-crawling/][斗鱼关注人数爬取 ── 字体反爬的攻与防]]
@@ -450,6 +451,7 @@ inspiration: Veritasium
 0:09 This was the attitude: lets just have fun, and that's what we need to bring back
 **** TODO [[https://youtu.be/JRTLSxGf_6w][You Don't Know Network Programming]]
 [[https://blog.netherlabs.nl/articles/2009/01/18/the-ultimate-so_linger-page-or-why-is-my-tcp-not-reliable][tcp SO_LINGER]]
+**** [[https://youtu.be/5MIsMbFjvkw][What if Rust was Worse than C]]
 *** [[https://youtu.be/0rJ94rbdteE][Rust 让你感觉像个天才]]
 *** [[https://youtu.be/nfF91Z6fqGk][CMD 登录B站]]
 *** [[https://youtu.be/crnEygp4C6g][Jeff Geerling: FINALLY! A GPU works on the Raspberry Pi!]]
@@ -660,6 +662,12 @@ from emacs-china, about multi-thread
 ** [[https://bugs.mysql.com/bug.php?id=11472][Triggers not executed following foreign key updates/deletes]]
 20 years!
 ** [[https://lore.kernel.org/rust-for-linux/CAHk-=wgLbz1Bm8QhmJ4dJGSmTuV5w_R0Gwvg5kHrYr4Ko9dUHQ@mail.gmail.com/][Re: Rust kernel policy]]
+** [[https://lkml.org/lkml/2014/11/5/376][[RFC] The SIGINFO signal from BSD]]
+*** [[https://lwn.net/Articles/880498/][lwn.net: VSTATUS, with or without SIGINFO]]
+*** [[https://web.archive.org/web/20171118183623/https://www.reddit.com/r/linux/comments/7deo1r/ctrlt_status_key_patches_for_gentoo_for_those_who/][Ctrl-T status key patches for Gentoo. For those who miss this feature]]
+reddit 骂战也挺乱的，糟蹋了个好帖子，现在代码找不到了
+** [[https://curl.se/mail/lib-2020-11/0084.html][Re: [PATCH] New protocol: gemini]]
+从开发者的角度比较客观地评价，不像那些狂热的互联网老登
 
 * Other
 :PROPERTIES:

@@ -25,25 +25,24 @@ I □ Unicode
 <a id=quote href=damn_tencent_meeting>有什么业务是腾讯不做的吗?!</a>
 Your text editor runs in a web browser,\nMy web browser runs inside a text editor,\nWe are not the same
 免费服务的代价就是你自己
-FreeBSD 拼写有四样写法，你知道么？”，“不能写罢？……我教给你，记着！\n‘FreeBSD’、‘freeBSD’、‘Freebsd’、‘freebsd’这些字应该记着。\n以后做 FreeBSD 管理员的时候，写文档要用。\n-- <a id=quote href=https://book.bsdcn.org/di-19-zhang-wen-xue-gu-shi/di-19.1-jie-linux-yu-ku-nan-zhe-xue>《FreeBSD 从入门到跑路》</a>
+FreeBSD 拼写有四样写法，你知道么？”，“不能写罢？……我教给你，记着！\n‘FreeBSD’、‘freeBSD’、‘Freebsd’、‘freebsd’这些字应该记着。\n以后做 FreeBSD 管理员的时候，写文档要用。\n-- <a href=https://book.bsdcn.org/di-19-zhang-wen-xue-gu-shi/di-19.1-jie-linux-yu-ku-nan-zhe-xue>《FreeBSD 从入门到跑路》</a>
 不要说我们一无所有, 我们要把世界格式化\n-- 刘慈欣《2018年4月1日》
-不是你把你那破代码发到 GitHub, 你就是开源软件开发者, 你那个最多叫<b>网络垃圾制造者</b>\n-- <a id=quote href=https://www.bilibili.com/video/BV1Ho4y1b7E8>码农高天</a>
+不是你把你那破代码发到 GitHub, 你就是开源软件开发者, 你那个最多叫<b>网络垃圾制造者</b>\n-- <a href=https://www.bilibili.com/video/BV1Ho4y1b7E8>码农高天</a>
 I'm using Linux. A library that emacs uses to communicate with Intel hardware.
 TERRAIN, TERRAIN, PULL UP... dongdigua experienced kinetic energy
 Minecraft 1.1⑨.84 The Chat Report Update
-全物品仓库是一个物资集散中心, 同时它也是个万能垃圾桶\n-- <a id=quote href=https://www.bilibili.com/video/BV1gp4y197gm>TIS</a>
+全物品仓库是一个物资集散中心, 同时它也是个万能垃圾桶\n-- <a href=https://www.bilibili.com/video/BV1gp4y197gm>TIS</a>
 书中自有元素周期表
 <a id=quote href=https://www.bilibili.com/video/BV1JY411W7pQ>如果你能在浪费时间中获得乐趣, 那么你就不是在浪费时间</a>
 Nice terrain, see you soon!
 <ruby>静<rp>(</rp><rt>static</rt><rp>)</rp></ruby>
-你说的对，但 ZFS 是一款由 Sun Microsystems 自主研发的一款全新卷系统管理器和文件系统。\n文件系统运行在一个被称作「Linux」的幻想世界，在这里，被 root 选中的存储池将被授予「lz4」，导引存储之力。\n你将扮演一位名为「系统管理员」的神秘角色，在自由的 zpool create 中邂逅功能各异、feature 独特的 vdevs 们，\n和他们一起「state: DEGRADED」，找回失散的数据集——同时，逐步发掘 「BtrFS」 的真相……\n-- <a id=quote href=https://cascade.moe/posts/arch-with-zfs/>cascade.moe</a>
+你说的对，但 ZFS 是一款由 Sun Microsystems 自主研发的一款全新卷系统管理器和文件系统。\n文件系统运行在一个被称作「Linux」的幻想世界，在这里，被 root 选中的存储池将被授予「lz4」，导引存储之力。\n你将扮演一位名为「系统管理员」的神秘角色，在自由的 zpool create 中邂逅功能各异、feature 独特的 vdevs 们，\n和他们一起「state: DEGRADED」，找回失散的数据集——同时，逐步发掘 「BtrFS」 的真相……\n-- <a href=https://cascade.moe/posts/arch-with-zfs/>cascade.moe</a>
 :: Starting full system upgrade...\n  there is nothing to do
 还是PVP大佬
 橙白橙绿白蓝蓝白绿棕白棕
 您可能是正版软件的受害者
 你可以逃避现实，但你无法逃避\"逃避现实\"的后果。
 <a id=quote href=https://web.archive.org/web/20240606081039/https://sjtug.org/post/mirror-news/2024-06-06-takedown-dockerhub/>非常遗憾，接上级通知，即时起我们将中止对 dockerhub 仓库的镜像……</a>
-进步 就是求真求实\n-- <a id=quote href=https://www.bilibili.com/video/BV1nm41117cs>BV1nm41117cs</a>
 Only My Fieldgun
 Creeper? AWW MAN
 I got vape
@@ -54,16 +53,18 @@ l(a\nle\naf\nfa\nll\ns)\none\nl\niness
 <a id=quote href=https://sustainablewebdesign.org>If the Internet was a country,\nit would be the 4th largest polluter</a>
 洋玩意儿真漂亮啊！
 啊啊啊啊啊！！！\n啊啊啊啊啊！！！\n啊啊啊啊啊！！！\n啊啊啊啊唉！！！\n-- 刘慈欣《诗云》
-我用烟花宣告，用挥手告别，用鞠躬感谢，\n过去的都已经过去，接下来的路我要悠闲地走，愉悦地走，脚步如同时间不会停止，\n下一年，我们还会再会。<a id=quote href=https://www.luogu.com.cn/problem/P8941>luogu</a>
+我用烟花宣告，用挥手告别，用鞠躬感谢，\n过去的都已经过去，接下来的路我要悠闲地走，愉悦地走，脚步如同时间不会停止，\n下一年，我们还会再会。<a href=https://www.luogu.com.cn/problem/P8941>luogu</a>
 Bug #1 "Microsoft has a majority market share"
 方入生界...
-太阳系被歌者文明的二向箔拍扁之后，好歹还留下了一幅《星空》图，\n而互联网被时间的二向箔吞噬后，只留下一片虚空。\n-- <a id=quote href=https://web.archive.org/web/20240523001943/https:/mp.weixin.qq.com/s/afg3zHPpEyRzSfOR1Aeh3w>何加盐</a>
+太阳系被歌者文明的二向箔拍扁之后，好歹还留下了一幅《星空》图，\n而互联网被时间的二向箔吞噬后，只留下一片虚空。\n-- <a href=https://web.archive.org/web/20240523001943/https:/mp.weixin.qq.com/s/afg3zHPpEyRzSfOR1Aeh3w>何加盐</a>
 抓住皮皮虾~
 May the Source be with you!
 Life attracts life.\nLitter attracts litter.\n-- Gathering Moss
 吾有一數。曰三。名之曰「甲」。\n為是「甲」遍。\n吾有一言。曰「「問天地好在。」」。書之。\n云云。
 人们首先解决生存需要，然后寻求实用性，接着追求舒适性，\n后来又享受快乐，从而变得荒唐奢侈，最终变得疯狂并浪费物质。\n-- Giambattista Vico
-课堂提问打碎文人风骨，平时成绩断绝求真之路。\n-- <a id=quote href=https://www.bilibili.com/video/BV1FkmnYQEd1>Zhan丨</a>
+课堂提问打碎文人风骨，平时成绩断绝求真之路。\n-- <a href=https://www.bilibili.com/video/BV1FkmnYQEd1>Zhan丨</a>
 1.生物真的只是算法，而生命也真的只是数据处理吗？\n2.智能和意识，究竟哪一个才更有价值？\n3.等到无意识但具备高度智能的算法比我们更了解我们自己时，社会、政治和日常生活将会有什么变化？\n--《未来简史》
-昔者图灵梦为机，栩栩然机也。不知图灵也。俄然觉，则蘧蘧然图灵也。\n不知图灵之梦为机与？机之梦为图灵与？……此之谓物化。\n-- <a id=quote href=http://www.canonical.org/~kragen/tao-of-programming.html>The Tao Of Programming</a>
+昔者图灵梦为机，栩栩然机也。不知图灵也。俄然觉，则蘧蘧然图灵也。\n不知图灵之梦为机与？机之梦为图灵与？……此之谓物化。\n-- <a href=http://www.canonical.org/~kragen/tao-of-programming.html>The Tao Of Programming</a>
 手持两把锟斤拷 口中疾呼烫烫烫 脚踏千朵屯屯屯 笑看万物锘锘锘
+由于美国加征关税，GitHub 响应码已从 200 上调至 403
+I think you guys should stop learning languages and\nstart learning programming already.\n-- <a href=https://xcancel.com/tsoding/status/1560661602931601409>Тsфdiиg</a>
