@@ -2,7 +2,7 @@
 (package-initialize)
 (when (not package-archive-contents)
   (package-refresh-contents))
-(dolist (p '(webfeeder htmlize))
+(dolist (p '(webfeeder htmlize rust-mode elixir-mode))
   (when (not (package-installed-p p))
     (package-install p)))
 

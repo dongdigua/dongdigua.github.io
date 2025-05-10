@@ -28,7 +28,7 @@ jobs:
 
       - name: Install Deps
         run: |
-          sudo apt-get -q install --no-install-recommends pandoc emacs-nox
+          sudo apt-get -qq install --no-install-recommends pandoc emacs-nox
           bun add @tgwf/co2
 
       - name: make

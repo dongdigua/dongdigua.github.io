@@ -76,6 +76,7 @@ https://orgmode.org/worg/dev/org-export-reference.html
 | C-x ^     | enlarge-window      |
 | C-q <tab> | insert a tab        |
 | C-x C-+/- | text-scale-adjust   |
+| g x       | browse-url-at-point |
 
 https://www.masteringemacs.org/article/fun-games-in-emacs
 

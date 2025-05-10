@@ -68,3 +68,5 @@ Life attracts life.\nLitter attracts litter.\n-- Gathering Moss
 手持两把锟斤拷 口中疾呼烫烫烫 脚踏千朵屯屯屯 笑看万物锘锘锘
 由于美国加征关税，GitHub 响应码已从 200 上调至 403
 I think you guys should stop learning languages and\nstart learning programming already.\n-- <a href=https://xcancel.com/tsoding/status/1560661602931601409>Тsфdiиg</a>
+Elbereth
+Computer bought the farm\n-- <a href=https://elixir.bootlin.com/glibc/glibc-2.41.9000/source/po/zh_TW.po#L6393>glibc</a>
