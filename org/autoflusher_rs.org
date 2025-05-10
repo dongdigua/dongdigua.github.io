@@ -1,0 +1,119 @@
+#+TITLE: A Rust autoflusher that doesn't work with Rust
+#+DATE: <2025-05-17 六>
+
+A while ago I read about [[https://flak.tedunangst.com/post/an-autoflusher][Ted Unangst's autoflusher]],
+#+BEGIN_SRC c
+#include <stdio.h>
+#include <unistd.h>
+#include <pthread.h>
+
+static void *
+flusher(void *arg)
+{
+        while (1) {
+                sleep(3);
+                fflush(stdout);
+        }
+}
+
+__attribute__((constructor))
+void
+herewego(void)
+{
+        pthread_t thread;
+
+        pthread_create(&thread, NULL, flusher, NULL);
+}
+#+END_SRC
+so I want to implement the same thing in Rust (or [[https://github.com/tsoding/Crust][Crust?]])
+
+First I came up with this (expanded from ctor crate)
+#+BEGIN_SRC rust
+#![no_main]
+
+use std::thread;
+use std::time::Duration;
+use std::io::Write;
+
+#[used]
+#[cfg_attr(target_os = "linux", link_section = ".init_array")]
+static FLUSHER: extern fn() = {
+    extern fn force_flush() {
+        thread::spawn(|| loop {
+            std::io::stdout().flush().unwrap();
+            thread::sleep(Duration::from_millis(1000));
+        });
+    }
+    force_flush
+};
+#+END_SRC
+and a C program for testing:
+#+BEGIN_SRC c
+#include <stdio.h>
+#include <unistd.h>
+
+int
+main() {
+    printf("Hello World");
+    for (;;)
+        pause();
+    return 0;
+}
+#+END_SRC
+then
+#+BEGIN_SRC sh
+rustc --crate-type cdylib -o libflusher.so flusher.rs
+LD_PRELOAD=./libflusher.so ./test
+#+END_SRC
+don't work
+
+But the original C code works, so fflush(3) is ok, right?
+#+BEGIN_SRC diff
+--- a/flusher.rs
++++ b/flusher.rs
+@@ -3,15 +3,24 @@
+ use std::thread;
+ use std::time::Duration;
+ use std::io::Write;
++use std::ffi::{c_int, c_void};
+
+ #[used]
+ #[cfg_attr(target_os = "linux", link_section = ".init_array")]
+ static FLUSHER: extern fn() = {
+     extern fn force_flush() {
+         thread::spawn(|| loop {
+-            std::io::stdout().flush().unwrap();
++            unsafe {fflush(stdout)};
+             thread::sleep(Duration::from_millis(1000));
+         });
+     }
+     force_flush
+ };
++
++#[repr(C)]
++struct FILE(c_void);
++
++extern "C" {
++    fn fflush(stream: *mut FILE) -> c_int;
++    static mut stdout: *mut FILE;
++}
+#+END_SRC
+Now the C program is working, then what about Rust?
+#+BEGIN_SRC rust
+use std::ffi::c_int;
+
+fn main() {
+    print!("Hello World");
+    extern "C" {
+        fn pause() -> c_int;
+    }
+    loop {unsafe {pause()};}
+}
+#+END_SRC
+DON'T WORK!
+
+WHY? Because Rust uses it's internal buffer, different from libc's.
+So what if I use the first flusher (before diff).
+
+DON'T WORK EITHER!! WHYYYYY?
+I guess it's something about =stdout()='s lock and =.init_array=.

@@ -1,5 +1,6 @@
 ## Table of Contents
 ### Posts (sorted by time)
+- [2025-05-17 : A Rust autoflusher that doesn't work with Rust](autoflusher_rs)<br>
 - [2025-04-05 : Wayland 开发日记（一）：定时更新显示](wayland_dev1_periodic_update)<br>
 - [2025-04-05 : Wayland 开发日记（〇）：目录](wayland_dev0_index)<br>
 - [2025-02-03 : 考赛博壁画，刨红帽祖坟 (RHEL 5~10 Backgrounds)](rhel_wallpapers)<br>

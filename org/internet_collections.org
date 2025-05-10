@@ -50,8 +50,11 @@ An internet with links.
 *** [[https://predr.ag/blog/wifi-only-works-when-its-raining/][The Wi-Fi only works when it's raining]]
 *** [[https://msfjarvis.dev/posts/a-tour-of-my-screenshots-folder][A tour of my screenshots folder]]                             :minecraft:
 *** [[https://www.bbspot.com/news/2008/12/linux-on-a-potato.html][Hackers Successfully Install Linux on a Potato]]
-*** [[https://danwilkerson.com/posts/2024-12-04-square-zero][边框码]]
+*** [[https://danwilkerson.com/posts/2024-12-04-square-zero][边框码 (ryf 335)]]
 *** [[https://www.high-capacity.com/p/chinas-overlapping-tech-industrial][China's overlapping tech-industrial ecosystems]]
+*** [[https://www.andrewlynch.net/blog/are-your-a-creator-or-a-consumer][Are Your A Creator Or A Consumer? (ryf 346)]]
+*** [[https://alex.party/posts/2025-05-05-the-future-of-web-development-is-ai-get-on-or-get-left-behind/][The future of web development is *. Get on or get left behind. (ryf 347)]]
+*** [[https://security.opensuse.org/2025/05/07/deepin-desktop-removal.html][Removal of Deepin Desktop from openSUSE due to Packaging Policy Violation 👈🤓]]
 
 ** [[http://www.paulgraham.com/todo.html][Paul Graham]]
 ** [[http://www.qiusir.com/][qiusir]]                                                            :rssub:
@@ -291,7 +294,7 @@ gemini://xosc.org
 finger m@f.xosc.org
 ** [[https://tylercipriani.com][Tyler]]                                                               :git:
 *** [[https://tylercipriani.com/blog/2022/11/19/git-notes-gits-coolest-most-unloved-feature/][Git Notes: git's coolest, most unloved­ feature]]
-It's so cool, especially for testing and reviewing.(from [[https://www.ruanyifeng.com/blog/2023/02/weekly-issue-241.html][ruanyifeng 241]])
+It's so cool, especially for testing and reviewing.(from [[https://www.ryf.com/blog/2023/02/weekly-issue-241.html][ryf 241]])
 ** [[https://akarin.dev][✨小透明・宸✨ 存在感消失的地方|ω•`)]]
 ** [[https://nichi.co][Nick Cao (#archlinux-cn matrix)]]
 ** [[https://seh.dev][seh.dev]]                                                           :plan9:
@@ -346,6 +349,8 @@ Linux kernel security researcher
 ** [[https://wiki.alopex.li][Alopex Networks - a wiki runs on Gitit]]
 ** [[https://ghuntley.com][Geoffrey Huntley]]                                                     :AI:
 *** [[https://ghuntley.com/tradecraft/][Yes, Claude Code can decompile itself. Here's the source code.]]
+** [[https://dthompson.us][David Thompson]]
+found from [[https://guix.gnu.org/themes/initial/css/code.css][Guix Manual Rainbow paren matching]]
 
 # LABLE
 
@@ -451,7 +456,11 @@ inspiration: Veritasium
 0:09 This was the attitude: lets just have fun, and that's what we need to bring back
 **** TODO [[https://youtu.be/JRTLSxGf_6w][You Don't Know Network Programming]]
 [[https://blog.netherlabs.nl/articles/2009/01/18/the-ultimate-so_linger-page-or-why-is-my-tcp-not-reliable][tcp SO_LINGER]]
-**** [[https://youtu.be/5MIsMbFjvkw][What if Rust was Worse than C]]
+**** [[https://youtu.be/5MIsMbFjvkw][What if Rust was Worse than C (Crust)]]
+**** [[https://youtu.be/zkV8GKHGrRQ][C++ Library that Cracked Networking (0MQ)]]
+0:19 嘟嘟嘟
+**** [[https://youtu.be/Jht-_Lad1Vw][Overcoming Brain Damage to Work on My Compiler]]
+0:00 brain damage
 *** [[https://youtu.be/0rJ94rbdteE][Rust 让你感觉像个天才]]
 *** [[https://youtu.be/nfF91Z6fqGk][CMD 登录B站]]
 *** [[https://youtu.be/crnEygp4C6g][Jeff Geerling: FINALLY! A GPU works on the Raspberry Pi!]]
@@ -515,6 +524,8 @@ handle writing through this interplanetary loop.
 *** [[https://youtu.be/7taNCDMpPvc][I Read The Entire Bash Reference Manual (8.5h)]]
 *** [[https://youtu.be/WuRPOPocEXY][怎样用 Emacs 做所有事]]
 *** [[https://youtu.be/5rZWLZEMkgE][The Linux AX.25 Stack: A Forgotten Feature That Is Used To Talk To Space Stations!]]
+*** [[https://youtu.be/0A7A-CSd3e4][Meshtastic off-grid radio: Fantastic? Waste of Plastic? Or...]]
+父子节目
 
 **  [[https://www.youtube.com/@Computerphile][<C>]]
 *** [[https://youtu.be/BAo5C2qbLq8][Network Time Protocol (NTP)]]
@@ -573,10 +584,12 @@ even caught by police when he was a child
 
 ** ?
 *** [[https://www.youtube.com/c/IceGuye][IceGuye aka 姑射冰尘]]
-I found her playing NetHack on bilibili,
-but account was deleted
+I found her playing NetHack on bilibili, but account was deleted
+入坑 Nethack
+用 Emacs 说话
 **** [[https://iceguye.com/blog][Blog]]
-**** [[https://odysee.com/@IceGuye][on odysee(lbry)]]
+**** +[[https://odysee.com/@IceGuye][on odysee(lbry)]]+
+**** [[https://youtu.be/nx2yHjGDW68][Idiomatic Rust Is Slow (Two Simple Examples Here)]]
 *** [[https://youtu.be/IS5ycm7VfXg][Homemade Silicon Chips!]]
 *** [[https://youtu.be/4IaOeVgZ-wc][Why I'm Suing YouTube.]]
 #+BEGIN_QUOTE
@@ -614,6 +627,7 @@ When I was trying to download this video, I found that youtube-dl was broken!
 *** [[https://youtu.be/k1BneeJTDcU][Welcome to the Internet - Bo Burnham (from "Inside" -- ALBUM OUT NOW)]]
 *** [[https://youtu.be/bW1otBbTh-E][live-coding ambient music in SuperCollider]]
 *** [[https://youtu.be/NX7GHqq28uU][Making a PCB Motor spin 30,000 RPM FASTER]]
+*** [[https://youtu.be/Y6ZND7Ed70k][GreatScott: PLC]]
 
 * r
 :PROPERTIES:
@@ -706,15 +720,10 @@ RTFSC – Read The F**king Source Code ☺!
 ** [[https://isopenbsdsecu.re][Is OpenBSD secure?]]
 ** [[http://litcave.rudi.ir][LITCAVE]]
 software minimalism, Neat*
-** [[https://youbroketheinternet.org][youbroketheinternet.org]]
-#+ATTR_HTML: :width 256px
-[[https://youbroketheinternet.org/img/youbroketheman.png]]
 ** [[https://wiki.installgentoo.com/wiki/File:Inori-tan.jpg][InstallGentoo Wiki File:Inori-tan.jpg]]
 Internet Exploiter
 ** [[https://asmtutor.com/][NASM Assembly Language Tutorials]]
-good learning resource!
-*** [[http://int80h.org]]
-BSD asm
+*** +[[http://int80h.org]]+
 ** [[https://512pixels.net/projects/default-mac-wallpapers-in-5k/][Every Default macOS Wallpaper]]
 ** [[https://killedbymicrosoft.info][Killed by Microsoft]] and [[https://killedbygoogle.com][Killed by Google]]
 ** [[https://neal.fun/wonders-of-street-view/][Wonders of Street View]]
@@ -723,7 +732,7 @@ BSD asm
 ** [[https://github.com/zepouet/Xee-xCode-4.5/blob/master/XeePhotoshopLoader.m#L108][PSD is not my favourite file format]]
 ** [[https://hackway.org/docs/cs/intro][计算机专业学习路线]]
 ** [[https://github.com/torvalds/linux/pull/17][torvalds: I don't do github pull requests]]
-** [[https://cohost.org/blackle/post/42994-div-style-pointer][CSS 的机械装置 (from ruanyifeng 252)]]
+** [[https://cohost.org/blackle/post/42994-div-style-pointer][CSS 的机械装置 (from ryf 252)]]
 ** [[https://oldcompcz.github.io/jgs/][jgs ASCII art]]
 ** [[http://retrobase.cn][retrobase 识旧知新]]
 ** [[https://www.zzzuckerberg.com][Legal Lullabies]]
