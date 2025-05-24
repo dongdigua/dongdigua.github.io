@@ -7,6 +7,7 @@ org:
 describe:
 	sed -i "s/\$$v\\$$/\$$v: $$(git describe --tags HEAD)\\$$/g" index.html
 
+.PHONY: patches
 patches:
 	./patches/txt.sh
 	./patches/color.sh
