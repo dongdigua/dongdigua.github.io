@@ -28,7 +28,7 @@ jobs:
 
       - name: Install Deps
         run: |
-          sudo apt-get -qq install --no-install-recommends pandoc emacs-nox
+          sudo apt-get -qq install --no-install-recommends emacs-nox
           bun add @tgwf/co2
 
       - name: make
@@ -44,6 +44,9 @@ jobs:
         with:
           source: ./
           destination: ./_site
+
+      - name: tree
+        run: tree
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

@@ -1,0 +1,64 @@
+#+TITLE: Table of Contents
+#+OPTIONS: toc:nil
+#+HTML_HEAD: <link rel='stylesheet' href='css/everforest.css' /><link rel='stylesheet' href='css/dark.css' />
+
+* Posts
+- [[file:why_wechat_execve.org][2025-05-22 : Why is com.tencent.WeChat (flatpak) execve-ing ip(8) and lsblk(8)]]
+- [[file:autoflusher_rs.org][2025-05-17 : A Rust autoflusher that doesn't work with Rust]]
+- [[file:wayland_dev1_periodic_update.org][2025-04-05 : Wayland 开发日记（一）：定时更新显示]]
+- [[file:wayland_dev0_index.org][2025-04-05 : Wayland 开发日记（〇）：目录]]
+- [[file:rhel_wallpapers.org][2025-02-03 : 考赛博壁画，刨红帽祖坟 (RHEL 5~10 Backgrounds)]]
+- [[file:dns_setup.org][2025-01-17 : 我有奇妙的 DNS 设置]]
+- [[file:mc1_downfall_of_smp.org][2024-09-15 : Minecraft 随想录#1 衰落的服务器]]
+- [[file:labwc.org][2024-08-04 : 从 sway 到 labwc 再到 sway]]
+- [[file:minecraft_im.org][2024-02-29 : Wayland 下在 Minecraft (1.12) 里输入中文]]
+- [[file:alarm_clock.org][2024-02-14 : 智能闹钟不如随身听不如派]]
+- [[file:dunnet.org][2023-12-29 : 消失的 emacs dunnet 教程]]
+- [[file:lua_demo.org][2023-07-25 : Run a Lua Demo]]
+- [[file:nanopi_freebsd.org][2023-07-10 : 在 NanoPi R2S 上运行 FreeBSD]]
+- [[file:gmi/org_load_gnus_disable.gmi.txt][2023-06-08 : Org: Disable Gnus Loading when Org is Loaded]]
+- [[file:org_export_highlight.org][2023-06-07 : Org Preserve Source Bock Highlighting when Exporting Non-Interactively]]
+- [[file:usenet_and_cli_browsers.org][2023-05-21 : Usenet 新闻组 和 命令行浏览器选择 (w3m, lynx, links, elpher, offpunk)]]
+- [[file:gmi/cleanup_home.gmi.txt][2023-05-13 : Clean Up Home Directory]]
+- [[file:pgp_canokey.org][2023-04-16 : 一位 PGP 进步青年的 Canokey 历程]]
+- [[file:fedora_contrib.org][2023-04-01 : Join Fedora and Maintain Package]]
+- [[file:mailinglist.org][2023-02-09 : 玩转邮件列表]]
+- [[file:whatif_openbsd.org][2023-01-21 : 我要不要试试 OpenBSD 🐡]]
+- [[file:backup_everything.org][2023-01-08 : 一次大备份]]
+- [[file:emacs29_2023.org][2023-01-02 : 2023 了, 试试 emacs 29]]
+- [[file:fix_tty.org][2022-12-19 : Fix TTY after Fedora 37 Upgrade]]
+- [[file:damn_tencent_meeting.org][2022-12-02 : 狗日的腾讯会议]]
+- [[file:new_blog_arch.org][2022-11-20 : New Blog Architecture]]
+- [[file:recover_udisk.org][2022-11-13 : 记一次帮老师修U盘]]
+- [[file:clear_kernel_compile_fix.org][2022-11-04 : Clear Kernel Compile Error? Fix It]]
+- [[file:gentoo_llvm_targets.org][2022-10-29 : Gentoo LLVM_TARGETS not Working?]]
+- [[file:anaconda_kickstarts.org][2022-09-29 : CentOS/Fedora 不同的配置默认都安装了什么软件 (cossig.org)]]
+- [[file:moonboos.org][2022-09-11 : moonboos, 懂的都懂]]
+- [[file:weird_mglndd.org][2022-08-17 : MGLNDD scans]]
+- [[file:my_gnome_config.org][2022-07-08 : My gnome config]]
+- [[file:gmi/scicraft_update.gmi.txt][2022-07-06 : 我对 SciCraft 更新1.19的看法]]
+- [[file:recommend_everforest_theme.org][2022-06-27 : 推荐 everforest 主题]]
+- [[file:bili_ip.org][2022-06-18 : 我对显示 IP 属地的看法]]
+
+--------------
+
+* Long Term Update
+- [[file:arch_syyu.org][Arch 滚挂二三事]]
+- [[file:study4fun.org][study4fun archives]]
+- [[file:gmi/collections.gmi.txt][Gopher/Gemini collections, a quiet web]]
+- [[file:cheatsheet.org][(Editor) Cheatsheet]]
+- [[file:internet_collections.org][Internet Collections (博客, YouTube 等收集)]]
+
+--------------
+
+* 为什么中英文混杂? Why a mix of Chinese and English?
+1. 目标读者不同: 中文主要是中文互联网缺少的内容, 英文则是我希望全世界人读懂的
+   Different target readers: Chinese for something that ChinaWeb lack, English for more people on WorldWideWeb to understand
+
+2. 有些时候英文方便: 不用切换输入法
+   Sometimes English is more convenient: no need to switch input method
+
+3. 练习英文写作技能
+   Practice English writing skills
+
+--------------

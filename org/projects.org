@@ -1,6 +1,9 @@
 #+TITLE: My Projects
 #+TAGS: active(a) archived(c) MC(M) maintain(m)
 
+* [[https://github.com/dongdigua/lock20][lock20]]                                                             :active:
+Lock your screen for 20s every 20min (first gtk project)
+
 * [[https://github.com/dongdigua/wl-binclock][wl-binclock]]                                                        :active:
 Wayland Binary Clock (the first graphical project I've ever written)
 

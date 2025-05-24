@@ -2,7 +2,7 @@
 (package-initialize)
 (when (not package-archive-contents)
   (package-refresh-contents))
-(dolist (p '(webfeeder htmlize rust-mode elixir-mode))
+(dolist (p '(webfeeder htmlize rust-mode elixir-mode go-mode))
   (when (not (package-installed-p p))
     (package-install p)))
 
@@ -45,6 +45,8 @@
          :publishing-function org-html-publish-to-html
          :preserve-breaks t
 
+         :html-doctype "html5"
+         :html-html5-fancy t
          :html-head "<link rel='stylesheet' href='css/main.css' /><link rel='stylesheet' href='css/org.small.css' /><link rel='stylesheet' href='css/dark.css' />"
          ;; :html-head-include-default-style nil
          :html-link-home "https://dongdigua.github.io"
@@ -81,7 +83,14 @@
       "./../"
       "https://dongdigua.github.io"
       (my/delete-multiple (directory-files "./../" nil ".*\.html$")
-                          '("projects.html" "about.html" "my_timeline.html" "kernel.html" "404.html" "xmr.html" "index.html"))
+                          '("posts.html"
+                            "projects.html"
+                            "about.html"
+                            "my_timeline.html"
+                            "kernel.html"
+                            "404.html"
+                            "xmr.html"
+                            "index.html"))
       :title "dongdigua's blog"
       :description "Blog!"
       :builder 'webfeeder-make-rss)
