@@ -3,6 +3,8 @@
 #+HTML_HEAD: <link rel='stylesheet' href='css/everforest.css' /><link rel='stylesheet' href='css/dark.css' />
 
 * Posts
+- [[https://emacs-china.org/t/prevent-initial-flash-of-light/29578][2025-05-30 : Emacs 小技巧：防止启动白屏晃眼 (prevent initial flash of light)]]
+- [[file:m4_preprocessor.org][2025-05-27 : Re: 使用 m4 预处理文件，实现 include，ifdef, elifdef]]
 - [[file:why_wechat_execve.org][2025-05-22 : Why is com.tencent.WeChat (flatpak) execve-ing ip(8) and lsblk(8)]]
 - [[file:autoflusher_rs.org][2025-05-17 : A Rust autoflusher that doesn't work with Rust]]
 - [[file:wayland_dev1_periodic_update.org][2025-04-05 : Wayland 开发日记（一）：定时更新显示]]
@@ -35,7 +37,6 @@
 - [[file:anaconda_kickstarts.org][2022-09-29 : CentOS/Fedora 不同的配置默认都安装了什么软件 (cossig.org)]]
 - [[file:moonboos.org][2022-09-11 : moonboos, 懂的都懂]]
 - [[file:weird_mglndd.org][2022-08-17 : MGLNDD scans]]
-- [[file:my_gnome_config.org][2022-07-08 : My gnome config]]
 - [[file:gmi/scicraft_update.gmi.txt][2022-07-06 : 我对 SciCraft 更新1.19的看法]]
 - [[file:recommend_everforest_theme.org][2022-06-27 : 推荐 everforest 主题]]
 - [[file:bili_ip.org][2022-06-18 : 我对显示 IP 属地的看法]]

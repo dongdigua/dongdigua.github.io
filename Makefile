@@ -2,7 +2,7 @@ all: describe org patches get
 
 .PHONY: org
 org:
-	cd org; $(MAKE)
+	$(MAKE) -C org
 
 describe:
 	sed -i "s/\$$v\\$$/\$$v: $$(git describe --tags HEAD)\\$$/g" index.html

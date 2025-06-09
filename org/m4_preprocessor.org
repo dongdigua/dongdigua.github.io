@@ -1,0 +1,55 @@
+#+TITLE: Re: 使用 m4 预处理文件，实现 include，ifdef, elifdef
+#+DATE: <2025-05-27 二>
+
+之前看了蓝天的[[https://lantian.pub/article/modify-website/gpp-preprocess-dockerfile-include-if.lantian/][使用 GPP 预处理 Dockerfile，实现 #include、#if 等功能]]，正好最近在[[https://segmentfault.com/a/1190000004104696][学 m4]][fn:1]，想用 m4 实现类似功能。
+
+首先想到是用 =ifdef= 把要处理的代码块包起来，但是这必然会产生括号，造成编辑器（非 m4-mode）不必要的缩进。
+#+BEGIN_SRC m4
+ifdef(`SOMETHING', `
+something
+', `
+something else
+')
+#+END_SRC
+
+我想实现的是 =#ifdef= 和 =#endif= 分体的。
+这时候 =divert= 就派上用场了
+#+BEGIN_SRC m4
+m4_divert(-1)m4_dnl run with `-P' flag
+m4_changequote([,])
+m4_define([ifdef], [m4_ifdef([$1], [m4_divert(0)], [m4_divert(-1)])])
+m4_define([ifndef],[m4_ifdef([$1], [m4_divert(-1)], [m4_divert(0)])])
+m4_define([endif], [m4_divert(0)])
+m4_divert(0)m4_dnl
+#+END_SRC
+这里使用了 =<>= 代替引号，防止编辑器单引号错乱
+但这连个 else 都没有！
+
+稍微加一个变量就行，没有想象得那么复杂（为了好看就不替换引号了）
+#+BEGIN_SRC m4
+m4_divert(-1)m4_dnl run with `-P' flag
+m4_pushdef(`dnl', `m4_dnl')
+
+m4_define(`__COND_MET', 0)
+
+m4_define(`ifdef', `dnl
+m4_ifdef(`$1', `m4_define(`__COND_MET', 1)m4_divert(0)', `m4_divert(-1)')dnl
+')
+
+m4_define(`elifdef', `dnl
+m4_ifelse(__COND_MET, 1, `m4_divert(-1)', `ifdef(`$1')')dnl
+')
+
+m4_define(`else', `dnl
+m4_ifelse(__COND_MET, 1, `m4_divert(-1)', `m4_divert(0)')dnl
+')
+
+m4_define(`endif', `m4_define(`__COND_MET', 0)m4_divert(0)')
+
+m4_divert(0)dnl
+#+END_SRC
+当然这依旧没处理嵌套，懒得整了，再写就要变成宏孩儿了（
+如果真的需要嵌套/逻辑操作符那还是去用现成的 gpp 吧。
+
+* Footnotes
+[fn:1] 这个教程真的很棒，尤其是宏展开的分析和习题，强烈推荐！

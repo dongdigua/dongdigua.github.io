@@ -1,17 +1,19 @@
 #+TITLE: about
 #+OPTIONS: \n:nil
 
-- 哺乳纲 灵长目 人科 人属 智人
-- I use Arch btw
-- Emacs 和 Vim 双料高级特工
+- 是: 哺乳纲 灵长目 人科 人属 智人, 可能是: 方块人, 不是: 伪人/猫娘/赛博生命
+
+- I use AAAAArch btw
+- Emacs > Vim, Sway > GNOME > KDE
 - Firefox 忠实用户
-- Minecraft JE 技术生存 (MC 正统在 JE!)
-- 骑公路车的
-- Elixir > Rust > Python
+- Fonts: IntoneMono NF
+- 会: Elixir > Rust > Python
+- 主要玩: Minecraft 技术生存 (MC 正统在 JE!)
+- 其他游戏: Liftoff, Nethack, Chicory: A Colorful Tale
+
+- 喜欢的作家: 刘慈欣
 - 歌单里基本都是纯音乐 (C418, ConcernedApe, Toby Fox, Lena Raine, George Winston)
-- 不是很喜欢扁平化设计
-- GNOME > KDE
-- Fonts: JetBrainsMono NF, IntoneMono NF
+- 骑公路车的
 
 -----
 

@@ -119,3 +119,10 @@ while !state.finished {
 #+END_SRC
 这种写法确实优雅很多，我这个项目暂时没用，先积累一下。
 之前跟 DeepSeek 聊的时候似乎也提过，可以用一个 channel 做时钟同步，一端用一个线程定时往里发信号。
+
+* gtk
+使用 UI 框架就简单多了
+#+BEGIN_SRC rust
+let tick = move || { ... }
+glib::source::timeout_add_seconds_local(1, tick);
+#+END_SRC

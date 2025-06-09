@@ -95,6 +95,12 @@ https://www.masteringemacs.org/article/fun-games-in-emacs
 | v     | eww-view-page-source             |
 | .     | elpher-view-raw                  |
 
+** tramp
+sudo/doas
+#+BEGIN_EXAMPLE
+/ssh:host|doas::/path
+#+END_EXAMPLE
+
 * Git
 :PROPERTIES:
 :CUSTOM_ID:git:

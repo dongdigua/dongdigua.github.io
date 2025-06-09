@@ -71,3 +71,4 @@ I think you guys should stop learning languages and\nstart learning programming 
 Elbereth
 Computer bought the farm\n-- <a href=https://elixir.bootlin.com/glibc/glibc-2.41.9000/source/po/zh_TW.po#L6393>glibc</a>
 与其相信谣言，不如相信乌云。
+Removing Herobrine...
