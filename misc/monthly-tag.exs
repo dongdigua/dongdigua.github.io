@@ -41,7 +41,7 @@ defmodule GitMonthlyTag do
     cond do
       hash==prev ->
         psort(tl(tl), hd, acc)
-      Enum.any?(prev..hd, fn x -> rem(x, 100) == 0 end) ->
+      Enum.any?(prev..hd//1, fn x -> rem(x, 100) == 0 end) ->
         psort(tl, hd, [{hd, hash} | acc])
       true ->
         psort(tl, hd, acc)

@@ -1,0 +1,58 @@
+#+TITLE: 全面使用 SSH 取代 PGP
+#+DATE: <2025-06-12 四>
+#+OPTIONS: num:nil
+
+#+BEGIN_QUOTE
+再见了，老朋友 PGP，你对于开源和自由运动与集权抗争的象征意义，已经大于实际作用。
+#+END_QUOTE
+
+现有的 PGP 公钥已吊销
+[[file:~/git/dongdigua.github.io/pgp]]
+
+请使用
+#+BEGIN_EXAMPLE
+ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIEaLa1tljedAITIh6+VJ9Aqv3bX+HJT+Rn/tHKdDlYCp digua@arch-pc
+256 SHA256:0cvOPPW2ZkYEgXhlBepvtLyOex/ERVfqR1Ipm1pJT4g digua@arch-pc (ED25519)
++--[ED25519 256]--+
+|         . o*+o B|
+|        ..oE.+ *.|
+|        ..o ..X o|
+|         + . B.= |
+|        S + =.+ .|
+|         + * +.. |
+|          = =.+  |
+|           +.o+o |
+|          o+o=o  |
++----[SHA256]-----+
+#+END_EXAMPLE
+
+* Why
+简而言之：PGP 太难用了，既然 SSH 能满足我的需求，为何不使用更易用，更现代的方案呢？
+
+* Authentication
+很显然，SSH 的本职工作就是 authentication
+
+* Signing
+OpenSSH8 及之后 可以对[[https://www.agwa.name/blog/post/ssh_signatures][任意数据签名]]
+#+BEGIN_SRC sh
+ssh-keygen -Y sign -f ~/.ssh/id_ed25519 -n file file_to_sign
+#+END_SRC
+
+git >= 2.34.0 可以使用 ssh 签名
+#+BEGIN_SRC sh
+git config --global commit.gpgsign true
+git config --global gpg.format ssh
+git config --global user.signingKey ~/.ssh/id_ed25519.pub
+#+END_SRC
+至于为什么 commit 签名很重要，见：[[https://spencerwoo.com/blog/wait-this-is-not-my-commit][震惊! 竟然有人在 GitHub 上冒充我的身份!]]
+
+* Encryption
+SSH 本身不能用来加密文件，但是 [[https://age-encryption.org][age]] 可以使用 SSH key
+#+BEGIN_SRC sh
+$ age-keygen -o key.txt
+Public key: age1ql3z7hjy54pw3hyww5ayyfg7zqgvc7w3j2elw8zmrj2kg5sfn9aqmcac8p
+$ tar cvz ~/data | age -r age1ql3z7hjy54pw3hyww5ayyfg7zqgvc7w3j2elw8zmrj2kg5sfn9aqmcac8p > data.tar.gz.age
+$ age --decrypt -i key.txt data.tar.gz.age > data.tar.gz
+#+END_SRC
+
+但是现在支持不是很广泛，pass 的变种 passage 在移动端的支持不好。
