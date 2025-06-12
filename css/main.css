@@ -77,7 +77,7 @@ h1 {
 }
 
 h2 {
-	color: #587e72;
+	color: rgb(114, 135, 253);  /* cattery */
 	border-bottom: 1px solid #ddd;
 	margin-top: 1.5em;
 	padding-bottom: 8px;
@@ -88,7 +88,7 @@ h2 {
 }
 
 h3 {
-	color: #587e72;
+	color: rgb(114, 135, 253);
 	margin-left: 0.6em;
 }
 
@@ -97,7 +97,7 @@ h3 {
 }
 
 h4 {
-	color: #587e72;
+	color: rgb(114, 135, 253);
 	margin-left: 1.2em;
 }
 
@@ -108,7 +108,7 @@ h4 {
 a {
     cursor: crosshair;
     text-decoration: none; 
-    color: #08c;            /* FROM Arch */
+	color: rgb(114, 135, 253);
 }
 a:hover {
     text-decoration: underline; 

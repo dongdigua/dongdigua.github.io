@@ -26,10 +26,10 @@ An internet with links.
 :CUSTOM_ID: blog
 :END:
 #+TAGS: rssable(s) rssub(U) gopher(g)
-** Single Entries
+** Articles (TODO merge with cnblog zhihu etc)
 *** [[https://bheisler.github.io/post/state-of-gpgpu-in-rust/][The State of GPGPU in Rust]]                              :rust:lowlevel:
 *** [[https://secretgeek.github.io/html_wysiwyg/][巧用 CSS 显示 HTML 源码]]                                      :frontend:
-*** [[https://blog.pg999w.top/too-many-channels/][Too many channels in Rust but only one in Go]]                     :rust:
+*** [[https://blog.pg999w.cn/post/too-many-channels/][Too many channels in Rust but only one in Go]]                     :rust:
 *** [[https://bugs.xdavidhu.me/google/2022/11/10/accidental-70k-google-pixel-lock-screen-bypass/][Accidental $70k Google Pixel Lock Screen Bypass]]
 *** [[https://www.engraved.blog/building-a-virtual-machine-inside/][Building A Virtual Machine inside ChatGPT]]
 *** [[https://snarfed.org/2022-03-10_were-drowning-software-dependencies][We're Drowning Software Dependencies]]
@@ -55,6 +55,10 @@ An internet with links.
 *** [[https://www.andrewlynch.net/blog/are-your-a-creator-or-a-consumer][Are Your A Creator Or A Consumer? (ryf 346)]]
 *** [[https://alex.party/posts/2025-05-05-the-future-of-web-development-is-ai-get-on-or-get-left-behind/][The future of web development is *. Get on or get left behind. (ryf 347)]]
 *** [[https://security.opensuse.org/2025/05/07/deepin-desktop-removal.html][Removal of Deepin Desktop from openSUSE due to Packaging Policy Violation 👈🤓]]
+*** [[https://idiallo.com/blog/zipbomb-protection][I use Zip Bombs to Protect my Server (ryf 347)]] [[https://lists.sr.ht/~sircmpwn/sr.ht-discuss/<174705593136.6.10328081465339759602.716154301@ploum.eu>][sr.ht-discuss]]
+*** [[https://blog.arduino.cc/2025/04/22/arduino-is-at-work-to-make-bio-based-pcbs/][Arduino is at work to make bio-based PCBs! (ryf 349)]]
+*** [[https://segmentfault.com/a/1190000004104696][让这世界再多一份 GNU m4 教程 (1)]]
+*** [[https://wyb.chinawriter.com.cn/content/201808/01/content27487.html][一个和十万个地球]]
 
 ** [[http://www.paulgraham.com/todo.html][Paul Graham]]
 ** [[http://www.qiusir.com/][qiusir]]                                                            :rssub:
@@ -187,12 +191,7 @@ funny byte
 ** [[https://ulyc.github.io/][UlyC]]                                                             :python:
 *** [[https://ulyc.github.io/2022/08/10/sourcehut-the-hackers-forge/][sourcehut,  一个反叛而又正统的代码托管平台]]
 *** [[https://ulyc.github.io/2021/01/13/2021年-用更现代的方法使用PGP-上/][2021年, 用更现代的方法使用PGP]]                                     :PGP:
-#+BEGIN_QUOTE
-同样是非对称算法, 为什么PGP的私钥就长这么多呢？
-因为他们用的算法不同, 比特币默认使用的是ECDSA的 secp256k1算法, 该算法只是用来签名和认证, 并不用来加密
-(signify 只用于签名认证, age 只用于加密, 所以密钥也比较短)
-#+END_QUOTE
-**** [[https://spwo.notion.site/GitHub-6b1e1d57f52c4664bff61cadb3f9cb8d][震惊! 竟然有人在 GitHub 上冒充我的身份!]]
+**** [[https://spencerwoo.com/blog/wait-this-is-not-my-commit][震惊! 竟然有人在 GitHub 上冒充我的身份!]]
 *** [[https://ulyc.github.io/2019/08/01/初窥CORB/][Cross-Origin Read Blocking]]
 ** [[https://kernal.eu][kernal]]
 Welcome to the darkest dungeon of kernal
@@ -214,8 +213,6 @@ The Aha Moments
 但是过去20年互联网行业大发展的基本模式就是吸引大量用户、获取大平台地位、取得超额收益。
 用户量是商业成功的互联网平台所必须追求的第一目标。要想获得商业成功，永恒九月来得越早越凶猛越好。
 #+END_QUOTE
-#+ATTR_HTML: :width 256px
-[[https://upload.wikimedia.org/wikipedia/commons/d/d7/Internet_is_Full_-_Go_Away_t-shirt.jpg]]
 **** [[https://nyxt.atlas.engineer/article/gopher.org][Nyxt: Why should I care about Gopher?]]                        :gopher:
 #+BEGIN_QUOTE
 By making something a little bit more inaccessible, we are inadvertently putting a filter on what is being posted.
@@ -310,6 +307,9 @@ It's so cool, especially for testing and reviewing.(from [[https://www.ryf.com/b
 ** [[https://whynothugo.nl][ben Hugo]]
 author of darkman
 *** [[https://whynothugo.nl/journal/2024/06/13/ssh-as-a-sudo-replacement/][SSH as a sudo replacement]]
+#+BEGIN_QUOTE
+[[https://nichi.co/articles/container-escape.html][Nichi Cao: 故而他又使用ssh模拟了一个sudo，效果拔群]]
+#+END_QUOTE
 ** [[https://cascade.moe][七碳烷烃 Isoheptane (工程师猫娘)]]
 *** [[https://cascade.moe/posts/arch-with-zfs/][在 ZFS 上安装 Arch Linux]]
 ** [[https://dataswamp.org/~lich/][lich (dataswamp)]]
@@ -351,6 +351,15 @@ Linux kernel security researcher
 *** [[https://ghuntley.com/tradecraft/][Yes, Claude Code can decompile itself. Here's the source code.]]
 ** [[https://dthompson.us][David Thompson]]
 found from [[https://guix.gnu.org/themes/initial/css/code.css][Guix Manual Rainbow paren matching]]
+** [[https://shrik3.com][SHRIK3]]
+*** [[https://shrik3.com/post/hugo/hugo_no_bullshit/][No bullshit hugo blog]]
+*** [[https://vnoid.de/~shrik3][3KiRhS]]
+**** [[https://vnoid.de/~shrik3/scripts/render_site.sh][render_site.sh]]
+actually you can use =--hintro= and =--houtro=
+**** [[https://vnoid.de/~shrik3/docs/age.txt][age.txt]]
+** [[https://gledos.science][gledos]]
+*** [[https://gledos.science/restored-pixel-art.html][逆向还原像素画]]
+*** [[https://gledos.science/88x31.html][我们仍未知道那天所看见的 88 × 31 的名字]]
 
 # LABLE
 
@@ -450,17 +459,24 @@ inspiration: Veritasium
 **** [[https://youtu.be/iPrltr1b6Q4][I implemented Goto in OCaml]]
 **** [[https://youtu.be/PgDqBZFir1A][Weird Parts of C you probably never heard of: Hot loading, X macro]]
 **** [[https://youtu.be/b-q4QBy52AA][Web in Native Assembly (Linux x86_64)]]
-**** TODO [[https://youtu.be/3jxCDCiozAU][Parsing Lisp with Rust (Tula Ep.03)]]
 **** [[https://youtu.be/dkNv3KGOFT0][Server-Side Rendering in C]]
 **** [[https://youtu.be/SbpusG7sHF4][This Library Turned my C into JavaScript wtf]]
 0:09 This was the attitude: lets just have fun, and that's what we need to bring back
-**** TODO [[https://youtu.be/JRTLSxGf_6w][You Don't Know Network Programming]]
-[[https://blog.netherlabs.nl/articles/2009/01/18/the-ultimate-so_linger-page-or-why-is-my-tcp-not-reliable][tcp SO_LINGER]]
 **** [[https://youtu.be/5MIsMbFjvkw][What if Rust was Worse than C (Crust)]]
 **** [[https://youtu.be/zkV8GKHGrRQ][C++ Library that Cracked Networking (0MQ)]]
 0:19 嘟嘟嘟
-**** [[https://youtu.be/Jht-_Lad1Vw][Overcoming Brain Damage to Work on My Compiler]]
-0:00 brain damage
+**** TODO [[https://youtu.be/ey68sKSFJAU][The Best Coding Interview Question Ever (memcached)]]
+**** [[https://youtu.be/h164R46NWBM][Hacking GNU utilities - m4]]
+0:09 winapi FileOpen (CreateFile?) nuke your house by default
+0:24 the error message are great
+**** [[https://youtu.be/TH5118PhzYs][I tried .NET on Linux and Died Inside]]
+0:03 freaking microsoft people, they literally didn't create a root folder for a tar ball
+0:04 we havn't even started yet and I already feel microsoft bullshit
+0:10 fuck you microsoft
+0:11 =ls -larth=
+0:12 if microsoft has some unknown format file, you can bet 99% that it's some shit XML. they fucking love it
+0:15 "native" executable
+1:42 "Tell us about yourself"
 *** [[https://youtu.be/0rJ94rbdteE][Rust 让你感觉像个天才]]
 *** [[https://youtu.be/nfF91Z6fqGk][CMD 登录B站]]
 *** [[https://youtu.be/crnEygp4C6g][Jeff Geerling: FINALLY! A GPU works on the Raspberry Pi!]]
@@ -560,10 +576,10 @@ handle writing through this interplanetary loop.
 *** [[https://youtu.be/dT9y-KQbqi4][How I hacked a hardware crypto wallet and recovered $2 million]]
 even caught by police when he was a child
 *** [[https://youtu.be/eTcVLqKpZJc][PwnFunction: Dangerous Code Hidden in Plain Sight for 12 years]] in [[./wayland.org::#pkexec][pkexec]]
+**** [[https://youtu.be/rgsIkZkflMw][2 Bytes Was Enough To Breach The US Treasury CVE-2025-1094]]
 *** [[https://youtu.be/GEbn3nHyKnA][How One Line of Code Almost Blew Up the Internet]]
 *** [[https://youtu.be/aNEqC-U5tHM][Malware Development (1/2)]]
 *** [[https://youtu.be/wTl4vEednkQ][stacksmashing: Breaking Bitlocker - Bypassing the Windows Disk Encryption]]
-*** TODO [[https://youtu.be/L8XOqrKBM5w][Custom Cyberdeck For (Legal) Satellite Hacking]]
 *** [[https://youtu.be/Y4A7KMQEmfo][DEF CON 31 - Terminally Owned - 60 Years of Escaping - David Leadbeater]]
 
 ** Math
@@ -750,4 +766,6 @@ Internet Exploiter
 ** [[https://erikdemaine.org/fonts/dissect/][Dissection Font by Erik Demaine, Martin Demaine, Donald E. Knuth, Yushi Uno, 2018]]
 ** [[http://shorthornproject.com][transform Windows XP/2003 in a moderns systems, with beatiful interface, compatible and very fast, based in One-Core-API tecnology]]
 ** [[http://textfiles.com][textfiles.com]]
-** [[https://2005.wong2.me][上网2005]]
+** [[https://2005.wong2.me][上网2005 (ryf 342)]]
+** [[https://useplaintext.email][Use plain text email]]
+** [[https://yeluyelu.mynatapp.cc][夜鹭页录]]

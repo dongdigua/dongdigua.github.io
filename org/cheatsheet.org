@@ -50,14 +50,15 @@
 :CUSTOM_ID:emacs:
 :END:
 ** org
-| key         | usage                         |
-|-------------+-------------------------------|
-| C-c \vbar   | 创建表格                      |
-| C-c C-e     | 导出 HTML                     |
-| C-c C-x C-v | toggle render images          |
-| C-c C-l     | 编辑链接                      |
-| C-c C-,     | org-insert-structure-template |
-| C-c C-x p   | org-set-property              |
+| key         | usage                                |
+|-------------+--------------------------------------|
+| C-c \vbar   | 创建表格                              |
+| C-c C-e     | 导出 HTML                            |
+| C-c C-x C-v | toggle render images                 |
+| C-c C-l     | 编辑链接                              |
+| C-c C-,     | org-insert-structure-template        |
+| C-c C-x p   | org-set-property                     |
+| C-u C-c C-l | Autocomplete when editing file links |
 
 https://orgmode.org/worg/dev/org-export-reference.html
 
