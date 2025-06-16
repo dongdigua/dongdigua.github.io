@@ -34,7 +34,6 @@
 - [[file:new_blog_arch.org][2022-11-20 : New Blog Architecture]]
 - [[file:recover_udisk.org][2022-11-13 : 记一次帮老师修U盘]]
 - [[file:clear_kernel_compile_fix.org][2022-11-04 : Clear Kernel Compile Error? Fix It]]
-- [[file:gentoo_llvm_targets.org][2022-10-29 : Gentoo LLVM_TARGETS not Working?]]
 - [[file:anaconda_kickstarts.org][2022-09-29 : CentOS/Fedora 不同的配置默认都安装了什么软件 (cossig.org)]]
 - [[file:moonboos.org][2022-09-11 : moonboos, 懂的都懂]]
 - [[file:weird_mglndd.org][2022-08-17 : MGLNDD scans]]
