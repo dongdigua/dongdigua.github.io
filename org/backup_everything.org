@@ -98,7 +98,7 @@ unzip:  cannot find zipfile directory in one of foo.zip or
 家目录也得备份啦, 当前系统最重要的数据都在那.
 选项参考[[https://blog.lilydjwg.me/2013/12/29/rsync-btrfs-dm-crypt-full-backup.42219.html][依云的博客]]
 #+BEGIN_SRC
-rsync -aAXxvh --numeric-ids --info=progress2 --exclude-from=rsync-exclude /home/digua DEST
+rsync -aAXxHhv --numeric-ids --info=progress2 --exclude-from=rsync-exclude /home/digua DEST
 #+END_SRC
 忽略掉一些不用的目录
 #+BEGIN_EXAMPLE

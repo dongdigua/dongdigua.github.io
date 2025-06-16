@@ -1,0 +1,160 @@
+#+TITLE: 家里云方案之三权分立
+#+DATE: <2025-06-12 四>
+#+OPTIONS: \n:t
+
+想搞个家里云。
+不想 all in boom，不想太复杂的虚拟化，想搞存算分离。
+在几晚上的失眠之后想出了这个方案：
+
+* Network
+搞了个软路由，十分标准的操作，没啥可讲的
+https://openwrt.org/inbox/toh/xiaomi/ax3000t
+
+* Storage
+接着上一篇：[[file:backup_everything.org][一次大备份]]
+[[https://wiki.friendlyelec.com/wiki/index.php/CM3588_NAS_Kit][CM3588 NAS Kit]]
++还是熟悉的 FreeBSD，还是熟悉的 ZFS，+
+硬盘随便买了两个牌子的 PCIE 3.0 盘，因为这个板子 4 盘位的话只能各 PCIE 3.0 单通道，买 4.0 的纯属浪费钱。
+FreeBSD 完全起不来，UART 口似乎也不好使（即使 OMV 也只输出乱码），没法用 UART 调试，所以只能 fallback 到 OpenMediaVault 了。
+（我是对 FreeBSD 比较有情怀，但情怀毕竟不能当饭吃，还是务实一点，OMV 的网页端多好啊，我机器全用 btrfs 也减少学习负担）
++不过这回又起了个 Postgres，因为我不想让 Postgres 再走 NFS，使用 NFS 为 PC 和容器提供存储，+ 还是应该对系统进行解耦，让容器用本地的存储。
+
+
+* Runner
+其他服务全放在 docker 容器，宿主我选择 Gentoo on Raspberry Pi 5
+https://wiki.gentoo.org/wiki/How_to_install_Gentoo_on_Raspberry_Pi_5
+（然后这两个带风扇的板子我还糊了一层 HEPA 滤网用来防尘，[[https://www.ruanyifeng.com/blog/2023/03/weekly-issue-246.html][inspiration]]）
+
+** 第一次尝试
+刚放假，树莓派还没邮到，现在宿主机 qemu-aarch64-static 上交叉编译。
+看着屏幕上缓缓滚动的编译进度，90 多度的 CPU，在两天一夜之后，我发主了以下感慨：
+
+#+BEGIN_QUOTE
+我可能真的是有什么大病，花了十几个小时交叉编译 gcc（因为 podman 的一个依赖项依赖 rust，rust 依赖 libgcc，后来 gcc 实在编译不动了，换 llvm-runtimes/libgcc 然后折腾好一阵 unmask），
+大夏天的烫烫烫，然后所有服务还都是容器化的，跟宿主除了内核其他半毛钱关系没有。
+哦，然后 rust-bin 还不能用 musl， =Error relocating /lib/libgcc_s.so.1.0: __getauxval: symbol not found= ，还得编译 rust，然后循环依赖……
+rust 坏 go 好。
+最后只能切换到不依赖 rust 的 docker
+哦对然后 podman-compose 您一个 python 脚本还不支持 arm
+#+END_QUOTE
+
+** 第二次尝试
+树莓派到了，结果之前编译的 rootfs 启动不了，还忘邮 micro-HDMI 线了，怎么办，不能盲目调试啊。
+UART，启动！（但凡搞过嵌入式的手头都有 UART 调试器吧，如果没有可以用 Arduino Nano CH340 代替，有树莓派而无 Arduino 者，未之闻也）
+https://www.jeffgeerling.com/blog/2021/attaching-raspberry-pis-serial-console-uart-debugging
+对于树莓派5，config.txt 里加上：
+#+BEGIN_EXAMPLE
+dtparam=uart0=on
+dtparam=uart0_console=on
+enable_uart=1
+enable_rp1_uart=1
+#+END_EXAMPLE
+发现树莓派官方内核不支持 xfs，直接 panic，只能滚回去用 ext4 了
+
+然后能启动了，但是 readonly filesystem 噔噔咚！
+
+*** on #gentoo（TL;DR 文件损坏）
+@@html:<details>@@
+@@html:<summary>chat log</summary>@@
+#+BEGIN_EXAMPLE
+<dongdigua> hello, I'm installing gentoo on raspberry pi 5 following (nearly)
+            https://wiki.gentoo.org/wiki/How_to_install_Gentoo_on_Raspberry_Pi_5
+<dongdigua> but I got [    3.005840] EXT4-fs (mmcblk0p2): orphan cleanup on readonly fs
+<dongdigua> [    3.012155] EXT4-fs (mmcblk0p2): mounted filesystem 5f0ea1b9-2fb6-4a8f-a8f8-9baa389fa047 ro with ordered data mode. Quota mode: none.
+<dongdigua> [    3.024169] VFS: Mounted root (ext4 filesystem) readonly on device 179:2.
+<sam_> that looks okay
+<sam_> it'll get remounted rw later
+<kgdrenefort> dongdigua: also FYI there is also #gentoo-arm for specific issue
+              with ARM device, if it helps later :).
+<dongdigua> sam_: it's not remounted rw, even with 'mount -o remount,rw /'
+<sam_> that's a later problem though, not in the lines you showed
+<sam_> tell us more about what happens please [18:08]
+<Randname_> fstab errors ?
+<dongdigua> fstab is 1:1 copy of the wiki article
+<dongdigua> later dmesg is here https://paste.debian.net/1379518/
+<NeddySeagoon> dongdigua: fsck can't fix all errors on the root fs. You need
+               to check it offline [18:11]
+<dongdigua> yes, I unplugged and fscked it on my host machine [18:12]
+<NeddySeagoon> dongdigua: good. Does it mount there?
+<dongdigua> yes, and fsck showed no error [18:13]
+<dongdigua> really weird
+<NeddySeagoon> That's a good sign too. What are you using for a PSU? [18:14]
+<dongdigua> NeddySeagoon: something from 亚博智能 capable of outputing 5V5A
+<NeddySeagoon> dongdigua: with an attached cable?
+<dongdigua> yes, usbC
+<dongdigua> NeddySeagoon: and the powermeter says it's only 0.5A
+<NeddySeagoon> dongdigua: that sounds good. Check dmesg for undervolt events
+               if you can
+<dongdigua> NeddySeagoon: none ( [18:17]
+<NeddySeagoon> dongdigua: ripple voltage matters a great deal. That's not easy
+               to measure.
+<dongdigua> NeddySeagoon: so I tried another power from HUAWEI, 5V2A, and the
+            same, readonly [18:19]
+<NeddySeagoon> dongdigua: you need to fix the fs before you test with another
+               PSU [18:20]
+<NeddySeagoon> rootfsck can't do it when the fs is mounted ro. It must be
+               unmounted completely [18:22]
+<dongdigua> NeddySeagoon: I 'fsck -yf' on my host machine, stil readonly :|
+<NeddySeagoon> But it mounts on the host still?
+<dongdigua> y [18:25]
+<dongdigua> host kernel 6.14, pi 6.12, is this a point?
+<dongdigua> wait, I will try to format the sd card using raspbian over usb
+                                                                        [18:26]
+<NeddySeagoon> dongdigua: it all sounds OK, it just doesn't work. I use last
+               weekends foundation 6.12.y but it does not sound like a kernel
+               issue
+\* NeddySeagoon goes for more coffee [18:27]
+\* dongdigua rebuilds from stage3 [18:32]
+<dongdigua> NeddySeagoon: I rebuilt the sd card from a clean stage3 (I
+            previously installed some package) [18:37]
+<dongdigua> and it works [18:38]
+<dongdigua> probably corrupted files
+<dongdigua> NeddySeagoon: thank you a lot for your patience
+<NeddySeagoon> dongdigua: Enjoy your Gentoo. A Pi5 should not do that. [18:41]
+#+END_EXAMPLE
+@@html:</details>@@
+
+于是乎拿崭新的 stage3 从头再来
+事实证明树莓派性能比 qemu 高很多，发热还小，风扇声音也小，所以丢失进度并没有对我造成太大打击
+
+
+*** MC
+事实证明树莓派5跑 MC 性能足够，1.12.2 vanilla 静置大概 15 mspt
+别用 azul prime JDK， *树莓派官方内核没启用 hugepages* ，会直接 coredump
+#+BEGIN_EXAMPLE
+pi ~ # docker run -it docker.1ms.run/azul/prime
+root@22923e93ec02:/# java -version
+
+##### addr(0xc40000000000)sz(0x40000000000), msg(mmap() error.  Failed to reserve thread stacks region)
+Aborted (core dumped)
+root@22923e93ec02:/# 
+#+END_EXAMPLE
+#+BEGIN_EXAMPLE
+CONFIG_HAVE_ARCH_TRANSPARENT_HUGEPAGE=y
+CONFIG_HAVE_ARCH_HUGE_VMAP=y
+CONFIG_HAVE_ARCH_HUGE_VMALLOC=y
+CONFIG_ARCH_WANT_HUGE_PMD_SHARE=y
+# CONFIG_TRANSPARENT_HUGEPAGE is not set
+CONFIG_ARCH_SUPPORTS_HUGETLBFS=y
+# CONFIG_HUGETLBFS is not set
+#+END_EXAMPLE
+
+*** cannot open crtbeginS.o: No such file or directory
+TL;DR =emerge --oneshot --nodeps clang-runtime=
+#+BEGIN_EXAMPLE
+configure:4530: $? = 1                                                                                                                  
+configure:4550: checking whether the C compiler works                                                                                   
+configure:4572: clang -O2 -pipe -march=native  -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -Wl,--as-needed conftest.c  >&5      
+aarch64-unknown-linux-musl-ld: error: cannot open crtbeginS.o: No such file or directory                                                
+aarch64-unknown-linux-musl-ld: error: unable to find library -lgcc                                                                      
+aarch64-unknown-linux-musl-ld: error: unable to find library -lgcc_s                                                                    
+aarch64-unknown-linux-musl-ld: error: unable to find library -lgcc                                                                      
+aarch64-unknown-linux-musl-ld: error: unable to find library -lgcc_s                                                                    
+aarch64-unknown-linux-musl-ld: error: cannot open crtendS.o: No such file or directory                                                  
+clang: error: linker command failed with exit code 1 (use -v to see invocation)       
+#+END_EXAMPLE
+sam_ 提到了 https://bugs.gentoo.org/951445 （怎么这些大佬随口就能说出 bug 号啊）
+#+BEGIN_EXAMPLE
+<vimproved>  so there's a period where between merging clang and clang-runtime, the toolchain is not using any config file and therefor could be broken
+#+END_EXAMPLE
+

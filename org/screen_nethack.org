@@ -1,0 +1,31 @@
+#+TITLE: GNU screen 的 nethack 模式
+#+DATE: <2025-06-16 一>
+
+最近[[file:homelab.org][搞 Gentoo]]的时候发现 =app-misc/screen= 有 nethack 这个 USE， =euse -i nethack= "Express error messages in nethack style"，
+作为半个 nethack 玩家（虽然从没成功通关过），当然要一探究竟。
+
+[[https://www.gnu.org/software/screen/manual/html_node/Nethack.html][manual]] 里说
+#+BEGIN_EXAMPLE
+The default setting is then determined by the presence of the environment variable $NETHACKOPTIONS and the file ~/.nethackrc - if either one is present, the default is on.
+#+END_EXAMPLE
+
+所以一共有什么 message 呢
+clone 下来 https://git.savannah.gnu.org/git/screen.git ，rg 一下，发现
+#+BEGIN_EXAMPLE
+1-Version 5.0.0 (28/08/24):
+...skipped...
+15-  * Removed commands:
+16-     - time
+17-     - debug
+18-     - password
+19-     - maxwin
+20:     - nethack
+#+END_EXAMPLE
+呀，为啥给移除了，多有意思的一个特性啊！
+所以去 4.9 看下吧
+在 [[https://cgit.git.savannah.gnu.org/cgit/screen.git/tree/src/nethack.c?h=v.4.9.1][src/nethack.c]] 定义了所有 nethack 的翻译，很有意思
+
+[[https://cgit.git.savannah.gnu.org/cgit/screen.git/commit/?id=9109409b2e0dbe15df2ffa76557f7d938d37fb08][commit 9109409]] 移除了 nethack 相关东西，不知道为什么要这么做
+
+所以我发了个邮件
+https://lists.gnu.org/archive/html/screen-users/2025-06/index.html

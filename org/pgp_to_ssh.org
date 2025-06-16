@@ -54,5 +54,7 @@ Public key: age1ql3z7hjy54pw3hyww5ayyfg7zqgvc7w3j2elw8zmrj2kg5sfn9aqmcac8p
 $ tar cvz ~/data | age -r age1ql3z7hjy54pw3hyww5ayyfg7zqgvc7w3j2elw8zmrj2kg5sfn9aqmcac8p > data.tar.gz.age
 $ age --decrypt -i key.txt data.tar.gz.age > data.tar.gz
 #+END_SRC
+也可以看看 SHRIK3 的笔记 https://vnoid.de/~shrik3/docs/age.txt
 
-但是现在支持不是很广泛，pass 的变种 passage 在移动端的支持不好。
+pass 可以迁移到 passage，并且 [[https://github.com/FiloSottile/passage/pull/52][pull#52]] 很好的解决了 gpg key-id 顺序的问题（如果我同时有硬盘上的和智能卡上的key，gpg 总会先选择智能卡上的）
+但是现在支持不是很广泛，passage 在移动端的支持不好。

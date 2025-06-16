@@ -698,6 +698,7 @@ from emacs-china, about multi-thread
 reddit 骂战也挺乱的，糟蹋了个好帖子，现在代码找不到了
 ** [[https://curl.se/mail/lib-2020-11/0084.html][Re: [PATCH] New protocol: gemini]]
 从开发者的角度比较客观地评价，不像那些狂热的互联网老登
+** [[https://archives.gentoo.org/gentoo-dev/message/9a92320c599e63c8c18b2ed29050f22f][[gentoo-dev] [RFC] Discontinuing LibreSSL support?]]
 
 * Other
 :PROPERTIES:
