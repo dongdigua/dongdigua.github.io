@@ -4,7 +4,7 @@
 
 * Posts
 - [[file:screen_nethack.org][2025-06-16 : GNU screen 的 nethack 模式]]
-- [[file:homelab.org][2025-06-12 : 家里云方案之三权分立]]
+- [[file:homelab.org][2025-06-12 : 三权分立的家里云方案]]
 - [[file:pgp_to_ssh.org][2025-06-12 : 全面使用 SSH 取代 PGP]]
 - [[https://emacs-china.org/t/prevent-initial-flash-of-light/29578][2025-05-30 : Emacs 小技巧：防止启动白屏晃眼 (prevent initial flash of light)]]
 - [[file:m4_preprocessor.org][2025-05-27 : Re: 使用 m4 预处理文件，实现 include，ifdef, elifdef]]

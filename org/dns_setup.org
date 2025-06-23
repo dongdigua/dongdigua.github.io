@@ -45,6 +45,11 @@ B 站需要老长时间加载，且很不稳定，一看，解析到美国去了
 但经历这些再看，它集 DoH，缓存于一身，几乎完美符合我的需求。
 如果再出现问题，或许应该考虑试试 [[https://github.com/zfl9/chinadns-ng][chinadns-ng]] 了。
 
+(2025.6) 受不了 download.dnscrypt.info 被 connection reset 然后我经常得重启服务，做了几个镜像
+- [[https://dongdigua.top/public-resolvers.md][cloudflare worker]]
+- [[https://blog.dongdigua.ooo/public-resolvers.md][github pages]]
+- [[https://dongdigua.ooo/~dongdigua/mirrors/public-resolvers.md][VPS]]
+
 * 总结
 一个简单的 DNS 服务就能如此激发创造力，这还得归功于国内优质的网络环境 :)
 

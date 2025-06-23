@@ -31,7 +31,7 @@ util-linux-libs 2.40rc2-1 Last Updated: 	2024-03-23 23:34 UTC
 glib2 2.80.0-2            Last Updated: 	2024-03-23 22:55 UTC
 #+END_EXAMPLE
 
-* TODO 2024-07-06
+* 2024-07-06
 这周不知道哪次更新之后开机就没声了，得按两次静音键才有声。
 搜了一下 Arch Linux Forum，删一下 =wireplumber= 缓存?
 #+BEGIN_SRC shell
@@ -55,3 +55,12 @@ nichi_bot  [影翼] 很多天前提到的
 │07/26       nichi_bot  [Aalivexy] 发现好像是因为pipewire的新Bug
 │            nichi_bot  [Aalivexy] https://gitlab.freedesktop.org/pipewire/pipewire/-/issues/4084
 #+END_EXAMPLE
+solved
+
+* 2025-06-23
+#+BEGIN_EXAMPLE
+error: failed to commit transaction (conflicting files)
+linux-firmware-nvidia: /usr/lib/firmware/nvidia/ad103 exists in filesystem
+#+END_EXAMPLE
+今天不知道 pacman 抽什么疯，要安 nvidia 驱动。
+哦，没看 RSS：https://archlinux.org/news/linux-firmware-2025061312fe085f-5-upgrade-requires-manual-intervention/

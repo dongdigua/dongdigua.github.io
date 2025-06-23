@@ -73,3 +73,4 @@ Computer bought the farm\n-- <a href=https://elixir.bootlin.com/glibc/glibc-2.41
 与其相信谣言，不如相信乌云。
 Removing Herobrine...
 Larry the Cow beckons you to explore the Gentoo wiki!
+脑核已转储

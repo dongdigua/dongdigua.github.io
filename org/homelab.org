@@ -1,6 +1,7 @@
-#+TITLE: 家里云方案之三权分立
+#+TITLE: 三权分立的家里云方案
 #+DATE: <2025-06-12 四>
 #+OPTIONS: \n:t
+#+STARTUP: showall
 
 想搞个家里云。
 不想 all in boom，不想太复杂的虚拟化，想搞存算分离。
@@ -10,20 +11,34 @@
 搞了个软路由，十分标准的操作，没啥可讲的
 https://openwrt.org/inbox/toh/xiaomi/ax3000t
 
+看到个好玩的：[[https://blog.rachelt.one/articles/custom-guest-wifi-with-auth/][在 OpenWrt 上打造 Rickroll 访客 Wi-Fi]]
+
+** 显示主机名
+*** dhcpcd
+#+BEGIN_EXAMPLE
+fqdn both
+#+END_EXAMPLE
+*** NetworkManager
+???
+为什么我的 wifi 连接显示了但以太网没有
+
 * Storage
 接着上一篇：[[file:backup_everything.org][一次大备份]]
 [[https://wiki.friendlyelec.com/wiki/index.php/CM3588_NAS_Kit][CM3588 NAS Kit]]
 +还是熟悉的 FreeBSD，还是熟悉的 ZFS，+
-硬盘随便买了两个牌子的 PCIE 3.0 盘，因为这个板子 4 盘位的话只能各 PCIE 3.0 单通道，买 4.0 的纯属浪费钱。
 FreeBSD 完全起不来，UART 口似乎也不好使（即使 OMV 也只输出乱码），没法用 UART 调试，所以只能 fallback 到 OpenMediaVault 了。
 （我是对 FreeBSD 比较有情怀，但情怀毕竟不能当饭吃，还是务实一点，OMV 的网页端多好啊，我机器全用 btrfs 也减少学习负担）
+硬盘随便买了两个牌子的 PCIE 3.0 盘，因为这个板子 4 盘位的话只能各 PCIE 3.0 单通道，买 4.0 的纯属浪费钱。
 +不过这回又起了个 Postgres，因为我不想让 Postgres 再走 NFS，使用 NFS 为 PC 和容器提供存储，+ 还是应该对系统进行解耦，让容器用本地的存储。
 
+zfs 参考 https://gist.github.com/CodeBradley/6acef34563323f8c2a11b72900c20092
+
+@@html:<iframe src="//player.bilibili.com/player.html?isOutside=true&bvid=BV1jXNbzMENK&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>@@
 
 * Runner
 其他服务全放在 docker 容器，宿主我选择 Gentoo on Raspberry Pi 5
 https://wiki.gentoo.org/wiki/How_to_install_Gentoo_on_Raspberry_Pi_5
-（然后这两个带风扇的板子我还糊了一层 HEPA 滤网用来防尘，[[https://www.ruanyifeng.com/blog/2023/03/weekly-issue-246.html][inspiration]]）
+（ +然后这两个带风扇的板子我还糊了一层 HEPA 滤网用来防尘，[[https://www.ruanyifeng.com/blog/2023/03/weekly-issue-246.html][inspiration]]，然后编译时建议揭开点否则可能过热+ 确实会过热并且噪声增加，DS 推荐我用正经的防尘网）
 
 ** 第一次尝试
 刚放假，树莓派还没邮到，现在宿主机 qemu-aarch64-static 上交叉编译。
@@ -54,6 +69,10 @@ enable_rp1_uart=1
 然后能启动了，但是 readonly filesystem 噔噔咚！
 
 *** on #gentoo（TL;DR 文件损坏）
+:PROPERTIES:
+:VISIBILITY: folded
+:END:
+# showall instead of showeverything solves this
 @@html:<details>@@
 @@html:<summary>chat log</summary>@@
 #+BEGIN_EXAMPLE
@@ -118,9 +137,10 @@ enable_rp1_uart=1
 事实证明树莓派性能比 qemu 高很多，发热还小，风扇声音也小，所以丢失进度并没有对我造成太大打击
 
 
-*** MC
+*** kernel
+**** MC
 事实证明树莓派5跑 MC 性能足够，1.12.2 vanilla 静置大概 15 mspt
-别用 azul prime JDK， *树莓派官方内核没启用 hugepages* ，会直接 coredump
+别用 [[https://docs.azul.com/prime/Enable-Huge-Pages][azul prime JDK]]， *树莓派官方内核没启用 hugepages* ，会直接 coredump
 #+BEGIN_EXAMPLE
 pi ~ # docker run -it docker.1ms.run/azul/prime
 root@22923e93ec02:/# java -version
@@ -138,6 +158,191 @@ CONFIG_ARCH_WANT_HUGE_PMD_SHARE=y
 CONFIG_ARCH_SUPPORTS_HUGETLBFS=y
 # CONFIG_HUGETLBFS is not set
 #+END_EXAMPLE
+**** memory cgroup
+#+BEGIN_SRC sh
+pi ~ # cat /proc/cmdline
+reboot=w coherent_pool=1M 8250.nr_uarts=1 pci=pcie_bus_safe cgroup_disable=memory numa_policy=interleave nvme.max_host_mem_size_mb=0  smsc95xx.macaddr=2C:CF:67:F0:B8:06 vc_mem.mem_base=0x3fc00000 vc_mem.mem_size=0x40000000  dwc_otg.lpm_enable=0 console=ttyAMA0,115200 console=tty1 root=/dev/mmcblk0p2 rootfstype=ext4 fsck.repair=yes rootwait
+pi ~ # cat /boot/cmdline.txt
+dwc_otg.lpm_enable=0 console=serial0,115200 console=tty1 root=/dev/mmcblk0p2 rootfstype=ext4 fsck.repair=yes rootwait
+#+END_SRC
+[[https://www.raspberrypi.com/documentation/computers/configuration.html#kernel-command-line-cmdline-txt][固件会改我的 cmdline]]，不让我用 memory cgroup， =docker stats= 看不见内存占用
+**** raspberrypi-sources 启动！
+https://www.raspberrypi.com/documentation/computers/linux_kernel.html#natively-build-a-kernel
+基于上述问题，看起来有必要编译个内核了。 *gentoo 就是爽！*
+#+BEGIN_SRC sh
+export KERNEL=kernel_2712
+export LLVM=1 # llvm profile
+make bcm2712_defconfig
+make menuconfig
+time make -j3 Image.gz modules dtbs
+make -j3 modules_install
+# install
+cp /boot/$KERNEL.img /boot/$KERNEL-backup.img
+cp arch/arm64/boot/Image.gz /boot/$KERNEL.img
+cp arch/arm64/boot/dts/broadcom/*.dtb /boot/
+cp arch/arm64/boot/dts/overlays/*.dtb* /boot/overlays/
+cp arch/arm64/boot/dts/overlays/README /boot/overlays/
+reboot
+#+END_SRC
+用不了多长时间，差不多 100 分钟（只要你不往内核里掺 rust）
+哦对了 llvm 和 clang 别忘了启用 USE="ARM"，因为内核里有一些 32 位的部分，否则会 =No available targets are compatible with triple "thumbv8a-unknown-linux-gnueabi"= （废话）
+***** config patch：
+:PROPERTIES:
+:VISIBILITY: folded
+:END:
+#+BEGIN_SRC diff
+--- .config_def	2025-06-16 12:44:48.588234025 +0000
++++ .config	2025-06-16 23:52:04.266680435 +0000
+@@ -27,7 +27,7 @@
+ CONFIG_INIT_ENV_ARG_LIMIT=32
+ # CONFIG_COMPILE_TEST is not set
+ # CONFIG_WERROR is not set
+-CONFIG_LOCALVERSION="-v8-16k"
++CONFIG_LOCALVERSION="-digua"
+ # CONFIG_LOCALVERSION_AUTO is not set
+ CONFIG_BUILD_SALT=""
+ CONFIG_DEFAULT_INIT=""
+@@ -143,7 +143,7 @@
+ CONFIG_RCU_NEED_SEGCBLIST=y
+ # end of RCU Subsystem
+ 
+-CONFIG_IKCONFIG=m
++CONFIG_IKCONFIG=y
+ CONFIG_IKCONFIG_PROC=y
+ # CONFIG_IKHEADERS is not set
+ CONFIG_LOG_BUF_SHIFT=17
+@@ -178,6 +178,7 @@
+ CONFIG_CGROUP_PIDS=y
+ # CONFIG_CGROUP_RDMA is not set
+ CONFIG_CGROUP_FREEZER=y
++CONFIG_CGROUP_HUGETLB=y
+ CONFIG_CPUSETS=y
+ CONFIG_PROC_PID_CPUSET=y
+ CONFIG_CGROUP_DEVICE=y
+@@ -199,6 +200,7 @@
+ CONFIG_RELAY=y
+ CONFIG_BLK_DEV_INITRD=y
+ CONFIG_INITRAMFS_SOURCE=""
++# CONFIG_INITRAMFS_FORCE is not set
+ CONFIG_RD_GZIP=y
+ CONFIG_RD_BZIP2=y
+ CONFIG_RD_LZMA=y
+@@ -522,9 +524,9 @@
+ #
+ # Boot options
+ #
+-CONFIG_CMDLINE="console=ttyAMA0,115200 kgdboc=ttyAMA0,115200 root=/dev/mmcblk0p2 rootfstype=ext4 rootwait"
+-CONFIG_CMDLINE_FROM_BOOTLOADER=y
+-# CONFIG_CMDLINE_FORCE is not set
++CONFIG_CMDLINE="consreboot=w coherent_pool=1M 8250.nr_uarts=1 pci=pcie_bus_safe numa_policy=interleave nvme.max_host_mem_size_mb=0 smsc95xx.macaddr=2C:CF:67:F0:B8:06 vc_mem.mem_base=0x3fc00000 vc_mem.mem_size=0x40000000 dwc_otg.lpm_enable=0 console=ttyAMA0,115200 console=tty1 root=/dev/mmcblk0p2 rootfstype=ext4 fsck.repair=yes rootwait cgroup_enable=memory"
++# CONFIG_CMDLINE_FROM_BOOTLOADER is not set
++CONFIG_CMDLINE_FORCE=y
+ CONFIG_EFI_STUB=y
+ CONFIG_EFI=y
+ CONFIG_DMI=y
+@@ -679,12 +681,14 @@
+ CONFIG_STACKPROTECTOR_STRONG=y
+ CONFIG_ARCH_SUPPORTS_SHADOW_CALL_STACK=y
+ # CONFIG_SHADOW_CALL_STACK is not set
++CONFIG_LTO=y
++CONFIG_LTO_CLANG=y
+ CONFIG_ARCH_SUPPORTS_LTO_CLANG=y
+ CONFIG_ARCH_SUPPORTS_LTO_CLANG_THIN=y
+ CONFIG_HAS_LTO_CLANG=y
+-CONFIG_LTO_NONE=y
++# CONFIG_LTO_NONE is not set
+ # CONFIG_LTO_CLANG_FULL is not set
+-# CONFIG_LTO_CLANG_THIN is not set
++CONFIG_LTO_CLANG_THIN=y
+ CONFIG_ARCH_SUPPORTS_CFI_CLANG=y
+ # CONFIG_CFI_CLANG is not set
+ CONFIG_HAVE_CONTEXT_TRACKING_USER=y
+@@ -696,6 +700,7 @@
+ CONFIG_HAVE_ARCH_HUGE_VMAP=y
+ CONFIG_HAVE_ARCH_HUGE_VMALLOC=y
+ CONFIG_ARCH_WANT_HUGE_PMD_SHARE=y
++CONFIG_ARCH_WANT_PMD_MKWRITE=y
+ CONFIG_HAVE_MOD_ARCH_SPECIFIC=y
+ CONFIG_MODULES_USE_ELF_RELA=y
+ CONFIG_HAVE_SOFTIRQ_ON_OWN_STACK=y
+@@ -917,6 +922,8 @@
+ CONFIG_COMPACT_UNEVICTABLE_DEFAULT=1
+ # CONFIG_PAGE_REPORTING is not set
+ CONFIG_MIGRATION=y
++CONFIG_ARCH_ENABLE_HUGEPAGE_MIGRATION=y
++CONFIG_ARCH_ENABLE_THP_MIGRATION=y
+ CONFIG_CONTIG_ALLOC=y
+ CONFIG_PCP_BATCH_SCALE_MAX=5
+ CONFIG_PHYS_ADDR_T_64BIT=y
+@@ -925,7 +932,10 @@
+ CONFIG_DEFAULT_MMAP_MIN_ADDR=4096
+ CONFIG_ARCH_SUPPORTS_MEMORY_FAILURE=y
+ # CONFIG_MEMORY_FAILURE is not set
+-# CONFIG_TRANSPARENT_HUGEPAGE is not set
++CONFIG_TRANSPARENT_HUGEPAGE=y
++CONFIG_TRANSPARENT_HUGEPAGE_ALWAYS=y
++# CONFIG_TRANSPARENT_HUGEPAGE_MADVISE is not set
++# CONFIG_READ_ONLY_THP_FOR_FS is not set
+ CONFIG_CMA=y
+ # CONFIG_CMA_DEBUG is not set
+ # CONFIG_CMA_DEBUGFS is not set
+@@ -8057,7 +8067,7 @@
+ CONFIG_OCFS2_FS_STATS=y
+ CONFIG_OCFS2_DEBUG_MASKLOG=y
+ # CONFIG_OCFS2_DEBUG_FS is not set
+-CONFIG_BTRFS_FS=m
++CONFIG_BTRFS_FS=y
+ CONFIG_BTRFS_FS_POSIX_ACL=y
+ # CONFIG_BTRFS_FS_CHECK_INTEGRITY is not set
+ # CONFIG_BTRFS_FS_RUN_SANITY_TESTS is not set
+@@ -8165,7 +8175,8 @@
+ # CONFIG_TMPFS_INODE64 is not set
+ # CONFIG_TMPFS_QUOTA is not set
+ CONFIG_ARCH_SUPPORTS_HUGETLBFS=y
+-# CONFIG_HUGETLBFS is not set
++CONFIG_HUGETLBFS=y
++CONFIG_HUGETLB_PAGE=y
+ CONFIG_ARCH_HAS_GIGANTIC_PAGE=y
+ CONFIG_CONFIGFS_FS=y
+ CONFIG_EFIVAR_FS=m
+@@ -8440,7 +8451,7 @@
+ # end of Kernel hardening options
+ # end of Security options
+ 
+-CONFIG_XOR_BLOCKS=m
++CONFIG_XOR_BLOCKS=y
+ CONFIG_ASYNC_CORE=m
+ CONFIG_ASYNC_MEMCPY=m
+ CONFIG_ASYNC_XOR=m
+@@ -8555,7 +8566,7 @@
+ #
+ # Hashes, digests, and MACs
+ #
+-CONFIG_CRYPTO_BLAKE2B=m
++CONFIG_CRYPTO_BLAKE2B=y
+ CONFIG_CRYPTO_CMAC=m
+ CONFIG_CRYPTO_GHASH=m
+ CONFIG_CRYPTO_HMAC=y
+@@ -8574,7 +8585,7 @@
+ # CONFIG_CRYPTO_VMAC is not set
+ CONFIG_CRYPTO_WP512=m
+ CONFIG_CRYPTO_XCBC=m
+-CONFIG_CRYPTO_XXHASH=m
++CONFIG_CRYPTO_XXHASH=y
+ # end of Hashes, digests, and MACs
+ 
+ #
+@@ -8681,7 +8692,7 @@
+ #
+ # Library routines
+ #
+-CONFIG_RAID6_PQ=m
++CONFIG_RAID6_PQ=y
+ CONFIG_RAID6_PQ_BENCHMARK=y
+ CONFIG_LINEAR_RANGES=y
+ # CONFIG_PACKING is not set
+#+END_SRC
+
 
 *** cannot open crtbeginS.o: No such file or directory
 TL;DR =emerge --oneshot --nodeps clang-runtime=
@@ -157,4 +362,3 @@ sam_ 提到了 https://bugs.gentoo.org/951445 （怎么这些大佬随口就能�
 #+BEGIN_EXAMPLE
 <vimproved>  so there's a period where between merging clang and clang-runtime, the toolchain is not using any config file and therefor could be broken
 #+END_EXAMPLE
-
