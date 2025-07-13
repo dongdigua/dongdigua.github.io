@@ -1,13 +1,21 @@
 #+TITLE: My Projects
 #+TAGS: active(a) archived(c) MC(M) maintain(m)
 
+* [[https://github.com/AOSC-Dev/aosc-os-docker-files][AOSC-Dev/aosc-os-docker-files]]
+全面翻新
+
+* [[https://github.com/dongdigua/vanityssh-cl][vanityssh-cl]]                                                       :active:
+my first OpenCL experiment
+
+* [[https://github.com/dongdigua/SwordBlocking][SwordBlocking for 1.17]]                                                 :MC:
+
 * [[https://github.com/dongdigua/lock20][lock20]]                                                             :active:
 Lock your screen for 20s every 20min (first gtk project)
 
 * [[https://github.com/dongdigua/wl-binclock][wl-binclock]]                                                        :active:
 Wayland Binary Clock (the first graphical project I've ever written)
 
-* [[https://github.com/dongdigua/difficult-alarmclock][difficult-alarmclock]]                                               :active:
+* [[https://github.com/dongdigua/difficult-alarmclock][difficult-alarmclock]]                                             :maintain:
 Turn your Unix box into a music clock that sucks less.
 named after [[https://github.com/shenjackyuanjie/Difficult-Rocket][shenjack's Difficult-Rocket]]
 blog: [[./alarm_clock.org]]
@@ -15,16 +23,16 @@ blog: [[./alarm_clock.org]]
 * [[https://github.com/dongdigua/alkaneo][alkane^{o}]]                                                       :archived:
 Generate alkanes using Racket and miniKanren.
 
-* [[https://github.com/dongdigua/demo.lua][demo.lua]]
+* [[https://github.com/dongdigua/demo.lua][demo.lua]]                                                         :maintain:
 The [[https://www.lua.org/cgi-bin/demo?demo][old lua.org demo]] in lua.
 blog: [[./lua_demo.org]]
 
 * [[https://www.bilibili.com/video/BV1yt4y1t7qe/][二半异构活塞铁路建造飞行器 (demi-bolt builder)]]                :archived:MC:
 
-* [[https://github.com/dongdigua/AxolotlVM][AxolotlVM]]
+* [[https://github.com/dongdigua/AxolotlVM][AxolotlVM]]                                                        :archived:
 A toy virtual machine for learning purpose.
 
-* [[https://www.bilibili.com/video/BV1ym4y1d7cM/][极速五工作台切换器 (crafting table switcher)]]                           :MC:
+* [[https://www.bilibili.com/video/BV1ym4y1d7cM/][极速五工作台切换器 (crafting table switcher)]]                  :archived:MC:
 [[https://www.bilibili.com/video/BV1Yj411q7Hx/][v2]]
 
 * [[https://github.com/dongdigua/dongdigua.github.io][dongdigua.github.io]]                                                :active:

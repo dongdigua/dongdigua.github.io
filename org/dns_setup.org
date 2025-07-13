@@ -53,5 +53,23 @@ B 站需要老长时间加载，且很不稳定，一看，解析到美国去了
 * 总结
 一个简单的 DNS 服务就能如此激发创造力，这还得归功于国内优质的网络环境 :)
 
+* 如何识别 DNS 污染
+https://wener.me/notes/howto/network/dns-prevent-spoofing
+
+改进版一行流（没用 dig，因为处理不好 CNAME）
+#+BEGIN_SRC sh
+nslookup google.com | awk '/^Address: / { print $2 }' | xargs -I{} -n1 sh -c 'echo {} | nc bgp.tools 43 && echo'
+#+END_SRC
+dig 和 nslookup 都属于 bind 包，如果没装可以用 getent
+#+BEGIN_SRC sh
+getent hosts google.com | awk '{print $1}' | xargs -I{} -n1 sh -c 'echo {} | nc bgp.tools 43 && echo'
+#+END_SRC
+如果不是 Google LLC 那么恭喜你被污染了
+
+* 附赠查看解析地址的一行流
+#+BEGIN_SRC sh
+nslookup google.com | awk '/^Address: / { print $2 }' | xargs -I{} -n1 sh -c 'echo {} - $(curl https://ipapi.co/{}/city/ -s)'
+#+END_SRC
+
 * Ref
 - [[https://sh.alynx.one/posts/Who-Moved-My-DNS-Resolving-Remastered/][谁动了我的 DNS 解析？（重制版）]]

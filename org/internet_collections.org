@@ -360,6 +360,7 @@ actually you can use =--hintro= and =--houtro=
 ** [[https://gledos.science][gledos]]
 *** [[https://gledos.science/restored-pixel-art.html][逆向还原像素画]]
 *** [[https://gledos.science/88x31.html][我们仍未知道那天所看见的 88 × 31 的名字]]
+** [[https://xtexx.eu.org][xtexx]]
 
 # LABLE
 
@@ -542,6 +543,11 @@ handle writing through this interplanetary loop.
 *** [[https://youtu.be/5rZWLZEMkgE][The Linux AX.25 Stack: A Forgotten Feature That Is Used To Talk To Space Stations!]]
 *** [[https://youtu.be/0A7A-CSd3e4][Meshtastic off-grid radio: Fantastic? Waste of Plastic? Or...]]
 父子节目
+*** [[https://youtu.be/WO2L_ihO_rI][Multiple seat support on wayland]]
+*** [[https://www.youtube.com/watch?v=w_vGD-96O54][金枪鱼之夜：坏人的 iptables 小讲堂]]
+超级棒的 iptables 教程!!!
+**** [[https://youtu.be/Vnh8hYk6wZE][金枪鱼之夜：坏人的 iptables 小讲堂第二弹]]
+超级棒的 ip route 教程!!!
 
 **  [[https://www.youtube.com/@Computerphile][<C>]]
 *** [[https://youtu.be/BAo5C2qbLq8][Network Time Protocol (NTP)]]

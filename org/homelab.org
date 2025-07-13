@@ -27,7 +27,7 @@ fqdn both
 [[https://wiki.friendlyelec.com/wiki/index.php/CM3588_NAS_Kit][CM3588 NAS Kit]]
 +还是熟悉的 FreeBSD，还是熟悉的 ZFS，+
 FreeBSD 完全起不来，UART 口似乎也不好使（即使 OMV 也只输出乱码），没法用 UART 调试，所以只能 fallback 到 OpenMediaVault 了。
-（我是对 FreeBSD 比较有情怀，但情怀毕竟不能当饭吃，还是务实一点，OMV 的网页端多好啊，我机器全用 btrfs 也减少学习负担）
+（我是对 FreeBSD 比较有情怀，但情怀毕竟不能当饭吃，还是务实一点，OMV 的网页端多好啊， +我机器全用 btrfs 也减少学习负担）+
 硬盘随便买了两个牌子的 PCIE 3.0 盘，因为这个板子 4 盘位的话只能各 PCIE 3.0 单通道，买 4.0 的纯属浪费钱。
 +不过这回又起了个 Postgres，因为我不想让 Postgres 再走 NFS，使用 NFS 为 PC 和容器提供存储，+ 还是应该对系统进行解耦，让容器用本地的存储。
 
@@ -362,3 +362,7 @@ sam_ 提到了 https://bugs.gentoo.org/951445 （怎么这些大佬随口就能�
 #+BEGIN_EXAMPLE
 <vimproved>  so there's a period where between merging clang and clang-runtime, the toolchain is not using any config file and therefor could be broken
 #+END_EXAMPLE
+
+
+*** S3
+minio 背刺开源社区，目前用的 garage 替代，其他方案见 https://wener.me/notes/service/storage/s3

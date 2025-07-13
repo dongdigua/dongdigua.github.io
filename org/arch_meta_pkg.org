@@ -1,0 +1,66 @@
+#+TITLE: Arch 也能声明式！用元包进行一拖多包管理
+#+DATE: <2025-07-02 Wed>
+
+你是否经历过这种情况：
+pacman -S 安装了一个包，用完了却忘了卸，久而久之，很多包都在那里积灰。
+更可怕的是有一些包作为其他包的可选依赖，而你却 pacman -S 直接装，在那些包卸载之后这个依赖还在。
+当你某一天看着即将破 2k 的软件包数量，决心清理时，看着眼花缭乱的 pacman -Qe，根本无从下手。
+
+这就是我曾作为一个 Arch 新手（以及早年的 Manjaro）的亲身经历。
+我猜一些新手也会有此困扰。
+
+正好最近弄了个 ThinkPad[fn:1]，重装 Arch。
+这个新征程，就要有新力量，我准备试试之前忘了在哪看到的元包管理软件的方式。
+
+* 元包
+所谓元包就是本身无内容但可依赖其他包的包，最常见的就是 base 和 base-devel[fn:2]。
+用户可以自己像打 AUR 包一样创建元包，类似这样：
+#+BEGIN_SRC sh
+# Maintainer: Your Name <your@email>
+pkgname=digua-linux
+pkgver=1.0
+pkgrel=1
+pkgdesc="Meta"
+arch=(any)
+url="https://dongdigua.ooo"
+license=(custom)
+
+depends=(
+  linux
+  linux-firmware sof-firmware alsa-firmware intel-ucode
+  plymouth plymouth-theme-arch10
+  systemd-ukify
+  btrfs-progs compsize
+  zram-generator
+  efibootmgr
+  scx-scheds
+)
+
+post_install() { :; }
+
+package() { :; }
+#+END_SRC
+
+* 我的方案
+我把所有包都塞进了这几个元包：
+| name               | desc                                       |
+|--------------------+--------------------------------------------|
+| digua-linux        | 所有会导致重新构建 initramfs 和 UKI[fn:3] 的包 |
+| digua-gpu-drv      | 和显卡有关的包                               |
+| digua-fonts        | 字体                                       |
+| digua-sway-base    | sway 基础桌面                               |
+| digua-cli-utils    | 命令行工具                                  |
+| digua-desktop-apps | 桌面程式                                    |
+| digua-virt         | 虚拟化                                      |
+
+- 当安装新包时，就加入一个元包，然后重新 makepkg -si
+- 当临时安装时，pacman -S，之后 pacman -Qe 查看
+  （没使用 pacman -S --asdeps 因为这可能作为某个包的可选依赖，事后 pacman -Qdt 查不到）
+
+当然如果您有更好的方案欢迎和我分享！
+
+* Footnotes
+[fn:1] 热知识，Ultra 9 285 竟然不是 x86-64-v4 而只是 v3，这导致我之前按照 11 Gen v4 编译的程序全都 illegal instruction
+[fn:2] 我安 Arch 那天 sudo 又出新的 9.8 级漏洞，果断 -Rdd，用 opendoas 或 sudo-rs 代替
+[fn:3] 由于 ThinkPad 的 BIOS 比较慢，所以我不想再加一层引导又增加几秒钟延迟，直接用 UKI 让 Linux 作为 UEFI 启动项
+

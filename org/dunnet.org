@@ -2,6 +2,8 @@
 #+DATE: <2023-12-29 五>
 #+HTML_HEAD_EXTRA: <link rel="shortcut icon" href=https://www.luogu.com.cn/favicon.ico>
 
+(2025.6) 发到 emacs-china 了：https://emacs-china.org/t/dunnet/29707
+
 大概一年多之前, 我玩 dunnet 时搜到了这个 [[https://www.luogu.com.cn/blog/ivystorm/emacs-adventuredunnet-tong-guan-jiao-cheng][emacs - adventure/dunnet 通关教程 - Ivystorm 的博客 - 洛谷博客]].
 这是中文互联网少有的认真写的 dunnet 攻略, 我最欣赏的是那张手绘的地图, 在我能搜到的互联网上, 他是唯一一个.
 但是今天一看, 文章没了, [[https://archive.org][archive.org]] 和 [[https://archive.today][archive.today]] 也没有存档. 还好我当时把地图下下来了, 但放谷歌上也搜不到来源.
@@ -47,6 +49,10 @@ python make_graph.py -a | dot -Tsvg -o dungeon.svg
 @@html:</details>@@
 
 * Footnotes
+:PROPERTIES:
+:CUSTOM_ID: fn
+:PROPERTIES:
+
 [fn:1] 这几天 man.openbsd.org 在维护 [[https://marc.info/?l=openbsd-tech&m=170301840617581&w=2][man.openbsd.org, cvsweb.openbsd.org maintenance]]
 [fn:2] 我在 docker 里跑 debian 的时候没用 https, 然后小米路由器又抽风了 [[https://www.chiphell.com/thread-2556691-1-1.html][chiphell]] [[https://www.bilibili.com/read/cv21298361/][bilibili]]
 @@html:<details>@@

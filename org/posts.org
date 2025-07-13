@@ -3,6 +3,8 @@
 #+HTML_HEAD: <link rel='stylesheet' href='css/everforest.css' /><link rel='stylesheet' href='css/dark.css' />
 
 * Posts
+- [[https://emacs-china.org/t/aps-emacs-age/29783][2025-07-13 : APS 已死，使用 Emacs + age 作为安卓密码管理器]]
+- [[file:arch_meta_pkg.org][2025-07-02 : Arch 也能声明式！用元包进行一拖多包管理]]
 - [[file:screen_nethack.org][2025-06-16 : GNU screen 的 nethack 模式]]
 - [[file:homelab.org][2025-06-12 : 三权分立的家里云方案]]
 - [[file:pgp_to_ssh.org][2025-06-12 : 全面使用 SSH 取代 PGP]]

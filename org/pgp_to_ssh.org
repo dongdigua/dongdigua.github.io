@@ -9,7 +9,7 @@
 现有的 PGP 公钥已吊销
 [[file:~/git/dongdigua.github.io/pgp]]
 
-请使用
+请使用 https://github.com/dongdigua.keys
 #+BEGIN_EXAMPLE
 ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIEaLa1tljedAITIh6+VJ9Aqv3bX+HJT+Rn/tHKdDlYCp digua@arch-pc
 256 SHA256:0cvOPPW2ZkYEgXhlBepvtLyOex/ERVfqR1Ipm1pJT4g digua@arch-pc (ED25519)

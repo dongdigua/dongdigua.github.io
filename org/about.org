@@ -5,7 +5,7 @@
 
 - I use AAAAArch btw
 - Emacs > Vim, Sway > GNOME > KDE
-- Firefox 忠实用户
+- Firefox 和 Thunderbird 忠实用户
 - Fonts: IntoneMono NF
 - 会: Elixir > Rust > Python
 - 主要玩: Minecraft 技术生存 (MC 正统在 JE!)
