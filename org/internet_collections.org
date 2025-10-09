@@ -59,6 +59,8 @@ An internet with links.
 *** [[https://blog.arduino.cc/2025/04/22/arduino-is-at-work-to-make-bio-based-pcbs/][Arduino is at work to make bio-based PCBs! (ryf 349)]]
 *** [[https://segmentfault.com/a/1190000004104696][让这世界再多一份 GNU m4 教程 (1)]]
 *** [[https://wyb.chinawriter.com.cn/content/201808/01/content27487.html][一个和十万个地球]]
+*** [[https://www.landiannews.com/archives/110368.html][[附删除方法] 百度网盘被发现安装智能看图插件劫持图片打开方式 整个界面还是抄微软的]]
+*** [[https://goodlunatic.github.io/posts/1ad9200/][CTF-Misc Guide 学完基本就是大佬了]]
 
 ** [[http://www.paulgraham.com/todo.html][Paul Graham]]
 ** [[http://www.qiusir.com/][qiusir]]                                                            :rssub:
@@ -115,10 +117,8 @@ CPU, IC, ARM
 *** [[https://www.wenhui.space/docs/02-emacs/org_mode_table_align/][解决Org-Mode表格不对齐问题]]
 更纱黑体 使中文恰好为英文宽度两倍, 使用字体比 valign 更通用, 但是不好看
 ** [[http://jujuba.me/][Ground Oddity]]
-*** [[http://jujuba.me/posts/program-analysis-via-llvm-pass.html][LLVM Pass来实现简化版taint analysis]]
-*** [[http://jujuba.me/posts/taste-of-code.html][代码的taste]]                                                       :wow:
-#+ATTR_HTML: :width 400px
-[[http://jujuba.me/imgs/linus-on-TED.png]]
+*** [[https://web.archive.org/web/20230603185554/http://jujuba.me/posts/program-analysis-via-llvm-pass.html][LLVM Pass来实现简化版taint analysis]]
+*** [[https://web.archive.org/web/20230603171726/http://jujuba.me/posts/taste-of-code.html][代码的taste]]                                                       :wow:
 ** [[https://cireu.github.io/2019/09/17/lisp-setf/][NIL: setf 中「f」的本意]]
 *** [[https://cireu.github.io/2019/10/18/doom-emacs-issue/][doom-emacs 配置的问题]]
 ** [[http://egh0bww1.com][include-yy 攒 emacs]]                                  :c:lisp:emacs:rssub:

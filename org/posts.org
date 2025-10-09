@@ -3,6 +3,9 @@
 #+HTML_HEAD: <link rel='stylesheet' href='css/everforest.css' /><link rel='stylesheet' href='css/dark.css' />
 
 * Posts
+- [[file:mac_zip_gpf.org][2025-10-09 : MacOS 压出来的 Zip 文件在 Windows 中乱码问题（省流：gpf）]]
+- [[file:wp_moectf_2025.org][2025-10-09 : MoeCTF 2025 Writeup]]
+- [[file:wp_jailctf_2025.org][2025-10-07 : jailCTF 2025 writeup]]
 - [[https://emacs-china.org/t/aps-emacs-age/29783][2025-07-13 : APS 已死，使用 Emacs + age 作为安卓密码管理器]]
 - [[file:arch_meta_pkg.org][2025-07-02 : Arch 也能声明式！用元包进行一拖多包管理]]
 - [[file:screen_nethack.org][2025-06-16 : GNU screen 的 nethack 模式]]

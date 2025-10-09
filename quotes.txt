@@ -76,3 +76,7 @@ Larry the Cow beckons you to explore the Gentoo wiki!
 脑核已转储
 速度哦 apt update
 我们有十八组原木
+您是否有一个玩Minecraft的孩子？\n您的孩子正在使用最新的Java24！而你还在生产环境中使用Java8！你太无耻了！向您的孩子咨询如何升级
+J lost
+刷机只能中午刷，因为早晚要变砖
+不可胜在己，可胜在敌。

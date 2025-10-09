@@ -9,7 +9,9 @@
 
 * Network
 搞了个软路由，十分标准的操作，没啥可讲的
-https://openwrt.org/inbox/toh/xiaomi/ax3000t
++https://openwrt.org/inbox/toh/xiaomi/ax3000t+
+SB 小米路由器用 sysupgrade 镜像升级就变砖，换货回来又一个不同程度的砖。
+换眼馋很久的 NanoPi R5C 了，就是有点烫。
 
 看到个好玩的：[[https://blog.rachelt.one/articles/custom-guest-wifi-with-auth/][在 OpenWrt 上打造 Rickroll 访客 Wi-Fi]]
 
@@ -52,6 +54,15 @@ rust 坏 go 好。
 最后只能切换到不依赖 rust 的 docker
 哦对然后 podman-compose 您一个 python 脚本还不支持 arm
 #+END_QUOTE
+
+go 的 bootstrap 挺有意思
+#+BEGIN_EXAMPLE
+Building Go toolchain1 using /usr/lib/go.
+Building Go bootstrap cmd/go (go_bootstrap) using Go toolchain1.
+Building Go toolchain2 using go_bootstrap and Go toolchain1.
+Building Go toolchain3 using go_bootstrap and Go toolchain2.
+Building packages and commands for linux/arm64.
+#+END_EXAMPLE
 
 ** 第二次尝试
 树莓派到了，结果之前编译的 rootfs 启动不了，还忘邮 micro-HDMI 线了，怎么办，不能盲目调试啊。
