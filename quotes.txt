@@ -80,3 +80,5 @@ Larry the Cow beckons you to explore the Gentoo wiki!
 J lost
 刷机只能中午刷，因为早晚要变砖
 不可胜在己，可胜在敌。
+即得易见平凡，仿照上例显然。\n留作习题答略，读者自证不难。\n反之亦然同理，推论自然成立。\n略去过程𝑄𝐸𝐷，由上可知证毕。
+fun fact: the reason ur internal body temperature spikes when infected is because viruses are using ur body to train LLMs.

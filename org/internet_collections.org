@@ -61,6 +61,7 @@ An internet with links.
 *** [[https://wyb.chinawriter.com.cn/content/201808/01/content27487.html][一个和十万个地球]]
 *** [[https://www.landiannews.com/archives/110368.html][[附删除方法] 百度网盘被发现安装智能看图插件劫持图片打开方式 整个界面还是抄微软的]]
 *** [[https://goodlunatic.github.io/posts/1ad9200/][CTF-Misc Guide 学完基本就是大佬了]]
+*** [[https://tonsky.me/blog/syntax-highlighting][I am sorry, but everyone is getting syntax highlighting wrong (ryf 370)]]
 
 ** [[http://www.paulgraham.com/todo.html][Paul Graham]]
 ** [[http://www.qiusir.com/][qiusir]]                                                            :rssub:
@@ -650,6 +651,7 @@ When I was trying to download this video, I found that youtube-dl was broken!
 *** [[https://youtu.be/bW1otBbTh-E][live-coding ambient music in SuperCollider]]
 *** [[https://youtu.be/NX7GHqq28uU][Making a PCB Motor spin 30,000 RPM FASTER]]
 *** [[https://youtu.be/Y6ZND7Ed70k][GreatScott: PLC]]
+*** [[https://youtu.be/8ssDGBTssUI][DOSMid: The Godfather theme played on an 8086 computer]]
 
 * r
 :PROPERTIES:

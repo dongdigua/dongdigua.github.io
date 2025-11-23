@@ -3,6 +3,7 @@
 #+HTML_HEAD: <link rel='stylesheet' href='css/everforest.css' /><link rel='stylesheet' href='css/dark.css' />
 
 * Posts
+- [[file:wp_bits2ctf_2025.org][2025-11-22 : BITs2CTF 2025 Writeup]]
 - [[file:mac_zip_gpf.org][2025-10-09 : MacOS 压出来的 Zip 文件在 Windows 中乱码问题（省流：gpf）]]
 - [[file:wp_moectf_2025.org][2025-10-09 : MoeCTF 2025 Writeup]]
 - [[file:wp_jailctf_2025.org][2025-10-07 : jailCTF 2025 writeup]]

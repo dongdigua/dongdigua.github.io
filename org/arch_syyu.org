@@ -64,3 +64,14 @@ linux-firmware-nvidia: /usr/lib/firmware/nvidia/ad103 exists in filesystem
 #+END_EXAMPLE
 今天不知道 pacman 抽什么疯，要安 nvidia 驱动。
 哦，没看 RSS：https://archlinux.org/news/linux-firmware-2025061312fe085f-5-upgrade-requires-manual-intervention/
+
+* 2025-09-??
+https://bbs.archlinux.org/viewtopic.php?pid=2271663
+需要安装 =xdg-desktop-portal-gtk=
+依云说是 gtk4 更新了，导致不使用 portal 就用不了
+然后配一下 .config/xdg-desktop-portal/portals.conf
+#+BEGIN_EXAMPLE
+[preferred]
+org.freedesktop.impl.portal.Settings=darkman;gtk
+#+END_EXAMPLE
+总算是赏心悦目了

