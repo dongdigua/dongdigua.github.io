@@ -1,4 +1,4 @@
-all: describe org patches get
+all: describe rayid org patches get
 
 .PHONY: org
 org:
@@ -6,6 +6,9 @@ org:
 
 describe:
 	sed -i "s/\$$v\\$$/\$$v: $$(git describe --tags HEAD)\\$$/g" index.html
+
+rayid:
+	sed -i "s/9ab3ec7a8ae409f0/$$(git rev-parse --short=16 HEAD)/g" 404.html
 
 .PHONY: patches
 patches:
