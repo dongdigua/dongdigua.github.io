@@ -60,8 +60,8 @@ An internet with links.
 *** [[https://segmentfault.com/a/1190000004104696][让这世界再多一份 GNU m4 教程 (1)]]
 *** [[https://wyb.chinawriter.com.cn/content/201808/01/content27487.html][一个和十万个地球]]
 *** [[https://www.landiannews.com/archives/110368.html][[附删除方法] 百度网盘被发现安装智能看图插件劫持图片打开方式 整个界面还是抄微软的]]
-*** [[https://goodlunatic.github.io/posts/1ad9200/][CTF-Misc Guide 学完基本就是大佬了]]
 *** [[https://tonsky.me/blog/syntax-highlighting][I am sorry, but everyone is getting syntax highlighting wrong (ryf 370)]]
+*** [[https://www.teamten.com/lawrence/programming/use-singular-nouns-for-database-table-names.html][Use singular nouns for database table names (ryf 365)]]
 
 ** [[http://www.paulgraham.com/todo.html][Paul Graham]]
 ** [[http://www.qiusir.com/][qiusir]]                                                            :rssub:
@@ -239,7 +239,7 @@ By making something a little bit more inaccessible, we are inadvertently putting
 int function(void) {
     static int i;
     crBegin;
-    for (i = 0; i &lt 10; i++)
+    for (i = 0; i < 10; i++)
         crReturn(i);
     crFinish;
 }
@@ -362,6 +362,11 @@ actually you can use =--hintro= and =--houtro=
 *** [[https://gledos.science/restored-pixel-art.html][逆向还原像素画]]
 *** [[https://gledos.science/88x31.html][我们仍未知道那天所看见的 88 × 31 的名字]]
 ** [[https://xtexx.eu.org][xtexx]]
+** [[https://digua.moe][地瓜]]
+遇到同类了
+** [[https://libroot.org][Libroot.org - rooted in freedom.]]
+*** [[https://libroot.org/posts/going-through-snowden-documents-part-1][Going Through Snowden Documents, Part 1 (ryf 378)]]
+*** [[https://libroot.org/posts/going-through-snowden-documents-part-2][Going Through Snowden Documents, Part 2]]
 
 # LABLE
 
@@ -778,3 +783,4 @@ Internet Exploiter
 ** [[https://2005.wong2.me][上网2005 (ryf 342)]]
 ** [[https://useplaintext.email][Use plain text email]]
 ** [[https://yeluyelu.mynatapp.cc][夜鹭页录]]
+** [[https://gpg.fail][gpg.fail]]

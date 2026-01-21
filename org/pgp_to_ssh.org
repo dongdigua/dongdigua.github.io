@@ -7,7 +7,7 @@
 #+END_QUOTE
 
 现有的 PGP 公钥已吊销
-[[file:~/git/dongdigua.github.io/pgp]]
+[[file:../pgp]]
 
 请使用 https://github.com/dongdigua.keys
 #+BEGIN_EXAMPLE
@@ -46,6 +46,8 @@ git config --global user.signingKey ~/.ssh/id_ed25519.pub
 #+END_SRC
 至于为什么 commit 签名很重要，见：[[https://spencerwoo.com/blog/wait-this-is-not-my-commit][震惊! 竟然有人在 GitHub 上冒充我的身份!]]
 
+（但是 ssh 并没有类似 [[https://man.openbsd.org/signify][signify]] 那样的 -e 选项把消息嵌入签名，对于一些场景还是不够方便）
+
 * Encryption
 SSH 本身不能用来加密文件，但是 [[https://age-encryption.org][age]] 可以使用 SSH key
 #+BEGIN_SRC sh
@@ -58,3 +60,5 @@ $ age --decrypt -i key.txt data.tar.gz.age > data.tar.gz
 
 pass 可以迁移到 passage，并且 [[https://github.com/FiloSottile/passage/pull/52][pull#52]] 很好的解决了 gpg key-id 顺序的问题（如果我同时有硬盘上的和智能卡上的key，gpg 总会先选择智能卡上的）
 但是现在支持不是很广泛，passage 在移动端的支持不好。
+
+(2026.1 update) age v1.3.0 发布啦！支持后量子算法

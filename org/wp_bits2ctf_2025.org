@@ -1,5 +1,7 @@
-#+TITLE: BITs2CTF 2025 Writeup
+#+TITLE: BITs2CTF 2025 Writeup Part 1
 #+DATE: <2025-11-22 Sat>
+
+[[file:wp_bits2ctf_2025_2.org][Part 2]]
 
 * misc
 ** 签到
