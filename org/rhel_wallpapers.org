@@ -66,56 +66,134 @@ https://downloads.redhat.com/redhat/rhel/rhel-10-beta/appstream/x86_64/Packages/
 :PROPERTIES:
 :CUSTOM_ID: rhel_gallery
 :END:
+
+#+BEGIN_EXPORT html
+<div id="ipfs-gateway-tools" padding: 15px; border-radius: 8px; border: 1px solid #ddd; margin-bottom: 20px; font-family: sans-serif;">
+    <label for="ipfs-gateway-select" style="font-weight: bold; margin-right: 10px;">切换 IPFS 图床网关:</label>
+    <select id="ipfs-gateway-select" style="padding: 5px; border-radius: 4px; border: 1px solid #ccc;">
+        <option value="https://ipfs.io">ipfs.io</option>
+        <option value="https://gateway.pinata.cloud">gateway.pinata.cloud</option>
+        <option value="https://ipfs.orbitor.dev">orbitor.dev</option>
+        <option value="https://dweb.link">dweb.link (subdomain)</option>
+        <option value="https://4everland.io">4everland.io (subdomain)</option>
+        <option value="custom">🛠️ 自定义网关...</option>
+    </select>
+    
+    <input type="text" id="ipfs-custom-gateway" placeholder="例如: https://mygateway.com" style="display:none; padding: 5px; margin-left: 10px; border-radius: 4px; border: 1px solid #ccc; width: 200px;" />
+    
+    <button onclick="updateIPFSGateways()" style="margin-left: 10px; padding: 6px 12px; background: #007bff; color: white; border: none; border-radius: 4px; cursor: pointer;">应用替换</button>
+</div>
+
+<script>
+    // 监听下拉菜单，如果选择“自定义”，则显示输入框
+    document.getElementById('ipfs-gateway-select').addEventListener('change', function(e) {
+        var customInput = document.getElementById('ipfs-custom-gateway');
+        if (e.target.value === 'custom') {
+            customInput.style.display = 'inline-block';
+            customInput.focus();
+        } else {
+            customInput.style.display = 'none';
+        }
+    });
+
+    // 核心替换逻辑
+    function updateIPFSGateways() {
+        var select = document.getElementById('ipfs-gateway-select');
+        var newGateway = select.value;
+        
+        // 获取自定义网关的值
+        if (newGateway === 'custom') {
+            newGateway = document.getElementById('ipfs-custom-gateway').value.trim();
+        }
+
+        if (!newGateway) {
+            alert('请输入有效的网关地址！');
+            return;
+        }
+
+        // 移除网关末尾可能多余的斜杠，避免拼出 "https://gateway.com//ipfs/..."
+        newGateway = newGateway.replace(/\/$/, "");
+
+        // 获取页面上所有的图片
+        var images = document.getElementsByTagName('img');
+        var count = 0;
+
+        for (var i = 0; i < images.length; i++) {
+            var src = images[i].src;
+            // 查找链接中包含 '/ipfs/' 的图片
+            var ipfsIndex = src.indexOf('/ipfs/');
+            
+            if (ipfsIndex !== -1) {
+                // 截取 '/ipfs/Qmc...' 及其后面的所有内容（包括 ?filename=... 参数）
+                var ipfsPath = src.substring(ipfsIndex);
+                // 拼接新网关并替换
+                images[i].src = newGateway + ipfsPath;
+                count++;
+            }
+        }
+        
+        // 按钮视觉反馈
+        var btn = event.target;
+        var originalText = btn.innerText;
+        btn.innerText = "成功替换 " + count + " 张图!";
+        btn.style.background = "#28a745";
+        setTimeout(function() {
+            btn.innerText = originalText;
+            btn.style.background = "#007bff";
+        }, 2000);
+    }
+</script>
+#+END_EXPORT
 图片挺占地方的，扔 IPFS 上了，最好能 pin 一下。加载不了的换个 IPFS 网关。
 
 @@html:<details>@@
 @@html:<summary>5</summary>@@
 #+ATTR_HTML: :width 960 :loading lazy
-https://cdn.img2ipfs.com/ipfs/Qmc9wSEExmR8wrNgJ9AZogh1daWMzfA54hcDRQKoM3YXYi?filename=default.jpg
+https://ipfs.orbitor.dev/ipfs/Qmc9wSEExmR8wrNgJ9AZogh1daWMzfA54hcDRQKoM3YXYi?filename=default.jpg
 @@html:</details>@@
 
 @@html:<details>@@
 @@html:<summary>6</summary>@@
 #+ATTR_HTML: :width 960 :loading lazy
-[[https://cdn.img2ipfs.com/ipfs/Qmd64CaguBbu8Xi35RxFDQGBmNrEhUvu8grs3ZzQGYffcs?filename=1920x1200_dawn.png]]
+[[https://ipfs.orbitor.dev/ipfs/Qmd64CaguBbu8Xi35RxFDQGBmNrEhUvu8grs3ZzQGYffcs?filename=1920x1200_dawn.png]]
 #+ATTR_HTML: :width 960 :loading lazy
-[[https://cdn.img2ipfs.com/ipfs/QmRF6cnES7XLccqCxeNvNH3Q2SmQnE6koFjAjZByYg5FkK?filename=1920x1200_day.png]]
+[[https://ipfs.orbitor.dev/ipfs/QmRF6cnES7XLccqCxeNvNH3Q2SmQnE6koFjAjZByYg5FkK?filename=1920x1200_day.png]]
 #+ATTR_HTML: :width 960 :loading lazy
-[[https://cdn.img2ipfs.com/ipfs/QmeaNKS6NKY7pYsEfX6jY2gGMGBoYRshA78mHj2CrLeijg?filename=1920x1200_dusk.png]]
+[[https://ipfs.orbitor.dev/ipfs/QmeaNKS6NKY7pYsEfX6jY2gGMGBoYRshA78mHj2CrLeijg?filename=1920x1200_dusk.png]]
 #+ATTR_HTML: :width 960 :loading lazy
-[[https://cdn.img2ipfs.com/ipfs/QmeaNKS6NKY7pYsEfX6jY2gGMGBoYRshA78mHj2CrLeijg?filename=1920x1200_dusk.png]]
+[[https://ipfs.orbitor.dev/ipfs/QmeaNKS6NKY7pYsEfX6jY2gGMGBoYRshA78mHj2CrLeijg?filename=1920x1200_dusk.png]]
 @@html:</details>@@
 
 @@html:<details>@@
 @@html:<summary>7</summary>@@
 #+ATTR_HTML: :width 960 :loading lazy
-[[https://cdn.img2ipfs.com/ipfs/QmUwXTMEP2Jv1sXWiC4b6yMxWKsSH5DntEV2SEQ5Zr3jy1?filename=morning.jpg]]
+[[https://ipfs.orbitor.dev/ipfs/QmUwXTMEP2Jv1sXWiC4b6yMxWKsSH5DntEV2SEQ5Zr3jy1?filename=morning.jpg]]
 #+ATTR_HTML: :width 960 :loading lazy
-[[https://cdn.img2ipfs.com/ipfs/QmPAU7nhgMVGhCqAnxYjVvEWyAo3i3gmb5V5hhWpSLuuTn?filename=day.jpg]]
+[[https://ipfs.orbitor.dev/ipfs/QmPAU7nhgMVGhCqAnxYjVvEWyAo3i3gmb5V5hhWpSLuuTn?filename=day.jpg]]
 #+ATTR_HTML: :width 960 :loading lazy
-[[https://cdn.img2ipfs.com/ipfs/QmarR5zRLn39wcvRo2bxG7RUEebBeG8MCHs3u1EouJah9F?filename=night.jpg]]
+[[https://ipfs.orbitor.dev/ipfs/QmarR5zRLn39wcvRo2bxG7RUEebBeG8MCHs3u1EouJah9F?filename=night.jpg]]
 @@html:</details>@@
 
 @@html:<details>@@
 @@html:<summary>8</summary>@@
 #+ATTR_HTML: :width 960 :loading lazy
-https://cdn.img2ipfs.com/ipfs/QmXwcEWVQ2oHWNCKoFiWQHKJ26xuUuX4MubrZmuR5wLQ9D?filename=8-dark-2560x1440.jpg
+https://ipfs.orbitor.dev/ipfs/QmXwcEWVQ2oHWNCKoFiWQHKJ26xuUuX4MubrZmuR5wLQ9D?filename=8-dark-2560x1440.jpg
 #+ATTR_HTML: :width 960 :loading lazy
-https://cdn.img2ipfs.com/ipfs/QmU4dKi6jeiQw6utQhBDZDoLWVhsojJtGk2WKix88NCYyS?filename=hello-world-dark-2560x1440.jpg
+https://ipfs.orbitor.dev/ipfs/QmU4dKi6jeiQw6utQhBDZDoLWVhsojJtGk2WKix88NCYyS?filename=hello-world-dark-2560x1440.jpg
 @@html:</details>@@
 
 @@html:<details>@@
 @@html:<summary>9</summary>@@
 #+ATTR_HTML: :width 960 :loading lazy
-[[https://cdn.img2ipfs.com/ipfs/QmSpuvk617yMWXuj3ajxLE5TgFHPSCfpTdv4PuB8C5RC7d?filename=rhel9-dark.jpg]]
+[[https://ipfs.orbitor.dev/ipfs/QmSpuvk617yMWXuj3ajxLE5TgFHPSCfpTdv4PuB8C5RC7d?filename=rhel9-dark.jpg]]
 @@html:</details>@@
 
 @@html:<details>@@
 @@html:<summary>10</summary>@@
 #+ATTR_HTML: :width 960 :loading lazy
-[[https://cdn.img2ipfs.com/ipfs/QmcWPV19tpjFWqUyDUbuLaqbPxTgwwY19AfYFxGtscftAq?filename=rhel10-iso-l.png]]
+[[https://ipfs.orbitor.dev/ipfs/QmcWPV19tpjFWqUyDUbuLaqbPxTgwwY19AfYFxGtscftAq?filename=rhel10-iso-l.png]]
 #+ATTR_HTML: :width 960 :loading lazy
-[[https://cdn.img2ipfs.com/ipfs/QmRd24DQ1bWMMao34BGNfXxaxZoiJLczFonegi8o9F1psk?filename=rhel10-iso-d.png]]
+[[https://ipfs.orbitor.dev/ipfs/QmRd24DQ1bWMMao34BGNfXxaxZoiJLczFonegi8o9F1psk?filename=rhel10-iso-d.png]]
 @@html:</details>@@
 
 * Ref
