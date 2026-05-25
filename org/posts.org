@@ -3,6 +3,7 @@
 #+HTML_HEAD: <link rel='stylesheet' href='css/everforest.css' /><link rel='stylesheet' href='css/dark.css' />
 
 * Posts
+- [[file:erlang27_ssh_perf.org][2026-03-07 : Performance Issue in Erlang ssh output handling (fixed in OTP 28)]]
 - [[file:wp_bits2ctf_2025_2.org][2026-01-20 : BITs2CTF 2025 Writeup (Part 2)]]
 - [[file:wp_bits2ctf_2025.org][2025-11-22 : BITs2CTF 2025 Writeup (Part 1)]]
 - [[file:mac_zip_gpf.org][2025-10-09 : MacOS 压出来的 Zip 文件在 Windows 中乱码问题（省流：gpf）]]
@@ -14,8 +15,8 @@
 - [[file:homelab.org][2025-06-12 : 三权分立的家里云方案]]
 - [[file:pgp_to_ssh.org][2025-06-12 : 全面使用 SSH 取代 PGP]]
 - [[https://emacs-china.org/t/prevent-initial-flash-of-light/29578][2025-05-30 : Emacs 小技巧：防止启动白屏晃眼 (prevent initial flash of light)]]
+- [[file:wechat_qq_env_detect.org][2025-05-22 : Linux 版微信和 QQ 环境探测]]
 - [[file:m4_preprocessor.org][2025-05-27 : Re: 使用 m4 预处理文件，实现 include，ifdef, elifdef]]
-- [[file:why_wechat_execve.org][2025-05-22 : Why is com.tencent.WeChat (flatpak) execve-ing ip(8) and lsblk(8)]]
 - [[file:autoflusher_rs.org][2025-05-17 : A Rust autoflusher that doesn't work with Rust]]
 - [[file:wayland_dev1_periodic_update.org][2025-04-05 : Wayland 开发日记（一）：定时更新显示]]
 - [[file:wayland_dev0_index.org][2025-04-05 : Wayland 开发日记（〇）：目录]]

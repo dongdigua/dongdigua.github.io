@@ -1,0 +1,39 @@
+#+TITLE: Linux 版微信和 QQ 环境探测
+#+DATE: <2025-05-22 四>
+
+* WeChat
+com.tencent.WeChat 4.0.1.11
+
+启动微信时，发现输出了
+#+BEGIN_EXAMPLE
+sh: line 1: ip: command not found
+sh: line 1: ip: command not found
+#+END_EXAMPLE
+何意味
+
+strace 一下
+#+BEGIN_SRC sh
+strace -f -o wechat.strace -s 255 flatpak run com.tencent.WeChat
+rg execve wechat.strace
+#+END_SRC
+
+有意思:
+#+BEGIN_EXAMPLE
+execve("/bin/sh", ["sh", "-c", "--", "/usr/bin/lsblk -a -n -d -i -r -o name,type,serial,model"]
+execve("/bin/sh", ["sh", "-c", "--", "echo $(ip route show default | awk 'NR==1' | awk '/default/ {print $5}')"]
+#+END_EXAMPLE
+
+com.tencent.WeChat 4.1.0.13 不执行 =ip= 了，但还执行 =lsblk=
+
+打开文件时，还有
+#+BEGIN_EXAMPLE
+sh: line 1: xdg-mime: command not found
+#+END_EXAMPLE
+这就是另一个故事了
+
+
+* QQ
+检测虚拟化环境
+#+BEGIN_EXAMPLE
+execve("/bin/sh", ["sh", "-c", "--", "systemd-detect-virt --container 2>/dev/null"]
+#+END_EXAMPLE

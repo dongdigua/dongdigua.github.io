@@ -1,0 +1,57 @@
+#+TITLE: Performance Issue in Erlang ssh output handling (fixed in OTP 28)
+#+DATE: <2026-03-07 Sat>
+
+* Background
+I wrote a [[https://github.com/dongdigua/rickroll-ssh][simple elixir script]] for rickrolling via ssh.
+Last summer, I deployed it in a podman container on my Pi,
+this semester, I want to deploy it in my school network to rickroll my friends.
+
+It's a [[file:nanopi_freebsd.org][R2S]] with [[https://github.com/friendlyarm/Actions-Alpine-Linux][vendor alpine]] version 3.23.3, the client's output just don't seem right,
+it kept flickering! R2S do have a weaker CPU than Pi, but the difference is just to big.
+
+* Profiling
+My friend recommended me to profile it (he's a nerd who profile his own frontend framework by creating 100_000 windows).
+So, I did according to https://www.louiscb.com/blog/2023/05/20/profiling-elixir.html and https://www.erlang.org/doc/apps/erts/beamasm#linux-perf-support
+(make sure to run =perf script= on the same machine with =/tmp/jit-<pid>.dump=)
+
+#+ATTR_HTML: :width 512px
+[[../images/erlang27_ssh_flame.svg]]
+
+The hotspot is... =lists:reverse/1= ?
+
+* conv_buf
+https://github.com/erlang/otp/blob/61633c62611720cc27f92026d075a1f2862ce522/lib/ssh/src/ssh_cli.erl#L521
+=ssh_cli:conv_buf/4= is calling =lists:reverse/1= when it starts with =\n= =\r= =\r\n= or empty.
+which is a lot in my case (25 frame/sec, 32 line/frame)
+#+BEGIN_EXAMPLE
+IO.write("hello")
+  │
+  ▼
+io:request/2  →  {io_request, From, ReplyAs, {put_chars, unicode, Chars}}
+  │                          (message to group leader)
+  ▼
+group.erl: putc_request/4  →  {put_chars_sync, unicode, Binary, Reply}
+  │                          (message to driver = ssh_cli process)
+  ▼
+ssh_cli:handle_msg({Group, Req}, State)     [line 305]
+  │
+  ▼
+ssh_cli:io_request({put_chars_sync,...})     [line 488]
+  │
+  ▼
+ssh_cli:io_request({put_chars, unicode,...}) [line 433]
+  │
+  ▼
+ssh_cli:put_chars(Chars, Buf, Tty)          [line 542]
+  │
+  ▼
+ssh_cli:conv_buf(Chars, Buf, [], Tty)       [line 521] ← HERE
+#+END_EXAMPLE
+
+
+* Solution
+AI recommended me to implement my own cli using [[https://www.erlang.org/doc/apps/ssh/ssh_server_channel.html][ssh_server_channel]],
+when the agent was working on it, I looked at the master branch, =conv_buf= is gone!
+It's [[https://github.com/erlang/otp/commit/2d9a11ee3358b0b5838773df6d46940c0e34c785][replaced by prim_tty]] in OTP 28, while alpine 3.23.3 defaults to erlang27-dev.
+Upgrade to erlang28-dev fixed the problem, now I can smoothly rickroll my friends.
+
