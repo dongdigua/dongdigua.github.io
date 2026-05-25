@@ -377,3 +377,12 @@ sam_ 提到了 https://bugs.gentoo.org/951445 （怎么这些大佬随口就能�
 
 *** S3
 minio 背刺开源社区，目前用的 garage 替代，其他方案见 https://wener.me/notes/service/storage/s3
+
+** 第三次尝试
+md 期中俩U盘的 btrfs 都炸了，期末周刚结束我 emerge 一下，系统寄了，回家发现是 SD 卡写爆了。为了不半年换张卡只能告别 Gentoo 了。
+然后 btrfs 拔下来恢复数据，告诉我说 =btrfs sectorsize 16384 not yet supported for page size 4096= ，
+因为树莓派我编译那个针对 pi5 的内核启用了 16k 页面，这 nm 一点兼容性都不考虑啊，彻底对 btrfs 失望了。
+
+一气之下换 Alpine 了，文件系统也换成 zfs，感觉良好。
+zed 也让我省去了手动写脚本监控文件系统的麻烦，关于如何测试 zed，[[https://rair.dev/zfs-smart-ntfy][在这]]看到了一个[[https://github.com/openzfs/zfs/issues/4511][小妙招]]。
+还有一个细节是 zfs 的快照目录 [[https://szclsya.me/zh-cn/posts/storage/zfs-maintenance/#footnote-1][.zfs 用 ls -a 看不见但 cd 可以进入]]

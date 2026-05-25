@@ -75,3 +75,7 @@ https://bbs.archlinux.org/viewtopic.php?pid=2271663
 org.freedesktop.impl.portal.Settings=darkman;gtk
 #+END_EXAMPLE
 总算是赏心悦目了
+
+* 2026-03-30
+lua 更新 5.5.0 了，导致 rime-ice 有个 bug
+https://github.com/iDvel/rime-ice/pull/1503

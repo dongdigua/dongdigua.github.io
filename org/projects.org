@@ -1,18 +1,21 @@
 #+TITLE: My Projects
 #+TAGS: active(a) archived(c) MC(M) maintain(m)
 
-* [[https://github.com/AOSC-Dev/aosc-os-docker-files][AOSC-Dev/aosc-os-docker-files]]
+* [[https://github.com/dongdigua/wl-bubbles][wl-bubbles]]                                                       :maintain:
+back to win7's goden days
+
+* [[https://github.com/AOSC-Dev/aosc-os-docker-files][AOSC-Dev/aosc-os-docker-files]]                                    :maintain:
 全面翻新
 
-* [[https://github.com/dongdigua/vanityssh-cl][vanityssh-cl]]                                                       :active:
+* [[https://github.com/dongdigua/vanityssh-cl][vanityssh-cl]]                                                     :maintain:
 my first OpenCL experiment
 
 * [[https://github.com/dongdigua/SwordBlocking][SwordBlocking for 1.17]]                                                 :MC:
 
-* [[https://github.com/dongdigua/lock20][lock20]]                                                             :active:
+* [[https://github.com/dongdigua/lock20][lock20]]                                                           :maintain:
 Lock your screen for 20s every 20min (first gtk project)
 
-* [[https://github.com/dongdigua/wl-binclock][wl-binclock]]                                                        :active:
+* [[https://github.com/dongdigua/wl-binclock][wl-binclock]]                                                      :maintain:
 Wayland Binary Clock (the first graphical project I've ever written)
 
 * [[https://github.com/dongdigua/difficult-alarmclock][difficult-alarmclock]]                                             :maintain:

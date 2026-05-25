@@ -14,7 +14,7 @@
 eda0ca4b2ccc1247f66e55a703cb2168606d76926772e4c009991fcc235e9ef3  dunnet.png
 ipfs://bafybeidpgepmufflyaeefdmzwwtdlnj53qwaqus6wknjw2gpq5ukzbhuia
 #+END_EXAMPLE
-联系不上原作者, 如果您看到了, 能不能把您的文章恢复?
+联系不上原作者, 如果您看到了, 能不能把您的文章恢复😭😭😭?
 
 研究过程中, 我还发现了一些比较有用的资源放在这:
 - [[http://www.driver-aces.com/dunhints.html][official hints]]

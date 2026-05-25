@@ -31,6 +31,8 @@ dd if=usr/lib/linux-u-boot-edge-nanopi-r2s/trust.bin of=root.img seek=24576 conv
 doas dd if=root.img of=/dev/sda
 #+END_SRC
 
+然后注意 Baud rate 是 1500000
+
 
 * 开始
 - 中国用户第一件事先换源: [[https://mirror.bjtu.edu.cn/help/freebsd/][bjtu FreeBSD 镜像]] 或 [[https://mirrors.ustc.edu.cn/help/freebsd-pkg.html][USTC]]
