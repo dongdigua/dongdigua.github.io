@@ -34,7 +34,10 @@
  <a accesskey=\"h\" href=\"%s\"> index </a>
  |
  <a accesskey=\"H\" href=\"%s\"> ~dongdigua </a>
-</div>")
+</div>
+
+<div class=\"reading-progress-bar\" aria-hidden=\"true\"></div>
+")
 
 (setq org-publish-project-alist
       '(("org-pages"
