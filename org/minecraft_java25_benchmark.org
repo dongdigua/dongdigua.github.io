@@ -1,0 +1,57 @@
+#+TITLE: Java 25 的 Minecraft 跑分大比拼
+#+DATE: <2026-07-04 Sat>
+
+* Why
+之前看到这篇[[https://www.hqshi.cn/info/knowledge/mc-jdk-test][[简要横评] 我的世界 15 个 JDK 千万行数据 大型测评项目]]的 jdk 横评，当时是跑在 java 17LTS 和 20
+得出的几个重要结论：
+1. OpenJDK 发行版之间差异不大
+2. Zing 和 GraalVM EE 性能最强，OpenJ9 最拉
+3. G1GC 最快
+
+现在的 LTS 是 java 25，本次 benchmark，我希望回答几个问题：
+1. ZGC 和 shenandoah 会不会有提升，能否接近甚至超过 G1GC？
+2. glibc 和 musl 是否有明显区别？（这是那篇文章忽略掉的一点）
+3. GraalVM 的性能提升是否依旧明显？
+
+* How
+** 测试环境
+树莓派 5 Rev 1.1 8G + NVME SSD (ZFS) + Alpine Linux
+不开 Minecraft 时 load avg 在 0.01 以下
+** Minecraft 设置
+26.2 原版服务端
+默认 server.properties 的基础上只改了视距和模拟距离为 12（默认是 10 不够加载 17x17）
+17x17 区块的 [[https://www.bilibili.com/video/BV1QcfVBKE5w][无沟世吞 V4.2]] 空炸（无凋落物），每次使用同一存档备份，跑一个来回 (V1) / 30min (V2)
+（其实我最初的想法就是：在树莓派 5 上能否极致压榨性能使得炸标准空置域不掉刻）
+** Java 参数
+使用最简参数
+#+BEGIN_SRC sh
+#!/bin/sh
+
+JFR="-XX:StartFlightRecording=filename=bench/bench.jfr,settings=mcbench.jfc,dumponexit=true" # V2
+
+java -XX:+UseG1GC -Xms4G -Xmx4G -XX:+AlwaysPreTouch $JFR -jar server.jar
+#java -XX:+UseZGC -Xms4G -Xmx4G -XX:+AlwaysPreTouch $JFR -jar server.jar
+#java -XX:+UseShenandoahGC -Xms4G -Xmx4G -XX:+AlwaysPreTouch $JFR -jar server.jar
+#+END_SRC
+[[https://gist.github.com/dongdigua/5c83268cf9de2d9062594e47a0ab84ae][mcbench.jfc]]
+** Java 版本
+- azul/zulu-openjdk:25-jre
+- azul/zulu-openjdk-alpine:25-jre
+- container-registry.oracle.com/graalvm/jdk:25
+
+* Result
+** V1: 世吞跑一个来回，原版 /jfr 采样
+gc 没放出来因为原版的 /jfr 会因 Heap Inspection Initiated GC 触发 Full GC）
+[[../images/mcbench/mspt_v1.png]]
+[[../images/mcbench/mspt_candle_v1.png]]
+** V2: 世吞跑 30 min，精简 jfr 采样
+[[../images/mcbench/mspt_v2.png]]
+[[../images/mcbench/gc_v2.png]]
+[[../images/mcbench/mspt_candle_v2.png]]
+
+* Conclusion & Analysis
+1. G1GC 依旧最快，停顿时间也可接受，更多情况下网络波动要比 gc 的延时更明显
+2. 令我有些惊讶的是，musl 比 glibc 略快，
+   /AI 猜测：glibc malloc 的 per-thread arena 对单线程密集计算的 MC 是负优化，musl 朴素的极简 malloc 反而更快。/
+3. GraalVM 依旧长期最快，但是 JIT 预热卡顿尖峰大
+

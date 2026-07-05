@@ -3,6 +3,7 @@
 #+HTML_HEAD: <link rel='stylesheet' href='css/everforest.css' /><link rel='stylesheet' href='css/dark.css' />
 
 * Posts
+- [[file:minecraft_java25_benchmark.org][2026-07-04 : Java 25 的 Minecraft 跑分大比拼]]
 - [[file:erlang27_ssh_perf.org][2026-03-07 : Performance Issue in Erlang ssh output handling (fixed in OTP 28)]]
 - [[file:wp_bits2ctf_2025_2.org][2026-01-20 : BITs2CTF 2025 Writeup (Part 2)]]
 - [[file:wp_bits2ctf_2025.org][2025-11-22 : BITs2CTF 2025 Writeup (Part 1)]]
