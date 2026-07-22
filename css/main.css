@@ -1,33 +1,8 @@
-/* Import google fonts */
-/* import url(https://fonts.googleapis.com/css?family=Droid+Sans|Droid+Sans+Mono|Droid+Serif); */
-
-
-/* Site init style of TAOBAO */
-
-body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td { margin:0; padding:0; }
-/* body, button, input, select, textarea { font:12px/1.5tahoma, arial, \5b8b\4f53; }  */
-h1, h2, h3, h4, h5, h6{ font-size:100%; }
-/* address, cite, dfn, em, var { font-style:normal; }  */
-/* code, kbd, pre, samp { font-family:couriernew, courier, monospace; } small{ font-size:12px; } */
-/* ul, ol { list-style:none; } */
-a { text-decoration:none; }
-/* a:hover { text-decoration:underline; } */
-/* sup { vertical-align:text-top; } */
-/* sub{ vertical-align:text-bottom; } */
-/* legend { color:#000; } */
-/* fieldset, img { border:0; } */
-/* button, input, select, textarea { font-size:100%; } */
-table { border-collapse:collapse; border-spacing:0; }
-
-
 /* Basic Style */
-
 html { font-size: 100px;  }
 
 body {
-  /* Monaco, Consolas, "kaiti",  */
-  /* font-family: "Droid Serif", "Lucida Grande", "Lucida Sans Unicode", "DejaVu Sans", Verdana, sans-serif;   */
-  font-family: Monaco, Consolas, "kaiti";
+  font-family: system-ui, sans-serif;
   width: 60%;
   margin: 0 auto;
   font-size: .16rem;
@@ -37,18 +12,17 @@ body {
 #content { position: relative; }
 
 /* header line */
-/* i.e. h1 */
 .title {
   font-size: .32rem;
   width: 100%;
   border-bottom: 2px solid #369;
   border-image: linear-gradient(to right, #147 , #f66) 30 30;
   padding: .08rem 0;
-  margin: .36rem 0;
+  text-align: center;
 }
 
-a { color: #19f; }
-a:hover { color:#E69; text-shadow: 0px 0px 1px #E69;}
+a { cursor: crosshair; text-decoration: none; color: #587e72; }
+a:hover { color:#E69; text-shadow: 0px 0px 1px #E69; }
 
 h2, h3, h4, h5, h6 {
   font-size: .20rem;
@@ -107,23 +81,19 @@ blockquote {
 
 
 /* code */
-
 code {
   color: #135;
-  /* font-family: "Droid Sans Mono"; */
-  font-family: Monaco, Consolas, 'monospace', "kaiti";
+  font-family: monospace;
   font-size: 0.14rem;
 }
 
 pre {
-  /* font-family: "Droid Sans Mono"; */
-  font-family: Monaco, Consolas, 'monospace', "kaiti";
+  font-family: monospace;
   color: #135;
   font-size: 0.14rem;
   padding: .14rem;
   border: 2px solid #eee;
   margin: .16rem 0;
-
   overflow: hidden;
 }
 
@@ -148,6 +118,8 @@ li > ul, li > ol {
 }
 
 table {
+  border-collapse:collapse;
+  border-spacing:0;
   margin: .24rem 0;
 }
 
@@ -191,34 +163,47 @@ th:last-child, td:last-child {
 
 /* directory */
 #table-of-contents {
+  z-index: 1;
   position: fixed;
-  box-shadow: 1px 0 3px #999;
-
-  left: -16%;
+  right: 0;
   top: 0;
-  min-width: 16%;
-  min-height: 100%;
-  height: 100%;
-  font-size: .16rem;
+  margin-top: 30px;
   font-size: 90%;
+  font-family: sans-serif;
   color: #369;
-  padding: 0 1%;
-  transition: .3s all ease-in-out;
-  overflow: hidden;
-  opacity: 0;
+  line-height: 1.5;
+  text-align: right;
+  background: white;
+  box-shadow: 0 0 1em #999;
+  border-bottom-left-radius: 5px;
+  max-height: 80%;
+}
+
+#table-of-contents h2 {
+  font-size: 90%;
+  font-weight: normal;
+  max-width: 9em;
+  padding: 0.4em 0.6em;
+  margin: 0;
+}
+
+#table-of-contents h2:before { content: ""; }
+
+#table-of-contents #text-table-of-contents {
+  display: none;
+  text-align: left;
+  padding: 0.5em;
+}
+
+#table-of-contents:hover #text-table-of-contents {
+  display: block;
 }
 
 #table-of-contents a { text-decoration: none; }
 
-#table-of-contents:hover {
-  opacity: 1;
-  left: 0;
-  border-right: 1px solid #eee;
-  overflow: auto;
-  background: rgba(255, 255, 255, 0.86);
+#table-of-contents #text-table-of-contents ul {
+  list-style-position: outside;
 }
-
-#table-of-contents h2:before { content: ""; }
 
 
 /* Highlight TOC active item */
@@ -229,56 +214,66 @@ th:last-child, td:last-child {
 }
 
 
-/* #postamble, .status */
 .status {
+  font-family: monospace;
   color: #666;
   border-top: 2px solid #369;
   border-image: linear-gradient(to right, #f66 , #147) 30 30;
-  margin: .62rem 0 .2rem 0;
+  margin: 0 .2rem .2rem 0;
   padding-top: .2rem;
 }
 
 .status p {
   margin: 0;
+  margin-left: .2em;
 }
 
 .status p:last-child {
-  margin-top: .36rem;
-  text-align: center;
   color: #369;
-
 }
 
-.validation a {
-  color: #19f;
+.copyright-note {
+  position: relative;
+  display: inline-block;
 }
 
+.copyright-note button {
+  width: 1.2em;
+  height: 1.2em;
+  padding: 0;
+  border: 1px solid currentColor;
+  border-radius: 50%;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  line-height: 1;
+  cursor: help;
+}
+
+.copyright-note-text {
+  display: none;
+  position: absolute;
+  bottom: calc(100% + .4em);
+  left: 50%;
+  width: max-content;
+  max-width: 80vw;
+  transform: translateX(-50%);
+  padding: .3em .5em;
+  border: 1px solid #cbd0dc;
+  border-radius: 3px;
+  background: #eff1f5;
+  color: #4c4f69;
+}
+
+.copyright-note:hover .copyright-note-text,
+.copyright-note:focus-within .copyright-note-text {
+  display: block;
+}
 
 
 /* Inline Format */
-
 .underline {
   border-bottom: 1px solid #333;
-}
-
-
-/* Contect with Me */
-.me {
-  margin-top: .48rem;
-}
-
-.me span {
-  color: #333;
-}
-
-.contect {
-  padding: .16rem 0;
-}
-
-.contect i {
-  color: #369;
-  font-size: .20rem;
-  padding-right: .08rem;
 }
 
 
@@ -338,7 +333,6 @@ th:last-child, td:last-child {
 }
 
 
-
 /* GTD Style */
 .todo {
   border-radius: 3px;
@@ -357,11 +351,9 @@ th:last-child, td:last-child {
 }
 
 .tag span {
+  border: 1px solid #cbd0dc;
   border-radius: 3px;
-  border-top-left-radius: 10px;
-  border-bottom-right-radius: 10px;
-  background: #c60;
-  color: #eee;
+  background: #eff1f5;
   font-size: .12rem;
   padding: 2px 6px;
   display: inline-block;
@@ -375,9 +367,6 @@ th:last-child, td:last-child {
   padding: 2px 6px;
 }
 
-/* .timestamp-wrapper */
-/* In CSS&CSS3, there has no a selector to get parentNode. Now via js. */
-
 .org-ul .on code {
   color: #009;
   font-weight: 900;
@@ -389,7 +378,6 @@ th:last-child, td:last-child {
 }
 
 /* Footnotes */
-
 .footpara {
   display: inline;
   font-size: .14rem;
@@ -399,28 +387,47 @@ th:last-child, td:last-child {
 
 /* Mobile UI */
 @media screen and (max-width: 1026px) {
-
   body { width: 96%; }
 
   .title {
     font-size: .28rem;
-    white-space: nowrap;
-    overflow: auto;
   }
 
   #table-of-contents {
-    height: 400px;
-    min-height: 400px;
+    /* full-width TOC in the document flow; touch devices have no hover */
+    position: static;
+    float: none;
     width: 100%;
-    top: -380px;
-    left: 0;
+    max-width: none;
+    box-sizing: border-box;
+    font-size: 90%;
     color: #369;
-    opacity: 0;
-    box-shadow: 0 1px 3px #999;
+    margin: 0 0 0.5em;
+    padding: 0.5em 0.7em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
     background: #fff;
+    box-shadow: 0 1px 3px #999;
+    overflow: auto;
   }
 
-  #table-of-contents:hover { top: 0px; opacity: 1; }
+  #table-of-contents h2 {
+    font-size: inherit;
+    font-weight: normal;
+    max-width: none;
+    padding: 0;
+    margin: 0 0 0.3em;
+  }
+
+  #table-of-contents #text-table-of-contents {
+    display: block;
+    padding: 0;
+  }
+
+  #table-of-contents #text-table-of-contents ul {
+    margin: 0;
+    padding-left: 1.2em;
+  }
 
   .link-active {
     color: #fff;
@@ -449,4 +456,31 @@ th:last-child, td:last-child {
   .nav-btn:hover {
     opacity: .1;
   }
+}
+
+@media (prefers-color-scheme: dark) {
+    * {
+        background-color: #1e1e2e;
+        color: #cdd6f4;
+    }
+    h1, h2, h3, h4 {
+        color: #b4befe;
+    }
+    a {
+        color: #89b4fa;
+    }
+    pre, pre span, code {
+        color: #cdd6f4;
+    }
+    code {
+        color: #a6e3a1;
+    }
+}
+
+@media screen and (max-width: 1026px) and (prefers-color-scheme: dark) {
+    #table-of-contents {
+        background: #1e1e2e;
+        border-color: #45475a;
+        box-shadow: 0 1px 3px #11111b;
+    }
 }

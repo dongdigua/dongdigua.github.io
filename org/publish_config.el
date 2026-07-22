@@ -23,7 +23,7 @@
 (setq org-html-postamble-format
       '(("en"
          "
-<p>dongdigua CC BY-NC-SA 禁止转载到私域(公众号，非自己托管的博客等)</p>
+<p>dongdigua CC BY-NC-SA 禁止转载到私域 <span class=\"copyright-note\"><button type=\"button\" aria-label=\"说明\">?</button><span class=\"copyright-note-text\">公众号，非自己托管的博客等</span></span></p>
 <p>Email me to add comment</p>
 <p>Proudly made with Emacs Org mode</p>
 <p class=\"date\">Date: %d Size: PAGE_SIZE (≈ SWD_CO2 mg CO2e)</p>
@@ -50,7 +50,7 @@
 
          :html-doctype "html5"
          :html-html5-fancy t
-         :html-head "<link rel='stylesheet' href='css/main.css' /><link rel='stylesheet' href='css/org.small.css' /><link rel='stylesheet' href='css/dark.css' />"
+         :html-head "<link rel='stylesheet' href='css/main.css' /><link rel='stylesheet' href='css/org.small.css' />"
          ;; :html-head-include-default-style nil
          :html-link-home "https://dongdigua.github.io"
          :html-link-up "./../posts"
