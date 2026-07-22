@@ -148,51 +148,38 @@ https://downloads.redhat.com/redhat/rhel/rhel-10-beta/appstream/x86_64/Packages/
 
 @@html:<details>@@
 @@html:<summary>5</summary>@@
-#+ATTR_HTML: :width 960 :loading lazy
 https://ipfs.orbitor.dev/ipfs/Qmc9wSEExmR8wrNgJ9AZogh1daWMzfA54hcDRQKoM3YXYi?filename=default.jpg
 @@html:</details>@@
 
 @@html:<details>@@
 @@html:<summary>6</summary>@@
-#+ATTR_HTML: :width 960 :loading lazy
 [[https://ipfs.orbitor.dev/ipfs/Qmd64CaguBbu8Xi35RxFDQGBmNrEhUvu8grs3ZzQGYffcs?filename=1920x1200_dawn.png]]
-#+ATTR_HTML: :width 960 :loading lazy
 [[https://ipfs.orbitor.dev/ipfs/QmRF6cnES7XLccqCxeNvNH3Q2SmQnE6koFjAjZByYg5FkK?filename=1920x1200_day.png]]
-#+ATTR_HTML: :width 960 :loading lazy
 [[https://ipfs.orbitor.dev/ipfs/QmeaNKS6NKY7pYsEfX6jY2gGMGBoYRshA78mHj2CrLeijg?filename=1920x1200_dusk.png]]
-#+ATTR_HTML: :width 960 :loading lazy
 [[https://ipfs.orbitor.dev/ipfs/QmeaNKS6NKY7pYsEfX6jY2gGMGBoYRshA78mHj2CrLeijg?filename=1920x1200_dusk.png]]
 @@html:</details>@@
 
 @@html:<details>@@
 @@html:<summary>7</summary>@@
-#+ATTR_HTML: :width 960 :loading lazy
 [[https://ipfs.orbitor.dev/ipfs/QmUwXTMEP2Jv1sXWiC4b6yMxWKsSH5DntEV2SEQ5Zr3jy1?filename=morning.jpg]]
-#+ATTR_HTML: :width 960 :loading lazy
 [[https://ipfs.orbitor.dev/ipfs/QmPAU7nhgMVGhCqAnxYjVvEWyAo3i3gmb5V5hhWpSLuuTn?filename=day.jpg]]
-#+ATTR_HTML: :width 960 :loading lazy
 [[https://ipfs.orbitor.dev/ipfs/QmarR5zRLn39wcvRo2bxG7RUEebBeG8MCHs3u1EouJah9F?filename=night.jpg]]
 @@html:</details>@@
 
 @@html:<details>@@
 @@html:<summary>8</summary>@@
-#+ATTR_HTML: :width 960 :loading lazy
 https://ipfs.orbitor.dev/ipfs/QmXwcEWVQ2oHWNCKoFiWQHKJ26xuUuX4MubrZmuR5wLQ9D?filename=8-dark-2560x1440.jpg
-#+ATTR_HTML: :width 960 :loading lazy
 https://ipfs.orbitor.dev/ipfs/QmU4dKi6jeiQw6utQhBDZDoLWVhsojJtGk2WKix88NCYyS?filename=hello-world-dark-2560x1440.jpg
 @@html:</details>@@
 
 @@html:<details>@@
 @@html:<summary>9</summary>@@
-#+ATTR_HTML: :width 960 :loading lazy
 [[https://ipfs.orbitor.dev/ipfs/QmSpuvk617yMWXuj3ajxLE5TgFHPSCfpTdv4PuB8C5RC7d?filename=rhel9-dark.jpg]]
 @@html:</details>@@
 
 @@html:<details>@@
 @@html:<summary>10</summary>@@
-#+ATTR_HTML: :width 960 :loading lazy
 [[https://ipfs.orbitor.dev/ipfs/QmcWPV19tpjFWqUyDUbuLaqbPxTgwwY19AfYFxGtscftAq?filename=rhel10-iso-l.png]]
-#+ATTR_HTML: :width 960 :loading lazy
 [[https://ipfs.orbitor.dev/ipfs/QmRd24DQ1bWMMao34BGNfXxaxZoiJLczFonegi8o9F1psk?filename=rhel10-iso-d.png]]
 @@html:</details>@@
 

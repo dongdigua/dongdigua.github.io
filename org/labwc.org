@@ -36,5 +36,4 @@
 想换个简洁一点的 bar，比如类似 dwm 的，但是 sway-bar 太丑， [[https://codeberg.org/sewn/dam][dam]]，[[https://github.com/kolunmi/sandbar][sandbar]] 之类的只支持 river，[[https://sr.ht/~raphi/somebar/][somebar]] 只支持 dwl，但我又不想换 wm，
 尤其是 river，文档一坨屎，并且配置方式好怪呀。（话说关于 river 的中文资料几乎为 0）
 最后重新配了下 waybar 使其像 dwm。
-#+ATTR_HTML: :width 80%
 [[../images/sway_new_waybar.jpg]]

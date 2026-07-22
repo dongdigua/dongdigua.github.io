@@ -14,7 +14,6 @@ My friend recommended me to profile it (he's a nerd who profile his own frontend
 So, I did according to https://www.louiscb.com/blog/2023/05/20/profiling-elixir.html and https://www.erlang.org/doc/apps/erts/beamasm#linux-perf-support
 (make sure to run =perf script= on the same machine with =/tmp/jit-<pid>.dump=)
 
-#+ATTR_HTML: :width 512px
 [[../images/erlang27_ssh_flame.svg]]
 
 The hotspot is... =lists:reverse/1= ?

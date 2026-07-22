@@ -11,7 +11,6 @@ link: [[https://www.cossig.org/391-centos-fedora-default-softwares]]
 
 * CentOS
 CentOS 安装时可选不同的配置
-#+ATTR_HTML: :width 512px
 [[./../images/centos_install_config.png]]
 其实这些就是不同的软件组
 CentOS-Stream 8 为例, 定义软件组的文件是 [[https://git.centos.org/centos/comps/blob/master/f/comps-centos-8-stream.xml][comps.xml]]
