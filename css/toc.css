@@ -1,0 +1,35 @@
+/* Everforest Medium Light / Nord Dark */
+:root {
+  color-scheme: light dark;
+}
+
+body {
+  background-color: light-dark(#fdf6e3, #2e3440);
+  color: light-dark(#5c6a72, #d8dee9);
+  font-family: Monaco, "Lucida Console", "Courier New", monospace;
+  font-size: 18px;
+  margin: 0 auto;
+  max-width: 64em;
+  padding: 0 1rem;
+}
+
+a {
+  color: light-dark(#3a94c5, #88c0d0);
+  text-decoration: none;
+}
+
+a:visited {
+  color: light-dark(#93b259, #81a1c1);
+}
+
+a:hover {
+  color: light-dark(#df69ba, #ebcb8b);
+}
+
+h2 {
+  color: light-dark(#35a77c, #b48ead);
+}
+
+h3 {
+  color: light-dark(#f85552, #b48ead);
+}

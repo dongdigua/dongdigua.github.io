@@ -1,6 +1,6 @@
 #+TITLE: Table of Contents
 #+OPTIONS: toc:nil
-#+HTML_HEAD: <link rel='stylesheet' href='css/everforest.css' /><link rel='stylesheet' href='css/dark.css' />
+#+HTML_HEAD: <link rel='stylesheet' href='css/toc.css' />
 
 * Posts
 - [[file:minecraft_java25_benchmark.org][2026-07-04 : Java 25 的 Minecraft 跑分大比拼]]
@@ -72,5 +72,3 @@
 
 3. 练习英文写作技能
    Practice English writing skills
-
---------------
