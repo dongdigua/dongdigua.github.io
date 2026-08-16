@@ -42,15 +42,21 @@ java -XX:+UseG1GC -Xms4G -Xmx4G -XX:+AlwaysPreTouch $JFR -jar server.jar
 * Result
 ** V1: 世吞跑一个来回，原版 /jfr 采样
 gc 没放出来因为原版的 /jfr 会因 Heap Inspection Initiated GC 触发 Full GC）
+Shenandoah 默认不是 generational 的，忘记开了，不过应该结果差不了太多
 [[../images/mcbench/mspt_v1.png]]
 [[../images/mcbench/mspt_candle_v1.png]]
 ** V2: 世吞跑 30 min，精简 jfr 采样
 [[../images/mcbench/mspt_v2.png]]
 [[../images/mcbench/gc_v2.png]]
 [[../images/mcbench/mspt_candle_v2.png]]
+** V0: 期末周开的小服务器，JMX 看堆内存，spark 看 mspt 尖峰
+基于相同场景手动观测，极其不严谨
+内存消耗 G1GC (1.5G) < Shenandoah (2.6G) < ZGC (接近3G)
+mspt 尖峰 Shenandoah > ZGC
+
 
 * Conclusion & Analysis
-1. G1GC 依旧最快，停顿时间也可接受，更多情况下网络波动要比 gc 的延时更明显
+1. G1GC 依旧最快，占用内存最少，停顿时间也可接受，更多情况下网络波动要比 gc 的延时更明显
 2. 令我有些惊讶的是，musl 比 glibc 略快，
    /AI 猜测：glibc malloc 的 per-thread arena 对单线程密集计算的 MC 是负优化，musl 朴素的极简 malloc 反而更快。/
 3. GraalVM 依旧长期最快，但是 JIT 预热卡顿尖峰大

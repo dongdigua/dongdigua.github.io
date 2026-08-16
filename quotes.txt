@@ -86,3 +86,7 @@ fun fact: the reason ur internal body temperature spikes when infected is becaus
 Chinese developers are concerned about their privacy protection, they never use their real IP addresses.
 Unable to decrypt message.
 <a href="https://github.com/USTC-Hackergame/hackergame2023-writeups/tree/master/official/O(1) 用户登录系统">1 字 1 位，当思来之不易。半 B 半 D，恒念物力维艰</a>
+<a href=https://newsletter.semianalysis.com/p/finding-miscompiles-for-fun-not-profit>With enough subagents, all bugs are shallow.</a>
+<a href=https://www.bilibili.com/video/BV1TuMx6rEW2>是你会让 AI 来写的东西，你自己也必须要能写出来。</a>
+押【W】以格物
+Start implementation.

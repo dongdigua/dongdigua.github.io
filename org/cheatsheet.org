@@ -1,6 +1,7 @@
 #+TITLE: (Editor) Cheatsheet
 #+DATE: <2022-06-13 一>
 
+自用
 
 * VIM
 :PROPERTIES:

@@ -64,6 +64,7 @@ An internet with links.
 *** [[https://www.teamten.com/lawrence/programming/use-singular-nouns-for-database-table-names.html][Use singular nouns for database table names (ryf 365)]]
 *** [[https://daniel.haxx.se/blog/2026/01/26/the-end-of-the-curl-bug-bounty/][The end of the curl bug-bounty]]
 *** [[https://windliang.wang/2026/03/31/杀死那个写代码的人][杀死那个写代码的人 (ryf 392)]]
+*** [[https://github.com/Lularible/ptp-book][PTP技术书 — 从思想实验到协议实现 (汽车电子七部曲) (ryf 401)]]
 
 ** [[http://www.paulgraham.com/todo.html][Paul Graham]]
 ** [[http://www.qiusir.com/][qiusir]]                                                            :rssub:
@@ -107,6 +108,7 @@ PKU ✌️👻🌶️
 *** [[https://blog.maxxsoft.net/index.php/archives/152/][JVM/编译器/CPU，究竟谁是卧底？一个曾经困扰我一个月的 bug]]
 *** [[https://blog.maxxsoft.net/index.php/archives/146][写一个倒着跑的 x86-64 程序]]
 *** [[https://blog.maxxsoft.net/index.php/archives/162/][JVM 里的逻辑漏洞，居然让你的哈希表慢了 20%！]]
+** [[https://bellard.org][bellard]]
 
 
 ** [[https://floooh.github.io/][floooh(The Brain Dump)]]                                                :c:
@@ -404,6 +406,20 @@ I can already write websites that don't have ads or autoplaying videos, and you 
 ... and unlike gemini, doing so won't throw out 35 years of compatibility: Someone with Chrome can read a barebones website, and someone with Lynx can read normal sites.
 Gemini is a technical solution to an emotional problem.
 #+END_QUOTE
+** [[https://jackmaguire.org][Jack Maguire]]
+*** [[https://jackmaguire.org/blog/ai-job-grief/][AI Job Grief: The Unnamed Psychological Crisis Hitting Tech Workers (ryf 399)]]
+** [[https://sumver.cn][萤窗小语]]
+*** [[https://sumver.cn/archives/2390/][深度解析：b站评论区三连检测是什么鬼东西？]]
+*** [[https://sumver.cn/archives/2451/][深度解析：B站上黑产到底用了哪些技术手段进行诈骗（一）]]
+*** [[https://sumver.cn/archives/1823/][【捉虫记】第3期 安卓换了字体后，为什么在小红书等APP内总会看到各种格格不入的字？]]
+*** [[https://sumver.cn/archives/2371/][【Windows】只看一眼文件管理器里的云盘，它就已经在运行了，这是怎么实现的]]
+** [[https://hqshi.cn][空桑]]
+*** [[https://hqshi.cn/info/knowledge/mc-jdk-test][[简要横评] 我的世界 15 个 JDK 千万行数据 大型测评项目]]
+** [[https://alienchow.dev][Alienchow]]
+*** [[https://alienchow.dev/post/ai_takeaways_mar_2026][AI Hot Takes From A Platform Engineer / SRE (ryf 405)]]
+** [[https://shukla.io/blog/][Nishant Shukla]]
+*** [[https://shukla.io/blog/2026-07/cccx.html][Spatial languages]]
+*** [[https://shukla.io/blog/2026-03/sway.html][Game of Sway]]
 
 # LABLE
 
@@ -509,7 +525,6 @@ inspiration: Veritasium
 **** [[https://youtu.be/5MIsMbFjvkw][What if Rust was Worse than C (Crust)]]
 **** [[https://youtu.be/zkV8GKHGrRQ][C++ Library that Cracked Networking (0MQ)]]
 0:19 嘟嘟嘟
-**** TODO [[https://youtu.be/ey68sKSFJAU][The Best Coding Interview Question Ever (memcached)]]
 **** [[https://youtu.be/h164R46NWBM][Hacking GNU utilities - m4]]
 0:09 winapi FileOpen (CreateFile?) nuke your house by default
 0:24 the error message are great
@@ -524,6 +539,7 @@ inspiration: Veritasium
 **** [[https://youtu.be/0rUBhqR6ckw][Tiny GLFW killer (RGFW)]]
 0:57 easy -- difficult, simple -- complex
 **** [[https://youtu.be/ilH6qb1AP6s][Backend Programming in Erlang (pastebeam)]]
+**** TODO [[https://youtu.be/sRGT90fqh4g][Let's Talk about AppImage]]
 *** [[https://youtu.be/0rJ94rbdteE][Rust 让你感觉像个天才]]
 *** [[https://youtu.be/nfF91Z6fqGk][CMD 登录B站]]
 *** [[https://youtu.be/crnEygp4C6g][Jeff Geerling: FINALLY! A GPU works on the Raspberry Pi!]]
@@ -596,9 +612,13 @@ handle writing through this interplanetary loop.
 超级棒的 ip route 教程!!!
 *** [[https://www.youtube.com/@bitluni][bitluni's lab]]
 **** [[https://www.youtube.com/watch?v=HRfbQJ6FdF0][160-core riscv cluster on M.2 socket]]
+**** [[https://youtu.be/qMR3IXF2sWw][Home made GPU escalated quickly (8192 core)]]
 *** [[https://www.youtube.com/@artfulbytes][artfulbytes]]
 **** [[https://youtu.be/i_eU16X67qU][I kept coding until an RTOS was inevitable]]
 **** [[https://youtu.be/MhOba73z-dQ][How a Microcontroller starts]]
+*** [[https://youtu.be/z3pV6FHvcgM][VibeOS - Fully Hallucinated Operating System]]
+*** [[https://youtu.be/bSZYNP41xqA][We made the best OPNsense arm64 router on the market (hardware offloading, claude)]]
+*** [[https://youtu.be/XdoPEcibQdg][Doom on MiBand]]
 
 **  [[https://www.youtube.com/@Computerphile][<C>]]
 *** [[https://youtu.be/BAo5C2qbLq8][Network Time Protocol (NTP)]]
@@ -723,6 +743,7 @@ When I was trying to download this video, I found that youtube-dl was broken!
 *** [[https://www.reddit.com/r/ProgrammerHumor/comments/wsw78u/regex_be_like/][MC enchant: regex be like...]]
 *** [[https://www.reddit.com/r/ProgrammerHumor/comments/mr8gqx/new_episode_of_electricianhumor/][New episode of ElectricianHumor]]
 ** [[https://www.reddit.com/r/kde/comments/1599vc4/kde_on_windows_im_not_joking/][KDE on Windows (I'm not joking)]]
+** [[https://www.reddit.com/r/cpp/comments/1v9v41m/building_a_compiler_that_works_at_compiletime_so/][Building a compiler that works at compile-time so you can compile your program while you compile your program.]]
 
 * Mail/Kernel/BZ
 :PROPERTIES:
@@ -773,7 +794,6 @@ not only harmful stuff <3
 学习通事件相关
 *** [[https://mrxn.net/][mrxn]]
 data-leak
-** [[https://masa.dy.fi][masa mods]]
 ** [[https://inadequacy.org/public/stories/2001.12.2.42056.2147.html][Adequacy: Is Your Son a Computer Hacker?]]
 #+BEGIN_QUOTE
 BSD, Lunix, Debian and Mandrake are all versions of an illegal hacker operation system,
@@ -834,3 +854,4 @@ Internet Exploiter
 ** [[https://useplaintext.email][Use plain text email]]
 ** [[https://yeluyelu.mynatapp.cc][夜鹭页录]]
 ** [[https://gpg.fail][gpg.fail]]
+** [[https://jsos.dev][JSOS]]
