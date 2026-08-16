@@ -3,6 +3,7 @@
 #+HTML_HEAD: <link rel='stylesheet' href='css/toc.css' />
 
 * Posts
+- [[file:mc2_chats.org][2026-07-16 : Minecraft 随想录#2 一些聊天记录]]
 - [[file:minecraft_java25_benchmark.org][2026-07-04 : Java 25 的 Minecraft 跑分大比拼]]
 - [[file:erlang27_ssh_perf.org][2026-03-07 : Performance Issue in Erlang ssh output handling (fixed in OTP 28)]]
 - [[file:wp_bits2ctf_2025_2.org][2026-01-20 : BITs2CTF 2025 Writeup (Part 2)]]
@@ -34,8 +35,8 @@
 - [[file:org_export_highlight.org][2023-06-07 : Org Preserve Source Bock Highlighting when Exporting Non-Interactively]]
 - [[file:usenet_and_cli_browsers.org][2023-05-21 : Usenet 新闻组 和 命令行浏览器选择 (w3m, lynx, links, elpher, offpunk)]]
 - [[file:gmi/cleanup_home.gmi.txt][2023-05-13 : Clean Up Home Directory]]
-- [[file:pgp_canokey.org][2023-04-16 : 一位 PGP 进步青年的 Canokey 历程]]
-- [[file:fedora_contrib.org][2023-04-01 : Join Fedora and Maintain Package]]
+# - [[file:pgp_canokey.org][2023-04-16 : 一位 PGP 进步青年的 Canokey 历程]]
+# - [[file:fedora_contrib.org][2023-04-01 : Join Fedora and Maintain Package]]
 - [[file:mailinglist.org][2023-02-09 : 玩转邮件列表]]
 - [[file:whatif_openbsd.org][2023-01-21 : 我要不要试试 OpenBSD 🐡]]
 - [[file:backup_everything.org][2023-01-08 : 一次大备份]]
@@ -44,21 +45,23 @@
 - [[file:damn_tencent_meeting.org][2022-12-02 : 狗日的腾讯会议]]
 - [[file:new_blog_arch.org][2022-11-20 : New Blog Architecture]]
 - [[file:recover_udisk.org][2022-11-13 : 记一次帮老师修U盘]]
-- [[file:clear_kernel_compile_fix.org][2022-11-04 : Clear Kernel Compile Error? Fix It]]
+# - [[file:clear_kernel_compile_fix.org][2022-11-04 : Clear Kernel Compile Error? Fix It]]
 - [[file:anaconda_kickstarts.org][2022-09-29 : CentOS/Fedora 不同的配置默认都安装了什么软件 (cossig.org)]]
 - [[file:moonboos.org][2022-09-11 : moonboos, 懂的都懂]]
 - [[file:weird_mglndd.org][2022-08-17 : MGLNDD scans]]
 - [[file:gmi/scicraft_update.gmi.txt][2022-07-06 : 我对 SciCraft 更新1.19的看法]]
 - [[file:recommend_everforest_theme.org][2022-06-27 : 推荐 everforest 主题]]
-- [[file:bili_ip.org][2022-06-18 : 我对显示 IP 属地的看法]]
+# - [[file:bili_ip.org][2022-06-18 : 我对显示 IP 属地的看法]]
 
 --------------
 
 * Long Term Update
+- [[file:new_blog_arch.org][博客更新大事记]]
 - [[file:arch_syyu.org][Arch 滚挂二三事]]
-- [[file:study4fun.org][study4fun archives]]
+- [[file:weird_networks.org][一些“走近科学”的网络现象]]
+# - [[file:study4fun.org][study4fun archives]]
 - [[file:gmi/collections.gmi.txt][Gopher/Gemini collections, a quiet web]]
-- [[file:cheatsheet.org][(Editor) Cheatsheet]]
+# - [[file:cheatsheet.org][(Editor) Cheatsheet]]
 - [[file:internet_collections.org][Internet Collections (博客, YouTube 等收集)]]
 
 --------------

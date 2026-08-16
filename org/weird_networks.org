@@ -1,0 +1,150 @@
+#+TITLE: 一些“走近科学”的网络现象
+#+DATE: <2026-08-12 Wed>
+
+这是一篇长期更新的文章，拆解一些看起来诡异的网络现象背后的原理。
+
+* 路由器重启后，JConsole 连接 JMX connection refused
+如题，路由器重启后，JConsole 连接 JMX 端口会报 connection refused，但是用 nc -vz 连接却能通，
+同样是发起 TCP 连接，怎么结果还不一样了？
+
+AI 说：
+#+BEGIN_QUOTE
+RMI 通信通常会分为：
+- 第一条连接：去注册中心 1099 查询 stub。
+- 后续连接：用 stub 里的地址去调用远程对象（可能同端口也可能不同，但 IP 可能是错误的那个）。
+#+END_QUOTE
+按照 AI 的建议加了 ~-Djava.rmi.server.hostname=192.168.1.x~ 固定地址就解决了问题，
+
+但我还是想知其然且知其所以然
+那么抓个包看看怎么个事
+#+BEGIN_EXAMPLE
+No.	Time	Delta	Source	Destination	Protocol	Length	Info
+3	20:07:10.056559536	0.416100792	192.168.1.c  	192.168.1.s  	TCP	76	42418 → 1099 [SYN] Seq=0 Win=64240 Len=0 MSS=1460 SACK_PERM TSval=2895586212 TSecr=0 WS=1024
+4	20:07:10.056802672	0.000243136	192.168.1.s  	192.168.1.c  	TCP	76	1099 → 42418 [SYN, ACK] Seq=0 Ack=1 Win=65160 Len=0 MSS=1460 SACK_PERM TSval=1811914222 TSecr=2895586212 WS=1024
+5	20:07:10.056835724	0.000033052	192.168.1.c  	192.168.1.s  	TCP	68	42418 → 1099 [ACK] Seq=1 Ack=1 Win=64512 Len=0 TSval=2895586212 TSecr=1811914222
+6	20:07:10.058236150	0.001400426	192.168.1.c  	192.168.1.s  	RMI	490	Continuation
+7	20:07:10.058775335	0.000539185	192.168.1.s  	192.168.1.c  	TCP	68	1099 → 42418 [ACK] Seq=1 Ack=423 Win=65536 Len=0 TSval=1811914224 TSecr=2895586214
+8	20:07:10.058775430	0.000000095	192.168.1.s  	192.168.1.c  	TCP	68	1099 → 42418 [FIN, ACK] Seq=1 Ack=423 Win=65536 Len=0 TSval=1811914224 TSecr=2895586214
+9	20:07:10.058980847	0.000205417	192.168.1.c  	192.168.1.s  	TCP	68	42418 → 1099 [ACK] Seq=423 Ack=2 Win=64512 Len=0 TSval=2895586215 TSecr=1811914224
+10	20:07:10.059093318	0.000112471	192.168.1.c  	192.168.1.s  	RMI	75	Continuation
+11	20:07:10.059133778	0.000040460	192.168.1.c  	192.168.1.s  	TCP	68	42418 → 1099 [FIN, ACK] Seq=430 Ack=2 Win=64512 Len=0 TSval=2895586215 TSecr=1811914224
+12	20:07:10.059290955	0.000157177	192.168.1.c  	192.168.1.s  	TCP	76	42434 → 1099 [SYN] Seq=0 Win=64240 Len=0 MSS=1460 SACK_PERM TSval=1468743334 TSecr=0 WS=1024
+13	20:07:10.059315809	0.000024854	192.168.1.s  	192.168.1.c  	TCP	62	1099 → 42418 [RST] Seq=2 Win=0 Len=0
+14	20:07:10.059315871	0.000000062	192.168.1.s  	192.168.1.c  	TCP	62	1099 → 42418 [RST] Seq=2 Win=0 Len=0
+15	20:07:10.059799477	0.000483606	192.168.1.s  	192.168.1.c  	TCP	76	1099 → 42434 [SYN, ACK] Seq=0 Ack=1 Win=65160 Len=0 MSS=1460 SACK_PERM TSval=645179000 TSecr=1468743334 WS=1024
+16	20:07:10.059815790	0.000016313	192.168.1.c  	192.168.1.s  	TCP	68	42434 → 1099 [ACK] Seq=1 Ack=1 Win=64512 Len=0 TSval=1468743334 TSecr=645179000
+17	20:07:10.059892130	0.000076340	192.168.1.c  	192.168.1.s  	RMI	75	JRMI, Version: 2, StreamProtocol
+18	20:07:10.060279951	0.000387821	192.168.1.s  	192.168.1.c  	TCP	68	1099 → 42434 [ACK] Seq=1 Ack=8 Win=65536 Len=0 TSval=645179000 TSecr=1468743334
+19	20:07:10.060280033	0.000000082	192.168.1.s  	192.168.1.c  	RMI	88	JRMI, ProtocolAck
+20	20:07:10.060296105	0.000016072	192.168.1.c  	192.168.1.s  	TCP	68	42434 → 1099 [ACK] Seq=8 Ack=21 Win=64512 Len=0 TSval=1468743335 TSecr=645179001
+21	20:07:10.060366183	0.000070078	192.168.1.c  	192.168.1.s  	RMI	87	Continuation
+22	20:07:10.060418917	0.000052734	192.168.1.c  	192.168.1.s  	RMI	118	JRMI, Call
+23	20:07:10.060830256	0.000411339	192.168.1.s  	192.168.1.c  	TCP	68	1099 → 42434 [ACK] Seq=21 Ack=77 Win=65536 Len=0 TSval=645179001 TSecr=1468743335
+24	20:07:10.060960728	0.000130472	192.168.1.s  	192.168.1.c  	RMI	284	JRMI, ReturnData
+25	20:07:10.061218524	0.000257796	192.168.1.c  	192.168.1.s  	RMI	83	JRMI, DgcAck
+26	20:07:10.061347736	0.000129212	127.0.0.1	127.0.0.1	TCP	76	36844 → 1099 [SYN] Seq=0 Win=65495 Len=0 MSS=65495 SACK_PERM TSval=3238775865 TSecr=0 WS=1024
+27	20:07:10.061361182	0.000013446	127.0.0.1	127.0.0.1	TCP	56	1099 → 36844 [RST, ACK] Seq=1 Ack=1 Win=0 Len=0
+#+END_EXAMPLE
+- 不要被 13 14 号的 RST 迷惑了，注意下面的 JRMI 还在通信，直到出现了到 127.0.0.1:1099 的包
+- 这里只是客户端 Wireshark 抓的包，所以没有抓到 DNS NXDOMAIN 的包，最佳实践还是客户端和服务端 tcpdump 都抓包并对比着看
+
+显然多种证据都指向了路由器重启后，Java 解析主机名解析到了 127.0.0.1，让 AI 写了个测试代码：
+
+#+BEGIN_SRC java
+import java.net.InetAddress;
+import java.net.UnknownHostException;
+
+public class CheckLocalHost {
+    public static void main(String[] args) {
+        try {
+            InetAddress localHost = InetAddress.getLocalHost();
+            System.out.println("Hostname: " + localHost.getHostName());
+            System.out.println("Canonical Hostname: " + localHost.getCanonicalHostName());
+            System.out.println("IP Address: " + localHost.getHostAddress());
+        } catch (UnknownHostException e) {
+            System.err.println("getLocalHost failed: " + e.getMessage());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+}
+#+END_SRC
+
+#+BEGIN_EXAMPLE
+getLocalHost failed: jdk.internal.util.Exceptions$NonSocketInfo@3d4eac69alpine-pi5: Name does not resolve
+#+END_EXAMPLE
+
+看起来是没解析导致 fallback 到了 127.0.0.1，那么正常情况是怎么解析的呢？
+#+BEGIN_EXAMPLE
+$ nslookup alpine-pi5
+Server:         192.168.1.1
+Address:        192.168.1.1:53
+
+Name:   alpine-pi5.lan
+Address: 192.168.1.x
+#+END_EXAMPLE
+
+真相大白：主机名解析走的是路由器的 DNS，当路由器重启后，树莓派没有重新 DHCP 续约，导致路由器查无此人。
+
+** Conclusion
+debug 这个问题的核心在于你（或者 AI）知道 RMI 的二段式协议，从而不会在抓包时漏掉 127.0.0.1 的流量，
+否则很容易被前两条正常关闭的 RST 迷惑住。
+
+* Minecraft Simple Voice Chat 从树莓派转移到笔记本电脑后，原先都能连语音的 7 人中只剩一个人能连上
+由于 bingo 联机人数太多树莓派撑不住，我就把服务器拷到了笔记本上开服，
+笔记本没有 ddns 所以我就 ip a 复制了 =enp0s31f6= 上看起来是公网 IPv6 的地址发给群友。
+但是先前都能连上 [[https://modrinth.com/plugin/simple-voice-chat/versions][Simple Voice Chat]] （下文简称 svc）的除了一人以外都连不上。
+client:
+#+BEGIN_EXAMPLE
+[17:42:10] [VoiceChatAuthenticationThread/INFO]: [voicechat] Trying to authenticate voice chat connection
+[17:42:11] [VoiceChatAuthenticationThread/INFO]: [voicechat] Trying to authenticate voice chat connection
+[17:42:12] [VoiceChatAuthenticationThread/INFO]: [voicechat] Trying to authenticate voice chat connection
+[17:42:13] [VoiceChatAuthenticationThread/INFO]: [voicechat] Trying to authenticate voice chat connection
+[17:42:14] [VoiceChatAuthenticationThread/INFO]: [voicechat] Trying to authenticate voice chat connection
+[17:42:15] [VoiceChatAuthenticationThread/INFO]: [voicechat] Trying to authenticate voice chat connection
+[17:42:16] [VoiceChatAuthenticationThread/INFO]: [voicechat] Trying to authenticate voice chat connection
+#+END_EXAMPLE
+server:
+#+BEGIN_EXAMPLE
+[17:42:07] [Server thread/INFO]: [voicechat] Received secret request of Steve (20)
+[17:42:07] [Server thread/INFO]: [voicechat] Sent secret to Steve
+[17:42:08] [VoiceChatPacketProcessingThread/INFO]: [voicechat] Successfully authenticated player xxx
+#+END_EXAMPLE
+首先有其中一人能连上应该说明我的防火墙和 svc 配置都正确（吗？），是什么不一致导致了剩下的人连不上？
+
+笔记本与树莓派一致的地方:
+- 都在我家内网
+- 相同的服务器文件夹
+- 都正确设置了 ~voice_host=~
+
+抓个包看看怎么个事
+#+BEGIN_EXAMPLE
+No.	Time	Source	Destination	Protocol	Length	Info
+238	19:50:12.465803634	a_player	my_server_1	UDP	141	59705 → 25565 Len=79
+239	19:50:12.466931754	my_server_2	a_player	UDP	93	25565 → 59705 Len=31
+244	19:50:12.533612178	players_router	my_server_2	ICMPv6	141	Destination Unreachable (Port unreachable)
+349	19:50:13.470405781	a_player	my_server_1	UDP	141	59705 → 25565 Len=79
+350	19:50:13.470942651	my_server_2	a_player	UDP	93	25565 → 59705 Len=31
+364	19:50:13.537291876	players_router	my_server_2	ICMPv6	141	Destination Unreachable (Port unreachable)
+#+END_EXAMPLE
+
+显然，我的 UDP 入站 IP 和出站 IP 不一致，导致大多数玩家的路由器没有放行四元组不同的包，而其中一个“幸运”玩家的路由器防火墙策略比较松。
+两个 IP？原来是我的 NetworkManager 在同时有 SLAAC 和 DHCPv6 的环境下拿到了两个 IP，
+其实我本该注意到，因为路由器后台 DHCPv6 leases 永远只有我的电脑，但是之前这从没造成过任何问题，就被我自动忽略了，当出现问题时也没有关联起来。
+
+解决方案？有两种
+1. 抛弃双 IP，毕竟这也没什么好处
+   如果你也是 OpenWrt 路由器的话， =Network - Interfaces - lan - Edit - DHCP Server - IPv6 RA Settings - RA Flags=
+   从 =MO= (The Managed address configuration (M) flag indicates that IPv6 addresses are available via DHCPv6.)
+   改为 =O= (The Other configuration (O) flag indicates that other information, such as DNS servers, is available via DHCPv6.)
+   就可以了。
+
+   同时也要注意开服时最好不要同时连网线和 WiFi（虽然这一般来说问题不大，因为一般来说内核会为有线网分配更低的 metric，包会优先走有线）
+
+2. svc 配置
+   =config/voicechat/voicechat-server.properties= 修改 =bind_address= 与 =voice_host= 一致（注意 IPv6 地址都要加方括号）
+
+
+** Conclusion
+debug 这个问题关键在于能够在抓包中肉眼分辨三个不同的 ipv6 地址（且其中两个前缀相同），
+否则很难将这个问题与路由器后台唯一一条 DHCPv6 lease 逻辑上关联起来。
